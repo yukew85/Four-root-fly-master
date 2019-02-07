@@ -1,0 +1,211 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:40
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\assert.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW4BF6.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\assert.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\assert.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\assert.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\System\src\assert.c
+      1          /********************                                        
+      2           * 文件名       ：assert.c
+      3           * 描述         ：断言条件不成立的执行函数
+      4           *
+      5           * 实验平台     ：MSP430F5529
+      6           * 库版本       ：
+      7           * 嵌入系统     ：
+      8           * 备    注     ：
+      9           *
+     10           * 作者         ：
+     11          **********************************************************************************/
+     12          
+     13          /*
+     14           * File:        assert.c
+     15           * Purpose:     Provide macro for software assertions
+     16           *
+     17           * Notes:       ASSERT macro defined in assert.h calls assert_failed()
+     18           */
+     19          
+     20          #include "common.h"
+     21          #include "msp430f5529_system.h"
+     22          
+
+   \                                 In  segment DATA20_C, align 1, align-sorted
+     23          const char ASSERT_FAILED_STR[] = "断言条件不成立，请检测错误原因：\n断言发生在%s文件的第%d行！\n断言所在函数：%s\n断言失败说明：%s\t—— by CTGU-GB\n\n";
+   \                     ASSERT_FAILED_STR:
+   \   000000   B6CFD1D4CCF5 DC8 0B6H, 0CFH, 0D1H, 0D4H, 0CCH, 0F5H, 0BCH, 0FEH
+   \            BCFE        
+   \   000008   B2BBB3C9C1A2 DC8 0B2H, 0BBH, 0B3H, 0C9H, 0C1H, 0A2H, 0A3H, 0ACH
+   \            A3AC        
+   \   000010   C7EBBCECB2E2 DC8 0C7H, 0EBH, 0BCH, 0ECH, 0B2H, 0E2H, 0B4H, 0EDH
+   \            B4ED        
+   \   000018   CEF3D4ADD2F2 DC8 0CEH, 0F3H, 0D4H, 0ADH, 0D2H, 0F2H, 0A3H, 0BAH
+   \            A3BA        
+   \   000020   0AB6CFD1D4B7 DC8 0AH, 0B6H, 0CFH, 0D1H, 0D4H, 0B7H, 0A2H, 0C9H
+   \            A2C9        
+   \   000028   FAD4DA2573CE DC8 0FAH, 0D4H, 0DAH, 25H, 73H, 0CEH, 0C4H, 0BCH
+   \            C4BC        
+   \   000030   FEB5C4B5DA25 DC8 0FEH, 0B5H, 0C4H, 0B5H, 0DAH, 25H, 64H, 0D0H
+   \            64D0        
+   \   000038   D0A3A10AB6CF DC8 0D0H, 0A3H, 0A1H, 0AH, 0B6H, 0CFH, 0D1H, 0D4H
+   \            D1D4        
+   \   000040   CBF9D4DABAAF DC8 0CBH, 0F9H, 0D4H, 0DAH, 0BAH, 0AFH, 0CAH, 0FDH
+   \            CAFD        
+   \   000048   A3BA25730AB6 DC8 0A3H, 0BAH, 25H, 73H, 0AH, 0B6H, 0CFH, 0D1H
+   \            CFD1        
+   \   000050   D4CAA7B0DCCB DC8 0D4H, 0CAH, 0A7H, 0B0H, 0DCH, 0CBH, 0B5H, 0C3H
+   \            B5C3        
+   \   000058   F7A3BA257309 DC8 0F7H, 0A3H, 0BAH, 25H, 73H, 9, 0A1H, 0AAH
+   \            A1AA        
+   \   000060   A1AA20627920 DC8 0A1H, 0AAH, 20H, 62H, 79H, 20H, 43H, 54H
+   \            4354        
+   \   000068   47552D47420A DC8 47H, 55H, 2DH, 47H, 42H, 0AH, 0AH, 0
+   \            0A00        
+     24          /********************************************************************/
+     25          //如果断言条件不成立，进入了错误状态，就会打印错误信息和用LED来显示状态
+
+   \                                 In  segment CODE, align 2
+     26          void assert_failed(char *file, int line,char *funName,char *str)
+   \                     assert_failed:
+     27          {
+     28          #ifdef DEBUG
+     29          #ifdef DEBUG_UART_PRINT
+     30              //启动函数中已经初始化过串口，主函数中若修改了SMCLK频率则需再设置波特率，以便从新设置波特率
+     31              UART_SetBaudRate (Print_UART,Print_Baud);                    
+     32          #endif
+     33          
+     34              while (1)
+     35              {
+     36                  DEBUG_PRINTF(ASSERT_FAILED_STR, file, line,funName,str);  //打印错误信息
+     37              }
+     38          #endif
+     39          }
+   \   000000   1001         RETA
+     40          /********************************************************************/
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   assert_failed
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     112  ASSERT_FAILED_STR
+       2  assert_failed
+
+ 
+   2 bytes in segment CODE
+ 112 bytes in segment DATA20_C
+ 
+   2 bytes of CODE  memory
+ 112 bytes of CONST memory
+
+Errors: none
+Warnings: none

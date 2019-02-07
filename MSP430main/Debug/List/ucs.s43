@@ -1,0 +1,2250 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:13
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\ucs.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW3513.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\ucs.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\ucs.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME ucs
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN __iar_HWMUL
+        EXTERN ?DivMod32u
+        EXTERN ?DivMod16s
+        EXTERN ?DivMod16u
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC UCS_bypassXT1
+        PUBLIC UCS_bypassXT1WithTimeout
+        PUBLIC UCS_bypassXT2
+        PUBLIC UCS_bypassXT2WithTimeout
+        PUBLIC UCS_clearAllOscFlagsWithTimeout
+        PUBLIC UCS_clearFaultFlag
+        PUBLIC UCS_disableClockRequest
+        PUBLIC UCS_enableClockRequest
+        PUBLIC UCS_getACLK
+        PUBLIC UCS_getFaultFlagStatus
+        PUBLIC UCS_getMCLK
+        PUBLIC UCS_getSMCLK
+        PUBLIC UCS_initClockSignal
+        PUBLIC UCS_initFLL
+        PUBLIC UCS_initFLLSettle
+        PUBLIC UCS_setExternalClockSource
+        PUBLIC UCS_turnOffSMCLK
+        PUBLIC UCS_turnOffXT1
+        PUBLIC UCS_turnOffXT2
+        PUBLIC UCS_turnOnHFXT1
+        PUBLIC UCS_turnOnHFXT1WithTimeout
+        PUBLIC UCS_turnOnLFXT1
+        PUBLIC UCS_turnOnLFXT1WithTimeout
+        PUBLIC UCS_turnOnSMCLK
+        PUBLIC UCS_turnOnXT2
+        PUBLIC UCS_turnOnXT2WithTimeout
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\ucs.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // ucs.c - Driver for the ucs Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup ucs_api ucs
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #if defined(__MSP430_HAS_UCS__) || defined(__MSP430_HAS_UCS_RF__)
+//   48 #include "ucs.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 #ifdef __GNUC__
+//   53 #define __extension__(x)
+//   54 __extension__(#define __delay_cycles(x) \ 
+//   55 ({ \ 
+//   56 	volatile unsigned int j; \ 
+//   57 	for (j=0;j<x;j++) \ 
+//   58 	{ \ 
+//   59 	  __no_operation(); \ 
+//   60 	} \ 
+//   61 })
+//   62 );
+//   63 
+//   64 #endif
+//   65 
+//   66 #define CC430_DEVICE (defined (__CC430F5133__) || defined(__CC430F5135__) || defined(__CC430F5137__) || \ 
+//   67         defined(__CC430F6125__) || defined(__CC430F6126__) || defined(__CC430F6127__) || \ 
+//   68         defined(__CC430F6135__) || defined(__CC430F6137__) || defined(__CC430F5123__) || \ 
+//   69         defined(__CC430F5125__) || defined(__CC430F5143__) || defined(__CC430F5145__) || \ 
+//   70         defined(__CC430F5147__) || defined(__CC430F6143__) || defined(__CC430F6145__) || \ 
+//   71         defined(__CC430F6147__))
+//   72 
+//   73 #define NOT_CC430_DEVICE (!defined (__CC430F5133__) && !defined(__CC430F5135__) && !defined(__CC430F5137__) && \ 
+//   74         !defined(__CC430F6125__) && !defined(__CC430F6126__) &&  !defined(__CC430F6127__) && \ 
+//   75          !defined(__CC430F6135__) &&  !defined(__CC430F6137__) &&  !defined(__CC430F5123__) && \ 
+//   76          !defined(__CC430F5125__) &&  !defined(__CC430F5143__) &&  !defined(__CC430F5145__) && \ 
+//   77          !defined(__CC430F5147__) &&  !defined(__CC430F6143__) &&  !defined(__CC430F6145__) && \ 
+//   78          !defined(__CC430F6147__))
+//   79 //******************************************************************************
+//   80 //
+//   81 // The XT1 crystal frequency. Should be set with
+//   82 // UCS_setExternalClockSource if XT1 is used and user intends to
+//   83 // invoke UCS_getSMCLK, UCS_getMCLK or UCS_getACLK
+//   84 //
+//   85 //******************************************************************************
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   86 static uint32_t privateXT1ClockFrequency = 0;
+privateXT1ClockFrequency:
+        DS8 4
+//   87 
+//   88 //******************************************************************************
+//   89 //
+//   90 // The XT2 crystal frequency. Should be set with
+//   91 // UCS_setExternalClockSource if XT1 is used and user intends to invoke
+//   92 // UCS_getSMCLK, UCS_getMCLK or UCS_getACLK
+//   93 //
+//   94 //******************************************************************************
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   95 static uint32_t privateXT2ClockFrequency = 0;
+privateXT2ClockFrequency:
+        DS8 4
+//   96 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   97 static uint32_t privateUCSSourceClockFromDCO (uint16_t FLLRefCLKSource
+privateUCSSourceClockFromDCO:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function privateUCSSourceClockFromDCO
+//   98     )
+//   99 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        MOV.W   R12, R11
+//  100     assert((SELM__DCOCLKDIV == FLLRefCLKSource) ||
+//  101         (SELM__DCOCLK == FLLRefCLKSource)
+//  102         );
+//  103     uint16_t D_value = 1;
+        MOV.W   #0x1, R6
+//  104     uint16_t N_value;
+//  105     uint16_t n_value = 1;
+        MOV.W   #0x1, R10
+//  106     uint32_t Fref_value;
+//  107     uint8_t i;
+//  108 
+//  109     N_value = (HWREG16(UCS_BASE + OFS_UCSCTL2)) & 0x03FF;
+        MOV.W   &0x164, R15
+        AND.W   #0x3ff, R15
+        MOV.W   R15, R7
+//  110     uint16_t tempDivider = HWREG8(UCS_BASE + OFS_UCSCTL3) & FLLREFDIV_7;
+        MOV.B   &0x166, R5
+        MOV.B   R5, R5
+        AND.W   #0x7, R5
+//  111 
+//  112     if (tempDivider < 4) {
+        CMP.W   #0x4, R5
+        JC      ??privateUCSSourceClockFromDCO_5
+//  113         n_value <<= tempDivider;
+        SUB.B   #0x1, R5
+        JN      ??privateUCSSourceClockFromDCO_6
+        RPT     R5
+        RLAX.W  R10
+??privateUCSSourceClockFromDCO_6:
+        ADD.B   #0x1, R5
+        JMP     ??privateUCSSourceClockFromDCO_4
+//  114     }
+//  115     else if (tempDivider == 4) {
+??privateUCSSourceClockFromDCO_5:
+        CMP.W   #0x4, R5
+        JNE     ??privateUCSSourceClockFromDCO_7
+//  116         n_value = 12;
+        MOV.W   #0xc, R10
+        JMP     ??privateUCSSourceClockFromDCO_4
+//  117     }
+//  118     else if (tempDivider == 5) {
+??privateUCSSourceClockFromDCO_7:
+        CMP.W   #0x5, R5
+        JNE     ??privateUCSSourceClockFromDCO_4
+//  119         n_value = 16;
+        MOV.W   #0x10, R10
+//  120     }
+//  121 
+//  122     switch ( (HWREG8(UCS_BASE + OFS_UCSCTL3)) & SELREF_7){
+??privateUCSSourceClockFromDCO_4:
+        MOV.B   &0x166, R14
+        AND.B   #0x70, R14
+        SUB.B   #0x0, R14
+        JEQ     ??privateUCSSourceClockFromDCO_8
+        SUB.B   #0x20, R14
+        JEQ     ??privateUCSSourceClockFromDCO_9
+        SUB.B   #0x30, R14
+        JEQ     ??privateUCSSourceClockFromDCO_10
+        JMP     ??privateUCSSourceClockFromDCO_3
+//  123         case SELREF__XT1CLK:
+//  124             Fref_value = privateXT1ClockFrequency;
+??privateUCSSourceClockFromDCO_8:
+        MOVX.W  &privateXT1ClockFrequency, R8
+        MOVX.W  &privateXT1ClockFrequency + 2, R9
+//  125 
+//  126             if(XTS != (HWREG16(UCS_BASE + OFS_UCSCTL6) & XTS)) {
+        BIT.W   #0x20, &0x16c
+        JC      ??privateUCSSourceClockFromDCO_11
+//  127               if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1LFOFFG){
+        BIT.B   #0x2, &0x16e
+        JNC     ??privateUCSSourceClockFromDCO_3
+//  128                 HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1LFOFFG);
+        BIC.B   #0x2, &0x16e
+//  129                 //Clear OFIFG fault flag
+//  130                 HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  131 
+//  132                 if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1LFOFFG){
+        BIT.B   #0x2, &0x16e
+        JNC     ??privateUCSSourceClockFromDCO_3
+//  133                     Fref_value = UCS_REFOCLK_FREQUENCY;
+        MOV.W   #0x8000, R8
+        MOV.W   #0x0, R9
+        JMP     ??privateUCSSourceClockFromDCO_3
+//  134                 }
+//  135               }
+//  136             }
+//  137             else {
+//  138               if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1HFOFFG){
+??privateUCSSourceClockFromDCO_11:
+        BIT.B   #0x4, &0x16e
+        JNC     ??privateUCSSourceClockFromDCO_3
+//  139                 HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1HFOFFG);
+        BIC.B   #0x4, &0x16e
+//  140                 //Clear OFIFG fault flag
+//  141                 HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  142 
+//  143                 if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1HFOFFG){
+        BIT.B   #0x4, &0x16e
+        JNC     ??privateUCSSourceClockFromDCO_3
+//  144                     Fref_value = UCS_REFOCLK_FREQUENCY;
+        MOV.W   #0x8000, R8
+        MOV.W   #0x0, R9
+//  145                 }
+//  146               }
+//  147             }
+//  148 
+//  149             break;
+        JMP     ??privateUCSSourceClockFromDCO_3
+//  150         case SELREF__REFOCLK:
+//  151             Fref_value = UCS_REFOCLK_FREQUENCY;
+??privateUCSSourceClockFromDCO_9:
+        MOV.W   #0x8000, R8
+        MOV.W   #0x0, R9
+//  152             break;
+        JMP     ??privateUCSSourceClockFromDCO_3
+//  153         case SELREF__XT2CLK:
+//  154             Fref_value = privateXT2ClockFrequency;
+??privateUCSSourceClockFromDCO_10:
+        MOVX.W  &privateXT2ClockFrequency, R8
+        MOVX.W  &privateXT2ClockFrequency + 2, R9
+//  155 
+//  156             if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT2OFFG){
+        BIT.B   #0x8, &0x16e
+        JNC     ??privateUCSSourceClockFromDCO_3
+//  157                 HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT2OFFG);
+        BIC.B   #0x8, &0x16e
+//  158 
+//  159                 //Clear OFIFG fault flag
+//  160                 HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  161 
+//  162                 if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT2OFFG){
+        BIT.B   #0x8, &0x16e
+        JNC     ??privateUCSSourceClockFromDCO_3
+//  163                     Fref_value = UCS_REFOCLK_FREQUENCY;
+        MOV.W   #0x8000, R8
+        MOV.W   #0x0, R9
+//  164                 }
+//  165             }
+//  166 
+//  167             break;
+//  168         default: assert(0);
+//  169     }
+//  170 
+//  171     uint32_t CLKFrequency = Fref_value * ( N_value + 1) / n_value;
+??privateUCSSourceClockFromDCO_3:
+        MOV.W   R10, R14
+        MOV.W   #0x0, R15
+        MOV.W   R7, R13
+        ADD.W   #0x1, R13
+        PUSH.W  SR
+          CFI CFA SP+38
+        DINT
+        NOP
+        MOV.W   R13, &__iar_HWMUL + 16         // MPY32L
+        MOV.W   R8, &__iar_HWMUL + 32          // OP2L
+        MOV.W   R9, &__iar_HWMUL + 34          // OP2H
+        MOV.W   &__iar_HWMUL + 36, R12         // RES0
+        MOV.W   &__iar_HWMUL + 38, R13         // RES1
+        NOP
+        POP.W   SR
+          CFI CFA SP+36
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+//  172 
+//  173     if (SELM__DCOCLK == FLLRefCLKSource){
+        CMP.W   #0x3, R11
+        JNE     ??privateUCSSourceClockFromDCO_12
+//  174         tempDivider = (HWREG16(UCS_BASE + OFS_UCSCTL2)) & FLLD_7;
+        MOV.W   &0x164, R15
+        AND.W   #0x7000, R15
+        MOV.W   R15, R5
+//  175         tempDivider = tempDivider >> 12;
+        SWPB    R5
+        AND.W   #0xff, R5
+        RRA.W   R5
+        RRA.W   R5
+        RRA.W   R5
+        RRA.W   R5
+//  176 
+//  177         for (i = 0; i < tempDivider; i++){
+        MOV.B   #0x0, R4
+??privateUCSSourceClockFromDCO_0:
+        MOV.B   R4, R4
+        CMP.W   R5, R4
+        JC      ??privateUCSSourceClockFromDCO_13
+//  178             D_value =  D_value * 2;
+        RLA.W   R6
+//  179         }
+        ADD.B   #0x1, R4
+        JMP     ??privateUCSSourceClockFromDCO_0
+//  180 
+//  181         CLKFrequency *= D_value;
+??privateUCSSourceClockFromDCO_13:
+        PUSH.W  SR
+          CFI CFA SP+38
+        DINT
+        NOP
+        MOV.W   R6, &__iar_HWMUL + 16          // MPY32L
+        MOV.W   R12, &__iar_HWMUL + 32         // OP2L
+        MOV.W   R13, &__iar_HWMUL + 34         // OP2H
+        MOV.W   &__iar_HWMUL + 36, R12         // RES0
+        MOV.W   &__iar_HWMUL + 38, R13         // RES1
+        NOP
+        POP.W   SR
+          CFI CFA SP+36
+        NOP
+//  182     }
+//  183     return ( CLKFrequency) ;
+??privateUCSSourceClockFromDCO_12:
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  184 }
+          CFI EndBlock cfiBlock0
+//  185 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  186 static uint32_t privateUCSComputeCLKFrequency (uint16_t CLKSource,
+privateUCSComputeCLKFrequency:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function privateUCSComputeCLKFrequency
+//  187     uint16_t CLKSourceDivider
+//  188     )
+//  189 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  190     uint32_t CLKFrequency;
+//  191     uint8_t CLKSourceFrequencyDivider = 1;
+        MOV.B   #0x1, R8
+//  192     uint8_t i = 0;
+        MOV.B   #0x0, R9
+//  193 
+//  194     for ( i = 0; i < CLKSourceDivider; i++){
+        MOV.B   #0x0, R9
+??privateUCSComputeCLKFrequency_0:
+        MOV.B   R9, R9
+        CMP.W   R7, R9
+        JC      ??privateUCSComputeCLKFrequency_4
+//  195         CLKSourceFrequencyDivider *= 2;
+        RLA.B   R8
+//  196     }
+        ADD.B   #0x1, R9
+        JMP     ??privateUCSComputeCLKFrequency_0
+//  197 
+//  198     switch (CLKSource){
+??privateUCSComputeCLKFrequency_4:
+        MOV.W   R6, R15
+        SUB.W   #0x0, R15
+        JEQ     ??privateUCSComputeCLKFrequency_5
+        SUB.W   #0x1, R15
+        JEQ     ??privateUCSComputeCLKFrequency_6
+        SUB.W   #0x1, R15
+        JEQ     ??privateUCSComputeCLKFrequency_7
+        SUB.W   #0x1, R15
+        JEQ     ??privateUCSComputeCLKFrequency_8
+        SUB.W   #0x1, R15
+        JEQ     ??privateUCSComputeCLKFrequency_8
+        SUB.W   #0x1, R15
+        JEQ     ??privateUCSComputeCLKFrequency_9
+        JMP     ??privateUCSComputeCLKFrequency_2
+//  199         case SELM__XT1CLK:
+//  200             CLKFrequency = (privateXT1ClockFrequency /
+//  201                             CLKSourceFrequencyDivider);
+??privateUCSComputeCLKFrequency_5:
+        MOVX.W  &privateXT1ClockFrequency, R12
+        MOVX.W  &privateXT1ClockFrequency + 2, R13
+        MOV.B   R8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  202 
+//  203             if(XTS != (HWREG16(UCS_BASE + OFS_UCSCTL6) & XTS))  {
+        BIT.W   #0x20, &0x16c
+        JC      ??privateUCSComputeCLKFrequency_10
+//  204               if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1LFOFFG){
+        BIT.B   #0x2, &0x16e
+        JNC     ??privateUCSComputeCLKFrequency_2
+//  205                 HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1LFOFFG);
+        BIC.B   #0x2, &0x16e
+//  206                 //Clear OFIFG fault flag
+//  207                 HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  208 
+//  209                 if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1LFOFFG){
+        BIT.B   #0x2, &0x16e
+        JNC     ??privateUCSComputeCLKFrequency_2
+//  210                     CLKFrequency = UCS_REFOCLK_FREQUENCY;
+        MOV.W   #0x8000, R10
+        MOV.W   #0x0, R11
+        JMP     ??privateUCSComputeCLKFrequency_2
+//  211                 }
+//  212               }
+//  213             }
+//  214             else {
+//  215               if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1HFOFFG){
+??privateUCSComputeCLKFrequency_10:
+        BIT.B   #0x4, &0x16e
+        JNC     ??privateUCSComputeCLKFrequency_2
+//  216                 HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1HFOFFG);
+        BIC.B   #0x4, &0x16e
+//  217                 //Clear OFIFG fault flag
+//  218                 HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  219 
+//  220                 if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1HFOFFG){
+        BIT.B   #0x4, &0x16e
+        JNC     ??privateUCSComputeCLKFrequency_2
+//  221                     CLKFrequency = UCS_REFOCLK_FREQUENCY;
+        MOV.W   #0x8000, R10
+        MOV.W   #0x0, R11
+//  222                 }
+//  223               }
+//  224             }
+//  225             break;
+        JMP     ??privateUCSComputeCLKFrequency_2
+//  226 
+//  227         case SELM__VLOCLK:
+//  228             CLKFrequency =
+//  229                 (UCS_VLOCLK_FREQUENCY / CLKSourceFrequencyDivider);
+??privateUCSComputeCLKFrequency_6:
+        MOV.W   #0x2710, R12
+        MOV.B   R8, R14
+          CFI FunCall ?DivMod16s
+        CALLA   #?DivMod16s
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  230             break;
+        JMP     ??privateUCSComputeCLKFrequency_2
+//  231         case SELM__REFOCLK:
+//  232             CLKFrequency =
+//  233                 (UCS_REFOCLK_FREQUENCY / CLKSourceFrequencyDivider);
+??privateUCSComputeCLKFrequency_7:
+        MOV.W   #0x8000, R12
+        MOV.B   R8, R14
+          CFI FunCall ?DivMod16u
+        CALLA   #?DivMod16u
+        MOV.W   #0x0, R13
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  234             break;
+        JMP     ??privateUCSComputeCLKFrequency_2
+//  235         case SELM__XT2CLK:
+//  236             CLKFrequency =
+//  237                 (privateXT2ClockFrequency / CLKSourceFrequencyDivider);
+??privateUCSComputeCLKFrequency_9:
+        MOVX.W  &privateXT2ClockFrequency, R12
+        MOVX.W  &privateXT2ClockFrequency + 2, R13
+        MOV.B   R8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  238 
+//  239             if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT2OFFG){
+        BIT.B   #0x8, &0x16e
+        JNC     ??privateUCSComputeCLKFrequency_11
+//  240 
+//  241               HWREG8(UCS_BASE + OFS_UCSCTL7) &=  ~XT2OFFG;
+        BIC.B   #0x8, &0x16e
+//  242               //Clear OFIFG fault flag
+//  243               HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  244             }
+//  245 
+//  246             if (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT2OFFG){
+??privateUCSComputeCLKFrequency_11:
+        BIT.B   #0x8, &0x16e
+        JNC     ??privateUCSComputeCLKFrequency_2
+//  247                 CLKFrequency =
+//  248                     privateUCSSourceClockFromDCO( SELM__DCOCLKDIV);
+        MOV.W   #0x4, R12
+          CFI FunCall privateUCSSourceClockFromDCO
+        CALLA   #privateUCSSourceClockFromDCO
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  249             }
+//  250             break;
+        JMP     ??privateUCSComputeCLKFrequency_2
+//  251         case SELM__DCOCLK:
+//  252         case SELM__DCOCLKDIV:
+//  253             CLKFrequency = privateUCSSourceClockFromDCO(
+//  254                 CLKSource) / CLKSourceFrequencyDivider;
+??privateUCSComputeCLKFrequency_8:
+        MOV.W   R6, R12
+          CFI FunCall privateUCSSourceClockFromDCO
+        CALLA   #privateUCSSourceClockFromDCO
+        MOV.B   R8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  255             break;
+//  256     }
+//  257 
+//  258     return ( CLKFrequency) ;
+??privateUCSComputeCLKFrequency_2:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  259 }
+          CFI EndBlock cfiBlock1
+//  260 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  261 void UCS_setExternalClockSource (uint32_t XT1CLK_frequency,
+UCS_setExternalClockSource:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function UCS_setExternalClockSource
+          CFI NoCalls
+//  262     uint32_t XT2CLK_frequency
+//  263     )
+//  264 {
+//  265     privateXT1ClockFrequency = XT1CLK_frequency;
+        MOVX.W  R12, &privateXT1ClockFrequency
+        MOVX.W  R13, &privateXT1ClockFrequency + 2
+//  266     privateXT2ClockFrequency = XT2CLK_frequency;
+        MOVX.W  R14, &privateXT2ClockFrequency
+        MOVX.W  R15, &privateXT2ClockFrequency + 2
+//  267 }
+        RETA
+          CFI EndBlock cfiBlock2
+//  268 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  269 void UCS_initClockSignal (uint8_t selectedClockSignal,
+UCS_initClockSignal:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function UCS_initClockSignal
+          CFI NoCalls
+//  270     uint16_t clockSource,
+//  271     uint16_t clockSourceDivider
+//  272     )
+//  273 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//  274     assert(
+//  275         (UCS_XT1CLK_SELECT == clockSource) ||
+//  276         (UCS_VLOCLK_SELECT == clockSource) ||
+//  277         (UCS_REFOCLK_SELECT == clockSource) ||
+//  278         (UCS_DCOCLK_SELECT == clockSource) ||
+//  279         (UCS_DCOCLKDIV_SELECT == clockSource) ||
+//  280         (UCS_XT2CLK_SELECT == clockSource)
+//  281         );
+//  282 
+//  283     assert(
+//  284         (UCS_CLOCK_DIVIDER_1 == clockSourceDivider) ||
+//  285         (UCS_CLOCK_DIVIDER_2 == clockSourceDivider) ||
+//  286         (UCS_CLOCK_DIVIDER_4 == clockSourceDivider) ||
+//  287         (UCS_CLOCK_DIVIDER_8 == clockSourceDivider) ||
+//  288         (UCS_CLOCK_DIVIDER_16 == clockSourceDivider) ||
+//  289         (UCS_CLOCK_DIVIDER_32 == clockSourceDivider)
+//  290         );
+//  291 
+//  292     uint16_t temp = HWREG16(UCS_BASE + OFS_UCSCTL5);
+        MOV.W   &0x16a, R15
+//  293     switch (selectedClockSignal){
+        MOV.B   R12, R10
+        SUB.B   #0x1, R10
+        JEQ     ??UCS_initClockSignal_3
+        SUB.B   #0x1, R10
+        JEQ     ??UCS_initClockSignal_4
+        SUB.B   #0x2, R10
+        JEQ     ??UCS_initClockSignal_5
+        SUB.B   #0x4, R10
+        JEQ     ??UCS_initClockSignal_6
+        JMP     ??UCS_initClockSignal_0
+//  294         case UCS_ACLK:
+//  295             HWREG16(UCS_BASE + OFS_UCSCTL4) &= ~(SELA_7);
+??UCS_initClockSignal_3:
+        AND.W   #0xf8ff, &0x168
+//  296             clockSource = clockSource << 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  297             HWREG16(UCS_BASE + OFS_UCSCTL4) |= (clockSource);
+        BIS.W   R13, &0x168
+//  298 
+//  299             clockSourceDivider = clockSourceDivider << 8;
+        AND.W   #0xff, R14
+        SWPB    R14
+//  300             HWREG16(UCS_BASE + OFS_UCSCTL5) = temp & ~(DIVA_7) | clockSourceDivider;
+        MOV.W   R15, R10
+        AND.W   #0xf8ff, R10
+        BIS.W   R14, R10
+        MOV.W   R10, &0x16a
+//  301             break;
+        JMP     ??UCS_initClockSignal_0
+//  302         case UCS_SMCLK:
+//  303             HWREG16(UCS_BASE + OFS_UCSCTL4) &= ~(SELS_7);
+??UCS_initClockSignal_5:
+        AND.W   #0xff8f, &0x168
+//  304             clockSource = clockSource << 4;
+        RLAM.W  #0x4, R13
+//  305             HWREG16(UCS_BASE + OFS_UCSCTL4) |= (clockSource);
+        BIS.W   R13, &0x168
+//  306 
+//  307             clockSourceDivider = clockSourceDivider << 4;
+        RLAM.W  #0x4, R14
+//  308             HWREG16(UCS_BASE + OFS_UCSCTL5) = temp & ~(DIVS_7) | clockSourceDivider;
+        MOV.W   R15, R10
+        AND.W   #0xff8f, R10
+        BIS.W   R14, R10
+        MOV.W   R10, &0x16a
+//  309             break;
+        JMP     ??UCS_initClockSignal_0
+//  310         case UCS_MCLK:
+//  311             HWREG16(UCS_BASE + OFS_UCSCTL4) &= ~(SELM_7);
+??UCS_initClockSignal_4:
+        AND.W   #0xfff8, &0x168
+//  312             HWREG16(UCS_BASE + OFS_UCSCTL4) |= (clockSource);
+        BIS.W   R13, &0x168
+//  313 
+//  314             HWREG16(UCS_BASE + OFS_UCSCTL5) = temp & ~(DIVM_7) | clockSourceDivider;
+        MOV.W   R15, R10
+        AND.W   #0xfff8, R10
+        BIS.W   R14, R10
+        MOV.W   R10, &0x16a
+//  315             break;
+        JMP     ??UCS_initClockSignal_0
+//  316         case UCS_FLLREF:
+//  317             assert(clockSource <= SELA_5);
+//  318             HWREG8(UCS_BASE + OFS_UCSCTL3) &=  ~(SELREF_7);
+??UCS_initClockSignal_6:
+        AND.B   #0x8f, &0x166
+//  319 
+//  320             clockSource = clockSource << 4;
+        RLAM.W  #0x4, R13
+//  321             HWREG8(UCS_BASE + OFS_UCSCTL3) |= (clockSource);
+        BIS.B   R13, &0x166
+//  322 
+//  323             temp = HWREG8(UCS_BASE + OFS_UCSCTL3) & 0x00FF;
+        MOV.B   &0x166, R10
+        MOV.B   R10, R10
+        MOV.W   R10, R15
+//  324             //Note that dividers for FLLREF are slightly different
+//  325             //Hence handled differently from other CLK signals
+//  326             switch(clockSourceDivider)
+        MOV.W   R14, R10
+        SUB.W   #0x4, R10
+        JEQ     ??UCS_initClockSignal_7
+        SUB.W   #0x1, R10
+        JNE     ??UCS_initClockSignal_2
+//  327             {
+//  328               case UCS_CLOCK_DIVIDER_12:
+//  329                 HWREG8(UCS_BASE + OFS_UCSCTL3) = temp & ~(FLLREFDIV_7) | FLLREFDIV__12;
+        PUSH.W  R10
+          CFI CFA SP+10
+        MOV.B   R15, 0(SP)
+        POP.W   R10
+          CFI CFA SP+8
+        AND.B   #0xf8, R10
+        BIS.B   #0x4, R10
+        MOV.B   R10, &0x166
+//  330                 break;
+        JMP     ??UCS_initClockSignal_0
+//  331               case UCS_CLOCK_DIVIDER_16:
+//  332                 HWREG8(UCS_BASE + OFS_UCSCTL3) = temp & ~(FLLREFDIV_7) | FLLREFDIV__16;
+??UCS_initClockSignal_7:
+        PUSH.W  R10
+          CFI CFA SP+10
+        MOV.B   R15, 0(SP)
+        POP.W   R10
+          CFI CFA SP+8
+        AND.B   #0xf8, R10
+        BIS.B   #0x5, R10
+        MOV.B   R10, &0x166
+//  333                 break;
+        JMP     ??UCS_initClockSignal_0
+//  334               default:
+//  335                 HWREG8(UCS_BASE + OFS_UCSCTL3) = temp & ~(FLLREFDIV_7) | clockSourceDivider;
+??UCS_initClockSignal_2:
+        PUSH.W  R10
+          CFI CFA SP+10
+        MOV.B   R15, 0(SP)
+        POP.W   R10
+          CFI CFA SP+8
+        AND.B   #0xf8, R10
+        BIS.B   R14, R10
+        MOV.B   R10, &0x166
+//  336                 break;
+//  337             }
+//  338 
+//  339             break;
+//  340     }
+//  341 }
+??UCS_initClockSignal_0:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//  342 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  343 void UCS_turnOnLFXT1 (uint16_t xt1drive,
+UCS_turnOnLFXT1:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function UCS_turnOnLFXT1
+          CFI NoCalls
+//  344     uint8_t xcap
+//  345     )
+//  346 {
+//  347     assert((xcap == UCS_XCAP_0) ||
+//  348         (xcap == UCS_XCAP_1) ||
+//  349         (xcap == UCS_XCAP_2) ||
+//  350         (xcap == UCS_XCAP_3) );
+//  351 
+//  352     assert((xt1drive == UCS_XT1_DRIVE_0 ) ||
+//  353         (xt1drive == UCS_XT1_DRIVE_1 ) ||
+//  354         (xt1drive == UCS_XT1_DRIVE_2 ) ||
+//  355         (xt1drive == UCS_XT1_DRIVE_3 ));
+//  356 
+//  357     //Switch ON XT1 oscillator
+//  358     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT1OFF;
+        BIC.W   #0x1, &0x16c
+//  359 
+//  360     //Highest drive setting for XT1startup
+//  361     HWREG16(UCS_BASE + OFS_UCSCTL6_L) |= XT1DRIVE1_L + XT1DRIVE0_L;
+        BIS.W   #0xc0, &0x16c
+//  362 
+//  363     //Enable LF mode and clear xcap and bypass
+//  364     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~(XTS + XCAP_3 + XT1BYPASS);
+        AND.W   #0xffc3, &0x16c
+//  365     HWREG16(UCS_BASE + OFS_UCSCTL6) |= xcap;
+        MOV.B   R13, R13
+        BIS.W   R13, &0x16c
+//  366 
+//  367     while (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1LFOFFG)
+??UCS_turnOnLFXT1_0:
+        BIT.B   #0x2, &0x16e
+        JNC     ??UCS_turnOnLFXT1_1
+//  368     {
+//  369         //Clear OSC flaut Flags fault flags
+//  370         HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1LFOFFG);
+        BIC.B   #0x2, &0x16e
+//  371 
+//  372         //Clear OFIFG fault flag
+//  373         HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+        JMP     ??UCS_turnOnLFXT1_0
+//  374     }
+//  375 
+//  376     //set requested Drive mode
+//  377     HWREG16(UCS_BASE + OFS_UCSCTL6) = ( HWREG16(UCS_BASE + OFS_UCSCTL6) &
+//  378                                          ~(XT1DRIVE_3)
+//  379                                          ) |
+//  380                                        (xt1drive);
+??UCS_turnOnLFXT1_1:
+        MOV.W   &0x16c, R15
+        AND.W   #0xff3f, R15
+        BIS.W   R12, R15
+        MOV.W   R15, &0x16c
+//  381 
+//  382 }
+        RETA
+          CFI EndBlock cfiBlock4
+//  383 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  384 void UCS_turnOnHFXT1(uint16_t xt1drive
+UCS_turnOnHFXT1:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function UCS_turnOnHFXT1
+          CFI NoCalls
+//  385     )
+//  386 {
+//  387     //Switch ON XT1 oscillator
+//  388     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT1OFF;
+        BIC.W   #0x1, &0x16c
+//  389 
+//  390     //Check if drive value is the expected one
+//  391     if ((HWREG16(UCS_BASE + OFS_UCSCTL6) & XT1DRIVE_3) != xt1drive){
+        MOV.W   &0x16c, R15
+        AND.W   #0xc0, R15
+        CMP.W   R12, R15
+        JEQ     ??UCS_turnOnHFXT1_1
+//  392         //Clear XT1drive field
+//  393         HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT1DRIVE_3;
+        AND.W   #0xff3f, &0x16c
+//  394 
+//  395         //Set requested value
+//  396         HWREG16(UCS_BASE + OFS_UCSCTL6) |= xt1drive;
+        BIS.W   R12, &0x16c
+//  397     }
+//  398 
+//  399     //Enable HF mode
+//  400     HWREG16(UCS_BASE + OFS_UCSCTL6) |= XTS;
+??UCS_turnOnHFXT1_1:
+        BIS.W   #0x20, &0x16c
+//  401 
+//  402     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT1BYPASS;
+        BIC.W   #0x10, &0x16c
+//  403 
+//  404     // Check XT1 fault flags
+//  405     while((HWREG8(UCS_BASE + OFS_UCSCTL7) & (XT1HFOFFG))){
+??UCS_turnOnHFXT1_0:
+        BIT.B   #0x4, &0x16e
+        JNC     ??UCS_turnOnHFXT1_2
+//  406         //Clear OSC flaut Flags fault flags
+//  407         HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1HFOFFG);
+        BIC.B   #0x4, &0x16e
+//  408 
+//  409         //Clear OFIFG fault flag
+//  410         HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+        JMP     ??UCS_turnOnHFXT1_0
+//  411     }
+//  412 }
+??UCS_turnOnHFXT1_2:
+        RETA
+          CFI EndBlock cfiBlock5
+//  413 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  414 void UCS_bypassXT1 (uint8_t highOrLowFrequency
+UCS_bypassXT1:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function UCS_bypassXT1
+          CFI NoCalls
+//  415     )
+//  416 {
+//  417     assert((UCS_XT1_LOW_FREQUENCY == highOrLowFrequency) ||
+//  418         (UCS_XT1_HIGH_FREQUENCY == highOrLowFrequency )
+//  419         );
+//  420 
+//  421     //Enable HF/LF mode
+//  422     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XTS;
+        BIC.W   #0x20, &0x16c
+//  423     HWREG16(UCS_BASE + OFS_UCSCTL6) |= highOrLowFrequency;
+        MOV.B   R12, R12
+        BIS.W   R12, &0x16c
+//  424 
+//  425     //Switch OFF XT1 oscillator and enable BYPASS mode
+//  426     HWREG16(UCS_BASE + OFS_UCSCTL6) |= (XT1BYPASS + XT1OFF);
+        BIS.W   #0x11, &0x16c
+//  427 
+//  428     if (UCS_XT1_LOW_FREQUENCY == highOrLowFrequency){
+        CMP.B   #0x0, R12
+        JNE     ??UCS_bypassXT1_1
+//  429       while (HWREG8(UCS_BASE + OFS_UCSCTL7) & (XT1LFOFFG)) {
+??UCS_bypassXT1_0:
+        BIT.B   #0x2, &0x16e
+        JNC     ??UCS_bypassXT1_2
+//  430         //Clear OSC flaut Flags fault flags
+//  431         HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1LFOFFG);
+        BIC.B   #0x2, &0x16e
+//  432 
+//  433         // Clear the global fault flag. In case the XT1 caused the global fault
+//  434         // flag to get set this will clear the global error condition. If any
+//  435         // error condition persists, global flag will get again.
+//  436         HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+        JMP     ??UCS_bypassXT1_0
+//  437       }
+//  438     } else   {
+//  439         while (HWREG8(UCS_BASE + OFS_UCSCTL7) & (XT1HFOFFG)) {
+??UCS_bypassXT1_1:
+        BIT.B   #0x4, &0x16e
+        JNC     ??UCS_bypassXT1_2
+//  440           //Clear OSC flaut Flags fault flags
+//  441           HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1HFOFFG);
+        BIC.B   #0x4, &0x16e
+//  442 
+//  443           //Clear the global fault flag. In case the XT1 caused the global fault
+//  444           //flag to get set this will clear the global error condition. If any
+//  445           //error condition persists, global flag will get again.
+//  446           HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+        JMP     ??UCS_bypassXT1_1
+//  447         }
+//  448       }
+//  449 
+//  450 }
+??UCS_bypassXT1_2:
+        RETA
+          CFI EndBlock cfiBlock6
+//  451 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  452 bool UCS_turnOnLFXT1WithTimeout(uint16_t xt1drive,
+UCS_turnOnLFXT1WithTimeout:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function UCS_turnOnLFXT1WithTimeout
+          CFI NoCalls
+//  453     uint8_t xcap,
+//  454     uint16_t timeout
+//  455     )
+//  456 {
+        MOV.W   R12, R15
+//  457     assert((xcap == UCS_XCAP_0) ||
+//  458         (xcap == UCS_XCAP_1) ||
+//  459         (xcap == UCS_XCAP_2) ||
+//  460         (xcap == UCS_XCAP_3) );
+//  461 
+//  462     assert((xt1drive == UCS_XT1_DRIVE_0 ) ||
+//  463         (xt1drive == UCS_XT1_DRIVE_1 ) ||
+//  464         (xt1drive == UCS_XT1_DRIVE_2 ) ||
+//  465         (xt1drive == UCS_XT1_DRIVE_3 ));
+//  466 
+//  467     assert(timeout > 0);
+//  468 
+//  469     //Switch ON XT1 oscillator
+//  470     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT1OFF;
+        BIC.W   #0x1, &0x16c
+//  471 
+//  472     //Highest drive setting for XT1startup
+//  473     HWREG16(UCS_BASE + OFS_UCSCTL6_L) |= XT1DRIVE1_L + XT1DRIVE0_L;
+        BIS.W   #0xc0, &0x16c
+//  474 
+//  475    	//Enable LF mode and clear xcap and bypass
+//  476     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~(XTS + XCAP_3 + XT1BYPASS);
+        AND.W   #0xffc3, &0x16c
+//  477     HWREG16(UCS_BASE + OFS_UCSCTL6) |= xcap;
+        MOV.B   R13, R13
+        BIS.W   R13, &0x16c
+//  478 
+//  479     do
+//  480     {
+//  481         HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1LFOFFG);
+??UCS_turnOnLFXT1WithTimeout_0:
+        BIC.B   #0x2, &0x16e
+//  482 
+//  483         //Clear OFIFG fault flag
+//  484         HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  485     }while ((HWREG8(UCS_BASE + OFS_UCSCTL7) & XT1LFOFFG) && --timeout);
+        BIT.B   #0x2, &0x16e
+        JNC     ??UCS_turnOnLFXT1WithTimeout_1
+        ADD.W   #0xffff, R14
+        CMP.W   #0x0, R14
+        JNE     ??UCS_turnOnLFXT1WithTimeout_0
+//  486 
+//  487     if (timeout){
+??UCS_turnOnLFXT1WithTimeout_1:
+        CMP.W   #0x0, R14
+        JEQ     ??UCS_turnOnLFXT1WithTimeout_2
+//  488         //set requested Drive mode
+//  489         HWREG16(UCS_BASE + OFS_UCSCTL6) = ( HWREG16(UCS_BASE + OFS_UCSCTL6) &
+//  490                                              ~(XT1DRIVE_3)
+//  491                                              ) |
+//  492                                            (xt1drive);
+        MOV.W   &0x16c, R12
+        AND.W   #0xff3f, R12
+        BIS.W   R15, R12
+        MOV.W   R12, &0x16c
+//  493 
+//  494         return (STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+        RETA
+//  495     } else   {
+//  496         return (STATUS_FAIL);
+??UCS_turnOnLFXT1WithTimeout_2:
+        MOV.B   #0x0, R12
+        RETA
+//  497     }
+//  498 }
+          CFI EndBlock cfiBlock7
+//  499 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  500 bool UCS_turnOnHFXT1WithTimeout (uint16_t xt1drive,
+UCS_turnOnHFXT1WithTimeout:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function UCS_turnOnHFXT1WithTimeout
+          CFI NoCalls
+//  501     uint16_t timeout
+//  502     )
+//  503 {
+        MOV.W   R12, R15
+//  504     assert((xt1drive == UCS_XT1_DRIVE_0 ) ||
+//  505         (xt1drive == UCS_XT1_DRIVE_1 ) ||
+//  506         (xt1drive == UCS_XT1_DRIVE_2 ) ||
+//  507         (xt1drive == UCS_XT1_DRIVE_3 ));
+//  508 
+//  509     assert(timeout > 0);
+//  510 
+//  511     //Switch ON XT1 oscillator
+//  512     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT1OFF;
+        BIC.W   #0x1, &0x16c
+//  513 
+//  514     //Check if drive value is the expected one
+//  515     if ((HWREG16(UCS_BASE + OFS_UCSCTL6) & XT1DRIVE_3) != xt1drive){
+        MOV.W   &0x16c, R14
+        AND.W   #0xc0, R14
+        CMP.W   R15, R14
+        JEQ     ??UCS_turnOnHFXT1WithTimeout_1
+//  516         //Clear XT1drive field
+//  517         HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT1DRIVE_3;
+        AND.W   #0xff3f, &0x16c
+//  518 
+//  519         //Set requested value
+//  520         HWREG16(UCS_BASE + OFS_UCSCTL6) |= xt1drive;
+        BIS.W   R15, &0x16c
+//  521     }
+//  522 
+//  523     //Enable HF mode
+//  524     HWREG16(UCS_BASE + OFS_UCSCTL6) |= XTS;
+??UCS_turnOnHFXT1WithTimeout_1:
+        BIS.W   #0x20, &0x16c
+//  525 
+//  526     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT1BYPASS;
+        BIC.W   #0x10, &0x16c
+//  527 
+//  528     // Check XT1 fault flags
+//  529     do
+//  530     {
+//  531         HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1HFOFFG);
+??UCS_turnOnHFXT1WithTimeout_0:
+        BIC.B   #0x4, &0x16e
+//  532 
+//  533         //Clear OFIFG fault flag
+//  534         HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  535     }while ((HWREG8(UCS_BASE + OFS_UCSCTL7) & ( XT1HFOFFG))
+//  536             && --timeout);
+        BIT.B   #0x4, &0x16e
+        JNC     ??UCS_turnOnHFXT1WithTimeout_2
+        ADD.W   #0xffff, R13
+        CMP.W   #0x0, R13
+        JNE     ??UCS_turnOnHFXT1WithTimeout_0
+//  537 
+//  538     if (timeout){
+??UCS_turnOnHFXT1WithTimeout_2:
+        CMP.W   #0x0, R13
+        JEQ     ??UCS_turnOnHFXT1WithTimeout_3
+//  539         return (STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+        RETA
+//  540     } else   {
+//  541         return (STATUS_FAIL);
+??UCS_turnOnHFXT1WithTimeout_3:
+        MOV.B   #0x0, R12
+        RETA
+//  542     }
+//  543 }
+          CFI EndBlock cfiBlock8
+//  544 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  545 bool UCS_bypassXT1WithTimeout (uint8_t highOrLowFrequency,
+UCS_bypassXT1WithTimeout:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function UCS_bypassXT1WithTimeout
+          CFI NoCalls
+//  546     uint16_t timeout
+//  547     )
+//  548 {
+        MOV.B   R12, R14
+//  549     assert((UCS_XT1_LOW_FREQUENCY == highOrLowFrequency) ||
+//  550         (UCS_XT1_HIGH_FREQUENCY == highOrLowFrequency )
+//  551         );
+//  552 
+//  553     assert(timeout > 0);
+//  554 
+//  555     //Enable HF/LF mode
+//  556     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XTS;
+        BIC.W   #0x20, &0x16c
+//  557     HWREG16(UCS_BASE + OFS_UCSCTL6) |= highOrLowFrequency;
+        MOV.B   R14, R14
+        BIS.W   R14, &0x16c
+//  558 
+//  559     //Switch OFF XT1 oscillator  and enable bypass
+//  560     HWREG16(UCS_BASE + OFS_UCSCTL6) |= (XT1BYPASS + XT1OFF);
+        BIS.W   #0x11, &0x16c
+//  561 
+//  562     if (UCS_XT1_LOW_FREQUENCY == highOrLowFrequency){
+        CMP.B   #0x0, R14
+        JNE     ??UCS_bypassXT1WithTimeout_1
+//  563       do {
+//  564         //Clear OSC flaut Flags fault flags
+//  565         HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1LFOFFG);
+??UCS_bypassXT1WithTimeout_0:
+        BIC.B   #0x2, &0x16e
+//  566 
+//  567         // Clear the global fault flag. In case the XT1 caused the global fault
+//  568         // flag to get set this will clear the global error condition. If any
+//  569         // error condition persists, global flag will get again.
+//  570         HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  571       }while ((HWREG8(UCS_BASE + OFS_UCSCTL7) & (XT1LFOFFG)) && --timeout);
+        BIT.B   #0x2, &0x16e
+        JNC     ??UCS_bypassXT1WithTimeout_2
+        ADD.W   #0xffff, R13
+        CMP.W   #0x0, R13
+        JNE     ??UCS_bypassXT1WithTimeout_0
+        JMP     ??UCS_bypassXT1WithTimeout_2
+//  572 
+//  573     } else   {
+//  574         do {
+//  575           //Clear OSC flaut Flags fault flags
+//  576           HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT1HFOFFG);
+??UCS_bypassXT1WithTimeout_1:
+        BIC.B   #0x4, &0x16e
+//  577 
+//  578           //Clear the global fault flag. In case the XT1 caused the global fault
+//  579           //flag to get set this will clear the global error condition. If any
+//  580           //error condition persists, global flag will get again.
+//  581           HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  582         }while ((HWREG8(UCS_BASE + OFS_UCSCTL7) & (XT1HFOFFG))&& --timeout);
+        BIT.B   #0x4, &0x16e
+        JNC     ??UCS_bypassXT1WithTimeout_2
+        ADD.W   #0xffff, R13
+        CMP.W   #0x0, R13
+        JNE     ??UCS_bypassXT1WithTimeout_1
+//  583     }
+//  584 
+//  585     if (timeout){
+??UCS_bypassXT1WithTimeout_2:
+        CMP.W   #0x0, R13
+        JEQ     ??UCS_bypassXT1WithTimeout_3
+//  586         return (STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+        RETA
+//  587     } else {
+//  588         return (STATUS_FAIL);
+??UCS_bypassXT1WithTimeout_3:
+        MOV.B   #0x0, R12
+        RETA
+//  589     }
+//  590 }
+          CFI EndBlock cfiBlock9
+//  591 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  592 void UCS_turnOffXT1 (void)
+UCS_turnOffXT1:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function UCS_turnOffXT1
+          CFI NoCalls
+//  593 {
+//  594     //Switch off XT1 oscillator
+//  595     HWREG16(UCS_BASE + OFS_UCSCTL6) |= XT1OFF;
+        BIS.W   #0x1, &0x16c
+//  596 }
+        RETA
+          CFI EndBlock cfiBlock10
+//  597 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  598 void UCS_turnOnXT2 (uint16_t xt2drive
+UCS_turnOnXT2:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function UCS_turnOnXT2
+          CFI NoCalls
+//  599     )
+//  600 {
+//  601 #if NOT_CC430_DEVICE
+//  602 
+//  603     //Check if drive value is the expected one
+//  604     if ((HWREG16(UCS_BASE + OFS_UCSCTL6) & XT2DRIVE_3) != xt2drive){
+        MOV.W   &0x16c, R15
+        AND.W   #0xc000, R15
+        CMP.W   R12, R15
+        JEQ     ??UCS_turnOnXT2_1
+//  605         //Clear XT2drive field
+//  606         HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT2DRIVE_3;
+        AND.W   #0x3fff, &0x16c
+//  607 
+//  608         //Set requested value
+//  609         HWREG16(UCS_BASE + OFS_UCSCTL6) |= xt2drive;
+        BIS.W   R12, &0x16c
+//  610     }
+//  611 
+//  612     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT2BYPASS;
+??UCS_turnOnXT2_1:
+        BIC.W   #0x1000, &0x16c
+//  613 #endif
+//  614 
+//  615     //Enable XT2 and Switch on XT2 oscillator
+//  616     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT2OFF;
+        BIC.W   #0x100, &0x16c
+//  617 
+//  618     while (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT2OFFG){
+??UCS_turnOnXT2_0:
+        BIT.B   #0x8, &0x16e
+        JNC     ??UCS_turnOnXT2_2
+//  619      //Clear OSC flaut Flags
+//  620      HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT2OFFG);
+        BIC.B   #0x8, &0x16e
+//  621 
+//  622 #if CC430_DEVICE
+//  623         // CC430 uses a different fault mechanism. It requires 3 VLO clock
+//  624         // cycles delay.If 20MHz CPU, 5000 clock cycles are required in worst
+//  625         // case.
+//  626         __delay_cycles(5000);
+//  627 #endif
+//  628 
+//  629      //Clear OFIFG fault flag
+//  630      HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+        JMP     ??UCS_turnOnXT2_0
+//  631     }
+//  632 }
+??UCS_turnOnXT2_2:
+        RETA
+          CFI EndBlock cfiBlock11
+//  633 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  634 void UCS_bypassXT2 (void)
+UCS_bypassXT2:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function UCS_bypassXT2
+          CFI NoCalls
+//  635 {
+//  636     //Switch on XT2 oscillator
+//  637 #if NOT_CC430_DEVICE
+//  638     HWREG16(UCS_BASE + OFS_UCSCTL6) |= XT2BYPASS;
+        BIS.W   #0x1000, &0x16c
+//  639 #endif
+//  640     HWREG16(UCS_BASE + OFS_UCSCTL6) |= XT2OFF;
+        BIS.W   #0x100, &0x16c
+//  641 
+//  642     while (HWREG8(UCS_BASE + OFS_UCSCTL7) & XT2OFFG){
+??UCS_bypassXT2_0:
+        BIT.B   #0x8, &0x16e
+        JNC     ??UCS_bypassXT2_1
+//  643      //Clear OSC flaut Flags
+//  644      HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT2OFFG);
+        BIC.B   #0x8, &0x16e
+//  645 
+//  646 #if CC430_DEVICE
+//  647         // CC430 uses a different fault mechanism. It requires 3 VLO clock
+//  648         // cycles delay.If 20MHz CPU, 5000 clock cycles are required in worst
+//  649         // case.
+//  650         __delay_cycles(5000);
+//  651 #endif
+//  652 
+//  653      //Clear OFIFG fault flag
+//  654      HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+        JMP     ??UCS_bypassXT2_0
+//  655     }
+//  656 }
+??UCS_bypassXT2_1:
+        RETA
+          CFI EndBlock cfiBlock12
+//  657 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  658 bool UCS_turnOnXT2WithTimeout (uint16_t xt2drive,
+UCS_turnOnXT2WithTimeout:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function UCS_turnOnXT2WithTimeout
+          CFI NoCalls
+//  659     uint16_t timeout
+//  660     )
+//  661 {
+        MOV.W   R12, R15
+//  662     assert(timeout > 0);
+//  663 
+//  664 #if NOT_CC430_DEVICE
+//  665     //Check if drive value is the expected one
+//  666     if ((HWREG16(UCS_BASE + OFS_UCSCTL6) & XT2DRIVE_3) != xt2drive){
+        MOV.W   &0x16c, R14
+        AND.W   #0xc000, R14
+        CMP.W   R15, R14
+        JEQ     ??UCS_turnOnXT2WithTimeout_1
+//  667         //Clear XT2drive field
+//  668         HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT2DRIVE_3;
+        AND.W   #0x3fff, &0x16c
+//  669 
+//  670         //Set requested value
+//  671         HWREG16(UCS_BASE + OFS_UCSCTL6) |= xt2drive;
+        BIS.W   R15, &0x16c
+//  672     }
+//  673 
+//  674     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT2BYPASS;
+??UCS_turnOnXT2WithTimeout_1:
+        BIC.W   #0x1000, &0x16c
+//  675 #endif
+//  676 
+//  677     //Switch on XT2 oscillator
+//  678     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~XT2OFF;
+        BIC.W   #0x100, &0x16c
+//  679 
+//  680     do{
+//  681      //Clear OSC flaut Flags
+//  682      HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT2OFFG);
+??UCS_turnOnXT2WithTimeout_0:
+        BIC.B   #0x8, &0x16e
+//  683 
+//  684 #if CC430_DEVICE
+//  685         // CC430 uses a different fault mechanism. It requires 3 VLO clock
+//  686         // cycles delay.If 20MHz CPU, 5000 clock cycles are required in worst
+//  687         // case.
+//  688         __delay_cycles(5000);
+//  689 #endif
+//  690 
+//  691      //Clear OFIFG fault flag
+//  692      HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  693     }while ((HWREG8(UCS_BASE + OFS_UCSCTL7) & XT2OFFG) && --timeout);
+        BIT.B   #0x8, &0x16e
+        JNC     ??UCS_turnOnXT2WithTimeout_2
+        ADD.W   #0xffff, R13
+        CMP.W   #0x0, R13
+        JNE     ??UCS_turnOnXT2WithTimeout_0
+//  694 
+//  695     if (timeout){
+??UCS_turnOnXT2WithTimeout_2:
+        CMP.W   #0x0, R13
+        JEQ     ??UCS_turnOnXT2WithTimeout_3
+//  696         return (STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+        RETA
+//  697     } else   {
+//  698         return (STATUS_FAIL);
+??UCS_turnOnXT2WithTimeout_3:
+        MOV.B   #0x0, R12
+        RETA
+//  699     }
+//  700 }
+          CFI EndBlock cfiBlock13
+//  701 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  702 bool UCS_bypassXT2WithTimeout (uint16_t timeout
+UCS_bypassXT2WithTimeout:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function UCS_bypassXT2WithTimeout
+          CFI NoCalls
+//  703     )
+//  704 {
+        MOV.W   R12, R15
+//  705     assert(timeout > 0);
+//  706 
+//  707     //Switch off XT2 oscillator and enable BYPASS mode
+//  708 #if NOT_CC430_DEVICE
+//  709     HWREG16(UCS_BASE + OFS_UCSCTL6) |= XT2BYPASS;
+        BIS.W   #0x1000, &0x16c
+//  710 #endif
+//  711     HWREG16(UCS_BASE + OFS_UCSCTL6) |= XT2OFF;
+        BIS.W   #0x100, &0x16c
+//  712 
+//  713     do{
+//  714      //Clear OSC flaut Flags
+//  715      HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(XT2OFFG);
+??UCS_bypassXT2WithTimeout_0:
+        BIC.B   #0x8, &0x16e
+//  716 
+//  717 #if CC430_DEVICE
+//  718         // CC430 uses a different fault mechanism. It requires 3 VLO clock
+//  719         // cycles delay.If 20MHz CPU, 5000 clock cycles are required in worst
+//  720         // case.
+//  721         __delay_cycles(5000);
+//  722 #endif
+//  723 
+//  724      //Clear OFIFG fault flag
+//  725      HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  726     }while ((HWREG8(UCS_BASE + OFS_UCSCTL7) & XT2OFFG) && --timeout);
+        BIT.B   #0x8, &0x16e
+        JNC     ??UCS_bypassXT2WithTimeout_1
+        ADD.W   #0xffff, R15
+        CMP.W   #0x0, R15
+        JNE     ??UCS_bypassXT2WithTimeout_0
+//  727 
+//  728     if (timeout){
+??UCS_bypassXT2WithTimeout_1:
+        CMP.W   #0x0, R15
+        JEQ     ??UCS_bypassXT2WithTimeout_2
+//  729         return (STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+        RETA
+//  730     } else   {
+//  731         return (STATUS_FAIL);
+??UCS_bypassXT2WithTimeout_2:
+        MOV.B   #0x0, R12
+        RETA
+//  732     }
+//  733 }
+          CFI EndBlock cfiBlock14
+//  734 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  735 void UCS_turnOffXT2 (void)
+UCS_turnOffXT2:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function UCS_turnOffXT2
+          CFI NoCalls
+//  736 {
+//  737     //Switch off XT2 oscillator
+//  738     HWREG16(UCS_BASE + OFS_UCSCTL6) |= XT2OFF;
+        BIS.W   #0x100, &0x16c
+//  739 }
+        RETA
+          CFI EndBlock cfiBlock15
+//  740 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  741 void UCS_initFLLSettle (uint16_t fsystem,
+UCS_initFLLSettle:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function UCS_initFLLSettle
+//  742     uint16_t ratio
+//  743     )
+//  744 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        SUBA    #0x2, SP
+          CFI CFA SP+14
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  745     volatile uint16_t x = ratio * 32;
+        MOV.W   R11, R15
+        RLAM.W  #0x4, R15
+        RLAM.W  #0x1, R15
+        MOV.W   R15, 0(SP)
+//  746 
+//  747     UCS_initFLL(fsystem, ratio);
+        MOV.W   R11, R13
+        MOV.W   R10, R12
+          CFI FunCall UCS_initFLL
+        CALLA   #UCS_initFLL
+//  748 
+//  749     while (x--)
+??UCS_initFLLSettle_0:
+        MOV.W   @SP, R15
+        MOV.W   R15, R14
+        ADD.W   #0xffff, R14
+        MOV.W   R14, 0(SP)
+        CMP.W   #0x0, R15
+        JEQ     ??UCS_initFLLSettle_1
+//  750     {
+//  751         __delay_cycles(30);
+        ////////////// Start of 30 cycles delay.
+        NOP
+        NOP
+        MOV.W   #0x8, R15
+??UCS_initFLLSettle_2:
+        ADD.W   #0xffff, R15
+        JC      ??UCS_initFLLSettle_2
+        ////////////// End of delay code.
+        JMP     ??UCS_initFLLSettle_0
+//  752     }
+//  753 }
+??UCS_initFLLSettle_1:
+        ADDA    #0x2, SP
+          CFI CFA SP+12
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock16
+//  754 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  755 void UCS_initFLL (uint16_t fsystem,
+UCS_initFLL:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function UCS_initFLL
+          CFI NoCalls
+//  756     uint16_t ratio
+//  757     )
+//  758 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+//  759     uint16_t d, dco_div_bits;
+//  760     uint16_t mode = 0;
+        MOV.W   #0x0, R10
+//  761 
+//  762     //Save actual state of FLL loop control, then disable it. This is needed to
+//  763     //prevent the FLL from acting as we are making fundamental modifications to
+//  764     //the clock setup.
+//  765     uint16_t srRegisterState = __get_SR_register() & SCG0;
+        MOV.W   SR, R11
+        AND.W   #0x40, R11
+//  766 
+//  767     d = ratio;
+        MOV.W   R13, R15
+//  768     //Have at least a divider of 2
+//  769     dco_div_bits = FLLD__2;
+        MOV.W   #0x1000, R14
+//  770 
+//  771     if (fsystem > 16000){
+        CMP.W   #0x3e81, R12
+        JNC     ??UCS_initFLL_4
+//  772         d >>= 1 ;
+        RRUM.W  #0x1, R15
+//  773         mode = 1;
+        MOV.W   #0x1, R10
+        JMP     ??UCS_initFLL_0
+//  774     } else   {
+//  775         //fsystem = fsystem * 2
+//  776         fsystem <<= 1;
+??UCS_initFLL_4:
+        RLA.W   R12
+//  777     }
+//  778 
+//  779     while (d > 512)
+??UCS_initFLL_0:
+        CMP.W   #0x201, R15
+        JNC     ??UCS_initFLL_5
+//  780     {
+//  781         //Set next higher div level
+//  782         dco_div_bits = dco_div_bits + FLLD0;
+        ADD.W   #0x1000, R14
+//  783         d >>= 1;
+        RRUM.W  #0x1, R15
+        JMP     ??UCS_initFLL_0
+//  784     }
+//  785 
+//  786     // Disable FLL
+//  787     __bis_SR_register(SCG0);
+??UCS_initFLL_5:
+        BIS.W   #0x40, SR
+        NOP
+//  788 
+//  789     //Set DCO to lowest Tap
+//  790     HWREG8(UCS_BASE + OFS_UCSCTL0_H) = 0x0000;
+        MOV.B   #0x0, &0x161
+//  791 
+//  792     //Reset FN bits
+//  793     HWREG16(UCS_BASE + OFS_UCSCTL2) &= ~(0x03FF);
+        AND.W   #0xfc00, &0x164
+//  794     HWREG16(UCS_BASE + OFS_UCSCTL2) = dco_div_bits | (d - 1);
+        MOV.W   R15, R8
+        ADD.W   #0xffff, R8
+        MOV.W   R14, R9
+        BIS.W   R8, R9
+        MOV.W   R9, &0x164
+//  795 
+//  796     if (fsystem <= 630){           //fsystem < 0.63MHz
+        CMP.W   #0x277, R12
+        JC      ??UCS_initFLL_6
+//  797         HWREG8(UCS_BASE + OFS_UCSCTL1) = DCORSEL_0;
+        MOV.B   #0x0, &0x162
+        JMP     ??UCS_initFLL_2
+//  798     } else if (fsystem <  1250){      //0.63MHz < fsystem < 1.25MHz
+??UCS_initFLL_6:
+        CMP.W   #0x4e2, R12
+        JC      ??UCS_initFLL_7
+//  799         HWREG8(UCS_BASE + OFS_UCSCTL1) = DCORSEL_1;
+        MOV.B   #0x10, &0x162
+        JMP     ??UCS_initFLL_2
+//  800     } else if (fsystem <  2500){      //1.25MHz < fsystem <  2.5MHz
+??UCS_initFLL_7:
+        CMP.W   #0x9c4, R12
+        JC      ??UCS_initFLL_8
+//  801         HWREG8(UCS_BASE + OFS_UCSCTL1) = DCORSEL_2;
+        MOV.B   #0x20, &0x162
+        JMP     ??UCS_initFLL_2
+//  802     } else if (fsystem <  5000){      //2.5MHz  < fsystem <    5MHz
+??UCS_initFLL_8:
+        CMP.W   #0x1388, R12
+        JC      ??UCS_initFLL_9
+//  803         HWREG8(UCS_BASE + OFS_UCSCTL1) = DCORSEL_3;
+        MOV.B   #0x30, &0x162
+        JMP     ??UCS_initFLL_2
+//  804     } else if (fsystem <  10000){     //5MHz    < fsystem <   10MHz
+??UCS_initFLL_9:
+        CMP.W   #0x2710, R12
+        JC      ??UCS_initFLL_10
+//  805         HWREG8(UCS_BASE + OFS_UCSCTL1) = DCORSEL_4;
+        MOV.B   #0x40, &0x162
+        JMP     ??UCS_initFLL_2
+//  806     } else if (fsystem <  20000){     //10MHz   < fsystem <   20MHz
+??UCS_initFLL_10:
+        CMP.W   #0x4e20, R12
+        JC      ??UCS_initFLL_11
+//  807         HWREG8(UCS_BASE + OFS_UCSCTL1) = DCORSEL_5;
+        MOV.B   #0x50, &0x162
+        JMP     ??UCS_initFLL_2
+//  808     } else if (fsystem <  40000){     //20MHz   < fsystem <   40MHz
+??UCS_initFLL_11:
+        CMP.W   #0x9c40, R12
+        JC      ??UCS_initFLL_12
+//  809         HWREG8(UCS_BASE + OFS_UCSCTL1) = DCORSEL_6;
+        MOV.B   #0x60, &0x162
+        JMP     ??UCS_initFLL_2
+//  810     } else {
+//  811         HWREG8(UCS_BASE + OFS_UCSCTL1) = DCORSEL_7;
+??UCS_initFLL_12:
+        MOV.B   #0x70, &0x162
+//  812     }
+//  813 
+//  814     // Re-enable FLL
+//  815      __bic_SR_register(SCG0);
+??UCS_initFLL_2:
+        BIC.W   #0x40, SR
+        NOP
+//  816 
+//  817     while (HWREG8(UCS_BASE + OFS_UCSCTL7_L) & DCOFFG)
+??UCS_initFLL_1:
+        BIT.B   #0x1, &0x16e
+        JNC     ??UCS_initFLL_13
+//  818     {
+//  819         //Clear OSC flaut Flags
+//  820         HWREG8(UCS_BASE + OFS_UCSCTL7_L) &= ~(DCOFFG);
+        BIC.B   #0x1, &0x16e
+//  821 
+//  822         //Clear OFIFG fault flag
+//  823         HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+        JMP     ??UCS_initFLL_1
+//  824     }
+//  825 
+//  826     // Restore previous SCG0
+//  827     __bis_SR_register(srRegisterState);
+??UCS_initFLL_13:
+        BIS.W   R11, SR
+        NOP
+//  828 
+//  829     if (mode == 1){
+        CMP.W   #0x1, R10
+        JNE     ??UCS_initFLL_14
+//  830         //fsystem > 16000
+//  831         //Select DCOCLK
+//  832         HWREG16(UCS_BASE + OFS_UCSCTL4) &=  ~(SELM_7 + SELS_7);
+        AND.W   #0xff88, &0x168
+//  833         HWREG16(UCS_BASE + OFS_UCSCTL4) |= SELM__DCOCLK + SELS__DCOCLK;
+        BIS.W   #0x33, &0x168
+        JMP     ??UCS_initFLL_3
+//  834     } else   {
+//  835         //Select DCODIVCLK
+//  836         HWREG16(UCS_BASE + OFS_UCSCTL4) &=  ~(SELM_7 + SELS_7);
+??UCS_initFLL_14:
+        AND.W   #0xff88, &0x168
+//  837         HWREG16(UCS_BASE + OFS_UCSCTL4) |= SELM__DCOCLKDIV + SELS__DCOCLKDIV;
+        BIS.W   #0x44, &0x168
+//  838     }
+//  839 
+//  840 }
+??UCS_initFLL_3:
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock17
+//  841 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  842 void UCS_enableClockRequest (uint8_t selectClock
+UCS_enableClockRequest:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function UCS_enableClockRequest
+          CFI NoCalls
+//  843     )
+//  844 {
+//  845     HWREG8(UCS_BASE + OFS_UCSCTL8) |= selectClock;
+        BIS.B   R12, &0x170
+//  846 }
+        RETA
+          CFI EndBlock cfiBlock18
+//  847 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  848 void UCS_disableClockRequest (uint8_t selectClock
+UCS_disableClockRequest:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function UCS_disableClockRequest
+          CFI NoCalls
+//  849     )
+//  850 {
+//  851     HWREG8(UCS_BASE + OFS_UCSCTL8) &= ~selectClock;
+        BIC.B   R12, &0x170
+//  852 }
+        RETA
+          CFI EndBlock cfiBlock19
+//  853 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  854 uint8_t UCS_getFaultFlagStatus (uint8_t mask
+UCS_getFaultFlagStatus:
+          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Function UCS_getFaultFlagStatus
+          CFI NoCalls
+//  855     )
+//  856 {
+//  857     assert(mask <= UCS_XT2OFFG );
+//  858     return (HWREG8(UCS_BASE + OFS_UCSCTL7) & mask);
+        AND.B   &0x16e, R12
+        RETA
+//  859 }
+          CFI EndBlock cfiBlock20
+//  860 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  861 void UCS_clearFaultFlag (uint8_t mask
+UCS_clearFaultFlag:
+          CFI Block cfiBlock21 Using cfiCommon0
+          CFI Function UCS_clearFaultFlag
+          CFI NoCalls
+//  862     )
+//  863 {
+//  864     assert(mask <= UCS_XT2OFFG );
+//  865     HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~mask;
+        BIC.B   R12, &0x16e
+//  866 }
+        RETA
+          CFI EndBlock cfiBlock21
+//  867 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  868 void UCS_turnOffSMCLK (void)
+UCS_turnOffSMCLK:
+          CFI Block cfiBlock22 Using cfiCommon0
+          CFI Function UCS_turnOffSMCLK
+          CFI NoCalls
+//  869 {
+//  870     HWREG16(UCS_BASE + OFS_UCSCTL6) |= SMCLKOFF;
+        BIS.W   #0x2, &0x16c
+//  871 }
+        RETA
+          CFI EndBlock cfiBlock22
+//  872 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  873 void UCS_turnOnSMCLK (void)
+UCS_turnOnSMCLK:
+          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Function UCS_turnOnSMCLK
+          CFI NoCalls
+//  874 {
+//  875     HWREG16(UCS_BASE + OFS_UCSCTL6) &= ~SMCLKOFF;
+        BIC.W   #0x2, &0x16c
+//  876 }
+        RETA
+          CFI EndBlock cfiBlock23
+//  877 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  878 uint32_t UCS_getACLK (void)
+UCS_getACLK:
+          CFI Block cfiBlock24 Using cfiCommon0
+          CFI Function UCS_getACLK
+//  879 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  880     //Find ACLK source
+//  881     uint16_t ACLKSource = (HWREG16(UCS_BASE + OFS_UCSCTL4) & SELA_7);
+        MOV.W   &0x168, R10
+        AND.W   #0x700, R10
+//  882 
+//  883     ACLKSource = ACLKSource >> 8;
+        SWPB    R10
+        AND.W   #0xff, R10
+//  884 
+//  885     uint16_t ACLKSourceDivider =  HWREG16(UCS_BASE + OFS_UCSCTL5) & DIVA_7;
+        MOV.W   &0x16a, R11
+        AND.W   #0x700, R11
+//  886     ACLKSourceDivider = ACLKSourceDivider >> 8;
+        SWPB    R11
+        AND.W   #0xff, R11
+//  887 
+//  888     return (privateUCSComputeCLKFrequency(
+//  889                 ACLKSource,
+//  890                 ACLKSourceDivider
+//  891                 ));
+        MOV.W   R11, R13
+        MOV.W   R10, R12
+          CFI FunCall privateUCSComputeCLKFrequency
+        CALLA   #privateUCSComputeCLKFrequency
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  892 }
+          CFI EndBlock cfiBlock24
+//  893 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  894 uint32_t UCS_getSMCLK (void)
+UCS_getSMCLK:
+          CFI Block cfiBlock25 Using cfiCommon0
+          CFI Function UCS_getSMCLK
+//  895 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  896     uint16_t SMCLKSource = HWREG8(UCS_BASE + OFS_UCSCTL4_L) & SELS_7;
+        MOV.B   &0x168, R10
+        MOV.B   R10, R10
+        AND.W   #0x70, R10
+//  897 
+//  898     SMCLKSource = SMCLKSource >> 4;
+        RRUM.W  #0x4, R10
+//  899 
+//  900     uint16_t SMCLKSourceDivider =
+//  901         HWREG16(UCS_BASE + OFS_UCSCTL5) & DIVS_7;
+        MOV.W   &0x16a, R11
+        AND.W   #0x70, R11
+//  902     SMCLKSourceDivider = SMCLKSourceDivider >> 4;
+        RRUM.W  #0x4, R11
+//  903 
+//  904     return (privateUCSComputeCLKFrequency(
+//  905                 SMCLKSource,
+//  906                 SMCLKSourceDivider )
+//  907             );
+        MOV.W   R11, R13
+        MOV.W   R10, R12
+          CFI FunCall privateUCSComputeCLKFrequency
+        CALLA   #privateUCSComputeCLKFrequency
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  908 }
+          CFI EndBlock cfiBlock25
+//  909 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  910 uint32_t UCS_getMCLK (void)
+UCS_getMCLK:
+          CFI Block cfiBlock26 Using cfiCommon0
+          CFI Function UCS_getMCLK
+//  911 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  912     //Find AMCLK source
+//  913     uint16_t MCLKSource = (HWREG16(UCS_BASE + OFS_UCSCTL4) & SELM_7);
+        MOV.W   &0x168, R10
+        AND.W   #0x7, R10
+//  914 
+//  915     uint16_t MCLKSourceDivider =  HWREG16(UCS_BASE + OFS_UCSCTL5) & DIVM_7;
+        MOV.W   &0x16a, R11
+        AND.W   #0x7, R11
+//  916 
+//  917     return (privateUCSComputeCLKFrequency(
+//  918                 MCLKSource,
+//  919                 MCLKSourceDivider )
+//  920             );
+        MOV.W   R11, R13
+        MOV.W   R10, R12
+          CFI FunCall privateUCSComputeCLKFrequency
+        CALLA   #privateUCSComputeCLKFrequency
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  921 }
+          CFI EndBlock cfiBlock26
+//  922 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  923 uint16_t UCS_clearAllOscFlagsWithTimeout(uint16_t timeout
+UCS_clearAllOscFlagsWithTimeout:
+          CFI Block cfiBlock27 Using cfiCommon0
+          CFI Function UCS_clearAllOscFlagsWithTimeout
+          CFI NoCalls
+//  924                                              )
+//  925 {
+        MOV.W   R12, R15
+//  926     assert(timeout > 0);
+//  927 
+//  928     do {
+//  929       // Clear all osc fault flags
+//  930       HWREG8(UCS_BASE + OFS_UCSCTL7) &= ~(DCOFFG +
+//  931                                              XT1LFOFFG +
+//  932                                              XT1HFOFFG +
+//  933                                              XT2OFFG
+//  934                                              );
+??UCS_clearAllOscFlagsWithTimeout_0:
+        AND.B   #0xf0, &0x16e
+//  935 
+//  936 #if CC430_DEVICE
+//  937         // CC430 uses a different fault mechanism. It requires 3 VLO clock
+//  938         // cycles delay.If 20MHz CPU, 5000 clock cycles are required in worst
+//  939         // case.
+//  940         __delay_cycles(5000);
+//  941 #endif
+//  942 
+//  943       // Clear the global osc fault flag.
+//  944       HWREG8(SFR_BASE + OFS_SFRIFG1) &= ~OFIFG;
+        BIC.B   #0x2, &0x102
+//  945 
+//  946       // Check XT1 fault flags
+//  947     } while ((HWREG8(SFR_BASE + OFS_SFRIFG1) & OFIFG) && --timeout);
+        BIT.B   #0x2, &0x102
+        JNC     ??UCS_clearAllOscFlagsWithTimeout_1
+        ADD.W   #0xffff, R15
+        CMP.W   #0x0, R15
+        JNE     ??UCS_clearAllOscFlagsWithTimeout_0
+//  948 
+//  949     return (HWREG8(UCS_BASE + OFS_UCSCTL7) & (DCOFFG +
+//  950                                                  XT1LFOFFG +
+//  951                                                  XT1HFOFFG +
+//  952                                                  XT2OFFG)
+//  953                                                 );
+??UCS_clearAllOscFlagsWithTimeout_1:
+        MOV.B   &0x16e, R12
+        MOV.B   R12, R12
+        AND.W   #0xf, R12
+        RETA
+//  954 }
+          CFI EndBlock cfiBlock27
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  955 
+//  956 #endif
+//  957 //*****************************************************************************
+//  958 //
+//  959 //! Close the doxygen group for ucs_api
+//  960 //! @}
+//  961 //
+//  962 //*****************************************************************************
+// 
+// 1 900 bytes in segment CODE
+//     8 bytes in segment DATA20_Z
+// 
+// 1 900 bytes of CODE memory
+//     8 bytes of DATA memory
+//
+//Errors: none
+//Warnings: none

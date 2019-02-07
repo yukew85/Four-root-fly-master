@@ -1,0 +1,730 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:07
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\eusci_b_i2c.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW1C4C.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\eusci_b_i2c.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\eusci_b_i2c.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME eusci_b_i2c
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\eusci_b_i2c.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // eusci_b_i2c.c - Driver for the eusci_b_i2c Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup eusci_b_i2c_api eusci_b_i2c
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_EUSCI_Bx__
+//   48 #include "eusci_b_i2c.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 void EUSCI_B_I2C_initMaster (uint16_t baseAddress,
+//   53     EUSCI_B_I2C_initMasterParam *param
+//   54     )
+//   55 {
+//   56     uint16_t preScalarValue;
+//   57 
+//   58     //Disable the USCI module and clears the other bits of control register
+//   59     HWREG16(baseAddress + OFS_UCBxCTLW0) = UCSWRST;
+//   60 
+//   61     //Configure Automatic STOP condition generation
+//   62     HWREG16(baseAddress + OFS_UCBxCTLW1) &= ~UCASTP_3;
+//   63     HWREG16(baseAddress + OFS_UCBxCTLW1) |= param->autoSTOPGeneration;
+//   64 
+//   65     //Byte Count Threshold
+//   66     HWREG16(baseAddress + OFS_UCBxTBCNT) = param->byteCounterThreshold;
+//   67     /*
+//   68      * Configure as I2C master mode.
+//   69      * UCMST = Master mode
+//   70      * UCMODE_3 = I2C mode
+//   71      * UCSYNC = Synchronous mode
+//   72      */
+//   73     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCMST + UCMODE_3 + UCSYNC;
+//   74 
+//   75     //Configure I2C clock source
+//   76     HWREG16(baseAddress + OFS_UCBxCTLW0) |= (param->selectClockSource + UCSWRST);
+//   77 
+//   78     /*
+//   79      * Compute the clock divider that achieves the fastest speed less than or
+//   80      * equal to the desired speed.  The numerator is biased to favor a larger
+//   81      * clock divider so that the resulting clock is always less than or equal
+//   82      * to the desired clock, never greater.
+//   83      */
+//   84     preScalarValue = (uint16_t)(param->i2cClk / param->dataRate);
+//   85     HWREG16(baseAddress + OFS_UCBxBRW) = preScalarValue;
+//   86 }
+//   87 
+//   88 void EUSCI_B_I2C_initSlave (uint16_t baseAddress,
+//   89     EUSCI_B_I2C_initSlaveParam *param
+//   90     )
+//   91 {
+//   92     //Disable the USCI module
+//   93     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCSWRST;
+//   94 
+//   95     //Clear USCI master mode
+//   96     HWREG16(baseAddress + OFS_UCBxCTLW0) &= ~UCMST;
+//   97 
+//   98     //Configure I2C as Slave and Synchronous mode
+//   99     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCMODE_3 + UCSYNC;
+//  100 
+//  101     //Set up the slave address.
+//  102     HWREG16(baseAddress + OFS_UCBxI2COA0 + param->slaveAddressOffset)
+//  103                                     = param->slaveAddress + param->slaveOwnAddressEnable;
+//  104 }
+//  105 
+//  106 void EUSCI_B_I2C_enable (uint16_t baseAddress)
+//  107 {
+//  108     //Reset the UCSWRST bit to enable the USCI Module
+//  109     HWREG16(baseAddress + OFS_UCBxCTLW0) &= ~(UCSWRST);
+//  110 }
+//  111 
+//  112 void EUSCI_B_I2C_disable (uint16_t baseAddress)
+//  113 {
+//  114     //Set the UCSWRST bit to disable the USCI Module
+//  115     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCSWRST;
+//  116 }
+//  117 
+//  118 void EUSCI_B_I2C_setSlaveAddress (uint16_t baseAddress,
+//  119     uint8_t slaveAddress
+//  120     )
+//  121 {
+//  122     //Set the address of the slave with which the master will communicate.
+//  123     HWREG16(baseAddress + OFS_UCBxI2CSA) = (slaveAddress);
+//  124 }
+//  125 
+//  126 void EUSCI_B_I2C_setMode (uint16_t baseAddress,
+//  127     uint8_t mode
+//  128     )
+//  129 {
+//  130     HWREG16(baseAddress + OFS_UCBxCTLW0) &= ~EUSCI_B_I2C_TRANSMIT_MODE;
+//  131     HWREG16(baseAddress + OFS_UCBxCTLW0) |= mode;
+//  132 }
+//  133 
+//  134 uint8_t EUSCI_B_I2C_getMode (uint16_t baseAddress)
+//  135 {
+//  136     //Read the I2C mode.
+//  137     return ((HWREG16(baseAddress + OFS_UCBxCTLW0) & UCTR));
+//  138 
+//  139 }
+//  140 
+//  141 void EUSCI_B_I2C_slavePutData (uint16_t baseAddress,
+//  142     uint8_t transmitData
+//  143     )
+//  144 {
+//  145     //Send single byte data.
+//  146     HWREG16(baseAddress + OFS_UCBxTXBUF) = transmitData;
+//  147 }
+//  148 
+//  149 uint8_t EUSCI_B_I2C_slaveGetData (uint16_t baseAddress)
+//  150 {
+//  151     //Read a byte.
+//  152     return (HWREG16(baseAddress + OFS_UCBxRXBUF));
+//  153 }
+//  154 
+//  155 uint16_t EUSCI_B_I2C_isBusBusy (uint16_t baseAddress)
+//  156 {
+//  157     //Return the bus busy status.
+//  158     return (HWREG16(baseAddress + OFS_UCBxSTATW) & UCBBUSY);
+//  159 }
+//  160 
+//  161 uint16_t EUSCI_B_I2C_masterIsStopSent (uint16_t baseAddress)
+//  162 {
+//  163     return (HWREG16(baseAddress + OFS_UCBxCTLW0) & UCTXSTP);
+//  164 }
+//  165 
+//  166 uint16_t EUSCI_B_I2C_masterIsStartSent (uint16_t baseAddress)
+//  167 {
+//  168     return (HWREG16(baseAddress + OFS_UCBxCTLW0) & UCTXSTT);
+//  169 }
+//  170 
+//  171 void EUSCI_B_I2C_enableInterrupt (uint16_t baseAddress,
+//  172     uint16_t mask
+//  173     )
+//  174 {
+//  175     //Enable the interrupt masked bit
+//  176     HWREG16(baseAddress + OFS_UCBxIE) |= mask;
+//  177 }
+//  178 
+//  179 void EUSCI_B_I2C_disableInterrupt (uint16_t baseAddress,
+//  180     uint16_t mask
+//  181     )
+//  182 {
+//  183     //Disable the interrupt masked bit
+//  184     HWREG16(baseAddress + OFS_UCBxIE) &= ~(mask);
+//  185 }
+//  186 
+//  187 void EUSCI_B_I2C_clearInterrupt (uint16_t baseAddress,
+//  188     uint16_t mask
+//  189     )
+//  190 {
+//  191     //Clear the I2C interrupt source.
+//  192     HWREG16(baseAddress + OFS_UCBxIFG) &= ~(mask);
+//  193 }
+//  194 
+//  195 uint16_t EUSCI_B_I2C_getInterruptStatus (uint16_t baseAddress,
+//  196     uint16_t mask
+//  197     )
+//  198 {
+//  199     //Return the interrupt status of the request masked bit.
+//  200     return (HWREG16(baseAddress + OFS_UCBxIFG) & mask);
+//  201 }
+//  202 
+//  203 void EUSCI_B_I2C_masterSendSingleByte (uint16_t baseAddress,
+//  204     uint8_t txData
+//  205     )
+//  206 {
+//  207     //Store current TXIE status
+//  208     uint16_t txieStatus = HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE;
+//  209 
+//  210     //Disable transmit interrupt enable
+//  211     HWREG16(baseAddress + OFS_UCBxIE) &= ~(UCTXIE);
+//  212 
+//  213     //Send start condition.
+//  214     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTR + UCTXSTT;
+//  215 
+//  216     //Poll for transmit interrupt flag.
+//  217     while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+//  218 
+//  219     //Send single byte data.
+//  220     HWREG16(baseAddress + OFS_UCBxTXBUF) = txData;
+//  221 
+//  222     //Poll for transmit interrupt flag.
+//  223     while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+//  224 
+//  225     //Send stop condition.
+//  226     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  227 
+//  228     //Clear transmit interrupt flag before enabling interrupt again
+//  229     HWREG16(baseAddress + OFS_UCBxIFG) &= ~(UCTXIFG);
+//  230 
+//  231     //Reinstate transmit interrupt enable
+//  232     HWREG16(baseAddress + OFS_UCBxIE) |= txieStatus;
+//  233 }
+//  234 
+//  235 uint8_t EUSCI_B_I2C_masterReceiveSingleByte (uint16_t baseAddress)
+//  236 {
+//  237     //Set USCI in Receive mode
+//  238     HWREG16(baseAddress + OFS_UCBxCTLW0) &= ~UCTR;
+//  239 
+//  240     //Send start condition
+//  241     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTT;
+//  242 
+//  243     //Poll for start condition transmission
+//  244     while(HWREG16(baseAddress + OFS_UCBxCTLW0) & UCTXSTT);
+//  245 
+//  246     //Send stop condition
+//  247     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  248 
+//  249     //Poll for receive interrupt flag.
+//  250     while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCRXIFG));
+//  251 
+//  252     //Send single byte data.
+//  253     return (HWREG16(baseAddress + OFS_UCBxRXBUF));
+//  254 }
+//  255 
+//  256 bool EUSCI_B_I2C_masterSendSingleByteWithTimeout (uint16_t baseAddress,
+//  257     uint8_t txData,
+//  258     uint32_t timeout
+//  259     )
+//  260 {
+//  261     // Creating variable for second timeout scenario
+//  262     uint32_t timeout2 = timeout;
+//  263 
+//  264     //Store current TXIE status
+//  265     uint16_t txieStatus = HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE;
+//  266 
+//  267     //Disable transmit interrupt enable
+//  268     HWREG16(baseAddress + OFS_UCBxIE) &= ~(UCTXIE);
+//  269 
+//  270     //Send start condition.
+//  271     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTR + UCTXSTT;
+//  272 
+//  273     //Poll for transmit interrupt flag.
+//  274     while ((!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout);
+//  275 
+//  276     //Check if transfer timed out
+//  277     if (timeout == 0){
+//  278         return (STATUS_FAIL);
+//  279     }
+//  280 
+//  281     //Send single byte data.
+//  282     HWREG16(baseAddress + OFS_UCBxTXBUF) = txData;
+//  283 
+//  284     //Poll for transmit interrupt flag.
+//  285     while ((!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout2);
+//  286 
+//  287     //Check if transfer timed out
+//  288     if (timeout2 == 0){
+//  289         return (STATUS_FAIL);
+//  290     }
+//  291 
+//  292     //Send stop condition.
+//  293     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  294 
+//  295     //Clear transmit interrupt flag before enabling interrupt again
+//  296     HWREG16(baseAddress + OFS_UCBxIFG) &= ~(UCTXIFG);
+//  297 
+//  298     //Reinstate transmit interrupt enable
+//  299     HWREG16(baseAddress + OFS_UCBxIE) |= txieStatus;
+//  300 
+//  301     return (STATUS_SUCCESS);
+//  302 }
+//  303 
+//  304 void EUSCI_B_I2C_masterSendMultiByteStart (uint16_t baseAddress,
+//  305     uint8_t txData
+//  306     )
+//  307 {
+//  308     //Store current transmit interrupt enable
+//  309     uint16_t txieStatus = HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE;
+//  310 
+//  311     //Disable transmit interrupt enable
+//  312     HWREG16(baseAddress + OFS_UCBxIE) &= ~(UCTXIE);
+//  313 
+//  314     //Send start condition.
+//  315     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTR +  UCTXSTT;
+//  316 
+//  317     //Poll for transmit interrupt flag.
+//  318     while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+//  319 
+//  320     //Send single byte data.
+//  321     HWREG16(baseAddress + OFS_UCBxTXBUF) = txData;
+//  322 
+//  323     //Reinstate transmit interrupt enable
+//  324     HWREG16(baseAddress + OFS_UCBxIE) |= txieStatus;
+//  325 }
+//  326 
+//  327 bool EUSCI_B_I2C_masterSendMultiByteStartWithTimeout (uint16_t baseAddress,
+//  328     uint8_t txData,
+//  329     uint32_t timeout
+//  330     )
+//  331 {
+//  332     //Store current transmit interrupt enable
+//  333     uint16_t txieStatus = HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE;
+//  334 
+//  335     //Disable transmit interrupt enable
+//  336     HWREG16(baseAddress + OFS_UCBxIE) &= ~(UCTXIE);
+//  337 
+//  338     //Send start condition.
+//  339     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTR +  UCTXSTT;
+//  340 
+//  341     //Poll for transmit interrupt flag.
+//  342     while ((!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout);
+//  343 
+//  344     //Check if transfer timed out
+//  345     if (timeout == 0){
+//  346         return (STATUS_FAIL);
+//  347     }
+//  348 
+//  349     //Send single byte data.
+//  350     HWREG16(baseAddress + OFS_UCBxTXBUF) = txData;
+//  351 
+//  352     //Reinstate transmit interrupt enable
+//  353     HWREG16(baseAddress + OFS_UCBxIE) |= txieStatus;
+//  354 
+//  355     return(STATUS_SUCCESS);
+//  356 }
+//  357 
+//  358 void EUSCI_B_I2C_masterSendMultiByteNext (uint16_t baseAddress,
+//  359     uint8_t txData
+//  360     )
+//  361 {
+//  362     //If interrupts are not used, poll for flags
+//  363     if (!(HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE)){
+//  364         //Poll for transmit interrupt flag.
+//  365         while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+//  366     }
+//  367 
+//  368     //Send single byte data.
+//  369     HWREG16(baseAddress + OFS_UCBxTXBUF) = txData;
+//  370 }
+//  371 
+//  372 bool EUSCI_B_I2C_masterSendMultiByteNextWithTimeout (uint16_t baseAddress,
+//  373     uint8_t txData,
+//  374     uint32_t timeout
+//  375     )
+//  376 {
+//  377     //If interrupts are not used, poll for flags
+//  378     if (!(HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE)){
+//  379         //Poll for transmit interrupt flag.
+//  380         while ((!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout);
+//  381 
+//  382         //Check if transfer timed out
+//  383         if (timeout == 0){
+//  384             return (STATUS_FAIL);
+//  385         }
+//  386     }
+//  387 
+//  388     //Send single byte data.
+//  389     HWREG16(baseAddress + OFS_UCBxTXBUF) = txData;
+//  390 
+//  391     return(STATUS_SUCCESS);
+//  392 }
+//  393 
+//  394 void EUSCI_B_I2C_masterSendMultiByteFinish (uint16_t baseAddress,
+//  395     uint8_t txData
+//  396     )
+//  397 {
+//  398     //If interrupts are not used, poll for flags
+//  399     if (!(HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE)){
+//  400         //Poll for transmit interrupt flag.
+//  401         while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+//  402     }
+//  403 
+//  404     //Send single byte data.
+//  405     HWREG16(baseAddress + OFS_UCBxTXBUF) = txData;
+//  406 
+//  407     //Poll for transmit interrupt flag.
+//  408     while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+//  409 
+//  410     //Send stop condition.
+//  411     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  412 }
+//  413 
+//  414 bool EUSCI_B_I2C_masterSendMultiByteFinishWithTimeout (uint16_t baseAddress,
+//  415     uint8_t txData,
+//  416     uint32_t timeout
+//  417     )
+//  418 {
+//  419     uint32_t timeout2 = timeout;
+//  420 
+//  421     //If interrupts are not used, poll for flags
+//  422     if (!(HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE)){
+//  423         //Poll for transmit interrupt flag.
+//  424         while ((!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout) ;
+//  425 
+//  426         //Check if transfer timed out
+//  427         if (timeout == 0){
+//  428             return (STATUS_FAIL);
+//  429         }
+//  430     }
+//  431 
+//  432     //Send single byte data.
+//  433     HWREG16(baseAddress + OFS_UCBxTXBUF) = txData;
+//  434 
+//  435     //Poll for transmit interrupt flag.
+//  436     while ((!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout2) ;
+//  437 
+//  438     //Check if transfer timed out
+//  439     if (timeout2 == 0){
+//  440         return (STATUS_FAIL);
+//  441     }
+//  442 
+//  443     //Send stop condition.
+//  444     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  445 
+//  446     return(STATUS_SUCCESS);
+//  447 }
+//  448 
+//  449 void EUSCI_B_I2C_masterSendStart (uint16_t baseAddress)
+//  450 {
+//  451     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTT;
+//  452 }
+//  453 
+//  454 void EUSCI_B_I2C_masterSendMultiByteStop (uint16_t baseAddress)
+//  455 {
+//  456     //If interrupts are not used, poll for flags
+//  457     if (!(HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE)){
+//  458         //Poll for transmit interrupt flag.
+//  459         while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+//  460     }
+//  461 
+//  462     //Send stop condition.
+//  463     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  464 }
+//  465 
+//  466 bool EUSCI_B_I2C_masterSendMultiByteStopWithTimeout (uint16_t baseAddress,
+//  467     uint32_t timeout)
+//  468 {
+//  469     //If interrupts are not used, poll for flags
+//  470     if (!(HWREG16(baseAddress + OFS_UCBxIE) & UCTXIE)){
+//  471         //Poll for transmit interrupt flag.
+//  472         while ((!(HWREG16(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout) ;
+//  473 
+//  474         //Check if transfer timed out
+//  475         if (timeout == 0){
+//  476             return (STATUS_FAIL);
+//  477         }
+//  478     }
+//  479 
+//  480     //Send stop condition.
+//  481     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  482 
+//  483     return (STATUS_SUCCESS);
+//  484 }
+//  485 
+//  486 void EUSCI_B_I2C_masterReceiveStart (uint16_t baseAddress)
+//  487 {
+//  488     //Set USCI in Receive mode
+//  489     HWREG16(baseAddress + OFS_UCBxCTLW0) &= ~UCTR;
+//  490     //Send start
+//  491     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTT;
+//  492 }
+//  493 
+//  494 uint8_t EUSCI_B_I2C_masterReceiveMultiByteNext (uint16_t baseAddress)
+//  495 {
+//  496     return (HWREG16(baseAddress + OFS_UCBxRXBUF));
+//  497 }
+//  498 
+//  499 uint8_t EUSCI_B_I2C_masterReceiveMultiByteFinish (uint16_t baseAddress)
+//  500 {
+//  501     //Send stop condition.
+//  502     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  503 
+//  504     //Wait for Stop to finish
+//  505     while (HWREG16(baseAddress + OFS_UCBxCTLW0) & UCTXSTP)
+//  506 
+//  507     // Wait for RX buffer
+//  508     while (!(HWREG16(baseAddress + OFS_UCBxIFG) & UCRXIFG)) ;
+//  509 
+//  510     //Capture data from receive buffer after setting stop bit due to
+//  511     //MSP430 I2C critical timing.
+//  512     return (HWREG16(baseAddress + OFS_UCBxRXBUF));
+//  513 }
+//  514 
+//  515 bool EUSCI_B_I2C_masterReceiveMultiByteFinishWithTimeout (uint16_t baseAddress,
+//  516     uint8_t *txData,
+//  517     uint32_t timeout
+//  518     )
+//  519 {
+//  520     uint32_t timeout2 = timeout;
+//  521 
+//  522     //Send stop condition.
+//  523     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  524 
+//  525     //Wait for Stop to finish
+//  526     while ((HWREG16(baseAddress + OFS_UCBxCTLW0) & UCTXSTP) && --timeout);
+//  527 
+//  528     //Check if transfer timed out
+//  529     if (timeout == 0){
+//  530         return (STATUS_FAIL);
+//  531     }
+//  532 
+//  533     // Wait for RX buffer
+//  534     while ((!(HWREG16(baseAddress + OFS_UCBxIFG) & UCRXIFG)) && --timeout2);
+//  535 
+//  536     //Check if transfer timed out
+//  537     if (timeout2 == 0){
+//  538         return (STATUS_FAIL);
+//  539     }
+//  540 
+//  541     //Capture data from receive buffer after setting stop bit due to
+//  542     //MSP430 I2C critical timing.
+//  543     *txData = (HWREG8(baseAddress + OFS_UCBxRXBUF));
+//  544 
+//  545     return (STATUS_SUCCESS);
+//  546 }
+//  547 
+//  548 void EUSCI_B_I2C_masterReceiveMultiByteStop (uint16_t baseAddress)
+//  549 {
+//  550     //Send stop condition.
+//  551     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCTXSTP;
+//  552 }
+//  553 
+//  554 void EUSCI_B_I2C_enableMultiMasterMode(uint16_t baseAddress)
+//  555 {
+//  556     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCSWRST;
+//  557     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCMM;
+//  558 }
+//  559 
+//  560 void EUSCI_B_I2C_disableMultiMasterMode(uint16_t baseAddress)
+//  561 {
+//  562 
+//  563     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCSWRST;
+//  564     HWREG16(baseAddress + OFS_UCBxCTLW0) &= ~UCMM;
+//  565 }
+//  566 
+//  567 uint8_t EUSCI_B_I2C_masterReceiveSingle (uint16_t baseAddress)
+//  568 {
+//  569     //Polling RXIFG0 if RXIE is not enabled
+//  570     if(!(HWREG16(baseAddress + OFS_UCBxIE) & UCRXIE0)) {
+//  571         while(!(HWREG16(baseAddress + OFS_UCBxIFG) & UCRXIFG0));
+//  572     }
+//  573 
+//  574     //Read a byte.
+//  575     return (HWREG16(baseAddress + OFS_UCBxRXBUF));
+//  576 }
+//  577 
+//  578 uint32_t EUSCI_B_I2C_getReceiveBufferAddress (uint16_t baseAddress)
+//  579 {
+//  580     return ( baseAddress + OFS_UCBxRXBUF );
+//  581 }
+//  582 
+//  583 uint32_t EUSCI_B_I2C_getTransmitBufferAddress (uint16_t baseAddress)
+//  584 {
+//  585     return ( baseAddress + OFS_UCBxTXBUF );
+//  586 }
+//  587 void EUSCI_B_I2C_setTimeout(uint16_t baseAddress, uint16_t timeout)
+//  588 {
+//  589     uint16_t tempUCBxCTLW0;
+//  590 
+//  591     //Save value of UCSWRST bit before we disable eUSCI module
+//  592     tempUCBxCTLW0 = HWREG16(baseAddress + OFS_UCBxCTLW0);
+//  593     //Disable the USCI module
+//  594     HWREG16(baseAddress + OFS_UCBxCTLW0) |= UCSWRST;
+//  595 
+//  596     //Set timeout
+//  597     HWREG16(baseAddress + OFS_UCBxCTLW1) = (HWREG16(baseAddress + OFS_UCBxCTLW1) & (~UCCLTO_3)) | timeout;
+//  598 
+//  599     //Restore value of UCSWRST bit
+//  600     HWREG16(baseAddress + OFS_UCBxCTLW0) = tempUCBxCTLW0;
+//  601 }
+//  602 
+//  603 #endif
+//  604 //*****************************************************************************
+//  605 //
+//  606 //! Close the doxygen group for eusci_b_i2c_api
+//  607 //! @}
+//  608 //
+//  609 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

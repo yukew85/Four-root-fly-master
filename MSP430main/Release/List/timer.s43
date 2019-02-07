@@ -1,0 +1,485 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:46
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\timer.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWE4E5.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\timer.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\timer.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME timer
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Cnt_S
+        PUBLIC Ms
+        PUBLIC TIMER_TB0_A0_IRQ_Handler
+        PUBLIC Timer_Init
+        PUBLIC cnt_20ms
+        PUBLIC high_buf
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC or(load(2, DATA, add(CFA, literal(-2))), lshift(and(load(2, DATA, add(CFA, literal(-4))), 61440), 4))
+          CFI SR Frame(CFA, -4)
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L SameValue
+          CFI R12H SameValue
+          CFI R12 Concat
+          CFI R13L SameValue
+          CFI R13H SameValue
+          CFI R13 Concat
+          CFI R14L SameValue
+          CFI R14H SameValue
+          CFI R14 Concat
+          CFI R15L SameValue
+          CFI R15H SameValue
+          CFI R15 Concat
+          CFI EndCommon cfiCommon0
+        
+        
+          CFI Common cfiCommon1 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon1
+        
+        EXTERN Rx_Start
+        EXTERN RX_Cnt
+        EXTERN Angle
+        EXTERN MPU6050
+        EXTERN GetAngle
+        EXTERN user_SPL06_get
+        EXTERN HeightPidControl
+        EXTERN MpuGetData
+        EXTERN RC_Analy
+        EXTERN FlightPidControl
+        EXTERN MotorControl
+        EXTERN LED_Update
+        EXTERN Set_Vector_Handler
+        EXTERN TIMER_Interval_Us
+        EXTERN TIMER_ITConfig
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\timer.c
+//    1 #include "timer.h"
+//    2 #include "include.h"
+//    3 
+//    4 extern int RX_Cnt;
+//    5 extern bool Rx_Start;
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    6 uint16_t Cnt_S = 0;
+Cnt_S:
+        DS8 2
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    7 unsigned int Ms = 0;
+Ms:
+        DS8 2
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    8 float high_buf;
+high_buf:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    9 uint16_t cnt_20ms = 0;
+cnt_20ms:
+        DS8 2
+
+        RSEG ISR_CODE:CODE:REORDER:NOROOT(1)
+        CALL_GRAPH_ROOT TIMER_TB0_A0_IRQ_Handler, "interrupt"
+//   10 __interrupt void TIMER_TB0_A0_IRQ_Handler()
+TIMER_TB0_A0_IRQ_Handler:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function TIMER_TB0_A0_IRQ_Handler
+//   11 {
+        PUSHM.A #0x4, R15
+          CFI R12L Frame(CFA, -20)
+          CFI R12H Frame(CFA, -18)
+          CFI R13L Frame(CFA, -16)
+          CFI R13H Frame(CFA, -14)
+          CFI R14L Frame(CFA, -12)
+          CFI R14H Frame(CFA, -10)
+          CFI R15L Frame(CFA, -8)
+          CFI R15H Frame(CFA, -6)
+          CFI CFA SP+20
+//   12     Ms++;
+        ADDX.W  #0x1, &Ms
+//   13     
+//   14     static uint8_t cnt_3ms = 0;
+//   15     static uint8_t cnt_6ms = 0;	 
+//   16     static uint16_t cnt_1000ms = 0;
+//   17     cnt_3ms++;
+        ADDX.B  #0x1, &??cnt_3ms
+//   18     cnt_6ms++;
+        ADDX.B  #0x1, &??cnt_6ms
+//   19     cnt_1000ms++;
+        ADDX.W  #0x1, &??cnt_1000ms
+//   20     //cnt_300ms++;
+//   21 
+//   22     if(Rx_Start)
+        CMPX.B  #0x0, &Rx_Start
+        JEQ     ??TIMER_TB0_A0_IRQ_Handler_0
+//   23     {
+//   24        cnt_20ms++;
+        ADDX.W  #0x1, &cnt_20ms
+//   25        if(cnt_20ms == 100)
+        CMPX.W  #0x64, &cnt_20ms
+        JNE     ??TIMER_TB0_A0_IRQ_Handler_0
+//   26        {
+//   27          Rx_Start = false;
+        MOVX.B  #0x0, &Rx_Start
+//   28          cnt_20ms = 0;
+        MOVX.W  #0x0, &cnt_20ms
+//   29          RX_Cnt = 0;
+        MOVX.W  #0x0, &RX_Cnt
+//   30        }
+//   31     }
+//   32     
+//   33     
+//   34     if(cnt_1000ms == 1000)
+??TIMER_TB0_A0_IRQ_Handler_0:
+        CMPX.W  #0x3e8, &??cnt_1000ms
+        JNE     ??TIMER_TB0_A0_IRQ_Handler_1
+//   35     {
+//   36       cnt_1000ms = 0;
+        MOVX.W  #0x0, &??cnt_1000ms
+//   37       Cnt_S++;
+        ADDX.W  #0x1, &Cnt_S
+//   38     }
+//   39 
+//   40     if(cnt_6ms == 5) //6ms更新一次
+??TIMER_TB0_A0_IRQ_Handler_1:
+        CMPX.B  #0x5, &??cnt_6ms
+        JNE     ??TIMER_TB0_A0_IRQ_Handler_2
+//   41     {
+//   42         cnt_6ms = 0;
+        MOVX.B  #0x0, &??cnt_6ms
+//   43         GetAngle(&MPU6050,&Angle,0.00626f); 
+        MOV.W   #0x20b0, R14
+        MOV.W   #0x3bcd, R15
+        MOVA    #Angle, R13
+        MOVA    #MPU6050, R12
+          CFI FunCall GetAngle
+        CALLA   #GetAngle
+//   44         high_buf = user_SPL06_get();
+          CFI FunCall user_SPL06_get
+        CALLA   #user_SPL06_get
+        MOVX.W  R12, &high_buf
+        MOVX.W  R13, &high_buf + 2
+//   45         HeightPidControl(0.018f); //高度控制 
+        MOV.W   #0x74bc, R12
+        MOV.W   #0x3c93, R13
+          CFI FunCall HeightPidControl
+        CALLA   #HeightPidControl
+//   46     }			
+//   47 
+//   48     if(cnt_3ms == 2)  //3ms更新一次
+??TIMER_TB0_A0_IRQ_Handler_2:
+        CMPX.B  #0x2, &??cnt_3ms
+        JNE     ??TIMER_TB0_A0_IRQ_Handler_3
+//   49     {
+//   50         cnt_3ms = 0;
+        MOVX.B  #0x0, &??cnt_3ms
+//   51         MpuGetData(); //获取MPU6050数据
+          CFI FunCall MpuGetData
+        CALLA   #MpuGetData
+//   52         RC_Analy();	  //遥控数据获取与解析
+          CFI FunCall RC_Analy
+        CALLA   #RC_Analy
+//   53 
+//   54         FlightPidControl(0.003f); //姿态控制
+        MOV.W   #0x9ba6, R12
+        MOV.W   #0x3b44, R13
+          CFI FunCall FlightPidControl
+        CALLA   #FlightPidControl
+//   55         MotorControl();//电机输出
+          CFI FunCall MotorControl
+        CALLA   #MotorControl
+//   56     }
+//   57     LED_Update();
+??TIMER_TB0_A0_IRQ_Handler_3:
+          CFI FunCall LED_Update
+        CALLA   #LED_Update
+//   58 }
+        POPM.A  #0x4, R15
+          CFI R12H SameValue
+          CFI R13H SameValue
+          CFI R14H SameValue
+          CFI R15H SameValue
+          CFI R12L SameValue
+          CFI R13L SameValue
+          CFI R14L SameValue
+          CFI R15L SameValue
+          CFI CFA SP+4
+        RETI
+          CFI EndBlock cfiBlock0
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+??cnt_3ms:
+        DS8 1
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+??cnt_6ms:
+        DS8 1
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??cnt_1000ms:
+        DS8 2
+//   59 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   60 void Timer_Init()
+Timer_Init:
+          CFI Block cfiBlock1 Using cfiCommon1
+          CFI Function Timer_Init
+//   61 {
+//   62     Set_Vector_Handler(VECTOR_TIMER0_B0,TIMER_TB0_A0_IRQ_Handler);    //设置中断向量，最好先设置中断向量，在开启中断
+        MOVA    #TIMER_TB0_A0_IRQ_Handler, R13
+        MOV.B   #0x3b, R12
+          CFI FunCall Set_Vector_Handler
+        CALLA   #Set_Vector_Handler
+//   63     TIMER_Interval_Ms(TIMER_B0,1);                    //初始化一个500ms的定时中断
+        MOV.W   #0x3e8, R14
+        MOV.W   #0x0, R15
+        MOV.B   #0x3, R12
+          CFI FunCall TIMER_Interval_Us
+        CALLA   #TIMER_Interval_Us
+//   64     TIMER_ITConfig (TIMER_B0,TIMER_CCR0_IRQn,ENABLE);              //使能TIMER的某一个中断
+        MOV.B   #0x1, R14
+        MOV.B   #0x0, R13
+        MOV.B   #0x3, R12
+          CFI TailCall TIMER_ITConfig
+        BRA     #TIMER_ITConfig
+//   65 }
+          CFI EndBlock cfiBlock1
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//   66 
+//   67 
+// 
+//  38 bytes in segment CODE
+//  14 bytes in segment DATA20_Z
+// 200 bytes in segment ISR_CODE
+// 
+// 238 bytes of CODE memory
+//  14 bytes of DATA memory
+//
+//Errors: none
+//Warnings: none

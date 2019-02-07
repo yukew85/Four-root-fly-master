@@ -1,0 +1,703 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:13
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\timer_d.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW33A9.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\timer_d.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\timer_d.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME timer_d
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\timer_d.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // timer_d.c - Driver for the timer_d Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup timer_d_api timer_d
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_TxD7__
+//   48 #include "timer_d.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 #include "tlv.h"
+//   53 void Timer_D_startCounter ( uint16_t baseAddress,
+//   54     uint16_t timerMode
+//   55     )
+//   56 {
+//   57     HWREG16(baseAddress + OFS_TDxCTL0) |= timerMode;
+//   58 }
+//   59 
+//   60 void Timer_D_initContinuousMode(uint16_t baseAddress,
+//   61     Timer_D_initContinuousModeParam *param)
+//   62 {
+//   63     HWREG16(baseAddress +
+//   64         OFS_TDxCTL0) &= ~(TIMER_D_CLOCKSOURCE_INVERTED_EXTERNAL_TDCLK +
+//   65                          TIMER_D_UPDOWN_MODE +
+//   66                          TIMER_D_DO_CLEAR +
+//   67                          TIMER_D_TDIE_INTERRUPT_ENABLE +
+//   68                          ID__8
+//   69                          );
+//   70     HWREG16(baseAddress + OFS_TDxCTL1)  &= ~(TDCLKM0 + TDCLKM1 + TDIDEX_7);
+//   71 
+//   72     HWREG16(baseAddress + OFS_TDxCTL0) |= param->clockSource;
+//   73     HWREG16(baseAddress + OFS_TDxCTL1) |= (param->clockingMode +
+//   74                                           ((param->clockSourceDivider&0x7)<<8));
+//   75 
+//   76     HWREG16(baseAddress + OFS_TDxCTL0) |= (param->timerClear +
+//   77                                            param->timerInterruptEnable_TDIE +
+//   78                                            ((param->clockSourceDivider>>3)<<6));
+//   79 }
+//   80 
+//   81 void Timer_D_initUpMode(uint16_t baseAddress, Timer_D_initUpModeParam *param)
+//   82 {
+//   83     HWREG16(baseAddress + OFS_TDxCTL0) &=
+//   84         ~(TIMER_D_CLOCKSOURCE_INVERTED_EXTERNAL_TDCLK +
+//   85           TIMER_D_UPDOWN_MODE +
+//   86           TIMER_D_DO_CLEAR +
+//   87           TIMER_D_TDIE_INTERRUPT_ENABLE +
+//   88           ID__8
+//   89           );
+//   90     HWREG16(baseAddress + OFS_TDxCTL1)  &= ~(TDCLKM0 + TDCLKM1 + TDIDEX_7);
+//   91 
+//   92     HWREG16(baseAddress + OFS_TDxCTL0) |= param->clockSource;
+//   93     HWREG16(baseAddress + OFS_TDxCTL1) |= (param->clockingMode +
+//   94                                            ((param->clockSourceDivider&0x7)<<8));
+//   95 
+//   96     HWREG16(baseAddress + OFS_TDxCTL0) |= (TIMER_D_STOP_MODE +
+//   97                                           param->timerClear +
+//   98                                           param->timerInterruptEnable_TDIE +
+//   99                                           ((param->clockSourceDivider>>3)<<6));
+//  100 
+//  101     if (TIMER_D_CCIE_CCR0_INTERRUPT_ENABLE ==
+//  102         param->captureCompareInterruptEnable_CCR0_CCIE){
+//  103         HWREG16(baseAddress + OFS_TDxCCTL0)  |= TIMER_D_CCIE_CCR0_INTERRUPT_ENABLE;
+//  104     } else   {
+//  105         HWREG16(baseAddress + OFS_TDxCCTL0)  &= ~TIMER_D_CCIE_CCR0_INTERRUPT_ENABLE;
+//  106     }
+//  107 
+//  108     HWREG16(baseAddress + OFS_TDxCCR0) = param->timerPeriod;
+//  109 }
+//  110 
+//  111 void Timer_D_initUpDownMode(uint16_t baseAddress,
+//  112     Timer_D_initUpDownModeParam *param)
+//  113 {
+//  114     HWREG16(baseAddress + OFS_TDxCTL0) &=
+//  115         ~(TIMER_D_CLOCKSOURCE_INVERTED_EXTERNAL_TDCLK +
+//  116           TIMER_D_UPDOWN_MODE +
+//  117           TIMER_D_DO_CLEAR +
+//  118           TIMER_D_TDIE_INTERRUPT_ENABLE +
+//  119           ID__8
+//  120           );
+//  121     HWREG16(baseAddress + OFS_TDxCTL1)  &= ~(TDCLKM0 + TDCLKM1 + TDIDEX_7);
+//  122 
+//  123     HWREG16(baseAddress + OFS_TDxCTL0) |= param->clockSource;
+//  124     HWREG16(baseAddress + OFS_TDxCTL1) |= (param->clockingMode +
+//  125                                            ((param->clockSourceDivider&0x7)<<8));
+//  126 
+//  127     HWREG16(baseAddress + OFS_TDxCTL0)  |= (TIMER_D_STOP_MODE +
+//  128                                           param->timerClear +
+//  129                                           param->timerInterruptEnable_TDIE +
+//  130                                           ((param->clockSourceDivider>>3)<<6));
+//  131 
+//  132     if (TIMER_D_CCIE_CCR0_INTERRUPT_ENABLE ==
+//  133         param->captureCompareInterruptEnable_CCR0_CCIE){
+//  134         HWREG16(baseAddress + OFS_TDxCCTL0)  |= TIMER_D_CCIE_CCR0_INTERRUPT_ENABLE;
+//  135     } else   {
+//  136         HWREG16(baseAddress + OFS_TDxCCTL0)  &= ~TIMER_D_CCIE_CCR0_INTERRUPT_ENABLE;
+//  137     }
+//  138 
+//  139     HWREG16(baseAddress + OFS_TDxCCR0)  = param->timerPeriod;
+//  140 }
+//  141 
+//  142 void Timer_D_initCaptureMode(uint16_t baseAddress,
+//  143     Timer_D_initCaptureModeParam *param)
+//  144 {
+//  145 
+//  146     HWREG16(baseAddress + param->captureRegister ) |= CAP;
+//  147 
+//  148     HWREG8(baseAddress + OFS_TDxCTL2) |=
+//  149             (param->channelCaptureMode << ((param->captureRegister - TIMER_D_CAPTURECOMPARE_REGISTER_0)/6));
+//  150 
+//  151     HWREG16(baseAddress + param->captureRegister) &=
+//  152         ~(TIMER_D_CAPTUREMODE_RISING_AND_FALLING_EDGE +
+//  153           TIMER_D_CAPTURE_INPUTSELECT_Vcc +
+//  154           TIMER_D_CAPTURE_SYNCHRONOUS +
+//  155           TIMER_D_DO_CLEAR +
+//  156           TIMER_D_TDIE_INTERRUPT_ENABLE +
+//  157           CM_3
+//  158           );
+//  159 
+//  160     HWREG16(baseAddress + param->captureRegister) |= (param->captureMode +
+//  161                                               param->captureInputSelect +
+//  162                                               param->synchronizeCaptureSource +
+//  163                                               param->captureInterruptEnable +
+//  164                                               param->captureOutputMode
+//  165                                               );
+//  166 }
+//  167 
+//  168 void Timer_D_initCompareMode(uint16_t baseAddress,
+//  169     Timer_D_initCompareModeParam *param)
+//  170 {
+//  171     HWREG16(baseAddress + param->compareRegister ) &= ~CAP;
+//  172 
+//  173     HWREG16(baseAddress + param->compareRegister) &=
+//  174         ~(TIMER_D_CAPTURECOMPARE_INTERRUPT_ENABLE +
+//  175           TIMER_D_OUTPUTMODE_RESET_SET
+//  176           );
+//  177 
+//  178     HWREG16(baseAddress + param->compareRegister) |= (param->compareInterruptEnable +
+//  179                                                param->compareOutputMode
+//  180                                                );
+//  181 
+//  182     HWREG16(baseAddress + param->compareRegister + 2) = param->compareValue;
+//  183 }
+//  184 
+//  185 void Timer_D_enableTimerInterrupt (uint16_t baseAddress)
+//  186 {
+//  187     HWREG8(baseAddress + OFS_TDxCTL0) &=  ~TDIFG;
+//  188     HWREG8(baseAddress + OFS_TDxCTL0) |= TDIE;
+//  189 }
+//  190 
+//  191 void Timer_D_enableHighResInterrupt (uint16_t baseAddress,
+//  192                 uint16_t mask)
+//  193 {
+//  194     HWREG16(baseAddress + OFS_TDxHINT) &=  ~(mask >> 8);
+//  195     HWREG16(baseAddress + OFS_TDxHINT) |= mask;
+//  196 }
+//  197 
+//  198 void Timer_D_disableTimerInterrupt (uint16_t baseAddress)
+//  199 {
+//  200     HWREG8(baseAddress + OFS_TDxCTL0) &= ~TDIE;
+//  201 }
+//  202 
+//  203 void Timer_D_disableHighResInterrupt (uint16_t baseAddress,
+//  204                         uint16_t mask)
+//  205 {
+//  206     HWREG16(baseAddress + OFS_TDxHINT) &= ~mask;
+//  207 }
+//  208 
+//  209 uint32_t Timer_D_getTimerInterruptStatus (uint16_t baseAddress)
+//  210 {
+//  211     return (HWREG8(baseAddress + OFS_TDxCTL0) & TDIFG);
+//  212 }
+//  213 
+//  214 void Timer_D_enableCaptureCompareInterrupt (uint16_t baseAddress,
+//  215     uint16_t captureCompareRegister
+//  216     )
+//  217 {
+//  218     HWREG8(baseAddress + captureCompareRegister) &= ~CCIFG;
+//  219     HWREG16(baseAddress + captureCompareRegister) |= CCIE;
+//  220 }
+//  221 
+//  222 void Timer_D_disableCaptureCompareInterrupt (uint16_t baseAddress,
+//  223     uint16_t captureCompareRegister
+//  224     )
+//  225 {
+//  226     HWREG16(baseAddress + captureCompareRegister) &= ~CCIE;
+//  227 }
+//  228 
+//  229 uint32_t Timer_D_getCaptureCompareInterruptStatus (uint16_t baseAddress,
+//  230         uint16_t captureCompareRegister,
+//  231         uint16_t mask
+//  232         )
+//  233 {
+//  234     return ( HWREG16(baseAddress + captureCompareRegister) & mask );
+//  235 }
+//  236 
+//  237 uint16_t Timer_D_getHighResInterruptStatus (uint16_t baseAddress,
+//  238     uint16_t mask)
+//  239 {
+//  240     mask = (mask >> 8);
+//  241     return ( (HWREG16(baseAddress + OFS_TDxHINT) & mask) << 8 );
+//  242 }
+//  243 
+//  244 void Timer_D_clear (uint16_t baseAddress)
+//  245 {
+//  246     HWREG16(baseAddress + OFS_TDxCTL0) |= TDCLR;
+//  247 }
+//  248 
+//  249 void Timer_D_clearHighResInterrupt (uint16_t baseAddress,
+//  250     uint16_t mask)
+//  251 {
+//  252     mask = (mask >> 8);
+//  253     HWREG16(baseAddress + OFS_TDxHINT) &= ~mask;
+//  254 }
+//  255 
+//  256 uint8_t Timer_D_getSynchronizedCaptureCompareInput
+//  257     (uint16_t baseAddress,
+//  258     uint16_t captureCompareRegister,
+//  259     uint16_t synchronized
+//  260     )
+//  261 {
+//  262     if (HWREG16(baseAddress + captureCompareRegister) & synchronized){
+//  263         return ( TIMER_D_CAPTURECOMPARE_INPUT_HIGH) ;
+//  264     } else   {
+//  265         return ( TIMER_D_CAPTURECOMPARE_INPUT_LOW) ;
+//  266     }
+//  267 }
+//  268 
+//  269 uint8_t Timer_D_getOutputForOutputModeOutBitValue
+//  270     (uint16_t baseAddress,
+//  271     uint16_t captureCompareRegister
+//  272     )
+//  273 {
+//  274     if (HWREG16(baseAddress + captureCompareRegister) & OUT){
+//  275         return ( TIMER_D_OUTPUTMODE_OUTBITVALUE_HIGH) ;
+//  276     } else   {
+//  277         return ( TIMER_D_OUTPUTMODE_OUTBITVALUE_LOW) ;
+//  278     }
+//  279 }
+//  280 
+//  281 uint16_t Timer_D_getCaptureCompareCount
+//  282     (uint16_t baseAddress,
+//  283     uint16_t captureCompareRegister
+//  284     )
+//  285 {
+//  286     return  (HWREG16(baseAddress + captureCompareRegister + 2));
+//  287 }
+//  288 
+//  289 uint16_t Timer_D_getCaptureCompareLatchCount
+//  290     (uint16_t baseAddress,
+//  291     uint16_t captureCompareRegister
+//  292     )
+//  293 {
+//  294     return  (HWREG16(baseAddress + captureCompareRegister + 4));
+//  295 }
+//  296 
+//  297 uint8_t Timer_D_getCaptureCompareInputSignal
+//  298     (uint16_t baseAddress,
+//  299     uint16_t captureCompareRegister
+//  300     )
+//  301 {
+//  302     return  ((HWREG8(baseAddress + captureCompareRegister) & CCI));
+//  303 }
+//  304 
+//  305 void Timer_D_setOutputForOutputModeOutBitValue
+//  306     (uint16_t baseAddress,
+//  307     uint16_t captureCompareRegister,
+//  308     uint8_t outputModeOutBitValue
+//  309     )
+//  310 {
+//  311     HWREG16(baseAddress + captureCompareRegister) &= ~OUT;
+//  312     HWREG16(baseAddress + captureCompareRegister) |= outputModeOutBitValue;
+//  313 }
+//  314 
+//  315 void Timer_D_outputPWM(uint16_t baseAddress, Timer_D_outputPWMParam *param)
+//  316 {
+//  317     HWREG16(baseAddress + OFS_TDxCTL1)  &= ~(TDCLKM0 + TDCLKM1 + TDIDEX_7);
+//  318 
+//  319     HWREG16(baseAddress + OFS_TDxCTL0)  &=
+//  320             ~(TIMER_D_CLOCKSOURCE_INVERTED_EXTERNAL_TDCLK +
+//  321                TIMER_D_UPDOWN_MODE + TIMER_D_DO_CLEAR +
+//  322                TIMER_D_TDIE_INTERRUPT_ENABLE +
+//  323                ID__8
+//  324                );
+//  325 
+//  326     HWREG16(baseAddress + OFS_TDxCTL0) |= param->clockSource;
+//  327     HWREG16(baseAddress + OFS_TDxCTL1) |= (param->clockingMode +
+//  328                                            ((param->clockSourceDivider&0x7)<<8));
+//  329 
+//  330     HWREG16(baseAddress + OFS_TDxCTL0) |= (TIMER_D_UP_MODE +
+//  331                                            TIMER_D_DO_CLEAR +
+//  332                                            ((param->clockSourceDivider>>3)<<6));
+//  333 
+//  334     HWREG16(baseAddress + OFS_TDxCCR0)  = param->timerPeriod;
+//  335 
+//  336     HWREG16(baseAddress + OFS_TDxCCTL0)  &=
+//  337         ~(TIMER_D_CAPTURECOMPARE_INTERRUPT_ENABLE +
+//  338           TIMER_D_OUTPUTMODE_RESET_SET
+//  339           );
+//  340     HWREG16(baseAddress + param->compareRegister) |= param->compareOutputMode;
+//  341 
+//  342     HWREG16(baseAddress + param->compareRegister + 2) = param->dutyCycle;
+//  343 }
+//  344 
+//  345 void Timer_D_stop ( uint16_t baseAddress )
+//  346 {
+//  347     HWREG16(baseAddress + OFS_TDxCTL0)  &= ~MC_3;
+//  348 }
+//  349 
+//  350 void Timer_D_setCompareValue (  uint16_t baseAddress,
+//  351     uint16_t compareRegister,
+//  352     uint16_t compareValue
+//  353     )
+//  354 {
+//  355     HWREG16(baseAddress + compareRegister + 0x02) = compareValue;
+//  356 }
+//  357 
+//  358 void Timer_D_clearTimerInterrupt (uint16_t baseAddress)
+//  359 {
+//  360     HWREG16(baseAddress + OFS_TDxCTL0) &= ~TDIFG;
+//  361 }
+//  362 
+//  363 void Timer_D_clearCaptureCompareInterrupt (uint16_t baseAddress,
+//  364     uint16_t captureCompareRegister
+//  365     )
+//  366 {
+//  367     HWREG16(baseAddress + captureCompareRegister)  &= ~CCIFG;
+//  368 }
+//  369 
+//  370 uint8_t Timer_D_initHighResGeneratorInFreeRunningMode
+//  371     (uint16_t baseAddress,
+//  372     uint8_t desiredHighResFrequency
+//  373     )
+//  374 {
+//  375     struct s_TLV_Timer_D_Cal_Data * pTD0CAL;
+//  376     uint8_t TD0CAL_bytes;
+//  377 
+//  378     // Read the TimerD TLV Data
+//  379     TLV_getInfo(TLV_TAG_TIMER_D_CAL,
+//  380               0,
+//  381               &TD0CAL_bytes,
+//  382               (uint16_t **)&pTD0CAL
+//  383               );
+//  384 
+//  385     if(0x00 == TD0CAL_bytes)
+//  386     {
+//  387         // No TimerD free running cal data found
+//  388         return STATUS_FAIL;
+//  389     }
+//  390 
+//  391     HWREG16(baseAddress + OFS_TDxHCTL1) = TDHCLKTRIM6;
+//  392     HWREG16(baseAddress + OFS_TDxCTL1) = 0x00;
+//  393     HWREG16(baseAddress + OFS_TDxHCTL0) = 0x00;
+//  394 
+//  395     switch( desiredHighResFrequency )
+//  396     {
+//  397         case TIMER_D_HIGHRES_64MHZ:
+//  398             HWREG16(baseAddress + OFS_TDxHCTL1) = pTD0CAL->TDH0CTL1_64;
+//  399             break;
+//  400 
+//  401         case TIMER_D_HIGHRES_128MHZ:
+//  402             HWREG16(baseAddress + OFS_TDxHCTL1) = pTD0CAL->TDH0CTL1_128;
+//  403             break;
+//  404 
+//  405         case TIMER_D_HIGHRES_200MHZ:
+//  406             HWREG16(baseAddress + OFS_TDxHCTL1) = pTD0CAL->TDH0CTL1_200;
+//  407             break;
+//  408 
+//  409         case TIMER_D_HIGHRES_256MHZ:
+//  410             HWREG16(baseAddress + OFS_TDxHCTL1) = pTD0CAL->TDH0CTL1_256;
+//  411             break;
+//  412     }
+//  413 
+//  414     // Select Hi-res local clock
+//  415     HWREG16(baseAddress + OFS_TDxCTL1) |= TDCLKM_1;
+//  416 
+//  417     // CALEN=0 => free running mode; enable Hi-res mode
+//  418     if(TIMER_D_HIGHRES_256MHZ == desiredHighResFrequency)
+//  419         HWREG16(baseAddress + OFS_TDxHCTL0) |= TDHM_1;
+//  420 
+//  421     HWREG16(baseAddress + OFS_TDxHCTL0) |= TDHEN;
+//  422 
+//  423     return STATUS_SUCCESS;
+//  424 
+//  425 }
+//  426 
+//  427 void Timer_D_initHighResGeneratorInRegulatedMode(uint16_t baseAddress,
+//  428     Timer_D_initHighResGeneratorInRegulatedModeParam *param)
+//  429 {
+//  430     HWREG16(baseAddress + OFS_TDxCTL0) &= ~(TDSSEL_3 + TDHD_3 + TDCLR + ID__8);
+//  431     HWREG16(baseAddress + OFS_TDxCTL1) &= ~(TDCLKM0 + TDCLKM1 + TDIDEX_7);
+//  432 
+//  433     HWREG16(baseAddress + OFS_TDxCTL0) |= (param->clockSource +
+//  434                                            ((param->clockSourceDivider>>3)<<6));
+//  435     HWREG16(baseAddress + OFS_TDxCTL1) |= (param->clockingMode +
+//  436                                            ((param->clockSourceDivider&0x7)<<8));
+//  437 
+//  438     // Select Hi-res local clock
+//  439     // Calibration and Hi-res mode enable
+//  440     HWREG16(baseAddress + OFS_TDxCTL1) |= TDCLKM_1;
+//  441     // Select Hi-res local clock
+//  442     HWREG16(baseAddress + OFS_TDxHCTL0) =  TDHREGEN + TDHEN ;
+//  443     HWREG16(baseAddress + OFS_TDxHCTL0) |= param->highResClockMultiplyFactor +
+//  444                     param->highResClockDivider;
+//  445 }
+//  446 
+//  447 void Timer_D_combineTDCCRToOutputPWM(uint16_t baseAddress,
+//  448     Timer_D_combineTDCCRToOutputPWMParam *param)
+//  449 {
+//  450     HWREG16(baseAddress + OFS_TDxCCTL2) &= ~OUTMOD_7;
+//  451     HWREG16(baseAddress + OFS_TDxCCTL2)  |= param->compareOutputMode;
+//  452 
+//  453     HWREG16(baseAddress + OFS_TDxCCR0)  = param->timerPeriod;
+//  454 
+//  455     HWREG16(baseAddress + OFS_TDxCCR1 + (0x05 *
+//  456             (param->combineCCRRegistersCombination - TIMER_D_COMBINE_CCR1_CCR2))) = param->dutyCycle1;
+//  457     HWREG16(baseAddress + OFS_TDxCCR2 + (0x05 *
+//  458             (param->combineCCRRegistersCombination - TIMER_D_COMBINE_CCR1_CCR2))) = param->dutyCycle2;
+//  459 
+//  460     HWREG16(baseAddress + OFS_TDxCTL0)  &= ~ID__8;
+//  461     HWREG16(baseAddress + OFS_TDxCTL1)  &= ~(TDCLKM0 + TDCLKM1 + TDIDEX_7);
+//  462 
+//  463     HWREG16(baseAddress + OFS_TDxCTL0) |= (param->clockSource +
+//  464                                            ((param->clockSourceDivider>>3)<<6));
+//  465     HWREG16(baseAddress + OFS_TDxCTL1) |= (param->clockingMode +
+//  466                                            ((param->clockSourceDivider&0x7)<<8));
+//  467     HWREG16(baseAddress + OFS_TDxCTL1) |=
+//  468             (TD2CMB << (param->combineCCRRegistersCombination - TIMER_D_COMBINE_CCR1_CCR2));
+//  469 }
+//  470 
+//  471 void Timer_D_selectLatchingGroup(uint16_t  baseAddress,
+//  472         uint16_t groupLatch)
+//  473 {
+//  474 
+//  475     HWREG16(baseAddress + OFS_TDxCTL0) &= ~TDCLGRP_3;
+//  476     HWREG16(baseAddress + OFS_TDxCTL0) |= groupLatch;
+//  477 }
+//  478 
+//  479 void Timer_D_selectCounterLength (uint16_t  baseAddress,
+//  480         uint16_t counterLength
+//  481         )
+//  482 {
+//  483 
+//  484     HWREG16(baseAddress + OFS_TDxCTL0) &= ~CNTL_3;
+//  485     HWREG16(baseAddress + OFS_TDxCTL0) |= counterLength;
+//  486 }
+//  487 
+//  488 void Timer_D_initCompareLatchLoadEvent(uint16_t  baseAddress,
+//  489         uint16_t  compareRegister,
+//  490         uint16_t  compareLatchLoadEvent
+//  491         )
+//  492 {
+//  493 
+//  494     HWREG16(baseAddress + compareRegister)  &= ~CLLD_3;
+//  495     HWREG16(baseAddress + compareRegister)  |= compareLatchLoadEvent;
+//  496 }
+//  497 
+//  498 void Timer_D_disableHighResFastWakeup (uint16_t baseAddress)
+//  499 {
+//  500     HWREG16(baseAddress + OFS_TDxHCTL0) &= ~TDHFW;
+//  501 }
+//  502 
+//  503 void Timer_D_enableHighResFastWakeup (uint16_t baseAddress)
+//  504 {
+//  505     HWREG16(baseAddress + OFS_TDxHCTL0) |= TDHFW;
+//  506 }
+//  507 
+//  508 void Timer_D_disableHighResClockEnhancedAccuracy (uint16_t baseAddress)
+//  509 {
+//  510     HWREG16(baseAddress + OFS_TDxHCTL0) &= ~TDHEAEN;
+//  511 }
+//  512 
+//  513 void Timer_D_enableHighResClockEnhancedAccuracy (uint16_t baseAddress)
+//  514 {
+//  515     HWREG16(baseAddress + OFS_TDxHCTL0) |= TDHEAEN;
+//  516 }
+//  517 
+//  518 void Timer_D_disableHighResGeneratorForceON (uint16_t baseAddress)
+//  519 {
+//  520     HWREG16(baseAddress + OFS_TDxHCTL0) &= ~TDHRON;
+//  521 }
+//  522 
+//  523 void Timer_D_enableHighResGeneratorForceON (uint16_t baseAddress)
+//  524 {
+//  525     HWREG16(baseAddress + OFS_TDxHCTL0) |= TDHRON;
+//  526 }
+//  527 
+//  528 void Timer_D_selectHighResCoarseClockRange (uint16_t baseAddress,
+//  529         uint16_t highResCoarseClockRange
+//  530         )
+//  531 {
+//  532     HWREG16(baseAddress + OFS_TDxHCTL1) &= ~TDHCLKCR;
+//  533     HWREG16(baseAddress + OFS_TDxHCTL1) |= highResCoarseClockRange;
+//  534 }
+//  535 
+//  536 void Timer_D_selectHighResClockRange (uint16_t baseAddress,
+//  537         uint16_t highResClockRange
+//  538         )
+//  539 {
+//  540     HWREG16(baseAddress + OFS_TDxHCTL1) &= ~TDHCLKCR;
+//  541     HWREG16(baseAddress + OFS_TDxHCTL1) |= highResClockRange;
+//  542 }
+//  543 
+//  544 uint16_t Timer_D_getCounterValue (uint16_t baseAddress)
+//  545 {
+//  546     uint16_t voteOne, voteTwo, res;
+//  547 
+//  548     voteTwo = HWREG16(baseAddress + OFS_TDxR);
+//  549 
+//  550     do
+//  551     {
+//  552         voteOne = voteTwo;
+//  553         voteTwo = HWREG16(baseAddress + OFS_TDxR);
+//  554 
+//  555         if(voteTwo > voteOne) {
+//  556             res = voteTwo - voteOne;
+//  557         } else if(voteOne > voteTwo) {
+//  558             res = voteOne - voteTwo;
+//  559         } else{
+//  560             res = 0;
+//  561         }
+//  562 
+//  563     } while ( res > TIMER_D_THRESHOLD);
+//  564 
+//  565     return voteTwo;
+//  566 }
+//  567 
+//  568 void Timer_D_setOutputMode(uint16_t baseAddress,
+//  569                              uint16_t compareRegister,
+//  570                              uint16_t compareOutputMode)
+//  571 {
+//  572     uint16_t temp = HWREG16(baseAddress + compareRegister);
+//  573     HWREG16(baseAddress + compareRegister) = temp & ~(OUTMOD_7) | compareOutputMode;
+//  574 }
+//  575 
+//  576 #endif
+//  577 //*****************************************************************************
+//  578 //
+//  579 //! Close the doxygen group for timer_d_api
+//  580 //! @}
+//  581 //
+//  582 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

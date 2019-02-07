@@ -1,0 +1,843 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:41
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\i2c.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWD20A.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\i2c.c -D
+//        NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\i2c.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME i2c
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Ack_Count
+        PUBLIC IIC_RecvACK
+        PUBLIC IIC_RecvByte
+        PUBLIC IIC_SendACK
+        PUBLIC IIC_SendByte
+        PUBLIC IIC_Start
+        PUBLIC IIC_Stop
+        PUBLIC Multiple_ReadIIC
+        PUBLIC Single_ReadIIC
+        PUBLIC Single_WriteIIC
+        PUBWEAK _A_PBDIR_L
+        PUBWEAK _A_PBIN_L
+        PUBWEAK _A_PBOUT_L
+        PUBLIC delay521_nms
+        PUBLIC delay521_nus
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\i2c.c
+//    1 #include "i2c.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0220H
+// union <unnamed> __data16 _A_PBIN_L
+_A_PBIN_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0222H
+// union <unnamed> __data16 _A_PBOUT_L
+_A_PBOUT_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0224H
+// union <unnamed> __data16 _A_PBDIR_L
+_A_PBDIR_L:
+        DS8 2
+//    2 #include "include.h"
+//    3 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//    4 unsigned char Ack_Count=0;                         //接收数据缓存区  
+Ack_Count:
+        DS8 1
+//    5 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//    6 void delay521_nus(uint  n)       //N us延时函数
+delay521_nus:
+??delay521_nus_0:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function delay521_nus
+          CFI NoCalls
+//    7 {
+//    8    //**uint i=0,j=0;
+//    9    //**for (i=0;i<n;i++)
+//   10    //**  for(j=0;j<2;j++);
+//   11   while(n--);
+        MOV.W   R12, R15
+        MOV.W   R15, R12
+        ADD.W   #0xffff, R12
+        CMP.W   #0x0, R15
+        JNE     ??delay521_nus_0
+//   12 }
+        RETA
+          CFI EndBlock cfiBlock0
+//   13 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   14 void delay521_nms(uint  n)       //N ms延时函数
+delay521_nms:
+??delay521_nms_0:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function delay521_nms
+          CFI NoCalls
+//   15 {
+//   16   uint i;
+//   17  //**  uint i=0,j=0;
+//   18  //**  for (i=0;i<n;i++)
+//   19   //**   for (j=0;j<5350;i++);
+//   20   while(n--)
+        MOV.W   R12, R15
+        MOV.W   R15, R12
+        ADD.W   #0xffff, R12
+        CMP.W   #0x0, R15
+        JEQ     ??delay521_nms_2
+//   21     for(i=1000;i>0;i--);
+        MOV.W   #0x3e8, R15
+??delay521_nms_1:
+        CMP.W   #0x0, R15
+        JEQ     ??delay521_nms_0
+        ADD.W   #0xffff, R15
+        JMP     ??delay521_nms_1
+//   22 }
+??delay521_nms_2:
+        RETA
+          CFI EndBlock cfiBlock1
+//   23 
+//   24 /**************************************
+//   25 起始信号
+//   26 **************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   27 void IIC_Start()
+IIC_Start:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function IIC_Start
+//   28 {
+//   29    //** IIC_SDA_Out;
+//   30     P3DIR|=(1<<SDA); 
+        BIS.B   #0x1, &0x224
+//   31    //** IIC_SDA = 1;                    //拉高数据线
+//   32     IIC|=(1<<SDA);
+        BIS.B   #0x1, &0x222
+//   33     //*delay521_nus(4) ;
+//   34     delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//   35     //**IIC_SCL = 1;                    //拉高时钟线
+//   36     IIC|=(1<<SCL);
+        BIS.B   #0x2, &0x222
+//   37     //**delay521_nus(4) ;                //延时
+//   38     delay521_nus(1);
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//   39    //** IIC_SDA = 0;                    //产生下降沿
+//   40     IIC&=~(1<<SDA);
+        BIC.B   #0x1, &0x222
+//   41    //** delay521_nus(4);                  //延时
+//   42     delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//   43     //**IIC_SCL = 0;                    //拉低时钟线
+//   44     IIC&=~(1<<SCL);
+        BIC.B   #0x2, &0x222
+//   45    //** delay521_nus(4);
+//   46     delay521_nus(1);
+        MOV.W   #0x1, R12
+          CFI TailCall delay521_nus
+        BRA     #delay521_nus
+          CFI EndBlock cfiBlock2
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+//   47 }
+//   48 
+//   49 /**************************************
+//   50  停止信号
+//   51 **************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 void IIC_Stop()
+IIC_Stop:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function IIC_Stop
+//   53 {
+//   54     //**IIC_SDA_Out;
+//   55     P3DIR|=(1<<SDA);
+        BIS.B   #0x1, &0x224
+//   56     //**IIC_SCL = 0;   
+//   57     IIC&=~(1<<SCL);
+        BIC.B   #0x2, &0x222
+//   58    //** IIC_SDA = 0;                    //拉低数据线
+//   59     IIC&=~(1<<SDA);
+        BIC.B   #0x1, &0x222
+//   60     //** delay521_nus(4);                   //延时
+//   61     delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//   62     //**IIC_SCL = 1;                    //拉高时钟线
+//   63      IIC|=(1<<SCL);
+        BIS.B   #0x2, &0x222
+//   64     //** delay521_nus(4);                  //延时
+//   65      delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//   66    //** IIC_SDA = 1;                    //产生上升沿
+//   67      IIC|=(1<<SDA);
+        BIS.B   #0x1, &0x222
+//   68 }
+        RETA
+          CFI EndBlock cfiBlock3
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+//   69 
+//   70 /**************************************
+//   71 发送应答信号
+//   72 入口参数:ack (0:ACK 1:NAK)
+//   73 **************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   74 void IIC_SendACK(uchar ack)
+IIC_SendACK:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function IIC_SendACK
+//   75 {
+        MOV.B   R12, R14
+//   76     //**IIC_SDA_Out;
+//   77     P3DIR|=(1<<SDA);
+        BIS.B   #0x1, &0x224
+//   78    //** IIC_SCL = 0;                    //拉低时钟线
+//   79     IIC&=~(1<<SCL);
+        BIC.B   #0x2, &0x222
+//   80    //** delay521_nus(4);
+//   81     delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//   82    //** IIC_SDA = ack;                  //写应答信号
+//   83     if(ack)
+        CMP.B   #0x0, R14
+        JEQ     ??IIC_SendACK_1
+//   84       IIC|=(1<<SDA);
+        BIS.B   #0x1, &0x222
+        JMP     ??IIC_SendACK_0
+//   85     else 
+//   86       IIC&=~(1<<SDA);
+??IIC_SendACK_1:
+        BIC.B   #0x1, &0x222
+//   87    // delay521_nus(4);
+//   88     delay521_nus(1) ;
+??IIC_SendACK_0:
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//   89    //** IIC_SCL = 1;                    //拉高时钟线
+//   90     IIC|=(1<<SCL);
+        BIS.B   #0x2, &0x222
+//   91   //  delay521_nus(4);                //延时
+//   92     delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//   93     //**IIC_SCL = 0;                    //拉低时钟线
+//   94     IIC&=~(1<<SCL);
+        BIC.B   #0x2, &0x222
+//   95    //delay521_nus(4);                 //延时
+//   96     delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI TailCall delay521_nus
+        BRA     #delay521_nus
+          CFI EndBlock cfiBlock4
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+//   97 }
+//   98 
+//   99 /**************************************
+//  100 接收应答信号
+//  101 **************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  102 void IIC_RecvACK()
+IIC_RecvACK:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function IIC_RecvACK
+//  103 {
+//  104    //**IIC_SDA_In;
+//  105    P3DIR&=~(1<<SDA);
+        BIC.B   #0x1, &0x224
+//  106    //delay521_nus(4);
+//  107   //** IIC_SCL = 1;                  //拉高时钟线
+//  108    IIC|=(1<<SCL);
+        BIS.B   #0x2, &0x222
+//  109    //** while(IIC_SDA)
+//  110    while((P3IN&(1<<SDA)))
+??IIC_RecvACK_0:
+        BIT.B   #0x1, &0x220
+        JNC     ??IIC_RecvACK_1
+//  111     {
+//  112         Ack_Count++;
+        ADDX.B  #0x1, &Ack_Count
+//  113         if(Ack_Count>250)
+        CMPX.B  #0xfb, &Ack_Count
+        JNC     ??IIC_RecvACK_0
+//  114          {
+//  115             IIC_Stop() ;
+          CFI FunCall IIC_Stop
+        CALLA   #IIC_Stop
+//  116             Ack_Count=0;
+        MOVX.B  #0x0, &Ack_Count
+//  117             break;
+//  118          }
+//  119     }
+//  120     //dis_data++;
+//  121    //** IIC_SCL = 0;                 //拉低时钟线
+//  122    IIC&=~(1<<SCL);
+??IIC_RecvACK_1:
+        BIC.B   #0x2, &0x222
+//  123    //** delay521_nus(4);                //延时
+//  124    delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI TailCall delay521_nus
+        BRA     #delay521_nus
+          CFI EndBlock cfiBlock5
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+        REQUIRE _A_PBIN_L
+//  125 }
+//  126 
+//  127 /**************************************
+//  128 向IIC总线发送一个字节数据
+//  129 **************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  130 void IIC_SendByte(uchar dat)
+IIC_SendByte:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function IIC_SendByte
+//  131 {
+        MOV.B   R12, R14
+//  132     uchar i;
+//  133        
+//  134     // IIC_SDA_Out;
+//  135     P3DIR|=(1<<SDA);
+        BIS.B   #0x1, &0x224
+//  136       i=8;  
+        MOV.B   #0x8, R13
+//  137    //**  IIC_SCL = 0;                //拉低时钟线
+//  138     IIC&=~(1<<SCL);
+        BIC.B   #0x2, &0x222
+//  139    //**  delay521_nus(4);
+//  140    delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+        JMP     ??IIC_SendByte_2
+//  141    while(i--)         //8位计数器
+//  142     {   
+//  143      //**  IIC_SDA=(dat&0x80)>>7;
+//  144     if(((dat&0x80)>>7))
+//  145      IIC|=(1<<SDA);
+//  146    else 
+//  147      IIC&=~(1<<SDA); 
+??IIC_SendByte_0:
+        BIC.B   #0x1, &0x222
+//  148         dat<<=1;              //送数据口
+??IIC_SendByte_1:
+        RLA.B   R14
+//  149 	 //**   delay521_nus(4);
+//  150         delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//  151     //**    IIC_SCL = 1;                //拉高时钟线
+//  152             IIC|=(1<<SCL);
+        BIS.B   #0x2, &0x222
+//  153        //** delay521_nus(4);             //延时
+//  154             delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+//  155       //**  IIC_SCL = 0;                //拉低时钟线
+//  156         IIC&=~(1<<SCL);
+        BIC.B   #0x2, &0x222
+//  157         //**delay521_nus(4);              //延时 
+//  158         delay521_nus(1) ;
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+??IIC_SendByte_2:
+        MOV.B   R13, R15
+        MOV.B   R15, R13
+        ADD.B   #0xff, R13
+        CMP.B   #0x0, R15
+        JEQ     ??IIC_SendByte_3
+        CMP.B   #0x0, R14
+        JGE     ??IIC_SendByte_0
+        BIS.B   #0x1, &0x222
+        JMP     ??IIC_SendByte_1
+//  159     }  
+//  160     // IIC_SDA=0;
+//  161    IIC|=(1<<SDA);
+??IIC_SendByte_3:
+        BIS.B   #0x1, &0x222
+//  162      //delay521_nus(2);
+//  163     IIC_RecvACK();
+          CFI TailCall IIC_RecvACK
+        BRA     #IIC_RecvACK
+          CFI EndBlock cfiBlock6
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+//  164 }
+//  165 
+//  166 /**************************************
+//  167 从IIC总线接收一个字节数据
+//  168 **************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  169 uchar IIC_RecvByte()
+IIC_RecvByte:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function IIC_RecvByte
+//  170 {
+//  171     uchar i;
+//  172     uchar dat = 0;
+        MOV.B   #0x0, R14
+//  173     // **IIC_SDA_In;
+//  174     P3DIR&=~(1<<SDA);
+        BIC.B   #0x1, &0x224
+//  175      i=8;  
+        MOV.B   #0x8, R13
+        JMP     ??IIC_RecvByte_2
+//  176   
+//  177    while(i--)         //8位计数器     
+//  178     {   
+//  179        //** IIC_SCL = 0;                //拉低时钟线
+//  180       IIC&=~(1<<SCL);
+//  181       //**  delay521_nus(4);    
+//  182       delay521_nus(1) ;
+//  183     //**    IIC_SCL = 1;                //拉高时钟线
+//  184         IIC|=(1<<SCL);
+//  185         dat <<= 1;
+//  186       //**  dat |= IIC_SDA;             //读数据   
+//  187         if(P3IN&BIT0)
+//  188           dat|=1;
+//  189         else 
+//  190           dat|=0;
+//  191     //**    delay521_nus(4);             //延时
+//  192         delay521_nus(1) ;
+??IIC_RecvByte_0:
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+??IIC_RecvByte_2:
+        MOV.B   R13, R15
+        MOV.B   R15, R13
+        ADD.B   #0xff, R13
+        CMP.B   #0x0, R15
+        JEQ     ??IIC_RecvByte_3
+        BIC.B   #0x2, &0x222
+        MOV.W   #0x1, R12
+          CFI FunCall delay521_nus
+        CALLA   #delay521_nus
+        BIS.B   #0x2, &0x222
+        RLA.B   R14
+        BIT.B   #0x1, &0x220
+        JNC     ??IIC_RecvByte_0
+        BIS.B   #0x1, R14
+        JMP     ??IIC_RecvByte_0
+//  193     }
+//  194     return dat;
+??IIC_RecvByte_3:
+        MOV.B   R14, R12
+        RETA
+          CFI EndBlock cfiBlock7
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+        REQUIRE _A_PBIN_L
+//  195 }
+//  196 
+//  197 //单字节写入*******************************************
+//  198 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  199 void Single_WriteIIC(uchar Slaveaddr,uchar REG_Address,uchar REG_data)
+Single_WriteIIC:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function Single_WriteIIC
+//  200 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R10
+        MOV.B   R13, R11
+        MOV.B   R14, R8
+//  201     IIC_Start();                  //起始信号
+          CFI FunCall IIC_Start
+        CALLA   #IIC_Start
+//  202       
+//  203     IIC_SendByte(Slaveaddr);   //发送设备地址+写信号
+        MOV.B   R10, R12
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  204     IIC_SendByte(REG_Address);    //内部寄存器地址，    
+        MOV.B   R11, R12
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  205     IIC_SendByte(REG_data);       //内部寄存器数据，
+        MOV.B   R8, R12
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  206    
+//  207     IIC_Stop();                   //发送停止信号
+          CFI FunCall IIC_Stop
+        CALLA   #IIC_Stop
+//  208 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock8
+//  209 
+//  210 //单字节读取*****************************************
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  211 uchar Single_ReadIIC(uchar Slaveaddr,uchar REG_Address)
+Single_ReadIIC:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function Single_ReadIIC
+//  212 {  
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R11
+        MOV.B   R13, R10
+//  213     uchar REG_data;
+//  214    
+//  215     IIC_Start();                          //起始信号
+          CFI FunCall IIC_Start
+        CALLA   #IIC_Start
+//  216     IIC_SendByte(Slaveaddr);           //发送设备地址+写信号
+        MOV.B   R11, R12
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  217     IIC_SendByte(REG_Address);            //发送存储单元地址，从0开始	
+        MOV.B   R10, R12
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  218     IIC_Start();                          //起始信号
+          CFI FunCall IIC_Start
+        CALLA   #IIC_Start
+//  219     IIC_SendByte(Slaveaddr+1);         //发送设备地址+读信号
+        ADD.B   #0x1, R11
+        MOV.B   R11, R12
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  220     REG_data=IIC_RecvByte();              //读出寄存器数据
+          CFI FunCall IIC_RecvByte
+        CALLA   #IIC_RecvByte
+        MOV.B   R12, R13
+//  221     IIC_SendACK(1);   
+        MOV.B   #0x1, R12
+          CFI FunCall IIC_SendACK
+        CALLA   #IIC_SendACK
+//  222     IIC_Stop();                           //停止信号
+          CFI FunCall IIC_Stop
+        CALLA   #IIC_Stop
+//  223     return REG_data; 
+        MOV.B   R13, R12
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  224 }
+          CFI EndBlock cfiBlock9
+//  225 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  226 void Multiple_ReadIIC(uchar Slaveaddr,uchar REG_Address,uchar length,uint8_t *Buff)
+Multiple_ReadIIC:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function Multiple_ReadIIC
+//  227 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.B   R12, R11
+        MOV.B   R13, R8
+        MOV.B   R14, R10
+        MOVA    R15, R6
+//  228   for(int i=0;i<length;i++)
+        MOV.W   #0x0, R9
+        JMP     ??Multiple_ReadIIC_1
+//  229   {
+//  230       Buff[i] = Single_ReadIIC(Slaveaddr,REG_Address);
+??Multiple_ReadIIC_0:
+        MOV.B   R8, R13
+        MOV.B   R11, R12
+          CFI FunCall Single_ReadIIC
+        CALLA   #Single_ReadIIC
+        MOV.W   R9, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        ADDA    R6, R15
+        MOV.B   R12, 0(R15)
+//  231   }
+        ADD.W   #0x1, R9
+??Multiple_ReadIIC_1:
+        MOV.B   R10, R10
+        CMP.W   R10, R9
+        JL      ??Multiple_ReadIIC_0
+//  232 }
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock10
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 496 bytes in segment CODE
+//   6 bytes in segment DATA16_AN
+//   1 byte  in segment DATA20_Z
+// 
+// 496 bytes of CODE memory
+//   1 byte  of DATA memory (+ 6 bytes shared)
+//
+//Errors: none
+//Warnings: none

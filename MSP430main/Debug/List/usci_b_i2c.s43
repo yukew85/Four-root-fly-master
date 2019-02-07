@@ -1,0 +1,1736 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:14
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\usci_b_i2c.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW372A.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\usci_b_i2c.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\usci_b_i2c.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME usci_b_i2c
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?DivMod32u
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC USCI_B_I2C_clearInterrupt
+        PUBLIC USCI_B_I2C_disable
+        PUBLIC USCI_B_I2C_disableInterrupt
+        PUBLIC USCI_B_I2C_enable
+        PUBLIC USCI_B_I2C_enableInterrupt
+        PUBLIC USCI_B_I2C_getInterruptStatus
+        PUBLIC USCI_B_I2C_getReceiveBufferAddressForDMA
+        PUBLIC USCI_B_I2C_getTransmitBufferAddressForDMA
+        PUBLIC USCI_B_I2C_initMaster
+        PUBLIC USCI_B_I2C_initSlave
+        PUBLIC USCI_B_I2C_isBusBusy
+        PUBLIC USCI_B_I2C_isBusy
+        PUBLIC USCI_B_I2C_masterIsStartSent
+        PUBLIC USCI_B_I2C_masterIsStopSent
+        PUBLIC USCI_B_I2C_masterReceiveMultiByteFinish
+        PUBLIC USCI_B_I2C_masterReceiveMultiByteFinishWithTimeout
+        PUBLIC USCI_B_I2C_masterReceiveMultiByteNext
+        PUBLIC USCI_B_I2C_masterReceiveMultiByteStart
+        PUBLIC USCI_B_I2C_masterReceiveMultiByteStop
+        PUBLIC USCI_B_I2C_masterReceiveSingle
+        PUBLIC USCI_B_I2C_masterReceiveSingleStart
+        PUBLIC USCI_B_I2C_masterReceiveSingleStartWithTimeout
+        PUBLIC USCI_B_I2C_masterSendMultiByteFinish
+        PUBLIC USCI_B_I2C_masterSendMultiByteFinishWithTimeout
+        PUBLIC USCI_B_I2C_masterSendMultiByteNext
+        PUBLIC USCI_B_I2C_masterSendMultiByteNextWithTimeout
+        PUBLIC USCI_B_I2C_masterSendMultiByteStart
+        PUBLIC USCI_B_I2C_masterSendMultiByteStartWithTimeout
+        PUBLIC USCI_B_I2C_masterSendMultiByteStop
+        PUBLIC USCI_B_I2C_masterSendMultiByteStopWithTimeout
+        PUBLIC USCI_B_I2C_masterSendSingleByte
+        PUBLIC USCI_B_I2C_masterSendSingleByteWithTimeout
+        PUBLIC USCI_B_I2C_masterSendStart
+        PUBLIC USCI_B_I2C_setMode
+        PUBLIC USCI_B_I2C_setSlaveAddress
+        PUBLIC USCI_B_I2C_slaveGetData
+        PUBLIC USCI_B_I2C_slavePutData
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\usci_b_i2c.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // usci_b_i2c.c - Driver for the usci_b_i2c Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup usci_b_i2c_api usci_b_i2c
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_USCI_Bx__
+//   48 #include "usci_b_i2c.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 void USCI_B_I2C_initMaster(uint16_t baseAddress, USCI_B_I2C_initMasterParam *param)
+USCI_B_I2C_initMaster:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function USCI_B_I2C_initMaster
+//   53 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R11
+        MOVA    R13, R10
+//   54     uint16_t preScalarValue;
+//   55 
+//   56     //Disable the USCI module and clears the other bits of control register
+//   57     HWREG8(baseAddress + OFS_UCBxCTL1) = UCSWRST;
+        MOV.B   #0x1, 0(R11)
+//   58 
+//   59     /*
+//   60      * Configure as I2C master mode.
+//   61      * UCMST = Master mode
+//   62      * UCMODE_3 = I2C mode
+//   63      * UCSYNC = Synchronous mode
+//   64      */
+//   65     HWREG8(baseAddress + OFS_UCBxCTL0) = UCMST + UCMODE_3 + UCSYNC;
+        MOV.W   R11, R15
+        ADD.W   #0x1, R15
+        MOV.B   #0xf, 0(R15)
+//   66 
+//   67     //Configure I2C clock source
+//   68     HWREG8(baseAddress + OFS_UCBxCTL1) = (param->selectClockSource + UCSWRST );
+        MOV.B   @R10, R14
+        ADD.B   #0x1, R14
+        MOV.B   R14, 0(R11)
+//   69 
+//   70     /*
+//   71      * Compute the clock divider that achieves the fastest speed less than or
+//   72      * equal to the desired speed.  The numerator is biased to favor a larger
+//   73      * clock divider so that the resulting clock is always less than or equal
+//   74      * to the desired clock, never greater.
+//   75      */
+//   76     preScalarValue = (unsigned short)(param->i2cClk / param->dataRate);
+        MOV.W   0x2(R10), R12
+        MOV.W   0x4(R10), R13
+        MOV.W   0x6(R10), R14
+        MOV.W   0x8(R10), R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOV.W   R12, R8
+//   77     HWREG16(baseAddress + OFS_UCBxBRW) = preScalarValue;
+        MOV.W   R11, R15
+        ADD.W   #0x6, R15
+        MOV.W   R8, 0(R15)
+//   78 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   79 void USCI_B_I2C_initSlave (uint16_t baseAddress,
+USCI_B_I2C_initSlave:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function USCI_B_I2C_initSlave
+          CFI NoCalls
+//   80     uint8_t slaveAddress
+//   81     )
+//   82 {
+//   83     //Disable the USCI module
+//   84     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCSWRST;
+        MOV.W   R12, R15
+        BIS.B   #0x1, 0(R15)
+//   85 
+//   86     //Clear USCI master mode
+//   87     HWREG8(baseAddress + OFS_UCBxCTL0) &= ~UCMST;
+        MOV.W   R12, R15
+        ADD.W   #0x1, R15
+        BIC.B   #0x8, 0(R15)
+//   88 
+//   89     //Confiugre I2C as Slave and Synchronous mode
+//   90     HWREG8(baseAddress + OFS_UCBxCTL0) = UCMODE_3 + UCSYNC;
+        MOV.W   R12, R15
+        ADD.W   #0x1, R15
+        MOV.B   #0x7, 0(R15)
+//   91 
+//   92     //Set up the slave address.
+//   93     HWREG16(baseAddress + OFS_UCBxI2COA) = slaveAddress;
+        MOV.B   R13, R13
+        MOV.W   R12, R15
+        ADD.W   #0x10, R15
+        MOV.W   R13, 0(R15)
+//   94 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   95 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   96 void USCI_B_I2C_enable (uint16_t baseAddress)
+USCI_B_I2C_enable:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function USCI_B_I2C_enable
+          CFI NoCalls
+//   97 {
+//   98     //Reset the UCSWRST bit to enable the USCI Module
+//   99     HWREG8(baseAddress + OFS_UCBxCTL1) &= ~(UCSWRST);
+        MOV.W   R12, R15
+        BIC.B   #0x1, 0(R15)
+//  100 }
+        RETA
+          CFI EndBlock cfiBlock2
+//  101 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  102 void USCI_B_I2C_disable (uint16_t baseAddress)
+USCI_B_I2C_disable:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function USCI_B_I2C_disable
+          CFI NoCalls
+//  103 {
+//  104     //Set the UCSWRST bit to disable the USCI Module
+//  105     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCSWRST;
+        MOV.W   R12, R15
+        BIS.B   #0x1, 0(R15)
+//  106 }
+        RETA
+          CFI EndBlock cfiBlock3
+//  107 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  108 void USCI_B_I2C_setSlaveAddress (uint16_t baseAddress,
+USCI_B_I2C_setSlaveAddress:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function USCI_B_I2C_setSlaveAddress
+          CFI NoCalls
+//  109     uint8_t slaveAddress
+//  110     )
+//  111 {
+//  112     //Set the address of the slave with which the master will communicate.
+//  113     HWREG16(baseAddress + OFS_UCBxI2CSA) = (slaveAddress);
+        MOV.B   R13, R13
+        MOV.W   R12, R15
+        ADD.W   #0x12, R15
+        MOV.W   R13, 0(R15)
+//  114 }
+        RETA
+          CFI EndBlock cfiBlock4
+//  115 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  116 void USCI_B_I2C_setMode (uint16_t baseAddress,
+USCI_B_I2C_setMode:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function USCI_B_I2C_setMode
+          CFI NoCalls
+//  117     uint8_t mode
+//  118     )
+//  119 {
+//  120     HWREG8(baseAddress + OFS_UCBxCTL1) &= ~USCI_B_I2C_TRANSMIT_MODE;
+        MOV.W   R12, R15
+        BIC.B   #0x10, 0(R15)
+//  121     HWREG8(baseAddress + OFS_UCBxCTL1) |= mode;
+        BIS.B   R13, 0(R12)
+//  122 }
+        RETA
+          CFI EndBlock cfiBlock5
+//  123 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  124 void USCI_B_I2C_slavePutData (uint16_t baseAddress,
+USCI_B_I2C_slavePutData:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function USCI_B_I2C_slavePutData
+          CFI NoCalls
+//  125     uint8_t transmitData
+//  126     )
+//  127 {
+//  128     //Send single byte data.
+//  129     HWREG8(baseAddress + OFS_UCBxTXBUF) = transmitData;
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   R13, 0(R15)
+//  130 }
+        RETA
+          CFI EndBlock cfiBlock6
+//  131 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  132 uint8_t USCI_B_I2C_slaveGetData (uint16_t baseAddress)
+USCI_B_I2C_slaveGetData:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function USCI_B_I2C_slaveGetData
+          CFI NoCalls
+//  133 {
+//  134     //Read a byte.
+//  135     return (HWREG8(baseAddress + OFS_UCBxRXBUF));
+        ADD.W   #0xc, R12
+        MOV.B   @R12, R12
+        RETA
+//  136 }
+          CFI EndBlock cfiBlock7
+//  137 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  138 uint8_t USCI_B_I2C_isBusBusy (uint16_t baseAddress)
+USCI_B_I2C_isBusBusy:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function USCI_B_I2C_isBusBusy
+          CFI NoCalls
+//  139 {
+//  140     //Return the bus busy status.
+//  141     return (HWREG8(baseAddress + OFS_UCBxSTAT) & UCBBUSY);
+        ADD.W   #0xa, R12
+        MOV.B   @R12, R12
+        AND.B   #0x10, R12
+        RETA
+//  142 }
+          CFI EndBlock cfiBlock8
+//  143 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  144 uint8_t USCI_B_I2C_isBusy (uint16_t baseAddress)
+USCI_B_I2C_isBusy:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function USCI_B_I2C_isBusy
+          CFI NoCalls
+//  145 {
+        MOV.W   R12, R15
+//  146     //Return the busy status.
+//  147     if ((HWREG8(baseAddress + OFS_UCBxIFG) & (UCTXIFG + UCRXIFG))){
+        MOV.W   R15, R14
+        ADD.W   #0x1d, R14
+        MOV.B   @R14, R14
+        BIT.B   #0x3, R14
+        JEQ     ??USCI_B_I2C_isBusy_0
+//  148         return (USCI_B_I2C_BUS_BUSY);
+        MOV.B   #0x10, R12
+        RETA
+//  149     } else   {
+//  150         return (USCI_B_I2C_BUS_NOT_BUSY);
+??USCI_B_I2C_isBusy_0:
+        MOV.B   #0x0, R12
+        RETA
+//  151     }
+//  152 }
+          CFI EndBlock cfiBlock9
+//  153 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  154 uint8_t USCI_B_I2C_masterIsStopSent (uint16_t baseAddress)
+USCI_B_I2C_masterIsStopSent:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterIsStopSent
+          CFI NoCalls
+//  155 {
+//  156     //Return the bus busy status.
+//  157     return (HWREG8(baseAddress + OFS_UCBxCTL1) & UCTXSTP);
+        MOV.B   @R12, R12
+        AND.B   #0x4, R12
+        RETA
+//  158 }
+          CFI EndBlock cfiBlock10
+//  159 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  160 uint8_t USCI_B_I2C_masterIsStartSent (uint16_t baseAddress)
+USCI_B_I2C_masterIsStartSent:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterIsStartSent
+          CFI NoCalls
+//  161 {
+//  162     //Return if master has sent start
+//  163     return (HWREG8(baseAddress + OFS_UCBxCTL1) & UCTXSTT);
+        MOV.B   @R12, R12
+        AND.B   #0x2, R12
+        RETA
+//  164 }
+          CFI EndBlock cfiBlock11
+//  165 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  166 void USCI_B_I2C_masterSendStart (uint16_t baseAddress)
+USCI_B_I2C_masterSendStart:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendStart
+          CFI NoCalls
+//  167 {
+//  168     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTT;
+        MOV.W   R12, R15
+        BIS.B   #0x2, 0(R15)
+//  169 }
+        RETA
+          CFI EndBlock cfiBlock12
+//  170 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  171 void USCI_B_I2C_enableInterrupt (uint16_t baseAddress,
+USCI_B_I2C_enableInterrupt:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function USCI_B_I2C_enableInterrupt
+          CFI NoCalls
+//  172     uint8_t mask
+//  173     )
+//  174 {
+//  175     //Enable the interrupt masked bit
+//  176     HWREG8(baseAddress + OFS_UCBxIE) |= mask;
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIS.B   R13, 0(R15)
+//  177 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  178 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  179 void USCI_B_I2C_disableInterrupt (uint16_t baseAddress,
+USCI_B_I2C_disableInterrupt:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function USCI_B_I2C_disableInterrupt
+          CFI NoCalls
+//  180     uint8_t mask
+//  181     )
+//  182 {
+//  183     //Disable the interrupt masked bit
+//  184     HWREG8(baseAddress + OFS_UCBxIE) &= ~(mask);
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIC.B   R13, 0(R15)
+//  185 }
+        RETA
+          CFI EndBlock cfiBlock14
+//  186 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  187 void USCI_B_I2C_clearInterrupt (uint16_t baseAddress,
+USCI_B_I2C_clearInterrupt:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function USCI_B_I2C_clearInterrupt
+          CFI NoCalls
+//  188     uint8_t mask
+//  189     )
+//  190 {
+//  191     //Clear the I2C interrupt source.
+//  192     HWREG8(baseAddress + OFS_UCBxIFG) &= ~(mask);
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIC.B   R13, 0(R15)
+//  193 }
+        RETA
+          CFI EndBlock cfiBlock15
+//  194 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  195 uint8_t USCI_B_I2C_getInterruptStatus (uint16_t baseAddress,
+USCI_B_I2C_getInterruptStatus:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function USCI_B_I2C_getInterruptStatus
+          CFI NoCalls
+//  196     uint8_t mask
+//  197     )
+//  198 {
+//  199     //Return the interrupt status of the request masked bit.
+//  200     return (HWREG8(baseAddress + OFS_UCBxIFG) & mask);
+        ADD.W   #0x1d, R12
+        AND.B   @R12, R13
+        MOV.B   R13, R12
+        RETA
+//  201 }
+          CFI EndBlock cfiBlock16
+//  202 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  203 void USCI_B_I2C_masterSendSingleByte (uint16_t baseAddress,
+USCI_B_I2C_masterSendSingleByte:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendSingleByte
+          CFI NoCalls
+//  204     uint8_t txData
+//  205     )
+//  206 {
+//  207     //Store current TXIE status
+//  208     uint8_t txieStatus = HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE;
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        MOV.B   @R15, R14
+        AND.B   #0x2, R14
+//  209 
+//  210     //Disable transmit interrupt enable
+//  211     HWREG8(baseAddress + OFS_UCBxIE) &= ~(UCTXIE);
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIC.B   #0x2, 0(R15)
+//  212 
+//  213     //Send start condition.
+//  214     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTR + UCTXSTT;
+        BIS.B   #0x12, 0(R12)
+//  215 
+//  216     //Poll for transmit interrupt flag.
+//  217     while (!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+??USCI_B_I2C_masterSendSingleByte_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_B_I2C_masterSendSingleByte_0
+//  218 
+//  219     //Send single byte data.
+//  220     HWREG8(baseAddress + OFS_UCBxTXBUF) = txData;
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   R13, 0(R15)
+//  221 
+//  222     //Poll for transmit interrupt flag.
+//  223     while (!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+??USCI_B_I2C_masterSendSingleByte_1:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_B_I2C_masterSendSingleByte_1
+//  224 
+//  225     //Send stop condition.
+//  226     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+        MOV.W   R12, R15
+        BIS.B   #0x4, 0(R15)
+//  227 
+//  228     //Clear transmit interrupt flag before enabling interrupt again
+//  229     HWREG8(baseAddress + OFS_UCBxIFG) &= ~(UCTXIFG);
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIC.B   #0x2, 0(R15)
+//  230 
+//  231     //Reinstate transmit interrupt enable
+//  232     HWREG8(baseAddress + OFS_UCBxIE) |= txieStatus;
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIS.B   R14, 0(R15)
+//  233 }
+        RETA
+          CFI EndBlock cfiBlock17
+//  234 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  235 bool USCI_B_I2C_masterSendSingleByteWithTimeout (uint16_t baseAddress,
+USCI_B_I2C_masterSendSingleByteWithTimeout:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendSingleByteWithTimeout
+          CFI NoCalls
+//  236     uint8_t txData,
+//  237     uint32_t timeout
+//  238     )
+//  239 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R10
+//  240     // Creating variable for second timeout scenario
+//  241     uint32_t timeout2 = timeout;
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//  242 
+//  243     //Store current TXIE status
+//  244     uint8_t txieStatus = HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE;
+        MOV.W   R10, R11
+        ADD.W   #0x1c, R11
+        MOV.B   @R11, R11
+        AND.B   #0x2, R11
+//  245 
+//  246     //Disable transmit interrupt enable
+//  247     HWREG8(baseAddress + OFS_UCBxIE) &= ~(UCTXIE);
+        MOV.W   R10, R12
+        ADD.W   #0x1c, R12
+        BIC.B   #0x2, 0(R12)
+//  248 
+//  249     //Send start condition.
+//  250     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTR + UCTXSTT;
+        BIS.B   #0x12, 0(R10)
+//  251 
+//  252     //Poll for transmit interrupt flag.
+//  253     while ((!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout) ;
+??USCI_B_I2C_masterSendSingleByteWithTimeout_0:
+        MOV.W   R10, R12
+        ADD.W   #0x1d, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendSingleByteWithTimeout_3
+        ADD.W   #0xffff, R14
+        ADDC.W  #0xffff, R15
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendSingleByteWithTimeout_0
+//  254 
+//  255     //Check if transfer timed out
+//  256     if (timeout == 0){
+??USCI_B_I2C_masterSendSingleByteWithTimeout_3:
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendSingleByteWithTimeout_4
+//  257         return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterSendSingleByteWithTimeout_2
+//  258     }
+//  259 
+//  260     //Send single byte data.
+//  261     HWREG8(baseAddress + OFS_UCBxTXBUF) = txData;
+??USCI_B_I2C_masterSendSingleByteWithTimeout_4:
+        MOV.W   R10, R12
+        ADD.W   #0xe, R12
+        MOV.B   R13, 0(R12)
+//  262 
+//  263     //Poll for transmit interrupt flag.
+//  264     while ((!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout2) ;
+??USCI_B_I2C_masterSendSingleByteWithTimeout_1:
+        MOV.W   R10, R12
+        ADD.W   #0x1d, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendSingleByteWithTimeout_5
+        ADD.W   #0xffff, R8
+        ADDC.W  #0xffff, R9
+        MOV.W   R8, R12
+        ADDA    R9, R12
+        JNE     ??USCI_B_I2C_masterSendSingleByteWithTimeout_1
+//  265 
+//  266     //Check if transfer timed out
+//  267     if (timeout2 == 0){
+??USCI_B_I2C_masterSendSingleByteWithTimeout_5:
+        MOV.W   R8, R12
+        ADDA    R9, R12
+        JNE     ??USCI_B_I2C_masterSendSingleByteWithTimeout_6
+//  268         return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterSendSingleByteWithTimeout_2
+//  269     }
+//  270 
+//  271     //Send stop condition.
+//  272     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+??USCI_B_I2C_masterSendSingleByteWithTimeout_6:
+        MOV.W   R10, R12
+        BIS.B   #0x4, 0(R12)
+//  273 
+//  274     //Clear transmit interrupt flag before enabling interrupt again
+//  275     HWREG8(baseAddress + OFS_UCBxIFG) &= ~(UCTXIFG);
+        MOV.W   R10, R12
+        ADD.W   #0x1d, R12
+        BIC.B   #0x2, 0(R12)
+//  276 
+//  277     //Reinstate transmit interrupt enable
+//  278     HWREG8(baseAddress + OFS_UCBxIE) |= txieStatus;
+        MOV.W   R10, R12
+        ADD.W   #0x1c, R12
+        BIS.B   R11, 0(R12)
+//  279 
+//  280     return (STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+??USCI_B_I2C_masterSendSingleByteWithTimeout_2:
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  281 }
+          CFI EndBlock cfiBlock18
+//  282 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  283 void USCI_B_I2C_masterSendMultiByteStart (uint16_t baseAddress,
+USCI_B_I2C_masterSendMultiByteStart:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendMultiByteStart
+          CFI NoCalls
+//  284     uint8_t txData
+//  285     )
+//  286 {
+//  287     //Store current transmit interrupt enable
+//  288     uint8_t txieStatus = HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE;
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        MOV.B   @R15, R14
+        AND.B   #0x2, R14
+//  289 
+//  290     //Disable transmit interrupt enable
+//  291     HWREG8(baseAddress + OFS_UCBxIE) &= ~(UCTXIE);
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIC.B   #0x2, 0(R15)
+//  292 
+//  293     //Send start condition.
+//  294     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTR +  UCTXSTT;
+        BIS.B   #0x12, 0(R12)
+//  295 
+//  296     //Poll for transmit interrupt flag.
+//  297     while (!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+??USCI_B_I2C_masterSendMultiByteStart_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_B_I2C_masterSendMultiByteStart_0
+//  298 
+//  299     //Send single byte data.
+//  300     HWREG8(baseAddress + OFS_UCBxTXBUF) = txData;
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   R13, 0(R15)
+//  301 
+//  302     //Reinstate transmit interrupt enable
+//  303     HWREG8(baseAddress + OFS_UCBxIE) |= txieStatus;
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIS.B   R14, 0(R15)
+//  304 }
+        RETA
+          CFI EndBlock cfiBlock19
+//  305 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  306 bool USCI_B_I2C_masterSendMultiByteStartWithTimeout (uint16_t baseAddress,
+USCI_B_I2C_masterSendMultiByteStartWithTimeout:
+          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendMultiByteStartWithTimeout
+          CFI NoCalls
+//  307     uint8_t txData,
+//  308     uint32_t timeout
+//  309     )
+//  310 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+//  311     //Store current transmit interrupt enable
+//  312     uint8_t txieStatus = HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE;
+        MOV.W   R10, R11
+        ADD.W   #0x1c, R11
+        MOV.B   @R11, R11
+        AND.B   #0x2, R11
+//  313 
+//  314     //Disable transmit interrupt enable
+//  315     HWREG8(baseAddress + OFS_UCBxIE) &= ~(UCTXIE);
+        MOV.W   R10, R12
+        ADD.W   #0x1c, R12
+        BIC.B   #0x2, 0(R12)
+//  316 
+//  317     //Send start condition.
+//  318     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTR +  UCTXSTT;
+        BIS.B   #0x12, 0(R10)
+//  319 
+//  320     //Poll for transmit interrupt flag.
+//  321     while ((!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout) ;
+??USCI_B_I2C_masterSendMultiByteStartWithTimeou_0:
+        MOV.W   R10, R12
+        ADD.W   #0x1d, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendMultiByteStartWithTimeou_2
+        ADD.W   #0xffff, R14
+        ADDC.W  #0xffff, R15
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteStartWithTimeou_0
+//  322 
+//  323     //Check if transfer timed out
+//  324     if (timeout == 0){
+??USCI_B_I2C_masterSendMultiByteStartWithTimeou_2:
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteStartWithTimeou_3
+//  325         return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterSendMultiByteStartWithTimeou_1
+//  326     }
+//  327 
+//  328     //Send single byte data.
+//  329     HWREG8(baseAddress + OFS_UCBxTXBUF) = txData;
+??USCI_B_I2C_masterSendMultiByteStartWithTimeou_3:
+        MOV.W   R10, R12
+        ADD.W   #0xe, R12
+        MOV.B   R13, 0(R12)
+//  330 
+//  331     //Reinstate transmit interrupt enable
+//  332     HWREG8(baseAddress + OFS_UCBxIE) |= txieStatus;
+        MOV.W   R10, R12
+        ADD.W   #0x1c, R12
+        BIS.B   R11, 0(R12)
+//  333 
+//  334     return(STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+??USCI_B_I2C_masterSendMultiByteStartWithTimeou_1:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  335 }
+          CFI EndBlock cfiBlock20
+//  336 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  337 void USCI_B_I2C_masterSendMultiByteNext (uint16_t baseAddress,
+USCI_B_I2C_masterSendMultiByteNext:
+          CFI Block cfiBlock21 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendMultiByteNext
+          CFI NoCalls
+//  338     uint8_t txData
+//  339     )
+//  340 {
+//  341     //If interrupts are not used, poll for flags
+//  342     if (!(HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE)){
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIT.B   #0x2, 0(R15)
+        JC      ??USCI_B_I2C_masterSendMultiByteNext_1
+//  343         //Poll for transmit interrupt flag.
+//  344         while (!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+??USCI_B_I2C_masterSendMultiByteNext_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_B_I2C_masterSendMultiByteNext_0
+//  345     }
+//  346 
+//  347     //Send single byte data.
+//  348     HWREG8(baseAddress + OFS_UCBxTXBUF) = txData;
+??USCI_B_I2C_masterSendMultiByteNext_1:
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   R13, 0(R15)
+//  349 }
+        RETA
+          CFI EndBlock cfiBlock21
+//  350 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  351 bool USCI_B_I2C_masterSendMultiByteNextWithTimeout (uint16_t baseAddress,
+USCI_B_I2C_masterSendMultiByteNextWithTimeout:
+          CFI Block cfiBlock22 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendMultiByteNextWithTimeout
+          CFI NoCalls
+//  352     uint8_t txData,
+//  353     uint32_t timeout
+//  354     )
+//  355 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.W   R12, R10
+//  356     //If interrupts are not used, poll for flags
+//  357     if (!(HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE)){
+        MOV.W   R10, R12
+        ADD.W   #0x1c, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendMultiByteNextWithTimeout_2
+//  358         //Poll for transmit interrupt flag.
+//  359         while ((!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout);
+??USCI_B_I2C_masterSendMultiByteNextWithTimeout_0:
+        MOV.W   R10, R12
+        ADD.W   #0x1d, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendMultiByteNextWithTimeout_3
+        ADD.W   #0xffff, R14
+        ADDC.W  #0xffff, R15
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteNextWithTimeout_0
+//  360 
+//  361         //Check if transfer timed out
+//  362         if (timeout == 0){
+??USCI_B_I2C_masterSendMultiByteNextWithTimeout_3:
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteNextWithTimeout_2
+//  363             return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterSendMultiByteNextWithTimeout_1
+//  364         }
+//  365     }
+//  366 
+//  367     //Send single byte data.
+//  368     HWREG8(baseAddress + OFS_UCBxTXBUF) = txData;
+??USCI_B_I2C_masterSendMultiByteNextWithTimeout_2:
+        MOV.W   R10, R12
+        ADD.W   #0xe, R12
+        MOV.B   R13, 0(R12)
+//  369 
+//  370     return(STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+??USCI_B_I2C_masterSendMultiByteNextWithTimeout_1:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//  371 }
+          CFI EndBlock cfiBlock22
+//  372 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  373 void USCI_B_I2C_masterSendMultiByteFinish (uint16_t baseAddress,
+USCI_B_I2C_masterSendMultiByteFinish:
+          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendMultiByteFinish
+          CFI NoCalls
+//  374     uint8_t txData
+//  375     )
+//  376 {
+//  377     //If interrupts are not used, poll for flags
+//  378     if (!(HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE)){
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIT.B   #0x2, 0(R15)
+        JC      ??USCI_B_I2C_masterSendMultiByteFinish_2
+//  379         //Poll for transmit interrupt flag.
+//  380         while (!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+??USCI_B_I2C_masterSendMultiByteFinish_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_B_I2C_masterSendMultiByteFinish_0
+//  381     }
+//  382 
+//  383     //Send single byte data.
+//  384     HWREG8(baseAddress + OFS_UCBxTXBUF) = txData;
+??USCI_B_I2C_masterSendMultiByteFinish_2:
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   R13, 0(R15)
+//  385 
+//  386     //Poll for transmit interrupt flag.
+//  387     while (!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+??USCI_B_I2C_masterSendMultiByteFinish_1:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_B_I2C_masterSendMultiByteFinish_1
+//  388 
+//  389     //Send stop condition.
+//  390     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+        MOV.W   R12, R15
+        BIS.B   #0x4, 0(R15)
+//  391 }
+        RETA
+          CFI EndBlock cfiBlock23
+//  392 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  393 bool USCI_B_I2C_masterSendMultiByteFinishWithTimeout (uint16_t baseAddress,
+USCI_B_I2C_masterSendMultiByteFinishWithTimeout:
+          CFI Block cfiBlock24 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendMultiByteFinishWithTimeout
+          CFI NoCalls
+//  394     uint8_t txData,
+//  395     uint32_t timeout
+//  396     )
+//  397 {
+        PUSHM.A #0x3, R10
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+16
+        MOV.W   R12, R10
+//  398     uint32_t timeout2 = timeout;
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//  399 
+//  400     //If interrupts are not used, poll for flags
+//  401     if (!(HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE)){
+        MOV.W   R10, R12
+        ADD.W   #0x1c, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_3
+//  402         //Poll for transmit interrupt flag.
+//  403         while ((!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout) ;
+??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_0:
+        MOV.W   R10, R12
+        ADD.W   #0x1d, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_4
+        ADD.W   #0xffff, R14
+        ADDC.W  #0xffff, R15
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_0
+//  404 
+//  405         //Check if transfer timed out
+//  406         if (timeout == 0){
+??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_4:
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_3
+//  407             return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_2
+//  408         }
+//  409     }
+//  410 
+//  411     //Send single byte data.
+//  412     HWREG8(baseAddress + OFS_UCBxTXBUF) = txData;
+??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_3:
+        MOV.W   R10, R12
+        ADD.W   #0xe, R12
+        MOV.B   R13, 0(R12)
+//  413 
+//  414     //Poll for transmit interrupt flag.
+//  415     while ((!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout2) ;
+??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_1:
+        MOV.W   R10, R12
+        ADD.W   #0x1d, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_5
+        ADD.W   #0xffff, R8
+        ADDC.W  #0xffff, R9
+        MOV.W   R8, R12
+        ADDA    R9, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_1
+//  416 
+//  417     //Check if transfer timed out
+//  418     if (timeout2 == 0){
+??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_5:
+        MOV.W   R8, R12
+        ADDA    R9, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_6
+//  419         return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_2
+//  420     }
+//  421 
+//  422     //Send stop condition.
+//  423     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_6:
+        MOV.W   R10, R12
+        BIS.B   #0x4, 0(R12)
+//  424 
+//  425     return(STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+??USCI_B_I2C_masterSendMultiByteFinishWithTimeo_2:
+        POPM.A  #0x3, R10
+          CFI R10H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  426 }
+          CFI EndBlock cfiBlock24
+//  427 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  428 void USCI_B_I2C_masterSendMultiByteStop (uint16_t baseAddress)
+USCI_B_I2C_masterSendMultiByteStop:
+          CFI Block cfiBlock25 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendMultiByteStop
+          CFI NoCalls
+//  429 {
+//  430     //If interrupts are not used, poll for flags
+//  431     if (!(HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE)){
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIT.B   #0x2, 0(R15)
+        JC      ??USCI_B_I2C_masterSendMultiByteStop_1
+//  432         //Poll for transmit interrupt flag.
+//  433         while (!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) ;
+??USCI_B_I2C_masterSendMultiByteStop_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_B_I2C_masterSendMultiByteStop_0
+//  434     }
+//  435 
+//  436     //Send stop condition.
+//  437     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+??USCI_B_I2C_masterSendMultiByteStop_1:
+        MOV.W   R12, R15
+        BIS.B   #0x4, 0(R15)
+//  438 }
+        RETA
+          CFI EndBlock cfiBlock25
+//  439 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  440 bool USCI_B_I2C_masterSendMultiByteStopWithTimeout (uint16_t baseAddress,
+USCI_B_I2C_masterSendMultiByteStopWithTimeout:
+          CFI Block cfiBlock26 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterSendMultiByteStopWithTimeout
+          CFI NoCalls
+//  441     uint32_t timeout)
+//  442 {
+        MOV.W   R12, R13
+//  443     //If interrupts are not used, poll for flags
+//  444     if (!(HWREG8(baseAddress + OFS_UCBxIE) & UCTXIE)){
+        MOV.W   R13, R12
+        ADD.W   #0x1c, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendMultiByteStopWithTimeout_1
+//  445         //Poll for transmit interrupt flag.
+//  446         while ((!(HWREG8(baseAddress + OFS_UCBxIFG) & UCTXIFG)) && --timeout) ;
+??USCI_B_I2C_masterSendMultiByteStopWithTimeout_0:
+        MOV.W   R13, R12
+        ADD.W   #0x1d, R12
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterSendMultiByteStopWithTimeout_2
+        ADD.W   #0xffff, R14
+        ADDC.W  #0xffff, R15
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteStopWithTimeout_0
+//  447 
+//  448         //Check if transfer timed out
+//  449         if (timeout == 0){
+??USCI_B_I2C_masterSendMultiByteStopWithTimeout_2:
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterSendMultiByteStopWithTimeout_1
+//  450             return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        RETA
+//  451         }
+//  452     }
+//  453 
+//  454     //Send stop condition.
+//  455     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+??USCI_B_I2C_masterSendMultiByteStopWithTimeout_1:
+        MOV.W   R13, R12
+        BIS.B   #0x4, 0(R12)
+//  456 
+//  457     return (STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+        RETA
+//  458 }
+          CFI EndBlock cfiBlock26
+//  459 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  460 void USCI_B_I2C_masterReceiveMultiByteStart (uint16_t baseAddress)
+USCI_B_I2C_masterReceiveMultiByteStart:
+          CFI Block cfiBlock27 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterReceiveMultiByteStart
+          CFI NoCalls
+//  461 {
+//  462     //Set USCI in Receive mode
+//  463     HWREG8(baseAddress + OFS_UCBxCTL1) &= ~UCTR;
+        MOV.W   R12, R15
+        BIC.B   #0x10, 0(R15)
+//  464     //Send start
+//  465     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTT;
+        MOV.W   R12, R15
+        BIS.B   #0x2, 0(R15)
+//  466 }
+        RETA
+          CFI EndBlock cfiBlock27
+//  467 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  468 uint8_t USCI_B_I2C_masterReceiveMultiByteNext (uint16_t baseAddress)
+USCI_B_I2C_masterReceiveMultiByteNext:
+          CFI Block cfiBlock28 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterReceiveMultiByteNext
+          CFI NoCalls
+//  469 {
+//  470     return (HWREG8(baseAddress + OFS_UCBxRXBUF));
+        ADD.W   #0xc, R12
+        MOV.B   @R12, R12
+        RETA
+//  471 }
+          CFI EndBlock cfiBlock28
+//  472 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  473 uint8_t USCI_B_I2C_masterReceiveMultiByteFinish (uint16_t baseAddress)
+USCI_B_I2C_masterReceiveMultiByteFinish:
+          CFI Block cfiBlock29 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterReceiveMultiByteFinish
+          CFI NoCalls
+//  474 {
+        MOV.W   R12, R15
+//  475     uint8_t receiveData;
+//  476 
+//  477     //Send stop condition.
+//  478     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+        MOV.W   R15, R14
+        BIS.B   #0x4, 0(R14)
+//  479 
+//  480     //Capture data from receive buffer after setting stop bit due to
+//  481     //MSP430 I2C critical timing.
+//  482     receiveData = HWREG8(baseAddress + OFS_UCBxRXBUF);
+        MOV.W   R15, R14
+        ADD.W   #0xc, R14
+        MOV.B   @R14, R12
+//  483 
+//  484     //Wait for Stop to finish
+//  485     while (HWREG8(baseAddress + OFS_UCBxCTL1) & UCTXSTP);
+??USCI_B_I2C_masterReceiveMultiByteFinish_0:
+        BIT.B   #0x4, 0(R15)
+        JC      ??USCI_B_I2C_masterReceiveMultiByteFinish_0
+//  486 
+//  487     //Wait for RX buffer
+//  488     while (!(HWREG8(baseAddress + OFS_UCBxIFG) & UCRXIFG));
+??USCI_B_I2C_masterReceiveMultiByteFinish_1:
+        MOV.W   R15, R14
+        ADD.W   #0x1d, R14
+        BIT.B   #0x1, 0(R14)
+        JNC     ??USCI_B_I2C_masterReceiveMultiByteFinish_1
+//  489 
+//  490     return receiveData;
+        RETA
+//  491 }
+          CFI EndBlock cfiBlock29
+//  492 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  493 bool USCI_B_I2C_masterReceiveMultiByteFinishWithTimeout (uint16_t baseAddress,
+USCI_B_I2C_masterReceiveMultiByteFinishWithTimeout:
+          CFI Block cfiBlock30 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterReceiveMultiByteFinishWithTimeout
+          CFI NoCalls
+//  494     uint8_t *rxData,
+//  495     uint32_t timeout
+//  496     )
+//  497 {
+        PUSHM.A #0x3, R10
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+16
+        MOV.W   R12, R10
+//  498     uint32_t timeout2 = timeout;
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//  499 
+//  500     //Send stop condition.
+//  501     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+        MOV.W   R10, R12
+        BIS.B   #0x4, 0(R12)
+//  502 
+//  503     //Capture data from receive buffer after setting stop bit due to
+//  504     //MSP430 I2C critical timing.
+//  505     *rxData = (HWREG8(baseAddress + OFS_UCBxRXBUF));
+        MOV.W   R10, R12
+        ADD.W   #0xc, R12
+        MOV.B   @R12, 0(R13)
+//  506 
+//  507     //Wait for Stop to finish
+//  508     while ((HWREG8(baseAddress + OFS_UCBxCTL1) & UCTXSTP) && --timeout);
+??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_0:
+        BIT.B   #0x4, 0(R10)
+        JNC     ??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_3
+        ADD.W   #0xffff, R14
+        ADDC.W  #0xffff, R15
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_0
+//  509 
+//  510     //Check if transfer timed out
+//  511     if (timeout == 0){
+??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_3:
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_1
+//  512         return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_2
+//  513     }
+//  514 
+//  515     // Wait for RX buffer
+//  516     while ((!(HWREG8(baseAddress + OFS_UCBxIFG) & UCRXIFG)) && --timeout2) ;
+??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_1:
+        MOV.W   R10, R12
+        ADD.W   #0x1d, R12
+        BIT.B   #0x1, 0(R12)
+        JC      ??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_4
+        ADD.W   #0xffff, R8
+        ADDC.W  #0xffff, R9
+        MOV.W   R8, R12
+        ADDA    R9, R12
+        JNE     ??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_1
+//  517 
+//  518     //Check if transfer timed out
+//  519     if (timeout2 == 0){
+??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_4:
+        MOV.W   R8, R12
+        ADDA    R9, R12
+        JNE     ??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_5
+//  520         return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_2
+//  521     }
+//  522 
+//  523     return (STATUS_SUCCESS);
+??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_5:
+        MOV.B   #0x1, R12
+??USCI_B_I2C_masterReceiveMultiByteFinishWithTi_2:
+        POPM.A  #0x3, R10
+          CFI R10H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  524 }
+          CFI EndBlock cfiBlock30
+//  525 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  526 void USCI_B_I2C_masterReceiveMultiByteStop (uint16_t baseAddress)
+USCI_B_I2C_masterReceiveMultiByteStop:
+          CFI Block cfiBlock31 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterReceiveMultiByteStop
+          CFI NoCalls
+//  527 {
+//  528     //Send stop condition.
+//  529     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+        MOV.W   R12, R15
+        BIS.B   #0x4, 0(R15)
+//  530 }
+        RETA
+          CFI EndBlock cfiBlock31
+//  531 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  532 void USCI_B_I2C_masterReceiveSingleStart (uint16_t baseAddress)
+USCI_B_I2C_masterReceiveSingleStart:
+          CFI Block cfiBlock32 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterReceiveSingleStart
+          CFI NoCalls
+//  533 {
+//  534     //local variable to store GIE status
+//  535     uint16_t gieStatus;
+//  536 
+//  537     //Store current SR register
+//  538     gieStatus = __get_SR_register() & GIE;
+        MOV.W   SR, R14
+        AND.W   #0x8, R14
+        MOV.W   R14, R15
+//  539 
+//  540     //Disable global interrupt
+//  541     __disable_interrupt();
+        DINT
+        NOP
+//  542 
+//  543     //Set USCI in Receive mode
+//  544     HWREG8(baseAddress + OFS_UCBxCTL1) &= ~UCTR;
+        MOV.W   R12, R14
+        BIC.B   #0x10, 0(R14)
+//  545 
+//  546     //Send start condition.
+//  547     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTT;
+        MOV.W   R12, R14
+        BIS.B   #0x2, 0(R14)
+//  548 
+//  549     //Poll for Start bit to complete
+//  550     while (HWREG8(baseAddress + OFS_UCBxCTL1) & UCTXSTT) ;
+??USCI_B_I2C_masterReceiveSingleStart_0:
+        BIT.B   #0x2, 0(R12)
+        JC      ??USCI_B_I2C_masterReceiveSingleStart_0
+//  551 
+//  552     //Send stop condition.
+//  553     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+        MOV.W   R12, R14
+        BIS.B   #0x4, 0(R14)
+        NOP
+//  554 
+//  555     //Reinstate SR register
+//  556     __bis_SR_register(gieStatus);
+        BIS.W   R15, SR
+        NOP
+//  557 }
+        RETA
+          CFI EndBlock cfiBlock32
+//  558 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  559 bool USCI_B_I2C_masterReceiveSingleStartWithTimeout (uint16_t baseAddress,
+USCI_B_I2C_masterReceiveSingleStartWithTimeout:
+          CFI Block cfiBlock33 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterReceiveSingleStartWithTimeout
+          CFI NoCalls
+//  560     uint32_t timeout
+//  561     )
+//  562 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.W   R12, R13
+//  563     //local variable to store GIE status
+//  564     uint16_t gieStatus;
+//  565 
+//  566     //Store current SR register
+//  567     gieStatus = __get_SR_register() & GIE;
+        MOV.W   SR, R12
+        AND.W   #0x8, R12
+        MOV.W   R12, R10
+//  568 
+//  569     //Disable global interrupt
+//  570     __disable_interrupt();
+        DINT
+        NOP
+//  571 
+//  572     //Set USCI in Receive mode
+//  573     HWREG8(baseAddress + OFS_UCBxCTL1) &= ~UCTR;
+        MOV.W   R13, R12
+        BIC.B   #0x10, 0(R12)
+//  574 
+//  575     //Send start condition.
+//  576     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTT;
+        MOV.W   R13, R12
+        BIS.B   #0x2, 0(R12)
+//  577 
+//  578     //Poll for Start bit to complete
+//  579     while (((HWREG8(baseAddress + OFS_UCBxCTL1) & UCTXSTT)) && --timeout);
+??USCI_B_I2C_masterReceiveSingleStartWithTimeou_0:
+        BIT.B   #0x2, 0(R13)
+        JNC     ??USCI_B_I2C_masterReceiveSingleStartWithTimeou_2
+        ADD.W   #0xffff, R14
+        ADDC.W  #0xffff, R15
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterReceiveSingleStartWithTimeou_0
+//  580 
+//  581     //Check if transfer timed out
+//  582     if (timeout == 0){
+??USCI_B_I2C_masterReceiveSingleStartWithTimeou_2:
+        MOV.W   R14, R12
+        ADDA    R15, R12
+        JNE     ??USCI_B_I2C_masterReceiveSingleStartWithTimeou_3
+//  583         return (STATUS_FAIL);
+        MOV.B   #0x0, R12
+        JMP     ??USCI_B_I2C_masterReceiveSingleStartWithTimeou_1
+//  584     }
+//  585 
+//  586     //Send stop condition.
+//  587     HWREG8(baseAddress + OFS_UCBxCTL1) |= UCTXSTP;
+??USCI_B_I2C_masterReceiveSingleStartWithTimeou_3:
+        MOV.W   R13, R12
+        BIS.B   #0x4, 0(R12)
+        NOP
+//  588 
+//  589     //Reinstate SR register
+//  590     __bis_SR_register(gieStatus);
+        BIS.W   R10, SR
+        NOP
+//  591 
+//  592     return (STATUS_SUCCESS);
+        MOV.B   #0x1, R12
+??USCI_B_I2C_masterReceiveSingleStartWithTimeou_1:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//  593 }
+          CFI EndBlock cfiBlock33
+//  594 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  595 uint8_t USCI_B_I2C_masterReceiveSingle (uint16_t baseAddress)
+USCI_B_I2C_masterReceiveSingle:
+          CFI Block cfiBlock34 Using cfiCommon0
+          CFI Function USCI_B_I2C_masterReceiveSingle
+          CFI NoCalls
+//  596 {
+//  597     //Polling RXIFG0 if RXIE is not enabled
+//  598     if(!(HWREG8(baseAddress + OFS_UCBxIE) & UCRXIE)) {
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIT.B   #0x1, 0(R15)
+        JC      ??USCI_B_I2C_masterReceiveSingle_1
+//  599         while(!(HWREG8(baseAddress + OFS_UCBxIFG) & UCRXIFG));
+??USCI_B_I2C_masterReceiveSingle_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x1, 0(R15)
+        JNC     ??USCI_B_I2C_masterReceiveSingle_0
+//  600     }
+//  601 
+//  602     //Read a byte.
+//  603     return (HWREG8(baseAddress + OFS_UCBxRXBUF));
+??USCI_B_I2C_masterReceiveSingle_1:
+        ADD.W   #0xc, R12
+        MOV.B   @R12, R12
+        RETA
+//  604 }
+          CFI EndBlock cfiBlock34
+//  605 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  606 uint32_t USCI_B_I2C_getReceiveBufferAddressForDMA (uint16_t baseAddress)
+USCI_B_I2C_getReceiveBufferAddressForDMA:
+          CFI Block cfiBlock35 Using cfiCommon0
+          CFI Function USCI_B_I2C_getReceiveBufferAddressForDMA
+          CFI NoCalls
+//  607 {
+//  608     return ( baseAddress + OFS_UCBxRXBUF );
+        ADD.W   #0xc, R12
+        MOV.W   #0x0, R13
+        RETA
+//  609 }
+          CFI EndBlock cfiBlock35
+//  610 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  611 uint32_t USCI_B_I2C_getTransmitBufferAddressForDMA (uint16_t baseAddress)
+USCI_B_I2C_getTransmitBufferAddressForDMA:
+          CFI Block cfiBlock36 Using cfiCommon0
+          CFI Function USCI_B_I2C_getTransmitBufferAddressForDMA
+          CFI NoCalls
+//  612 {
+//  613     return ( baseAddress + OFS_UCBxTXBUF );
+        ADD.W   #0xe, R12
+        MOV.W   #0x0, R13
+        RETA
+//  614 }
+          CFI EndBlock cfiBlock36
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  615 
+//  616 
+//  617 #endif
+//  618 //*****************************************************************************
+//  619 //
+//  620 //! Close the doxygen group for usci_b_i2c_api
+//  621 //! @}
+//  622 //
+//  623 //*****************************************************************************
+// 
+// 1 314 bytes in segment CODE
+// 
+// 1 314 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

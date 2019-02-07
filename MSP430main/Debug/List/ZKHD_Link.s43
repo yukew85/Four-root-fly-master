@@ -1,0 +1,462 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  16:49:49
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\ZKHD_Link.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW6BD9.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\ZKHD_Link.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\ZKHD_Link.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME ZKHD_Link
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC ZKHD_Link_GCS_To_FMU_Handle
+        PUBLIC ZKHD_Link_GCS_To_Remote_Handle
+        PUBLIC ZKHD_Link_Handle
+        PUBLIC ZKHD_Link_MakeFrame
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN memcpy
+        EXTERN gcs_ReceiveHandle
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\ZKHD_Link.c
+//    1 #include "ZKHD_Link.h"
+//    2 #include "gcs.h"
+//    3 
+//    4 void ZKHD_Link_GCS_To_Remote_Handle(ZKHD_Link_Head_t *,uint8_t *ptr,uint8_t length);
+//    5 void ZKHD_Link_GCS_To_FMU_Handle(ZKHD_Link_Head_t *,uint8_t *ptr,uint8_t length);
+//    6 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//    7 void ZKHD_Link_MakeFrame(uint8_t Send_ID,
+ZKHD_Link_MakeFrame:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function ZKHD_Link_MakeFrame
+//    8                         uint8_t Receive_ID,
+//    9                         uint8_t Msg_ID,
+//   10                         uint8_t *ptr,
+//   11                         uint16_t Length,
+//   12                         uint8_t *Tx_Buff,
+//   13                         uint8_t *Tx_Buff_Length)
+//   14 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        SUBA    #0x6a, SP
+          CFI CFA SP+142
+        MOV.B   R12, R5
+        MOV.B   R13, R4
+        MOV.B   R14, R11
+        MOVA    R15, R8
+        MOV.W   0x8e(SP), R10
+        MOVA    0x90(SP), R9
+        MOVA    0x94(SP), R6
+//   15     uint8_t Buff[100];
+//   16     int sum = 0;
+        MOV.W   #0x0, R7
+//   17     
+//   18     ZKHD_Link_Head_t ZKHD_Link_Head;
+//   19     
+//   20     ZKHD_Link_Head.Send_ID = Send_ID;
+        MOV.B   R5, 0x3(SP)
+//   21     ZKHD_Link_Head.Receive_ID = Receive_ID;
+        MOV.B   R4, 0x4(SP)
+//   22     ZKHD_Link_Head.Start = 0xAA;
+        MOV.B   #0xaa, 0(SP)
+//   23     ZKHD_Link_Head.Length = Length;
+        MOV.W   R10, R14
+        MOV.B   R14, 0x1(SP)
+        SWPB    R14
+        AND.W   #0xff, R14
+        MOV.B   R14, 0x2(SP)
+//   24     ZKHD_Link_Head.Message_ID = Msg_ID;
+        MOV.B   R11, 0x5(SP)
+//   25     
+//   26     memcpy(Buff,&ZKHD_Link_Head.Start,sizeof(ZKHD_Link_Head_t));
+        MOV.W   #0x6, R14
+        MOV.W   #0x0, R15
+        MOVA    SP, R13
+        MOVA    SP, R12
+        ADDA    #0x6, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   27     memcpy(Buff+sizeof(ZKHD_Link_Head_t),ptr,Length);
+        MOV.W   R10, R14
+        MOV.W   #0x0, R15
+        MOVA    R8, R13
+        MOVA    SP, R12
+        ADDA    #0xc, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   28     
+//   29     for(int i=0;i<Length + 6;i++)
+        MOV.W   #0x0, R14
+??ZKHD_Link_MakeFrame_0:
+        MOV.W   R10, R15
+        ADD.W   #0x6, R15
+        CMP.W   R15, R14
+        JC      ??ZKHD_Link_MakeFrame_1
+//   30     {
+//   31         sum += Buff[i];
+        MOVA    SP, R15
+        ADDA    #0x6, R15
+        MOV.W   R14, R13
+        ADDA    R15, R13
+        MOV.B   @R13, R15
+        MOV.B   R15, R15
+        ADD.W   R15, R7
+//   32     }
+        ADD.W   #0x1, R14
+        JMP     ??ZKHD_Link_MakeFrame_0
+//   33     
+//   34     Buff[Length + sizeof(ZKHD_Link_Head_t)] = sum & 0xFF;
+??ZKHD_Link_MakeFrame_1:
+        MOVA    SP, R15
+        ADDA    #0x6, R15
+        ADDA    R10, R15
+        MOV.B   R7, 0x6(R15)
+//   35     
+//   36     memcpy(Tx_Buff,Buff,Length + sizeof(ZKHD_Link_Head_t) + 1);
+        MOV.W   R10, R14
+        MOV.W   #0x0, R15
+        ADD.W   #0x7, R14
+        ADDC.W  #0x0, R15
+        MOVA    SP, R13
+        ADDA    #0x6, R13
+        MOVA    R9, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   37     *Tx_Buff_Length = Length + sizeof(ZKHD_Link_Head_t) + 1;
+        PUSH.W  R14
+          CFI CFA SP+144
+        MOV.B   R10, 0(SP)
+        POP.W   R14
+          CFI CFA SP+142
+        ADD.B   #0x7, R14
+        MOV.B   R14, 0(R6)
+//   38 }
+        ADDA    #0x6a, SP
+          CFI CFA SP+36
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//   39 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   40 void ZKHD_Link_Handle(uint8_t *Rx_Buff)
+ZKHD_Link_Handle:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function ZKHD_Link_Handle
+//   41 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOVA    R12, R10
+//   42     ZKHD_Link_Head_t *ZKHD_Link_Head_Ptr;
+//   43     
+//   44     ZKHD_Link_Head_Ptr = (ZKHD_Link_Head_t*)Rx_Buff;
+        MOVA    R10, R11
+//   45     
+//   46     if(ZKHD_Link_Head_Ptr->Send_ID == Device_GCS)
+        CMP.B   #0x0, 0x3(R11)
+        JNE     ??ZKHD_Link_Handle_0
+//   47     {
+//   48         if(ZKHD_Link_Head_Ptr->Receive_ID == Device_Remote)
+        CMP.B   #0x2, 0x4(R11)
+        JNE     ??ZKHD_Link_Handle_1
+//   49         {
+//   50             ZKHD_Link_GCS_To_Remote_Handle(ZKHD_Link_Head_Ptr,&ZKHD_Link_Head_Ptr->Message_ID+1,ZKHD_Link_Head_Ptr->Length);
+        MOV.B   0x1(R11), R14
+        MOVA    R11, R13
+        ADDA    #0x6, R13
+        MOVA    R11, R12
+          CFI FunCall ZKHD_Link_GCS_To_Remote_Handle
+        CALLA   #ZKHD_Link_GCS_To_Remote_Handle
+        JMP     ??ZKHD_Link_Handle_0
+//   51         }else if(ZKHD_Link_Head_Ptr->Receive_ID == Device_FMU)
+??ZKHD_Link_Handle_1:
+        CMP.B   #0x1, 0x4(R11)
+        JNE     ??ZKHD_Link_Handle_0
+//   52         {
+//   53             ZKHD_Link_GCS_To_FMU_Handle(ZKHD_Link_Head_Ptr,&ZKHD_Link_Head_Ptr->Message_ID+1,ZKHD_Link_Head_Ptr->Length);
+        MOV.B   0x1(R11), R14
+        MOVA    R11, R13
+        ADDA    #0x6, R13
+        MOVA    R11, R12
+          CFI FunCall ZKHD_Link_GCS_To_FMU_Handle
+        CALLA   #ZKHD_Link_GCS_To_FMU_Handle
+//   54         }
+//   55     }        
+//   56 }
+??ZKHD_Link_Handle_0:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+//   57 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   58 void ZKHD_Link_GCS_To_Remote_Handle(ZKHD_Link_Head_t *ZKHD_Link_Head,uint8_t *ptr,uint8_t length)
+ZKHD_Link_GCS_To_Remote_Handle:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function ZKHD_Link_GCS_To_Remote_Handle
+          CFI NoCalls
+//   59 {
+//   60     
+//   61 }
+        RETA
+          CFI EndBlock cfiBlock2
+//   62 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   63 void ZKHD_Link_GCS_To_FMU_Handle(ZKHD_Link_Head_t *ZKHD_Link_Head,uint8_t *ptr,uint8_t length)
+ZKHD_Link_GCS_To_FMU_Handle:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function ZKHD_Link_GCS_To_FMU_Handle
+//   64 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOVA    R12, R10
+        MOVA    R13, R11
+        MOV.B   R14, R8
+//   65     gcs_ReceiveHandle(ZKHD_Link_Head,ptr,length);
+        MOV.B   R8, R14
+        MOVA    R11, R13
+        MOVA    R10, R12
+          CFI FunCall gcs_ReceiveHandle
+        CALLA   #gcs_ReceiveHandle
+//   66 } 
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//   67 
+// 
+// 272 bytes in segment CODE
+// 
+// 272 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

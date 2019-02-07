@@ -1,0 +1,431 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:41
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\HardWare_Init.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWD14D.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\HardWare_Init.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\HardWare_Init.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\HardWare_Init.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\HardWare_Init.c
+      1          #include "HardWare_Init.h"
+
+   \                                 In  segment DATA16_AN, at 0x202
+   \   union <unnamed> __data16 _A_PAOUT_L
+   \                     _A_PAOUT_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x262
+   \   union <unnamed> __data16 _A_PDOUT_L
+   \                     _A_PDOUT_L:
+   \   000000                DS8 2
+      2          #include "nrf2401.h"
+      3          #include "SPL06.h"
+      4          #include "communication.h"
+      5          
+      6          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      7          uint32_t SysTick_count; 
+   \                     SysTick_count:
+   \   000000                DS8 4
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      8          _st_Mpu MPU6050;   
+   \                     MPU6050:
+   \   000000                DS8 12
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      9          _st_AngE Angle;   
+   \                     Angle:
+   \   000000                DS8 12
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     10          _st_Remote Remote; 
+   \                     Remote:
+   \   000000                DS8 22
+     11          
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     12          _st_ALL_flag ALL_flag; 
+   \                     ALL_flag:
+   \   000000                DS8 1
+     13          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     14          PidObject pidRateX; 
+   \                     pidRateX:
+   \   000000                DS8 52
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     15          PidObject pidRateY;
+   \                     pidRateY:
+   \   000000                DS8 52
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     16          PidObject pidRateZ;
+   \                     pidRateZ:
+   \   000000                DS8 52
+     17          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     18          PidObject pidPitch; 
+   \                     pidPitch:
+   \   000000                DS8 52
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     19          PidObject pidRoll;
+   \                     pidRoll:
+   \   000000                DS8 52
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     20          PidObject pidYaw;
+   \                     pidYaw:
+   \   000000                DS8 52
+     21          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     22          PidObject pidHeightRate;
+   \                     pidHeightRate:
+   \   000000                DS8 52
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     23          PidObject pidHeightHigh;
+   \                     pidHeightHigh:
+   \   000000                DS8 52
+     24          extern NRF_Mannager_t NRF_Mannager;
+     25          
+
+   \                                 In  segment CODE, align 2
+     26          void Hardware_Init(void)
+   \                     Hardware_Init:
+     27          {
+     28              Motor_Init();
+   \   000000   ........     CALLA   #Motor_Init
+     29              LED_Init();
+   \   000004   ........     CALLA   #LED_Init
+     30              pid_param_Init();
+   \   000008   ........     CALLA   #pid_param_Init
+     31              NRF_Radio_Init();
+   \   00000C   ........     CALLA   #NRF_Radio_Init
+     32              if(NRF_Mannager.Hardware_Mannager->check &&
+     33                 Mpu6050_Init() == 0    &&
+     34                 Single_ReadIIC(HW_ADR << 1, 0x0D) == 0x10)
+   \   000010   ........     MOVA    &NRF_Mannager, R15
+   \   000014   CF930000     CMP.B   #0x0, 0(R15)
+   \   000018   1124         JEQ     ??Hardware_Init_0
+   \   00001A   ........     CALLA   #Mpu6050_Init
+   \   00001E   4C93         CMP.B   #0x0, R12
+   \   000020   0D20         JNE     ??Hardware_Init_0
+   \   000022   7D400D00     MOV.B   #0xd, R13
+   \   000026   7C40EC00     MOV.B   #0xec, R12
+   \   00002A   ........     CALLA   #Single_ReadIIC
+   \   00002E   7C901000     CMP.B   #0x10, R12
+   \   000032   0420         JNE     ??Hardware_Init_0
+     35              {
+     36                  LED_STATUS_ON;
+   \   000034   E2C30302     BIC.B   #0x2, &0x203
+     37                  SPL06_init();
+   \   000038   ........     CALLA   #SPL06_init
+     38              }
+     39              
+     40              USART_Init();
+   \                     ??Hardware_Init_0:
+   \   00003C   ........     CALLA   #USART_Init
+     41              Timer_Init();
+   \   000040   ........     BRA     #Timer_Init
+   \   000044                REQUIRE _A_PAOUT_L
+     42          }
+     43          
+     44          
+     45          /**************************************************************
+     46           *  初始化PID参数
+     47           * @brief 如果需要自己修改PID值，调这里就可以了
+     48           * @param[out] 
+     49           * @return     
+     50           ***************************************************************/
+
+   \                                 In  segment CODE, align 2
+     51          void pid_param_Init(void)
+   \                     pid_param_Init:
+     52          {
+     53              pidRateX.kp = 2.0f;
+   \   000000   ....8243.... MOVX.W  #0x0, &pidRateX + 16
+   \   000006   ....B2400040 MOVX.W  #0x4000, &pidRateX + 18
+   \            ....        
+     54              pidRateY.kp = 2.0f;
+   \   00000E   ....8243.... MOVX.W  #0x0, &pidRateY + 16
+   \   000014   ....B2400040 MOVX.W  #0x4000, &pidRateY + 18
+   \            ....        
+     55              pidRateZ.kp = 7.0f;
+   \   00001C   ....8243.... MOVX.W  #0x0, &pidRateZ + 16
+   \   000022   ....B240E040 MOVX.W  #0x40e0, &pidRateZ + 18
+   \            ....        
+     56          
+     57              pidRateX.ki = 0.05f;
+   \   00002A   ....B240CDCC MOVX.W  #0xcccd, &pidRateX + 20
+   \            ....        
+   \   000032   ....B2404C3D MOVX.W  #0x3d4c, &pidRateX + 22
+   \            ....        
+     58              pidRateY.ki = 0.05f;
+   \   00003A   ....B240CDCC MOVX.W  #0xcccd, &pidRateY + 20
+   \            ....        
+   \   000042   ....B2404C3D MOVX.W  #0x3d4c, &pidRateY + 22
+   \            ....        
+     59              pidRateZ.ki = 0.0f;	
+   \   00004A   ....8243.... MOVX.W  #0x0, &pidRateZ + 20
+   \   000050   ....8243.... MOVX.W  #0x0, &pidRateZ + 22
+     60          
+     61              pidRateX.kd = 0.15f;
+   \   000056   ....B2409A99 MOVX.W  #0x999a, &pidRateX + 24
+   \            ....        
+   \   00005E   ....B240193E MOVX.W  #0x3e19, &pidRateX + 26
+   \            ....        
+     62              pidRateY.kd = 0.15f;
+   \   000066   ....B2409A99 MOVX.W  #0x999a, &pidRateY + 24
+   \            ....        
+   \   00006E   ....B240193E MOVX.W  #0x3e19, &pidRateY + 26
+   \            ....        
+     63              pidRateZ.kd = 0.2f;	
+   \   000076   ....B240CDCC MOVX.W  #0xcccd, &pidRateZ + 24
+   \            ....        
+   \   00007E   ....B2404C3E MOVX.W  #0x3e4c, &pidRateZ + 26
+   \            ....        
+     64          
+     65              pidPitch.kp = 3.5f;
+   \   000086   ....8243.... MOVX.W  #0x0, &pidPitch + 16
+   \   00008C   ....B2406040 MOVX.W  #0x4060, &pidPitch + 18
+   \            ....        
+     66              pidRoll.kp = 3.5f;
+   \   000094   ....8243.... MOVX.W  #0x0, &pidRoll + 16
+   \   00009A   ....B2406040 MOVX.W  #0x4060, &pidRoll + 18
+   \            ....        
+     67              pidYaw.kp = 6.0f;	
+   \   0000A2   ....8243.... MOVX.W  #0x0, &pidYaw + 16
+   \   0000A8   ....B240C040 MOVX.W  #0x40c0, &pidYaw + 18
+   \            ....        
+     68          
+     69              pidHeightRate.kp = 3.5f; //0.5f
+   \   0000B0   ....8243.... MOVX.W  #0x0, &pidHeightRate + 16
+   \   0000B6   ....B2406040 MOVX.W  #0x4060, &pidHeightRate + 18
+   \            ....        
+     70              pidHeightRate.kd = 0.5f;
+   \   0000BE   ....8243.... MOVX.W  #0x0, &pidHeightRate + 24
+   \   0000C4   ....B240003F MOVX.W  #0x3f00, &pidHeightRate + 26
+   \            ....        
+     71              pidHeightHigh.kp = 0.3f;//0.32f		
+   \   0000CC   ....B2409A99 MOVX.W  #0x999a, &pidHeightHigh + 16
+   \            ....        
+   \   0000D4   ....B240993E MOVX.W  #0x3e99, &pidHeightHigh + 18
+   \            ....        
+     72          }
+   \   0000DC   1001         RETA
+     73          
+     74          
+
+   \                                 In  segment CODE, align 2
+     75          void Hardware_Test(void)
+   \                     Hardware_Test:
+     76          {
+     77              LED_Init();
+   \   000000   ........     CALLA   #LED_Init
+     78              pid_param_Init();
+   \   000004   ........     CALLA   #pid_param_Init
+     79              Motor_Init();
+   \   000008   ........     CALLA   #Motor_Init
+     80              SPL06_init();
+   \   00000C   ........     CALLA   #SPL06_init
+     81              
+     82              if(Mpu6050_Init() == 0x00)
+   \   000010   ........     CALLA   #Mpu6050_Init
+   \   000014   4C93         CMP.B   #0x0, R12
+   \   000016   0220         JNE     ??Hardware_Test_0
+     83              {
+     84                P7OUT |= GPIO_Pin_1;
+   \   000018   E2D36202     BIS.B   #0x2, &0x262
+     85              }
+     86              
+     87          
+     88              if(Single_ReadIIC(HW_ADR << 1, 0x0D) == 0x10)
+   \                     ??Hardware_Test_0:
+   \   00001C   7D400D00     MOV.B   #0xd, R13
+   \   000020   7C40EC00     MOV.B   #0xec, R12
+   \   000024   ........     CALLA   #Single_ReadIIC
+   \   000028   7C901000     CMP.B   #0x10, R12
+   \   00002C   0320         JNE     ??Hardware_Test_1
+     89              {
+     90                P7OUT |= GPIO_Pin_5;
+   \   00002E   F2D020006202 BIS.B   #0x20, &0x262
+     91              }
+     92              
+     93              USART_Init();
+   \                     ??Hardware_Test_1:
+   \   000034   ........     CALLA   #USART_Init
+     94              Timer_Init();
+   \   000038   ........     BRA     #Timer_Init
+   \   00003C                REQUIRE _A_PDOUT_L
+     95          }
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   Hardware_Init
+        4   -> LED_Init
+        4   -> Motor_Init
+        4   -> Mpu6050_Init
+        4   -> NRF_Radio_Init
+        4   -> SPL06_init
+        4   -> Single_ReadIIC
+        0   -> Timer_Init
+        4   -> USART_Init
+        4   -> pid_param_Init
+      4   Hardware_Test
+        4   -> LED_Init
+        4   -> Motor_Init
+        4   -> Mpu6050_Init
+        4   -> SPL06_init
+        4   -> Single_ReadIIC
+        0   -> Timer_Init
+        4   -> USART_Init
+        4   -> pid_param_Init
+      4   pid_param_Init
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  ALL_flag
+      12  Angle
+      68  Hardware_Init
+      60  Hardware_Test
+      12  MPU6050
+      22  Remote
+       4  SysTick_count
+       2  _A_PAOUT_L
+       2  _A_PDOUT_L
+      52  pidHeightHigh
+      52  pidHeightRate
+      52  pidPitch
+      52  pidRateX
+      52  pidRateY
+      52  pidRateZ
+      52  pidRoll
+      52  pidYaw
+     222  pid_param_Init
+
+ 
+ 350 bytes in segment CODE
+   4 bytes in segment DATA16_AN
+ 467 bytes in segment DATA20_Z
+ 
+ 350 bytes of CODE memory
+ 467 bytes of DATA memory (+ 4 bytes shared)
+
+Errors: none
+Warnings: none

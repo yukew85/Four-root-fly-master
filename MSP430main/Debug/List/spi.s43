@@ -1,0 +1,348 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:12
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\spi.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW2FF9.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\spi.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\spi.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME spi
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC SPI_RW
+        PUBLIC SPI_init
+        PUBWEAK _A_PBIN_L
+        PUBWEAK _A_PBOUT_L
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN GPIO_setAsOutputPin
+        EXTERN GPIO_setAsInputPin
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\spi.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：spi.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 调用SPI_init函数初始化SPI总线
+//   23 调用SPI_RW函数从SPI总线中读取数据
+//   24 
+//   25 */
+//   26 
+//   27 #include "spi.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0220H
+// union <unnamed> __data16 _A_PBIN_L
+_A_PBIN_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0222H
+// union <unnamed> __data16 _A_PBOUT_L
+_A_PBOUT_L:
+        DS8 2
+//   28 
+//   29 #define SPI_MISO_PIN    GPIO_PIN2
+//   30 #define SPI_MOSI_PIN    GPIO_PIN1
+//   31 #define SPI_SLK_PIN     GPIO_PIN3
+//   32 
+//   33 #define SPI_MISO        (P4IN & SPI_MISO_PIN)
+//   34 #define SPI_MOSI_H      P4OUT |= SPI_MOSI_PIN
+//   35 #define SPI_MOSI_L      P4OUT &= ~SPI_MOSI_PIN
+//   36 #define SPI_SLK_H       P4OUT |= SPI_SLK_PIN
+//   37 #define SPI_SLK_L       P4OUT &= ~SPI_SLK_PIN
+//   38 
+//   39 /******************************************************************************
+//   40   * 函数名称：SPI_init
+//   41   * 函数描述：初始化SPI总线
+//   42   * 输    入：void
+//   43   * 输    出：void
+//   44   * 返    回：void
+//   45   * 备    注：null
+//   46   *
+//   47   *
+//   48 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   49 void SPI_init()
+SPI_init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function SPI_init
+//   50 {
+//   51     GPIO_setAsOutputPin(GPIO_PORT_P4, SPI_MOSI_PIN);
+        MOV.W   #0x2, R13
+        MOV.B   #0x4, R12
+          CFI FunCall GPIO_setAsOutputPin
+        CALLA   #GPIO_setAsOutputPin
+//   52     GPIO_setAsInputPin(GPIO_PORT_P4, SPI_MISO_PIN);
+        MOV.W   #0x4, R13
+        MOV.B   #0x4, R12
+          CFI FunCall GPIO_setAsInputPin
+        CALLA   #GPIO_setAsInputPin
+//   53     GPIO_setAsOutputPin(GPIO_PORT_P4, SPI_SLK_PIN);
+        MOV.W   #0x8, R13
+        MOV.B   #0x4, R12
+          CFI TailCall GPIO_setAsOutputPin
+        BRA     #GPIO_setAsOutputPin
+//   54 }
+          CFI EndBlock cfiBlock0
+//   55 
+//   56 /******************************************************************************
+//   57   * 函数名称：SPI_RW
+//   58   * 函数描述：SPI总线读写
+//   59   * 输    入：uint8_t txdata:需要发送的数据
+//   60   * 输    出：void
+//   61   * 返    回：uint8_t :返回读取到的数据
+//   62   * 备    注：本函数一般不单独使用，需要配合片选信号线使用
+//   63   *
+//   64   *
+//   65 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   66 uint8_t SPI_RW(uint8_t data)
+SPI_RW:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function SPI_RW
+          CFI NoCalls
+//   67 {
+//   68     for (uint8_t i = 0; i < 8; i++) 
+        MOV.B   #0x0, R14
+??SPI_RW_0:
+        CMP.B   #0x8, R14
+        JC      ??SPI_RW_2
+//   69     {
+//   70         if(data & 0x80)
+        CMP.B   #0x0, R12
+        JGE     ??SPI_RW_3
+//   71         {
+//   72             SPI_MOSI_H;
+        BIS.B   #0x2, &0x223
+        JMP     ??SPI_RW_1
+//   73         }else
+//   74         {
+//   75             SPI_MOSI_L;
+??SPI_RW_3:
+        BIC.B   #0x2, &0x223
+//   76         }
+//   77         
+//   78         data <<= 1;                           // 低一位移位到最高位
+??SPI_RW_1:
+        RLA.B   R12
+//   79         
+//   80         SPI_SLK_H;
+        BIS.B   #0x8, &0x223
+//   81         if (SPI_MISO) 
+        BIT.B   #0x4, &0x221
+        JNC     ??SPI_RW_4
+//   82         {
+//   83            data |= 0x01;
+        BIS.B   #0x1, R12
+//   84         }
+//   85         SPI_SLK_L;  
+??SPI_RW_4:
+        BIC.B   #0x8, &0x223
+//   86     }
+        ADD.B   #0x1, R14
+        JMP     ??SPI_RW_0
+//   87     
+//   88     return (data); 
+??SPI_RW_2:
+        RETA
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_PBOUT_L
+        REQUIRE _A_PBIN_L
+//   89 }
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//   90 
+//   91 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 68 bytes in segment CODE
+//  4 bytes in segment DATA16_AN
+// 
+// 68 bytes of CODE memory
+//  0 bytes of DATA memory (+ 4 bytes shared)
+//
+//Errors: none
+//Warnings: none

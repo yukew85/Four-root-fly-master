@@ -1,0 +1,901 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          26/Sep/2018  16:44:44
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\msp430f5529_uart.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW59DB.tmp
+//        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\msp430f5529_uart.c" -D NDEBUG -D RAM_VECTOR -lC
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List" -lA
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List" -o
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_config\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\KEY\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LED\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\12864\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\oled\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\mpu6050\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\mpu6050\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nokia5110\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nokia5110\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LQ_1.8_TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LCD_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\2.2TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\delay\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\User\USER\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\UCOSII\CONFIG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\App\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\CONFIHG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\PORT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\UCOSII\CORE\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\FatFs\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\FatFs\option\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+//        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nrf24l01\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\MATH\" --core=430X --data_model=large -Oh --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List\msp430f5529_uart.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME msp430f5529_uart
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__iar_require _Printf", "unknown"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Cast32uto32f
+        EXTERN _Div32f
+        EXTERN _Cast32fto32s
+        EXTERN _Sub32f
+        EXTERN _Mul32f
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC UART_ClearITPendingBit
+        PUBLIC UART_GetChar
+        PUBLIC UART_GetITStatus
+        PUBLIC UART_ITConfig
+        PUBLIC UART_Init
+        PUBLIC UART_PIN
+        PUBLIC UART_Printf
+        PUBLIC UART_PutChar
+        PUBLIC UART_PutNChar
+        PUBLIC UART_PutString
+        PUBLIC UART_SetBaudRate
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        
+          CFI Common cfiCommon1 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L SameValue
+          CFI R12H SameValue
+          CFI R12 Concat
+          CFI R13L SameValue
+          CFI R13H SameValue
+          CFI R13 Concat
+          CFI R14L SameValue
+          CFI R14H SameValue
+          CFI R14 Concat
+          CFI R15L SameValue
+          CFI R15H SameValue
+          CFI R15 Concat
+          CFI EndCommon cfiCommon1
+        
+        EXTERN g_sClock
+        EXTERN USCIX
+        EXTERN GPIO_MultiBits_Init
+        EXTERN vsprintf
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_uart.c
+//    1 #include "msp430f5529_uart.h"
+//    2 #include "msp430f5529_clock.h"
+//    3 #include "msp430f5529_system.h"
+//    4 #include "msp430f5529_gpio.h"
+//    5 #include <stdio.h>
+//    6 #include <stdarg.h>
+//    7 const struct
+//    8 {
+//    9   GPIO_PIN TX;
+//   10   GPIO_PIN RX;
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+//   11 }UART_PIN[]=
+UART_PIN:
+        DATA8
+        DC8 2, 3, 2, 4, 3, 4, 3, 5
+//   12 {
+//   13   /*UART0*/{.TX={P3,3},.RX={P3,4}},        
+//   14   /*UART1*/{.TX={P4,4},.RX={P4,5}}
+//   15 }; //引脚数组
+//   16 /*******************************************************************************
+//   17 *  函数名称：UART_Init(UARTn uartn,uint32_t BaudRate)
+//   18 *  功能说明：初始化串口，设置波特率
+//   19 *  参数说明：UARTn uartn       模块号（UART0~UART1）
+//   20              uint32_t BaudRate : 波特率，如9600、19200、115200等
+//   21 *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+//   22 *  使用示例：UART_Init(UART0,115200);   //初始化一个UART模块，波特率为115200
+//   23 *******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   24 STATUS UART_Init(UARTn uartn,uint32_t BaudRate)
+UART_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function UART_Init
+//   25 {      
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R9
+        MOV.W   R14, R10
+        MOV.W   R15, R11
+//   26   //引脚初始化
+//   27   GPIO_Init(UART_PIN[uartn].TX.Port,UART_PIN[uartn].TX.Pin,SEL);
+        MOV.B   R12, R8
+        RLAM.A  #0x2, R8
+        MOV.W   #0x100, R14
+        MOV.W   #0x1, R13
+        MOVX.B  UART_PIN + 1(R8), R15
+        SUB.B   #0x1, R15
+        JN      ??UART_Init_0
+        RPT     R15
+        RLAX.W  R13
+??UART_Init_0:
+        MOVX.B  UART_PIN(R8), R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   28   GPIO_Init(UART_PIN[uartn].RX.Port,UART_PIN[uartn].RX.Pin,SEL);
+        MOV.W   #0x100, R14
+        MOV.W   #0x1, R13
+        MOVX.B  UART_PIN + 3(R8), R15
+        SUB.B   #0x1, R15
+        JN      ??UART_Init_1
+        RPT     R15
+        RLAX.W  R13
+??UART_Init_1:
+        MOVX.B  UART_PIN + 2(R8), R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   29   
+//   30   UART_SetBaudRate (uartn, BaudRate);                            //设置串口波特率
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOV.B   R9, R12
+          CFI FunCall UART_SetBaudRate
+        CALLA   #UART_SetBaudRate
+//   31   
+//   32   USCIX[uartn]->IE = 0u;                                         //关闭所有中断
+        MOVX.A  USCIX(R8), R11
+        MOV.B   #0x0, 0x1c(R11)
+//   33   USCIX[uartn]->RXIFG = RESET;                                   //清除接收数据标志
+        BIC.B   #0x1, 0x1d(R11)
+//   34   USCIX[uartn]->TXIFG = BIT_SET;                                     //置位发送缓冲区为空标志
+        BIS.B   #0x2, 0x1d(R11)
+//   35   
+//   36   return SUCCESS;
+        MOV.B   #0x1, R12
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//   37 }
+          CFI EndBlock cfiBlock0
+//   38 /*******************************************************************************
+//   39 *  函数名称：UART_SetBaudRate (UARTn uartn, uint32_t BaudRate)
+//   40 *  功能说明：设置串口波特率
+//   41 *  参数说明：UARTn uartn       模块号（UART0~UART1）
+//   42              uint32_t BaudRate : 波特率，如9600、19200、115200等
+//   43 *  函数返回：无
+//   44 *******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   45 void UART_SetBaudRate (UARTn uartn, uint32_t BaudRate)
+UART_SetBaudRate:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function UART_SetBaudRate
+//   46 {
+        PUSHM.A #0x3, R10
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+16
+        MOV.B   R12, R10
+//   47   float BRTemp = (float)g_sClock.SMCLK.nHZ/(float)BaudRate;
+        MOVX.W  &g_sClock + 12, R12
+        MOVX.W  &g_sClock + 14, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   R14, R12
+        MOV.W   R15, R13
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_6:
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//   48   
+//   49   USCIX[uartn]->CTL1 = UCSSEL__SMCLK + UCSWRST;                //设置时钟源
+        RLAM.A  #0x2, R10
+        MOVX.A  USCIX(R10), R10
+        MOV.B   #0x81, 0(R10)
+//   50  
+//   51   USCIX[uartn]->BRW = (uint16_t)BRTemp;                                 //设置波特率
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOV.W   R12, 0x6(R10)
+//   52   USCIX[uartn]->BRS = (uint16_t)((BRTemp-(uint16_t)(BRTemp))*8.0);        //设置调整波特率
+        MOV.W   #0x0, R13
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_7:
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   #0x0, R12
+        MOV.W   #0x4100, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        RLA.B   R12
+        AND.B   #0xe, R12
+        MOV.B   0x8(R10), R14
+        AND.B   #0xf1, R14
+        BIS.B   R12, R14
+        MOV.B   R14, 0x8(R10)
+//   53   USCIX[uartn]->BRF = 0u;
+        AND.B   #0xf, 0x8(R10)
+//   54   
+//   55   //过采样模式
+//   56   /*
+//   57   USCIX[uartn]->BRW =(uint16_t)(BRTemp/16);                                 //设置波特率
+//   58   USCIX[uartn]->BRS = 0u;
+//   59   USCIX[uartn]->BRF =(uint16_t)((BRTemp/16.0-(uint16_t)(BRTemp/16.0))*16.0);  //设置调整波特率
+//   60   */
+//   61   USCIX[uartn]->CTL1 &= ~UCSWRST;       
+        BIC.B   #0x1, 0(R10)
+//   62 }
+        POPM.A  #0x3, R10
+          CFI R10H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine2:
+          CFI Block cfiCond2 Using cfiCommon0
+          CFI Function UART_SetBaudRate
+          CFI Conditional ??CrossCallReturnLabel_6
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+20
+          CFI Block cfiCond3 Using cfiCommon0
+          CFI (cfiCond3) Function UART_SetBaudRate
+          CFI (cfiCond3) Conditional ??CrossCallReturnLabel_7
+          CFI (cfiCond3) R8L Frame(CFA, -16)
+          CFI (cfiCond3) R8H Frame(CFA, -14)
+          CFI (cfiCond3) R9L Frame(CFA, -12)
+          CFI (cfiCond3) R9H Frame(CFA, -10)
+          CFI (cfiCond3) R10L Frame(CFA, -8)
+          CFI (cfiCond3) R10H Frame(CFA, -6)
+          CFI (cfiCond3) CFA SP+20
+          CFI Block cfiPicker4 Using cfiCommon1
+          CFI (cfiPicker4) NoFunction
+          CFI (cfiPicker4) Picker
+          CFI (cfiCond2) FunCall UART_SetBaudRate _Cast32uto32f
+          CFI (cfiCond2) FunCall UART_SetBaudRate _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        RETA
+          CFI EndBlock cfiCond2
+          CFI EndBlock cfiCond3
+          CFI EndBlock cfiPicker4
+//   63 /*******************************************************************************
+//   64 *  函数名称：UART_GetChar    (UARTn uartn)
+//   65 *  功能说明：无限时间等待串口接受一个字节
+//   66 *  参数说明：UARTn uartn     模块号（UART0~UART1）
+//   67 *  函数返回：接收到的字节数据
+//   68 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   69 char UART_GetChar    (UARTn uartn)
+UART_GetChar:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function UART_GetChar
+          CFI NoCalls
+//   70 {
+        CALLA   #?Subroutine0
+//   71   while(USCIX[uartn]->RXIFG == RESET);               //等待接收到数据
+??UART_GetChar_0:
+        BIT.B   #0x1, 0x1d(R15)
+        JEQ     ??UART_GetChar_0
+//   72   return (USCIX[uartn]->RXBUF);
+        MOV.B   0xc(R15), R12
+        RETA
+//   73 }
+          CFI EndBlock cfiBlock5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine0:
+          CFI Block cfiCond6 Using cfiCommon0
+          CFI Function UART_GetChar
+          CFI Conditional ??UART_GetChar_0
+          CFI CFA SP+8
+          CFI Block cfiCond7 Using cfiCommon0
+          CFI (cfiCond7) Function UART_PutChar
+          CFI (cfiCond7) Conditional ??CrossCallReturnLabel_0
+          CFI (cfiCond7) CFA SP+8
+          CFI Block cfiCond8 Using cfiCommon0
+          CFI (cfiCond8) Function UART_ITConfig
+          CFI (cfiCond8) Conditional ??CrossCallReturnLabel_1
+          CFI (cfiCond8) CFA SP+8
+          CFI Block cfiCond9 Using cfiCommon0
+          CFI (cfiCond9) Function UART_GetITStatus
+          CFI (cfiCond9) Conditional ??CrossCallReturnLabel_2
+          CFI (cfiCond9) CFA SP+8
+          CFI Block cfiCond10 Using cfiCommon0
+          CFI (cfiCond10) Function UART_ClearITPendingBit
+          CFI (cfiCond10) Conditional ??CrossCallReturnLabel_3
+          CFI (cfiCond10) CFA SP+8
+          CFI Block cfiPicker11 Using cfiCommon1
+          CFI (cfiPicker11) NoFunction
+          CFI (cfiPicker11) Picker
+        MOV.B   R12, R12
+        RLAM.A  #0x2, R12
+        MOVX.A  USCIX(R12), R15
+        RETA
+          CFI EndBlock cfiCond6
+          CFI EndBlock cfiCond7
+          CFI EndBlock cfiCond8
+          CFI EndBlock cfiCond9
+          CFI EndBlock cfiCond10
+          CFI EndBlock cfiPicker11
+//   74 /*************************************************************************
+//   75 *  函数名称：UART_PutChar
+//   76 *  功能说明：串口发送一个字节
+//   77 *  参数说明：UARTn uartn      模块号（UART0~UART1）
+//   78 *  函数返回：无
+//   79 *  使用示例：UART_PutChar(UART0,0x02);   //发送一字节数据
+//   80 *************************************************************************/  
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   81 void UART_PutChar(UARTn uartn,char data)
+UART_PutChar:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function UART_PutChar
+          CFI NoCalls
+//   82 {
+//   83     if(data == '\n')
+        CALLA   #?Subroutine0
+??CrossCallReturnLabel_0:
+        CMP.B   #0xa, R13
+        CALLA   #?Subroutine1
+//   84     {
+//   85       while (USCIX[uartn]->TXIFG == RESET);          //等待发送缓冲区为空
+//   86       USCIX[uartn]->TXBUF = '\r';                    // 
+//   87     }
+//   88     while (USCIX[uartn]->TXIFG == RESET);            //等待发送缓冲区为空
+//   89     USCIX[uartn]->TXBUF = data;                      // 
+??CrossCallReturnLabel_4:
+        MOV.B   R13, 0xe(R15)
+//   90 }
+        RETA
+          CFI EndBlock cfiBlock12
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine1:
+          CFI Block cfiCond13 Using cfiCommon0
+          CFI Function UART_PutChar
+          CFI Conditional ??CrossCallReturnLabel_4
+          CFI CFA SP+8
+          CFI Block cfiCond14 Using cfiCommon0
+          CFI (cfiCond14) Function UART_PutString
+          CFI (cfiCond14) Conditional ??CrossCallReturnLabel_5
+          CFI (cfiCond14) CFA SP+8
+          CFI Block cfiPicker15 Using cfiCommon1
+          CFI (cfiPicker15) NoFunction
+          CFI (cfiPicker15) Picker
+        JNE     ??UART_PutChar_1
+??UART_PutChar_0:
+        BIT.B   #0x2, 0x1d(R15)
+        JEQ     ??UART_PutChar_0
+        MOV.B   #0xd, 0xe(R15)
+??UART_PutChar_1:
+        BIT.B   #0x2, 0x1d(R15)
+        JEQ     ??UART_PutChar_1
+        RETA
+          CFI EndBlock cfiCond13
+          CFI EndBlock cfiCond14
+          CFI EndBlock cfiPicker15
+//   91 /*************************************************************************
+//   92 *  函数名称：Uart_PutNChar
+//   93 *  功能说明：串口发送指定长度个字节数据
+//   94 *  参数说明：UARTn uartn      模块号（UART0~UART1）
+//   95 *  函数返回：无
+//   96 *  使用示例：char Buff[10];UART_PutNChar(UART0,&Buff[0],5);   //发送一个字符串的前5个字节
+//   97 *************************************************************************/ 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   98 void UART_PutNChar(UARTn uartn,char * data,uint16_t Length)
+UART_PutNChar:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function UART_PutNChar
+          CFI NoCalls
+//   99 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//  100   for(int i=0; i < Length; i++)
+        MOV.W   #0x0, R15
+        MOV.B   R12, R12
+        RLAM.A  #0x2, R12
+        MOVX.A  USCIX(R12), R12
+        JMP     ??UART_PutNChar_3
+//  101   {
+//  102     UART_PutChar(uartn,*data++);
+??UART_PutNChar_2:
+        MOV.B   @R13+, R10
+        CMP.B   #0xa, R10
+        JNE     ??UART_PutNChar_1
+??UART_PutNChar_0:
+        BIT.B   #0x2, 0x1d(R12)
+        JEQ     ??UART_PutNChar_0
+        MOV.B   #0xd, 0xe(R12)
+??UART_PutNChar_1:
+        BIT.B   #0x2, 0x1d(R12)
+        JEQ     ??UART_PutNChar_1
+        MOV.B   R10, 0xe(R12)
+//  103   }
+        ADD.W   #0x1, R15
+??UART_PutNChar_3:
+        CMP.W   R14, R15
+        JNC     ??UART_PutNChar_2
+//  104 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock16
+//  105 /*************************************************************************
+//  106 *  函数名称：Uart_PutString
+//  107 *  功能说明：串口发送字符串
+//  108 *  参数说明：UARTn uartn       模块号（UART0~UART1）
+//  109 *  函数返回：无
+//  110 *  使用示例：UART_PutString  (UART0 ,"Hello!");  //发送一个字符串
+//  111 *************************************************************************/  
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  112 void UART_PutString  (UARTn uartn ,const char * str)
+UART_PutString:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function UART_PutString
+          CFI NoCalls
+//  113 {
+        JMP     ??UART_PutString_3
+//  114     while(*str != '\0')
+//  115     {
+//  116       UART_PutChar(uartn,*str++);
+??UART_PutString_2:
+        MOV.B   @R13+, R14
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        CMP.B   #0xa, R14
+        CALLA   #?Subroutine1
+??CrossCallReturnLabel_5:
+        MOV.B   R14, 0xe(R15)
+//  117     }
+??UART_PutString_3:
+        MOV.B   @R13, R14
+        CMP.B   #0x0, R14
+        JNE     ??UART_PutString_2
+//  118 }
+        RETA
+          CFI EndBlock cfiBlock17
+//  119 /*************************************************************************
+//  120 *  函数名称：UART_Printf
+//  121 *  功能说明：串口发送字符串
+//  122 *  参数说明：UARTn uartn     模块号（UART0~UART1）
+//  123 *  函数返回：无
+//  124 *  使用示例：UART_Printf(UART0 ,"Hello!:i=%d,J=%f",i,1.0);  //发送一个字符串
+//  125 *************************************************************************/ 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  126 void UART_Printf(UARTn uartn ,const char * fmt,...)
+UART_Printf:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function UART_Printf
+//  127 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        SUBA    #0x84, SP
+          CFI CFA SP+140
+        MOV.B   R12, R10
+//  128   char UART_String[128];
+//  129   va_list ap;
+//  130   va_start(ap,fmt);
+        MOVA    SP, R15
+        ADDA    #0x8c, R15
+        MOVA    R15, 0(SP)
+//  131   vsprintf(UART_String,fmt,ap);
+        PUSHM.A #0x1, R15
+          CFI CFA SP+144
+        MOVA    SP, R12
+        ADDA    #0x8, R12
+          CFI FunCall vsprintf
+        CALLA   #vsprintf
+//  132   UART_PutString  (uartn ,UART_String);
+        MOVA    SP, R15
+        ADDA    #0x8, R15
+        ADDA    #0x4, SP
+          CFI CFA SP+140
+        JMP     ??UART_Printf_3
+??UART_Printf_2:
+        MOV.B   @R15+, R14
+        MOV.B   R10, R13
+        RLAM.A  #0x2, R13
+        MOVX.A  USCIX(R13), R13
+        CMP.B   #0xa, R14
+        JNE     ??UART_Printf_1
+??UART_Printf_0:
+        BIT.B   #0x2, 0x1d(R13)
+        JEQ     ??UART_Printf_0
+        MOV.B   #0xd, 0xe(R13)
+??UART_Printf_1:
+        BIT.B   #0x2, 0x1d(R13)
+        JEQ     ??UART_Printf_1
+        MOV.B   R14, 0xe(R13)
+??UART_Printf_3:
+        MOV.B   @R15, R12
+        CMP.B   #0x0, R12
+        JNE     ??UART_Printf_2
+//  133   va_end(ap);
+//  134 }
+        ADDA    #0x84, SP
+          CFI CFA SP+8
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock18
+//  135 /*************************************************************************
+//  136 *  函数名称：UART_ITConfig      (UARTn uartn,UART_IRQn irqn,STATUS ITState)
+//  137 *  功能说明：设置串口中断
+//  138 *  参数说明：UARTn uartn       模块号（UART0~UART1）
+//  139              UART_IRQn irqn   ：中断事件
+//  140              STATUS ITState   ：是否使能中断
+//  141 *  函数返回：无
+//  142 *  使用示例：UART_ITConfig      (UART0,UART_RX_IRQn,ENABLE);  //设置UART0接收中断允许
+//  143 *************************************************************************/ 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  144 void  UART_ITConfig      (UARTn uartn,UART_IRQn irqn,STATUS ITState)
+UART_ITConfig:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function UART_ITConfig
+          CFI NoCalls
+//  145 {
+//  146   if(ITState != DISABLE)
+        CALLA   #?Subroutine0
+??CrossCallReturnLabel_1:
+        CMP.B   #0x0, R14
+        JEQ     ??UART_ITConfig_0
+//  147   {
+//  148     USCIX[uartn]->IE |= irqn;
+        BIS.B   R13, 0x1c(R15)
+        RETA
+//  149   }
+//  150   else
+//  151   {
+//  152     USCIX[uartn]->IE &=~irqn;
+??UART_ITConfig_0:
+        BIC.B   R13, 0x1c(R15)
+//  153   }
+//  154 }
+        RETA
+          CFI EndBlock cfiBlock19
+//  155 /*************************************************************************
+//  156 *  函数名称：UART_GetITStatus  (UARTn uartn,UART_IRQn irqn)
+//  157 *  功能说明：清除串口某一个中断标志
+//  158 *  参数说明：UARTn uartn      模块号（UART0~UART1）
+//  159              UART_IRQn irqn  ：中断事件
+//  160 *  函数返回：STATUS : TRUE-中断事件发生 FALSE-中断事件未发生
+//  161 *  使用示例：if(TRUE == UART_GetITStatus  (UART0,UART_RX_IRQn)){...} //判断UART0接收中断事件是否发生
+//  162 *************************************************************************/ 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  163 STATUS UART_GetITStatus  (UARTn uartn,UART_IRQn irqn)
+UART_GetITStatus:
+          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Function UART_GetITStatus
+          CFI NoCalls
+//  164 {
+//  165   return ((USCIX[uartn]->IFG & irqn) ? TRUE : FALSE);
+        CALLA   #?Subroutine0
+??CrossCallReturnLabel_2:
+        MOV.B   0x1d(R15), R14
+        BIT.B   R13, R14
+        JNE     ??UART_GetITStatus_0
+        MOV.B   #0x0, R12
+        RETA
+??UART_GetITStatus_0:
+        MOV.B   #0x1, R12
+        RETA
+//  166 }
+          CFI EndBlock cfiBlock20
+//  167 /*************************************************************************
+//  168 *  函数名称：UART_ClearITPendingBit(UARTn uartn,UART_IRQn irqn)
+//  169 *  功能说明：清除串口某一个中断标志
+//  170 *  参数说明：UARTn uartn      模块号（UART0~UART1）
+//  171              UART_IRQn irqn  ：中断事件
+//  172 *  函数返回：无
+//  173 *  使用示例：UART_ClearITPendingBit(UART0,UART_RX_IRQn);  //清除UART0接收中断标志位
+//  174 *************************************************************************/ 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  175 void  UART_ClearITPendingBit(UARTn uartn,UART_IRQn irqn)
+UART_ClearITPendingBit:
+          CFI Block cfiBlock21 Using cfiCommon0
+          CFI Function UART_ClearITPendingBit
+          CFI NoCalls
+//  176 {
+//  177   USCIX[uartn]->IFG &=~ irqn;
+        CALLA   #?Subroutine0
+??CrossCallReturnLabel_3:
+        BIC.B   R13, 0x1d(R15)
+//  178 }
+        RETA
+          CFI EndBlock cfiBlock21
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  179 
+//  180 #if defined(DEBUG)&&defined(DEBUG_UART_PRINT)
+//  181 
+//  182 #ifdef __GNUC__
+//  183   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
+//  184      set to 'Yes') calls __io_putchar() */
+//  185   #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+//  186 #else
+//  187   #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+//  188 #endif /* __GNUC__ */
+//  189 
+//  190 PUTCHAR_PROTOTYPE
+//  191 {
+//  192   UART_PutChar(Print_UART,(char)ch);
+//  193   return ch;
+//  194 }
+//  195  
+//  196 #endif
+// 
+// 548 bytes in segment CODE
+//   8 bytes in segment DATA20_C
+// 
+// 548 bytes of CODE  memory
+//   8 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none

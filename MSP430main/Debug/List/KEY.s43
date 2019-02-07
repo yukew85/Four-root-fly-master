@@ -1,0 +1,722 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Sep/2018  12:21:49
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\KEY\KEY.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWA7A4.tmp
+//        ("C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\KEY\KEY.c" -D DEBUG -D RAM_VECTOR -lA
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Debug\List" -o
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Debug\Obj" --no_cse --no_unroll --no_inline --no_code_motion
+//        --no_tbaa --debug -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3 无线通信\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Drivers\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Drivers\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Drivers\src\USB\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Drivers\src\USB\USB_config\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Drivers\src\USB\USB_User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Drivers\src\USB\USB_API\USB_HID_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\delay\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\18b20\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\KEY\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\LED\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\12864\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\oled\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\mpu6050\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\mpu6050\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\nokia5110\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\nokia5110\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\LQ_1.8_TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\LCD_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\2.2TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\HardWare\nrf24l01\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\System\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\System\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\System\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\User\USER\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Lib\UCOSII\CONFIG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Lib\uCOSII\App\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Lib\uCOSII\CONFIHG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Lib\uCOSII\PORT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Lib\UCOSII\CORE\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Lib\FatFs\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Lib\FatFs\option\" --core=430X --data_model=large -On
+//        --multiplier=32 --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3
+//        无线通信\Debug\List\KEY.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME KEY
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "1"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC KEY_20msTimingProcess
+        PUBLIC KEY_Init
+        PUBLIC KEY_InitStruct
+        PUBLIC KEY_isPressed
+        PUBLIC KeyStruct
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN GPIO_MultiBits_Init
+        EXTERN GPIO_ReadBit
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\4.实验代码\实验3 无线通信\HardWare\KEY\KEY.c
+//    1 #include "KEY.h"
+//    2 #include "msp430f5529_gpio.h"
+//    3 //按键处理阶段
+//    4 typedef enum
+//    5 {
+//    6   KEY_PRESSED           ,//按键按下
+//    7   KEY_REALSE            ,//按键松开
+//    8   KEY_REALSE_WOBBLE     ,//确认松开的消抖状态
+//    9   KEY_PRESS_WOBBLE      ,//确认按下的消抖状态
+//   10 }KEY_STAGEn;
+//   11 //端口配置参数
+//   12 const struct
+//   13 {
+//   14   PORTn         Port;             //GPIO端口
+//   15   uint16_t      Pin;              //引脚
+//   16   uint16_t      config;           //
+//   17   BOOL          PressedLevel;     //按下端口电平状态
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//   18 } KEY_InitStruct[KEY_NUM] =
+KEY_InitStruct:
+        DATA8
+        DC8 1, 0
+        DATA16
+        DC16 1, 33
+        DATA8
+        DC8 0, 0, 0, 0
+        DATA16
+        DC16 1, 33
+        DATA8
+        DC8 0, 0
+//   19 {
+//   20   {KEY1_GPIO_PORT,KEY1_GPIO_PIN,KEY1_GPIO_CONFIG,KEY1_PRESSED_LEVEL}, //按键1引脚配置参数
+//   21   {KEY2_GPIO_PORT,KEY2_GPIO_PIN,KEY2_GPIO_CONFIG,KEY2_PRESSED_LEVEL}, //按键2引脚配置参数
+//   22   //如需添加更多按键，请先对按键进行宏定义后，在参考上面修改
+//   23   //{KEY3_GPIO_PORT,KEY3_GPIO_PIN,KEY2_GPIO_CONFIG,KEY3_PRESSED_LEVEL}, //按键3引脚配置参数
+//   24 };
+//   25 //按键处理信息变量
+//   26 volatile struct
+//   27 {
+//   28   void (*ClickedCallBack)(KEY_EVENT);  //按键事件回调函数
+//   29   KEY_STAGEn    Stage;         //按键处理阶段
+//   30   BOOL          isClicked;     //按键状态是否发生改变                     
+//   31   BOOL          isLongClick;   //是否是长按
+//   32   uint16_t      ClickTimes;    //点击次数变量
+//   33   uint16_t      DealTime;      //按键处理时间
+//   34   uint16_t      PressedTime;   //按键按下时间
+//   35   uint8_t     	WobbleTime;    //消抖时间变量	
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   36 }KeyStruct[KEY_NUM];
+KeyStruct:
+        DS8 32
+//   37 /*******************************************************************************
+//   38 *  函数名称：KEY_GPIO_Config(KEYn key)
+//   39 *  功能说明：KEY端口初始化程序
+//   40 *  参数说明：KEYn key: 按键
+//   41 *  函数返回：无
+//   42 *  使用示例：
+//   43 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   44 static void KEY_GPIO_Config(KEYn key)
+KEY_GPIO_Config:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function KEY_GPIO_Config
+//   45 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.B   R12, R10
+//   46   GPIO_Init(KEY_InitStruct[key].Port, KEY_InitStruct[key].Pin, KEY_InitStruct[key].config);
+        MOV.B   R10, R15
+        RLAM.A  #0x3, R15
+        MOVX.W  KEY_InitStruct + 4(R15), R14
+        MOV.W   #0x1, R13
+        MOV.B   R10, R15
+        RLAM.A  #0x3, R15
+        MOVX.B  KEY_InitStruct + 2(R15), R15
+        SUB.B   #0x1, R15
+        JN      ??KEY_GPIO_Config_0
+        RPT     R15
+        RLAX.W  R13
+??KEY_GPIO_Config_0:
+        ADD.B   #0x1, R15
+        MOV.B   R10, R15
+        RLAM.A  #0x3, R15
+        MOVX.B  KEY_InitStruct(R15), R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   47 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//   48 /*******************************************************************************
+//   49 *  函数名称：KEY_Init(KEYn key,void (*ClickedCallBack)(KEY_EVENT))
+//   50 *  功能说明：KEY初始化程序
+//   51 *  参数说明：
+//   52              KEYn key: 要初始化的按键
+//   53              void (*ClickedCallBack)(KEY_EVENT): 按键事件调用的回掉函数
+//   54 *  函数返回：无
+//   55 *  使用示例：
+//   56 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   57 void KEY_Init(KEYn key,void (*ClickedCallBack)(KEY_EVENT))
+KEY_Init:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function KEY_Init
+//   58 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R10
+        MOVA    R13, R11
+//   59   KEY_GPIO_Config(key);
+        MOV.B   R10, R12
+          CFI FunCall KEY_GPIO_Config
+        CALLA   #KEY_GPIO_Config
+//   60 
+//   61   KeyStruct[key].ClickedCallBack = ClickedCallBack; //组册按键处理事件回调函数
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.A  R11, KeyStruct(R15)
+//   62   KeyStruct[key].ClickTimes = 0;        //点击次数清零
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.W  #0x0, KeyStruct + 8(R15)
+//   63   KeyStruct[key].Stage = KEY_REALSE;    //按键处于松开状态
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x1, KeyStruct + 4(R15)
+//   64   KeyStruct[key].isClicked = FALSE;     //按键状态未改变
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x0, KeyStruct + 5(R15)
+//   65   KeyStruct[key].isLongClick = FALSE;   //不是长按
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x0, KeyStruct + 6(R15)
+//   66   KeyStruct[key].WobbleTime = 0;        //消抖时间初始化为0
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x0, KeyStruct + 14(R15)
+//   67 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+//   68 /*******************************************************************************
+//   69 *  函数名称：KEY_isPressed(KEYn key)
+//   70 *  功能说明：判断按键是否按下
+//   71 *  参数说明：
+//   72              KEYn key: 按键
+//   73 *  函数返回：BOOL ：按键当前的状态
+//   74 *  使用示例：
+//   75 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   76 BOOL KEY_isPressed(KEYn key)
+KEY_isPressed:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function KEY_isPressed
+//   77 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.B   R12, R10
+//   78   if(KEY_InitStruct[key].PressedLevel == GPIO_ReadBit(KEY_InitStruct[key].Port, KEY_InitStruct[key].Pin))
+        MOV.B   R10, R15
+        RLAM.A  #0x3, R15
+        MOVX.B  KEY_InitStruct + 2(R15), R13
+        MOV.B   R10, R15
+        RLAM.A  #0x3, R15
+        MOVX.B  KEY_InitStruct(R15), R12
+          CFI FunCall GPIO_ReadBit
+        CALLA   #GPIO_ReadBit
+        MOV.B   R10, R15
+        RLAM.A  #0x3, R15
+        CMPX.B  R12, KEY_InitStruct + 6(R15)
+        JNE     ??KEY_isPressed_1
+//   79     return TRUE;
+        MOV.B   #0x1, R12
+        JMP     ??KEY_isPressed_0
+//   80   else 
+//   81     return FALSE;
+??KEY_isPressed_1:
+        MOV.B   #0x0, R12
+??KEY_isPressed_0:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//   82 }
+          CFI EndBlock cfiBlock2
+//   83 /*******************************************************************************
+//   84 *  函数名称：KEY_20msTimingProcess(KEYn key)
+//   85 *  功能说明：按键20ms周期处理函数
+//   86 *  参数说明：
+//   87              KEYn key: 按键
+//   88 *  函数返回：无
+//   89 *  使用示例：
+//   90 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   91 void KEY_20msTimingProcess(KEYn key)
+KEY_20msTimingProcess:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function KEY_20msTimingProcess
+//   92 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.B   R12, R10
+//   93   switch(KeyStruct[key].Stage)
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  KeyStruct + 4(R15), R14
+        SUB.B   #0x0, R14
+        JEQ     ??KEY_20msTimingProcess_6
+        SUB.B   #0x1, R14
+        JEQ     ??KEY_20msTimingProcess_7
+        SUB.B   #0x1, R14
+        JEQ     ??KEY_20msTimingProcess_8
+        SUB.B   #0x1, R14
+        JEQ     ??KEY_20msTimingProcess_9
+        JMP     ??KEY_20msTimingProcess_4
+//   94   {
+//   95   case KEY_REALSE:
+//   96     if(KEY_isPressed(key)) //如果按键按下
+??KEY_20msTimingProcess_7:
+        MOV.B   R10, R12
+          CFI FunCall KEY_isPressed
+        CALLA   #KEY_isPressed
+        CMP.B   #0x0, R12
+        JEQ     ??KEY_20msTimingProcess_4
+//   97     {
+//   98       KeyStruct[key].Stage = KEY_PRESS_WOBBLE;    //进入按下消抖阶段
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x3, KeyStruct + 4(R15)
+//   99       KeyStruct[key].WobbleTime = 0;              //消抖时间清零
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x0, KeyStruct + 14(R15)
+//  100       KeyStruct[key].PressedTime = 0;             //按键按下时间清零
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.W  #0x0, KeyStruct + 12(R15)
+//  101     }
+//  102     break;
+        JMP     ??KEY_20msTimingProcess_4
+//  103   case KEY_PRESS_WOBBLE:
+//  104     KeyStruct[key].PressedTime += KEY_TIMING_PROCESS_TIME;								//按键按下时间开始计时
+??KEY_20msTimingProcess_9:
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        ADDX.W  #0x14, KeyStruct + 12(R15)
+//  105     KeyStruct[key].WobbleTime += KEY_TIMING_PROCESS_TIME; 								//消抖时间开始计时
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        ADDX.B  #0x14, KeyStruct + 14(R15)
+//  106     if(KEY_isPressed(key)) //如果按键按下
+        MOV.B   R10, R12
+          CFI FunCall KEY_isPressed
+        CALLA   #KEY_isPressed
+        CMP.B   #0x0, R12
+        JEQ     ??KEY_20msTimingProcess_10
+//  107     {
+//  108       if(KeyStruct[key].WobbleTime >= KEY_PRESS_WOBBLE_TIME)  //消抖时间达到
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.B  #0xa, KeyStruct + 14(R15)
+        JNC     ??KEY_20msTimingProcess_4
+//  109       {
+//  110         KeyStruct[key].Stage = KEY_PRESSED;         //可以确认按下，进入已按下阶段
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x0, KeyStruct + 4(R15)
+//  111         KeyStruct[key].ClickTimes ++;             //按下次数加1
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        ADDX.W  #0x1, KeyStruct + 8(R15)
+        JMP     ??KEY_20msTimingProcess_4
+//  112       }
+//  113     }
+//  114     else
+//  115     {
+//  116       KeyStruct[key].Stage = KEY_REALSE;          //如果消抖时间内松开则认为该次按键按下无效
+??KEY_20msTimingProcess_10:
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x1, KeyStruct + 4(R15)
+//  117     }
+//  118     break;
+        JMP     ??KEY_20msTimingProcess_4
+//  119   case KEY_PRESSED:
+//  120     KeyStruct[key].PressedTime += KEY_TIMING_PROCESS_TIME;                //继续记录按键按下时间
+??KEY_20msTimingProcess_6:
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        ADDX.W  #0x14, KeyStruct + 12(R15)
+//  121     if( (KeyStruct[key].isLongClick == FALSE)
+//  122         &&(KeyStruct[key].PressedTime >= KEY_LONG_CLICK_PERIOD)) //如果长时间按下，则认为是长按状态
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.B  #0x0, KeyStruct + 6(R15)
+        JNE     ??KEY_20msTimingProcess_11
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.W  #0x1f4, KeyStruct + 12(R15)
+        JNC     ??KEY_20msTimingProcess_11
+//  123     {
+//  124       KeyStruct[key].ClickedCallBack(KEY_LONG_CLICK); //按键按下时间过长，则认为是长击
+        MOV.B   #0x3, R12
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.A  KeyStruct(R15), R15
+          CFI FunCall
+        CALLA   R15
+//  125       KeyStruct[key].isLongClick = TRUE;          //标记为长按
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x1, KeyStruct + 6(R15)
+        JMP     ??KEY_20msTimingProcess_4
+//  126     }
+//  127     else
+//  128     {
+//  129       if(KEY_isPressed(key) == FALSE) //如果按键松开
+??KEY_20msTimingProcess_11:
+        MOV.B   R10, R12
+          CFI FunCall KEY_isPressed
+        CALLA   #KEY_isPressed
+        CMP.B   #0x0, R12
+        JNE     ??KEY_20msTimingProcess_4
+//  130       {
+//  131         KeyStruct[key].Stage = KEY_REALSE_WOBBLE; //进入按键松开后消抖阶段
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x2, KeyStruct + 4(R15)
+//  132         KeyStruct[key].WobbleTime = 0;            //消抖时间清零，一边后续阶段消抖
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x0, KeyStruct + 14(R15)
+//  133       }
+//  134     }
+//  135     break;
+        JMP     ??KEY_20msTimingProcess_4
+//  136   case KEY_REALSE_WOBBLE:
+//  137     KeyStruct[key].WobbleTime += KEY_TIMING_PROCESS_TIME;                 //按键松开消抖时间开始计时
+??KEY_20msTimingProcess_8:
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        ADDX.B  #0x14, KeyStruct + 14(R15)
+//  138     if(KEY_isPressed(key) == FALSE) //如果按键松开
+        MOV.B   R10, R12
+          CFI FunCall KEY_isPressed
+        CALLA   #KEY_isPressed
+        CMP.B   #0x0, R12
+        JNE     ??KEY_20msTimingProcess_4
+//  139     {
+//  140       if(KeyStruct[key].WobbleTime >= KEY_REALSE_WOBBLE_TIME)  //消抖时间达到
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.B  #0xa, KeyStruct + 14(R15)
+        JNC     ??KEY_20msTimingProcess_4
+//  141       {
+//  142         KeyStruct[key].Stage = KEY_REALSE;              //进入按键完全松开阶段
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x1, KeyStruct + 4(R15)
+//  143         KeyStruct[key].isClicked = TRUE;             //标记按键状态发生改变
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x1, KeyStruct + 5(R15)
+//  144       }
+//  145     }
+//  146     break;	
+//  147     default:break;
+//  148   }
+//  149   if(KeyStruct[key].isClicked == TRUE)  //如果按键状态改变了
+??KEY_20msTimingProcess_4:
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.B  #0x1, KeyStruct + 5(R15)
+        JNE     ??KEY_20msTimingProcess_12
+//  150   {
+//  151     //达到双击时间最大值或已经双击
+//  152     KeyStruct[key].DealTime += KEY_TIMING_PROCESS_TIME;
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        ADDX.W  #0x14, KeyStruct + 10(R15)
+//  153     if((KeyStruct[key].DealTime >= KEY_DOUBLE_CLICK_PERIOD)
+//  154       ||KeyStruct[key].ClickTimes >= 2)
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.W  #0xc8, KeyStruct + 10(R15)
+        JC      ??KEY_20msTimingProcess_13
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.W  #0x2, KeyStruct + 8(R15)
+        JNC     ??KEY_20msTimingProcess_12
+//  155     {
+//  156       if(KeyStruct[key].ClickedCallBack != NULL)
+??KEY_20msTimingProcess_13:
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.A  KeyStruct(R15), R15
+        CMPA    #0x0, R15
+        JEQ     ??KEY_20msTimingProcess_5
+//  157       {
+//  158         //如果按下时间很长
+//  159         if((KeyStruct[key].isLongClick == FALSE))
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.B  #0x0, KeyStruct + 6(R15)
+        JNE     ??KEY_20msTimingProcess_5
+//  160         {
+//  161           if(KeyStruct[key].ClickTimes >= 2)  //按下多次则认为是双击
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.W  #0x2, KeyStruct + 8(R15)
+        JNC     ??KEY_20msTimingProcess_14
+//  162             KeyStruct[key].ClickedCallBack(KEY_DOUBLE_CLICK);
+        MOV.B   #0x2, R12
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.A  KeyStruct(R15), R15
+          CFI FunCall
+        CALLA   R15
+        JMP     ??KEY_20msTimingProcess_5
+//  163           else if(KeyStruct[key].ClickTimes == 1)                               //否则认为是单击
+??KEY_20msTimingProcess_14:
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        CMPX.W  #0x1, KeyStruct + 8(R15)
+        JNE     ??KEY_20msTimingProcess_5
+//  164             KeyStruct[key].ClickedCallBack(KEY_CLICK);
+        MOV.B   #0x1, R12
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.A  KeyStruct(R15), R15
+          CFI FunCall
+        CALLA   R15
+//  165         }
+//  166       }
+//  167       KeyStruct[key].PressedTime = 0;
+??KEY_20msTimingProcess_5:
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.W  #0x0, KeyStruct + 12(R15)
+//  168       KeyStruct[key].ClickTimes = 0;
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.W  #0x0, KeyStruct + 8(R15)
+//  169       KeyStruct[key].DealTime = 0;
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.W  #0x0, KeyStruct + 10(R15)
+//  170       KeyStruct[key].isClicked = FALSE;
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x0, KeyStruct + 5(R15)
+//  171       KeyStruct[key].isLongClick = FALSE;
+        MOV.B   R10, R15
+        RLAM.A  #0x4, R15
+        MOVX.B  #0x0, KeyStruct + 6(R15)
+//  172     }
+//  173   }
+//  174 }
+??KEY_20msTimingProcess_12:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 676 bytes in segment CODE
+//  16 bytes in segment DATA20_C
+//  32 bytes in segment DATA20_Z
+// 
+// 676 bytes of CODE  memory
+//  16 bytes of CONST memory
+//  32 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,1140 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:08
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\gpio.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW1F5F.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\gpio.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\gpio.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME gpio
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC GPIO_clearInterrupt
+        PUBLIC GPIO_disableInterrupt
+        PUBLIC GPIO_enableInterrupt
+        PUBLIC GPIO_getInputPinValue
+        PUBLIC GPIO_getInterruptStatus
+        PUBLIC GPIO_selectInterruptEdge
+        PUBLIC GPIO_setAsInputPin
+        PUBLIC GPIO_setAsInputPinWithPullDownResistor
+        PUBLIC GPIO_setAsInputPinWithPullUpResistor
+        PUBLIC GPIO_setAsOutputPin
+        PUBLIC GPIO_setAsPeripheralModuleFunctionInputPin
+        PUBLIC GPIO_setAsPeripheralModuleFunctionOutputPin
+        PUBLIC GPIO_setDriveStrength
+        PUBLIC GPIO_setOutputHighOnPin
+        PUBLIC GPIO_setOutputLowOnPin
+        PUBLIC GPIO_toggleOutputOnPin
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\gpio.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // gpio.c - Driver for the gpio Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup gpio_api gpio
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_PORT1_R__
+//   48 #include "gpio.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//   52 static const uint16_t GPIO_PORT_TO_BASE[] = {
+GPIO_PORT_TO_BASE:
+        DATA16
+        DC16 0, 512, 512, 544, 544, 576, 576, 608, 608, 65535, 65535, 65535
+        DC16 65535, 800
+//   53     0x00,
+//   54 #if defined(__MSP430_HAS_PORT1_R__)
+//   55     __MSP430_BASEADDRESS_PORT1_R__,
+//   56 #elif defined(__MSP430_HAS_PORT1__)
+//   57     __MSP430_BASEADDRESS_PORT1__,
+//   58 #else
+//   59     0xFFFF,
+//   60 #endif
+//   61 #if defined(__MSP430_HAS_PORT2_R__)
+//   62     __MSP430_BASEADDRESS_PORT2_R__,
+//   63 #elif defined(__MSP430_HAS_PORT2__)
+//   64     __MSP430_BASEADDRESS_PORT2__,
+//   65 #else
+//   66     0xFFFF,
+//   67 #endif
+//   68 #if defined(__MSP430_HAS_PORT3_R__)
+//   69     __MSP430_BASEADDRESS_PORT3_R__,
+//   70 #elif defined(__MSP430_HAS_PORT3__)
+//   71     __MSP430_BASEADDRESS_PORT3__,
+//   72 #else
+//   73     0xFFFF,
+//   74 #endif
+//   75 #if defined(__MSP430_HAS_PORT4_R__)
+//   76     __MSP430_BASEADDRESS_PORT4_R__,
+//   77 #elif defined(__MSP430_HAS_PORT4__)
+//   78     __MSP430_BASEADDRESS_PORT4__,
+//   79 #else
+//   80     0xFFFF,
+//   81 #endif
+//   82 #if defined(__MSP430_HAS_PORT5_R__)
+//   83     __MSP430_BASEADDRESS_PORT5_R__,
+//   84 #elif defined(__MSP430_HAS_PORT5__)
+//   85     __MSP430_BASEADDRESS_PORT5__,
+//   86 #else
+//   87     0xFFFF,
+//   88 #endif
+//   89 #if defined(__MSP430_HAS_PORT6_R__)
+//   90     __MSP430_BASEADDRESS_PORT6_R__,
+//   91 #elif defined(__MSP430_HAS_PORT6__)
+//   92     __MSP430_BASEADDRESS_PORT6__,
+//   93 #else
+//   94     0xFFFF,
+//   95 #endif
+//   96 #if defined(__MSP430_HAS_PORT7_R__)
+//   97     __MSP430_BASEADDRESS_PORT7_R__,
+//   98 #elif defined(__MSP430_HAS_PORT7__)
+//   99     __MSP430_BASEADDRESS_PORT7__,
+//  100 #else
+//  101     0xFFFF,
+//  102 #endif
+//  103 #if defined(__MSP430_HAS_PORT8_R__)
+//  104     __MSP430_BASEADDRESS_PORT8_R__,
+//  105 #elif defined(__MSP430_HAS_PORT8__)
+//  106     __MSP430_BASEADDRESS_PORT8__,
+//  107 #else
+//  108     0xFFFF,
+//  109 #endif
+//  110 #if defined(__MSP430_HAS_PORT9_R__)
+//  111     __MSP430_BASEADDRESS_PORT9_R__,
+//  112 #elif defined(__MSP430_HAS_PORT9__)
+//  113     __MSP430_BASEADDRESS_PORT9__,
+//  114 #else
+//  115     0xFFFF,
+//  116 #endif
+//  117 #if defined(__MSP430_HAS_PORT10_R__)
+//  118     __MSP430_BASEADDRESS_PORT10_R__,
+//  119 #elif defined(__MSP430_HAS_PORT10__)
+//  120     __MSP430_BASEADDRESS_PORT10__,
+//  121 #else
+//  122     0xFFFF,
+//  123 #endif
+//  124 #if defined(__MSP430_HAS_PORT11_R__)
+//  125     __MSP430_BASEADDRESS_PORT11_R__,
+//  126 #elif defined(__MSP430_HAS_PORT11__)
+//  127     __MSP430_BASEADDRESS_PORT11__,
+//  128 #else
+//  129     0xFFFF,
+//  130 #endif
+//  131     0xFFFF,
+//  132 #if defined(__MSP430_HAS_PORTJ_R__)
+//  133     __MSP430_BASEADDRESS_PORTJ_R__
+//  134 #elif defined(__MSP430_HAS_PORTJ__)
+//  135     __MSP430_BASEADDRESS_PORTJ__
+//  136 #else
+//  137     0xFFFF
+//  138 #endif
+//  139 };
+//  140 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  141 void GPIO_setAsOutputPin(uint8_t selectedPort, uint16_t selectedPins) {
+GPIO_setAsOutputPin:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function GPIO_setAsOutputPin
+          CFI NoCalls
+//  142 
+//  143     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  144 
+//  145     #ifndef NDEBUG
+//  146     if(baseAddress == 0xFFFF) {
+//  147         return;
+//  148     }
+//  149     #endif
+//  150 
+//  151     // Shift by 8 if port is even (upper 8-bits)
+//  152     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setAsOutputPin_0
+//  153         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  154     }
+//  155 
+//  156     HWREG16(baseAddress + OFS_PASEL) &= ~selectedPins;
+??GPIO_setAsOutputPin_0:
+        MOV.W   R14, R15
+        ADD.W   #0xa, R15
+        BIC.W   R13, 0(R15)
+//  157     HWREG16(baseAddress + OFS_PADIR) |= selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        BIS.W   R13, 0(R15)
+//  158 
+//  159     return;
+        RETA
+//  160 }
+          CFI EndBlock cfiBlock0
+//  161 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  162 void GPIO_setAsInputPin(uint8_t selectedPort, uint16_t selectedPins) {
+GPIO_setAsInputPin:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function GPIO_setAsInputPin
+          CFI NoCalls
+//  163 
+//  164     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  165 
+//  166     #ifndef NDEBUG
+//  167     if(baseAddress == 0xFFFF) {
+//  168         return;
+//  169     }
+//  170     #endif
+//  171 
+//  172     // Shift by 8 if port is even (upper 8-bits)
+//  173     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setAsInputPin_0
+//  174         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  175     }
+//  176 
+//  177     HWREG16(baseAddress + OFS_PASEL) &= ~selectedPins;
+??GPIO_setAsInputPin_0:
+        MOV.W   R14, R15
+        ADD.W   #0xa, R15
+        BIC.W   R13, 0(R15)
+//  178     HWREG16(baseAddress + OFS_PADIR) &= ~selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        BIC.W   R13, 0(R15)
+//  179     HWREG16(baseAddress + OFS_PAREN) &= ~selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x6, R15
+        BIC.W   R13, 0(R15)
+//  180 }
+        RETA
+          CFI EndBlock cfiBlock1
+//  181 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  182 void GPIO_setAsPeripheralModuleFunctionOutputPin(uint8_t selectedPort,
+GPIO_setAsPeripheralModuleFunctionOutputPin:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function GPIO_setAsPeripheralModuleFunctionOutputPin
+          CFI NoCalls
+//  183                                                       uint16_t selectedPins
+//  184 ) {
+//  185 
+//  186     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  187 
+//  188     #ifndef NDEBUG
+//  189     if(baseAddress == 0xFFFF) {
+//  190         return;
+//  191     }
+//  192     #endif
+//  193 
+//  194     // Shift by 8 if port is even (upper 8-bits)
+//  195     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setAsPeripheralModuleFunctionOutputPin_0
+//  196         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  197     }
+//  198 
+//  199     HWREG16(baseAddress + OFS_PADIR) |= selectedPins;
+??GPIO_setAsPeripheralModuleFunctionOutputPin_0:
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        BIS.W   R13, 0(R15)
+//  200     HWREG16(baseAddress + OFS_PASEL) |= selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0xa, R15
+        BIS.W   R13, 0(R15)
+//  201 }
+        RETA
+          CFI EndBlock cfiBlock2
+//  202 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  203 void GPIO_setAsPeripheralModuleFunctionInputPin(uint8_t selectedPort,
+GPIO_setAsPeripheralModuleFunctionInputPin:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function GPIO_setAsPeripheralModuleFunctionInputPin
+          CFI NoCalls
+//  204                                                      uint16_t selectedPins
+//  205 ) {
+//  206     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  207 
+//  208     #ifndef NDEBUG
+//  209     if(baseAddress == 0xFFFF) {
+//  210         return;
+//  211     }
+//  212     #endif
+//  213 
+//  214     // Shift by 8 if port is even (upper 8-bits)
+//  215     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setAsPeripheralModuleFunctionInputPin_0
+//  216         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  217     }
+//  218 
+//  219     HWREG16(baseAddress + OFS_PADIR) &= ~selectedPins;
+??GPIO_setAsPeripheralModuleFunctionInputPin_0:
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        BIC.W   R13, 0(R15)
+//  220     HWREG16(baseAddress + OFS_PASEL) |= selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0xa, R15
+        BIS.W   R13, 0(R15)
+//  221 }
+        RETA
+          CFI EndBlock cfiBlock3
+//  222 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  223 void GPIO_setOutputHighOnPin (uint8_t selectedPort,
+GPIO_setOutputHighOnPin:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function GPIO_setOutputHighOnPin
+          CFI NoCalls
+//  224                                    uint16_t selectedPins) {
+//  225 
+//  226     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  227 
+//  228     #ifndef NDEBUG
+//  229     if(baseAddress == 0xFFFF) {
+//  230         return;
+//  231     }
+//  232     #endif
+//  233 
+//  234     // Shift by 8 if port is even (upper 8-bits)
+//  235     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setOutputHighOnPin_0
+//  236         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  237     }
+//  238 
+//  239     HWREG16(baseAddress + OFS_PAOUT) |= selectedPins;
+??GPIO_setOutputHighOnPin_0:
+        MOV.W   R14, R15
+        ADD.W   #0x2, R15
+        BIS.W   R13, 0(R15)
+//  240 }
+        RETA
+          CFI EndBlock cfiBlock4
+//  241 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  242 void GPIO_setOutputLowOnPin (uint8_t selectedPort, uint16_t selectedPins) {
+GPIO_setOutputLowOnPin:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function GPIO_setOutputLowOnPin
+          CFI NoCalls
+//  243 
+//  244     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  245 
+//  246     #ifndef NDEBUG
+//  247     if(baseAddress == 0xFFFF) {
+//  248         return;
+//  249     }
+//  250     #endif
+//  251 
+//  252     // Shift by 8 if port is even (upper 8-bits)
+//  253     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setOutputLowOnPin_0
+//  254         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  255     }
+//  256 
+//  257     HWREG16(baseAddress + OFS_PAOUT) &= ~selectedPins;
+??GPIO_setOutputLowOnPin_0:
+        MOV.W   R14, R15
+        ADD.W   #0x2, R15
+        BIC.W   R13, 0(R15)
+//  258 }
+        RETA
+          CFI EndBlock cfiBlock5
+//  259 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  260 void GPIO_toggleOutputOnPin (uint8_t selectedPort, uint16_t selectedPins) {
+GPIO_toggleOutputOnPin:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function GPIO_toggleOutputOnPin
+          CFI NoCalls
+//  261 
+//  262     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  263 
+//  264     #ifndef NDEBUG
+//  265     if(baseAddress == 0xFFFF) {
+//  266         return;
+//  267     }
+//  268     #endif
+//  269 
+//  270     // Shift by 8 if port is even (upper 8-bits)
+//  271     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_toggleOutputOnPin_0
+//  272         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  273     }
+//  274 
+//  275     HWREG16(baseAddress + OFS_PAOUT) ^= selectedPins;
+??GPIO_toggleOutputOnPin_0:
+        MOV.W   R14, R15
+        ADD.W   #0x2, R15
+        XOR.W   R13, 0(R15)
+//  276 }
+        RETA
+          CFI EndBlock cfiBlock6
+//  277 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  278 void GPIO_setAsInputPinWithPullDownResistor(uint8_t selectedPort,
+GPIO_setAsInputPinWithPullDownResistor:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function GPIO_setAsInputPinWithPullDownResistor
+          CFI NoCalls
+//  279                                                  uint16_t selectedPins) {
+//  280 
+//  281     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  282 
+//  283     #ifndef NDEBUG
+//  284     if(baseAddress == 0xFFFF) {
+//  285         return;
+//  286     }
+//  287     #endif
+//  288 
+//  289     // Shift by 8 if port is even (upper 8-bits)
+//  290     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setAsInputPinWithPullDownResistor_0
+//  291         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  292     }
+//  293 
+//  294     HWREG16(baseAddress + OFS_PASEL) &= ~selectedPins;
+??GPIO_setAsInputPinWithPullDownResistor_0:
+        MOV.W   R14, R15
+        ADD.W   #0xa, R15
+        BIC.W   R13, 0(R15)
+//  295 
+//  296     HWREG16(baseAddress + OFS_PADIR) &= ~selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        BIC.W   R13, 0(R15)
+//  297     HWREG16(baseAddress + OFS_PAREN) |= selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x6, R15
+        BIS.W   R13, 0(R15)
+//  298     HWREG16(baseAddress + OFS_PAOUT) &= ~selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x2, R15
+        BIC.W   R13, 0(R15)
+//  299 }
+        RETA
+          CFI EndBlock cfiBlock7
+//  300 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  301 void GPIO_setAsInputPinWithPullUpResistor(uint8_t selectedPort,
+GPIO_setAsInputPinWithPullUpResistor:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function GPIO_setAsInputPinWithPullUpResistor
+          CFI NoCalls
+//  302                                                 uint16_t selectedPins) {
+//  303 
+//  304     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  305 
+//  306     #ifndef NDEBUG
+//  307     if(baseAddress == 0xFFFF) {
+//  308         return;
+//  309     }
+//  310     #endif
+//  311 
+//  312     // Shift by 8 if port is even (upper 8-bits)
+//  313     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setAsInputPinWithPullUpResistor_0
+//  314         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  315     }
+//  316 
+//  317     HWREG16(baseAddress + OFS_PASEL) &= ~selectedPins;
+??GPIO_setAsInputPinWithPullUpResistor_0:
+        MOV.W   R14, R15
+        ADD.W   #0xa, R15
+        BIC.W   R13, 0(R15)
+//  318     HWREG16(baseAddress + OFS_PADIR) &= ~selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        BIC.W   R13, 0(R15)
+//  319     HWREG16(baseAddress + OFS_PAREN) |= selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x6, R15
+        BIS.W   R13, 0(R15)
+//  320     HWREG16(baseAddress + OFS_PAOUT) |= selectedPins;
+        MOV.W   R14, R15
+        ADD.W   #0x2, R15
+        BIS.W   R13, 0(R15)
+//  321 }
+        RETA
+          CFI EndBlock cfiBlock8
+//  322 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  323 uint8_t GPIO_getInputPinValue(uint8_t selectedPort,
+GPIO_getInputPinValue:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function GPIO_getInputPinValue
+          CFI NoCalls
+//  324                                    uint16_t selectedPins) {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.B   R12, R14
+//  325 
+//  326     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R14, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R15
+//  327 
+//  328     #ifndef NDEBUG
+//  329     if(baseAddress == 0xFFFF) {
+//  330         return;
+//  331     }
+//  332     #endif
+//  333 
+//  334     // Shift by 8 if port is even (upper 8-bits)
+//  335     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R14
+        SUBC.B  R10, R10
+        AND.B   #0x1, R10
+        CMP.B   #0x0, R10
+        JEQ     ??GPIO_getInputPinValue_1
+//  336         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  337     }
+//  338 
+//  339     uint16_t inputPinValue = HWREG16(baseAddress + OFS_PAIN) & (selectedPins);
+??GPIO_getInputPinValue_1:
+        MOV.W   R13, R10
+        AND.W   @R15, R10
+//  340 
+//  341     if(inputPinValue > 0){
+        CMP.W   #0x0, R10
+        JEQ     ??GPIO_getInputPinValue_2
+//  342         return (GPIO_INPUT_PIN_HIGH);
+        MOV.B   #0x1, R12
+        JMP     ??GPIO_getInputPinValue_0
+//  343     }
+//  344     return (GPIO_INPUT_PIN_LOW);
+??GPIO_getInputPinValue_2:
+        MOV.B   #0x0, R12
+??GPIO_getInputPinValue_0:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//  345 }
+          CFI EndBlock cfiBlock9
+//  346 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  347 void GPIO_enableInterrupt(uint8_t selectedPort, uint16_t selectedPins) {
+GPIO_enableInterrupt:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function GPIO_enableInterrupt
+          CFI NoCalls
+//  348 
+//  349     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  350 
+//  351     #ifndef NDEBUG
+//  352     if(baseAddress == 0xFFFF) {
+//  353         return;
+//  354     }
+//  355     #endif
+//  356 
+//  357     // Shift by 8 if port is even (upper 8-bits)
+//  358     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_enableInterrupt_0
+//  359         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  360     }
+//  361 
+//  362     HWREG16(baseAddress + OFS_PAIE) |= selectedPins;
+??GPIO_enableInterrupt_0:
+        MOV.W   R14, R15
+        ADD.W   #0x1a, R15
+        BIS.W   R13, 0(R15)
+//  363 }
+        RETA
+          CFI EndBlock cfiBlock10
+//  364 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  365 void GPIO_disableInterrupt(uint8_t selectedPort, uint16_t selectedPins) {
+GPIO_disableInterrupt:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function GPIO_disableInterrupt
+          CFI NoCalls
+//  366 
+//  367     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  368 
+//  369     #ifndef NDEBUG
+//  370     if(baseAddress == 0xFFFF) {
+//  371         return;
+//  372     }
+//  373     #endif
+//  374 
+//  375     // Shift by 8 if port is even (upper 8-bits)
+//  376     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_disableInterrupt_0
+//  377         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  378     }
+//  379 
+//  380     HWREG16(baseAddress + OFS_PAIE) &= ~selectedPins;
+??GPIO_disableInterrupt_0:
+        MOV.W   R14, R15
+        ADD.W   #0x1a, R15
+        BIC.W   R13, 0(R15)
+//  381 }
+        RETA
+          CFI EndBlock cfiBlock11
+//  382 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  383 uint16_t GPIO_getInterruptStatus(uint8_t selectedPort, uint16_t selectedPins) {
+GPIO_getInterruptStatus:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function GPIO_getInterruptStatus
+          CFI NoCalls
+        MOV.B   R12, R14
+//  384 
+//  385     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R14, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R15
+//  386 
+//  387     #ifndef NDEBUG
+//  388     if(baseAddress == 0xFFFF) {
+//  389         return;
+//  390     }
+//  391     #endif
+//  392 
+//  393     // Shift by 8 if port is even (upper 8-bits)
+//  394     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R14
+        SUBC.B  R12, R12
+        AND.B   #0x1, R12
+        CMP.B   #0x0, R12
+        JEQ     ??GPIO_getInterruptStatus_0
+//  395         if((baseAddress & 0x1) ^ 0x1)
+        BIT.W   #0x1, R15
+        SUBC.W  R12, R12
+        AND.W   #0x1, R12
+        CMP.W   #0x0, R12
+        JEQ     ??GPIO_getInterruptStatus_1
+//  396         {
+//  397             return (HWREG8(baseAddress + OFS_PAIFG_H) & selectedPins);
+        ADD.W   #0x1d, R15
+        MOV.B   @R15, R12
+        MOV.B   R12, R12
+        AND.W   R13, R12
+        RETA
+//  398         }
+//  399         else
+//  400         {
+//  401             return (HWREG8(baseAddress + OFS_PAIFG) & selectedPins);
+??GPIO_getInterruptStatus_1:
+        ADD.W   #0x1c, R15
+        MOV.B   @R15, R12
+        MOV.B   R12, R12
+        AND.W   R13, R12
+        RETA
+//  402         }
+//  403     }
+//  404     else {
+//  405         return (HWREG16(baseAddress + OFS_PAIFG) & selectedPins);
+??GPIO_getInterruptStatus_0:
+        ADD.W   #0x1c, R15
+        AND.W   @R15, R13
+        MOV.W   R13, R12
+        RETA
+//  406     }
+//  407 }
+          CFI EndBlock cfiBlock12
+//  408 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  409 void GPIO_clearInterrupt(uint8_t selectedPort, uint16_t selectedPins) {
+GPIO_clearInterrupt:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function GPIO_clearInterrupt
+          CFI NoCalls
+//  410 
+//  411     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R14
+//  412 
+//  413     #ifndef NDEBUG
+//  414     if(baseAddress == 0xFFFF) {
+//  415         return;
+//  416     }
+//  417     #endif
+//  418 
+//  419     // Shift by 8 if port is even (upper 8-bits)
+//  420     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_clearInterrupt_0
+//  421         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  422     }
+//  423 
+//  424     HWREG16(baseAddress + OFS_PAIFG) &= ~selectedPins;
+??GPIO_clearInterrupt_0:
+        MOV.W   R14, R15
+        ADD.W   #0x1c, R15
+        BIC.W   R13, 0(R15)
+//  425 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  426 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  427 void GPIO_selectInterruptEdge(uint8_t selectedPort, uint16_t selectedPins,
+GPIO_selectInterruptEdge:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function GPIO_selectInterruptEdge
+          CFI NoCalls
+//  428                                    uint8_t edgeSelect) {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//  429 
+//  430     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R10
+//  431 
+//  432     #ifndef NDEBUG
+//  433     if(baseAddress == 0xFFFF) {
+//  434         return;
+//  435     }
+//  436     #endif
+//  437 
+//  438     // Shift by 8 if port is even (upper 8-bits)
+//  439     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_selectInterruptEdge_1
+//  440         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  441     }
+//  442 
+//  443     if (GPIO_LOW_TO_HIGH_TRANSITION == edgeSelect){
+??GPIO_selectInterruptEdge_1:
+        CMP.B   #0x0, R14
+        JNE     ??GPIO_selectInterruptEdge_2
+//  444         HWREG16(baseAddress + OFS_PAIES) &= ~selectedPins;
+        MOV.W   R10, R15
+        ADD.W   #0x18, R15
+        BIC.W   R13, 0(R15)
+        JMP     ??GPIO_selectInterruptEdge_0
+//  445     }
+//  446     else {
+//  447         HWREG16(baseAddress + OFS_PAIES) |= selectedPins;
+??GPIO_selectInterruptEdge_2:
+        MOV.W   R10, R15
+        ADD.W   #0x18, R15
+        BIS.W   R13, 0(R15)
+//  448     }
+//  449 }
+??GPIO_selectInterruptEdge_0:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock14
+//  450 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  451 void GPIO_setDriveStrength(uint8_t selectedPort, uint16_t selectedPins,
+GPIO_setDriveStrength:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function GPIO_setDriveStrength
+          CFI NoCalls
+//  452                                 uint8_t driveStrength) {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//  453 
+//  454     uint16_t baseAddress = GPIO_PORT_TO_BASE[selectedPort];
+        MOV.B   R12, R15
+        ADDA    R15, R15
+        MOVX.W  GPIO_PORT_TO_BASE(R15), R10
+//  455 
+//  456     #ifndef NDEBUG
+//  457     if(baseAddress == 0xFFFF) {
+//  458         return;
+//  459     }
+//  460     #endif
+//  461 
+//  462     // Shift by 8 if port is even (upper 8-bits)
+//  463     if((selectedPort & 1) ^ 1) {
+        BIT.B   #0x1, R12
+        SUBC.B  R15, R15
+        AND.B   #0x1, R15
+        CMP.B   #0x0, R15
+        JEQ     ??GPIO_setDriveStrength_1
+//  464         selectedPins <<= 8;
+        AND.W   #0xff, R13
+        SWPB    R13
+//  465     }
+//  466 
+//  467     if(GPIO_REDUCED_OUTPUT_DRIVE_STRENGTH == driveStrength) {
+??GPIO_setDriveStrength_1:
+        CMP.B   #0x0, R14
+        JNE     ??GPIO_setDriveStrength_2
+//  468         HWREG16(baseAddress + OFS_PADS) &= ~selectedPins;
+        MOV.W   R10, R15
+        ADD.W   #0x8, R15
+        BIC.W   R13, 0(R15)
+        JMP     ??GPIO_setDriveStrength_0
+//  469     } else  {
+//  470         HWREG16(baseAddress + OFS_PADS) |= selectedPins;
+??GPIO_setDriveStrength_2:
+        MOV.W   R10, R15
+        ADD.W   #0x8, R15
+        BIS.W   R13, 0(R15)
+//  471     }
+//  472 }
+??GPIO_setDriveStrength_0:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock15
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  473 
+//  474 #endif
+//  475 //*****************************************************************************
+//  476 //
+//  477 //! Close the doxygen group for gpio_api
+//  478 //! @}
+//  479 //
+//  480 //*****************************************************************************
+// 
+// 770 bytes in segment CODE
+//  28 bytes in segment DATA20_C
+// 
+// 770 bytes of CODE  memory
+//  28 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,865 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  16:49:49
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\remote.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW6A60.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\remote.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\remote.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME remote
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Cast32uto32f
+        EXTERN _Mul32f
+        EXTERN _Add32f
+        EXTERN ?cstart_init_copy20
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC AnalyRC
+        PUBLIC RCReceiveHandle
+        PUBLIC RC_rxData
+        PUBLIC Remote
+        PUBLIC RemoteUnlock
+        PUBLIC UpdateFMUToRemote
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN ResetAlt
+        EXTERN g_FMUflg
+        EXTERN PIDGroup
+        EXTERN g_UAVinfo
+        EXTERN NRF_Mannager
+        EXTERN deQueue
+        EXTERN memcpy
+        EXTERN g_LedManager
+        EXTERN USB_Send_Queue
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\remote.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：remote.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 遥控器驱动程序调用方式如下：
+//   23 1.AnalyRC函数由NRF接收驱动函数调用，用以分析遥控器发送过来的数据，不需要单独调用；
+//   24 2.RCReceiveHandle函数用以处理遥控器接收处理函数；
+//   25 
+//   26 */
+//   27 //外部文件引用
+//   28 #include "nrf24l01.h"
+//   29 #include "control.h"
+//   30 #include <math.h>
+//   31 #include "myMath.h"
+//   32 #include "LED.h"
+//   33 #include "Remote.h"
+//   34 #include "gcs.h"
+//   35 #include "communication.h"
+//   36 #include "pid.h"
+//   37 #include <string.h>
+//   38 #include "SPL06.h"
+//   39 
+//   40 //宏定义区
+//   41 extern Queue_t USB_Send_Queue;
+//   42 
+//   43 
+//   44 //Extern引用
+//   45 
+//   46 
+//   47 
+//   48 //私有函数区
+//   49 void RemoteUnlock(void);    
+//   50 void RCReceiveHandle(void);
+//   51 
+//   52 
+//   53 //私有变量区
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//   54 uint8_t RC_rxData[32];
+RC_rxData:
+        DS8 32
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   55 Remote_t Remote;
+Remote:
+        DS8 22
+//   56 
+//   57  
+//   58 /******************************************************************************
+//   59   * 函数名称：AnalyRC
+//   60   * 函数描述：分析遥控器数据
+//   61   * 输    入：void
+//   62   * 输    出：void
+//   63   * 返    回：void
+//   64   * 备    注：null    
+//   65   *    
+//   66   *
+//   67 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   68 void AnalyRC(void)
+AnalyRC:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function AnalyRC
+//   69 {
+        SUBA    #0x1c, SP
+          CFI CFA SP+32
+//   70     uint8_t CheckSum = 0;
+        MOV.B   #0x0, 0(SP)
+//   71     OldRemote_t OldRemote;
+//   72     
+//   73     deQueue(&NRF_Mannager.qRx, RC_rxData,&CheckSum);
+        MOVA    SP, R14
+        MOVA    #RC_rxData, R13
+        MOVA    #NRF_Mannager + 336, R12
+          CFI FunCall deQueue
+        CALLA   #deQueue
+//   74     memcpy((uint8_t*)&OldRemote, RC_rxData, sizeof(OldRemote_t));   
+        MOV.W   #0x1a, R14
+        MOV.W   #0x0, R15
+        MOVA    #RC_rxData, R13
+        MOVA    SP, R12
+        ADDA    #0x2, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   75     if(RC_rxData[0]==0xAA && RC_rxData[1]==0xAF)
+        CMPX.B  #0xaa, &RC_rxData
+        JNE     ??AnalyRC_0
+        CMPX.B  #0xaf, &RC_rxData + 1
+        JNE     ??AnalyRC_0
+//   76     {
+//   77         g_LedManager.emLEDStatus = StatusFlash;
+        MOVX.B  #0x3, &g_LedManager + 4
+//   78         
+//   79         Remote.roll =  ((uint16_t)RC_rxData[4]<<8)  | RC_rxData[5];  //通道1，横滚
+        MOVX.B  &RC_rxData + 5, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 4, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote
+//   80         Remote.pitch = ((uint16_t)RC_rxData[6]<<8)  | RC_rxData[7];  //通道2，俯仰
+        MOVX.B  &RC_rxData + 7, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 6, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 2
+//   81         Remote.thr =   ((uint16_t)RC_rxData[8]<<8)  | RC_rxData[9];   //通道3，油门
+        MOVX.B  &RC_rxData + 9, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 8, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 4
+//   82         Remote.yaw =   ((uint16_t)RC_rxData[10]<<8) | RC_rxData[11];   //通道4，偏航
+        MOVX.B  &RC_rxData + 11, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 10, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 6
+//   83         Remote.AUX1 =  ((uint16_t)RC_rxData[12]<<8) | RC_rxData[13];   //通道5  左上角按键属于通道5,也就是AUX1，定高功能  
+        MOVX.B  &RC_rxData + 13, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 12, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 8
+//   84         Remote.AUX2 =  ((uint16_t)RC_rxData[14]<<8) | RC_rxData[15];   //通道6  右上角按键属于通道6,也就是AUX2，一键起飞功能  
+        MOVX.B  &RC_rxData + 15, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 14, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 10
+//   85         Remote.AUX3 =  ((uint16_t)RC_rxData[16]<<8) | RC_rxData[17];   //通道7  没有提到功能的按键都属于备用 
+        MOVX.B  &RC_rxData + 17, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 16, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 12
+//   86         Remote.AUX4 =  ((uint16_t)RC_rxData[18]<<8) | RC_rxData[19];   //通道8  
+        MOVX.B  &RC_rxData + 19, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 18, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 14
+//   87         Remote.AUX5 =  ((uint16_t)RC_rxData[20]<<8) | RC_rxData[21];   //通道9  
+        MOVX.B  &RC_rxData + 21, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 20, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 16
+//   88         Remote.AUX6 =  ((uint16_t)RC_rxData[22]<<8) | RC_rxData[23];   //通道10 
+        MOVX.B  &RC_rxData + 23, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 22, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 18
+//   89         Remote.AUX7 =  ((uint16_t)RC_rxData[24]<<8) | RC_rxData[25];   //通道11 
+        MOVX.B  &RC_rxData + 25, R14
+        MOV.B   R14, R14
+        MOVX.B  &RC_rxData + 24, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R14, R15
+        MOVX.W  R15, &Remote + 20
+//   90         
+//   91         RCReceiveHandle();
+          CFI FunCall RCReceiveHandle
+        CALLA   #RCReceiveHandle
+//   92     }
+//   93     
+//   94     if((OldRemote.Start == 0xAAAA) && (OldRemote.Stop == 0x5555))
+??AnalyRC_0:
+        CMP.W   #0xaaaa, 0x2(SP)
+        JNE     ??AnalyRC_1
+        CMP.W   #0x5555, 0x1a(SP)
+        JNE     ??AnalyRC_1
+//   95     {
+//   96         g_LedManager.emLEDStatus = StatusFlash;
+        MOVX.B  #0x3, &g_LedManager + 4
+//   97         Remote.roll = OldRemote.ROLL;
+        MOVX.W  0xa(SP), &Remote
+//   98         Remote.pitch = OldRemote.PITCH;
+        MOVX.W  0x8(SP), &Remote + 2
+//   99         Remote.thr = OldRemote.THROTTLE;
+        MOVX.W  0x6(SP), &Remote + 4
+//  100         Remote.yaw =  OldRemote.YAW;
+        MOVX.W  0xc(SP), &Remote + 6
+//  101         Remote.AUX1 =  OldRemote.SW_THREE;
+        MOVX.W  0x10(SP), &Remote + 8
+//  102         Remote.AUX2 =  OldRemote.SW_TWO;
+        MOVX.W  0xe(SP), &Remote + 10
+//  103         Remote.AUX6 = OldRemote.ContrlBit;
+        MOVX.W  0x4(SP), &Remote + 18
+//  104         RCReceiveHandle();
+          CFI FunCall RCReceiveHandle
+        CALLA   #RCReceiveHandle
+//  105     }
+//  106 }
+??AnalyRC_1:
+        ADDA    #0x1c, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//  107  
+//  108 /******************************************************************************
+//  109   * 函数名称：RemoteUnlock
+//  110   * 函数描述：遥控器解锁操作
+//  111   * 输    入：void
+//  112   * 输    出：void
+//  113   * 返    回：void 
+//  114   * 备    注：null    
+//  115   *    
+//  116   *
+//  117 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  118 void RemoteUnlock(void)
+RemoteUnlock:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function RemoteUnlock
+//  119 {
+//  120     volatile static uint8_t status = WAITING_1;
+//  121 
+//  122     if(Remote.thr < 1150 &&Remote.yaw < 1200)                         //油门遥杆左下角锁定
+        CMPX.W  #0x47e, &Remote + 4
+        JC      ??RemoteUnlock_6
+        CMPX.W  #0x4b0, &Remote + 6
+        JC      ??RemoteUnlock_6
+//  123     {
+//  124         ResetAlt();
+          CFI FunCall ResetAlt
+        CALLA   #ResetAlt
+//  125         status = EXIT_255;
+        MOVX.B  #0xff, &??status
+//  126     }
+//  127     
+//  128     switch(status)
+??RemoteUnlock_6:
+        MOVX.B  &??status, R14
+        SUB.B   #0x1, R14
+        JEQ     ??RemoteUnlock_7
+        SUB.B   #0x1, R14
+        JEQ     ??RemoteUnlock_8
+        SUB.B   #0x1, R14
+        JEQ     ??RemoteUnlock_9
+        SUB.B   #0x1, R14
+        JEQ     ??RemoteUnlock_10
+        SUB.B   #0x1b, R14
+        JEQ     ??RemoteUnlock_11
+        SUB.B   #0xe0, R14
+        JEQ     ??RemoteUnlock_12
+        JMP     ??RemoteUnlock_5
+//  129     {
+//  130         case WAITING_1://等待解锁
+//  131             //解锁三步奏，油门最低->油门最高->油门最低 看到LED灯不闪了 即完成解锁            
+//  132             if(Remote.thr < 1100)  //第一步        
+??RemoteUnlock_7:
+        CMPX.W  #0x44c, &Remote + 4
+        JC      ??RemoteUnlock_1
+//  133             {             
+//  134                  status = WAITING_2;                 
+        MOVX.B  #0x2, &??status
+//  135             }        
+//  136             break;
+        RETA
+//  137         case WAITING_2://第二步 
+//  138             if(Remote.thr > 1800)          
+??RemoteUnlock_8:
+        CMPX.W  #0x709, &Remote + 4
+        JNC     ??RemoteUnlock_1
+//  139             {        
+//  140                 static uint8_t cnt = 0;
+//  141                  cnt++;        
+        ADDX.B  #0x1, &??cnt
+//  142                 if(cnt > 5) //最高油门需保持200ms以上，防止遥控开机初始化未完成的错误数据
+        CMPX.B  #0x6, &??cnt
+        JNC     ??RemoteUnlock_1
+//  143                 {    
+//  144                     cnt = 0;
+        MOVX.B  #0x0, &??cnt
+//  145                     status = WAITING_3;
+        MOVX.B  #0x3, &??status
+//  146                 }
+//  147             }            
+//  148             break;
+        RETA
+//  149         case WAITING_3:
+//  150             if(Remote.thr < 1100)  //第三步        
+??RemoteUnlock_9:
+        CMPX.W  #0x44c, &Remote + 4
+        JC      ??RemoteUnlock_1
+//  151             {             
+//  152                 status = WAITING_4;                 
+        MOVX.B  #0x4, &??status
+//  153             }
+//  154             break;            
+        RETA
+//  155         case WAITING_4:    //解锁前准备                   
+//  156             g_FMUflg.unlock = 1;   //解锁标志位
+??RemoteUnlock_10:
+        BISX.B  #0x1, &g_FMUflg
+//  157 
+//  158             status = PROCESS_31;   //进入控制
+        MOVX.B  #0x1f, &??status
+//  159             break;
+        RETA
+//  160         case PROCESS_31:    //进入解锁状态
+//  161             if(!g_FMUflg.unlock)                           //其它紧急情况可直接锁定飞控
+??RemoteUnlock_11:
+        BITX.B  #0x1, &g_FMUflg
+        JC      ??RemoteUnlock_1
+//  162             {
+//  163                 status = EXIT_255;                
+        MOVX.B  #0xff, &??status
+//  164             }
+//  165 
+//  166             break;
+        RETA
+//  167         case EXIT_255: //进入锁定                           
+//  168             g_FMUflg.unlock = 0;           //锁定
+??RemoteUnlock_12:
+        BICX.B  #0x1, &g_FMUflg
+//  169             status = WAITING_1;     //返回等待解锁
+        MOVX.B  #0x1, &??status
+//  170             break;
+        RETA
+//  171         default:
+//  172             status = EXIT_255;
+??RemoteUnlock_5:
+        MOVX.B  #0xff, &??status
+//  173             break;
+//  174     }
+//  175 }
+??RemoteUnlock_1:
+        RETA
+          CFI EndBlock cfiBlock1
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_copy20
+??status:
+        DS8 1
+        REQUIRE `?<Initializer for status>`
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+??cnt:
+        DS8 1
+//  176 
+//  177 /******************************************************************************
+//  178   * 函数名称：RCReceiveHandle
+//  179   * 函数描述：遥控器数据接收处理函数
+//  180   * 输    入：void
+//  181   * 输    出：void
+//  182   * 返    回：void
+//  183   * 备    注：null
+//  184   *    
+//  185   *
+//  186 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  187 void RCReceiveHandle()
+RCReceiveHandle:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function RCReceiveHandle
+//  188 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  189     const float roll_pitch_ratio = 0.04f;  //遥控控制姿态的量
+        MOV.W   #0xd70a, R10
+        MOV.W   #0x3d23, R11
+//  190       
+//  191     PIDGroup[emPID_Pitch_Pos].desired = ((Remote.pitch * 1.0f)-1500)*roll_pitch_ratio;	    //将遥杆值作为飞行角度的期望值  
+        MOVX.W  &Remote + 2, R12
+        MOV.W   #0x0, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f80, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   #0x8000, R14
+        MOV.W   #0xc4bb, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  R12, &PIDGroup + 212
+        MOVX.W  R13, &PIDGroup + 214
+//  192     PIDGroup[emPID_Roll_Pos].desired = ((Remote.roll * 1.0f)-1500)*roll_pitch_ratio;	
+        MOVX.W  &Remote, R12
+        MOV.W   #0x0, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f80, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   #0x8000, R14
+        MOV.W   #0xc4bb, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  R12, &PIDGroup + 276
+        MOVX.W  R13, &PIDGroup + 278
+//  193     
+//  194     if(Remote.yaw > 1800 )
+        CMPX.W  #0x709, &Remote + 6
+        JNC     ??RCReceiveHandle_6
+//  195     {    //以下为遥控控制偏航角 +-号代表方向 0.75代表控制偏航角的旋转量                            
+//  196         PIDGroup[emPID_Yaw_Pos].desired -= 2;    
+        MOVX.W  &PIDGroup + 340, R12
+        MOVX.W  &PIDGroup + 342, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0xc000, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &PIDGroup + 340
+        MOVX.W  R13, &PIDGroup + 342
+        JMP     ??RCReceiveHandle_5
+//  197     }
+//  198     else if(Remote.yaw <1200)
+??RCReceiveHandle_6:
+        CMPX.W  #0x4b0, &Remote + 6
+        JC      ??RCReceiveHandle_5
+//  199     {
+//  200         PIDGroup[emPID_Yaw_Pos].desired += 2;
+        MOVX.W  &PIDGroup + 340, R12
+        MOVX.W  &PIDGroup + 342, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &PIDGroup + 340
+        MOVX.W  R13, &PIDGroup + 342
+//  201     }
+//  202     
+//  203     switch(Remote.AUX1)
+??RCReceiveHandle_5:
+        MOVX.W  &Remote + 8, R15
+        SUB.W   #0x3e8, R15
+        JEQ     ??RCReceiveHandle_7
+        SUB.W   #0x1f4, R15
+        JEQ     ??RCReceiveHandle_8
+        SUB.W   #0x1f4, R15
+        JMP     ??RCReceiveHandle_4
+//  204     {
+//  205         case 1000:
+//  206             g_UAVinfo.UAV_Mode = Stabilize_Mode;
+??RCReceiveHandle_7:
+        MOVX.B  #0x0, &g_UAVinfo + 5
+//  207             break;
+        JMP     ??RCReceiveHandle_4
+//  208         case 1500:
+//  209             g_UAVinfo.UAV_Mode = Altitude_Hold;
+??RCReceiveHandle_8:
+        MOVX.B  #0x1, &g_UAVinfo + 5
+//  210 
+//  211             if(Remote.thr > 1800)
+        CMPX.W  #0x709, &Remote + 4
+        JNC     ??RCReceiveHandle_9
+//  212             {
+//  213                 PIDGroup[emPID_Height_Pos].desired += 1  ;
+        MOVX.W  &PIDGroup + 468, R12
+        MOVX.W  &PIDGroup + 470, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f80, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &PIDGroup + 468
+        MOVX.W  R13, &PIDGroup + 470
+        JMP     ??RCReceiveHandle_4
+//  214             }else if(Remote.thr < 1200)
+??RCReceiveHandle_9:
+        CMPX.W  #0x4b0, &Remote + 4
+        JC      ??RCReceiveHandle_4
+//  215             {
+//  216                 PIDGroup[emPID_Height_Pos].desired -= 1;
+        MOVX.W  &PIDGroup + 468, R12
+        MOVX.W  &PIDGroup + 470, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0xbf80, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &PIDGroup + 468
+        MOVX.W  R13, &PIDGroup + 470
+//  217             }
+//  218             break;
+//  219         case 2000:
+//  220 
+//  221             break;
+//  222         default:
+//  223             break;
+//  224     }
+//  225     
+//  226     switch(Remote.AUX2)
+??RCReceiveHandle_4:
+        MOVX.W  &Remote + 10, R15
+        SUB.W   #0x3e8, R15
+        JEQ     ??RCReceiveHandle_10
+        SUB.W   #0x3e8, R15
+        JMP     ??RCReceiveHandle_3
+//  227     {
+//  228         case 2000:
+//  229             
+//  230             break;
+//  231         case 1000:
+//  232             g_FMUflg.unlock = 0;
+??RCReceiveHandle_10:
+        BICX.B  #0x1, &g_FMUflg
+//  233             break;
+//  234     }
+//  235     
+//  236     if(Remote.AUX6)
+??RCReceiveHandle_3:
+        CMPX.W  #0x0, &Remote + 18
+        JEQ     ??RCReceiveHandle_11
+//  237     {
+//  238         if(g_UAVinfo.UAV_Mode == Altitude_Hold)
+        CMPX.B  #0x1, &g_UAVinfo + 5
+        JNE     ??RCReceiveHandle_11
+//  239         {
+//  240             g_FMUflg.unlock = 1;
+        BISX.B  #0x1, &g_FMUflg
+//  241         }
+//  242     }
+//  243     
+//  244     RemoteUnlock();
+??RCReceiveHandle_11:
+          CFI FunCall RemoteUnlock
+        CALLA   #RemoteUnlock
+//  245 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+//  246 
+//  247 /******************************************************************************
+//  248   * 函数名称：UpdateFMUToRemote
+//  249   * 函数描述：更新飞控数据到遥控器
+//  250   * 输    入：void
+//  251   * 输    出：void
+//  252   * 返    回：void 
+//  253   * 备    注：此函数周期运行，通过遥控器把数据穿给上位机
+//  254   *    
+//  255   *
+//  256 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  257 void UpdateFMUToRemote()
+UpdateFMUToRemote:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function UpdateFMUToRemote
+//  258 {
+        SUBA    #0x22, SP
+          CFI CFA SP+38
+//  259     uint8_t Buff[QUEUE_DATA_MAXLENGTH];
+//  260     uint8_t length;
+//  261 
+//  262     if(deQueue(&USB_Send_Queue, Buff,&length))
+        MOVA    SP, R14
+        MOVA    SP, R13
+        ADDA    #0x2, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall deQueue
+        CALLA   #deQueue
+        CMP.B   #0x0, R12
+        JEQ     ??UpdateFMUToRemote_0
+//  263     {
+//  264         NRF_Mannager.Hardware_Mannager->send_buff(Buff);
+        MOVA    SP, R12
+        ADDA    #0x2, R12
+        MOVA    &NRF_Mannager, R15
+        MOVA    0x20(R15), R15
+          CFI FunCall
+        CALLA   R15
+//  265     }
+//  266 }
+??UpdateFMUToRemote_0:
+        ADDA    #0x22, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(0)
+`?<Initializer for status>`:
+        DATA8
+        DC8 1
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  267 
+//  268 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 1 122 bytes in segment CODE
+//     1 byte  in segment DATA20_I
+//     1 byte  in segment DATA20_ID
+//    55 bytes in segment DATA20_Z
+// 
+// 1 122 bytes of CODE  memory
+//     1 byte  of CONST memory
+//    56 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,346 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:42
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_dma.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW54DE.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_dma.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_dma.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_dma.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_dma.c
+      1          #include "msp430f5529_dma.h"
+
+   \                                 In  segment DATA16_AN, at 0x500
+   \   union <unnamed> __data16 _A_DMACTL0_L
+   \                     _A_DMACTL0_L:
+   \   000000                DS8 2
+      2          
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      3          const DMA_MemMapPtr      DMAX = DMA_BASE_PTR;
+   \                     DMAX:
+   \   000000   00050000     DC32 500H
+      4          /*******************************************************************************
+      5          *  函数名称：DMA_Init(DMA_CHn dma_ch, void *SADDR, void *DADDR, DMA_Trigger Trigger, uint16_t count, uint16_t config)
+      6          *  功能说明：初始化一个DMA通道
+      7          *  参数说明：DMA_CHn dma_ch             :DMA通道
+      8                       void *SADDR                :DMA传输源地址
+      9                       void *DADDR                :DMA传输目的地址
+     10                       DMA_Trigger Trigger        :DMA传输触发条件
+     11                       uint16_t count               :DMA传输次数
+     12                       uint16_t config              :DMA传输配置
+     13          *  函数返回：无
+     14          *  使用示例： DMA_Init(DMA_CH2, &Sdata, &DData,DMATSEL_DMA_REQ,255,  DMA_SRCAddr_KeepOn|DMA_DSTAddr_KeepOn|DMA_WORD|DMA_Single|DMA_Edge);
+     15                                 //通道2，源地址，目的地址，触发源，传输255个字，源地址不变，目的地址不变，字传输，单次触发，边沿触发
+     16          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     17          void DMA_Init(DMA_CHn dma_ch, void *SADDR, void *DADDR, DMA_Trigger Trigger, uint16_t count, uint16_t config)
+   \                     DMA_Init:
+     18          { 
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   4A4C         MOV.B   R12, R10
+     19            DMAX->CHX[dma_ch].EN = RESET;                          //关闭DMA模块
+   \   000004   4C4A         MOV.B   R10, R12
+   \   000006   4C0E         RLAM.A  #0x4, R12
+   \   000008   4018BCC01000 BICX.W  #0x10, 0x510(R12)
+   \            1005        
+     20            DMAX->CHX[dma_ch].DA = (uint32_t)DADDR;                  //设置目的地址
+   \   000010   0E14         PUSHM.A #0x1, R14
+   \   000012   1817         POPM.W  #0x2, R9
+   \   000014   40188C481605 MOVX.W  R8, 0x516(R12)
+   \   00001A   40188C491805 MOVX.W  R9, 0x518(R12)
+     21            DMAX->CHX[dma_ch].SA = (uint32_t)SADDR;                  //设置源地址
+   \   000020   0D14         PUSHM.A #0x1, R13
+   \   000022   1817         POPM.W  #0x2, R9
+   \   000024   40188C481205 MOVX.W  R8, 0x512(R12)
+   \   00002A   40188C491405 MOVX.W  R9, 0x514(R12)
+     22            DMAX->CHX[dma_ch].SZ = count;                          //设置写入数据大小
+   \   000030   40189C411400 MOVX.W  0x14(SP), 0x51a(R12)
+   \            1A05        
+     23            
+     24            //DMAX->TSSEL[dma_ch] = Trigger;                         //这样写会有问题，不知道为什么！
+     25            if((dma_ch%2) == 0)
+   \   000038   4E4A         MOV.B   R10, R14
+   \   00003A   5E03         RRUM.W  #0x1, R14
+   \   00003C   0E5E         RLA.W   R14
+   \   00003E   0A8E         SUB.W   R14, R10
+   \   000040   0520         JNE     ??DMA_Init_1
+     26            {
+     27             *(&DMACTL0 + (dma_ch/2)) &= 0xFF00;      //先清除触发源
+   \   000042   BEF000FF0005 AND.W   #0xff00, 0x500(R14)
+     28             *(&DMACTL0 + (dma_ch/2)) |= Trigger;     //再设置触发源
+   \   000048   4F4F         MOV.B   R15, R15
+   \   00004A   053C         JMP     ??DMA_Init_0
+     29            }
+     30            else
+     31            {
+     32              *(&DMACTL0 + (dma_ch/2)) &= 0x00FF;
+   \                     ??DMA_Init_1:
+   \   00004C   BEF0FF000005 AND.W   #0xff, 0x500(R14)
+     33              *(&DMACTL0 + (dma_ch/2)) |= Trigger<<8;
+   \   000052   4F4F         MOV.B   R15, R15
+   \   000054   8F10         SWPB    R15
+   \                     ??DMA_Init_0:
+   \   000056   8EDF0005     BIS.W   R15, 0x500(R14)
+     34            }
+     35            DMAX->CHX[dma_ch].CTL = config;                       //配置DMA模块
+   \   00005A   40189C411600 MOVX.W  0x16(SP), 0x510(R12)
+   \            1005        
+     36            DMAX->CHX[dma_ch].EN = BIT_SET;                           //使能DMA模块
+   \   000062   4018BCD01000 BISX.W  #0x10, 0x510(R12)
+   \            1005        
+     37          }
+   \   00006A   3816         POPM.A  #0x4, R11
+   \   00006C   1001         RETA
+   \   00006E                REQUIRE _A_DMACTL0_L
+     38          /*******************************************************************************
+     39          *  函数名称：DMA_Cmd  (DMA_CHn dma_ch,BOOL State)
+     40          *  功能说明：DMA使能或禁止
+     41          *  参数说明：DMA_CHn dma_ch     :DMA传输通道
+     42                       STATUS State       :DMA是否使能
+     43          *  函数返回：无
+     44          *  使用示例：DMA_Cmd  (DMA_CH1,ENABLE);  //使能DMA通道1
+     45          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     46          void DMA_Cmd  (DMA_CHn dma_ch,STATUS State)
+   \                     DMA_Cmd:
+     47          {
+     48            DMAX->CHX[dma_ch].EN = State; 
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C0E         RLAM.A  #0x4, R12
+   \   000004   5DB3         BIT.B   #0x1, R13
+   \   000006   0520         JNE     ??DMA_Cmd_0
+   \   000008   4018BCC01000 BICX.W  #0x10, 0x510(R12)
+   \            1005        
+   \   000010   1001         RETA
+   \                     ??DMA_Cmd_0:
+   \   000012   4018BCD01000 BISX.W  #0x10, 0x510(R12)
+   \            1005        
+     49          }
+   \   00001A   1001         RETA
+     50          /*******************************************************************************
+     51          *  函数名称：DMA_SoftwareTrigger(DMA_CHn dma_ch)
+     52          *  功能说明：软件触发一次DMA传输
+     53          *  参数说明：DMA_CHn dma_ch     :DMA传输通道
+     54          *  函数返回：无
+     55          *  使用示例：DMA_SoftwareTrigger(DMA_CH1);  //软件触发一次DMA通道1传输
+     56          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     57          void DMA_SoftwareTrigger(DMA_CHn dma_ch)
+   \                     DMA_SoftwareTrigger:
+     58          {    
+     59            DMAX->CHX[dma_ch].REQ = RESET; 
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C0E         RLAM.A  #0x4, R12
+   \   000004   40189CC31005 BICX.W  #0x1, 0x510(R12)
+     60            DMAX->CHX[dma_ch].REQ = BIT_SET; 
+   \   00000A   40189CD31005 BISX.W  #0x1, 0x510(R12)
+     61          }
+   \   000010   1001         RETA
+     62          /*******************************************************************************
+     63          *  函数名称：DMA_ITConfig (DMA_CHn dma_ch,STATUS ITState)
+     64          *  功能说明：设置是否使能DMA某一通道完成中断
+     65          *  参数说明：DMA_CHn dma_ch     :DMA传输通道
+     66                       BOOL ITState       :是否使能DMA传输完成中断
+     67          *  函数返回：无
+     68          *  使用示例：DMA_ITConfig (DMA_CH0,ENABLE);  //使能DMA通道1传输完成中断
+     69          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     70          void DMA_ITConfig (DMA_CHn dma_ch,STATUS ITState)
+   \                     DMA_ITConfig:
+     71          {
+     72            DMAX->CHX[dma_ch].IFG = RESET;
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C0E         RLAM.A  #0x4, R12
+   \   000004   4018BCC21005 BICX.W  #0x8, 0x510(R12)
+     73            DMAX->CHX[dma_ch].IE = ITState; 
+   \   00000A   5DB3         BIT.B   #0x1, R13
+   \   00000C   0420         JNE     ??DMA_ITConfig_0
+   \   00000E   4018ACC21005 BICX.W  #0x4, 0x510(R12)
+   \   000014   1001         RETA
+   \                     ??DMA_ITConfig_0:
+   \   000016   4018ACD21005 BISX.W  #0x4, 0x510(R12)
+     74          }
+   \   00001C   1001         RETA
+     75          /*******************************************************************************
+     76          *  函数名称：DMA_GetITStatus(DMA_CHn dma_ch)
+     77          *  功能说明：判断某一个通道中断标志位状态
+     78          *  参数说明：DMA_CHn dma_ch     :DMA传输通道
+     79          *  函数返回：STATUS  :TRUE 中断事件发生 FALSE 中断事件未发生
+     80          *  使用示例：if(TRUE == DMA_GetITStatus(DMA_CH0)){...}  //判断DMA通道1是否发生传输完成中断
+     81          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     82          STATUS DMA_GetITStatus(DMA_CHn dma_ch)
+   \                     DMA_GetITStatus:
+     83          {
+     84            return ((DMAX->CHX[dma_ch].IFG) ? TRUE : FALSE);
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C0E         RLAM.A  #0x4, R12
+   \   000004   40181E4C1005 MOVX.W  0x510(R12), R14
+   \   00000A   7EB2         BIT.B   #0x8, R14
+   \   00000C   0C7C         SUBC.W  R12, R12
+   \   00000E   5C53         ADD.B   #0x1, R12
+   \   000010   1001         RETA
+     85          }
+     86          /*******************************************************************************
+     87          *  函数名称：DMA_ClearITPendingBit(DMA_CHn dma_ch)
+     88          *  功能说明：DMA清除某一通道中断标志
+     89          *  参数说明：DMA_CHn dma_ch     :DMA传输通道
+     90          *  函数返回：无
+     91          *  使用示例：DMA_ClearITPendingBit(DMA_CH0);  //清除DMA通道1传输完成中断标志位
+     92          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     93          void DMA_ClearITPendingBit(DMA_CHn dma_ch)
+   \                     DMA_ClearITPendingBit:
+     94          {
+     95            DMAX->CHX[dma_ch].IFG = RESET;
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C0E         RLAM.A  #0x4, R12
+   \   000004   4018BCC21005 BICX.W  #0x8, 0x510(R12)
+     96          }
+   \   00000A   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   DMA_ClearITPendingBit
+      4   DMA_Cmd
+      4   DMA_GetITStatus
+      4   DMA_ITConfig
+     24   DMA_Init
+      4   DMA_SoftwareTrigger
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  DMAX
+      12  DMA_ClearITPendingBit
+      28  DMA_Cmd
+      18  DMA_GetITStatus
+      30  DMA_ITConfig
+     110  DMA_Init
+      18  DMA_SoftwareTrigger
+       2  _A_DMACTL0_L
+
+ 
+ 216 bytes in segment CODE
+   2 bytes in segment DATA16_AN
+   4 bytes in segment DATA20_C
+ 
+ 216 bytes of CODE  memory
+   4 bytes of CONST memory
+   0 bytes of DATA  memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: none

@@ -1,0 +1,1503 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          26/Sep/2018  16:44:42
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\msp430f5529_adc.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW5307.tmp
+//        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\msp430f5529_adc.c" -D NDEBUG -D RAM_VECTOR -lC
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List" -lA
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List" -o
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_config\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\KEY\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LED\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\12864\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\oled\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\mpu6050\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\mpu6050\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nokia5110\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nokia5110\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LQ_1.8_TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LCD_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\2.2TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\delay\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\User\USER\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\UCOSII\CONFIG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\App\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\CONFIHG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\PORT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\UCOSII\CORE\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\FatFs\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\FatFs\option\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+//        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nrf24l01\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\MATH\" --core=430X --data_model=large -Oh --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List\msp430f5529_adc.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME msp430f5529_adc
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC ADC12
+        PUBLIC ADC_ClearITPendingBit
+        PUBLIC ADC_DeInit
+        PUBLIC ADC_GetChanelMemoryAddr
+        PUBLIC ADC_GetITStatus
+        PUBLIC ADC_ITConfig
+        PUBLIC ADC_Init
+        PUBLIC ADC_ReadChanelOnce
+        PUBLIC ADC_ReadChanelValue
+        PUBLIC ADC_StartConv
+        PUBLIC ADC_WaitBusy
+        PUBWEAK _A_PCSEL_L
+        PUBWEAK _A_REFCTL0_L
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        
+          CFI Common cfiCommon1 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L SameValue
+          CFI R12H SameValue
+          CFI R12 Concat
+          CFI R13L SameValue
+          CFI R13H SameValue
+          CFI R13 Concat
+          CFI R14L SameValue
+          CFI R14H SameValue
+          CFI R14 Concat
+          CFI R15L SameValue
+          CFI R15H SameValue
+          CFI R15 Concat
+          CFI EndCommon cfiCommon1
+        
+        EXTERN UCS
+        EXTERN GPIO_MultiBits_Init
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_adc.c
+//    1 #include "msp430f5529_adc.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,024aH
+// union <unnamed> __data16 _A_PCSEL_L
+_A_PCSEL_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,01b0H
+// union <unnamed> __data16 _A_REFCTL0_L
+_A_REFCTL0_L:
+        DS8 2
+//    2 #include "msp430f5529_system.h"
+//    3 
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    4 const ADC_MemMapPtr ADC12 = ADC_BASE_PTR;     //ADC寄存器结构体
+ADC12:
+        DATA32
+        DC32 700H
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//    5 static uint8_t  InitialedChannel_Num = 0u;      //ADC初始化的通道数，因为可能会多次初始化多个通道，这里取静态变量
+InitialedChannel_Num:
+        DS8 1
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    6 static uint16_t InitialedChannel_Bit = 0u;      //已经初始化的ADC通道
+InitialedChannel_Bit:
+        DS8 2
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    7 static uint16_t ADC_Channel_Bit[ADC_CH_NUM] = {0u};   //内部初始化标志位
+ADC_Channel_Bit:
+        DS8 32
+//    8 static inline int8_t  ADC_GetChanelNum(ADC_CHn ch); //内部函数
+//    9 /*******************************************************************************
+//   10 *  函数名称：ADC_Init(uint16_t ch,ADC_VREF Vref,ADC_Resolution nBit)
+//   11 *  功能说明：ADC初始化一个或多个ADC通道
+//   12 *  参数说明：
+//   13             uint16_t ch     :要初始化的通道
+//   14             ADCVREF Vref    :参考电压
+//   15             ADC_Resolution nBit   :转换精度
+//   16 *  函数返回：无
+//   17 *  注意    ：1：初始化后所有通道精度相同，即所有通道转换精度只取决于最后一次配置的精度
+//   18              2：所有通道内部参考电压只能使用1.5或2.5V中的一种
+//   19 *  使用示例：ADC_Init(ADC_CH1+ADC_CH3,ADC_VREF_1_5V,ADC_10bit);        //同时初始化两个通道，使用内部提供的1.5V参考电压，10位精度
+//   20 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   21 void ADC_Init(uint16_t ch,ADC_VREF Vref,ADC_Resolution nBit)
+ADC_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function ADC_Init
+//   22 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.W   R12, R10
+        MOV.B   R13, R12
+        MOV.B   R14, R13
+//   23   ADC12->ENC = DISABLE;                 //先对该位复位，否则置位后有些寄存器不能再进行操作
+        BIC.W   #0x2, &0x700
+//   24   uint16_t SREF_RegValue = 0u;
+        MOV.B   #0x0, R15
+//   25   switch(Vref)           //选择参考电压
+        SUB.B   #0x0, R12
+        JEQ     ??ADC_Init_9
+        SUB.B   #0x1, R12
+        JEQ     ??ADC_Init_10
+        SUB.B   #0x2, R12
+        JEQ     ??ADC_Init_11
+        JMP     ??ADC_Init_6
+//   26   {
+//   27   case ADC_VREF_1_5V:
+//   28     REFCTL0 &=~ REFMSTR;                //把REF参考电压控制权交给ADC
+??ADC_Init_9:
+        CALLA   #?Subroutine0
+//   29     ADC12->ADCREFON = BIT_SET;
+//   30     ADC12->REF2_5V = RESET;
+??CrossCallReturnLabel_0:
+        BIC.W   #0x40, &0x700
+//   31     SREF_RegValue = ADC12_SREF_1;       //使用内部提供的参考电压
+        JMP     ??ADC_Init_7
+//   32     break;
+//   33   case ADC_VREF_2_5V:
+//   34     REFCTL0 &=~ REFMSTR;
+??ADC_Init_10:
+        CALLA   #?Subroutine0
+//   35     ADC12->ADCREFON = BIT_SET;
+//   36     ADC12->REF2_5V = BIT_SET;
+??CrossCallReturnLabel_1:
+        BIS.W   #0x40, &0x700
+//   37     SREF_RegValue = ADC12_SREF_1;       //使用内部提供的参考电压
+??ADC_Init_7:
+        MOV.B   #0x1, R15
+//   38     break;
+        JMP     ??ADC_Init_6
+//   39   case ADC_VREF_External:      
+//   40     P5SEL |= BIT0;       //VeREF+
+??ADC_Init_11:
+        BIS.B   #0x1, &0x24a
+//   41     P5SEL |= BIT1;       //VeREF-
+        BIS.B   #0x2, &0x24a
+//   42     SREF_RegValue = ADC12_SREF_2;       //使用外部参考电压
+//   43   case ADC_VREF_3_3V:
+//   44     SREF_RegValue = ADC12_SREF_0;       //使用电源电压作为参考电压,
+//   45     break;
+//   46   default :break;
+//   47   }
+//   48   //初始化通道
+//   49   uint16_t CH_Mask = 0x01;
+??ADC_Init_6:
+        MOV.W   #0x1, R12
+//   50   for(uint8_t CH_Num=0; CH_Num < ADC_CH_NUM; CH_Num++)
+        MOV.B   #0x0, R11
+        MOVA    #InitialedChannel_Num, R8
+//   51   {
+//   52     if(ch & CH_Mask)   //要初始化的通道
+??ADC_Init_1:
+        BIT.W   R12, R10
+        JEQ     ??ADC_Init_8
+//   53     {
+//   54       if((CH_Mask & InitialedChannel_Bit) == 0)   //如果该通道未被初始化过               
+        MOVX.W  &InitialedChannel_Bit, R14
+        BIT.W   R14, R12
+        JNE     ??ADC_Init_12
+        MOV.B   @R8, R14
+        MOV.B   R11, R9
+        AND.B   #0xf, R9
+        MOVX.B  0x710(R14), R6
+        AND.B   #0xf0, R6
+        BIS.B   R9, R6
+        MOVX.B  R6, 0x710(R14)
+//   55       {
+//   56         ADC12->MCTL[InitialedChannel_Num].INCH = CH_Num;
+//   57         ADC12->MCTL[InitialedChannel_Num].REF  = SREF_RegValue;                 //参考电压选择，通道设置
+        MOV.B   R15, R9
+        RLAM.W  #0x4, R9
+        MOVX.B  0x710(R14), R6
+        AND.B   #0x8f, R6
+        BIS.B   R9, R6
+        MOVX.B  R6, 0x710(R14)
+//   58         ADC_Channel_Bit[InitialedChannel_Num] = CH_Mask;                        //将该通道初始化标志置位                                                    
+        ADDA    R14, R14
+        MOVX.W  R12, ADC_Channel_Bit(R14)
+//   59         InitialedChannel_Bit |= CH_Mask;                                        //置位已初始化的通道标志位
+        BISX.W  R12, &InitialedChannel_Bit
+//   60         InitialedChannel_Num ++;                                                //初始化的通道数加1
+        ADD.B   #0x1, 0(R8)
+        JMP     ??ADC_Init_8
+//   61       }
+//   62       else                                      //如果是之前已经初始化过的通道，则要在这里从新设置一下，只设置通道参考电压
+//   63       {
+//   64         ADC12->MCTL[ADC_GetChanelNum((ADC_CHn)CH_Mask)].REF = SREF_RegValue;   //改变参考电压                                  
+??ADC_Init_12:
+        MOV.B   #0x0, R14
+        MOVA    #ADC_Channel_Bit, R9
+??ADC_Init_0:
+        CMP.W   @R9, R12
+        JEQ     ??ADC_Init_3
+        ADD.B   #0x1, R14
+        CMP.W   0x2(R9), R12
+        JEQ     ??ADC_Init_3
+        ADD.B   #0x1, R14
+        CMP.W   0x4(R9), R12
+        JEQ     ??ADC_Init_3
+        ADD.B   #0x1, R14
+        CMP.W   0x6(R9), R12
+        JEQ     ??ADC_Init_3
+        ADD.B   #0x1, R14
+        ADDA    #0x8, R9
+        CMP.B   #0x10, R14
+        JNC     ??ADC_Init_0
+        MOV.B   #0xff, R14
+//   65       }
+//   66     }
+??ADC_Init_3:
+        SXT     R14
+        MOVA    R14, R9
+        MOV.B   R15, R14
+        RLAM.W  #0x4, R14
+        MOVX.B  0x710(R9), R6
+        AND.B   #0x8f, R6
+        BIS.B   R14, R6
+        MOVX.B  R6, 0x710(R9)
+//   67     CH_Mask <<= 1;
+??ADC_Init_8:
+        RLA.W   R12
+//   68   }
+        ADD.B   #0x1, R11
+        CMP.B   #0x10, R11
+        JNC     ??ADC_Init_1
+//   69   if(InitialedChannel_Num > 1)                 //有多个通道时要加上序列通道结束位
+        MOV.B   @R8, R14
+        CMP.B   #0x2, R14
+        JNC     ??ADC_Init_13
+//   70   {
+//   71     for(int i=0; i<(InitialedChannel_Num-1); i++)   //前面所有通道序列结束位清零
+        MOVA    #0x710, R11
+        MOV.B   R14, R15
+        ADD.W   #0xffff, R15
+        MOV.W   R15, R8
+//   72     {
+//   73       ADC12->MCTL[i].EOS = RESET;
+??ADC_Init_2:
+        BIC.B   #0x80, 0(R11)
+//   74     }
+        ADDA    #0x1, R11
+        ADD.W   #0xffff, R8
+        JNE     ??ADC_Init_2
+//   75     ADC12->MCTL[InitialedChannel_Num-1].EOS = BIT_SET;  //最后一通道加上序列通道转换结束位
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        BISX.B  #0x80, 0x710(R15)
+//   76   }
+//   77   //一般配置
+//   78   ADC12->SHT0 = M0_M7_SAMPLE_HOLD_TIME; //0-7通道采样与保持时间
+??ADC_Init_13:
+        MOV.W   &0x700, R15
+        AND.W   #0xf0ff, R15
+        BIS.W   #0x300, R15
+        MOV.W   R15, &0x700
+//   79   ADC12->SHT1 = M8_M15_SAMPLE_HOLD_TIME;//8-15通道采样与保持时间
+        MOV.W   &0x700, R15
+        AND.W   #0xfff, R15
+        BIS.W   #0x3000, R15
+        MOV.W   R15, &0x700
+//   80   ADC12->ON = BIT_SET;                      // 采样时间，AD内核开启
+        BIS.W   #0x10, &0x700
+//   81   ADC12->MSC = BIT_SET;
+        BIS.W   #0x80, &0x700
+//   82   ADC12->SSEL = ADC12_SSEL_ADC12OSC;    //时钟选择
+        AND.W   #0xffe7, &0x702
+//   83   ADC12->SHP = BIT_SET;
+        BIS.W   #0x200, &0x702
+//   84   ADC12->CONSEQ = (InitialedChannel_Num > 1) ? BIT_SET : RESET;//有多个通道时设为序列通道单次转换模式,单个通道时设为单通道单次转换模式              
+        CMP.B   #0x2, R14
+        SUBC.W  R15, R15
+        ADD.W   #0x1, R15
+        CALLA   #?Subroutine3
+//   85   //设置ADC精度
+//   86   ADC12->RES = nBit;    
+??CrossCallReturnLabel_9:
+        RLAM.W  #0x4, R13
+        AND.W   #0x30, R13
+        MOV.W   &0x704, R15
+        AND.W   #0xffcf, R15
+        BIS.W   R13, R15
+        MOV.W   R15, &0x704
+//   87   //开启时钟
+//   88   UCS->MODOSC_REQEN = BIT_SET;                                                   //ADC使用的是MODCLK 所以在这里配置该时钟，约5MHz左右
+        MOVA    &UCS, R15
+        BIS.B   #0x8, 0x10(R15)
+//   89   //配置通道为第二功能
+//   90   if(ch & 0x00ff)
+        CMP.B   #0x0, R10
+        JEQ     ??ADC_Init_14
+//   91   {
+//   92      GPIO_MultiBits_Init(P6,(ch & 0x00ff),GPI | SEL);
+        MOV.W   #0x101, R14
+        CALLA   #?Subroutine7
+//   93   }
+//   94   if(ch & 0xf000)
+??ADC_Init_14:
+        BIT.W   #0xf000, R10
+        JEQ     ??ADC_Init_15
+//   95   {
+//   96      GPIO_MultiBits_Init(P7,((ch & 0xf000)>>12),GPI | SEL);
+        MOV.W   #0x101, R14
+        MOV.W   R10, R13
+        SWPB    R13
+        AND.B   #0xff, R13
+        RRAM.W  #0x4, R13
+        MOV.B   #0x6, R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   97   }
+//   98   if(ch & ADC_CH10) //如果使用了温度传感器通道，则开启温度传感器
+??ADC_Init_15:
+        BIT.W   #0x400, R10
+        JEQ     ??ADC_Init_5
+//   99   {
+//  100     ADC12->TCOFF = RESET;
+        BIC.W   #0x40, &0x704
+//  101   }
+//  102   ADC12->ENC = ENABLE;                                                        //该位必须在初始化完成后再置位
+??ADC_Init_5:
+        BIS.W   #0x2, &0x700
+//  103   //DELAY_MS(5);                                                                 //延时等待参考电压建立
+//  104 }
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_REFCTL0_L
+        REQUIRE _A_PCSEL_L
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine0:
+          CFI Block cfiCond1 Using cfiCommon0
+          CFI Function ADC_Init
+          CFI Conditional ??CrossCallReturnLabel_0
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+32
+          CFI Block cfiCond2 Using cfiCommon0
+          CFI (cfiCond2) Function ADC_Init
+          CFI (cfiCond2) Conditional ??CrossCallReturnLabel_1
+          CFI (cfiCond2) R6L Frame(CFA, -28)
+          CFI (cfiCond2) R6H Frame(CFA, -26)
+          CFI (cfiCond2) R7L Frame(CFA, -24)
+          CFI (cfiCond2) R7H Frame(CFA, -22)
+          CFI (cfiCond2) R8L Frame(CFA, -20)
+          CFI (cfiCond2) R8H Frame(CFA, -18)
+          CFI (cfiCond2) R9L Frame(CFA, -16)
+          CFI (cfiCond2) R9H Frame(CFA, -14)
+          CFI (cfiCond2) R10L Frame(CFA, -12)
+          CFI (cfiCond2) R10H Frame(CFA, -10)
+          CFI (cfiCond2) R11L Frame(CFA, -8)
+          CFI (cfiCond2) R11H Frame(CFA, -6)
+          CFI (cfiCond2) CFA SP+32
+          CFI Block cfiPicker3 Using cfiCommon1
+          CFI (cfiPicker3) NoFunction
+          CFI (cfiPicker3) Picker
+        BIC.W   #0x80, &0x1b0
+        BIS.W   #0x20, &0x700
+        RETA
+          CFI EndBlock cfiCond1
+          CFI EndBlock cfiCond2
+          CFI EndBlock cfiPicker3
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine7:
+          CFI Block cfiCond4 Using cfiCommon0
+          CFI Function ADC_Init
+          CFI Conditional ??ADC_Init_14
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+32
+          CFI Block cfiCond5 Using cfiCommon0
+          CFI (cfiCond5) Function ADC_DeInit
+          CFI (cfiCond5) Conditional ??ADC_DeInit_10
+          CFI (cfiCond5) R8L Frame(CFA, -20)
+          CFI (cfiCond5) R8H Frame(CFA, -18)
+          CFI (cfiCond5) R9L Frame(CFA, -16)
+          CFI (cfiCond5) R9H Frame(CFA, -14)
+          CFI (cfiCond5) R10L Frame(CFA, -12)
+          CFI (cfiCond5) R10H Frame(CFA, -10)
+          CFI (cfiCond5) R11L Frame(CFA, -8)
+          CFI (cfiCond5) R11H Frame(CFA, -6)
+          CFI (cfiCond5) CFA SP+26
+          CFI Block cfiPicker6 Using cfiCommon1
+          CFI (cfiPicker6) NoFunction
+          CFI (cfiPicker6) Picker
+        MOV.B   R10, R13
+        MOV.B   #0x5, R12
+          CFI (cfiCond4) TailCall ADC_Init GPIO_MultiBits_Init
+          CFI (cfiCond5) TailCall ADC_DeInit GPIO_MultiBits_Init
+        BRA     #GPIO_MultiBits_Init
+          CFI EndBlock cfiCond4
+          CFI EndBlock cfiCond5
+          CFI EndBlock cfiPicker6
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine3:
+          CFI Block cfiCond7 Using cfiCommon0
+          CFI Function ADC_Init
+          CFI Conditional ??CrossCallReturnLabel_9
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+32
+          CFI Block cfiCond8 Using cfiCommon0
+          CFI (cfiCond8) Function ADC_DeInit
+          CFI (cfiCond8) Conditional ??CrossCallReturnLabel_10
+          CFI (cfiCond8) R8L Frame(CFA, -20)
+          CFI (cfiCond8) R8H Frame(CFA, -18)
+          CFI (cfiCond8) R9L Frame(CFA, -16)
+          CFI (cfiCond8) R9H Frame(CFA, -14)
+          CFI (cfiCond8) R10L Frame(CFA, -12)
+          CFI (cfiCond8) R10H Frame(CFA, -10)
+          CFI (cfiCond8) R11L Frame(CFA, -8)
+          CFI (cfiCond8) R11H Frame(CFA, -6)
+          CFI (cfiCond8) CFA SP+26
+          CFI Block cfiPicker9 Using cfiCommon1
+          CFI (cfiPicker9) NoFunction
+          CFI (cfiPicker9) Picker
+        RLA.W   R15
+        MOV.W   &0x702, R11
+        AND.W   #0xfff9, R11
+        BIS.W   R15, R11
+        MOV.W   R11, &0x702
+        RETA
+          CFI EndBlock cfiCond7
+          CFI EndBlock cfiCond8
+          CFI EndBlock cfiPicker9
+//  105 /*******************************************************************************
+//  106 *  函数名称：ADC_DeInit(ADC_CHn ch)
+//  107 *  功能说明：ADC复位某一通道
+//  108 *  参数说明：ADC_CHn ch ：要复位的通道
+//  109 *  函数返回：无
+//  110 *  注意    ：
+//  111 *  使用示例：ADC_DeInit(ADC_CH1);         //复位通道ADC_CH1，即该通道的ADC功能被屏蔽，作为普通IO口使用                              
+//  112 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  113 void   ADC_DeInit(ADC_CHn ch)
+ADC_DeInit:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function ADC_DeInit
+//  114 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        SUBA    #0x2, SP
+          CFI CFA SP+22
+        MOV.W   R12, R10
+//  115   ADC12->ENC = RESET;                                                    //先对该位复位，否则置位后有些寄存器不能再进行操作
+        BIC.W   #0x2, &0x700
+//  116   uint16_t CH_Mask = 0x01;
+        MOV.W   #0x1, R13
+//  117   for(uint8_t CH_Num=0; CH_Num < ADC_CH_NUM; CH_Num++)
+        MOV.B   #0x10, R12
+        MOVA    #InitialedChannel_Num, R11
+//  118   {
+//  119     if(ch & CH_Mask)   //要复位的通道
+??ADC_DeInit_2:
+        BIT.W   R13, R10
+        JEQ     ??ADC_DeInit_6
+//  120     {
+//  121       if(CH_Mask & InitialedChannel_Bit)  //如果该通道已经初始化，则
+        MOVX.W  &InitialedChannel_Bit, R15
+        BIT.W   R15, R13
+        JEQ     ??ADC_DeInit_6
+//  122       {
+//  123         uint8_t chanel = ADC_GetChanelNum((ADC_CHn)CH_Mask);
+        MOV.B   #0x0, R15
+        MOVA    #ADC_Channel_Bit, R14
+??ADC_DeInit_0:
+        CMP.W   @R14, R13
+        JEQ     ??ADC_DeInit_3
+        ADD.B   #0x1, R15
+        CMP.W   0x2(R14), R13
+        JEQ     ??ADC_DeInit_3
+        ADD.B   #0x1, R15
+        CMP.W   0x4(R14), R13
+        JEQ     ??ADC_DeInit_3
+        ADD.B   #0x1, R15
+        CMP.W   0x6(R14), R13
+        JEQ     ??ADC_DeInit_3
+        ADD.B   #0x1, R15
+        ADDA    #0x8, R14
+        CMP.B   #0x10, R15
+        JNC     ??ADC_DeInit_0
+        MOV.B   #0xff, R15
+//  124         InitialedChannel_Bit &=~ CH_Mask;            //该通道初始化标志屏蔽
+??ADC_DeInit_3:
+        BICX.W  R13, &InitialedChannel_Bit
+//  125         InitialedChannel_Num --;                     //已初始化通道数减一
+        ADD.B   #0xff, 0(R11)
+        CMP.B   @R11, R15
+        JC      ??ADC_DeInit_7
+        MOV.B   R15, R14
+        ADDA    #0x700, R14
+//  126         //所有通道前移
+//  127         for(;chanel < InitialedChannel_Num; chanel++)
+//  128         {
+//  129           ADC12->MCTL[chanel] = ADC12->MCTL[chanel + 1];
+??ADC_DeInit_1:
+        MOV.B   0x11(R14), 0(SP)
+        MOV.B   @SP, 0x10(R14)
+//  130           ADC_Channel_Bit[chanel] =  (ADC_CHn)(1 << ADC12->MCTL[chanel + 1].INCH);
+        MOV.W   #0x1, R8
+        MOV.B   0x11(R14), R9
+        AND.B   #0xf, R9
+        SUB.B   #0x1, R9
+        JN      ??ADC_DeInit_8
+        RPT     R9
+        RLAX.W  R8
+??ADC_DeInit_8:
+        MOV.B   R15, R9
+        ADDA    R9, R9
+        MOVX.W  R8, ADC_Channel_Bit(R9)
+//  131         }
+        ADD.B   #0x1, R15
+        ADDA    #0x1, R14
+        CMP.B   @R11, R15
+        JNC     ??ADC_DeInit_1
+//  132         //最后一通道恢复默认值
+//  133         ADC12->MCTL[chanel].INCH = RESET;         //设置该寄存器通道为0
+??ADC_DeInit_7:
+        ANDX.B  #0xf0, 0x710(R15)
+//  134         ADC12->MCTL[chanel].REF = RESET;          //设置该寄存器通道参考电压为默认
+        ANDX.B  #0x8f, 0x710(R15)
+//  135         ADC12->MCTL[chanel].EOS = RESET;          //设置序列通道转换结束位为0
+        BICX.B  #0x80, 0x710(R15)
+//  136         ADC_Channel_Bit[chanel] = RESET;          //设置该通道初始化标志位复位
+        ADDA    R15, R15
+        MOVX.W  #0x0, ADC_Channel_Bit(R15)
+//  137       }
+//  138     }
+//  139     CH_Mask <<= 1;
+??ADC_DeInit_6:
+        RLA.W   R13
+//  140   }
+        ADD.B   #0xff, R12
+        JNE     ??ADC_DeInit_2
+//  141   if(InitialedChannel_Num <= 1)                 //最只有一个通道时取消序列通道转换结束位
+        CMPX.B  #0x2, &InitialedChannel_Num
+        JC      ??ADC_DeInit_9
+//  142   {
+//  143     ADC12->MCTL[InitialedChannel_Num-1].EOS = RESET;  //
+        MOVX.B  &InitialedChannel_Num, R15
+        ADD.W   #0xffff, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        BICX.B  #0x80, 0x710(R15)
+        MOV.W   #0x0, R15
+        JMP     ??ADC_DeInit_5
+//  144   }
+//  145   ADC12->CONSEQ = (InitialedChannel_Num > 1) ? BIT_SET : RESET;//有多个通道时设为序列通道单次转换模式,单个通道时设为单通道单次转换模式              
+??ADC_DeInit_9:
+        MOV.W   #0x1, R15
+??ADC_DeInit_5:
+        CALLA   #?Subroutine3
+//  146 
+//  147   //配置通道为IO口功能
+//  148   if(ch & 0x00ff)
+??CrossCallReturnLabel_10:
+        CMP.B   #0x0, R10
+        JEQ     ??ADC_DeInit_10
+//  149   {
+//  150      GPIO_MultiBits_Init(P6,(uint8_t)(ch & 0x00ff),GPI);
+        MOV.W   #0x1, R14
+        CALLA   #?Subroutine7
+//  151   }
+//  152   if(ch & 0xf000)
+??ADC_DeInit_10:
+        BIT.W   #0xf000, R10
+        JEQ     ??ADC_DeInit_11
+//  153   {
+//  154      GPIO_MultiBits_Init(P7,(uint8_t)((ch & 0xf000)>>12),GPI);
+        MOV.W   #0x1, R14
+        SWPB    R10
+        AND.B   #0xff, R10
+        RRAM.W  #0x4, R10
+        MOV.W   R10, R13
+        MOV.B   #0x6, R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//  155   }
+//  156   ADC12->ENC = BIT_SET;                                                        //该位必须在初始化完成后再置位
+??ADC_DeInit_11:
+        BIS.W   #0x2, &0x700
+//  157 }
+        ADDA    #0x2, SP
+          CFI CFA SP+20
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock10
+//  158 /*******************************************************************************
+//  159 *  函数名称：ADC_StartConv(void)
+//  160 *  功能说明：启动一次ADC转换
+//  161 *  参数说明：无
+//  162 *  函数返回：无
+//  163 *  注意    ：若有多个通道时，将会同时使多个通道转换一次，而不是对单一通道进行转换
+//  164 *  使用示例：ADC_StartConv();   //所有通道启动一次ADC转换
+//  165 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  166 void ADC_StartConv(void)
+ADC_StartConv:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function ADC_StartConv
+          CFI NoCalls
+//  167 {
+//  168   ADC12->SC = BIT_RESET;
+        BIC.W   #0x1, &0x700
+//  169   ADC12->SC = BIT_SET;        //启动采样转换
+        BIS.W   #0x1, &0x700
+//  170 }
+        RETA
+          CFI EndBlock cfiBlock11
+//  171 /*******************************************************************************
+//  172 *  函数名称：ADC_WaitBusy()
+//  173 *  功能说明：等待ADC不忙
+//  174 *  参数说明：无
+//  175 *  函数返回：无
+//  176 *  注意    ：无
+//  177 *  使用示例：ADC_WaitBusy()；  //等待转换完成
+//  178 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  179 void   ADC_WaitBusy()
+ADC_WaitBusy:
+??ADC_WaitBusy_0:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function ADC_WaitBusy
+          CFI NoCalls
+//  180 {
+//  181   while(ADC12->ADBUSY == BIT_SET);//等待ADC不忙
+        BIT.W   #0x1, &0x702
+        JNE     ??ADC_WaitBusy_0
+//  182 }
+        RETA
+          CFI EndBlock cfiBlock12
+//  183 /*******************************************************************************
+//  184 *  函数名称：ADC_ReadChanelValue(ADC_CHn ch)                           
+//  185 *  功能说明：读取一个ADC通道的转换结果
+//  186 *  参数说明：ADC_CHn ch ：要读取的通道
+//  187 *  函数返回：该通道转换结果
+//  188 *  使用示例：uint16 data = ADC_ReadChanelValue(ADC_CH0);  //读取ADC_CH0通道转换结果
+//  189 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  190 uint16_t ADC_ReadChanelValue(ADC_CHn ch)                           
+ADC_ReadChanelValue:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function ADC_ReadChanelValue
+          CFI NoCalls
+//  191 {
+//  192   return (ADC12->MEM[ADC_GetChanelNum(ch)]);                          //读取转换结果，读取后会自动清除对应标志位
+        CALLA   #?Subroutine1
+??ADC_ReadChanelValue_0:
+        CMP.W   @R15, R12
+        JEQ     ??ADC_ReadChanelValue_2
+        CALLA   #?Subroutine4
+??CrossCallReturnLabel_11:
+        JEQ     ??ADC_ReadChanelValue_2
+        CALLA   #?Subroutine5
+??CrossCallReturnLabel_17:
+        JEQ     ??ADC_ReadChanelValue_2
+        CALLA   #?Subroutine6
+??CrossCallReturnLabel_23:
+        JEQ     ??ADC_ReadChanelValue_2
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_3:
+        JNC     ??ADC_ReadChanelValue_0
+        MOVA    #0x71e, R14
+??ADC_ReadChanelValue_1:
+        MOV.W   @R14, R12
+        RETA
+??ADC_ReadChanelValue_2:
+        SXT     R14
+        ADDA    R14, R14
+        ADDA    #0x720, R14
+        JMP     ??ADC_ReadChanelValue_1
+        NOP
+//  193 }
+          CFI EndBlock cfiBlock13
+//  194 /*******************************************************************************
+//  195 *  函数名称：ADC_ReadChanelOnce(ADC_CHn ch)
+//  196 *  功能说明：转换并读取一个ADC通道的值
+//  197 *  参数说明：ADC_CHn ch ：要转换并读取的通道
+//  198 *  函数返回：该通道转换结果
+//  199 *  使用示例：uint16 data = ADC_ReadChanelOnce(ADC_CH0);  //立即启动一次ADC转换并读取ADC_CH0通道转换结果
+//  200 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  201 uint16_t ADC_ReadChanelOnce(ADC_CHn ch)
+ADC_ReadChanelOnce:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function ADC_ReadChanelOnce
+          CFI NoCalls
+//  202 {
+//  203   ADC_StartConv();
+        BIC.W   #0x1, &0x700
+        BIS.W   #0x1, &0x700
+//  204   ADC_WaitBusy();
+??ADC_ReadChanelOnce_0:
+        BIT.W   #0x1, &0x702
+        JNE     ??ADC_ReadChanelOnce_0
+//  205   return ADC_ReadChanelValue(ch);
+        CALLA   #?Subroutine1
+??ADC_ReadChanelOnce_1:
+        CMP.W   @R15, R12
+        JEQ     ??ADC_ReadChanelOnce_3
+        CALLA   #?Subroutine4
+??CrossCallReturnLabel_12:
+        JEQ     ??ADC_ReadChanelOnce_3
+        CALLA   #?Subroutine5
+??CrossCallReturnLabel_18:
+        JEQ     ??ADC_ReadChanelOnce_3
+        CALLA   #?Subroutine6
+??CrossCallReturnLabel_24:
+        JEQ     ??ADC_ReadChanelOnce_3
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_4:
+        JNC     ??ADC_ReadChanelOnce_1
+        MOVA    #0x71e, R14
+??ADC_ReadChanelOnce_2:
+        MOV.W   @R14, R12
+        RETA
+??ADC_ReadChanelOnce_3:
+        SXT     R14
+        ADDA    R14, R14
+        ADDA    #0x720, R14
+        JMP     ??ADC_ReadChanelOnce_2
+        NOP
+//  206 }
+          CFI EndBlock cfiBlock14
+//  207 /*******************************************************************************
+//  208 *  函数名称：ADC_ITConfig   (ADC_CHn ch,STATUS ITState)
+//  209 *  功能说明：设置是否使能ADC某个通道的中断
+//  210 *  参数说明：ADC_CHn ch ：要设置的通道
+//  211              STATUS ITState ：中断是否使能
+//  212 *  函数返回：无
+//  213 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  214 void ADC_ITConfig   (ADC_CHn ch,STATUS ITState)
+ADC_ITConfig:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function ADC_ITConfig
+          CFI NoCalls
+//  215 {
+//  216   if(ITState != DISABLE)
+        CMP.B   #0x0, R13
+        CALLA   #?Subroutine1
+??CrossCallReturnLabel_2:
+        JEQ     ??ADC_ITConfig_5
+//  217   {
+//  218     ADC12->IE |=  (1<<ADC_GetChanelNum(ch));                           //
+??ADC_ITConfig_0:
+        CMP.W   @R15, R12
+        JEQ     ??ADC_ITConfig_1
+        CALLA   #?Subroutine4
+??CrossCallReturnLabel_13:
+        JEQ     ??ADC_ITConfig_1
+        CALLA   #?Subroutine5
+??CrossCallReturnLabel_19:
+        JEQ     ??ADC_ITConfig_1
+        CALLA   #?Subroutine6
+??CrossCallReturnLabel_25:
+        JEQ     ??ADC_ITConfig_1
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_5:
+        JNC     ??ADC_ITConfig_0
+        MOV.B   #0xff, R14
+//  219   }
+??ADC_ITConfig_1:
+        MOV.W   #0x1, R15
+        SUB.B   #0x1, R14
+        JN      ??ADC_ITConfig_7
+        RPT     R14
+        RLAX.W  R15
+??ADC_ITConfig_7:
+        BIS.W   R15, &0x70c
+        RETA
+//  220   else
+//  221   {
+//  222     ADC12->IE &= ~(1<<ADC_GetChanelNum(ch));                           //
+??ADC_ITConfig_5:
+        CMP.W   @R15, R12
+        JEQ     ??ADC_ITConfig_8
+        CALLA   #?Subroutine4
+??CrossCallReturnLabel_14:
+        JEQ     ??ADC_ITConfig_8
+        CALLA   #?Subroutine5
+??CrossCallReturnLabel_20:
+        JEQ     ??ADC_ITConfig_8
+        CALLA   #?Subroutine6
+??CrossCallReturnLabel_26:
+        JEQ     ??ADC_ITConfig_8
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_6:
+        JNC     ??ADC_ITConfig_5
+        MOV.W   #0xffff, R15
+??ADC_ITConfig_3:
+        AND.W   R15, &0x70c
+//  223   }
+//  224 }
+        RETA
+??ADC_ITConfig_8:
+        CALLA   #?Subroutine8
+??CrossCallReturnLabel_29:
+        JMP     ??ADC_ITConfig_3
+        NOP
+          CFI EndBlock cfiBlock15
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine1:
+          CFI Block cfiCond16 Using cfiCommon0
+          CFI Function ADC_ReadChanelValue
+          CFI Conditional ??ADC_ReadChanelValue_0
+          CFI CFA SP+8
+          CFI Block cfiCond17 Using cfiCommon0
+          CFI (cfiCond17) Function ADC_ReadChanelOnce
+          CFI (cfiCond17) Conditional ??ADC_ReadChanelOnce_1
+          CFI (cfiCond17) CFA SP+8
+          CFI Block cfiCond18 Using cfiCommon0
+          CFI (cfiCond18) Function ADC_ITConfig
+          CFI (cfiCond18) Conditional ??CrossCallReturnLabel_2
+          CFI (cfiCond18) CFA SP+8
+          CFI Block cfiCond19 Using cfiCommon0
+          CFI (cfiCond19) Function ADC_ClearITPendingBit
+          CFI (cfiCond19) Conditional ??ADC_ClearITPendingBit_0
+          CFI (cfiCond19) CFA SP+8
+          CFI Block cfiCond20 Using cfiCommon0
+          CFI (cfiCond20) Function ADC_GetChanelMemoryAddr
+          CFI (cfiCond20) Conditional ??ADC_GetChanelMemoryAddr_0
+          CFI (cfiCond20) CFA SP+8
+          CFI Block cfiPicker21 Using cfiCommon1
+          CFI (cfiPicker21) NoFunction
+          CFI (cfiPicker21) Picker
+        MOV.B   #0x0, R14
+        MOVA    #ADC_Channel_Bit, R15
+        RETA
+          CFI EndBlock cfiCond16
+          CFI EndBlock cfiCond17
+          CFI EndBlock cfiCond18
+          CFI EndBlock cfiCond19
+          CFI EndBlock cfiCond20
+          CFI EndBlock cfiPicker21
+//  225 /*******************************************************************************
+//  226 *  函数名称：ADC_GetITStatus(ADC_CHn ch)
+//  227 *  功能说明：获取某一通道中断标志状态
+//  228 *  参数说明：ADC_CHn ch ：要读取的通道
+//  229 *  函数返回：该通道中断状态标志是否置位（TRUE:置位 RESET:复位）
+//  230 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  231 STATUS  ADC_GetITStatus(ADC_CHn ch)
+ADC_GetITStatus:
+          CFI Block cfiBlock22 Using cfiCommon0
+          CFI Function ADC_GetITStatus
+          CFI NoCalls
+//  232 {
+//  233   return ((ADC12->IFG & (1<<ADC_GetChanelNum(ch))) ? TRUE :FALSE);
+        MOV.W   &0x70a, R15
+        MOV.B   #0x0, R14
+        MOVA    #ADC_Channel_Bit, R13
+??ADC_GetITStatus_0:
+        CMP.W   @R13, R12
+        JEQ     ??ADC_GetITStatus_1
+        ADD.B   #0x1, R14
+        CMP.W   0x2(R13), R12
+        JEQ     ??ADC_GetITStatus_1
+        ADD.B   #0x1, R14
+        CMP.W   0x4(R13), R12
+        JEQ     ??ADC_GetITStatus_1
+        ADD.B   #0x1, R14
+        CMP.W   0x6(R13), R12
+        JEQ     ??ADC_GetITStatus_1
+        ADD.B   #0x1, R14
+        ADDA    #0x8, R13
+        CMP.B   #0x10, R14
+        JNC     ??ADC_GetITStatus_0
+        MOV.B   #0xff, R14
+??ADC_GetITStatus_1:
+        SUB.B   #0x1, R14
+        JN      ??ADC_GetITStatus_3
+        RPT     R14
+        RRUX.W  R15
+??ADC_GetITStatus_3:
+        MOV.B   R15, R12
+        AND.B   #0x1, R12
+        RETA
+//  234 }
+          CFI EndBlock cfiBlock22
+//  235  /*******************************************************************************
+//  236 *  函数名称：ADC_ClearITPendingBit(ADC_CHn ch)
+//  237 *  功能说明：清除某一通道中断标志位
+//  238 *  参数说明：ADC_CHn ch ：要清除中断标志的通道
+//  239 *  函数返回：无
+//  240 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  241 void   ADC_ClearITPendingBit(ADC_CHn ch)
+ADC_ClearITPendingBit:
+          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Function ADC_ClearITPendingBit
+          CFI NoCalls
+//  242 {
+//  243   ADC12->IFG &=~(1<<ADC_GetChanelNum(ch));
+        CALLA   #?Subroutine1
+??ADC_ClearITPendingBit_0:
+        CMP.W   @R15, R12
+        JEQ     ??ADC_ClearITPendingBit_3
+        CALLA   #?Subroutine4
+??CrossCallReturnLabel_15:
+        JEQ     ??ADC_ClearITPendingBit_3
+        CALLA   #?Subroutine5
+??CrossCallReturnLabel_21:
+        JEQ     ??ADC_ClearITPendingBit_3
+        CALLA   #?Subroutine6
+??CrossCallReturnLabel_27:
+        JEQ     ??ADC_ClearITPendingBit_3
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_7:
+        JNC     ??ADC_ClearITPendingBit_0
+        MOV.W   #0xffff, R15
+??ADC_ClearITPendingBit_1:
+        AND.W   R15, &0x70a
+//  244 }
+        RETA
+??ADC_ClearITPendingBit_3:
+        CALLA   #?Subroutine8
+??CrossCallReturnLabel_30:
+        JMP     ??ADC_ClearITPendingBit_1
+        NOP
+          CFI EndBlock cfiBlock23
+//  245 /*****************************************************************************
+//  246 *  函数名称：ADC_GetChanelMemoryAddr(ADC_CHn ch)
+//  247 *  功能说明：获取对应通道的结果寄存器地址（主要用于DMA时需要）
+//  248 *  参数说明：ADC_CHn ch ：要获取结果地址的通道
+//  249 *  函数返回：void * :转换结果地址
+//  250 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  251 void * ADC_GetChanelMemoryAddr(ADC_CHn ch)
+ADC_GetChanelMemoryAddr:
+          CFI Block cfiBlock24 Using cfiCommon0
+          CFI Function ADC_GetChanelMemoryAddr
+          CFI NoCalls
+//  252 {
+//  253   return (void *)(&(ADC12->MEM[ADC_GetChanelNum(ch)]));
+        CALLA   #?Subroutine1
+??ADC_GetChanelMemoryAddr_0:
+        CMP.W   @R15, R12
+        JEQ     ??ADC_GetChanelMemoryAddr_2
+        CALLA   #?Subroutine4
+??CrossCallReturnLabel_16:
+        JEQ     ??ADC_GetChanelMemoryAddr_2
+        CALLA   #?Subroutine5
+??CrossCallReturnLabel_22:
+        JEQ     ??ADC_GetChanelMemoryAddr_2
+        CALLA   #?Subroutine6
+??CrossCallReturnLabel_28:
+        JEQ     ??ADC_GetChanelMemoryAddr_2
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_8:
+        JNC     ??ADC_GetChanelMemoryAddr_0
+        MOVA    #0x71e, R12
+        RETA
+??ADC_GetChanelMemoryAddr_2:
+        MOV.B   R14, R12
+        SXT     R12
+        ADDA    R12, R12
+        ADDA    #0x720, R12
+        RETA
+//  254 }
+          CFI EndBlock cfiBlock24
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine6:
+          CFI Block cfiCond25 Using cfiCommon0
+          CFI Function ADC_ReadChanelValue
+          CFI Conditional ??CrossCallReturnLabel_23
+          CFI CFA SP+8
+          CFI Block cfiCond26 Using cfiCommon0
+          CFI (cfiCond26) Function ADC_ReadChanelOnce
+          CFI (cfiCond26) Conditional ??CrossCallReturnLabel_24
+          CFI (cfiCond26) CFA SP+8
+          CFI Block cfiCond27 Using cfiCommon0
+          CFI (cfiCond27) Function ADC_ITConfig
+          CFI (cfiCond27) Conditional ??CrossCallReturnLabel_25
+          CFI (cfiCond27) CFA SP+8
+          CFI Block cfiCond28 Using cfiCommon0
+          CFI (cfiCond28) Function ADC_ITConfig
+          CFI (cfiCond28) Conditional ??CrossCallReturnLabel_26
+          CFI (cfiCond28) CFA SP+8
+          CFI Block cfiCond29 Using cfiCommon0
+          CFI (cfiCond29) Function ADC_ClearITPendingBit
+          CFI (cfiCond29) Conditional ??CrossCallReturnLabel_27
+          CFI (cfiCond29) CFA SP+8
+          CFI Block cfiCond30 Using cfiCommon0
+          CFI (cfiCond30) Function ADC_GetChanelMemoryAddr
+          CFI (cfiCond30) Conditional ??CrossCallReturnLabel_28
+          CFI (cfiCond30) CFA SP+8
+          CFI Block cfiPicker31 Using cfiCommon1
+          CFI (cfiPicker31) NoFunction
+          CFI (cfiPicker31) Picker
+        ADD.B   #0x1, R14
+        CMP.W   0x6(R15), R12
+        RETA
+          CFI EndBlock cfiCond25
+          CFI EndBlock cfiCond26
+          CFI EndBlock cfiCond27
+          CFI EndBlock cfiCond28
+          CFI EndBlock cfiCond29
+          CFI EndBlock cfiCond30
+          CFI EndBlock cfiPicker31
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine5:
+          CFI Block cfiCond32 Using cfiCommon0
+          CFI Function ADC_ReadChanelValue
+          CFI Conditional ??CrossCallReturnLabel_17
+          CFI CFA SP+8
+          CFI Block cfiCond33 Using cfiCommon0
+          CFI (cfiCond33) Function ADC_ReadChanelOnce
+          CFI (cfiCond33) Conditional ??CrossCallReturnLabel_18
+          CFI (cfiCond33) CFA SP+8
+          CFI Block cfiCond34 Using cfiCommon0
+          CFI (cfiCond34) Function ADC_ITConfig
+          CFI (cfiCond34) Conditional ??CrossCallReturnLabel_19
+          CFI (cfiCond34) CFA SP+8
+          CFI Block cfiCond35 Using cfiCommon0
+          CFI (cfiCond35) Function ADC_ITConfig
+          CFI (cfiCond35) Conditional ??CrossCallReturnLabel_20
+          CFI (cfiCond35) CFA SP+8
+          CFI Block cfiCond36 Using cfiCommon0
+          CFI (cfiCond36) Function ADC_ClearITPendingBit
+          CFI (cfiCond36) Conditional ??CrossCallReturnLabel_21
+          CFI (cfiCond36) CFA SP+8
+          CFI Block cfiCond37 Using cfiCommon0
+          CFI (cfiCond37) Function ADC_GetChanelMemoryAddr
+          CFI (cfiCond37) Conditional ??CrossCallReturnLabel_22
+          CFI (cfiCond37) CFA SP+8
+          CFI Block cfiPicker38 Using cfiCommon1
+          CFI (cfiPicker38) NoFunction
+          CFI (cfiPicker38) Picker
+        ADD.B   #0x1, R14
+        CMP.W   0x4(R15), R12
+        RETA
+          CFI EndBlock cfiCond32
+          CFI EndBlock cfiCond33
+          CFI EndBlock cfiCond34
+          CFI EndBlock cfiCond35
+          CFI EndBlock cfiCond36
+          CFI EndBlock cfiCond37
+          CFI EndBlock cfiPicker38
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine4:
+          CFI Block cfiCond39 Using cfiCommon0
+          CFI Function ADC_ReadChanelValue
+          CFI Conditional ??CrossCallReturnLabel_11
+          CFI CFA SP+8
+          CFI Block cfiCond40 Using cfiCommon0
+          CFI (cfiCond40) Function ADC_ReadChanelOnce
+          CFI (cfiCond40) Conditional ??CrossCallReturnLabel_12
+          CFI (cfiCond40) CFA SP+8
+          CFI Block cfiCond41 Using cfiCommon0
+          CFI (cfiCond41) Function ADC_ITConfig
+          CFI (cfiCond41) Conditional ??CrossCallReturnLabel_13
+          CFI (cfiCond41) CFA SP+8
+          CFI Block cfiCond42 Using cfiCommon0
+          CFI (cfiCond42) Function ADC_ITConfig
+          CFI (cfiCond42) Conditional ??CrossCallReturnLabel_14
+          CFI (cfiCond42) CFA SP+8
+          CFI Block cfiCond43 Using cfiCommon0
+          CFI (cfiCond43) Function ADC_ClearITPendingBit
+          CFI (cfiCond43) Conditional ??CrossCallReturnLabel_15
+          CFI (cfiCond43) CFA SP+8
+          CFI Block cfiCond44 Using cfiCommon0
+          CFI (cfiCond44) Function ADC_GetChanelMemoryAddr
+          CFI (cfiCond44) Conditional ??CrossCallReturnLabel_16
+          CFI (cfiCond44) CFA SP+8
+          CFI Block cfiPicker45 Using cfiCommon1
+          CFI (cfiPicker45) NoFunction
+          CFI (cfiPicker45) Picker
+        ADD.B   #0x1, R14
+        CMP.W   0x2(R15), R12
+        RETA
+          CFI EndBlock cfiCond39
+          CFI EndBlock cfiCond40
+          CFI EndBlock cfiCond41
+          CFI EndBlock cfiCond42
+          CFI EndBlock cfiCond43
+          CFI EndBlock cfiCond44
+          CFI EndBlock cfiPicker45
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine2:
+          CFI Block cfiCond46 Using cfiCommon0
+          CFI Function ADC_ReadChanelValue
+          CFI Conditional ??CrossCallReturnLabel_3
+          CFI CFA SP+8
+          CFI Block cfiCond47 Using cfiCommon0
+          CFI (cfiCond47) Function ADC_ReadChanelOnce
+          CFI (cfiCond47) Conditional ??CrossCallReturnLabel_4
+          CFI (cfiCond47) CFA SP+8
+          CFI Block cfiCond48 Using cfiCommon0
+          CFI (cfiCond48) Function ADC_ITConfig
+          CFI (cfiCond48) Conditional ??CrossCallReturnLabel_5
+          CFI (cfiCond48) CFA SP+8
+          CFI Block cfiCond49 Using cfiCommon0
+          CFI (cfiCond49) Function ADC_ITConfig
+          CFI (cfiCond49) Conditional ??CrossCallReturnLabel_6
+          CFI (cfiCond49) CFA SP+8
+          CFI Block cfiCond50 Using cfiCommon0
+          CFI (cfiCond50) Function ADC_ClearITPendingBit
+          CFI (cfiCond50) Conditional ??CrossCallReturnLabel_7
+          CFI (cfiCond50) CFA SP+8
+          CFI Block cfiCond51 Using cfiCommon0
+          CFI (cfiCond51) Function ADC_GetChanelMemoryAddr
+          CFI (cfiCond51) Conditional ??CrossCallReturnLabel_8
+          CFI (cfiCond51) CFA SP+8
+          CFI Block cfiPicker52 Using cfiCommon1
+          CFI (cfiPicker52) NoFunction
+          CFI (cfiPicker52) Picker
+        ADD.B   #0x1, R14
+        ADDA    #0x8, R15
+        CMP.B   #0x10, R14
+        RETA
+          CFI EndBlock cfiCond46
+          CFI EndBlock cfiCond47
+          CFI EndBlock cfiCond48
+          CFI EndBlock cfiCond49
+          CFI EndBlock cfiCond50
+          CFI EndBlock cfiCond51
+          CFI EndBlock cfiPicker52
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine8:
+          CFI Block cfiCond53 Using cfiCommon0
+          CFI Function ADC_ITConfig
+          CFI Conditional ??CrossCallReturnLabel_29
+          CFI CFA SP+8
+          CFI Block cfiCond54 Using cfiCommon0
+          CFI (cfiCond54) Function ADC_ClearITPendingBit
+          CFI (cfiCond54) Conditional ??CrossCallReturnLabel_30
+          CFI (cfiCond54) CFA SP+8
+          CFI Block cfiPicker55 Using cfiCommon1
+          CFI (cfiPicker55) NoFunction
+          CFI (cfiPicker55) Picker
+        MOV.W   #0x1, R15
+        SUB.B   #0x1, R14
+        JN      ??ADC_ITConfig_6
+        RPT     R14
+        RLAX.W  R15
+??ADC_ITConfig_6:
+        XOR.W   #0xffff, R15
+        RETA
+          CFI EndBlock cfiCond53
+          CFI EndBlock cfiCond54
+          CFI EndBlock cfiPicker55
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  255 /*******************************************************************************
+//  256 *  函数名称：ADC_GetChanelNum(ADC_CHn ch)
+//  257 *  功能说明：获取对应通道的寄存器编号值
+//  258 *  参数说明：ADC_CHn ch ：要获取编号的通道
+//  259 *  函数返回：编号,失败返回-1
+//  260 ********************************************************************************/
+//  261 inline int8_t ADC_GetChanelNum(ADC_CHn ch)
+//  262 {
+//  263   for(uint8_t Chanel_Num=0; Chanel_Num < ADC_CH_NUM; Chanel_Num++)
+//  264   {
+//  265     if(ch == ADC_Channel_Bit[Chanel_Num])
+//  266     {
+//  267       return Chanel_Num;
+//  268     }
+//  269   }
+//  270   return -1;
+//  271 }
+// 
+// 1 198 bytes in segment CODE
+//     4 bytes in segment DATA16_AN
+//     4 bytes in segment DATA20_C
+//    35 bytes in segment DATA20_Z
+// 
+// 1 198 bytes of CODE  memory
+//     4 bytes of CONST memory
+//    35 bytes of DATA  memory (+ 4 bytes shared)
+//
+//Errors: none
+//Warnings: none

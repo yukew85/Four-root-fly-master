@@ -1,0 +1,1098 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:40
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\filter.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWCF26.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\filter.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\filter.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\filter.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\filter.c
+      1          
+      2          #include <string.h>
+      3          #include "filter.h"
+      4          #include <math.h>
+      5          #include "myMath.h"
+      6           
+
+   \                                 In  segment CODE, align 2
+      7          int16_t MovMiddle(int16_t input)
+   \                     MovMiddle:
+      8          {	
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   B1000A00     SUBA    #0xa, SP
+      9          	uint8_t i,j;
+     10          	const uint8_t MOV_MIDDLE_NUM = 5;
+   \   000006   7A400500     MOV.B   #0x5, R10
+     11          	static int16_t middle[5]={0};
+     12          	int16_t middle_t[5];
+     13          //	MOV_MIDDLE_NUM = pidHeightRate.ki;
+     14          	for(i=1;i<MOV_MIDDLE_NUM;i++)
+   \   00000A   5E43         MOV.B   #0x1, R14
+   \   00000C   0A3C         JMP     ??MovMiddle_3
+     15          	{
+     16          		 middle[i-1] =  middle[i];
+   \                     ??MovMiddle_0:
+   \   00000E   4D4E         MOV.B   R14, R13
+   \   000010   ED0D         ADDA    R13, R13
+   \   000012   4F4E         MOV.B   R14, R15
+   \   000014   3F53         ADD.W   #0xffff, R15
+   \   000016   EF0F         ADDA    R15, R15
+   \   000018   ....9F4D.... MOVX.W  ??middle(R13), ??middle(R15)
+   \            ....        
+     17          	}
+   \   000020   5E53         ADD.B   #0x1, R14
+   \                     ??MovMiddle_3:
+   \   000022   4E9A         CMP.B   R10, R14
+   \   000024   F42B         JNC     ??MovMiddle_0
+     18          	middle[MOV_MIDDLE_NUM-1] = input;
+   \   000026   4F4A         MOV.B   R10, R15
+   \   000028   3F53         ADD.W   #0xffff, R15
+   \   00002A   EF0F         ADDA    R15, R15
+   \   00002C   ....8F4C.... MOVX.W  R12, ??middle(R15)
+     19          	memcpy(middle_t,middle,MOV_MIDDLE_NUM*sizeof(uint32_t));
+   \   000032   4E4A         MOV.B   R10, R14
+   \   000034   0F43         MOV.W   #0x0, R15
+   \   000036   0E5E         RLA.W   R14
+   \   000038   0F6F         RLC.W   R15
+   \   00003A   0E5E         RLA.W   R14
+   \   00003C   0F6F         RLC.W   R15
+   \   00003E   ........     MOVA    #??middle, R13
+   \   000042   CC01         MOVA    SP, R12
+   \   000044   ........     CALLA   #memcpy
+     20          	for(i=0;i<MOV_MIDDLE_NUM-1;i++)
+   \   000048   4E43         MOV.B   #0x0, R14
+   \   00004A   2D3C         JMP     ??MovMiddle_4
+     21          	{
+     22          		for(j=i+1;j<MOV_MIDDLE_NUM;j++)
+     23          		{
+     24          			if(middle_t[i] > middle_t[j])
+   \                     ??MovMiddle_1:
+   \   00004C   CB01         MOVA    SP, R11
+   \   00004E   4D4F         MOV.B   R15, R13
+   \   000050   ED0D         ADDA    R13, R13
+   \   000052   ED0B         ADDA    R11, R13
+   \   000054   CB01         MOVA    SP, R11
+   \   000056   4C4E         MOV.B   R14, R12
+   \   000058   EC0C         ADDA    R12, R12
+   \   00005A   EC0B         ADDA    R11, R12
+   \   00005C   AD9C0000     CMP.W   @R12, 0(R13)
+   \   000060   1E34         JGE     ??MovMiddle_5
+     25          			{
+     26          				middle_t[i] ^= middle_t[j];
+   \   000062   CB01         MOVA    SP, R11
+   \   000064   4D4E         MOV.B   R14, R13
+   \   000066   ED0D         ADDA    R13, R13
+   \   000068   ED0B         ADDA    R11, R13
+   \   00006A   CB01         MOVA    SP, R11
+   \   00006C   484F         MOV.B   R15, R8
+   \   00006E   E808         ADDA    R8, R8
+   \   000070   E80B         ADDA    R11, R8
+   \   000072   ADE80000     XOR.W   @R8, 0(R13)
+     27          				middle_t[j] ^= middle_t[i];
+   \   000076   CB01         MOVA    SP, R11
+   \   000078   4D4F         MOV.B   R15, R13
+   \   00007A   ED0D         ADDA    R13, R13
+   \   00007C   ED0B         ADDA    R11, R13
+   \   00007E   CB01         MOVA    SP, R11
+   \   000080   484E         MOV.B   R14, R8
+   \   000082   E808         ADDA    R8, R8
+   \   000084   E80B         ADDA    R11, R8
+   \   000086   ADE80000     XOR.W   @R8, 0(R13)
+     28          				middle_t[i] ^= middle_t[j];
+   \   00008A   CB01         MOVA    SP, R11
+   \   00008C   4D4E         MOV.B   R14, R13
+   \   00008E   ED0D         ADDA    R13, R13
+   \   000090   ED0B         ADDA    R11, R13
+   \   000092   CB01         MOVA    SP, R11
+   \   000094   484F         MOV.B   R15, R8
+   \   000096   E808         ADDA    R8, R8
+   \   000098   E80B         ADDA    R11, R8
+   \   00009A   ADE80000     XOR.W   @R8, 0(R13)
+     29          			}
+     30          		}
+   \                     ??MovMiddle_5:
+   \   00009E   5F53         ADD.B   #0x1, R15
+   \                     ??MovMiddle_2:
+   \   0000A0   4F9A         CMP.B   R10, R15
+   \   0000A2   D42B         JNC     ??MovMiddle_1
+   \   0000A4   5E53         ADD.B   #0x1, R14
+   \                     ??MovMiddle_4:
+   \   0000A6   4E4E         MOV.B   R14, R14
+   \   0000A8   4F4A         MOV.B   R10, R15
+   \   0000AA   3F53         ADD.W   #0xffff, R15
+   \   0000AC   0E9F         CMP.W   R15, R14
+   \   0000AE   0334         JGE     ??MovMiddle_6
+   \   0000B0   4F4E         MOV.B   R14, R15
+   \   0000B2   5F53         ADD.B   #0x1, R15
+   \   0000B4   F53F         JMP     ??MovMiddle_2
+     31          	}
+     32          	return middle_t[(MOV_MIDDLE_NUM+1)>>1];
+   \                     ??MovMiddle_6:
+   \   0000B6   CF01         MOVA    SP, R15
+   \   0000B8   4A4A         MOV.B   R10, R10
+   \   0000BA   1A53         ADD.W   #0x1, R10
+   \   0000BC   0A11         RRA.W   R10
+   \   0000BE   EA0A         ADDA    R10, R10
+   \   0000C0   EA0F         ADDA    R15, R10
+   \   0000C2   2C4A         MOV.W   @R10, R12
+   \   0000C4   A1000A00     ADDA    #0xa, SP
+   \   0000C8   3816         POPM.A  #0x4, R11
+   \   0000CA   1001         RETA
+     33          }	
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??middle:
+   \   000000                DS8 10
+     34          
+     35          
+
+   \                                 In  segment CODE, align 2
+     36          uint16_t AntiPulse_MovingAverage_Filter(MovAverage *_MovAverage)
+   \                     AntiPulse_MovingAverage_Filter:
+     37          {
+   \   000000   5B14         PUSHM.A #0x6, R11
+   \   000002   CE0C         MOVA    R12, R14
+     38          		uint8_t i;	
+     39          		uint32_t sum=0;
+   \   000004   0C43         MOV.W   #0x0, R12
+   \   000006   0D43         MOV.W   #0x0, R13
+     40          		uint16_t max=0;
+   \   000008   0843         MOV.W   #0x0, R8
+     41          		uint16_t min=0xffff;
+   \   00000A   3A43         MOV.W   #0xffff, R10
+     42          	
+     43          			_MovAverage->average[_MovAverage->cnt] = _MovAverage->input;	
+   \   00000C   3B0E0400     MOVA    0x4(R14), R11
+   \   000010   2F4E         MOV.W   @R14, R15
+   \   000012   EF0F         ADDA    R15, R15
+   \   000014   EF0B         ADDA    R11, R15
+   \   000016   9F4E02000000 MOV.W   0x2(R14), 0(R15)
+     44          			_MovAverage->cnt++;			
+   \   00001C   9E530000     ADD.W   #0x1, 0(R14)
+     45          			if(_MovAverage->cnt==_MovAverage->max_cnt)
+   \   000020   5F4E0800     MOV.B   0x8(R14), R15
+   \   000024   4F4F         MOV.B   R15, R15
+   \   000026   8E9F0000     CMP.W   R15, 0(R14)
+   \   00002A   0220         JNE     ??AntiPulse_MovingAverage_Filter_3
+     46          			{
+     47          				_MovAverage->cnt=0;
+   \   00002C   8E430000     MOV.W   #0x0, 0(R14)
+     48          			}	
+     49          			for(i=0;i<_MovAverage->max_cnt;i++)
+   \                     ??AntiPulse_MovingAverage_Filter_3:
+   \   000030   4F43         MOV.B   #0x0, R15
+   \   000032   183C         JMP     ??AntiPulse_MovingAverage_Filter_2
+     50          			{
+     51          					if(_MovAverage->average[i]>max)
+     52          							max = _MovAverage->average[i];
+     53          					else if(_MovAverage->average[i]<min)
+   \                     ??AntiPulse_MovingAverage_Filter_0:
+   \   000034   3B0E0400     MOVA    0x4(R14), R11
+   \   000038   474F         MOV.B   R15, R7
+   \   00003A   E707         ADDA    R7, R7
+   \   00003C   E70B         ADDA    R11, R7
+   \   00003E   879A0000     CMP.W   R10, 0(R7)
+   \   000042   062C         JC      ??AntiPulse_MovingAverage_Filter_1
+     54          							min = _MovAverage->average[i];
+   \   000044   3B0E0400     MOVA    0x4(R14), R11
+   \   000048   474F         MOV.B   R15, R7
+   \   00004A   E707         ADDA    R7, R7
+   \   00004C   E70B         ADDA    R11, R7
+   \   00004E   2A47         MOV.W   @R7, R10
+     55          					sum += _MovAverage->average[i];
+   \                     ??AntiPulse_MovingAverage_Filter_1:
+   \   000050   3B0E0400     MOVA    0x4(R14), R11
+   \   000054   474F         MOV.B   R15, R7
+   \   000056   E707         ADDA    R7, R7
+   \   000058   E70B         ADDA    R11, R7
+   \   00005A   2647         MOV.W   @R7, R6
+   \   00005C   0743         MOV.W   #0x0, R7
+   \   00005E   0C56         ADD.W   R6, R12
+   \   000060   0D67         ADDC.W  R7, R13
+   \   000062   5F53         ADD.B   #0x1, R15
+   \                     ??AntiPulse_MovingAverage_Filter_2:
+   \   000064   5F9E0800     CMP.B   0x8(R14), R15
+   \   000068   0E2C         JC      ??AntiPulse_MovingAverage_Filter_4
+   \   00006A   3B0E0400     MOVA    0x4(R14), R11
+   \   00006E   474F         MOV.B   R15, R7
+   \   000070   E707         ADDA    R7, R7
+   \   000072   E70B         ADDA    R11, R7
+   \   000074   2897         CMP.W   @R7, R8
+   \   000076   DE2F         JC      ??AntiPulse_MovingAverage_Filter_0
+   \   000078   3B0E0400     MOVA    0x4(R14), R11
+   \   00007C   474F         MOV.B   R15, R7
+   \   00007E   E707         ADDA    R7, R7
+   \   000080   E70B         ADDA    R11, R7
+   \   000082   2847         MOV.W   @R7, R8
+   \   000084   E53F         JMP     ??AntiPulse_MovingAverage_Filter_1
+     56          			}
+     57          		return ((sum-max-min)/(_MovAverage->max_cnt-2));                                    
+   \                     ??AntiPulse_MovingAverage_Filter_4:
+   \   000086   0943         MOV.W   #0x0, R9
+   \   000088   0C88         SUB.W   R8, R12
+   \   00008A   0D79         SUBC.W  R9, R13
+   \   00008C   0B43         MOV.W   #0x0, R11
+   \   00008E   0C8A         SUB.W   R10, R12
+   \   000090   0D7B         SUBC.W  R11, R13
+   \   000092   5E4E0800     MOV.B   0x8(R14), R14
+   \   000096   4E4E         MOV.B   R14, R14
+   \   000098   3E50FEFF     ADD.W   #0xfffe, R14
+   \   00009C   0F4E         MOV.W   R14, R15
+   \   00009E   0F5F         RLA.W   R15
+   \   0000A0   0F7F         SUBC.W  R15, R15
+   \   0000A2   3FE3         XOR.W   #0xffff, R15
+   \   0000A4   ........     CALLA   #?DivMod32u
+   \   0000A8   5616         POPM.A  #0x6, R11
+   \   0000AA   1001         RETA
+     58          }
+     59          
+
+   \                                 In  segment CODE, align 2
+     60          uint16_t MovingAverage_Filter(MovAverage *_MovAverage)
+   \                     MovingAverage_Filter:
+     61          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   CE0C         MOVA    R12, R14
+     62          		uint8_t i;	
+     63          		uint32_t sum=0;
+   \   000004   0C43         MOV.W   #0x0, R12
+   \   000006   0D43         MOV.W   #0x0, R13
+     64          
+     65          			_MovAverage->average[_MovAverage->cnt] = _MovAverage->input;	
+   \   000008   3B0E0400     MOVA    0x4(R14), R11
+   \   00000C   2F4E         MOV.W   @R14, R15
+   \   00000E   EF0F         ADDA    R15, R15
+   \   000010   EF0B         ADDA    R11, R15
+   \   000012   9F4E02000000 MOV.W   0x2(R14), 0(R15)
+     66          			_MovAverage->cnt++;			
+   \   000018   9E530000     ADD.W   #0x1, 0(R14)
+     67          			if(_MovAverage->cnt==_MovAverage->max_cnt)
+   \   00001C   5F4E0800     MOV.B   0x8(R14), R15
+   \   000020   4F4F         MOV.B   R15, R15
+   \   000022   8E9F0000     CMP.W   R15, 0(R14)
+   \   000026   0220         JNE     ??MovingAverage_Filter_2
+     68          			{
+     69          				_MovAverage->cnt=0;
+   \   000028   8E430000     MOV.W   #0x0, 0(R14)
+     70          			}	
+     71          			for(i=0;i<_MovAverage->max_cnt;i++)
+   \                     ??MovingAverage_Filter_2:
+   \   00002C   4F43         MOV.B   #0x0, R15
+   \   00002E   0A3C         JMP     ??MovingAverage_Filter_1
+     72          			{
+     73          					sum += _MovAverage->average[i];
+   \                     ??MovingAverage_Filter_0:
+   \   000030   3B0E0400     MOVA    0x4(R14), R11
+   \   000034   4A4F         MOV.B   R15, R10
+   \   000036   EA0A         ADDA    R10, R10
+   \   000038   EA0B         ADDA    R11, R10
+   \   00003A   2A4A         MOV.W   @R10, R10
+   \   00003C   0B43         MOV.W   #0x0, R11
+   \   00003E   0C5A         ADD.W   R10, R12
+   \   000040   0D6B         ADDC.W  R11, R13
+     74          			}
+   \   000042   5F53         ADD.B   #0x1, R15
+   \                     ??MovingAverage_Filter_1:
+   \   000044   5F9E0800     CMP.B   0x8(R14), R15
+   \   000048   F32B         JNC     ??MovingAverage_Filter_0
+     75          		return (sum/_MovAverage->max_cnt);                                    
+   \   00004A   5E4E0800     MOV.B   0x8(R14), R14
+   \   00004E   4E4E         MOV.B   R14, R14
+   \   000050   0F43         MOV.W   #0x0, R15
+   \   000052   ........     CALLA   #?DivMod32u
+   \   000056   3816         POPM.A  #0x4, R11
+   \   000058   1001         RETA
+     76          }
+     77          
+     78          /*====================================================================================================*/
+     79          /*====================================================================================================*
+     80          ** 函数名称: IIR_I_Filter
+     81          
+     82          **           LpfFactor
+     83          ** 输    出: OutData         
+     84          ** 说    明: 无
+     85          ** 函数原型: y(n) = b0*x(n) + b1*x(n-1) + b2*x(n-2) -
+     86                              a1*y(n-1) - a2*y(n-2)
+     87          **====================================================================================================*/
+     88          /*====================================================================================================*/
+
+   \                                 In  segment CODE, align 2
+     89          float IIR_I_Filter(float InputData, float *x, float *y,  const float *b, uint8_t nb, const float *a, uint8_t na)
+   \                     IIR_I_Filter:
+     90          {
+   \   000000   7B14         PUSHM.A #0x8, R11
+   \   000002   C40E         MOVA    R14, R4
+   \   000004   CA0F         MOVA    R15, R10
+     91            float z1,z2=0;
+   \   000006   0843         MOV.W   #0x0, R8
+   \   000008   0943         MOV.W   #0x0, R9
+     92            int16_t i;
+     93          	
+     94            for(i=nb-1; i>0; i--)
+   \   00000A   5B412800     MOV.B   0x28(SP), R11
+   \   00000E   4B4B         MOV.B   R11, R11
+   \   000010   3B53         ADD.W   #0xffff, R11
+   \   000012   213C         JMP     ??IIR_I_Filter_2
+     95            {
+     96              x[i]=x[i-1];
+   \                     ??IIR_I_Filter_0:
+   \   000014   0F4B         MOV.W   R11, R15
+   \   000016   3F53         ADD.W   #0xffff, R15
+   \   000018   4F0E         RLAM.A  #0x4, R15
+   \   00001A   4F0D         RRAM.A  #0x4, R15
+   \   00001C   4F06         RLAM.A  #0x2, R15
+   \   00001E   EF04         ADDA    R4, R15
+   \   000020   074B         MOV.W   R11, R7
+   \   000022   470E         RLAM.A  #0x4, R7
+   \   000024   470D         RRAM.A  #0x4, R7
+   \   000026   4706         RLAM.A  #0x2, R7
+   \   000028   E704         ADDA    R4, R7
+   \   00002A   A74F0000     MOV.W   @R15, 0(R7)
+   \   00002E   974F02000200 MOV.W   0x2(R15), 0x2(R7)
+     97          		y[i]=y[i-1];
+   \   000034   0F4B         MOV.W   R11, R15
+   \   000036   3F53         ADD.W   #0xffff, R15
+   \   000038   4F0E         RLAM.A  #0x4, R15
+   \   00003A   4F0D         RRAM.A  #0x4, R15
+   \   00003C   4F06         RLAM.A  #0x2, R15
+   \   00003E   EF0A         ADDA    R10, R15
+   \   000040   074B         MOV.W   R11, R7
+   \   000042   470E         RLAM.A  #0x4, R7
+   \   000044   470D         RRAM.A  #0x4, R7
+   \   000046   4706         RLAM.A  #0x2, R7
+   \   000048   E70A         ADDA    R10, R7
+   \   00004A   A74F0000     MOV.W   @R15, 0(R7)
+   \   00004E   974F02000200 MOV.W   0x2(R15), 0x2(R7)
+     98            }
+   \   000054   3B53         ADD.W   #0xffff, R11
+   \                     ??IIR_I_Filter_2:
+   \   000056   1B93         CMP.W   #0x1, R11
+   \   000058   DD37         JGE     ??IIR_I_Filter_0
+     99            x[0] = InputData;
+   \   00005A   844C0000     MOV.W   R12, 0(R4)
+   \   00005E   844D0200     MOV.W   R13, 0x2(R4)
+   \   000062   35012400     MOVA    0x24(SP), R5
+    100          	z1 = x[0] * b[0];
+   \   000066   2C44         MOV.W   @R4, R12
+   \   000068   1D440200     MOV.W   0x2(R4), R13
+   \   00006C   2E45         MOV.W   @R5, R14
+   \   00006E   1F450200     MOV.W   0x2(R5), R15
+   \   000072   ........     CALLA   #_Mul32f
+   \   000076   064C         MOV.W   R12, R6
+   \   000078   074D         MOV.W   R13, R7
+    101            for(i=1; i<nb; i++)
+   \   00007A   1B43         MOV.W   #0x1, R11
+   \   00007C   353C         JMP     ??IIR_I_Filter_3
+    102            {
+    103              z1 += x[i]*b[i];
+   \                     ??IIR_I_Filter_1:
+   \   00007E   0F4B         MOV.W   R11, R15
+   \   000080   4F0E         RLAM.A  #0x4, R15
+   \   000082   4F0D         RRAM.A  #0x4, R15
+   \   000084   4F06         RLAM.A  #0x2, R15
+   \   000086   EF04         ADDA    R4, R15
+   \   000088   0E4B         MOV.W   R11, R14
+   \   00008A   4E0E         RLAM.A  #0x4, R14
+   \   00008C   4E0D         RRAM.A  #0x4, R14
+   \   00008E   4E06         RLAM.A  #0x2, R14
+   \   000090   EE05         ADDA    R5, R14
+   \   000092   2C4F         MOV.W   @R15, R12
+   \   000094   1D4F0200     MOV.W   0x2(R15), R13
+   \   000098   CF0E         MOVA    R14, R15
+   \   00009A   2E4F         MOV.W   @R15, R14
+   \   00009C   1F4F0200     MOV.W   0x2(R15), R15
+   \   0000A0   ........     CALLA   #_Mul32f
+   \   0000A4   0E46         MOV.W   R6, R14
+   \   0000A6   0F47         MOV.W   R7, R15
+   \   0000A8   ........     CALLA   #_Add32f
+   \   0000AC   064C         MOV.W   R12, R6
+   \   0000AE   074D         MOV.W   R13, R7
+    104          		z2 += y[i]*a[i];
+   \   0000B0   0F4B         MOV.W   R11, R15
+   \   0000B2   4F0E         RLAM.A  #0x4, R15
+   \   0000B4   4F0D         RRAM.A  #0x4, R15
+   \   0000B6   4F06         RLAM.A  #0x2, R15
+   \   0000B8   EF0A         ADDA    R10, R15
+   \   0000BA   3D012A00     MOVA    0x2a(SP), R13
+   \   0000BE   0E4B         MOV.W   R11, R14
+   \   0000C0   4E0E         RLAM.A  #0x4, R14
+   \   0000C2   4E0D         RRAM.A  #0x4, R14
+   \   0000C4   4E06         RLAM.A  #0x2, R14
+   \   0000C6   EE0D         ADDA    R13, R14
+   \   0000C8   2C4F         MOV.W   @R15, R12
+   \   0000CA   1D4F0200     MOV.W   0x2(R15), R13
+   \   0000CE   CF0E         MOVA    R14, R15
+   \   0000D0   2E4F         MOV.W   @R15, R14
+   \   0000D2   1F4F0200     MOV.W   0x2(R15), R15
+   \   0000D6   ........     CALLA   #_Mul32f
+   \   0000DA   0E48         MOV.W   R8, R14
+   \   0000DC   0F49         MOV.W   R9, R15
+   \   0000DE   ........     CALLA   #_Add32f
+   \   0000E2   084C         MOV.W   R12, R8
+   \   0000E4   094D         MOV.W   R13, R9
+    105            }
+   \   0000E6   1B53         ADD.W   #0x1, R11
+   \                     ??IIR_I_Filter_3:
+   \   0000E8   5F412800     MOV.B   0x28(SP), R15
+   \   0000EC   4F4F         MOV.B   R15, R15
+   \   0000EE   0B9F         CMP.W   R15, R11
+   \   0000F0   C63B         JL      ??IIR_I_Filter_1
+    106            y[0] = z1 - z2; 
+   \   0000F2   0C46         MOV.W   R6, R12
+   \   0000F4   0D47         MOV.W   R7, R13
+   \   0000F6   0E48         MOV.W   R8, R14
+   \   0000F8   0F49         MOV.W   R9, R15
+   \   0000FA   ........     CALLA   #_Sub32f
+   \   0000FE   8A4C0000     MOV.W   R12, 0(R10)
+   \   000102   8A4D0200     MOV.W   R13, 0x2(R10)
+    107            return y[0];
+   \   000106   3C4A         MOV.W   @R10+, R12
+   \   000108   3D4A         MOV.W   @R10+, R13
+   \   00010A   7416         POPM.A  #0x8, R11
+   \   00010C   1001         RETA
+    108          }
+    109          /*====================================================================================================*/
+    110          /*====================================================================================================*
+    111          **函数 : LPF_1st
+    112          **功能 : 一阶滞后滤波
+    113          **输入 :  
+    114          **輸出 : None
+    115          **备注 : None
+    116          **====================================================================================================*/
+    117          /*====================================================================================================*/
+    118          //model 1:
+
+   \                                 In  segment CODE, align 2
+    119          float LPF_1_Filter_1(Filter_LPF_1 *LPF_1)
+   \                     LPF_1_Filter_1:
+    120          {
+   \   000000   2A14         PUSHM.A #0x3, R10
+   \   000002   CA0C         MOVA    R12, R10
+    121          	return LPF_1->old_data * (1 - LPF_1->factor) + LPF_1->new_data *  LPF_1->factor;
+   \   000004   0C43         MOV.W   #0x0, R12
+   \   000006   3D40803F     MOV.W   #0x3f80, R13
+   \   00000A   1E4A0800     MOV.W   0x8(R10), R14
+   \   00000E   1F4A0A00     MOV.W   0xa(R10), R15
+   \   000012   ........     CALLA   #_Sub32f
+   \   000016   2E4A         MOV.W   @R10, R14
+   \   000018   1F4A0200     MOV.W   0x2(R10), R15
+   \   00001C   ........     CALLA   #_Mul32f
+   \   000020   084C         MOV.W   R12, R8
+   \   000022   094D         MOV.W   R13, R9
+   \   000024   1C4A0400     MOV.W   0x4(R10), R12
+   \   000028   1D4A0600     MOV.W   0x6(R10), R13
+   \   00002C   1E4A0800     MOV.W   0x8(R10), R14
+   \   000030   1F4A0A00     MOV.W   0xa(R10), R15
+   \   000034   ........     CALLA   #_Mul32f
+   \   000038   0E48         MOV.W   R8, R14
+   \   00003A   0F49         MOV.W   R9, R15
+   \   00003C   ........     CALLA   #_Add32f
+   \   000040   2816         POPM.A  #0x3, R10
+   \   000042   1001         RETA
+    122          }
+    123          //model 2:
+    124          //_LPF_1->factor = cut_frequent
+
+   \                                 In  segment CODE, align 2
+    125          float LPF_1_Filter_2(Filter_LPF_1 *LPF_1,float dt)
+   \                     LPF_1_Filter_2:
+    126          {
+   \   000000   4A14         PUSHM.A #0x5, R10
+   \   000002   CA0C         MOVA    R12, R10
+   \   000004   084E         MOV.W   R14, R8
+   \   000006   094F         MOV.W   R15, R9
+    127          	 return LPF_1->old_data + (dt /( 1 / ( 2 * PI * LPF_1->factor ) + dt)) * (LPF_1->new_data - LPF_1->old_data);    
+   \   000008   0C48         MOV.W   R8, R12
+   \   00000A   0D49         MOV.W   R9, R13
+   \   00000C   084C         MOV.W   R12, R8
+   \   00000E   094D         MOV.W   R13, R9
+   \   000010   0C43         MOV.W   #0x0, R12
+   \   000012   3D40803F     MOV.W   #0x3f80, R13
+   \   000016   064C         MOV.W   R12, R6
+   \   000018   074D         MOV.W   R13, R7
+   \   00001A   1C4A0800     MOV.W   0x8(R10), R12
+   \   00001E   1D4A0A00     MOV.W   0xa(R10), R13
+   \   000022   3E40DA0F     MOV.W   #0xfda, R14
+   \   000026   3F40C940     MOV.W   #0x40c9, R15
+   \   00002A   ........     CALLA   #_Mul32f
+   \   00002E   0E4C         MOV.W   R12, R14
+   \   000030   0F4D         MOV.W   R13, R15
+   \   000032   0C46         MOV.W   R6, R12
+   \   000034   0D47         MOV.W   R7, R13
+   \   000036   ........     CALLA   #_Div32f
+   \   00003A   0E4C         MOV.W   R12, R14
+   \   00003C   0F4D         MOV.W   R13, R15
+   \   00003E   0C48         MOV.W   R8, R12
+   \   000040   0D49         MOV.W   R9, R13
+   \   000042   ........     CALLA   #_Add32f
+   \   000046   0E4C         MOV.W   R12, R14
+   \   000048   0F4D         MOV.W   R13, R15
+   \   00004A   0C48         MOV.W   R8, R12
+   \   00004C   0D49         MOV.W   R9, R13
+   \   00004E   ........     CALLA   #_Div32f
+   \   000052   084C         MOV.W   R12, R8
+   \   000054   094D         MOV.W   R13, R9
+   \   000056   1C4A0400     MOV.W   0x4(R10), R12
+   \   00005A   1D4A0600     MOV.W   0x6(R10), R13
+   \   00005E   2E4A         MOV.W   @R10, R14
+   \   000060   1F4A0200     MOV.W   0x2(R10), R15
+   \   000064   ........     CALLA   #_Sub32f
+   \   000068   0E4C         MOV.W   R12, R14
+   \   00006A   0F4D         MOV.W   R13, R15
+   \   00006C   0C48         MOV.W   R8, R12
+   \   00006E   0D49         MOV.W   R9, R13
+   \   000070   ........     CALLA   #_Mul32f
+   \   000074   0E4C         MOV.W   R12, R14
+   \   000076   0F4D         MOV.W   R13, R15
+   \   000078   3C4A         MOV.W   @R10+, R12
+   \   00007A   3D4A         MOV.W   @R10+, R13
+   \   00007C   ........     CALLA   #_Add32f
+   \   000080   4616         POPM.A  #0x5, R10
+   \   000082   1001         RETA
+    128          }
+    129          
+    130          //======================================================================================================
+    131          
+    132          /*====================================================================================================*/
+    133          /*====================================================================================================*
+    134          **函数 : Moving_Median 
+    135          **功能 : 中位值滤波法
+    136          **輸出 : None
+    137          **备注 : None
+    138          **====================================================================================================*/
+    139          /*====================================================================================================*/
+    140          #define MED_WIDTH_NUM 11
+    141          #define MED_FIL_ITEM  4
+    142          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+    143          float med_filter_tmp[MED_FIL_ITEM][MED_WIDTH_NUM ];
+   \                     med_filter_tmp:
+   \   000000                DS8 176
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+    144          float med_filter_out[MED_FIL_ITEM];
+   \                     med_filter_out:
+   \   000000                DS8 16
+    145          
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+    146          uint8_t med_fil_cnt[MED_FIL_ITEM];
+   \                     med_fil_cnt:
+   \   000000                DS8 4
+    147          
+
+   \                                 In  segment CODE, align 2
+    148          float Moving_Median(uint8_t item,uint8_t width_num,float in)
+   \                     Moving_Median:
+    149          {
+   \   000000   5B14         PUSHM.A #0x6, R11
+   \   000002   B1002C00     SUBA    #0x2c, SP
+   \   000006   4B4D         MOV.B   R13, R11
+    150          	uint8_t i,j;
+    151          	float t;
+    152          	float tmp[MED_WIDTH_NUM];
+    153          	
+    154          	if(item >= MED_FIL_ITEM || width_num >= MED_WIDTH_NUM )
+   \   000008   6C92         CMP.B   #0x4, R12
+   \   00000A   032C         JC      ??Moving_Median_6
+   \   00000C   7B900B00     CMP.B   #0xb, R11
+   \   000010   0328         JNC     ??Moving_Median_7
+    155          	{
+    156          		return 0;
+   \                     ??Moving_Median_6:
+   \   000012   0C43         MOV.W   #0x0, R12
+   \   000014   0D43         MOV.W   #0x0, R13
+   \   000016   8D3C         JMP     ??Moving_Median_3
+    157          	}
+    158          	else
+    159          	{
+    160          		if( ++med_fil_cnt[item] >= width_num )	
+   \                     ??Moving_Median_7:
+   \   000018   4D4C         MOV.B   R12, R13
+   \   00001A   ....DD53.... ADDX.B  #0x1, med_fil_cnt(R13)
+   \   000020   4D4C         MOV.B   R12, R13
+   \   000022   ....CD9B.... CMPX.B  R11, med_fil_cnt(R13)
+   \   000028   0428         JNC     ??Moving_Median_8
+    161          		{
+    162          			med_fil_cnt[item] = 0;
+   \   00002A   4D4C         MOV.B   R12, R13
+   \   00002C   ....CD43.... MOVX.B  #0x0, med_fil_cnt(R13)
+    163          		}
+    164          		
+    165          		med_filter_tmp[item][ med_fil_cnt[item] ] = in;
+   \                     ??Moving_Median_8:
+   \   000032   4A4C         MOV.B   R12, R10
+   \   000034   4A06         RLAM.A  #0x2, R10
+   \   000036   CD0A         MOVA    R10, R13
+   \   000038   EA0A         ADDA    R10, R10
+   \   00003A   ED0A         ADDA    R10, R13
+   \   00003C   4A06         RLAM.A  #0x2, R10
+   \   00003E   EA0D         ADDA    R13, R10
+   \   000040   4D4C         MOV.B   R12, R13
+   \   000042   ....5D4D.... MOVX.B  med_fil_cnt(R13), R13
+   \   000048   4D4D         MOV.B   R13, R13
+   \   00004A   4D06         RLAM.A  #0x2, R13
+   \   00004C   C80D         MOVA    R13, R8
+   \   00004E   EA08         ADDA    R8, R10
+   \   000050   ....8A4E.... MOVX.W  R14, med_filter_tmp(R10)
+   \   000056   ....8A4F.... MOVX.W  R15, med_filter_tmp + 2(R10)
+    166          		
+    167          		for(i=0;i<width_num;i++)
+   \   00005C   4843         MOV.B   #0x0, R8
+   \   00005E   183C         JMP     ??Moving_Median_4
+    168          		{
+    169          			tmp[i] = med_filter_tmp[item][i];
+   \                     ??Moving_Median_0:
+   \   000060   4F4C         MOV.B   R12, R15
+   \   000062   4F06         RLAM.A  #0x2, R15
+   \   000064   CE0F         MOVA    R15, R14
+   \   000066   EF0F         ADDA    R15, R15
+   \   000068   EE0F         ADDA    R15, R14
+   \   00006A   4F06         RLAM.A  #0x2, R15
+   \   00006C   EF0E         ADDA    R14, R15
+   \   00006E   4E48         MOV.B   R8, R14
+   \   000070   4E06         RLAM.A  #0x2, R14
+   \   000072   CD0E         MOVA    R14, R13
+   \   000074   EF0D         ADDA    R13, R15
+   \   000076   CE01         MOVA    SP, R14
+   \   000078   4D48         MOV.B   R8, R13
+   \   00007A   4D06         RLAM.A  #0x2, R13
+   \   00007C   ED0E         ADDA    R14, R13
+   \   00007E   ....9D4F.... MOVX.W  med_filter_tmp(R15), 0(R13)
+   \            0000        
+   \   000086   ....9D4F.... MOVX.W  med_filter_tmp + 2(R15), 0x2(R13)
+   \            0200        
+    170          		}
+   \   00008E   5853         ADD.B   #0x1, R8
+   \                     ??Moving_Median_4:
+   \   000090   489B         CMP.B   R11, R8
+   \   000092   E62B         JNC     ??Moving_Median_0
+    171          		
+    172          		for(i=0;i<width_num-1;i++)
+   \   000094   4843         MOV.B   #0x0, R8
+   \   000096   3A3C         JMP     ??Moving_Median_5
+    173          		{
+    174          			for(j=0;j<(width_num-1-i);j++)
+    175          			{
+    176          				if(tmp[j] > tmp[j+1])
+   \                     ??Moving_Median_1:
+   \   000098   CE01         MOVA    SP, R14
+   \   00009A   4F4A         MOV.B   R10, R15
+   \   00009C   1F53         ADD.W   #0x1, R15
+   \   00009E   4F06         RLAM.A  #0x2, R15
+   \   0000A0   EF0E         ADDA    R14, R15
+   \   0000A2   2C4F         MOV.W   @R15, R12
+   \   0000A4   1D4F0200     MOV.W   0x2(R15), R13
+   \   0000A8   CF01         MOVA    SP, R15
+   \   0000AA   4E4A         MOV.B   R10, R14
+   \   0000AC   4E06         RLAM.A  #0x2, R14
+   \   0000AE   EE0F         ADDA    R15, R14
+   \   0000B0   CF0E         MOVA    R14, R15
+   \   0000B2   2E4F         MOV.W   @R15, R14
+   \   0000B4   1F4F0200     MOV.W   0x2(R15), R15
+   \   0000B8   ........     CALLA   #?FLT_LT
+   \   0000BC   1E28         JNC     ??Moving_Median_9
+    177          				{
+    178          					t = tmp[j];
+   \   0000BE   CF01         MOVA    SP, R15
+   \   0000C0   4E4A         MOV.B   R10, R14
+   \   0000C2   4E06         RLAM.A  #0x2, R14
+   \   0000C4   EE0F         ADDA    R15, R14
+   \   0000C6   2C4E         MOV.W   @R14, R12
+   \   0000C8   1D4E0200     MOV.W   0x2(R14), R13
+    179          					tmp[j] = tmp[j+1];
+   \   0000CC   CE01         MOVA    SP, R14
+   \   0000CE   4F4A         MOV.B   R10, R15
+   \   0000D0   1F53         ADD.W   #0x1, R15
+   \   0000D2   4F06         RLAM.A  #0x2, R15
+   \   0000D4   EF0E         ADDA    R14, R15
+   \   0000D6   CE01         MOVA    SP, R14
+   \   0000D8   494A         MOV.B   R10, R9
+   \   0000DA   4906         RLAM.A  #0x2, R9
+   \   0000DC   E90E         ADDA    R14, R9
+   \   0000DE   A94F0000     MOV.W   @R15, 0(R9)
+   \   0000E2   994F02000200 MOV.W   0x2(R15), 0x2(R9)
+    180          					tmp[j+1] = t;
+   \   0000E8   CE01         MOVA    SP, R14
+   \   0000EA   4F4A         MOV.B   R10, R15
+   \   0000EC   1F53         ADD.W   #0x1, R15
+   \   0000EE   4F06         RLAM.A  #0x2, R15
+   \   0000F0   EF0E         ADDA    R14, R15
+   \   0000F2   8F4C0000     MOV.W   R12, 0(R15)
+   \   0000F6   8F4D0200     MOV.W   R13, 0x2(R15)
+    181          				}
+    182          			}
+   \                     ??Moving_Median_9:
+   \   0000FA   5A53         ADD.B   #0x1, R10
+   \                     ??Moving_Median_2:
+   \   0000FC   4A4A         MOV.B   R10, R10
+   \   0000FE   4F4B         MOV.B   R11, R15
+   \   000100   3F53         ADD.W   #0xffff, R15
+   \   000102   4848         MOV.B   R8, R8
+   \   000104   0F88         SUB.W   R8, R15
+   \   000106   0A9F         CMP.W   R15, R10
+   \   000108   C73B         JL      ??Moving_Median_1
+   \   00010A   5853         ADD.B   #0x1, R8
+   \                     ??Moving_Median_5:
+   \   00010C   4848         MOV.B   R8, R8
+   \   00010E   4F4B         MOV.B   R11, R15
+   \   000110   3F53         ADD.W   #0xffff, R15
+   \   000112   089F         CMP.W   R15, R8
+   \   000114   0234         JGE     ??Moving_Median_10
+   \   000116   4A43         MOV.B   #0x0, R10
+   \   000118   F13F         JMP     ??Moving_Median_2
+    183          		}		
+    184          		return ( tmp[(width_num/2)] );
+   \                     ??Moving_Median_10:
+   \   00011A   CA01         MOVA    SP, R10
+   \   00011C   4C4B         MOV.B   R11, R12
+   \   00011E   6E43         MOV.B   #0x2, R14
+   \   000120   ........     CALLA   #?DivMod8u
+   \   000124   4C4C         MOV.B   R12, R12
+   \   000126   4C06         RLAM.A  #0x2, R12
+   \   000128   EC0A         ADDA    R10, R12
+   \   00012A   CD0C         MOVA    R12, R13
+   \   00012C   2C4D         MOV.W   @R13, R12
+   \   00012E   1D4D0200     MOV.W   0x2(R13), R13
+   \                     ??Moving_Median_3:
+   \   000132   A1002C00     ADDA    #0x2c, SP
+   \   000136   5616         POPM.A  #0x6, R11
+   \   000138   1001         RETA
+    185          	}
+    186          }
+    187          //======================================================================================================
+    188          /*====================================================================================================*/
+    189          /*====================================================================================================*
+    190          **函数 : LPF2pSetCutoffFreq_1 
+    191          **功能 : 二阶低通滤波
+    192          **输入 : sample_freq:采样率  cutoff_freq：截止频率（例：//截止频率(中心频率f0):30Hz 采样频率fs:333Hz)
+    193          **輸出 : None
+    194          **备注 : None
+    195          **====================================================================================================*/
+    196          /*====================================================================================================*/
+    197          //static float           _cutoff_freq1; 
+    198          //static float           _a11;
+    199          //static float           _a21;
+    200          //static float           _b01;
+    201          //static float           _b11;
+    202          //static float           _b21;
+    203          //static float           _delay_element_11;        // buffered sample -1
+    204          //static float           _delay_element_21;        // buffered sample -2
+    205          //void LPF2pSetCutoffFreq_1(float sample_freq, float cutoff_freq)
+    206          //{
+    207          //		float fr =0;  
+    208          //    float ohm =0;
+    209          //    float c =0;
+    210          //	
+    211          //		fr= sample_freq/cutoff_freq;
+    212          //		ohm=tanf(PI/fr);
+    213          //		c=1.0f+2.0f*cosf(PI/4.0f)*ohm + ohm*ohm;
+    214          //	
+    215          //    _cutoff_freq1 = cutoff_freq;
+    216          //    if (_cutoff_freq1 > 0.0f) 
+    217          //		{
+    218          //				_b01 = ohm*ohm/c;
+    219          //				_b11 = 2.0f*_b01;
+    220          //				_b21 = _b01;
+    221          //				_a11 = 2.0f*(ohm*ohm-1.0f)/c;
+    222          //				_a21 = (1.0f-2.0f*cosf(PI/4.0f)*ohm+ohm*ohm)/c;
+    223          //		}
+    224          //}
+    225          
+    226          /*====================================================================================================*/
+    227          /*====================================================================================================*
+    228          **函数 : LPF2pApply_1 
+    229          **功能 : 二阶低通滤波
+    230          **输入 : sample：滤波原数据
+    231          **輸出 : 滤波后数据
+    232          **备注 : None
+    233          **====================================================================================================*/
+    234          ///*====================================================================================================*/
+    235          //float LPF2pApply_1(float sample)
+    236          //{
+    237          //	
+    238          //		float delay_element_0 = 0, output=0;
+    239          //    if (_cutoff_freq1 <= 0.0f) {
+    240          //        // no filtering
+    241          //        return sample;
+    242          //    }
+    243          //		else
+    244          //		{
+    245          //				delay_element_0 = sample - _delay_element_11 * _a11 - _delay_element_21 * _a21;
+    246          //				// do the filtering
+    247          //				if (isnan(delay_element_0) || isinf(delay_element_0)) {
+    248          //						// don't allow bad values to propogate via the filter
+    249          //						delay_element_0 = sample;
+    250          //				}
+    251          //				output = delay_element_0 * _b01 + _delay_element_11 * _b11 + _delay_element_21 * _b21;
+    252          //				
+    253          //				_delay_element_21 = _delay_element_11;
+    254          //				_delay_element_11 = delay_element_0;
+    255          
+    256          //				// return the value.  Should be no need to check limits
+    257          //				return output;
+    258          //		}
+    259          //}
+    260          
+    261          //static float           _cutoff_freq2; 
+    262          //static float           _a12;
+    263          //static float           _a22;
+    264          //static float           _b02;
+    265          //static float           _b12;
+    266          //static float           _b22;
+    267          //static float           _delay_element_12;        // buffered sample -1
+    268          //static float           _delay_element_22;        // buffered sample -2
+    269          //void LPF2pSetCutoffFreq_2(float sample_freq, float cutoff_freq)
+    270          //{
+    271          //		float fr =0;  
+    272          //    float ohm =0;
+    273          //    float c =0;
+    274          //	
+    275          //		fr= sample_freq/cutoff_freq;
+    276          //		ohm=tanf(PI/fr);
+    277          //		c=1.0f+2.0f*cosf(PI/4.0f)*ohm + ohm*ohm;
+    278          //	
+    279          //    _cutoff_freq2 = cutoff_freq;
+    280          //    if (_cutoff_freq2 > 0.0f) 
+    281          //		{
+    282          //				_b02 = ohm*ohm/c;
+    283          //				_b12 = 2.0f*_b02;
+    284          //				_b22 = _b02;
+    285          //				_a12 = 2.0f*(ohm*ohm-1.0f)/c;
+    286          //				_a22 = (1.0f-2.0f*cosf(PI/4.0f)*ohm+ohm*ohm)/c;
+    287          //		}
+    288          //}
+    289          
+    290          //float LPF2pApply_2(float sample)
+    291          //{
+    292          //	
+    293          //		float delay_element_0 = 0, output=0;
+    294          //    if (_cutoff_freq2 <= 0.0f) {
+    295          //        // no filtering
+    296          //        return sample;
+    297          //    }
+    298          //		else
+    299          //		{
+    300          //				delay_element_0 = sample - _delay_element_12 * _a12 - _delay_element_22 * _a22;
+    301          //				// do the filtering
+    302          //				if (isnan(delay_element_0) || isinf(delay_element_0)) {
+    303          //						// don't allow bad values to propogate via the filter
+    304          //						delay_element_0 = sample;
+    305          //				}
+    306          //				output = delay_element_0 * _b02 + _delay_element_12 * _b12 + _delay_element_22 * _b22;
+    307          //				
+    308          //				_delay_element_22 = _delay_element_12;
+    309          //				_delay_element_12 = delay_element_0;
+    310          
+    311          //				// return the value.  Should be no need to check limits
+    312          //				return output;
+    313          //		}
+    314          //}
+    315          
+    316          //static float           _cutoff_freq3; 
+    317          //static float           _a13;
+    318          //static float           _a23;
+    319          //static float           _b03;
+    320          //static float           _b13;
+    321          //static float           _b23;
+    322          //static float           _delay_element_13;        // buffered sample -1
+    323          //static float           _delay_element_23;        // buffered sample -2
+    324          //void LPF2pSetCutoffFreq_3(float sample_freq, float cutoff_freq)
+    325          //{
+    326          //		float fr =0;  
+    327          //    float ohm =0;
+    328          //    float c =0;
+    329          //	
+    330          //		fr= sample_freq/cutoff_freq;
+    331          //		ohm=tanf(PI/fr);
+    332          //		c=1.0f+2.0f*cosf(PI/4.0f)*ohm + ohm*ohm;
+    333          //	
+    334          //    _cutoff_freq3 = cutoff_freq;
+    335          //    if (_cutoff_freq3 > 0.0f) 
+    336          //		{
+    337          //				_b03 = ohm*ohm/c;
+    338          //				_b13 = 2.0f*_b03;
+    339          //				_b23 = _b03;
+    340          //				_a13 = 2.0f*(ohm*ohm-1.0f)/c;
+    341          //				_a23 = (1.0f-2.0f*cosf(PI/4.0f)*ohm+ohm*ohm)/c;
+    342          //		}
+    343          //}
+    344          
+    345          //float LPF2pApply_3(float sample)
+    346          //{
+    347          //	
+    348          //		float delay_element_0 = 0, output=0;
+    349          //    if (_cutoff_freq3 <= 0.0f) {
+    350          //        // no filtering
+    351          //        return sample;
+    352          //    }
+    353          //		else
+    354          //		{
+    355          //				delay_element_0 = sample - _delay_element_13 * _a13 - _delay_element_23 * _a23;
+    356          //				// do the filtering
+    357          //				if (isnan(delay_element_0) || isinf(delay_element_0)) {
+    358          //						// don't allow bad values to propogate via the filter
+    359          //						delay_element_0 = sample;
+    360          //				}
+    361          //				output = delay_element_0 * _b03 + _delay_element_13 * _b13 + _delay_element_23 * _b23;
+    362          //				
+    363          //				_delay_element_23 = _delay_element_13;
+    364          //				_delay_element_13 = delay_element_0;
+    365          
+    366          //				// return the value.  Should be no need to check limits
+    367          //				return output;
+    368          //		}
+    369          //}
+    370            
+    371          /******************* (C) COPYRIGHT 2012  Team *****END OF FILE************/
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     28   AntiPulse_MovingAverage_Filter
+       28 ?DivMod32u
+     36   IIR_I_Filter
+       36 _Add32f
+       36 _Mul32f
+       36 _Sub32f
+     16   LPF_1_Filter_1
+       16 _Add32f
+       16 _Mul32f
+       16 _Sub32f
+     24   LPF_1_Filter_2
+       24 _Add32f
+       24 _Div32f
+       24 _Mul32f
+       24 _Sub32f
+     30   MovMiddle
+       30   -> memcpy
+     20   MovingAverage_Filter
+       20 ?DivMod32u
+     72   Moving_Median
+       72 ?DivMod8u
+       72 ?FLT_LT
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     172  AntiPulse_MovingAverage_Filter
+     270  IIR_I_Filter
+      68  LPF_1_Filter_1
+     132  LPF_1_Filter_2
+     204  MovMiddle
+      90  MovingAverage_Filter
+     314  Moving_Median
+       4  med_fil_cnt
+      16  med_filter_out
+     176  med_filter_tmp
+      10  middle
+
+ 
+ 1 250 bytes in segment CODE
+   206 bytes in segment DATA20_Z
+ 
+ 1 250 bytes of CODE memory
+   206 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,873 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:40
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\gcs.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWD061.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\gcs.c -D
+#        NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\gcs.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\gcs.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\gcs.c
+      1          #include "gcs.h"
+      2          #include "ZKHD_Link.h"
+      3          #include "fmuConfig.h"
+      4          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      5          UAV_info_t UAV_info;
+   \                     UAV_info:
+   \   000000                DS8 30
+      6          extern Queue_t USB_Send_Queue;
+      7          extern PidObject *(pPidObject[]);
+      8          extern int16_t motor[4];
+      9          /*======================*/
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     10          uint8_t PID_select;
+   \                     PID_select:
+   \   000000                DS8 1
+     11          
+     12          typedef struct 
+     13          {
+     14              int8_t PID_Select;
+     15              int8_t PID_Pos_Rate;
+     16              int8_t PID_Offset;
+     17              int8_t PID_Set;
+     18          }PID_Config_t;
+     19          
+
+   \                                 In  segment CODE, align 2
+     20          void gcs_init(void)
+   \                     gcs_init:
+     21          {
+     22              UAV_info.AngE = &Angle;
+   \   000000   ....F240.... MOVX.A  #Angle, &UAV_info + 22
+   \            ....        
+     23              UAV_info.Firmware_Ver = FIRMWARE_INFO;
+   \   000008   ....F2406400 MOVX.B  #0x64, &UAV_info + 4
+   \            ....        
+     24              UAV_info.Motor = motor;
+   \   000010   ....F240.... MOVX.A  #motor, &UAV_info + 6
+   \            ....        
+     25              UAV_info.Mpu6050 = &MPU6050;
+   \   000018   ....F240.... MOVX.A  #MPU6050, &UAV_info + 14
+   \            ....        
+     26              UAV_info.NRF_MannagerPtr = &NRF24L01_Manager;
+   \   000020   ....F240.... MOVX.A  #NRF24L01_Manager, &UAV_info + 10
+   \            ....        
+     27              UAV_info.Remote = &Remote;
+   \   000028   ....F240.... MOVX.A  #Remote, &UAV_info + 18
+   \            ....        
+     28              UAV_info.Flag = &ALL_flag;
+   \   000030   ....F240.... MOVX.A  #ALL_flag, &UAV_info + 26
+   \            ....        
+     29          }
+   \   000038   1001         RETA
+     30          
+
+   \                                 In  segment CODE, align 2
+     31          void gcs_ReceiveHandle(ZKHD_Link_Head_t *ZKHD_Link_Info,uint8_t *ptr,uint8_t length)
+   \                     gcs_ReceiveHandle:
+     32          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   CF0C         MOVA    R12, R15
+   \   000004   CC0D         MOVA    R13, R12
+     33              PID_Config_t *PID_Config_Info;
+     34              
+     35          
+     36              switch((emMsg_GCS_TO_FMU_t)ZKHD_Link_Info->Message_ID)
+                     ^
+Warning[Pe546]: transfer of control bypasses initialization of:
+            variable "base" (declared at line 41)
+   \   000006   5E4F0500     MOV.B   0x5(R15), R14
+   \   00000A   4E83         SUB.B   #0x0, R14
+   \   00000C   0924         JEQ     ??gcs_ReceiveHandle_1
+   \   00000E   5E83         SUB.B   #0x1, R14
+   \   000010   3524         JEQ     ??gcs_ReceiveHandle_2
+   \   000012   5E83         SUB.B   #0x1, R14
+   \   000014   3724         JEQ     ??gcs_ReceiveHandle_3
+   \   000016   5E83         SUB.B   #0x1, R14
+   \   000018   3B24         JEQ     ??gcs_ReceiveHandle_4
+   \   00001A   5E83         SUB.B   #0x1, R14
+   \   00001C   4024         JEQ     ??gcs_ReceiveHandle_5
+   \   00001E   443C         JMP     ??gcs_ReceiveHandle_0
+     37              {
+     38                  case MsgID_0_Set_PID:
+     39                      PID_Config_Info = (PID_Config_t*)ptr;
+     40                      
+     41                      float *base = (&pPidObject[PID_Config_Info->PID_Select * 2 + PID_Config_Info->PID_Pos_Rate]->kp);
+   \                     ??gcs_ReceiveHandle_1:
+   \   000020   6F4C         MOV.B   @R12, R15
+   \   000022   8F11         SXT     R15
+   \   000024   3FF3         AND.W   #0xffff, R15
+   \   000026   0F5F         RLA.W   R15
+   \   000028   5E4C0100     MOV.B   0x1(R12), R14
+   \   00002C   8E11         SXT     R14
+   \   00002E   3EF3         AND.W   #0xffff, R14
+   \   000030   0F5E         ADD.W   R14, R15
+   \   000032   4F06         RLAM.A  #0x2, R15
+   \   000034   ....5A4F.... MOVX.A  pPidObject(R15), R10
+   \   00003A   AA001000     ADDA    #0x10, R10
+     42                      base += PID_Config_Info->PID_Offset;
+   \   00003E   5F4C0200     MOV.B   0x2(R12), R15
+   \   000042   8F11         SXT     R15
+   \   000044   4F06         RLAM.A  #0x2, R15
+   \   000046   CE0F         MOVA    R15, R14
+   \   000048   EA0E         ADDA    R14, R10
+     43                      *base += PID_Config_Info->PID_Set/10.0f;
+   \   00004A   5C4C0300     MOV.B   0x3(R12), R12
+   \   00004E   8C11         SXT     R12
+   \   000050   3CF3         AND.W   #0xffff, R12
+   \   000052   0D4C         MOV.W   R12, R13
+   \   000054   0D5D         RLA.W   R13
+   \   000056   0D7D         SUBC.W  R13, R13
+   \   000058   3DE3         XOR.W   #0xffff, R13
+   \   00005A   ........     CALLA   #_Cast32sto32f
+   \   00005E   0E43         MOV.W   #0x0, R14
+   \   000060   3F402041     MOV.W   #0x4120, R15
+   \   000064   ........     CALLA   #_Div32f
+   \   000068   2E4A         MOV.W   @R10, R14
+   \   00006A   1F4A0200     MOV.W   0x2(R10), R15
+   \   00006E   ........     CALLA   #_Add32f
+   \   000072   8A4C0000     MOV.W   R12, 0(R10)
+   \   000076   8A4D0200     MOV.W   R13, 0x2(R10)
+     44                      break;
+   \   00007A   163C         JMP     ??gcs_ReceiveHandle_0
+     45                  case MsgID_1_Select_PID:
+     46                      PID_select = *ptr;
+   \                     ??gcs_ReceiveHandle_2:
+   \   00007C   ....E24C.... MOVX.B  @R12, &PID_select
+     47                      break;
+   \   000082   123C         JMP     ??gcs_ReceiveHandle_0
+     48                  case MsgID_2_Set_RxAddr:
+     49                      UAV_info.NRF_MannagerPtr->update_rx_Addr(ptr);
+   \                     ??gcs_ReceiveHandle_3:
+   \   000084   ........     MOVA    &UAV_info + 10, R15
+   \   000088   3F0F1600     MOVA    0x16(R15), R15
+   \   00008C   4F13         CALLA   R15
+     50                      break;
+   \   00008E   0C3C         JMP     ??gcs_ReceiveHandle_0
+     51                  case MsgID_3_Set_RxFreq:
+     52                      UAV_info.NRF_MannagerPtr->update_frequency(ptr[0]);
+   \                     ??gcs_ReceiveHandle_4:
+   \   000090   6C4C         MOV.B   @R12, R12
+   \   000092   ........     MOVA    &UAV_info + 10, R15
+   \   000096   3F0F1E00     MOVA    0x1e(R15), R15
+   \   00009A   4F13         CALLA   R15
+     53                      break;
+   \   00009C   053C         JMP     ??gcs_ReceiveHandle_0
+     54                  case MsgID_4_Set_TxAddr:
+     55                      UAV_info.NRF_MannagerPtr->update_tx_Addr(ptr);
+   \                     ??gcs_ReceiveHandle_5:
+   \   00009E   ........     MOVA    &UAV_info + 10, R15
+   \   0000A2   3F0F1A00     MOVA    0x1a(R15), R15
+   \   0000A6   4F13         CALLA   R15
+     56                      break;
+     57                  default:
+     58                      break;
+     59              }
+     60          }
+   \                     ??gcs_ReceiveHandle_0:
+   \   0000A8   0A16         POPM.A  #0x1, R10
+   \   0000AA   1001         RETA
+     61          
+     62          
+
+   \                                 In  segment CODE, align 2
+     63          void update_gcs_pid_info()
+   \                     update_gcs_pid_info:
+     64          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   B1003200     SUBA    #0x32, SP
+     65              static uint8_t yaobai = 0;
+     66              int16_t RawBuff[8];
+     67              uint8_t SendBuff[32];
+     68              uint8_t SendLength;
+     69              
+     70              float *ptr = &pPidObject[PID_select*2 + yaobai]->kp;
+   \   000006   ....5F42.... MOVX.B  &PID_select, R15
+   \   00000C   4F4F         MOV.B   R15, R15
+   \   00000E   0F5F         RLA.W   R15
+   \   000010   ....5E42.... MOVX.B  &??yaobai, R14
+   \   000016   4E4E         MOV.B   R14, R14
+   \   000018   0F5E         ADD.W   R14, R15
+   \   00001A   4F06         RLAM.A  #0x2, R15
+   \   00001C   ....5A4F.... MOVX.A  pPidObject(R15), R10
+   \   000022   AA001000     ADDA    #0x10, R10
+     71              if(yaobai)yaobai = 0;
+   \   000026   ....C293.... CMPX.B  #0x0, &??yaobai
+   \   00002C   0424         JEQ     ??update_gcs_pid_info_3
+   \   00002E   ....C243.... MOVX.B  #0x0, &??yaobai
+   \   000034   033C         JMP     ??update_gcs_pid_info_1
+     72              else yaobai = 1;
+   \                     ??update_gcs_pid_info_3:
+   \   000036   ....D243.... MOVX.B  #0x1, &??yaobai
+     73              
+     74              RawBuff[0] = PID_select;
+   \                     ??update_gcs_pid_info_1:
+   \   00003C   ....5F42.... MOVX.B  &PID_select, R15
+   \   000042   4F4F         MOV.B   R15, R15
+   \   000044   814F0200     MOV.W   R15, 0x2(SP)
+     75              RawBuff[0] |= yaobai<<8;
+   \   000048   ....5F42.... MOVX.B  &??yaobai, R15
+   \   00004E   4F4F         MOV.B   R15, R15
+   \   000050   3FF0FF00     AND.W   #0xff, R15
+   \   000054   8F10         SWPB    R15
+   \   000056   81DF0200     BIS.W   R15, 0x2(SP)
+     76              for(int i=0;i<7;i++)
+   \   00005A   0B43         MOV.W   #0x0, R11
+   \   00005C   153C         JMP     ??update_gcs_pid_info_2
+     77              {
+     78                  RawBuff[i+1] = (int16_t)(*ptr++ * 100);
+   \                     ??update_gcs_pid_info_0:
+   \   00005E   2C4A         MOV.W   @R10, R12
+   \   000060   1D4A0200     MOV.W   0x2(R10), R13
+   \   000064   0E43         MOV.W   #0x0, R14
+   \   000066   3F40C842     MOV.W   #0x42c8, R15
+   \   00006A   ........     CALLA   #_Mul32f
+   \   00006E   ........     CALLA   #_Cast32fto32s
+   \   000072   CE01         MOVA    SP, R14
+   \   000074   EE03         ADDA    #0x2, R14
+   \   000076   0F4B         MOV.W   R11, R15
+   \   000078   1F53         ADD.W   #0x1, R15
+   \   00007A   EF0F         ADDA    R15, R15
+   \   00007C   EF0E         ADDA    R14, R15
+   \   00007E   8F4C0000     MOV.W   R12, 0(R15)
+   \   000082   AA000400     ADDA    #0x4, R10
+     79              }
+   \   000086   1B53         ADD.W   #0x1, R11
+   \                     ??update_gcs_pid_info_2:
+   \   000088   3B900700     CMP.W   #0x7, R11
+   \   00008C   E83B         JL      ??update_gcs_pid_info_0
+     80              
+     81              ZKHD_Link_MakeFrame( Device_FMU,
+     82                                  Device_GCS,
+     83                                  MsgID_6_PID_Info,
+     84                                  (uint8_t*)RawBuff,
+     85                                  16,
+     86                                  SendBuff,
+     87                                  &SendLength
+     88                                 );
+   \   00008E   CF01         MOVA    SP, R15
+   \   000090   0F14         PUSHM.A #0x1, R15
+   \   000092   CF01         MOVA    SP, R15
+   \   000094   AF001600     ADDA    #0x16, R15
+   \   000098   0F14         PUSHM.A #0x1, R15
+   \   00009A   30121000     PUSH.W  #0x10
+   \   00009E   CF01         MOVA    SP, R15
+   \   0000A0   AF000C00     ADDA    #0xc, R15
+   \   0000A4   7E400600     MOV.B   #0x6, R14
+   \   0000A8   4D43         MOV.B   #0x0, R13
+   \   0000AA   5C43         MOV.B   #0x1, R12
+   \   0000AC   ........     CALLA   #ZKHD_Link_MakeFrame
+     89              enQueue(&USB_Send_Queue,SendBuff,SendLength);
+   \   0000B0   5E410A00     MOV.B   0xa(SP), R14
+   \   0000B4   CD01         MOVA    SP, R13
+   \   0000B6   AD001C00     ADDA    #0x1c, R13
+   \   0000BA   ........     MOVA    #USB_Send_Queue, R12
+   \   0000BE   ........     CALLA   #enQueue
+     90          }
+   \   0000C2   A1003C00     ADDA    #0x3c, SP
+   \   0000C6   1A16         POPM.A  #0x2, R11
+   \   0000C8   1001         RETA
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??yaobai:
+   \   000000                DS8 1
+     91          
+
+   \                                 In  segment CODE, align 2
+     92          void update_gcs_Attitude(void)
+   \                     update_gcs_Attitude:
+     93          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   B1001A00     SUBA    #0x1a, SP
+     94              uint8_t Buff[20];
+     95              int16_t Angle_Int16[3];
+     96              int sum = 0;
+   \   000006   0A43         MOV.W   #0x0, R10
+     97              Buff[0] = 0xAA; //帧头
+   \   000008   F140AA000600 MOV.B   #0xaa, 0x6(SP)
+     98              Buff[1] = 6;   //长度低八位
+   \   00000E   F14006000700 MOV.B   #0x6, 0x7(SP)
+     99              Buff[2] = 0;    //长度高八位
+   \   000014   C1430800     MOV.B   #0x0, 0x8(SP)
+    100              Buff[3] = 1;    //发送者ID
+   \   000018   D1430900     MOV.B   #0x1, 0x9(SP)
+    101              Buff[4] = 0;    //接收者ID
+   \   00001C   C1430A00     MOV.B   #0x0, 0xa(SP)
+    102              Buff[5] = 0;    //消息ID
+   \   000020   C1430B00     MOV.B   #0x0, 0xb(SP)
+    103          
+    104              Angle_Int16[0] = (int16_t)(-Angle.pitch * 100);
+   \   000024   ....1C42.... MOVX.W  &Angle + 4, R12
+   \   00002A   ....1D42.... MOVX.W  &Angle + 6, R13
+   \   000030   3DE00080     XOR.W   #0x8000, R13
+   \   000034   0E43         MOV.W   #0x0, R14
+   \   000036   3F40C842     MOV.W   #0x42c8, R15
+   \   00003A   ........     CALLA   #_Mul32f
+   \   00003E   ........     CALLA   #_Cast32fto32s
+   \   000042   814C0000     MOV.W   R12, 0(SP)
+    105              Angle_Int16[1] = (int16_t)(-Angle.roll * 100);
+   \   000046   ....1C42.... MOVX.W  &Angle, R12
+   \   00004C   ....1D42.... MOVX.W  &Angle + 2, R13
+   \   000052   3DE00080     XOR.W   #0x8000, R13
+   \   000056   0E43         MOV.W   #0x0, R14
+   \   000058   3F40C842     MOV.W   #0x42c8, R15
+   \   00005C   ........     CALLA   #_Mul32f
+   \   000060   ........     CALLA   #_Cast32fto32s
+   \   000064   814C0200     MOV.W   R12, 0x2(SP)
+    106              Angle_Int16[2] = (int16_t)(Angle.yaw * 100);
+   \   000068   ....1C42.... MOVX.W  &Angle + 8, R12
+   \   00006E   ....1D42.... MOVX.W  &Angle + 10, R13
+   \   000074   0E43         MOV.W   #0x0, R14
+   \   000076   3F40C842     MOV.W   #0x42c8, R15
+   \   00007A   ........     CALLA   #_Mul32f
+   \   00007E   ........     CALLA   #_Cast32fto32s
+   \   000082   814C0400     MOV.W   R12, 0x4(SP)
+    107          
+    108              memcpy(Buff+6,(uint8_t*)Angle_Int16,6);
+   \   000086   3E400600     MOV.W   #0x6, R14
+   \   00008A   0F43         MOV.W   #0x0, R15
+   \   00008C   CD01         MOVA    SP, R13
+   \   00008E   CC01         MOVA    SP, R12
+   \   000090   AC000C00     ADDA    #0xc, R12
+   \   000094   ........     CALLA   #memcpy
+    109          
+    110              for(int i=0;i<((Buff[1]|Buff[2]<<8) + 6);i++)
+   \   000098   0D43         MOV.W   #0x0, R13
+   \   00009A   093C         JMP     ??update_gcs_Attitude_1
+    111              {
+    112                  sum += Buff[i];
+   \                     ??update_gcs_Attitude_0:
+   \   00009C   CF01         MOVA    SP, R15
+   \   00009E   AF000600     ADDA    #0x6, R15
+   \   0000A2   0E4D         MOV.W   R13, R14
+   \   0000A4   EE0F         ADDA    R15, R14
+   \   0000A6   6F4E         MOV.B   @R14, R15
+   \   0000A8   4F4F         MOV.B   R15, R15
+   \   0000AA   0A5F         ADD.W   R15, R10
+    113              }
+   \   0000AC   1D53         ADD.W   #0x1, R13
+   \                     ??update_gcs_Attitude_1:
+   \   0000AE   5E410700     MOV.B   0x7(SP), R14
+   \   0000B2   4E4E         MOV.B   R14, R14
+   \   0000B4   5F410800     MOV.B   0x8(SP), R15
+   \   0000B8   4F4F         MOV.B   R15, R15
+   \   0000BA   3FF0FF00     AND.W   #0xff, R15
+   \   0000BE   8F10         SWPB    R15
+   \   0000C0   0EDF         BIS.W   R15, R14
+   \   0000C2   3E500600     ADD.W   #0x6, R14
+   \   0000C6   0D9E         CMP.W   R14, R13
+   \   0000C8   E93B         JL      ??update_gcs_Attitude_0
+    114          
+    115              Buff[(Buff[1]|Buff[2]<<8) + 6] = sum & 0xFF;
+   \   0000CA   CD01         MOVA    SP, R13
+   \   0000CC   AD000600     ADDA    #0x6, R13
+   \   0000D0   5F410700     MOV.B   0x7(SP), R15
+   \   0000D4   4F4F         MOV.B   R15, R15
+   \   0000D6   5E410800     MOV.B   0x8(SP), R14
+   \   0000DA   4E4E         MOV.B   R14, R14
+   \   0000DC   3EF0FF00     AND.W   #0xff, R14
+   \   0000E0   8E10         SWPB    R14
+   \   0000E2   0FDE         BIS.W   R14, R15
+   \   0000E4   3F500600     ADD.W   #0x6, R15
+   \   0000E8   EF0D         ADDA    R13, R15
+   \   0000EA   CF4A0000     MOV.B   R10, 0(R15)
+    116              sum = 0;
+   \   0000EE   0A43         MOV.W   #0x0, R10
+    117              
+    118              enQueue(&USB_Send_Queue, Buff,(Buff[1]|Buff[2]<<8) + 7);
+   \   0000F0   5E410700     MOV.B   0x7(SP), R14
+   \   0000F4   7E500700     ADD.B   #0x7, R14
+   \   0000F8   CD01         MOVA    SP, R13
+   \   0000FA   AD000600     ADDA    #0x6, R13
+   \   0000FE   ........     MOVA    #USB_Send_Queue, R12
+   \   000102   ........     CALLA   #enQueue
+    119          }
+   \   000106   A1001A00     ADDA    #0x1a, SP
+   \   00010A   0A16         POPM.A  #0x1, R10
+   \   00010C   1001         RETA
+    120          
+
+   \                                 In  segment CODE, align 2
+    121          void update_gcs_MPU6050(void)
+   \                     update_gcs_MPU6050:
+    122          {
+   \   000000   B1002A00     SUBA    #0x2a, SP
+    123              uint8_t DataBuff[20];
+    124              uint8_t SendBuff[20];
+    125              uint8_t SendLength;
+    126              
+    127              memcpy(DataBuff,(uint8_t*)UAV_info.Mpu6050,sizeof(_st_Mpu));
+   \   000004   3E400C00     MOV.W   #0xc, R14
+   \   000008   0F43         MOV.W   #0x0, R15
+   \   00000A   ........     MOVA    &UAV_info + 14, R13
+   \   00000E   CC01         MOVA    SP, R12
+   \   000010   AC001600     ADDA    #0x16, R12
+   \   000014   ........     CALLA   #memcpy
+    128          
+    129              ZKHD_Link_MakeFrame( Device_FMU,
+    130                              Device_GCS,
+    131                              MsgID_2_Sensor_Info,
+    132                              DataBuff,
+    133                              12,
+    134                              SendBuff,
+    135                              &SendLength
+    136                             );
+   \   000018   CF01         MOVA    SP, R15
+   \   00001A   0F14         PUSHM.A #0x1, R15
+   \   00001C   CF01         MOVA    SP, R15
+   \   00001E   AF000600     ADDA    #0x6, R15
+   \   000022   0F14         PUSHM.A #0x1, R15
+   \   000024   30120C00     PUSH.W  #0xc
+   \   000028   CF01         MOVA    SP, R15
+   \   00002A   AF002000     ADDA    #0x20, R15
+   \   00002E   6E43         MOV.B   #0x2, R14
+   \   000030   4D43         MOV.B   #0x0, R13
+   \   000032   5C43         MOV.B   #0x1, R12
+   \   000034   ........     CALLA   #ZKHD_Link_MakeFrame
+    137              
+    138              enQueue(&USB_Send_Queue,SendBuff,SendLength);
+   \   000038   5E410A00     MOV.B   0xa(SP), R14
+   \   00003C   CD01         MOVA    SP, R13
+   \   00003E   AD000C00     ADDA    #0xc, R13
+   \   000042   ........     MOVA    #USB_Send_Queue, R12
+   \   000046   ........     CALLA   #enQueue
+    139          }
+   \   00004A   A1003400     ADDA    #0x34, SP
+   \   00004E   1001         RETA
+    140          
+
+   \                                 In  segment CODE, align 2
+    141          void update_gcs_Motor(void)
+   \                     update_gcs_Motor:
+    142          {
+   \   000000   B1001E00     SUBA    #0x1e, SP
+    143              uint8_t DataBuff[8];
+    144              uint8_t SendBuff[20];
+    145              uint8_t SendLength;
+    146              
+    147              memcpy(DataBuff,UAV_info.Motor,sizeof(int16)*4);
+   \   000004   3E42         MOV.W   #0x8, R14
+   \   000006   0F43         MOV.W   #0x0, R15
+   \   000008   ........     MOVA    &UAV_info + 6, R13
+   \   00000C   CC01         MOVA    SP, R12
+   \   00000E   EC03         ADDA    #0x2, R12
+   \   000010   ........     CALLA   #memcpy
+    148          
+    149              ZKHD_Link_MakeFrame( Device_FMU,
+    150                              Device_GCS,
+    151                              MsgID_1_Motor_Info,
+    152                              DataBuff,
+    153                              8,
+    154                              SendBuff,
+    155                              &SendLength
+    156                             );
+   \   000014   CF01         MOVA    SP, R15
+   \   000016   0F14         PUSHM.A #0x1, R15
+   \   000018   CF01         MOVA    SP, R15
+   \   00001A   AF000E00     ADDA    #0xe, R15
+   \   00001E   0F14         PUSHM.A #0x1, R15
+   \   000020   3212         PUSH.W  #0x8
+   \   000022   CF01         MOVA    SP, R15
+   \   000024   AF000C00     ADDA    #0xc, R15
+   \   000028   5E43         MOV.B   #0x1, R14
+   \   00002A   4D43         MOV.B   #0x0, R13
+   \   00002C   5C43         MOV.B   #0x1, R12
+   \   00002E   ........     CALLA   #ZKHD_Link_MakeFrame
+    157              
+    158              enQueue(&USB_Send_Queue,SendBuff,SendLength);
+   \   000032   5E410A00     MOV.B   0xa(SP), R14
+   \   000036   CD01         MOVA    SP, R13
+   \   000038   AD001400     ADDA    #0x14, R13
+   \   00003C   ........     MOVA    #USB_Send_Queue, R12
+   \   000040   ........     CALLA   #enQueue
+    159          }
+   \   000044   A1002800     ADDA    #0x28, SP
+   \   000048   1001         RETA
+    160          
+
+   \                                 In  segment CODE, align 2
+    161          void update_gcs_HardwareInfo(void)
+   \                     update_gcs_HardwareInfo:
+    162          {
+   \   000000   B1002400     SUBA    #0x24, SP
+    163              uint8_t DataBuff[13];
+    164              uint8_t SendBuff[20];
+    165              uint8_t SendLength;
+    166              
+    167              DataBuff[0] = UAV_info.Firmware_Ver;//版本信息
+   \   000004   ....D142.... MOVX.B  &UAV_info + 4, 0x2(SP)
+   \            0200        
+    168              memcpy(DataBuff+1,UAV_info.NRF_MannagerPtr->Rx_Addr,5);//发送地址
+   \   00000C   3E400500     MOV.W   #0x5, R14
+   \   000010   0F43         MOV.W   #0x0, R15
+   \   000012   ........     MOVA    &UAV_info + 10, R13
+   \   000016   AD000700     ADDA    #0x7, R13
+   \   00001A   CC01         MOVA    SP, R12
+   \   00001C   AC000300     ADDA    #0x3, R12
+   \   000020   ........     CALLA   #memcpy
+    169              memcpy(DataBuff+1+5,UAV_info.NRF_MannagerPtr->Tx_Addr,5);//发送地址
+   \   000024   3E400500     MOV.W   #0x5, R14
+   \   000028   0F43         MOV.W   #0x0, R15
+   \   00002A   ........     MOVA    &UAV_info + 10, R13
+   \   00002E   ED03         ADDA    #0x2, R13
+   \   000030   CC01         MOVA    SP, R12
+   \   000032   AC000800     ADDA    #0x8, R12
+   \   000036   ........     CALLA   #memcpy
+    170              DataBuff[11] = UAV_info.Runtime&0xFF;
+   \   00003A   ....D142.... MOVX.B  &UAV_info, 0xd(SP)
+   \            0D00        
+    171              DataBuff[12] = UAV_info.Runtime>>8;
+   \   000042   ....1E42.... MOVX.W  &UAV_info, R14
+   \   000048   8E10         SWPB    R14
+   \   00004A   3EF0FF00     AND.W   #0xff, R14
+   \   00004E   C14E0E00     MOV.B   R14, 0xe(SP)
+    172          
+    173              ZKHD_Link_MakeFrame( Device_FMU,
+    174                                  Device_GCS,
+    175                                  MsgID_5_Hardware_Info,
+    176                                  DataBuff,
+    177                                  13,
+    178                                  SendBuff,
+    179                                  &SendLength
+    180                                 );
+   \   000052   CF01         MOVA    SP, R15
+   \   000054   0F14         PUSHM.A #0x1, R15
+   \   000056   CF01         MOVA    SP, R15
+   \   000058   AF001400     ADDA    #0x14, R15
+   \   00005C   0F14         PUSHM.A #0x1, R15
+   \   00005E   30120D00     PUSH.W  #0xd
+   \   000062   CF01         MOVA    SP, R15
+   \   000064   AF000C00     ADDA    #0xc, R15
+   \   000068   7E400500     MOV.B   #0x5, R14
+   \   00006C   4D43         MOV.B   #0x0, R13
+   \   00006E   5C43         MOV.B   #0x1, R12
+   \   000070   ........     CALLA   #ZKHD_Link_MakeFrame
+    181              
+    182              enQueue(&USB_Send_Queue,SendBuff,SendLength);
+   \   000074   5E410A00     MOV.B   0xa(SP), R14
+   \   000078   CD01         MOVA    SP, R13
+   \   00007A   AD001A00     ADDA    #0x1a, R13
+   \   00007E   ........     MOVA    #USB_Send_Queue, R12
+   \   000082   ........     CALLA   #enQueue
+    183          }
+   \   000086   A1002E00     ADDA    #0x2e, SP
+   \   00008A   1001         RETA
+    184          
+
+   \                                 In  segment CODE, align 2
+    185          void update_gcs_Freq()
+   \                     update_gcs_Freq:
+    186          {
+   \   000000   B1001600     SUBA    #0x16, SP
+    187              uint8_t SendBuff[20];
+    188              uint8_t SendLength;
+    189              
+    190              ZKHD_Link_MakeFrame( Device_FMU,
+    191                              Device_GCS,
+    192                              MsgID_7_Freq,
+    193                              &UAV_info.NRF_MannagerPtr->RC_Frequency,
+    194                              1,
+    195                              SendBuff,
+    196                              &SendLength
+    197                              );
+   \   000004   CF01         MOVA    SP, R15
+   \   000006   0F14         PUSHM.A #0x1, R15
+   \   000008   CF01         MOVA    SP, R15
+   \   00000A   AF000600     ADDA    #0x6, R15
+   \   00000E   0F14         PUSHM.A #0x1, R15
+   \   000010   1312         PUSH.W  #0x1
+   \   000012   ........     MOVA    &UAV_info + 10, R15
+   \   000016   AF000C00     ADDA    #0xc, R15
+   \   00001A   7E400700     MOV.B   #0x7, R14
+   \   00001E   4D43         MOV.B   #0x0, R13
+   \   000020   5C43         MOV.B   #0x1, R12
+   \   000022   ........     CALLA   #ZKHD_Link_MakeFrame
+    198              
+    199              enQueue(&USB_Send_Queue,SendBuff,SendLength);
+   \   000026   5E410A00     MOV.B   0xa(SP), R14
+   \   00002A   CD01         MOVA    SP, R13
+   \   00002C   AD000C00     ADDA    #0xc, R13
+   \   000030   ........     MOVA    #USB_Send_Queue, R12
+   \   000034   ........     CALLA   #enQueue
+    200          }
+   \   000038   A1002000     ADDA    #0x20, SP
+   \   00003C   1001         RETA
+    201          
+
+   \                                 In  segment CODE, align 2
+    202          void update_gcs_Line(int16_t l1,int16_t l2,int16_t l3,int16_t l4,int16_t l5,int16_t l6,int16_t l7,int16_t l8)
+   \                     update_gcs_Line:
+    203          {
+   \   000000   B1003000     SUBA    #0x30, SP
+    204              int16_t DataBuff[8];
+    205              uint8_t SendBuff[30];
+    206              uint8_t SendLength;
+    207              
+    208              DataBuff[0] = l1;
+   \   000004   814C0200     MOV.W   R12, 0x2(SP)
+    209              DataBuff[1] = l2;
+   \   000008   814D0400     MOV.W   R13, 0x4(SP)
+    210              DataBuff[2] = l3;
+   \   00000C   814E0600     MOV.W   R14, 0x6(SP)
+    211              DataBuff[3] = l4;
+   \   000010   814F0800     MOV.W   R15, 0x8(SP)
+    212              DataBuff[4] = l5;
+   \   000014   914134000A00 MOV.W   0x34(SP), 0xa(SP)
+    213              DataBuff[5] = l6;
+   \   00001A   914136000C00 MOV.W   0x36(SP), 0xc(SP)
+    214              DataBuff[6] = l7;
+   \   000020   914138000E00 MOV.W   0x38(SP), 0xe(SP)
+    215              DataBuff[7] = l8;
+   \   000026   91413A001000 MOV.W   0x3a(SP), 0x10(SP)
+    216              
+    217          
+    218              ZKHD_Link_MakeFrame( Device_FMU,
+    219                              Device_GCS,
+    220                              MsgID_3_Line_Info,
+    221                              (uint8_t*)DataBuff,
+    222                              16,
+    223                              SendBuff,
+    224                              &SendLength
+    225                              );
+   \   00002C   CF01         MOVA    SP, R15
+   \   00002E   0F14         PUSHM.A #0x1, R15
+   \   000030   CF01         MOVA    SP, R15
+   \   000032   AF001600     ADDA    #0x16, R15
+   \   000036   0F14         PUSHM.A #0x1, R15
+   \   000038   30121000     PUSH.W  #0x10
+   \   00003C   CF01         MOVA    SP, R15
+   \   00003E   AF000C00     ADDA    #0xc, R15
+   \   000042   7E400300     MOV.B   #0x3, R14
+   \   000046   4D43         MOV.B   #0x0, R13
+   \   000048   5C43         MOV.B   #0x1, R12
+   \   00004A   ........     CALLA   #ZKHD_Link_MakeFrame
+    226              
+    227              enQueue(&USB_Send_Queue,SendBuff,SendLength);
+   \   00004E   5E410A00     MOV.B   0xa(SP), R14
+   \   000052   CD01         MOVA    SP, R13
+   \   000054   AD001C00     ADDA    #0x1c, R13
+   \   000058   ........     MOVA    #USB_Send_Queue, R12
+   \   00005C   ........     CALLA   #enQueue
+    228          }
+   \   000060   A1003A00     ADDA    #0x3a, SP
+   \   000064   1001         RETA
+    229          
+    230          /*此函数适用于山外上位机*/
+
+   \                                 In  segment CODE, align 2
+    231          void update_gcs_Line2(int16_t l1,int16_t l2,int16_t l3,int16_t l4,int16_t l5,int16_t l6,int16_t l7,int16_t l8)
+   \                     update_gcs_Line2:
+    232          {
+   \   000000   B1002E00     SUBA    #0x2e, SP
+    233              int16_t DataBuff[8];
+    234              uint8_t SendBuff[30];
+    235              
+    236              DataBuff[0] = l1;
+   \   000004   814C0000     MOV.W   R12, 0(SP)
+    237              DataBuff[1] = l2;
+   \   000008   814D0200     MOV.W   R13, 0x2(SP)
+    238              DataBuff[2] = l3;
+   \   00000C   814E0400     MOV.W   R14, 0x4(SP)
+    239              DataBuff[3] = l4;
+   \   000010   814F0600     MOV.W   R15, 0x6(SP)
+    240              DataBuff[4] = l5;
+   \   000014   914132000800 MOV.W   0x32(SP), 0x8(SP)
+    241              DataBuff[5] = l6;
+   \   00001A   914134000A00 MOV.W   0x34(SP), 0xa(SP)
+    242              DataBuff[6] = l7;
+   \   000020   914136000C00 MOV.W   0x36(SP), 0xc(SP)
+    243              DataBuff[7] = l8;
+   \   000026   914138000E00 MOV.W   0x38(SP), 0xe(SP)
+    244              
+    245              SendBuff[0] = 03;
+   \   00002C   F14003001000 MOV.B   #0x3, 0x10(SP)
+    246              SendBuff[1] = 0xFC;
+   \   000032   F140FC001100 MOV.B   #0xfc, 0x11(SP)
+    247              SendBuff[18] = 0xFC;
+   \   000038   F140FC002200 MOV.B   #0xfc, 0x22(SP)
+    248              SendBuff[19] = 0x03;
+   \   00003E   F14003002300 MOV.B   #0x3, 0x23(SP)
+    249              memcpy(SendBuff+2,(uint8_t*)DataBuff,16);
+   \   000044   3E401000     MOV.W   #0x10, R14
+   \   000048   0F43         MOV.W   #0x0, R15
+   \   00004A   CD01         MOVA    SP, R13
+   \   00004C   CC01         MOVA    SP, R12
+   \   00004E   AC001200     ADDA    #0x12, R12
+   \   000052   ........     CALLA   #memcpy
+    250              enQueue(&USB_Send_Queue,SendBuff,20);
+   \   000056   7E401400     MOV.B   #0x14, R14
+   \   00005A   CD01         MOVA    SP, R13
+   \   00005C   AD001000     ADDA    #0x10, R13
+   \   000060   ........     MOVA    #USB_Send_Queue, R12
+   \   000064   ........     CALLA   #enQueue
+    251          }
+   \   000068   A1002E00     ADDA    #0x2e, SP
+   \   00006C   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      8   gcs_ReceiveHandle
+        8   -- Indirect call
+        8 _Add32f
+        8 _Cast32sto32f
+        8 _Div32f
+      4   gcs_init
+     34   update_gcs_Attitude
+       34   -> enQueue
+       34   -> memcpy
+       34 _Cast32fto32s
+       34 _Mul32f
+     36   update_gcs_Freq
+       36   -> ZKHD_Link_MakeFrame
+       36   -> enQueue
+     50   update_gcs_HardwareInfo
+       50   -> ZKHD_Link_MakeFrame
+       50   -> enQueue
+       40   -> memcpy
+     62   update_gcs_Line
+       62   -> ZKHD_Link_MakeFrame
+       62   -> enQueue
+     50   update_gcs_Line2
+       50   -> enQueue
+       50   -> memcpy
+     56   update_gcs_MPU6050
+       56   -> ZKHD_Link_MakeFrame
+       56   -> enQueue
+       46   -> memcpy
+     44   update_gcs_Motor
+       44   -> ZKHD_Link_MakeFrame
+       44   -> enQueue
+       34   -> memcpy
+     72   update_gcs_pid_info
+       72   -> ZKHD_Link_MakeFrame
+       72   -> enQueue
+       62 _Cast32fto32s
+       62 _Mul32f
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  PID_select
+      30  UAV_info
+     172  gcs_ReceiveHandle
+      58  gcs_init
+     270  update_gcs_Attitude
+      62  update_gcs_Freq
+     140  update_gcs_HardwareInfo
+     102  update_gcs_Line
+     110  update_gcs_Line2
+      80  update_gcs_MPU6050
+      74  update_gcs_Motor
+     202  update_gcs_pid_info
+       1  yaobai
+
+ 
+ 1 270 bytes in segment CODE
+    32 bytes in segment DATA20_Z
+ 
+ 1 270 bytes of CODE memory
+    32 bytes of DATA memory
+
+Errors: none
+Warnings: 1

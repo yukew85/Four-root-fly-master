@@ -1,0 +1,156 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:43
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_lpm.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW5725.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_lpm.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_lpm.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_lpm.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_lpm.c
+      1          #include "msp430f5529_lpm.h"
+      2          /*******************************************************************************
+      3          *  函数名称：LowPowerMode_Enter(LPMx Lpmx)
+      4          *  功能说明：功耗模式设置
+      5          *  参数说明：LPMx Lpmx:功耗模式，请参考.h文件，注意不能在中断中使用
+      6          *  函数返回：无
+      7          *  使用示例：LowPowerMode_Enter(LPM_1);   //进入低功耗模式1
+      8          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+      9          void LowPowerMode_Enter(LPMx Lpmx)
+   \                     LowPowerMode_Enter:
+     10          {
+     11            _BIC_SR(LPM_4);
+   \   000000   32C0F000     BIC.W   #0xf0, SR
+   \   000004   0343         NOP
+     12            _BIS_SR(Lpmx);
+   \   000006   4C4C         MOV.B   R12, R12
+   \   000008   0343         NOP
+   \   00000A   02DC         BIS.W   R12, SR
+   \   00000C   0343         NOP
+     13          }
+   \   00000E   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   LowPowerMode_Enter
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      16  LowPowerMode_Enter
+
+ 
+ 16 bytes in segment CODE
+ 
+ 16 bytes of CODE memory
+
+Errors: none
+Warnings: none

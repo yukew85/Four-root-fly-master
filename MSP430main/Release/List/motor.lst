@@ -1,0 +1,185 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:42
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\motor.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWD674.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\motor.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\motor.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\motor.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\motor.c
+      1          #include "motor.h"
+      2          
+      3          volatile static uint16 PWM_Period_Cnt_Max = 500;
+      4          
+
+   \                                 In  segment CODE, align 2
+      5          void Motor_Init()
+   \                     Motor_Init:
+      6          {
+      7              TIMER_PWM_Init(TIMER_A0,1000, TIMER_CH1, TIMER_CH2, TIMER_CH3, TIMER_CH4);  
+   \   000000   2212         PUSH.W  #0x4
+   \   000002   30120300     PUSH.W  #0x3
+   \   000006   2312         PUSH.W  #0x2
+   \   000008   1312         PUSH.W  #0x1
+   \   00000A   6D42         MOV.B   #0x4, R13
+   \   00000C   3E40E803     MOV.W   #0x3e8, R14
+   \   000010   0F43         MOV.W   #0x0, R15
+   \   000012   4C43         MOV.B   #0x0, R12
+   \   000014   ........     CALLA   #TIMER_PWM_MultiChannel_Init
+      8          }
+   \   000018   A1000800     ADDA    #0x8, SP
+   \   00001C   1001         RETA
+      9          
+
+   \                                 In  segment CODE, align 2
+     10          void Motor_Config(uint16_t M1,  uint16_t M2,  uint16_t M3, uint16_t M4)
+   \                     Motor_Config:
+     11          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   0B4D         MOV.W   R13, R11
+   \   000004   0A4E         MOV.W   R14, R10
+   \   000006   084F         MOV.W   R15, R8
+     12              TIMER_PWM_SetChannelDuty  (TIMER_A0,TIMER_CH1,M1);          
+   \   000008   0E4C         MOV.W   R12, R14
+   \   00000A   0F43         MOV.W   #0x0, R15
+   \   00000C   5D43         MOV.B   #0x1, R13
+   \   00000E   4C43         MOV.B   #0x0, R12
+   \   000010   ........     CALLA   #TIMER_PWM_SetChannelDuty
+     13              TIMER_PWM_SetChannelDuty  (TIMER_A0,TIMER_CH2,M2);          
+   \   000014   0E4B         MOV.W   R11, R14
+   \   000016   0F43         MOV.W   #0x0, R15
+   \   000018   6D43         MOV.B   #0x2, R13
+   \   00001A   4C43         MOV.B   #0x0, R12
+   \   00001C   ........     CALLA   #TIMER_PWM_SetChannelDuty
+     14              TIMER_PWM_SetChannelDuty  (TIMER_A0,TIMER_CH3,M3);          
+   \   000020   0E4A         MOV.W   R10, R14
+   \   000022   0F43         MOV.W   #0x0, R15
+   \   000024   7D400300     MOV.B   #0x3, R13
+   \   000028   4C43         MOV.B   #0x0, R12
+   \   00002A   ........     CALLA   #TIMER_PWM_SetChannelDuty
+     15              TIMER_PWM_SetChannelDuty  (TIMER_A0,TIMER_CH4,M4);          
+   \   00002E   0E48         MOV.W   R8, R14
+   \   000030   0F43         MOV.W   #0x0, R15
+   \   000032   6D42         MOV.B   #0x4, R13
+   \   000034   4C43         MOV.B   #0x0, R12
+   \   000036   ........     CALLA   #TIMER_PWM_SetChannelDuty
+     16          }
+   \   00003A   3816         POPM.A  #0x4, R11
+   \   00003C   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     20   Motor_Config
+       20   -> TIMER_PWM_SetChannelDuty
+     12   Motor_Init
+       12   -> TIMER_PWM_MultiChannel_Init
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      62  Motor_Config
+      30  Motor_Init
+
+ 
+ 92 bytes in segment CODE
+ 
+ 92 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,952 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:08
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\MidWare\i2c.c
+//    Command line  =  
+//        -f C:\Users\ÑÕ×Óéª\AppData\Local\Temp\EW1FED.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\MidWare\i2c.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\Debug\List\i2c.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME i2c
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Ack_Count
+        PUBLIC I2C_Init
+        PUBLIC I2C_Read_Byte
+        PUBLIC I2C_Write_Byte
+        PUBLIC IIC_RecvACK
+        PUBLIC IIC_RecvByte
+        PUBLIC IIC_SendACK
+        PUBLIC IIC_SendByte
+        PUBLIC IIC_Start
+        PUBLIC IIC_Stop
+        PUBWEAK _A_PBDIR_L
+        PUBWEAK _A_PBIN_L
+        PUBWEAK _A_PBOUT_L
+        PUBLIC delay
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\ÑĞ·¢ĞŞ¸ÄÄ¿Â¼\¸½¼şÄ¿Â¼\2.Ô´Âë\1.·É¿ØÔ´Âë\MidWare\i2c.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,åŒ—äº¬ä¸­ç§‘æµ©ç”µç§‘æŠ€æœ‰é™å…¬å¸
+//    4   * All rights reserved.
+//    5   * æ–‡ä»¶åç§°ï¼ši2c.c
+//    6   * æ‘˜    è¦ï¼š
+//    7   *
+//    8   * å½“å‰ç‰ˆæœ¬ï¼šV1.0
+//    9   * ä½œ    è€…ï¼šåŒ—äº¬ä¸­ç§‘æµ©ç”µç§‘æŠ€æœ‰é™å…¬å¸ç ”å‘éƒ¨ 
+//   10   * å®Œæˆæ—¥æœŸï¼š    
+//   11   * ä¿®æ”¹è¯´æ˜ï¼š
+//   12   * 
+//   13   *
+//   14   * å†å²ç‰ˆæœ¬ï¼š
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 i2cåˆå§‹åŒ–å‡½æ•°
+//   23 
+//   24 
+//   25 */
+//   26 //å¤–éƒ¨æ–‡ä»¶å¼•ç”¨
+//   27 #include "i2c.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0220H
+// union <unnamed> __data16 _A_PBIN_L
+_A_PBIN_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0222H
+// union <unnamed> __data16 _A_PBOUT_L
+_A_PBOUT_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0224H
+// union <unnamed> __data16 _A_PBDIR_L
+_A_PBDIR_L:
+        DS8 2
+//   28 #include "include.h"
+//   29 
+//   30 
+//   31 //ç§æœ‰å‡½æ•°åŒº
+//   32 void IIC_SendByte(uint32_t dat);
+//   33 void IIC_RecvACK();
+//   34 void IIC_SendACK(uint32_t ack);
+//   35 void IIC_Stop();
+//   36 uint32_t IIC_RecvByte();
+//   37 void IIC_Start();
+//   38 
+//   39 //ç§æœ‰å˜é‡åŒº
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//   40 unsigned char Ack_Count = 0; 
+Ack_Count:
+        DS8 1
+//   41 
+//   42 /******************************************************************************
+//   43   * å‡½æ•°åç§°ï¼šI2C_Init
+//   44   * å‡½æ•°æè¿°ï¼šåˆå§‹åŒ–I2cæ€»çº¿
+//   45   * è¾“    å…¥ï¼švoid
+//   46   * è¾“    å‡ºï¼švoid
+//   47   * è¿”    å›ï¼švoid 
+//   48   * å¤‡    æ³¨ï¼šnull    
+//   49   *    
+//   50   *
+//   51 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 void I2C_Init()
+I2C_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function I2C_Init
+          CFI NoCalls
+//   53 {
+//   54   P3DIR |= (1 << SCL);
+        BIS.B   #0x2, &0x224
+//   55 }
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_PBDIR_L
+//   56 
+//   57 /******************************************************************************
+//   58   * å‡½æ•°åç§°ï¼šdelay
+//   59   * å‡½æ•°æè¿°ï¼šI2cå»¶æ—¶
+//   60   * è¾“    å…¥ï¼š
+//   61   * uint32_t n:å»¶æ—¶çš„å‘¨æœŸ
+//   62   * è¾“    å‡ºï¼švoid
+//   63   * è¿”    å›ï¼švoid 
+//   64   * å¤‡    æ³¨ï¼šnull    
+//   65   *    
+//   66   *
+//   67 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   68 void delay(uint32_t n)
+delay:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function delay
+          CFI NoCalls
+//   69 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//   70   while (n--)
+??delay_0:
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R14, R12
+        MOV.W   R15, R13
+        ADD.W   #0xffff, R12
+        ADDC.W  #0xffff, R13
+        MOV.W   R14, R10
+        ADDA    R15, R10
+        JNE     ??delay_0
+//   71     ;
+//   72 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+//   73 
+//   74 /******************************************************************************
+//   75   * å‡½æ•°åç§°ï¼šIIC_Start
+//   76   * å‡½æ•°æè¿°ï¼šI2cå¼€å§‹ä¿¡å·
+//   77   * è¾“    å…¥ï¼švoid
+//   78   * è¾“    å‡ºï¼švoid
+//   79   * è¿”    å›ï¼švoid 
+//   80   * å¤‡    æ³¨ï¼šnull    
+//   81   *    
+//   82   *
+//   83 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   84 void IIC_Start()
+IIC_Start:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function IIC_Start
+//   85 {
+//   86     P3DIR |= (1 << SDA);
+        BIS.B   #0x1, &0x224
+//   87     IIC |= (1 << SDA);
+        BIS.B   #0x1, &0x222
+//   88     delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//   89     IIC |= (1 << SCL);
+        BIS.B   #0x2, &0x222
+//   90     delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//   91     IIC &= ~(1 << SDA);
+        BIC.B   #0x1, &0x222
+//   92     delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//   93     IIC &= ~(1 << SCL);
+        BIC.B   #0x2, &0x222
+//   94     delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI TailCall delay
+        BRA     #delay
+          CFI EndBlock cfiBlock2
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+//   95 }
+//   96 
+//   97 /******************************************************************************
+//   98   * å‡½æ•°åç§°ï¼šIIC_Stop
+//   99   * å‡½æ•°æè¿°ï¼šI2cåœæ­¢ä¿¡å·
+//  100   * è¾“    å…¥ï¼švoid
+//  101   * è¾“    å‡ºï¼švoid
+//  102   * è¿”    å›ï¼švoid 
+//  103   * å¤‡    æ³¨ï¼šnull    
+//  104   *    
+//  105   *
+//  106 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  107 void IIC_Stop()
+IIC_Stop:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function IIC_Stop
+//  108 {
+//  109   P3DIR |= (1 << SDA);
+        BIS.B   #0x1, &0x224
+//  110   IIC &= ~(1 << SCL);
+        BIC.B   #0x2, &0x222
+//  111   IIC &= ~(1 << SDA);
+        BIC.B   #0x1, &0x222
+//  112   delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  113   IIC |= (1 << SCL);
+        BIS.B   #0x2, &0x222
+//  114   delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  115   IIC |= (1 << SDA);
+        BIS.B   #0x1, &0x222
+//  116 }
+        RETA
+          CFI EndBlock cfiBlock3
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+//  117 
+//  118 /******************************************************************************
+//  119   * å‡½æ•°åç§°ï¼šIIC_SendACK
+//  120   * å‡½æ•°æè¿°ï¼šå‘é€ACK
+//  121   * è¾“    å…¥ï¼švoid
+//  122   * è¾“    å‡ºï¼švoid
+//  123   * è¿”    å›ï¼švoid 
+//  124   * å¤‡    æ³¨ï¼šnull    
+//  125   *    
+//  126   *
+//  127 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  128 void IIC_SendACK(uint32_t ack)
+IIC_SendACK:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function IIC_SendACK
+//  129 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  130   P3DIR |= (1 << SDA);
+        BIS.B   #0x1, &0x224
+//  131   IIC &= ~(1 << SCL);
+        BIC.B   #0x2, &0x222
+//  132   delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  133   if (ack)
+        MOV.W   R10, R15
+        ADDA    R11, R15
+        JEQ     ??IIC_SendACK_1
+//  134   {
+//  135     IIC |= (1 << SDA);
+        BIS.B   #0x1, &0x222
+        JMP     ??IIC_SendACK_0
+//  136   }
+//  137   else
+//  138   {
+//  139     IIC &= ~(1 << SDA);
+??IIC_SendACK_1:
+        BIC.B   #0x1, &0x222
+//  140   }
+//  141   delay(1);
+??IIC_SendACK_0:
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  142   IIC |= (1 << SCL);
+        BIS.B   #0x2, &0x222
+//  143   delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  144   IIC &= ~(1 << SCL);
+        BIC.B   #0x2, &0x222
+//  145   delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  146 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock4
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+//  147 
+//  148 /******************************************************************************
+//  149   * å‡½æ•°åç§°ï¼šIIC_RecvACK
+//  150   * å‡½æ•°æè¿°ï¼šæ¥æ”¶ACk
+//  151   * è¾“    å…¥ï¼švoid
+//  152   * è¾“    å‡ºï¼švoid
+//  153   * è¿”    å›ï¼švoid 
+//  154   * å¤‡    æ³¨ï¼šnull    
+//  155   *    
+//  156   *
+//  157 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  158 void IIC_RecvACK()
+IIC_RecvACK:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function IIC_RecvACK
+//  159 {
+//  160   P3DIR &= ~(1 << SDA);
+        BIC.B   #0x1, &0x224
+//  161 
+//  162   IIC |= (1 << SCL);
+        BIS.B   #0x2, &0x222
+//  163   while ((P3IN & (1 << SDA)))
+??IIC_RecvACK_0:
+        BIT.B   #0x1, &0x220
+        JNC     ??IIC_RecvACK_1
+//  164   {
+//  165     Ack_Count++;
+        ADDX.B  #0x1, &Ack_Count
+//  166     if (Ack_Count > 250)
+        CMPX.B  #0xfb, &Ack_Count
+        JNC     ??IIC_RecvACK_0
+//  167     {
+//  168       IIC_Stop();
+          CFI FunCall IIC_Stop
+        CALLA   #IIC_Stop
+//  169       Ack_Count = 0;
+        MOVX.B  #0x0, &Ack_Count
+//  170       break;
+//  171     }
+//  172   }
+//  173 
+//  174   IIC &= ~(1 << SCL);
+??IIC_RecvACK_1:
+        BIC.B   #0x2, &0x222
+//  175   delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI TailCall delay
+        BRA     #delay
+          CFI EndBlock cfiBlock5
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+        REQUIRE _A_PBIN_L
+//  176 }
+//  177 
+//  178 /******************************************************************************
+//  179   * å‡½æ•°åç§°ï¼šIIC_SendByte
+//  180   * å‡½æ•°æè¿°ï¼šI2cå‘é€ä¸€ä¸ªbyte
+//  181   * è¾“    å…¥ï¼š
+//  182   * uint32_t dat:è¦å‘é€çš„æ•°æ®
+//  183   * è¾“    å‡ºï¼švoid
+//  184   * è¿”    å›ï¼švoid 
+//  185   * å¤‡    æ³¨ï¼šnull    
+//  186   *    
+//  187   *
+//  188 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  189 void IIC_SendByte(uint32_t dat)
+IIC_SendByte:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function IIC_SendByte
+//  190 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  191   uint32_t i;
+//  192 
+//  193   P3DIR |= (1 << SDA);
+        BIS.B   #0x1, &0x224
+//  194   i = 8;
+        MOV.W   #0x8, R8
+        MOV.W   #0x0, R9
+//  195   IIC &= ~(1 << SCL);
+        BIC.B   #0x2, &0x222
+//  196   delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  197   while (i--) 
+??IIC_SendByte_0:
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+        ADD.W   #0xffff, R8
+        ADDC.W  #0xffff, R9
+        MOV.W   R14, R13
+        ADDA    R15, R13
+        JEQ     ??IIC_SendByte_2
+//  198   {
+//  199     if (((dat & 0x80) >> 7))
+        CMP.B   #0x0, R10
+        JGE     ??IIC_SendByte_3
+//  200     {
+//  201       IIC |= (1 << SDA);
+        BIS.B   #0x1, &0x222
+        JMP     ??IIC_SendByte_1
+//  202     }
+//  203     else
+//  204     {
+//  205       IIC &= ~(1 << SDA);
+??IIC_SendByte_3:
+        BIC.B   #0x1, &0x222
+//  206     }
+//  207     dat <<= 1; 
+??IIC_SendByte_1:
+        RLA.W   R10
+        RLC.W   R11
+//  208     delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  209     IIC |= (1 << SCL);
+        BIS.B   #0x2, &0x222
+//  210     delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  211     IIC &= ~(1 << SCL);
+        BIC.B   #0x2, &0x222
+//  212     delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+        JMP     ??IIC_SendByte_0
+//  213   }
+//  214 
+//  215   IIC |= (1 << SDA);
+??IIC_SendByte_2:
+        BIS.B   #0x1, &0x222
+//  216   IIC_RecvACK();
+          CFI FunCall IIC_RecvACK
+        CALLA   #IIC_RecvACK
+//  217 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock6
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+//  218 
+//  219 /******************************************************************************
+//  220   * å‡½æ•°åç§°ï¼šIIC_RecvByte
+//  221   * å‡½æ•°æè¿°ï¼šI2cæ¥æ”¶ä¸€ä¸ªbyte
+//  222   * è¾“    å…¥ï¼švoid
+//  223   * è¾“    å‡ºï¼švoid
+//  224   * è¿”    å›ï¼šæ¥æ”¶åˆ°çš„æ•°æ®
+//  225   * å¤‡    æ³¨ï¼šnull    
+//  226   *    
+//  227   *
+//  228 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  229 uint32_t IIC_RecvByte()
+IIC_RecvByte:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function IIC_RecvByte
+//  230 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+//  231   uint32_t i;
+//  232   uint32_t dat = 0;
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R11
+//  233 
+//  234   P3DIR &= ~(1 << SDA);
+        BIC.B   #0x1, &0x224
+//  235   i = 8;
+        MOV.W   #0x8, R8
+        MOV.W   #0x0, R9
+//  236   while (i--) 
+??IIC_RecvByte_0:
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+        ADD.W   #0xffff, R8
+        ADDC.W  #0xffff, R9
+        MOV.W   R14, R13
+        ADDA    R15, R13
+        JEQ     ??IIC_RecvByte_2
+//  237   {
+//  238     IIC &= ~(1 << SCL);
+        BIC.B   #0x2, &0x222
+//  239     delay(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+//  240     IIC |= (1 << SCL);
+        BIS.B   #0x2, &0x222
+//  241     dat <<= 1;
+        RLA.W   R10
+        RLC.W   R11
+//  242     if (P3IN & BIT0)
+        BIT.B   #0x1, &0x220
+        JNC     ??IIC_RecvByte_1
+//  243     {
+//  244       dat |= 1;
+        BIS.W   #0x1, R10
+//  245     }
+//  246     else
+//  247     {
+//  248       dat |= 0;
+//  249     }
+//  250     delay(1);
+??IIC_RecvByte_1:
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay
+        CALLA   #delay
+        JMP     ??IIC_RecvByte_0
+//  251   }
+//  252   return dat;
+??IIC_RecvByte_2:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock7
+        REQUIRE _A_PBDIR_L
+        REQUIRE _A_PBOUT_L
+        REQUIRE _A_PBIN_L
+//  253 }
+//  254 
+//  255 /******************************************************************************
+//  256   * å‡½æ•°åç§°ï¼šI2C_Write_Byte
+//  257   * å‡½æ•°æè¿°ï¼šI2cå¾€ä»æœºå¯„å­˜å™¨åœ°å€å†™æ•°æ®
+//  258   * è¾“    å…¥ï¼š
+//  259   * uint32_t Slaveaddr:ä»æœºåœ°å€
+//  260   * uint32_t REG_Address:å¯„å­˜å™¨åœ°å€
+//  261   * uint32_t REG_dataï¼šå¯„å­˜å™¨æ•°æ®
+//  262   * è¾“    å‡ºï¼švoid
+//  263   * è¿”    å›ï¼švoid 
+//  264   * å¤‡    æ³¨ï¼šnull    
+//  265   *    
+//  266   *
+//  267 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  268 void I2C_Write_Byte(uint8_t Slaveaddr, uint8_t REG_Address, uint8_t REG_data)
+I2C_Write_Byte:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function I2C_Write_Byte
+//  269 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R11
+        MOV.B   R13, R10
+        MOV.B   R14, R8
+//  270   IIC_Start(); 
+          CFI FunCall IIC_Start
+        CALLA   #IIC_Start
+//  271   IIC_SendByte(Slaveaddr);   
+        MOV.B   R11, R11
+        MOV.W   R11, R12
+        MOV.W   #0x0, R13
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  272   IIC_SendByte(REG_Address); 
+        MOV.B   R10, R10
+        MOV.W   R10, R12
+        MOV.W   #0x0, R13
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  273   IIC_SendByte(REG_data);    
+        MOV.B   R8, R8
+        MOV.W   R8, R12
+        MOV.W   #0x0, R13
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  274   IIC_Stop(); 
+          CFI FunCall IIC_Stop
+        CALLA   #IIC_Stop
+//  275 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock8
+//  276 
+//  277 /******************************************************************************
+//  278   * å‡½æ•°åç§°ï¼šI2C_Read_Byte
+//  279   * å‡½æ•°æè¿°ï¼šI2cå¾€ä»æœºå¯„å­˜å™¨è¯»æ•°æ®
+//  280   * è¾“    å…¥ï¼š
+//  281   * uint32_t Slaveaddrï¼šä»æœºåœ°å€
+//  282   * uint32_t REG_Address:å¯„å­˜å™¨åœ°å€
+//  283   * è¾“    å‡ºï¼švoid
+//  284   * è¿”    å›ï¼šè¯»å–åˆ°çš„æ•°æ®
+//  285   * å¤‡    æ³¨ï¼šnull    
+//  286   *    
+//  287   *
+//  288 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  289 uint8_t I2C_Read_Byte(uint8_t Slaveaddr, uint8_t REG_Address)
+I2C_Read_Byte:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function I2C_Read_Byte
+//  290 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R8
+        MOV.B   R13, R9
+//  291   uint32_t REG_data;
+//  292   IIC_Start();                 
+          CFI FunCall IIC_Start
+        CALLA   #IIC_Start
+//  293   IIC_SendByte(Slaveaddr);    
+        MOV.B   R8, R8
+        MOV.W   R8, R12
+        MOV.W   #0x0, R13
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  294   IIC_SendByte(REG_Address);   
+        MOV.B   R9, R9
+        MOV.W   R9, R12
+        MOV.W   #0x0, R13
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  295   IIC_Start();                 
+          CFI FunCall IIC_Start
+        CALLA   #IIC_Start
+//  296   IIC_SendByte(Slaveaddr + 1); 
+        MOV.B   R8, R12
+        ADD.W   #0x1, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall IIC_SendByte
+        CALLA   #IIC_SendByte
+//  297   REG_data = IIC_RecvByte();  
+          CFI FunCall IIC_RecvByte
+        CALLA   #IIC_RecvByte
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  298   IIC_SendACK(1);
+        MOV.W   #0x1, R12
+        MOV.W   #0x0, R13
+          CFI FunCall IIC_SendACK
+        CALLA   #IIC_SendACK
+//  299   IIC_Stop(); 
+          CFI FunCall IIC_Stop
+        CALLA   #IIC_Stop
+//  300   return REG_data;
+        PUSH.W  R12
+          CFI CFA SP+22
+        MOV.B   R10, 0(SP)
+        POP.W   R12
+          CFI CFA SP+20
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  301 }
+          CFI EndBlock cfiBlock9
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  302 
+//  303 
+//  304 /******************* (C) ç‰ˆæƒæ‰€æœ‰ 2018 åŒ—äº¬ä¸­ç§‘æµ©ç”µç§‘æŠ€æœ‰é™å…¬å¸ *******************/
+// 
+// 564 bytes in segment CODE
+//   6 bytes in segment DATA16_AN
+//   1 byte  in segment DATA20_Z
+// 
+// 564 bytes of CODE memory
+//   1 byte  of DATA memory (+ 6 bytes shared)
+//
+//Errors: none
+//Warnings: none

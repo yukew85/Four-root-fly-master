@@ -1,0 +1,1512 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:44
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\myMath.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWE098.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\myMath.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\myMath.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME myMath
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Div32f
+        EXTERN _Mul32f
+        EXTERN _Add32f
+        EXTERN _Cast32sto32f
+        EXTERN ?FLT_GE
+        EXTERN ?FLT_LT
+        EXTERN _Sub32f
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC AtR
+        PUBLIC Gyro_G
+        PUBLIC Gyro_Gr
+        PUBLIC M_PI
+        PUBLIC PI_2
+        PUBLIC Q_rsqrt
+        PUBLIC RtA
+        PUBLIC VariableParameter
+        PUBLIC arcsin
+        PUBLIC arctan
+        PUBLIC array_assign
+        PUBLIC array_astrict
+        PUBLIC cosine
+        PUBLIC data_limit
+        PUBLIC middle_3
+        PUBLIC my_deathzoom
+        PUBLIC my_deathzoom_2
+        PUBLIC safe_asin
+        PUBLIC sine
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN fabs
+        EXTERN __iar_Dtest
+        EXTERN asinf
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\myMath.c
+//    1 #include "ALL_DEFINE.h"
+//    2 #include "myMath.h"
+//    3 #include <math.h>
+//    4 
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    5 const float M_PI = 3.1415926535;
+M_PI:
+        DATA32
+        DC32 40490FDBH
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    6 const float RtA = 57.2957795f;
+RtA:
+        DATA32
+        DC32 42652EE1H
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    7 const float AtR = 0.0174532925f;
+AtR:
+        DATA32
+        DC32 3C8EFA35H
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    8 const float Gyro_G = 0.03051756f*2;	  	//陀螺仪初始化量程+-2000度每秒于1 / (65536 / 4000) = 0.03051756*2		
+Gyro_G:
+        DATA32
+        DC32 3D79FFF6H
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    9 const float Gyro_Gr = 0.0005326f*2;     //面计算度每秒,转换弧度每秒则 2*0.03051756	 * 0.0174533f = 0.0005326*2
+Gyro_Gr:
+        DATA32
+        DC32 3A8B9E2EH
+//   10 
+//   11 ////in  -+500
+//   12 ////out exp -+500
+//   13 //int16_t Math_AngelEXP(int16_t in){
+//   14 //	int16_t tmp2 ,tmp,value;
+//   15 //	tmp = Math_min(Math_abs(in),500); //[0 , +500]
+//   16 //	tmp2 = tmp/100;
+//   17 //	value =	Angel_EXP[tmp2] + (tmp-tmp2*100) * (Angel_EXP[tmp2+1]-Angel_EXP[tmp2]) / 100;
+//   18 //	if(in<0)value = -value;
+//   19 //	return value;
+//   20 //}
+//   21 
+//   22 ////油门输入转换。
+//   23 //int16_t Math_ThrEXP(int16_t RCThr){
+//   24 //	int16_t tmp2 ,tmp,value;
+//   25 //	if(RCThr <1000)return RCThr; //低于最小值，直接输出，不做指数变换
+//   26 //	tmp = Math_Constrain(RCThr,1000,2000);
+//   27 //  	tmp = (unsigned int)(tmp-1000)*1000/(2000-1000); // [1000;2000] -> [0;1000]
+//   28 //  	tmp2 = tmp/100;
+//   29 //  	value = ThrottleEXP[tmp2] + (tmp-tmp2*100) * (ThrottleEXP[tmp2+1]-ThrottleEXP[tmp2]) / 100; // [0;1000] -> expo -> [MINTHROTTLE;MAXTHROTTLE]
+//   30 //  	return value;
+//   31 //}
+//   32 
+//   33 /*====================================================================================================*/
+//   34 /*====================================================================================================*
+//   35 **函数 : Q_rsqrt
+//   36 **功能 : 快速计算 三角函数
+//   37 **输入 : number  
+//   38 **输出 : 结果
+//   39 **备注 : None
+//   40 **====================================================================================================*/
+//   41 /*====================================================================================================*/
+//   42 //逼近法；线性拟合
+//   43 //Q (4/M_PI x - 4/M_PI^2 x^2) + P (4/M_PI x - 4/M_PI^2 x^2)^2 
+//   44 #ifndef TAPYOR
+//   45 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   46 float sine(float x)          // (-M_PI , M_PI) ???? 0.0005
+sine:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function sine
+//   47 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        SUBA    #0x4, SP
+          CFI CFA SP+40
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//   48 	const float Q = 0.775;
+        MOV.W   #0x6666, 0(SP)
+        MOV.W   #0x3f46, 0x2(SP)
+//   49 	const float P = 0.225;
+        MOV.W   #0x6666, R10
+        MOV.W   #0x3e66, R11
+//   50 	const float B =  4 / M_PI;
+        MOV.W   #0x0, R12
+        MOV.W   #0x4080, R13
+        MOVX.W  &M_PI, R14
+        MOVX.W  &M_PI + 2, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   51 	const float C1 = -4 / (M_PI*M_PI);
+        MOV.W   #0x0, R12
+        MOV.W   #0xc080, R13
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOVX.W  &M_PI, R12
+        MOVX.W  &M_PI + 2, R13
+        MOVX.W  &M_PI, R14
+        MOVX.W  &M_PI + 2, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//   52         
+//   53 	float y = B * x + C1 * x * fabs(x); 
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall fabs
+        CALLA   #fabs
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   54 	return (Q * y + P * y * fabs(y));
+        MOV.W   @SP, R12
+        MOV.W   0x2(SP), R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall fabs
+        CALLA   #fabs
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        ADDA    #0x4, SP
+          CFI CFA SP+36
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//   55 }
+          CFI EndBlock cfiBlock0
+//   56 #else 
+//   57 
+//   58 //4级泰勒公式法 在PI出会出现0.7的最大误差
+//   59 //sinx= x- x^3/3! + x^5/5! - x^7/7!+ x^9/9! . =?(-1)^n x^(2n+1)/(2n+1)!
+//   60 float sine(float x)
+//   61 {
+//   62 	float t=x;
+//   63 	float result = x;
+//   64 	float X2 = x*x;
+//   65 	uint8_t cnt = 1;
+//   66 
+//   67 	do
+//   68 	{
+//   69 		t=-t;
+//   70 		t *= X2;
+//   71 		result += t/((cnt<<1)+1);
+//   72 		cnt++;
+//   73         }while(cnt<5);//6阶
+//   74 
+//   75 	return result;
+//   76 }
+//   77 #endif
+//   78 //http://wenku.baidu.com/link?url=jUswZ3G2z26IUS72IkeZrizc5V9VdR1sTF8xGCOHPFW0P70bGjjm5zhNxvRT36X31TMoFf6S-9lMoIkK4pPwExAaEZGtRpWggdQAzpg3Fsu
+//   79 //cos(x)=sin(M_PI/2+x)=sin(M_PI/2-x)
+//   80 //cos(x-M_PI/2)=sin(x)
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   81 float cosine(float x)
+cosine:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function cosine
+//   82 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//   83     return sine(x+M_PI/2);//奇变偶不变，符号看象限
+        MOVX.W  &M_PI, R12
+        MOVX.W  &M_PI + 2, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+          CFI FunCall sine
+        CALLA   #sine
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//   84 }
+          CFI EndBlock cfiBlock1
+//   85 
+//   86 //反正切麦克劳林展开式 阶数越高，值越准确   70°以内是准确的
+//   87 //http://www.zybang.com/question/246f9997776f7d5cc636b10aff27a1cb.html
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   88 float arctan(float x)  //  (-1 , +1)    6? ?? 0.002958 
+arctan:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function arctan
+//   89 {
+        PUSHM.A #0x7, R10
+          CFI R4L Frame(CFA, -32)
+          CFI R4H Frame(CFA, -30)
+          CFI R5L Frame(CFA, -28)
+          CFI R5H Frame(CFA, -26)
+          CFI R6L Frame(CFA, -24)
+          CFI R6H Frame(CFA, -22)
+          CFI R7L Frame(CFA, -20)
+          CFI R7H Frame(CFA, -18)
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+32
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//   90 	float t = x;
+//   91 	float result = 0;
+        MOV.W   #0x0, R8
+        MOV.W   #0x0, R9
+//   92 	float X2 = x * x;
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   93 	unsigned char cnt = 1;
+        MOV.B   #0x1, R10
+//   94     
+//   95 	do
+//   96 	{
+//   97 		result += t / ((cnt << 1) - 1);
+??arctan_0:
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.B   R10, R12
+        RLA.W   R12
+        ADD.W   #0xffff, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//   98 		t = -t;
+        XOR.W   #0x8000, R5
+//   99 		t *= X2;
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//  100 		cnt++;
+        ADD.B   #0x1, R10
+//  101 	}while(cnt <= 6);//5??
+        CMP.B   #0x7, R10
+        JNC     ??arctan_0
+//  102 	return result;
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        POPM.A  #0x7, R10
+          CFI R10H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  103 }
+          CFI EndBlock cfiBlock2
+//  104 
+//  105 //反正弦麦克劳林展开式 -1<x<+1     42°以内是准确的
+//  106 //http://xuxzmail.blog.163.com/blog/static/25131916200971794014536/
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//  107 const float PI_2 = 1.570796f;
+PI_2:
+        DATA32
+        DC32 3FC90FD8H
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  108 float arcsin(float x)   //(-1 , +1)  ? 0 ????  6? ??0.005
+arcsin:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function arcsin
+//  109 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        SUBA    #0x6, SP
+          CFI CFA SP+42
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//  110 	float d=1;
+        MOV.W   #0x0, R10
+        MOV.W   #0x3f80, R11
+//  111 	float t=x;
+        MOV.W   R4, R6
+        MOV.W   R5, R7
+//  112 	unsigned char cnt = 1;
+        MOV.B   #0x1, 0(SP)
+//  113 	float result = 0;	
+        MOV.W   #0x0, R8
+        MOV.W   #0x0, R9
+//  114 	float X2 = x*x;
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0x2(SP)
+        MOV.W   R13, 0x4(SP)
+//  115 	
+//  116 	if (x >= 1.0f) 
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f80, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??arcsin_2
+//  117 	{
+//  118 		return PI_2;
+        MOVX.W  &PI_2, R12
+        MOVX.W  &PI_2 + 2, R13
+        JMP     ??arcsin_1
+//  119 	}
+//  120 	if (x <= -1.0f) 
+??arcsin_2:
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+        MOV.W   #0xffff, R14
+        MOV.W   #0xbf7f, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??arcsin_0
+//  121 	{
+//  122 		return -PI_2;
+        MOVX.W  &PI_2, R12
+        MOVX.W  &PI_2 + 2, R13
+        XOR.W   #0x8000, R13
+        JMP     ??arcsin_1
+//  123 	}
+//  124 	do
+//  125 	{
+//  126 		result += t / (d * ((cnt << 1) - 1));
+??arcsin_0:
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOV.B   @SP, R12
+        MOV.B   R12, R12
+        RLA.W   R12
+        ADD.W   #0xffff, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  127 		t *= X2 * ((cnt << 1) - 1);//
+        MOV.B   @SP, R12
+        MOV.B   R12, R12
+        RLA.W   R12
+        ADD.W   #0xffff, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   0x2(SP), R14
+        MOV.W   0x4(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  128 		d *= (cnt << 1);//2 4 6 8 10 ...
+        MOV.B   @SP, R12
+        MOV.B   R12, R12
+        RLA.W   R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  129 		cnt++;
+        ADD.B   #0x1, 0(SP)
+//  130 	}while(cnt <= 6);
+        CMP.B   #0x7, 0(SP)
+        JNC     ??arcsin_0
+//  131 
+//  132 	return result;
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+??arcsin_1:
+        ADDA    #0x6, SP
+          CFI CFA SP+36
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  133 }
+          CFI EndBlock cfiBlock3
+//  134 
+//  135 //保证输入值是有效的
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  136 float safe_asin(float v)
+safe_asin:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function safe_asin
+//  137 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  138     if (isnan(v)) {
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall __iar_Dtest
+        CALLA   #__iar_Dtest
+        CMP.W   #0x2, R12
+        JNE     ??safe_asin_1
+//  139         return 0.0;
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+        JMP     ??safe_asin_0
+//  140     }
+//  141     if (v >= 1.0f) {
+??safe_asin_1:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f80, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??safe_asin_2
+//  142         return M_PI/2;
+        MOVX.W  &M_PI, R12
+        MOVX.W  &M_PI + 2, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        JMP     ??safe_asin_0
+//  143     }
+//  144     if (v <= -1.0f) {
+??safe_asin_2:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0xffff, R14
+        MOV.W   #0xbf7f, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??safe_asin_3
+//  145         return -M_PI/2;
+        MOVX.W  &M_PI, R12
+        MOVX.W  &M_PI + 2, R13
+        XOR.W   #0x8000, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        JMP     ??safe_asin_0
+//  146     }
+//  147     return asinf(v);
+??safe_asin_3:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall asinf
+        CALLA   #asinf
+??safe_asin_0:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  148 }
+          CFI EndBlock cfiBlock4
+//  149 
+//  150 /*====================================================================================================*/
+//  151 /*====================================================================================================*
+//  152 **函数 : Q_rsqrt
+//  153 **功能 : 快速计算 1/Sqrt(x) 
+//  154 **输入 : number  
+//  155 **输出 : 结果
+//  156 **备注 : None
+//  157 **====================================================================================================*/
+//  158 /*====================================================================================================*/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  159 float Q_rsqrt(float number)
+Q_rsqrt:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function Q_rsqrt
+//  160 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  161 	long i;
+//  162 	float x2, y;
+//  163 	const float threehalfs = 1.5F;
+        MOV.W   #0x0, R8
+        MOV.W   #0x3fc0, R9
+//  164  
+//  165 	x2 = number * 0.5F;
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f00, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+//  166 	y  = number;
+//  167 	i  = * ( long * ) &y;                      
+//  168 	i  = 0x5f3759df - ( i >> 1 );               
+        MOV.W   #0x59df, R6
+        MOV.W   #0x5f37, R7
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        RRA.W   R13
+        RRC.W   R12
+        MOV.W   R6, R10
+        MOV.W   R7, R11
+        SUB.W   R12, R10
+        SUBC.W  R13, R11
+//  169 	y  = * ( float * ) &i;
+//  170 	y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration （第一次牛顿迭代）
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  171 	return y;
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  172 } 
+          CFI EndBlock cfiBlock5
+//  173 
+//  174 /**************************实现函数********************************************
+//  175 *函数原型:    array_astrict_lower(int16_t *array,int16_t value)
+//  176 *功　　能:    对数组下限限制
+//  177 输入参数：    *array   目标数组指针
+//  178 *             value      
+//  179 输出参数：    无
+//  180 *******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  181 void array_astrict(int16_t *array,int16_t lower,int16_t upper)
+array_astrict:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function array_astrict
+          CFI NoCalls
+//  182 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+//  183    int16_t length = sizeof(array); 
+        MOV.W   #0x4, R10
+//  184 	 uint16_t i = 0;
+        MOV.W   #0x0, R15
+//  185    for(i=0;i<length;i++)
+        MOV.W   #0x0, R15
+        JMP     ??array_astrict_2
+//  186    {
+//  187      if(*(array+i)<lower)  *(array+i) = lower;
+//  188      else if(*(array+i)>upper)  *(array+i) = upper;
+??array_astrict_0:
+        MOV.W   R15, R11
+        ADDA    R11, R11
+        ADDA    R12, R11
+        CMP.W   @R11, R14
+        JGE     ??array_astrict_1
+        MOV.W   R15, R11
+        ADDA    R11, R11
+        ADDA    R12, R11
+        MOV.W   R14, 0(R11)
+??array_astrict_1:
+        ADD.W   #0x1, R15
+??array_astrict_2:
+        CMP.W   R10, R15
+        JC      ??array_astrict_3
+        MOV.W   R15, R11
+        ADDA    R11, R11
+        ADDA    R12, R11
+        CMP.W   R13, 0(R11)
+        JGE     ??array_astrict_0
+        MOV.W   R15, R11
+        ADDA    R11, R11
+        ADDA    R12, R11
+        MOV.W   R13, 0(R11)
+        JMP     ??array_astrict_1
+//  189    } 
+//  190 }
+??array_astrict_3:
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock6
+//  191 
+//  192 /**************************实现函数********************************************
+//  193 *函数原型:    array_assign(int16_t *array,int16_t value)
+//  194 *功　　能:    对数组赋值
+//  195 输入参数：    *array   目标数组指针 
+//  196 *             value      
+//  197 输出参数：    无
+//  198 *******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  199 void array_assign(int16_t *array,int16_t value)
+array_assign:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function array_assign
+          CFI NoCalls
+//  200 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  201    uint16_t length = sizeof(array); 
+        MOV.W   #0x4, R15
+//  202 	 uint16_t i=0;
+        MOV.W   #0x0, R14
+//  203    for(i=0;i<length;i++)
+        MOV.W   #0x0, R14
+        JMP     ??array_assign_1
+//  204    {
+//  205      *(array+i) = value;
+??array_assign_0:
+        MOV.W   R14, R10
+        ADDA    R10, R10
+        ADDA    R12, R10
+        MOV.W   R13, 0(R10)
+//  206    } 
+        ADD.W   #0x1, R14
+??array_assign_1:
+        CMP.W   R15, R14
+        JNC     ??array_assign_0
+//  207 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock7
+//  208 
+//  209 /**************************实现函数********************************************
+//  210 *函数原型:    data_limit(float data,flaot toplimit,float lowerlimit)
+//  211 *功　　能:    数据限幅
+//  212 输入参数：    data       要操作的数据 
+//  213 *             toplimit   上限
+//  214 *             lowerlimit 下限
+//  215 输出参数：    无
+//  216 *******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  217 float data_limit(float data,float toplimit,float lowerlimit)
+data_limit:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function data_limit
+//  218 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOV.W   R14, R12
+        MOV.W   R15, R13
+//  219   if(data > toplimit)  data = toplimit;
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??data_limit_1
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        JMP     ??data_limit_0
+??data_limit_1:
+        MOV.W   0xc(SP), R14
+        MOV.W   0xe(SP), R15
+//  220   else if(data < lowerlimit) data = lowerlimit;
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??data_limit_0
+        MOV.W   R14, R10
+        MOV.W   R15, R11
+//  221 	return data;
+??data_limit_0:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  222 }
+          CFI EndBlock cfiBlock8
+//  223 
+//  224 
+//  225 /***********************************************
+//  226   * @brief  可变增益自适应参数
+//  227   * @param  None
+//  228   * @retval None
+//  229 ************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  230 float VariableParameter(float error)
+VariableParameter:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function VariableParameter
+//  231 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  232 	float  result = 0;
+        MOV.W   #0x0, R8
+        MOV.W   #0x0, R9
+//  233 	
+//  234 	if(error < 0)
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??VariableParameter_0
+//  235 	{
+//  236 	   error = -error;
+        XOR.W   #0x8000, R11
+//  237 	}
+//  238   if(error >0.6f)
+??VariableParameter_0:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x999b, R14
+        MOV.W   #0x3f19, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??VariableParameter_1
+//  239 	{
+//  240 	   error = 0.6f;
+        MOV.W   #0x999a, R10
+        MOV.W   #0x3f19, R11
+//  241 	}
+//  242 	result = 1 - 1.667f * error;
+??VariableParameter_1:
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x6042, R14
+        MOV.W   #0x3fd5, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  243 	if(result < 0)
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??VariableParameter_2
+//  244 	{
+//  245 	   result = 0;
+        MOV.W   #0x0, R8
+        MOV.W   #0x0, R9
+//  246 	}
+//  247 	return result;
+??VariableParameter_2:
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  248 }
+          CFI EndBlock cfiBlock9
+//  249 
+//  250 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  251 float middle_3(float input) //3个数取中间的数
+middle_3:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function middle_3
+          CFI NoCalls
+//  252 { 
+//  253 //
+//  254 //  int a,b,c,t; 
+//  255 //
+//  256 //
+//  257 //  if(a<b)
+//  258 //
+//  259 //  { 
+//  260 //
+//  261 //     t=a;a=b;b=t; 
+//  262 //
+//  263 //  } 
+//  264 //
+//  265 // if(b<c)//9 8 7 
+//  266 //
+//  267 // { 
+//  268 //
+//  269 //  t=b;b=c;c=t;      
+//  270 //
+//  271 // } 
+//  272 //
+//  273 // if(a<b)//9 8 7 
+//  274 //
+//  275 // { 
+//  276 //
+//  277 //  t=a;a=b;b=t; 
+//  278 //
+//  279 // } 
+//  280 //
+//  281 // return b; 
+//  282   return 0;
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+        RETA
+//  283 }
+          CFI EndBlock cfiBlock10
+//  284 
+//  285 
+//  286 
+//  287 /**************************实现函数********************************************
+//  288 *函数原型:    rad(double angle)
+//  289 *功　　能:    角度转化为弧度
+//  290 输入参数：    角度
+//  291 输出参数：    弧度
+//  292 *******************************************************************************/
+//  293 //float Rad(float angle)
+//  294 //{
+//  295 //    return angle * AtR ;
+//  296 //}
+//  297 /**************************实现函数********************************************
+//  298 *函数原型:    degree(double rad)
+//  299 *功　　能:    弧度转化为角度	
+//  300 输入参数：    弧度
+//  301 输出参数：    角度
+//  302 *******************************************************************************/
+//  303 
+//  304 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  305 float my_deathzoom_2(float x,float zoom)
+my_deathzoom_2:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function my_deathzoom_2
+//  306 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//  307 	float t;
+//  308 	
+//  309 	if( x> -zoom && x < zoom )
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        XOR.W   #0x8000, R13
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??my_deathzoom_2_0
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??my_deathzoom_2_0
+//  310 	{
+//  311 		t = 0;
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R11
+//  312 	}
+//  313 	else
+//  314 	{
+//  315 		t = x;
+//  316 	}
+//  317   return (t);
+??my_deathzoom_2_0:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  318 }
+          CFI EndBlock cfiBlock11
+//  319 
+//  320 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  321 float my_deathzoom(float x,float zoom)
+my_deathzoom:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function my_deathzoom
+//  322 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R14, R10
+        MOV.W   R15, R11
+//  323 	float t;
+//  324 	if(x>0)
+        MOV.W   #0x0, R14
+        MOV.W   #0x80, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??my_deathzoom_1
+//  325 	{
+//  326 		t = x - zoom;
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+//  327 		if(t<0)
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??my_deathzoom_0
+//  328 		{
+//  329 			t = 0;
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+        JMP     ??my_deathzoom_0
+//  330 		}
+//  331 	}
+//  332 	else
+//  333 	{
+//  334 		t = x + zoom;
+??my_deathzoom_1:
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+//  335 		if(t>0)
+        MOV.W   #0x0, R14
+        MOV.W   #0x80, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??my_deathzoom_0
+//  336 		{
+//  337 			t = 0;
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+//  338 		}
+//  339 	}
+//  340   return (t);
+??my_deathzoom_0:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  341 }
+          CFI EndBlock cfiBlock12
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  342 /******************* (C) COPYRIGHT 2012 WildFire Team *****END OF FILE************/
+// 
+// 1 296 bytes in segment CODE
+//    24 bytes in segment DATA20_C
+// 
+// 1 296 bytes of CODE  memory
+//    24 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none

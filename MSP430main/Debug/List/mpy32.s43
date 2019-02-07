@@ -1,0 +1,653 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:10
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\mpy32.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW275C.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\mpy32.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\mpy32.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME mpy32
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC MPY32_clearCarryBitValue
+        PUBLIC MPY32_disableFractionalMode
+        PUBLIC MPY32_disableSaturationMode
+        PUBLIC MPY32_enableFractionalMode
+        PUBLIC MPY32_enableSaturationMode
+        PUBLIC MPY32_getCarryBitValue
+        PUBLIC MPY32_getFractionalMode
+        PUBLIC MPY32_getResult
+        PUBLIC MPY32_getSaturationMode
+        PUBLIC MPY32_getSumExtension
+        PUBLIC MPY32_preloadResult
+        PUBLIC MPY32_setOperandOne16Bit
+        PUBLIC MPY32_setOperandOne24Bit
+        PUBLIC MPY32_setOperandOne32Bit
+        PUBLIC MPY32_setOperandOne8Bit
+        PUBLIC MPY32_setOperandTwo16Bit
+        PUBLIC MPY32_setOperandTwo24Bit
+        PUBLIC MPY32_setOperandTwo32Bit
+        PUBLIC MPY32_setOperandTwo8Bit
+        PUBLIC MPY32_setWriteDelay
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\mpy32.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // mpy32.c - Driver for the mpy32 Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup mpy32_api mpy32
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_MPY32__
+//   48 #include "mpy32.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 void MPY32_setWriteDelay (uint16_t writeDelaySelect)
+MPY32_setWriteDelay:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function MPY32_setWriteDelay
+          CFI NoCalls
+//   53 {
+//   54     HWREG16(MPY32_BASE + OFS_MPY32CTL0) &= ~(MPYDLY32 + MPYDLYWRTEN);
+        AND.W   #0xfcff, &0x4ec
+//   55     HWREG16(MPY32_BASE + OFS_MPY32CTL0) |= writeDelaySelect;
+        BIS.W   R12, &0x4ec
+//   56 }
+        RETA
+          CFI EndBlock cfiBlock0
+//   57 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   58 void MPY32_enableSaturationMode (void)
+MPY32_enableSaturationMode:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function MPY32_enableSaturationMode
+          CFI NoCalls
+//   59 {
+//   60     HWREG8(MPY32_BASE + OFS_MPY32CTL0_L) |= MPYSAT;
+        BIS.B   #0x8, &0x4ec
+//   61 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   62 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   63 void MPY32_disableSaturationMode (void)
+MPY32_disableSaturationMode:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function MPY32_disableSaturationMode
+          CFI NoCalls
+//   64 {
+//   65     HWREG8(MPY32_BASE + OFS_MPY32CTL0_L) &= ~(MPYSAT);
+        BIC.B   #0x8, &0x4ec
+//   66 }
+        RETA
+          CFI EndBlock cfiBlock2
+//   67 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   68 uint8_t MPY32_getSaturationMode (void)
+MPY32_getSaturationMode:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function MPY32_getSaturationMode
+          CFI NoCalls
+//   69 {
+//   70     return (HWREG8(MPY32_BASE + OFS_MPY32CTL0_L) &(MPYSAT));
+        MOV.B   &0x4ec, R12
+        AND.B   #0x8, R12
+        RETA
+//   71 }
+          CFI EndBlock cfiBlock3
+//   72 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   73 void MPY32_enableFractionalMode (void)
+MPY32_enableFractionalMode:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function MPY32_enableFractionalMode
+          CFI NoCalls
+//   74 {
+//   75     HWREG8(MPY32_BASE + OFS_MPY32CTL0_L) |= MPYFRAC;
+        BIS.B   #0x4, &0x4ec
+//   76 }
+        RETA
+          CFI EndBlock cfiBlock4
+//   77 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   78 void MPY32_disableFractionalMode (void)
+MPY32_disableFractionalMode:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function MPY32_disableFractionalMode
+          CFI NoCalls
+//   79 {
+//   80     HWREG8(MPY32_BASE + OFS_MPY32CTL0_L) &= ~(MPYFRAC);
+        BIC.B   #0x4, &0x4ec
+//   81 }
+        RETA
+          CFI EndBlock cfiBlock5
+//   82 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   83 uint8_t MPY32_getFractionalMode (void)
+MPY32_getFractionalMode:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function MPY32_getFractionalMode
+          CFI NoCalls
+//   84 {
+//   85     return (HWREG8(MPY32_BASE + OFS_MPY32CTL0_L) &(MPYFRAC));
+        MOV.B   &0x4ec, R12
+        AND.B   #0x4, R12
+        RETA
+//   86 }
+          CFI EndBlock cfiBlock6
+//   87 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   88 void MPY32_setOperandOne8Bit (uint8_t multiplicationType,
+MPY32_setOperandOne8Bit:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function MPY32_setOperandOne8Bit
+          CFI NoCalls
+//   89     uint8_t operand)
+//   90 {
+//   91     HWREG8(MPY32_BASE + OFS_MPY + multiplicationType) = operand;
+        MOV.B   R12, R15
+        ADD.W   #0x4c0, R15
+        MOV.B   R13, 0(R15)
+//   92 }
+        RETA
+          CFI EndBlock cfiBlock7
+//   93 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   94 void MPY32_setOperandOne16Bit (uint8_t multiplicationType,
+MPY32_setOperandOne16Bit:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function MPY32_setOperandOne16Bit
+          CFI NoCalls
+//   95     uint16_t operand)
+//   96 {
+//   97     HWREG16(MPY32_BASE + OFS_MPY + multiplicationType) = operand;
+        MOV.B   R12, R15
+        ADD.W   #0x4c0, R15
+        MOV.W   R13, 0(R15)
+//   98 }
+        RETA
+          CFI EndBlock cfiBlock8
+//   99 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  100 void MPY32_setOperandOne24Bit (uint8_t multiplicationType,
+MPY32_setOperandOne24Bit:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function MPY32_setOperandOne24Bit
+          CFI NoCalls
+//  101     uint32_t operand)
+//  102 {
+//  103     multiplicationType <<= 1;
+        RLA.B   R12
+//  104     HWREG16(MPY32_BASE + OFS_MPY32L + multiplicationType) = operand;
+        MOV.B   R12, R13
+        ADD.W   #0x4d0, R13
+        MOV.W   R14, 0(R13)
+//  105     HWREG8(MPY32_BASE + OFS_MPY32H + multiplicationType) = (operand >> 16);
+        MOV.B   R12, R13
+        ADD.W   #0x4d2, R13
+        MOV.B   R15, 0(R13)
+//  106 }
+        RETA
+          CFI EndBlock cfiBlock9
+//  107 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  108 void MPY32_setOperandOne32Bit (uint8_t multiplicationType,
+MPY32_setOperandOne32Bit:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function MPY32_setOperandOne32Bit
+          CFI NoCalls
+//  109     uint32_t operand)
+//  110 {
+//  111     multiplicationType <<= 1;
+        RLA.B   R12
+//  112     HWREG16(MPY32_BASE + OFS_MPY32L + multiplicationType) = operand;
+        MOV.B   R12, R13
+        ADD.W   #0x4d0, R13
+        MOV.W   R14, 0(R13)
+//  113     HWREG16(MPY32_BASE + OFS_MPY32H + multiplicationType) = (operand >> 16);
+        MOV.B   R12, R13
+        ADD.W   #0x4d2, R13
+        MOV.W   R15, 0(R13)
+//  114 }
+        RETA
+          CFI EndBlock cfiBlock10
+//  115 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  116 void MPY32_setOperandTwo8Bit (uint8_t operand)
+MPY32_setOperandTwo8Bit:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function MPY32_setOperandTwo8Bit
+          CFI NoCalls
+//  117 {
+//  118     HWREG8(MPY32_BASE + OFS_OP2) = operand;
+        MOV.B   R12, &0x4c8
+//  119 }
+        RETA
+          CFI EndBlock cfiBlock11
+//  120 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  121 void MPY32_setOperandTwo16Bit (uint16_t operand)
+MPY32_setOperandTwo16Bit:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function MPY32_setOperandTwo16Bit
+          CFI NoCalls
+//  122 {
+//  123     HWREG16(MPY32_BASE + OFS_OP2) = operand;
+        MOV.W   R12, &0x4c8
+//  124 }
+        RETA
+          CFI EndBlock cfiBlock12
+//  125 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  126 void MPY32_setOperandTwo24Bit (uint32_t operand)
+MPY32_setOperandTwo24Bit:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function MPY32_setOperandTwo24Bit
+          CFI NoCalls
+//  127 {
+//  128     HWREG16(MPY32_BASE + OFS_OP2L) = operand;
+        MOV.W   R12, &0x4e0
+//  129     HWREG8(MPY32_BASE + OFS_OP2H) = (operand >> 16);
+        MOV.B   R13, &0x4e2
+//  130 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  131 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  132 void MPY32_setOperandTwo32Bit (uint32_t operand)
+MPY32_setOperandTwo32Bit:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function MPY32_setOperandTwo32Bit
+          CFI NoCalls
+//  133 {
+//  134     HWREG16(MPY32_BASE + OFS_OP2L) = operand;
+        MOV.W   R12, &0x4e0
+//  135     HWREG16(MPY32_BASE + OFS_OP2H) = (operand >> 16);
+        MOV.W   R13, &0x4e2
+//  136 }
+        RETA
+          CFI EndBlock cfiBlock14
+//  137 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  138 uint64_t MPY32_getResult (void)
+MPY32_getResult:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function MPY32_getResult
+          CFI NoCalls
+//  139 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+//  140     uint64_t result;
+//  141 
+//  142     result = HWREG16(MPY32_BASE + OFS_RES0);
+        MOV.W   &0x4e4, R8
+        MOV.W   #0x0, R9
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R11
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+//  143     result += ((uint64_t)HWREG16(MPY32_BASE + OFS_RES1) << 16);
+        MOV.W   &0x4e6, R8
+        MOV.W   #0x0, R9
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R11
+        MOV.W   R10, R11
+        MOV.W   R9, R10
+        MOV.W   R8, R9
+        MOV.W   #0x0, R8
+        ADD.W   R8, R12
+        ADDC.W  R9, R13
+        ADDC.W  R10, R14
+        ADDC.W  R11, R15
+//  144     result += ((uint64_t)HWREG16(MPY32_BASE + OFS_RES2) << 32);
+        MOV.W   &0x4e8, R8
+        MOV.W   #0x0, R9
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R11
+        MOV.W   R9, R11
+        MOV.W   R8, R10
+        MOV.W   #0x0, R9
+        MOV.W   #0x0, R8
+        ADD.W   R8, R12
+        ADDC.W  R9, R13
+        ADDC.W  R10, R14
+        ADDC.W  R11, R15
+//  145     result += ((uint64_t)HWREG16(MPY32_BASE + OFS_RES3) << 48);
+        MOV.W   &0x4ea, R8
+        MOV.W   #0x0, R9
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R11
+        MOV.W   R8, R11
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R9
+        MOV.W   #0x0, R8
+        ADD.W   R8, R12
+        ADDC.W  R9, R13
+        ADDC.W  R10, R14
+        ADDC.W  R11, R15
+//  146     return ( result );
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  147 }
+          CFI EndBlock cfiBlock15
+//  148 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  149 uint16_t MPY32_getSumExtension (void)
+MPY32_getSumExtension:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function MPY32_getSumExtension
+          CFI NoCalls
+//  150 {
+//  151     return ( HWREG16(MPY32_BASE + OFS_SUMEXT) );
+        MOV.W   &0x4ce, R12
+        RETA
+//  152 }
+          CFI EndBlock cfiBlock16
+//  153 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  154 uint16_t MPY32_getCarryBitValue (void)
+MPY32_getCarryBitValue:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function MPY32_getCarryBitValue
+          CFI NoCalls
+//  155 {
+//  156     return ( HWREG16(MPY32_BASE + OFS_MPY32CTL0) | MPYC);
+        MOV.W   &0x4ec, R12
+        BIS.W   #0x1, R12
+        RETA
+//  157 }
+          CFI EndBlock cfiBlock17
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  158 void MPY32_clearCarryBitValue (void)
+MPY32_clearCarryBitValue:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function MPY32_clearCarryBitValue
+          CFI NoCalls
+//  159 {
+//  160     HWREG16(MPY32_BASE + OFS_MPY32CTL0) &= ~MPYC;
+        BIC.W   #0x1, &0x4ec
+//  161 }
+        RETA
+          CFI EndBlock cfiBlock18
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  162 void MPY32_preloadResult (uint64_t result)
+MPY32_preloadResult:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function MPY32_preloadResult
+          CFI NoCalls
+//  163 {
+//  164     HWREG16(MPY32_BASE + OFS_RES0) = (result & 0xFFFF);
+        MOV.W   R12, &0x4e4
+//  165     HWREG16(MPY32_BASE + OFS_RES1) = ((result >> 16) & 0xFFFF);
+        MOV.W   R13, &0x4e6
+//  166     HWREG16(MPY32_BASE + OFS_RES2) = ((result >> 32) & 0xFFFF);
+        MOV.W   R14, &0x4e8
+//  167     HWREG16(MPY32_BASE + OFS_RES3) = ((result >> 48) & 0xFFFF);
+        MOV.W   R15, &0x4ea
+//  168 }
+        RETA
+          CFI EndBlock cfiBlock19
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  169 
+//  170 #endif
+//  171 //*****************************************************************************
+//  172 //
+//  173 //! Close the doxygen group for mpy32_api
+//  174 //! @}
+//  175 //
+//  176 //*****************************************************************************
+// 
+// 296 bytes in segment CODE
+// 
+// 296 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

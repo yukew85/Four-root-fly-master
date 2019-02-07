@@ -1,0 +1,385 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:42
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWD4BC.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\LED.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME LED
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC LED
+        PUBLIC LED_Init
+        PUBLIC LED_Test
+        PUBLIC LED_Update
+        PUBWEAK _A_PADIR_L
+        PUBWEAK _A_PAOUT_L
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN ALL_flag
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED.c
+//    1 #include "include.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0202H
+// union <unnamed> __data16 _A_PAOUT_L
+_A_PAOUT_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0204H
+// union <unnamed> __data16 _A_PADIR_L
+_A_PADIR_L:
+        DS8 2
+//    2 #include "led.h"
+//    3 
+//    4 // LED_B P2.0
+//    5 #define LED_B_PORT          P2
+//    6 #define LED_B_PIN           GPIO_Pin_0
+//    7 #define LED_B_LEVEL_ON      0
+//    8 
+//    9 // LED_R P2.1
+//   10 #define LED_R_PORT          P2
+//   11 #define LED_R_PIN           GPIO_Pin_1
+//   12 #define LED_R_LEVEL_ON      0
+//   13 
+//   14 // LED_M1                   P2.4
+//   15 #define LED_M1_PORT         P2
+//   16 #define LED_M1_PIN          GPIO_Pin_4
+//   17 #define LED_M1_LEVEL_ON     0
+//   18 
+//   19 // LED_M2 P2.5
+//   20 #define LED_M2_PORT         P2
+//   21 #define LED_M2_PIN          GPIO_Pin_5
+//   22 #define LED_M2_LEVEL_ON     0
+//   23 
+//   24 // LED_M3 P2.6
+//   25 #define LED_M3_PORT         P2
+//   26 #define LED_M3_PIN          GPIO_Pin_6
+//   27 #define LED_M3_LEVEL_ON     0
+//   28 
+//   29 // LED_M4 P2.7
+//   30 #define LED_M4_PORT         P2
+//   31 #define LED_M4_PIN          GPIO_Pin_7
+//   32 #define LED_M4_LEVEL_ON     0
+//   33 
+//   34 
+//   35 
+//   36 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   37 extern LED_t LED[LED_Num] = {0};
+LED:
+        DS8 24
+//   38 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   39 extern void LED_Init(void)
+LED_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function LED_Init
+          CFI NoCalls
+//   40 {    
+//   41     P2DIR |= GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_6|GPIO_Pin_7;
+        BIS.B   #0xf3, &0x205
+//   42     P2OUT |= (GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_6|GPIO_Pin_7);
+        BIS.B   #0xf3, &0x203
+//   43 }
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_PADIR_L
+        REQUIRE _A_PAOUT_L
+//   44 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   45 void LED_Update()
+LED_Update:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function LED_Update
+          CFI NoCalls
+//   46 {
+//   47   static int Cnt = 0;
+//   48   if(ALL_flag.unlock)
+        BITX.B  #0x1, &ALL_flag
+        JNC     ??LED_Update_0
+//   49   {
+//   50       LED_UNLOCK_ON;
+        BIC.B   #0x1, &0x203
+//   51       LED_M1_ON;
+        BIC.B   #0x10, &0x203
+//   52       LED_M2_ON;
+        BIC.B   #0x20, &0x203
+//   53       LED_M3_ON;
+        BIC.B   #0x40, &0x203
+//   54       LED_M4_ON;
+        BIC.B   #0x80, &0x203
+        RETA
+//   55   }else
+//   56   {
+//   57       Cnt++;
+??LED_Update_0:
+        ADDX.W  #0x1, &??Cnt
+//   58       
+//   59       LED_UNLOCK_OFF;
+        BIS.B   #0x1, &0x203
+//   60       
+//   61       if(Cnt>200)
+        CMPX.W  #0xc9, &??Cnt
+        JL      ??LED_Update_1
+//   62       {
+//   63         Cnt = 0;
+        MOVX.W  #0x0, &??Cnt
+//   64       }
+//   65       
+//   66       if(Cnt <100)
+??LED_Update_1:
+        CMPX.W  #0x64, &??Cnt
+        JGE     ??LED_Update_2
+//   67       {
+//   68         LED_M1_ON;
+        BIC.B   #0x10, &0x203
+//   69         LED_M2_ON;
+        BIC.B   #0x20, &0x203
+//   70         LED_M3_ON;
+        BIC.B   #0x40, &0x203
+//   71         LED_M4_ON;
+        BIC.B   #0x80, &0x203
+        RETA
+//   72       }else
+//   73       {
+//   74         LED_M1_OFF;
+??LED_Update_2:
+        BIS.B   #0x10, &0x203
+//   75         LED_M2_OFF;
+        BIS.B   #0x20, &0x203
+//   76         LED_M3_OFF;
+        BIS.B   #0x40, &0x203
+//   77         LED_M4_OFF;
+        BIS.B   #0x80, &0x203
+//   78       }
+//   79   }
+//   80 }
+        RETA
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_PAOUT_L
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??Cnt:
+        DS8 2
+//   81 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   82 extern void LED_Test(void)
+LED_Test:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function LED_Test
+          CFI NoCalls
+//   83 {
+//   84 
+//   85 
+//   86 }
+        RETA
+          CFI EndBlock cfiBlock2
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 142 bytes in segment CODE
+//   4 bytes in segment DATA16_AN
+//  26 bytes in segment DATA20_Z
+// 
+// 142 bytes of CODE memory
+//  26 bytes of DATA memory (+ 4 bytes shared)
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,320 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:43
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\msp430f5529_remap.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWDCD8.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\msp430f5529_remap.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\msp430f5529_remap.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME msp430f5529_remap
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC GPIO_PinRemapConfig
+        PUBWEAK _A_P4MAP01_L
+        PUBWEAK _A_PMAPCTL_L
+        PUBWEAK _A_PMAPKEYID_L
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN GPIO_MultiBits_Init
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\msp430f5529_remap.c
+//    1 #include "msp430f5529_remap.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,01c0H
+// union <unnamed> __data16 _A_PMAPKEYID_L
+_A_PMAPKEYID_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,01c2H
+// union <unnamed> __data16 _A_PMAPCTL_L
+_A_PMAPCTL_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,01e0H
+// union <unnamed> __data16 _A_P4MAP01_L
+_A_P4MAP01_L:
+        DS8 2
+//    2 
+//    3 /*******************************************************************************
+//    4 *  函数名称：GPIO_PinRemapConfig(PORTn portn,uint8_t pin,GPIO_Remap remap)
+//    5 *  功能说明：GPIO重映射，可以使任一GPIO口（目前只有P4端口（P4.0-P4.7）支持）
+//    6              实现可供选择的任一复用功能（参见.h文件的枚举选项）
+//    7 *  注意    ：某些功能还是需要设置硬件输入输出方向及第二功能
+//    8 *  参数说明：PORTn portn        :GPIO重映射端口
+//    9              uint8_t pin          :GPIO重映射引脚
+//   10              GPIO_Remap remap   :GOIO重映射功能
+//   11 *  函数返回：无
+//   12 *  使用示例：GPIO_PinRemapConfig(P4,7,GPIO_Remap_MCLK)； //P4.7重映射为MCLK主时钟输出
+//   13 ********************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   14 void  GPIO_PinRemapConfig(PORTn portn,uint8_t pin,GPIO_Remap remap)
+GPIO_PinRemapConfig:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function GPIO_PinRemapConfig
+//   15 {
+//   16 #ifdef  GPIO_PORT_SIZE_WORD
+//   17   //ASSERT(((portn == (PORTB)) && (pin>=8))||((portn == (PORT4)) && (pin<=7)),
+//   18          "GPIO_PinRemapConfig",
+//   19          "portn,pin参数不合理！");              //断言检测输入参数
+//   20   if(portn == PORTB)pin = pin - 8;
+//   21 #else
+//   22   //ASSERT(portn == PORT4,"GPIO_PinRemapConfig","portn参数不合理！");                             //断言检测输入参数
+//   23 #endif 
+//   24   PMAPPWD = PMAPKEY;                                            //访问钥匙
+        MOV.W   #0x2d52, &0x1c0
+//   25   *(&P4MAP0 + pin) = remap;                                     //端口重映射配置 
+        MOV.B   R13, R13
+        MOV.B   R14, 0x1e0(R13)
+//   26   PMAPCTL |= PMAPRECFG;                                         //允许重新配置的端口映射
+        BIS.W   #0x2, &0x1c2
+//   27   
+//   28   if(((remap>=GPIO_Remap_TB0CCR0A) && (remap<=GPIO_Remap_TB0CCR6A)) 
+//   29       || (remap==GPIO_Remap_MCLK))      //如果是这些复用功能则需要设为输出方向，也可能不是，其他的也不一定不需要设为输出方向
+        MOV.B   R14, R15
+        SUB.B   #0x4, R15
+        CMP.B   #0x7, R15
+        JNC     ??GPIO_PinRemapConfig_1
+        CMP.B   #0x12, R14
+        JNE     ??GPIO_PinRemapConfig_2
+//   30   {
+//   31     GPIO_Init(PORT4,pin,GPO | SEL);
+??GPIO_PinRemapConfig_1:
+        MOV.W   #0x102, R14
+        MOV.W   #0x1, R15
+        SUB.B   #0x1, R13
+        JN      ??GPIO_PinRemapConfig_3
+        RPT     R13
+        RLAX.W  R15
+??GPIO_PinRemapConfig_3:
+        ADD.B   #0x1, R13
+        MOV.W   R15, R13
+        MOV.B   #0x3, R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+        JMP     ??GPIO_PinRemapConfig_0
+//   32   }
+//   33   else
+//   34   {
+//   35     GPIO_Init(PORT4,pin,SEL);
+??GPIO_PinRemapConfig_2:
+        MOV.W   #0x100, R14
+        MOV.W   #0x1, R15
+        SUB.B   #0x1, R13
+        JN      ??GPIO_PinRemapConfig_4
+        RPT     R13
+        RLAX.W  R15
+??GPIO_PinRemapConfig_4:
+        ADD.B   #0x1, R13
+        MOV.W   R15, R13
+        MOV.B   #0x3, R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   36   }
+//   37   PMAPPWD = 0;                                                 //禁止访问
+??GPIO_PinRemapConfig_0:
+        MOV.W   #0x0, &0x1c0
+//   38 }
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_PMAPKEYID_L
+        REQUIRE _A_P4MAP01_L
+        REQUIRE _A_PMAPCTL_L
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//   39 
+// 
+// 92 bytes in segment CODE
+//  6 bytes in segment DATA16_AN
+// 
+// 92 bytes of CODE memory
+//  0 bytes of DATA memory (+ 6 bytes shared)
+//
+//Errors: none
+//Warnings: none

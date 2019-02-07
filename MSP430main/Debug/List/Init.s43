@@ -1,0 +1,439 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  19:41:04
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\Init.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW2D41.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\Init.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\Init.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME Init
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Hardware_Init
+        PUBLIC PID_Init
+        PUBLIC SysTick_count
+        PUBLIC USB_Send_Queue
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN PIDGroup
+        EXTERN g_UAVinfo
+        EXTERN System_Clock_Init
+        EXTERN I2C_Init
+        EXTERN Motor_Init
+        EXTERN LEDInit
+        EXTERN MPU6050Init
+        EXTERN SPL06_Init
+        EXTERN NRF_Radio_Init
+        EXTERN g_MPUManager
+        EXTERN g_SPL06Manager
+        EXTERN g_NRFManager
+        EXTERN g_LedManager
+        EXTERN gcs_init
+        EXTERN USART_Init
+        EXTERN Timer_Init
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\Init.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：Init.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 硬件初始化驱动使用时只需要调用Hadrware_Init即可
+//   23 
+//   24 
+//   25 */
+//   26 //外部文件引用
+//   27 #include "include.h"
+//   28 #include "gcs.h"
+//   29 #include "led.h"
+//   30 #include "spl06.h"
+//   31 #include "communication.h"
+//   32 #include "led.h"
+//   33 #include "delay.h"
+//   34 #include "uart.h"
+//   35 #include "motor.h"
+//   36 #include "timer.h"
+//   37 
+//   38 //宏定义区
+//   39 #define HARDWARE_CHECK_LED    LED_STATUS_ON;LED_POWER_ON;delay_ms(100);\ 
+//   40                               LED_STATUS_OFF;LED_POWER_OFF;delay_ms(100);\ 
+//   41                               LED_STATUS_ON;LED_POWER_ON;delay_ms(100);\ 
+//   42                               LED_STATUS_OFF;LED_POWER_OFF;delay_ms(100);
+//   43 
+//   44 #define HARDWARE_CHECK        g_MPUManager.Check && \ 
+//   45                               g_SPL06Manager.Check && \ 
+//   46                               g_NRFManager.Check
+//   47 
+//   48 //Extern引用
+//   49 
+//   50 
+//   51 //私有函数区
+//   52 void PID_Init(void); 
+//   53 
+//   54 //私有变量区
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   55 uint32_t SysTick_count; //系统时间计数
+SysTick_count:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//   56 Queue_t USB_Send_Queue;
+USB_Send_Queue:
+        DS8 332
+//   57 
+//   58 /******************************************************************************
+//   59   * 函数名称：Hadrware_Init
+//   60   * 函数描述：初始化所有硬件和参数
+//   61   * 输    入：void
+//   62   * 输    出：void
+//   63   * 返    回：void 
+//   64   * 备    注：null    
+//   65   *    
+//   66   *
+//   67 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   68 void Hardware_Init(void)
+Hardware_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function Hardware_Init
+//   69 {    
+//   70     System_Clock_Init();
+          CFI FunCall System_Clock_Init
+        CALLA   #System_Clock_Init
+//   71     I2C_Init();
+          CFI FunCall I2C_Init
+        CALLA   #I2C_Init
+//   72     Motor_Init();
+          CFI FunCall Motor_Init
+        CALLA   #Motor_Init
+//   73     LEDInit();                      //LED闪灯初始化
+          CFI FunCall LEDInit
+        CALLA   #LEDInit
+//   74     MPU6050Init();                  //g_MPUManager初始化
+          CFI FunCall MPU6050Init
+        CALLA   #MPU6050Init
+//   75     SPL06_Init();                   //SPL06初始化
+          CFI FunCall SPL06_Init
+        CALLA   #SPL06_Init
+//   76     NRF_Radio_Init();  
+          CFI FunCall NRF_Radio_Init
+        CALLA   #NRF_Radio_Init
+//   77     if(HARDWARE_CHECK)              //硬件检测
+        MOVX.B  &g_MPUManager + 24, R14
+        ANDX.B  &g_SPL06Manager + 68, R14
+        MOVX.B  &g_NRFManager + 40, R15
+        BIT.B   R15, R14
+        JEQ     ??Hardware_Init_0
+//   78     {
+//   79         g_LedManager.emLEDPower = PowerOn;
+        MOVX.B  #0x0, &g_LedManager + 3
+//   80     }
+//   81     
+//   82     gcs_init();                     //地面站通信初始化
+??Hardware_Init_0:
+          CFI FunCall gcs_init
+        CALLA   #gcs_init
+//   83     PID_Init();                     //PID参数初始化
+          CFI FunCall PID_Init
+        CALLA   #PID_Init
+//   84     USART_Init(USCI_A_UART_CLOCKSOURCE_ACLK, 115200);
+        MOV.W   #0xc200, R14
+        MOV.W   #0x1, R15
+        MOV.B   #0x40, R12
+          CFI FunCall USART_Init
+        CALLA   #USART_Init
+//   85     Timer_Init();
+          CFI TailCall Timer_Init
+        BRA     #Timer_Init
+//   86 }
+          CFI EndBlock cfiBlock0
+//   87 
+//   88 /******************************************************************************
+//   89   * 函数名称：PID_Init
+//   90   * 函数描述：初始化所有PID参数
+//   91   * 输    入：void
+//   92   * 输    出：void
+//   93   * 返    回：void 
+//   94   * 备    注：null
+//   95   *    
+//   96   *
+//   97 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   98 void PID_Init(void)
+PID_Init:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function PID_Init
+          CFI NoCalls
+//   99 {
+//  100     PIDGroup[emPID_Roll_Spd].kp    = 2.0f;
+        MOVX.W  #0x0, &PIDGroup + 64
+        MOVX.W  #0x4000, &PIDGroup + 66
+//  101     PIDGroup[emPID_Pitch_Spd].kp   = 2.0f;
+        MOVX.W  #0x0, &PIDGroup
+        MOVX.W  #0x4000, &PIDGroup + 2
+//  102     PIDGroup[emPID_Yaw_Spd].kp     = 7.0f;
+        MOVX.W  #0x0, &PIDGroup + 128
+        MOVX.W  #0x40e0, &PIDGroup + 130
+//  103     
+//  104     PIDGroup[emPID_Roll_Spd].ki    = 0.05f;
+        MOVX.W  #0xcccd, &PIDGroup + 68
+        MOVX.W  #0x3d4c, &PIDGroup + 70
+//  105     PIDGroup[emPID_Pitch_Spd].ki   = 0.05f;
+        MOVX.W  #0xcccd, &PIDGroup + 4
+        MOVX.W  #0x3d4c, &PIDGroup + 6
+//  106     PIDGroup[emPID_Yaw_Spd].ki     = 0.0f;    
+        MOVX.W  #0x0, &PIDGroup + 132
+        MOVX.W  #0x0, &PIDGroup + 134
+//  107     
+//  108     PIDGroup[emPID_Roll_Spd].kd    = 0.15f;
+        MOVX.W  #0x999a, &PIDGroup + 72
+        MOVX.W  #0x3e19, &PIDGroup + 74
+//  109     PIDGroup[emPID_Pitch_Spd].kd   = 0.15f;
+        MOVX.W  #0x999a, &PIDGroup + 8
+        MOVX.W  #0x3e19, &PIDGroup + 10
+//  110     PIDGroup[emPID_Yaw_Spd].kd     = 0.2f;
+        MOVX.W  #0xcccd, &PIDGroup + 136
+        MOVX.W  #0x3e4c, &PIDGroup + 138
+//  111     
+//  112     PIDGroup[emPID_Pitch_Pos].kp   = 3.5f;
+        MOVX.W  #0x0, &PIDGroup + 192
+        MOVX.W  #0x4060, &PIDGroup + 194
+//  113     PIDGroup[emPID_Roll_Pos].kp    = 3.5f;
+        MOVX.W  #0x0, &PIDGroup + 256
+        MOVX.W  #0x4060, &PIDGroup + 258
+//  114     PIDGroup[emPID_Yaw_Pos].kp     = 6.0f;
+        MOVX.W  #0x0, &PIDGroup + 320
+        MOVX.W  #0x40c0, &PIDGroup + 322
+//  115 
+//  116     //不建议修改以下参数
+//  117     PIDGroup[emPID_Height_Spd].kp  = 3.5f; //0.5f
+        MOVX.W  #0x0, &PIDGroup + 384
+        MOVX.W  #0x4060, &PIDGroup + 386
+//  118     PIDGroup[emPID_Height_Spd].kd  = 0.5f;
+        MOVX.W  #0x0, &PIDGroup + 392
+        MOVX.W  #0x3f00, &PIDGroup + 394
+//  119     PIDGroup[emPID_Height_Spd].ki  = 0.00f;
+        MOVX.W  #0x0, &PIDGroup + 388
+        MOVX.W  #0x0, &PIDGroup + 390
+//  120     
+//  121     PIDGroup[emPID_Height_Pos].kp  = 2.0f;//0.32f  
+        MOVX.W  #0x0, &PIDGroup + 448
+        MOVX.W  #0x4000, &PIDGroup + 450
+//  122     PIDGroup[emPID_Height_Pos].desired = 80;
+        MOVX.W  #0x0, &PIDGroup + 468
+        MOVX.W  #0x42a0, &PIDGroup + 470
+//  123     PIDGroup[emPID_Height_Pos].OutLimitHigh = 50;
+        MOVX.W  #0x0, &PIDGroup + 504
+        MOVX.W  #0x4248, &PIDGroup + 506
+//  124     PIDGroup[emPID_Height_Pos].OutLimitLow = -50;
+        MOVX.W  #0x0, &PIDGroup + 508
+        MOVX.W  #0xc248, &PIDGroup + 510
+//  125 
+//  126     //初始化UAV相关信息
+//  127     g_UAVinfo.UAV_Mode = Altitude_Hold;
+        MOVX.B  #0x1, &g_UAVinfo + 5
+//  128 }
+        RETA
+          CFI EndBlock cfiBlock1
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  129 
+//  130 
+//  131 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 362 bytes in segment CODE
+// 336 bytes in segment DATA20_Z
+// 
+// 362 bytes of CODE memory
+// 336 bytes of DATA memory
+//
+//Errors: none
+//Warnings: none

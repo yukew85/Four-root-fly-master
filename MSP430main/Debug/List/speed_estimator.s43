@@ -1,0 +1,782 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  16:49:49
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\speed_estimator.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW6AED.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\speed_estimator.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\speed_estimator.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME speed_estimator
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?FLT_GE
+        EXTERN ?FLT_LT
+        EXTERN _Sub32f
+        EXTERN _Add32f
+        EXTERN _Mul32f
+        EXTERN _Div32f
+        EXTERN ?cstart_init_copy20
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Err
+        PUBLIC HeightLPF
+        PUBLIC ResetAltSpeed
+        PUBLIC UpdateAltSpeed
+        PUBLIC accZLpf
+        PUBLIC applyDeadbandf
+        PUBLIC rangeLpf
+        PUBLIC wBaro
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN HeightInfo
+        EXTERN g_UAVinfo
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\speed_estimator.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：speesd_estimator.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 
+//   23 
+//   24 */
+//   25 //外部文件引用
+//   26 #include "speed_estimator.h"
+//   27 #include "height_control.h"
+//   28 #include "SPL06.h"
+//   29 #include "control.h"
+//   30 #include "gcs.h"
+//   31 #include "myMath.h"
+//   32 
+//   33 
+//   34 //宏定义区
+//   35 #define VELOCITY_LIMIT        (130.f)    /*速度限幅 单位cm/s*/
+//   36 
+//   37 //Extern引用
+//   38 
+//   39 
+//   40 //私有函数区
+//   41 float applyDeadbandf(float value, float deadband);
+//   42 
+//   43 //私有变量区
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   44 float Err = 0.f;            /*位移误差*/
+Err:
+        DS8 4
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_copy20
+//   45 float wBaro = 0.35f;            /*气压校正权重*/
+wBaro:
+        DS8 4
+        REQUIRE `?<Initializer for wBaro>`
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   46 float HeightLPF = 0.f;    /*融合高度，低通*/
+HeightLPF:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   47 float rangeLpf = 0.f;
+rangeLpf:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   48 float accZLpf = 0.f;            /*Z轴加速度低通*/
+accZLpf:
+        DS8 4
+//   49 
+//   50 /******************************************************************************
+//   51   * 函数名称：UpdateAltSpeed
+//   52   * 函数描述：Z轴速度估算
+//   53   * 输    入：float dt：单位运行时间
+//   54   * 输    出：void
+//   55   * 返    回：void 
+//   56   * 备    注：null  
+//   57   *
+//   58   *
+//   59 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   60 void UpdateAltSpeed(float dt)
+UpdateAltSpeed:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function UpdateAltSpeed
+//   61 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        SUBA    #0x2, SP
+          CFI CFA SP+38
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//   62     float ewdt = 0;
+        MOV.W   #0x0, R6
+        MOV.W   #0x0, R7
+//   63     float weight = wBaro;
+        MOVX.W  &wBaro, R8
+        MOVX.W  &wBaro + 2, R9
+//   64     
+//   65     HeightInfo.Alt = HeightInfo.Alt;    
+        MOVX.W  &HeightInfo + 12, &HeightInfo + 12
+        MOVX.W  &HeightInfo + 14, &HeightInfo + 14
+//   66     HeightLPF += (HeightInfo.Alt - HeightLPF) * 0.1f;    
+        MOVX.W  &HeightInfo + 12, R12
+        MOVX.W  &HeightInfo + 14, R13
+        MOVX.W  &HeightLPF, R14
+        MOVX.W  &HeightLPF + 2, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   #0xcccd, R14
+        MOV.W   #0x3dcc, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  &HeightLPF, R14
+        MOVX.W  &HeightLPF + 2, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &HeightLPF
+        MOVX.W  R13, &HeightLPF + 2
+//   67     
+//   68     bool isKeyFlightLand = (g_UAVinfo.UAV_Mode == Altitude_Hold);    
+        CMPX.B  #0x1, &g_UAVinfo + 5
+        JNE     ??UpdateAltSpeed_3
+        MOV.B   #0x1, 0(SP)
+        JMP     ??UpdateAltSpeed_0
+??UpdateAltSpeed_3:
+        MOV.B   #0x0, 0(SP)
+//   69     
+//   70     float accZRemovalDead = applyDeadbandf(HeightInfo.Z_Acc, 4);/*去除死区的Z轴加速度*/
+??UpdateAltSpeed_0:
+        MOV.W   #0x0, R14
+        MOV.W   #0x4080, R15
+        MOVX.W  &HeightInfo + 4, R12
+        MOVX.W  &HeightInfo + 6, R13
+          CFI FunCall applyDeadbandf
+        CALLA   #applyDeadbandf
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//   71     accZLpf += (accZRemovalDead - accZLpf) * 0.1f;        /*低通*/
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+        MOVX.W  &accZLpf, R14
+        MOVX.W  &accZLpf + 2, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   #0xcccd, R14
+        MOV.W   #0x3dcc, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  &accZLpf, R14
+        MOVX.W  &accZLpf + 2, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &accZLpf
+        MOVX.W  R13, &accZLpf + 2
+//   72     
+//   73     if(isKeyFlightLand == true)
+        CMP.B   #0x0, 0(SP)
+        JEQ     ??UpdateAltSpeed_4
+//   74     {
+//   75         accZLpf = LIMIT(accZLpf, -1000.f, 1000.f);
+        MOVX.W  &accZLpf, R12
+        MOVX.W  &accZLpf + 2, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0xc47a, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??UpdateAltSpeed_5
+        MOVX.W  #0x0, &accZLpf
+        MOVX.W  #0xc47a, &accZLpf + 2
+        JMP     ??UpdateAltSpeed_1
+??UpdateAltSpeed_5:
+        MOVX.W  &accZLpf, R12
+        MOVX.W  &accZLpf + 2, R13
+        MOV.W   #0x1, R14
+        MOV.W   #0x447a, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??UpdateAltSpeed_6
+        MOVX.W  #0x0, &accZLpf
+        MOVX.W  #0x447a, &accZLpf + 2
+        JMP     ??UpdateAltSpeed_1
+??UpdateAltSpeed_6:
+        MOVX.W  &accZLpf, &accZLpf
+        MOVX.W  &accZLpf + 2, &accZLpf + 2
+        JMP     ??UpdateAltSpeed_1
+//   76     }
+//   77     else
+//   78     {
+//   79         HeightInfo.Z_Acc = accZRemovalDead;
+??UpdateAltSpeed_4:
+        MOVX.W  R4, &HeightInfo + 4
+        MOVX.W  R5, &HeightInfo + 6
+//   80     }
+//   81 
+//   82     HeightInfo.Z_Acc = accZRemovalDead;
+??UpdateAltSpeed_1:
+        MOVX.W  R4, &HeightInfo + 4
+        MOVX.W  R5, &HeightInfo + 6
+//   83     HeightInfo.Z_Acc -= 0.02f * Err * weight * weight * dt;    /*补偿加速度*/
+        MOVX.W  &HeightInfo + 4, R12
+        MOVX.W  &HeightInfo + 6, R13
+        PUSH.W  R13
+          CFI CFA SP+40
+        PUSH.W  R12
+          CFI CFA SP+42
+        MOVX.W  &Err, R12
+        MOVX.W  &Err + 2, R13
+        MOV.W   #0xd70a, R14
+        MOV.W   #0x3ca3, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        POP.W   R12
+          CFI CFA SP+40
+        POP.W   R13
+          CFI CFA SP+38
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOVX.W  R12, &HeightInfo + 4
+        MOVX.W  R13, &HeightInfo + 6
+//   84     
+//   85     HeightInfo.Z_Postion += HeightInfo.Z_Speed * dt + HeightInfo.Z_Acc * dt * dt / 2.0f;
+        MOVX.W  &HeightInfo, R12
+        MOVX.W  &HeightInfo + 2, R13
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        PUSH.W  R13
+          CFI CFA SP+40
+        PUSH.W  R12
+          CFI CFA SP+42
+        MOVX.W  &HeightInfo + 4, R12
+        MOVX.W  &HeightInfo + 6, R13
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        POP.W   R14
+          CFI CFA SP+40
+        POP.W   R15
+          CFI CFA SP+38
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  &HeightInfo + 8, R14
+        MOVX.W  &HeightInfo + 10, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &HeightInfo + 8
+        MOVX.W  R13, &HeightInfo + 10
+//   86     HeightInfo.Z_Speed += HeightInfo.Z_Acc * dt;
+        MOVX.W  &HeightInfo + 4, R12
+        MOVX.W  &HeightInfo + 6, R13
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  &HeightInfo, R14
+        MOVX.W  &HeightInfo + 2, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &HeightInfo
+        MOVX.W  R13, &HeightInfo + 2
+//   87     
+//   88     Err = HeightInfo.Alt - HeightInfo.Z_Postion;        
+        MOVX.W  &HeightInfo + 12, R12
+        MOVX.W  &HeightInfo + 14, R13
+        MOVX.W  &HeightInfo + 8, R14
+        MOVX.W  &HeightInfo + 10, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOVX.W  R12, &Err
+        MOVX.W  R13, &Err + 2
+//   89     
+//   90     ewdt = Err * weight * dt;
+        MOVX.W  &Err, R12
+        MOVX.W  &Err + 2, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   91     HeightInfo.Z_Postion += ewdt;
+        MOVX.W  &HeightInfo + 8, R12
+        MOVX.W  &HeightInfo + 10, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &HeightInfo + 8
+        MOVX.W  R13, &HeightInfo + 10
+//   92     HeightInfo.Z_Speed += weight * ewdt;
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  &HeightInfo, R14
+        MOVX.W  &HeightInfo + 2, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &HeightInfo
+        MOVX.W  R13, &HeightInfo + 2
+//   93     
+//   94     if(isKeyFlightLand == true)        
+        CMP.B   #0x0, 0(SP)
+        JEQ     ??UpdateAltSpeed_7
+//   95     {
+//   96         HeightInfo.Z_Speed = LIMIT(HeightInfo.Z_Speed, -VELOCITY_LIMIT, VELOCITY_LIMIT);    
+        MOVX.W  &HeightInfo, R12
+        MOVX.W  &HeightInfo + 2, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0xc302, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??UpdateAltSpeed_8
+        MOV.W   #0x0, R14
+        MOV.W   #0xc302, R15
+        JMP     ??UpdateAltSpeed_2
+??UpdateAltSpeed_8:
+        MOVX.W  &HeightInfo, R12
+        MOVX.W  &HeightInfo + 2, R13
+        MOV.W   #0x1, R14
+        MOV.W   #0x4302, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??UpdateAltSpeed_9
+        MOV.W   #0x0, R14
+        MOV.W   #0x4302, R15
+        JMP     ??UpdateAltSpeed_2
+??UpdateAltSpeed_9:
+        MOVX.W  &HeightInfo, R14
+        MOVX.W  &HeightInfo + 2, R15
+??UpdateAltSpeed_2:
+        MOVX.W  R14, &HeightInfo
+        MOVX.W  R15, &HeightInfo + 2
+//   97     }
+//   98 }
+??UpdateAltSpeed_7:
+        ADDA    #0x2, SP
+          CFI CFA SP+36
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//   99 
+//  100 /******************************************************************************
+//  101   * 函数名称：ResetAltSpeed
+//  102   * 函数描述：重置速度数据
+//  103   * 输    入：void
+//  104   * 输    出：void
+//  105   * 返    回：void 
+//  106   * 备    注：null  
+//  107   *
+//  108   *
+//  109 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  110 void ResetAltSpeed(void)
+ResetAltSpeed:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function ResetAltSpeed
+          CFI NoCalls
+//  111 {    
+//  112     accZLpf = 0.f;
+        MOVX.W  #0x0, &accZLpf
+        MOVX.W  #0x0, &accZLpf + 2
+//  113     HeightInfo.Alt  = 0.f;
+        MOVX.W  #0x0, &HeightInfo + 12
+        MOVX.W  #0x0, &HeightInfo + 14
+//  114     HeightLPF = 0.f;
+        MOVX.W  #0x0, &HeightLPF
+        MOVX.W  #0x0, &HeightLPF + 2
+//  115     HeightInfo.Z_Speed = 0.f;
+        MOVX.W  #0x0, &HeightInfo
+        MOVX.W  #0x0, &HeightInfo + 2
+//  116     HeightInfo.Z_Postion = HeightInfo.Alt;
+        MOVX.W  &HeightInfo + 12, &HeightInfo + 8
+        MOVX.W  &HeightInfo + 14, &HeightInfo + 10
+//  117 }
+        RETA
+          CFI EndBlock cfiBlock1
+//  118 
+//  119 /******************************************************************************
+//  120   * 函数名称：applyDeadbandf
+//  121   * 函数描述：适应死区范围
+//  122   * 输    入：
+//  123   * value：数据
+//  124   * deadband：死区范围
+//  125   * 输    出：void
+//  126   * 返    回：void 
+//  127   * 备    注：null  
+//  128   *
+//  129   *
+//  130 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  131 float applyDeadbandf(float value, float deadband)
+applyDeadbandf:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function applyDeadbandf
+//  132 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//  133     if (ABS(value) < deadband) {
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x80, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??applyDeadbandf_2
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        JMP     ??applyDeadbandf_0
+??applyDeadbandf_2:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        XOR.W   #0x8000, R13
+??applyDeadbandf_0:
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??applyDeadbandf_3
+//  134         value = 0;
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R11
+        JMP     ??applyDeadbandf_1
+//  135     } else if (value > 0) {
+??applyDeadbandf_3:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x80, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??applyDeadbandf_4
+//  136         value -= deadband;
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        JMP     ??applyDeadbandf_1
+//  137     } else if (value < 0) {
+??applyDeadbandf_4:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??applyDeadbandf_1
+//  138         value += deadband;
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  139     }
+//  140     return value;
+??applyDeadbandf_1:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  141 }
+          CFI EndBlock cfiBlock2
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(1)
+`?<Initializer for wBaro>`:
+        DATA32
+        DC32 3EB33333H
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  142 
+//  143 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 1 012 bytes in segment CODE
+//     4 bytes in segment DATA20_I
+//     4 bytes in segment DATA20_ID
+//    16 bytes in segment DATA20_Z
+// 
+// 1 012 bytes of CODE  memory
+//     4 bytes of CONST memory
+//    20 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

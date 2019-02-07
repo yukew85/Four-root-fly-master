@@ -1,0 +1,1035 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:13
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\timer_a.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW32DC.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\timer_a.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\timer_a.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME timer_a
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Timer_A_clear
+        PUBLIC Timer_A_clearCaptureCompareInterrupt
+        PUBLIC Timer_A_clearTimerInterrupt
+        PUBLIC Timer_A_disableCaptureCompareInterrupt
+        PUBLIC Timer_A_disableInterrupt
+        PUBLIC Timer_A_enableCaptureCompareInterrupt
+        PUBLIC Timer_A_enableInterrupt
+        PUBLIC Timer_A_getCaptureCompareCount
+        PUBLIC Timer_A_getCaptureCompareInterruptStatus
+        PUBLIC Timer_A_getCounterValue
+        PUBLIC Timer_A_getInterruptStatus
+        PUBLIC Timer_A_getOutputForOutputModeOutBitValue
+        PUBLIC Timer_A_getSynchronizedCaptureCompareInput
+        PUBLIC Timer_A_initCaptureMode
+        PUBLIC Timer_A_initCompareMode
+        PUBLIC Timer_A_initContinuousMode
+        PUBLIC Timer_A_initUpDownMode
+        PUBLIC Timer_A_initUpMode
+        PUBLIC Timer_A_outputPWM
+        PUBLIC Timer_A_setCompareValue
+        PUBLIC Timer_A_setOutputForOutputModeOutBitValue
+        PUBLIC Timer_A_setOutputMode
+        PUBLIC Timer_A_startCounter
+        PUBLIC Timer_A_stop
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\timer_a.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // timer_a.c - Driver for the timer_a Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup timer_a_api timer_a
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_TxA7__
+//   48 #include "timer_a.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 void Timer_A_startCounter ( uint16_t baseAddress,
+Timer_A_startCounter:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function Timer_A_startCounter
+          CFI NoCalls
+//   53     uint16_t timerMode
+//   54     )
+//   55 {
+//   56     HWREG16(baseAddress + OFS_TAxCTL) &= ~MC_3;
+        AND.W   #0xffcf, 0(R12)
+//   57     HWREG16(baseAddress + OFS_TAxCTL) |= timerMode;
+        BIS.W   R13, 0(R12)
+//   58 }
+        RETA
+          CFI EndBlock cfiBlock0
+//   59 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   60 void Timer_A_initContinuousMode (uint16_t baseAddress,
+Timer_A_initContinuousMode:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function Timer_A_initContinuousMode
+          CFI NoCalls
+//   61     Timer_A_initContinuousModeParam *param)
+//   62 {
+//   63 
+//   64     HWREG16(baseAddress +
+//   65         OFS_TAxCTL) &= ~(TIMER_A_CLOCKSOURCE_INVERTED_EXTERNAL_TXCLK +
+//   66                          TIMER_A_UPDOWN_MODE +
+//   67                          TIMER_A_DO_CLEAR +
+//   68                          TIMER_A_TAIE_INTERRUPT_ENABLE +
+//   69                          ID__8
+//   70                          );
+        AND.W   #0xfc09, 0(R12)
+//   71     HWREG16(baseAddress + OFS_TAxEX0) &= ~TAIDEX_7;
+        MOV.W   R12, R15
+        ADD.W   #0x20, R15
+        AND.W   #0xfff8, 0(R15)
+//   72 
+//   73     HWREG16(baseAddress + OFS_TAxEX0) |= param->clockSourceDivider&0x7;
+        MOV.W   R12, R15
+        ADD.W   #0x20, R15
+        MOV.W   0x2(R13), R14
+        AND.W   #0x7, R14
+        BIS.W   R14, 0(R15)
+//   74     HWREG16(baseAddress + OFS_TAxCTL) |= (param->clockSource +
+//   75                                           param->timerClear +
+//   76                                           param->timerInterruptEnable_TAIE +
+//   77                                           ((param->clockSourceDivider>>3)<<6));
+        MOV.W   @R13, R15
+        ADD.W   0x6(R13), R15
+        ADD.W   0x4(R13), R15
+        MOV.W   0x2(R13), R14
+        RLAM.W  #0x3, R14
+        AND.W   #0xffc0, R14
+        ADD.W   R14, R15
+        BIS.W   R15, 0(R12)
+//   78 
+//   79     if(param->startTimer) {
+        CMP.B   #0x0, 0x8(R13)
+        JEQ     ??Timer_A_initContinuousMode_0
+//   80         HWREG16(baseAddress + OFS_TAxCTL) |= TIMER_A_CONTINUOUS_MODE;
+        MOV.W   R12, R15
+        BIS.W   #0x20, 0(R15)
+//   81     }
+//   82 }
+??Timer_A_initContinuousMode_0:
+        RETA
+          CFI EndBlock cfiBlock1
+//   83 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   84 void Timer_A_initUpMode (uint16_t baseAddress,
+Timer_A_initUpMode:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function Timer_A_initUpMode
+          CFI NoCalls
+//   85     Timer_A_initUpModeParam *param)
+//   86 {
+//   87 
+//   88     HWREG16(baseAddress + OFS_TAxCTL) &=
+//   89         ~(TIMER_A_CLOCKSOURCE_INVERTED_EXTERNAL_TXCLK +
+//   90           TIMER_A_UPDOWN_MODE +
+//   91           TIMER_A_DO_CLEAR +
+//   92           TIMER_A_TAIE_INTERRUPT_ENABLE +
+//   93           ID__8
+//   94           );
+        AND.W   #0xfc09, 0(R12)
+//   95     HWREG16(baseAddress + OFS_TAxEX0) &= ~TAIDEX_7;
+        MOV.W   R12, R15
+        ADD.W   #0x20, R15
+        AND.W   #0xfff8, 0(R15)
+//   96 
+//   97     HWREG16(baseAddress + OFS_TAxEX0) |= param->clockSourceDivider&0x7;
+        MOV.W   R12, R15
+        ADD.W   #0x20, R15
+        MOV.W   0x2(R13), R14
+        AND.W   #0x7, R14
+        BIS.W   R14, 0(R15)
+//   98     HWREG16(baseAddress + OFS_TAxCTL) |= (param->clockSource +
+//   99                                           param->timerClear +
+//  100                                           param->timerInterruptEnable_TAIE +
+//  101                                           ((param->clockSourceDivider>>3)<<6));
+        MOV.W   @R13, R15
+        ADD.W   0xa(R13), R15
+        ADD.W   0x6(R13), R15
+        MOV.W   0x2(R13), R14
+        RLAM.W  #0x3, R14
+        AND.W   #0xffc0, R14
+        ADD.W   R14, R15
+        BIS.W   R15, 0(R12)
+//  102 
+//  103     if (param->startTimer) {
+        CMP.B   #0x0, 0xc(R13)
+        JEQ     ??Timer_A_initUpMode_1
+//  104         HWREG16(baseAddress + OFS_TAxCTL) |= TIMER_A_UP_MODE;
+        MOV.W   R12, R15
+        BIS.W   #0x10, 0(R15)
+//  105     }
+//  106 
+//  107     if (TIMER_A_CCIE_CCR0_INTERRUPT_ENABLE ==
+//  108         param->captureCompareInterruptEnable_CCR0_CCIE){
+??Timer_A_initUpMode_1:
+        CMP.W   #0x10, 0x8(R13)
+        JNE     ??Timer_A_initUpMode_2
+//  109         HWREG16(baseAddress + OFS_TAxCCTL0)  |= TIMER_A_CCIE_CCR0_INTERRUPT_ENABLE;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   #0x10, 0(R15)
+        JMP     ??Timer_A_initUpMode_0
+//  110     } else   {
+//  111         HWREG16(baseAddress + OFS_TAxCCTL0)  &= ~TIMER_A_CCIE_CCR0_INTERRUPT_ENABLE;
+??Timer_A_initUpMode_2:
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIC.W   #0x10, 0(R15)
+//  112     }
+//  113 
+//  114     HWREG16(baseAddress + OFS_TAxCCR0) = param->timerPeriod;
+??Timer_A_initUpMode_0:
+        MOV.W   R12, R15
+        ADD.W   #0x12, R15
+        MOV.W   0x4(R13), 0(R15)
+//  115 }
+        RETA
+          CFI EndBlock cfiBlock2
+//  116 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  117 void Timer_A_initUpDownMode(uint16_t baseAddress,
+Timer_A_initUpDownMode:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function Timer_A_initUpDownMode
+          CFI NoCalls
+//  118     Timer_A_initUpDownModeParam *param)
+//  119 {
+//  120     HWREG16(baseAddress + OFS_TAxCTL) &=
+//  121         ~(TIMER_A_CLOCKSOURCE_INVERTED_EXTERNAL_TXCLK +
+//  122           TIMER_A_UPDOWN_MODE +
+//  123           TIMER_A_DO_CLEAR +
+//  124           TIMER_A_TAIE_INTERRUPT_ENABLE +
+//  125           ID__8
+//  126           );
+        AND.W   #0xfc09, 0(R12)
+//  127     HWREG16(baseAddress + OFS_TAxEX0) &= ~TAIDEX_7;
+        MOV.W   R12, R15
+        ADD.W   #0x20, R15
+        AND.W   #0xfff8, 0(R15)
+//  128 
+//  129     HWREG16(baseAddress + OFS_TAxEX0) |= param->clockSourceDivider&0x7;
+        MOV.W   R12, R15
+        ADD.W   #0x20, R15
+        MOV.W   0x2(R13), R14
+        AND.W   #0x7, R14
+        BIS.W   R14, 0(R15)
+//  130     HWREG16(baseAddress + OFS_TAxCTL) |= (param->clockSource +
+//  131                                           param->timerClear +
+//  132                                           param->timerInterruptEnable_TAIE +
+//  133                                           ((param->clockSourceDivider>>3)<<6));
+        MOV.W   @R13, R15
+        ADD.W   0xa(R13), R15
+        ADD.W   0x6(R13), R15
+        MOV.W   0x2(R13), R14
+        RLAM.W  #0x3, R14
+        AND.W   #0xffc0, R14
+        ADD.W   R14, R15
+        BIS.W   R15, 0(R12)
+//  134 
+//  135     if (param->startTimer) {
+        CMP.B   #0x0, 0xc(R13)
+        JEQ     ??Timer_A_initUpDownMode_1
+//  136         HWREG16(baseAddress + OFS_TAxCTL) |= TIMER_A_UPDOWN_MODE;
+        BIS.W   #0x30, 0(R12)
+//  137     }
+//  138 
+//  139     if (TIMER_A_CCIE_CCR0_INTERRUPT_ENABLE ==
+//  140         param->captureCompareInterruptEnable_CCR0_CCIE){
+??Timer_A_initUpDownMode_1:
+        CMP.W   #0x10, 0x8(R13)
+        JNE     ??Timer_A_initUpDownMode_2
+//  141         HWREG16(baseAddress + OFS_TAxCCTL0)  |= TIMER_A_CCIE_CCR0_INTERRUPT_ENABLE;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   #0x10, 0(R15)
+        JMP     ??Timer_A_initUpDownMode_0
+//  142     } else   {
+//  143         HWREG16(baseAddress + OFS_TAxCCTL0)  &= ~TIMER_A_CCIE_CCR0_INTERRUPT_ENABLE;
+??Timer_A_initUpDownMode_2:
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIC.W   #0x10, 0(R15)
+//  144     }
+//  145 
+//  146     HWREG16(baseAddress + OFS_TAxCCR0)  = param->timerPeriod;
+??Timer_A_initUpDownMode_0:
+        MOV.W   R12, R15
+        ADD.W   #0x12, R15
+        MOV.W   0x4(R13), 0(R15)
+//  147 }
+        RETA
+          CFI EndBlock cfiBlock3
+//  148 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  149 void Timer_A_initCaptureMode(uint16_t baseAddress,
+Timer_A_initCaptureMode:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function Timer_A_initCaptureMode
+          CFI NoCalls
+//  150     Timer_A_initCaptureModeParam *param)
+//  151 {
+//  152     HWREG16(baseAddress + param->captureRegister ) |= CAP;
+        MOV.W   R12, R15
+        ADD.W   @R13, R15
+        BIS.W   #0x100, 0(R15)
+//  153 
+//  154     HWREG16(baseAddress + param->captureRegister) &=
+//  155         ~(TIMER_A_CAPTUREMODE_RISING_AND_FALLING_EDGE +
+//  156           TIMER_A_CAPTURE_INPUTSELECT_Vcc +
+//  157           TIMER_A_CAPTURE_SYNCHRONOUS +
+//  158           TIMER_A_DO_CLEAR +
+//  159           TIMER_A_TAIE_INTERRUPT_ENABLE +
+//  160           CM_3
+//  161           );
+        MOV.W   R12, R15
+        ADD.W   @R13, R15
+        AND.W   #0x47f9, 0(R15)
+//  162 
+//  163     HWREG16(baseAddress + param->captureRegister) |= (param->captureMode +
+//  164                                               param->captureInputSelect +
+//  165                                               param->synchronizeCaptureSource +
+//  166                                               param->captureInterruptEnable +
+//  167                                               param->captureOutputMode
+//  168                                               );
+        MOV.W   R12, R15
+        ADD.W   @R13, R15
+        MOV.W   0x2(R13), R14
+        ADD.W   0x4(R13), R14
+        ADD.W   0x6(R13), R14
+        ADD.W   0x8(R13), R14
+        ADD.W   0xa(R13), R14
+        BIS.W   R14, 0(R15)
+//  169 }
+        RETA
+          CFI EndBlock cfiBlock4
+//  170 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  171 void Timer_A_initCompareMode(uint16_t baseAddress,
+Timer_A_initCompareMode:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function Timer_A_initCompareMode
+          CFI NoCalls
+//  172     Timer_A_initCompareModeParam *param)
+//  173 {
+//  174     HWREG16(baseAddress + param->compareRegister ) &= ~CAP;
+        MOV.W   R12, R15
+        ADD.W   @R13, R15
+        BIC.W   #0x100, 0(R15)
+//  175 
+//  176     HWREG16(baseAddress + param->compareRegister) &=
+//  177         ~(TIMER_A_CAPTURECOMPARE_INTERRUPT_ENABLE +
+//  178           TIMER_A_OUTPUTMODE_RESET_SET
+//  179           );
+        MOV.W   R12, R15
+        ADD.W   @R13, R15
+        AND.W   #0xff0f, 0(R15)
+//  180 
+//  181     HWREG16(baseAddress + param->compareRegister) |= (param->compareInterruptEnable +
+//  182                                                param->compareOutputMode
+//  183                                                );
+        MOV.W   R12, R15
+        ADD.W   @R13, R15
+        MOV.W   0x2(R13), R14
+        ADD.W   0x4(R13), R14
+        BIS.W   R14, 0(R15)
+//  184 
+//  185     HWREG16(baseAddress + param->compareRegister + OFS_TAxR) = param->compareValue;
+        MOV.W   R12, R15
+        ADD.W   @R13, R15
+        ADD.W   #0x10, R15
+        MOV.W   0x6(R13), 0(R15)
+//  186 }
+        RETA
+          CFI EndBlock cfiBlock5
+//  187 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  188 void Timer_A_enableInterrupt (uint16_t baseAddress)
+Timer_A_enableInterrupt:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function Timer_A_enableInterrupt
+          CFI NoCalls
+//  189 {
+//  190     HWREG16(baseAddress + OFS_TAxCTL) |= TAIE;
+        MOV.W   R12, R15
+        BIS.W   #0x2, 0(R15)
+//  191 }
+        RETA
+          CFI EndBlock cfiBlock6
+//  192 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  193 void Timer_A_disableInterrupt (uint16_t baseAddress)
+Timer_A_disableInterrupt:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function Timer_A_disableInterrupt
+          CFI NoCalls
+//  194 {
+//  195     HWREG16(baseAddress + OFS_TAxCTL) &= ~TAIE;
+        MOV.W   R12, R15
+        BIC.W   #0x2, 0(R15)
+//  196 }
+        RETA
+          CFI EndBlock cfiBlock7
+//  197 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  198 uint32_t Timer_A_getInterruptStatus (uint16_t baseAddress)
+Timer_A_getInterruptStatus:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function Timer_A_getInterruptStatus
+          CFI NoCalls
+//  199 {
+//  200     return ( HWREG16(baseAddress + OFS_TAxCTL) & TAIFG );
+        MOV.W   @R12, R12
+        AND.W   #0x1, R12
+        MOV.W   #0x0, R13
+        RETA
+//  201 }
+          CFI EndBlock cfiBlock8
+//  202 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  203 void Timer_A_enableCaptureCompareInterrupt (uint16_t baseAddress,
+Timer_A_enableCaptureCompareInterrupt:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function Timer_A_enableCaptureCompareInterrupt
+          CFI NoCalls
+//  204     uint16_t captureCompareRegister
+//  205     )
+//  206 {
+//  207     HWREG16(baseAddress + captureCompareRegister) |= CCIE;
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        BIS.W   #0x10, 0(R15)
+//  208 }
+        RETA
+          CFI EndBlock cfiBlock9
+//  209 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  210 void Timer_A_disableCaptureCompareInterrupt (uint16_t baseAddress,
+Timer_A_disableCaptureCompareInterrupt:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function Timer_A_disableCaptureCompareInterrupt
+          CFI NoCalls
+//  211     uint16_t captureCompareRegister
+//  212     )
+//  213 {
+//  214     HWREG16(baseAddress + captureCompareRegister) &= ~CCIE;
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        BIC.W   #0x10, 0(R15)
+//  215 }
+        RETA
+          CFI EndBlock cfiBlock10
+//  216 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  217 uint32_t Timer_A_getCaptureCompareInterruptStatus (uint16_t baseAddress,
+Timer_A_getCaptureCompareInterruptStatus:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function Timer_A_getCaptureCompareInterruptStatus
+          CFI NoCalls
+//  218 		 uint16_t captureCompareRegister,
+//  219 		 uint16_t mask
+//  220 		 )
+//  221 {
+//  222     return ( HWREG16(baseAddress + captureCompareRegister) & mask );
+        ADD.W   R13, R12
+        AND.W   @R12, R14
+        MOV.W   R14, R12
+        MOV.W   #0x0, R13
+        RETA
+//  223 }
+          CFI EndBlock cfiBlock11
+//  224 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  225 void Timer_A_clear (uint16_t baseAddress)
+Timer_A_clear:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function Timer_A_clear
+          CFI NoCalls
+//  226 {
+//  227     HWREG16(baseAddress + OFS_TAxCTL) |= TACLR;
+        MOV.W   R12, R15
+        BIS.W   #0x4, 0(R15)
+//  228 }
+        RETA
+          CFI EndBlock cfiBlock12
+//  229 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  230 uint8_t Timer_A_getSynchronizedCaptureCompareInput
+Timer_A_getSynchronizedCaptureCompareInput:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function Timer_A_getSynchronizedCaptureCompareInput
+          CFI NoCalls
+//  231     (uint16_t baseAddress,
+//  232     uint16_t captureCompareRegister,
+//  233     uint16_t synchronized
+//  234     )
+//  235 {
+        MOV.W   R12, R15
+//  236     if (HWREG16(baseAddress + captureCompareRegister) & synchronized){
+        MOV.W   R15, R12
+        ADD.W   R13, R12
+        MOV.W   @R12, R12
+        BIT.W   R14, R12
+        JEQ     ??Timer_A_getSynchronizedCaptureCompareInput_0
+//  237         return ( TIMER_A_CAPTURECOMPARE_INPUT_HIGH) ;
+        MOV.B   #0x1, R12
+        RETA
+//  238     } else   {
+//  239         return ( TIMER_A_CAPTURECOMPARE_INPUT_LOW) ;
+??Timer_A_getSynchronizedCaptureCompareInput_0:
+        MOV.B   #0x0, R12
+        RETA
+//  240     }
+//  241 }
+          CFI EndBlock cfiBlock13
+//  242 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  243 uint8_t Timer_A_getOutputForOutputModeOutBitValue
+Timer_A_getOutputForOutputModeOutBitValue:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function Timer_A_getOutputForOutputModeOutBitValue
+          CFI NoCalls
+//  244     (uint16_t baseAddress,
+//  245     uint16_t captureCompareRegister
+//  246     )
+//  247 {
+        MOV.W   R12, R15
+//  248     if (HWREG16(baseAddress + captureCompareRegister) & OUT){
+        MOV.W   R15, R14
+        ADD.W   R13, R14
+        BIT.W   #0x4, 0(R14)
+        JNC     ??Timer_A_getOutputForOutputModeOutBitValue_0
+//  249         return ( TIMER_A_OUTPUTMODE_OUTBITVALUE_HIGH) ;
+        MOV.B   #0x4, R12
+        RETA
+//  250     } else   {
+//  251         return ( TIMER_A_OUTPUTMODE_OUTBITVALUE_LOW) ;
+??Timer_A_getOutputForOutputModeOutBitValue_0:
+        MOV.B   #0x0, R12
+        RETA
+//  252     }
+//  253 }
+          CFI EndBlock cfiBlock14
+//  254 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  255 uint16_t Timer_A_getCaptureCompareCount
+Timer_A_getCaptureCompareCount:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function Timer_A_getCaptureCompareCount
+          CFI NoCalls
+//  256     (uint16_t baseAddress,
+//  257     uint16_t captureCompareRegister
+//  258     )
+//  259 {
+//  260     return  (HWREG16(baseAddress + OFS_TAxR + captureCompareRegister));
+        ADD.W   R13, R12
+        ADD.W   #0x10, R12
+        MOV.W   @R12, R12
+        RETA
+//  261 }
+          CFI EndBlock cfiBlock15
+//  262 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  263 void Timer_A_setOutputForOutputModeOutBitValue
+Timer_A_setOutputForOutputModeOutBitValue:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function Timer_A_setOutputForOutputModeOutBitValue
+          CFI NoCalls
+//  264     (uint16_t baseAddress,
+//  265     uint16_t captureCompareRegister,
+//  266     uint8_t outputModeOutBitValue
+//  267     )
+//  268 {
+//  269 
+//  270     HWREG16(baseAddress + captureCompareRegister) &= ~OUT;
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        BIC.W   #0x4, 0(R15)
+//  271     HWREG16(baseAddress + captureCompareRegister) |= outputModeOutBitValue;
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        MOV.B   R14, R14
+        BIS.W   R14, 0(R15)
+//  272 }
+        RETA
+          CFI EndBlock cfiBlock16
+//  273 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  274 void Timer_A_outputPWM(uint16_t baseAddress, Timer_A_outputPWMParam *param)
+Timer_A_outputPWM:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function Timer_A_outputPWM
+          CFI NoCalls
+//  275 {
+//  276     HWREG16(baseAddress + OFS_TAxCTL)  &=
+//  277         ~( TIMER_A_CLOCKSOURCE_INVERTED_EXTERNAL_TXCLK +
+//  278            TIMER_A_UPDOWN_MODE + TIMER_A_DO_CLEAR +
+//  279            TIMER_A_TAIE_INTERRUPT_ENABLE +
+//  280            ID__8
+//  281            );
+        AND.W   #0xfc09, 0(R12)
+//  282     HWREG16(baseAddress + OFS_TAxEX0) &= ~TAIDEX_7;
+        MOV.W   R12, R15
+        ADD.W   #0x20, R15
+        AND.W   #0xfff8, 0(R15)
+//  283 
+//  284     HWREG16(baseAddress + OFS_TAxEX0) |= param->clockSourceDivider&0x7;
+        MOV.W   R12, R15
+        ADD.W   #0x20, R15
+        MOV.W   0x2(R13), R14
+        AND.W   #0x7, R14
+        BIS.W   R14, 0(R15)
+//  285     HWREG16(baseAddress + OFS_TAxCTL)  |= (param->clockSource +
+//  286                                           TIMER_A_UP_MODE +
+//  287                                           TIMER_A_DO_CLEAR +
+//  288                                           ((param->clockSourceDivider>>3)<<6));
+        MOV.W   0x2(R13), R15
+        RLAM.W  #0x3, R15
+        AND.W   #0xffc0, R15
+        ADD.W   @R13, R15
+        ADD.W   #0x14, R15
+        BIS.W   R15, 0(R12)
+//  289 
+//  290     HWREG16(baseAddress + OFS_TAxCCR0) = param->timerPeriod;
+        MOV.W   R12, R15
+        ADD.W   #0x12, R15
+        MOV.W   0x4(R13), 0(R15)
+//  291 
+//  292     HWREG16(baseAddress + OFS_TAxCCTL0)  &=
+//  293         ~(TIMER_A_CAPTURECOMPARE_INTERRUPT_ENABLE +
+//  294           TIMER_A_OUTPUTMODE_RESET_SET);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        AND.W   #0xff0f, 0(R15)
+//  295 
+//  296     HWREG16(baseAddress + param->compareRegister) |= param->compareOutputMode;
+        MOV.W   R12, R15
+        ADD.W   0x6(R13), R15
+        BIS.W   0x8(R13), 0(R15)
+//  297 
+//  298     HWREG16(baseAddress + param->compareRegister + OFS_TAxR) = param->dutyCycle;
+        MOV.W   R12, R15
+        ADD.W   0x6(R13), R15
+        ADD.W   #0x10, R15
+        MOV.W   0xa(R13), 0(R15)
+//  299 }
+        RETA
+          CFI EndBlock cfiBlock17
+//  300 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  301 void Timer_A_stop ( uint16_t baseAddress )
+Timer_A_stop:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function Timer_A_stop
+          CFI NoCalls
+//  302 {
+//  303     HWREG16(baseAddress + OFS_TAxCTL)  &= ~MC_3;
+        AND.W   #0xffcf, 0(R12)
+//  304 }
+        RETA
+          CFI EndBlock cfiBlock18
+//  305 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  306 void Timer_A_setCompareValue (  uint16_t baseAddress,
+Timer_A_setCompareValue:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function Timer_A_setCompareValue
+          CFI NoCalls
+//  307     uint16_t compareRegister,
+//  308     uint16_t compareValue
+//  309     )
+//  310 {
+//  311     HWREG16(baseAddress + compareRegister + OFS_TAxR) = compareValue;
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        ADD.W   #0x10, R15
+        MOV.W   R14, 0(R15)
+//  312 }
+        RETA
+          CFI EndBlock cfiBlock19
+//  313 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  314 void Timer_A_setOutputMode(uint16_t baseAddress,
+Timer_A_setOutputMode:
+          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Function Timer_A_setOutputMode
+          CFI NoCalls
+//  315                              uint16_t compareRegister,
+//  316                              uint16_t compareOutputMode)
+//  317 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  318     uint16_t temp = HWREG16(baseAddress + compareRegister);
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        MOV.W   @R15, R10
+//  319     HWREG16(baseAddress + compareRegister) = temp & ~(OUTMOD_7) | compareOutputMode;
+        MOV.W   R10, R11
+        AND.W   #0xff1f, R11
+        BIS.W   R14, R11
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        MOV.W   R11, 0(R15)
+//  320 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock20
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  321 void Timer_A_clearTimerInterrupt (uint16_t baseAddress)
+Timer_A_clearTimerInterrupt:
+          CFI Block cfiBlock21 Using cfiCommon0
+          CFI Function Timer_A_clearTimerInterrupt
+          CFI NoCalls
+//  322 {
+//  323     HWREG16(baseAddress + OFS_TAxCTL) &= ~TAIFG;
+        MOV.W   R12, R15
+        BIC.W   #0x1, 0(R15)
+//  324 }
+        RETA
+          CFI EndBlock cfiBlock21
+//  325 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  326 void Timer_A_clearCaptureCompareInterrupt (uint16_t baseAddress,
+Timer_A_clearCaptureCompareInterrupt:
+          CFI Block cfiBlock22 Using cfiCommon0
+          CFI Function Timer_A_clearCaptureCompareInterrupt
+          CFI NoCalls
+//  327     uint16_t captureCompareRegister
+//  328     )
+//  329 {
+//  330     HWREG16(baseAddress + captureCompareRegister)  &= ~CCIFG;
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        BIC.W   #0x1, 0(R15)
+//  331 }
+        RETA
+          CFI EndBlock cfiBlock22
+//  332 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  333 uint16_t Timer_A_getCounterValue (uint16_t baseAddress)
+Timer_A_getCounterValue:
+          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Function Timer_A_getCounterValue
+          CFI NoCalls
+//  334 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.W   R12, R14
+//  335 	uint16_t voteOne, voteTwo, res;
+//  336 
+//  337     voteTwo = HWREG16(baseAddress + OFS_TAxR);
+        MOV.W   R14, R15
+        ADD.W   #0x10, R15
+        MOV.W   @R15, R12
+//  338 
+//  339 	do
+//  340     {
+//  341         voteOne = voteTwo;
+??Timer_A_getCounterValue_0:
+        MOV.W   R12, R13
+//  342         voteTwo = HWREG16(baseAddress + OFS_TAxR);
+        MOV.W   R14, R15
+        ADD.W   #0x10, R15
+        MOV.W   @R15, R12
+//  343 
+//  344 		if(voteTwo > voteOne) {
+        CMP.W   R12, R13
+        JC      ??Timer_A_getCounterValue_2
+//  345 			res = voteTwo - voteOne;
+        MOV.W   R12, R15
+        SUB.W   R13, R15
+        MOV.W   R15, R10
+        JMP     ??Timer_A_getCounterValue_1
+//  346 		} else if(voteOne > voteTwo) {
+??Timer_A_getCounterValue_2:
+        CMP.W   R13, R12
+        JC      ??Timer_A_getCounterValue_3
+//  347 			res = voteOne - voteTwo;
+        MOV.W   R13, R15
+        SUB.W   R12, R15
+        MOV.W   R15, R10
+        JMP     ??Timer_A_getCounterValue_1
+//  348 		} else{
+//  349 			res = 0;
+??Timer_A_getCounterValue_3:
+        MOV.W   #0x0, R10
+//  350 		}
+//  351 
+//  352     } while ( res > TIMER_A_THRESHOLD);
+??Timer_A_getCounterValue_1:
+        CMP.W   #0x33, R10
+        JC      ??Timer_A_getCounterValue_0
+//  353 
+//  354     return voteTwo;
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//  355 }
+          CFI EndBlock cfiBlock23
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  356 
+//  357 
+//  358 #endif
+//  359 //*****************************************************************************
+//  360 //
+//  361 //! Close the doxygen group for timer_a_api
+//  362 //! @}
+//  363 //
+//  364 //*****************************************************************************
+// 
+// 800 bytes in segment CODE
+// 
+// 800 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

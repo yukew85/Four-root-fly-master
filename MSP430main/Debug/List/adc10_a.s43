@@ -1,0 +1,362 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:05
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\adc10_a.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW149B.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\adc10_a.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\adc10_a.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME adc10_a
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\adc10_a.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // adc10_a.c - Driver for the adc10_a Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup adc10_a_api adc10_a
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_ADC10_A__
+//   48 #include "adc10_a.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 bool ADC10_A_init (uint16_t baseAddress,
+//   53     uint16_t sampleHoldSignalSourceSelect,
+//   54     uint8_t clockSourceSelect,
+//   55     uint16_t clockSourceDivider)
+//   56 {
+//   57     bool retVal = STATUS_SUCCESS;
+//   58 
+//   59     //Turn OFF ADC10_A Module & Clear Interrupt Registers
+//   60     HWREG16(baseAddress + OFS_ADC10IFG)  &= 0x0000; //Reset ALL interrupt flags
+//   61 
+//   62     //Set ADC10_A Control 1
+//   63     HWREG16(baseAddress + OFS_ADC10CTL1) =
+//   64         sampleHoldSignalSourceSelect //Setup the Sample-and-Hold Source
+//   65         + (clockSourceDivider & ADC10DIV_7) //Set Clock Divider
+//   66         + clockSourceSelect; //Setup Clock Source
+//   67 
+//   68     //Set ADC10_A Control 2
+//   69     HWREG16(baseAddress + OFS_ADC10CTL2) =
+//   70         (clockSourceDivider & (ADC10PDIV_1 | ADC10PDIV_2)) //Set Clock Pre-Divider
+//   71         + ADC10RES; //Default resolution to 10-bits
+//   72 
+//   73     return ( retVal) ;
+//   74 }
+//   75 
+//   76 void ADC10_A_enable (uint16_t baseAddress)
+//   77 {
+//   78     //Reset the ADC10ON bit to enable the ADC10_A Module
+//   79     HWREG16(baseAddress + OFS_ADC10CTL0) |= ADC10ON;
+//   80 }
+//   81 
+//   82 void ADC10_A_disable (uint16_t baseAddress)
+//   83 {
+//   84     //Set the ADC10ON bit to disable the ADC10_A Module
+//   85     HWREG16(baseAddress + OFS_ADC10CTL0) &= ~ADC10ON;
+//   86 }
+//   87 
+//   88 void ADC10_A_setupSamplingTimer (uint16_t baseAddress,
+//   89     uint16_t clockCycleHoldCount,
+//   90     uint16_t multipleSamplesEnabled)
+//   91 {
+//   92     HWREG16(baseAddress + OFS_ADC10CTL1) |= ADC10SHP;
+//   93 
+//   94     //Reset and Set CB Control 0 Bits
+//   95     HWREG16(baseAddress + OFS_ADC10CTL0) &= ~(ADC10SHT_15 + ADC10MSC);
+//   96     HWREG16(baseAddress + OFS_ADC10CTL0) |= clockCycleHoldCount
+//   97                                           + multipleSamplesEnabled;
+//   98 }
+//   99 
+//  100 void ADC10_A_disableSamplingTimer (uint16_t baseAddress)
+//  101 {
+//  102     HWREG16(baseAddress + OFS_ADC10CTL1) &= ~(ADC10SHP);
+//  103 }
+//  104 
+//  105 void ADC10_A_configureMemory (uint16_t baseAddress,
+//  106     uint8_t inputSourceSelect,
+//  107     uint8_t positiveRefVoltageSourceSelect,
+//  108     uint8_t negativeRefVoltageSourceSelect)
+//  109 {
+//  110     //Make sure the ENC bit is cleared before configuring a Memory Buffer Control
+//  111     assert( !(HWREG16(baseAddress + OFS_ADC10CTL0) & ADC10ENC) );
+//  112 
+//  113     if(!(HWREG16(baseAddress + OFS_ADC10CTL0) & ADC10ENC))
+//  114     {
+//  115         assert(inputSourceSelect <= ADC10_A_INPUT_A15);
+//  116         assert(positiveRefVoltageSourceSelect <= ADC10_A_VREFPOS_INT);
+//  117         assert(negativeRefVoltageSourceSelect <= ADC10_A_VREFNEG_EXT);
+//  118         
+//  119         //Reset and Set the Memory Buffer Control Bits
+//  120         HWREG8(baseAddress + OFS_ADC10MCTL0) = inputSourceSelect
+//  121                                                + positiveRefVoltageSourceSelect +
+//  122                                                negativeRefVoltageSourceSelect;
+//  123     }
+//  124 }
+//  125 
+//  126 void ADC10_A_enableInterrupt (uint16_t baseAddress,
+//  127     uint8_t interruptMask)
+//  128 {
+//  129     HWREG16(baseAddress + OFS_ADC10IE) |= interruptMask;
+//  130 }
+//  131 
+//  132 void ADC10_A_disableInterrupt (uint16_t baseAddress,
+//  133     uint8_t interruptMask)
+//  134 {
+//  135     HWREG16(baseAddress + OFS_ADC10IE) &= ~(interruptMask);
+//  136 }
+//  137 
+//  138 void ADC10_A_clearInterrupt (uint16_t baseAddress,
+//  139     uint8_t interruptFlagMask)
+//  140 {
+//  141     HWREG16(baseAddress + OFS_ADC10IFG) &= ~(interruptFlagMask);
+//  142 }
+//  143 
+//  144 uint16_t ADC10_A_getInterruptStatus (uint16_t baseAddress,
+//  145     uint8_t interruptFlagMask)
+//  146 {
+//  147     return ( HWREG16(baseAddress + OFS_ADC10IFG) & interruptFlagMask );
+//  148 }
+//  149 
+//  150 void ADC10_A_startConversion (uint16_t baseAddress,
+//  151     uint8_t conversionSequenceModeSelect)
+//  152 {
+//  153     //Reset the ENC bit to set the conversion mode sequence
+//  154     HWREG16(baseAddress + OFS_ADC10CTL0) &= ~(ADC10ENC);
+//  155 
+//  156     HWREG16(baseAddress + OFS_ADC10CTL1) |= conversionSequenceModeSelect;
+//  157     HWREG16(baseAddress + OFS_ADC10CTL0) |= ADC10ENC + ADC10SC;
+//  158 }
+//  159 
+//  160 void ADC10_A_disableConversions (uint16_t baseAddress, bool preempt)
+//  161 {
+//  162     if (ADC10_A_PREEMPTCONVERSION == preempt){
+//  163         HWREG16(baseAddress + OFS_ADC10CTL1) &= ~(ADC10CONSEQ_3);
+//  164         //Reset conversion sequence mode to single-channel, single-conversion
+//  165     } else if ( ~(HWREG16(baseAddress + OFS_ADC10CTL1) & ADC10CONSEQ_3) ){
+//  166         //To prevent preemoption of a single-channel, single-conversion we must
+//  167         //wait for the ADC core to finish the conversion.
+//  168         while (HWREG16(baseAddress + OFS_ADC10CTL1) & ADC10BUSY) ;
+//  169     }
+//  170 
+//  171     HWREG16(baseAddress + OFS_ADC10CTL0) &= ~(ADC10ENC);
+//  172 }
+//  173 
+//  174 int16_t ADC10_A_getResults (uint16_t baseAddress)
+//  175 {
+//  176     return ( HWREG16(baseAddress + OFS_ADC10MEM0) );
+//  177 }
+//  178 
+//  179 void ADC10_A_setResolution (uint16_t baseAddress,
+//  180     uint8_t resolutionSelect)
+//  181 {
+//  182     HWREG16(baseAddress + OFS_ADC10CTL2) &= ~(ADC10RES);
+//  183     HWREG16(baseAddress + OFS_ADC10CTL2) |= resolutionSelect;
+//  184 }
+//  185 
+//  186 void ADC10_A_setSampleHoldSignalInversion (uint16_t baseAddress,
+//  187     uint16_t invertedSignal)
+//  188 {
+//  189     HWREG16(baseAddress + OFS_ADC10CTL1) &= ~(ADC10ISSH);
+//  190     HWREG16(baseAddress + OFS_ADC10CTL1) |= invertedSignal;
+//  191 }
+//  192 
+//  193 void ADC10_A_setDataReadBackFormat (uint16_t baseAddress,
+//  194     uint16_t readBackFormat)
+//  195 {
+//  196     HWREG16(baseAddress + OFS_ADC10CTL2) &= ~(ADC10DF);
+//  197     HWREG16(baseAddress + OFS_ADC10CTL2) |= readBackFormat;
+//  198 }
+//  199 
+//  200 void ADC10_A_enableReferenceBurst (uint16_t baseAddress)
+//  201 {
+//  202     HWREG16(baseAddress + OFS_ADC10CTL2) |= ADC10REFBURST;
+//  203 }
+//  204 
+//  205 void ADC10_A_disableReferenceBurst (uint16_t baseAddress)
+//  206 {
+//  207     HWREG16(baseAddress + OFS_ADC10CTL2) &= ~(ADC10REFBURST);
+//  208 }
+//  209 
+//  210 void ADC10_A_setReferenceBufferSamplingRate (uint16_t baseAddress,
+//  211     uint16_t samplingRateSelect)
+//  212 {
+//  213     HWREG16(baseAddress + OFS_ADC10CTL2) &= ~(ADC10SR);
+//  214     HWREG16(baseAddress + OFS_ADC10CTL2) |= samplingRateSelect;
+//  215 }
+//  216 
+//  217 void ADC10_A_setWindowComp (uint16_t baseAddress,
+//  218     uint16_t highThreshold,
+//  219     uint16_t lowThreshold)
+//  220 {
+//  221     HWREG16(baseAddress + OFS_ADC10HI) = highThreshold;
+//  222     HWREG16(baseAddress + OFS_ADC10LO) = lowThreshold;
+//  223 }
+//  224 
+//  225 uint32_t ADC10_A_getMemoryAddressForDMA (uint16_t baseAddress)
+//  226 {
+//  227     return ( baseAddress + OFS_ADC10MEM0 );
+//  228 }
+//  229 
+//  230 uint16_t ADC10_A_isBusy (uint16_t baseAddress)
+//  231 {
+//  232     return (HWREG16(baseAddress + OFS_ADC10CTL1) & ADC10BUSY);
+//  233 }
+//  234 
+//  235 #endif
+//  236 //*****************************************************************************
+//  237 //
+//  238 //! Close the doxygen group for adc10_a_api
+//  239 //! @}
+//  240 //
+//  241 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

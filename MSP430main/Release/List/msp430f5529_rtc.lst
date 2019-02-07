@@ -1,0 +1,242 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:43
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_rtc.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW58BF.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_rtc.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_rtc.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_rtc.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_rtc.c
+      1          #include "msp430f5529_rtc.h"
+      2          #include "msp430f5529_clock.h"
+      3          
+      4          const RTC_MemMapPtr  RTC = RTC_BASE_PTR; 
+      5          /*******************************************************************************
+      6          *  函数名称：RTC_Init(Calendar nowDate)
+      7          *  功能说明：RTC 初始化并设置时间
+      8          *  参数说明：Calendar nowDate : 设置当前时间
+      9          *  函数返回：无
+     10          *  使用示例：Calendar  nowDate;RTC_Init(nowDate);//初始化RTC并设置RTC时间
+     11          *  注意：日历模式下要求ACLK为32768HZ
+     12          ********************************************************************************/
+     13          void RTC_Init(Calendar nowDate)
+     14          {
+     15            ASSERT(g_sClock.ACLK.nHZ == 32768,"RTC_Init","时钟配置不合理，请将ACLK频率配置为32768HZ！");                //日历模式下要求ACLK为32768HZ
+                                                     ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+     16            /*uint32_t clock_div_result = g_sClock.ACLK.nHZ;          
+     17            uint16_t clock_div_value = 0;//二分频次数
+     18            while(clock_div_result>1)  //不断分频，直到分频后的值为1或小于1（要求为1）
+     19            {
+     20              clock_div_result = clock_div_result>>1; //二分频一次
+     21              clock_div_value++;                      //分频系数加一
+     22            };
+     23            ASSERT((clock_div_result==1)&&(clock_div_value>=2)&&(clock_div_value<=16));        //要求时钟二分频最多16次，且最少2次，且分频后的频率值为1HZ
+     24            */
+     25            RTCCTL01 = RTCHOLD + RTCMODE + RTCSSEL__RT1PS + RTC_TimeEvent;           //使能日历模式
+     26            
+     27            RTCPS0CTL =   RT0PSHOLD ;             //使用ACLK作为时钟
+     28            RTCPS1CTL  =  RT1PSHOLD + RT1SSEL_2; //使用 RTCPS0输出作为时钟源     
+     29            
+     30            //RTC->RT1_PSDIV = (clock_div_value <= 9) ? (clock_div_value-2u) : 7u;
+     31            //RTC->RT0_PSDIV = (clock_div_value >  9) ? (clock_div_value-9u) : 0u;
+     32            
+     33            RTC->HOLD = RESET;                 //打开RTC模块 
+     34            RTC->RT0_PSHOLD = RESET;           //打开RTCPS0CTL
+     35            RTC->RT1_PSHOLD = RESET;           //打开RTCPS1CTL
+     36            
+     37            RTC_SetTime(nowDate);    
+     38          }
+     39          /*******************************************************************************
+     40          *  函数名称：RTC_SetTime(Calendar nowDate)
+     41          *  功能说明：设置当前时间
+     42          *  参数说明：Calendar nowDate : 当前时间
+     43          *  函数返回：无
+     44          *  使用示例：RTC_SetTime(nowDate);  //设置RTC时间
+     45          ********************************************************************************/
+     46          void RTC_SetTime(Calendar nowDate)
+     47          {
+     48            (*((Calendar *)(&RTCSEC))) = nowDate;  
+     49          }
+     50          /*******************************************************************************
+     51          *  函数名称：RTC_GetTime(void)
+     52          *  功能说明：获取当前时间
+     53          *  参数说明：无
+     54          *  函数返回：Calendar nowDate : 当前时间
+     55          *  使用示例：Calendar nowDate = RTC_GetTime();  //获取当前时间
+     56          ********************************************************************************/
+     57          Calendar RTC_GetTime(void)
+     58          {
+     59            while(RTC->RDY == RESET);                  //等待时钟准备好读
+     60            return (*((Calendar *)(&RTCSEC)));         //因为该寄存器结构与Calendar结构体相同，直接将寄存器值返回
+     61          }
+     62          /*******************************************************************************
+     63          *  函数名称：RTC_SetAlarm    (Calendar alarm_Time,Alarm_Type alarm_type)
+     64          *  功能说明：设置闹钟时间及类型
+     65          *  参数说明：Calendar alarm_Time     :闹钟时间
+     66                       Alarm_Type alarm_type   :闹钟类型
+     67          *  函数返回：无
+     68          *  使用示例：RTC_SetAlarm (alarm_Time,Every_Days); //闹钟时间设置，每天触发一次闹钟事件
+     69          ********************************************************************************/
+     70          void RTC_SetAlarm    (Calendar alarm_Time,Alarm_Type alarm_type)
+     71          {
+     72            //写入闹钟时间
+     73            RTCAMIN  = alarm_Time.Minutes    ;
+     74            RTCAHOUR = alarm_Time.Hours      ;
+     75            RTCADAY  = alarm_Time.DayOfMonth ; 
+     76            
+     77            BIT_VALUE_IN_BYTE(RTCAMIN,7) = BIT_SET;
+     78            BIT_VALUE_IN_BYTE(RTCAHOUR,7) = (alarm_type == Every_Days  ||
+     79                                        alarm_type == Every_Weeks ||
+     80                                        alarm_type == Every_Months 
+     81                                        ) ? BIT_SET : RESET;
+     82            BIT_VALUE_IN_BYTE(RTCADOW,7) = alarm_type == Every_Weeks  ? BIT_SET : RESET;
+     83            BIT_VALUE_IN_BYTE(RTCADAY,7) = alarm_type == Every_Months ? BIT_SET : RESET;
+     84          }
+     85          /*******************************************************************************
+     86          *  函数名称：RTC_ITConfig   (RTC_IRQn irqn, STATUS ITState)
+     87          *  功能说明: 设置RTC某一个中断是否使能
+     88          *  参数说明：RTC_IRQn irqn   : 中断事件选择
+     89                       STATUS ITState  : 是否使能中断
+     90          *  函数返回：无
+     91          *  使用示例：RTC_ITConfig   (RTC_Alarm_IRQn, ENABLE);  //使能闹钟中断
+     92          ********************************************************************************/
+     93          void RTC_ITConfig   (RTC_IRQn irqn, STATUS ITState)
+     94          {
+     95            if(ITState != DISABLE)
+     96            {
+     97              RTC->IE |= irqn;
+     98            }
+     99            else
+    100            {
+    101              RTC->IE &=~ irqn;
+    102            }
+    103          }
+    104          /*******************************************************************************
+    105          *  函数名称：RTC_GetITStatus(RTC_IRQn irqn)
+    106          *  功能说明：获取RTC某一位中断标志
+    107          *  参数说明：RTC_IRQn irqn : 中断事件选择
+    108          *  函数返回：STATUS : TRUE 中断事件发生，FALSE 中断事件未发生
+    109          *  使用示例：if(TRUE == RTC_GetITStatus(RTC_Alarm_IRQn)){...}  //判断闹钟时间是否发生
+    110          ********************************************************************************/
+    111          STATUS RTC_GetITStatus(RTC_IRQn irqn)
+    112          {
+    113            return ((RTC->IFG & irqn) ? TRUE : FALSE);
+    114          }
+    115          /*******************************************************************************
+    116          *  函数名称：RTC_ClearITPendingBit(RTC_IRQn irqn)
+    117          *  功能说明：清除RTC某一位中断标志
+    118          *  参数说明：RTC_IRQn irqn : 中断事件选择
+    119          *  函数返回：无
+    120          *  使用示例：RTC_ClearITPendingBit(RTC_Alarm_IRQn); //清除RTC闹钟中断标志位
+    121          ********************************************************************************/
+    122          void RTC_ClearITPendingBit(RTC_IRQn irqn)
+    123          {
+    124            RTC->IFG &=~ irqn;
+    125          }
+
+Errors: 1
+Warnings: none

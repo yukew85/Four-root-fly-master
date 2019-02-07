@@ -1,0 +1,1803 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          26/Sep/2018  16:44:40
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HAL\control.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW4BF7.tmp
+//        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HAL\control.c" -D NDEBUG -D RAM_VECTOR -lC
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List" -lA
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List" -o
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_config\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\KEY\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LED\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\12864\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\oled\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\mpu6050\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\mpu6050\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nokia5110\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nokia5110\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LQ_1.8_TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LCD_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\2.2TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\delay\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\User\USER\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\UCOSII\CONFIG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\App\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\CONFIHG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\PORT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\UCOSII\CORE\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\FatFs\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\FatFs\option\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+//        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nrf24l01\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\MATH\" --core=430X --data_model=large -Oh --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List\control.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME control
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Cast32fto32u
+        EXTERN _Cast32fto32s
+        EXTERN _Cast32uto32f
+        EXTERN _Cast32sto32f
+        EXTERN _Mul32f
+        EXTERN _Add32f
+        EXTERN _Sub32f
+        EXTERN _Div32f
+        EXTERN ?cstart_init_copy20
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC FlightPidControl
+        PUBLIC HeightPidControl
+        PUBLIC MotorControl
+        PUBLIC motor
+        PUBLIC pPidObject
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        
+          CFI Common cfiCommon1 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L SameValue
+          CFI R12H SameValue
+          CFI R12 Concat
+          CFI R13L SameValue
+          CFI R13H SameValue
+          CFI R13 Concat
+          CFI R14L SameValue
+          CFI R14H SameValue
+          CFI R14 Concat
+          CFI R15L SameValue
+          CFI R15H SameValue
+          CFI R15 Concat
+          CFI EndCommon cfiCommon1
+        
+        EXTERN user_SPL06_get
+        EXTERN GetNormAccz
+        EXTERN ALL_flag
+        EXTERN pidHeightRate
+        EXTERN pidHeightHigh
+        EXTERN Remote
+        EXTERN pidUpdate
+        EXTERN pidRest
+        EXTERN pidYaw
+        EXTERN Angle
+        EXTERN Gyro_G
+        EXTERN pidRateX
+        EXTERN MPU6050
+        EXTERN pidRateY
+        EXTERN pidRateZ
+        EXTERN pidPitch
+        EXTERN pidRoll
+        EXTERN CascadePID
+        EXTERN Motor_Config
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\HAL\control.c
+//    1 #include "include.h"
+//    2 #include "stdint.h"
+//    3 
+//    4 //------------------------------------------------------------------------------
+//    5 #undef NULL
+//    6 #define NULL 0
+//    7 #undef DISABLE 
+//    8 #define DISABLE 0
+//    9 #undef ENABLE 
+//   10 #define ENABLE 1
+//   11 #undef REST
+//   12 #define REST 0
+//   13 #undef SET 
+//   14 #define SET 1 
+//   15 #undef EMERGENT
+//   16 #define EMERGENT 0
+//   17 //------------------------------------------------------------------------------
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_copy20
+//   18 PidObject *(pPidObject[])={&pidRateX,&pidRateY,&pidRateZ,&pidRoll,&pidPitch,&pidYaw   //结构体数组，将每一个数组放一个pid结构体，这样就可以批量操作各个PID的数据了  比如解锁时批量复位pid控制数据，新手明白这句话的作用就可以了
+pPidObject:
+        DS8 32
+        REQUIRE `?<Initializer for pPidObject>`
+//   19 		,&pidHeightRate
+//   20 		,&pidHeightHigh
+//   21 };
+//   22 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   23 void HeightPidControl(float dt)
+HeightPidControl:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function HeightPidControl
+//   24 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   25     volatile static uint8_t status=WAITING_1;
+//   26     int16_t acc;       //当前你飞行器的加速度值
+//   27     int16_t acc_error; //当前加速度减去重力加速度则为上下移动的加速度
+//   28     static int16_t acc_offset;//重力加速度值
+//   29     static uint32_t high = 0; //当前高度
+//   30     static float thr_hold = 0; //进入高度时记录当前油门值
+//   31     static uint16_t cnt_take_off;	//一键起飞加速时间
+//   32 
+//   33     high = user_SPL06_get();
+          CFI FunCall user_SPL06_get
+        CALLA   #user_SPL06_get
+          CFI FunCall _Cast32fto32u
+        CALLA   #_Cast32fto32u
+        MOVX.W  R12, &??high
+        MOVX.W  R13, &??high + 2
+//   34 
+//   35     acc = (int16_t)GetNormAccz();//提取重力向量
+          CFI FunCall GetNormAccz
+        CALLA   #GetNormAccz
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOV.W   R12, R15
+//   36 
+//   37     if(!ALL_flag.unlock) //取得静态加速度值
+        MOVA    #ALL_flag, R10
+        MOV.B   @R10, R4
+        BIT.B   #0x1, R4
+        JNE     ??HeightPidControl_1
+//   38     {
+//   39         acc_offset = acc;
+        MOVX.W  R12, &??acc_offset
+??HeightPidControl_1:
+        MOVX.W  &??high, R12
+        MOVX.W  &??high + 2, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOVA    #pidHeightRate, R11
+        SUBX.W  &??acc_offset, R15
+        MOV.W   R15, R12
+        BIT.W   #0x4, SR
+//   40     }
+        CALLA   #??Subroutine6_0
+??CrossCallReturnLabel_8:
+        MOV.W   0x24(R11), R14
+        MOV.W   0x26(R11), R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   #0xe148, R14
+        MOV.W   #0x3f7a, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOVX.W  &??last_high, R14
+        MOVX.W  &??last_high + 2, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   #0xd70a, R14
+        MOV.W   #0x3ca3, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0x24(R11)
+        MOV.W   R13, 0x26(R11)
+//   41     acc_error = acc - acc_offset;	
+//   42                 
+//   43     {//此处做一个速度与高度的互补滤波
+//   44         static float last_high;
+//   45         pidHeightRate.measured = (pidHeightRate.measured + acc_error * dt)*0.98f + 0.02f*(high - last_high)/dt; 
+//   46         last_high = pidHeightHigh.measured = high;  //高度辅调
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+        MOVA    #pidHeightHigh, R9
+        MOV.W   R14, 0x24(R9)
+        MOV.W   R15, 0x26(R9)
+        MOVX.W  R8, &??last_high
+        MOVX.W  R15, &??last_high + 2
+//   47     }
+//   48  
+//   49     {
+//   50         status = EXIT_255;
+        MOVA    #??status, R8
+        MOV.B   #0xff, 0(R8)
+//   51     }
+//   52 		
+//   53 
+//   54 	switch(status)
+        MOV.B   @R8, R14
+        SUB.B   #0x1, R14
+        JEQ     ??HeightPidControl_7
+        SUB.B   #0x1, R14
+        JEQ     ??HeightPidControl_8
+        SUB.B   #0x1d, R14
+        JEQ     ??HeightPidControl_9
+        SUB.B   #0xe0, R14
+        JEQ     ??HeightPidControl_10
+        JMP     ??HeightPidControl_4
+//   55 	{
+//   56 		case WAITING_1: //检测定高
+//   57 		  if(ALL_flag.height_lock && ALL_flag.unlock) 
+??HeightPidControl_7:
+        MOV.B   @R10, R4
+        BIT.B   #0x2, R4
+        JEQ     ??HeightPidControl_0
+        MOV.B   @R10, R10
+        BIT.B   #0x1, R10
+        JEQ     ??HeightPidControl_0
+//   58 			{
+//   59 //				LED.status = WARNING;//LED单闪为定高
+//   60 				status = WAITING_2;
+        MOV.B   #0x2, 0(R8)
+        JMP     ??HeightPidControl_0
+//   61 			}
+//   62 			break;
+//   63 		case WAITING_2: //定高前准备
+//   64 			if(ALL_flag.take_off)
+??HeightPidControl_8:
+        MOV.B   @R10, R10
+        BIT.B   #0x4, R10
+        JEQ     ??HeightPidControl_2
+//   65 			{
+//   66 				thr_hold = 500;
+        MOV.W   #0x0, R12
+        MOV.W   #0x43fa, R13
+        JMP     ??HeightPidControl_5
+//   67 			}
+//   68 			else
+//   69 				thr_hold = Remote.thr -1000;  
+??HeightPidControl_2:
+        MOVX.W  &Remote + 4, R12
+        ADD.W   #0xfc18, R12
+        MOV.W   #0x0, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+??HeightPidControl_5:
+        MOVX.W  R12, &??thr_hold
+        MOVX.W  R13, &??thr_hold + 2
+//   70 			cnt_take_off = 0;//起飞时间清0
+        MOVX.W  #0x0, &??cnt_take_off
+//   71 			status = PROCESS_31;
+        MOV.B   #0x1f, 0(R8)
+//   72 			break;
+        JMP     ??HeightPidControl_0
+//   73 		
+//   74 		case PROCESS_31://进入定高	
+//   75 				//一键起飞功能使用到
+//   76 			if(ALL_flag.take_off)
+??HeightPidControl_9:
+        MOVA    #Remote, R14
+        MOV.B   @R10, R4
+        BIT.B   #0x4, R4
+        JEQ     ??HeightPidControl_3
+//   77 			{	
+//   78 				if(cnt_take_off<500)//起飞1.5S后进入正常工作
+        CMPX.W  #0x1f4, &??cnt_take_off
+        JC      ??HeightPidControl_11
+//   79 				{
+//   80 					Remote.thr  = 2500;//起飞速度 这里可以调起飞过程的速度
+        MOV.W   #0x9c4, 0x4(R14)
+//   81 					cnt_take_off++;
+        ADDX.W  #0x1, &??cnt_take_off
+        JMP     ??HeightPidControl_3
+//   82 				}
+//   83 				else
+//   84 				{
+//   85 					if(Remote.thr >1500)
+??HeightPidControl_11:
+        CMP.W   #0x5dd, 0x4(R14)
+        JNC     ??HeightPidControl_12
+//   86 					{
+//   87 						ALL_flag.take_off = 0;
+        BIC.B   #0x4, 0(R10)
+//   88 					}
+//   89 					Remote.thr = 1500;
+??HeightPidControl_12:
+        MOV.W   #0x5dc, 0x4(R14)
+//   90 				}
+//   91 			}
+//   92 			//定高功能实现
+//   93 			{
+//   94                      static uint8_t set_high = 0;
+//   95                  
+//   96                     if(Remote.thr<1850 && Remote.thr>1150) //如果油门已回中，不调高度
+??HeightPidControl_3:
+        MOV.W   0x4(R14), R15
+        MOV.W   R15, R14
+        ADD.W   #0xfb81, R14
+        CMP.W   #0x2bb, R14
+        JC      ??HeightPidControl_13
+//   97                     {
+//   98                         if(set_high == 0) //如果刚退出调高
+        CMPX.B  #0x0, &??set_high
+        JNE     ??HeightPidControl_14
+//   99                         {
+//  100                             set_high = 1;
+        MOVX.B  #0x1, &??set_high
+//  101                             pidHeightHigh.desired = pidHeightHigh.measured;//记录油门回中的高度当做当前定高高度
+        MOV.W   0x24(R9), 0(R9)
+        MOV.W   0x26(R9), 0x2(R9)
+//  102                         }
+//  103                         
+//  104                         pidUpdate(&pidHeightHigh,dt);    //调用PID处理函数来处理外环	高度PID	
+??HeightPidControl_14:
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+        MOVA    R9, R12
+          CFI FunCall pidUpdate
+        CALLA   #pidUpdate
+//  105                         pidHeightRate.desired = pidHeightHigh.out;  
+        MOV.W   0x28(R9), 0(R11)
+        MOV.W   0x2a(R9), 0x2(R11)
+        JMP     ??HeightPidControl_6
+//  106                     }
+//  107                     else if(Remote.thr>1850) //油门上拉则上升 调整高度
+??HeightPidControl_13:
+        CMP.W   #0x73b, R15
+        JNC     ??HeightPidControl_15
+//  108                     {
+//  109                         set_high = 0;
+        MOVX.B  #0x0, &??set_high
+//  110                         pidHeightRate.desired = 300; //上升速度可调
+        MOV.W   #0x0, 0(R11)
+        MOV.W   #0x4396, 0x2(R11)
+        JMP     ??HeightPidControl_6
+//  111                     }
+//  112                     else if	(Remote.thr<1150) //油门下拉则下降	调整高度	
+??HeightPidControl_15:
+        CMP.W   #0x47e, R15
+        JC      ??HeightPidControl_6
+//  113                     {
+//  114                         set_high = 0;
+        MOVX.B  #0x0, &??set_high
+//  115                         pidHeightRate.desired = -300; //下降速度可调
+        MOV.W   #0x0, 0(R11)
+        MOV.W   #0xc396, 0x2(R11)
+//  116                     }
+//  117              }
+//  118 								 
+//  119           pidUpdate(&pidHeightRate,dt); //再调用内环，垂直速度PID
+??HeightPidControl_6:
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+        MOVA    R11, R12
+          CFI FunCall pidUpdate
+        CALLA   #pidUpdate
+//  120 				 
+//  121 		  pidHeightRate.out += thr_hold;//加入进入定高时的油门值
+        MOV.W   0x28(R11), R12
+        MOV.W   0x2a(R11), R13
+        MOVX.W  &??thr_hold, R14
+        MOVX.W  &??thr_hold + 2, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0x28(R11)
+        MOV.W   R13, 0x2a(R11)
+//  122 				 
+//  123 			if(!ALL_flag.height_lock)  //退出定高
+        MOV.B   @R10, R10
+        BIT.B   #0x2, R10
+        JNE     ??HeightPidControl_0
+//  124 			{
+//  125 //				LED.status = AlwaysOn ;
+//  126 				status = EXIT_255;
+        MOV.B   #0xff, 0(R8)
+        JMP     ??HeightPidControl_0
+//  127 			}
+//  128 			break;
+//  129 		case EXIT_255: 
+//  130 			pidRest(&pPidObject[6],2);	//清除当前的定高输出值
+??HeightPidControl_10:
+        MOV.B   #0x2, R13
+        MOVA    #pPidObject + 24, R12
+          CFI FunCall pidRest
+        CALLA   #pidRest
+//  131 			status = WAITING_1;//回到等待进入定高
+//  132 			break;
+//  133 		default:
+//  134 			status = WAITING_1;
+??HeightPidControl_4:
+        MOV.B   #0x1, 0(R8)
+//  135 			break;	
+//  136 	}	
+//  137 		
+//  138 		
+//  139 }
+??HeightPidControl_0:
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_copy20
+??status:
+        DS8 1
+        REQUIRE `?<Initializer for status>`
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??acc_offset:
+        DS8 2
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??high:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??thr_hold:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??cnt_take_off:
+        DS8 2
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??last_high:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+??set_high:
+        DS8 1
+//  140 
+//  141 /**************************************************************
+//  142  *  flight control
+//  143  * @param[in] 
+//  144  * @param[out] 
+//  145  * @return     
+//  146  ***************************************************************/
+
+        RSEG `CODE`:CODE:NOROOT(1)
+?Subroutine0:
+          CFI Block cfiCond1 Using cfiCommon0
+          CFI Function FlightPidControl
+          CFI Conditional ??CrossCallReturnLabel_9
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+40
+          CFI Block cfiCond2 Using cfiCommon0
+          CFI (cfiCond2) Function FlightPidControl
+          CFI (cfiCond2) Conditional ??CrossCallReturnLabel_10
+          CFI (cfiCond2) R4L Frame(CFA, -36)
+          CFI (cfiCond2) R4H Frame(CFA, -34)
+          CFI (cfiCond2) R5L Frame(CFA, -32)
+          CFI (cfiCond2) R5H Frame(CFA, -30)
+          CFI (cfiCond2) R6L Frame(CFA, -28)
+          CFI (cfiCond2) R6H Frame(CFA, -26)
+          CFI (cfiCond2) R7L Frame(CFA, -24)
+          CFI (cfiCond2) R7H Frame(CFA, -22)
+          CFI (cfiCond2) R8L Frame(CFA, -20)
+          CFI (cfiCond2) R8H Frame(CFA, -18)
+          CFI (cfiCond2) R9L Frame(CFA, -16)
+          CFI (cfiCond2) R9H Frame(CFA, -14)
+          CFI (cfiCond2) R10L Frame(CFA, -12)
+          CFI (cfiCond2) R10H Frame(CFA, -10)
+          CFI (cfiCond2) R11L Frame(CFA, -8)
+          CFI (cfiCond2) R11H Frame(CFA, -6)
+          CFI (cfiCond2) CFA SP+40
+          CFI Block cfiCond3 Using cfiCommon0
+          CFI (cfiCond3) Function FlightPidControl
+          CFI (cfiCond3) Conditional ??CrossCallReturnLabel_11
+          CFI (cfiCond3) R4L Frame(CFA, -36)
+          CFI (cfiCond3) R4H Frame(CFA, -34)
+          CFI (cfiCond3) R5L Frame(CFA, -32)
+          CFI (cfiCond3) R5H Frame(CFA, -30)
+          CFI (cfiCond3) R6L Frame(CFA, -28)
+          CFI (cfiCond3) R6H Frame(CFA, -26)
+          CFI (cfiCond3) R7L Frame(CFA, -24)
+          CFI (cfiCond3) R7H Frame(CFA, -22)
+          CFI (cfiCond3) R8L Frame(CFA, -20)
+          CFI (cfiCond3) R8H Frame(CFA, -18)
+          CFI (cfiCond3) R9L Frame(CFA, -16)
+          CFI (cfiCond3) R9H Frame(CFA, -14)
+          CFI (cfiCond3) R10L Frame(CFA, -12)
+          CFI (cfiCond3) R10H Frame(CFA, -10)
+          CFI (cfiCond3) R11L Frame(CFA, -8)
+          CFI (cfiCond3) R11H Frame(CFA, -6)
+          CFI (cfiCond3) CFA SP+40
+          CFI Block cfiPicker4 Using cfiCommon1
+          CFI (cfiPicker4) NoFunction
+          CFI (cfiPicker4) Picker
+        MOV.W   R12, R13
+        RLA.W   R13
+          CFI EndBlock cfiCond1
+          CFI EndBlock cfiCond2
+          CFI EndBlock cfiCond3
+          CFI EndBlock cfiPicker4
+        REQUIRE ??Subroutine6_0
+        // Fall through to label ??Subroutine6_0
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+??Subroutine6_0:
+          CFI Block cfiCond5 Using cfiCommon0
+          CFI Function HeightPidControl
+          CFI Conditional ??CrossCallReturnLabel_8
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+40
+          CFI Block cfiCond6 Using cfiCommon0
+          CFI (cfiCond6) Function FlightPidControl
+          CFI (cfiCond6) Conditional ??CrossCallReturnLabel_9
+          CFI (cfiCond6) R4L Frame(CFA, -36)
+          CFI (cfiCond6) R4H Frame(CFA, -34)
+          CFI (cfiCond6) R5L Frame(CFA, -32)
+          CFI (cfiCond6) R5H Frame(CFA, -30)
+          CFI (cfiCond6) R6L Frame(CFA, -28)
+          CFI (cfiCond6) R6H Frame(CFA, -26)
+          CFI (cfiCond6) R7L Frame(CFA, -24)
+          CFI (cfiCond6) R7H Frame(CFA, -22)
+          CFI (cfiCond6) R8L Frame(CFA, -20)
+          CFI (cfiCond6) R8H Frame(CFA, -18)
+          CFI (cfiCond6) R9L Frame(CFA, -16)
+          CFI (cfiCond6) R9H Frame(CFA, -14)
+          CFI (cfiCond6) R10L Frame(CFA, -12)
+          CFI (cfiCond6) R10H Frame(CFA, -10)
+          CFI (cfiCond6) R11L Frame(CFA, -8)
+          CFI (cfiCond6) R11H Frame(CFA, -6)
+          CFI (cfiCond6) CFA SP+40
+          CFI Block cfiCond7 Using cfiCommon0
+          CFI (cfiCond7) Function FlightPidControl
+          CFI (cfiCond7) Conditional ??CrossCallReturnLabel_10
+          CFI (cfiCond7) R4L Frame(CFA, -36)
+          CFI (cfiCond7) R4H Frame(CFA, -34)
+          CFI (cfiCond7) R5L Frame(CFA, -32)
+          CFI (cfiCond7) R5H Frame(CFA, -30)
+          CFI (cfiCond7) R6L Frame(CFA, -28)
+          CFI (cfiCond7) R6H Frame(CFA, -26)
+          CFI (cfiCond7) R7L Frame(CFA, -24)
+          CFI (cfiCond7) R7H Frame(CFA, -22)
+          CFI (cfiCond7) R8L Frame(CFA, -20)
+          CFI (cfiCond7) R8H Frame(CFA, -18)
+          CFI (cfiCond7) R9L Frame(CFA, -16)
+          CFI (cfiCond7) R9H Frame(CFA, -14)
+          CFI (cfiCond7) R10L Frame(CFA, -12)
+          CFI (cfiCond7) R10H Frame(CFA, -10)
+          CFI (cfiCond7) R11L Frame(CFA, -8)
+          CFI (cfiCond7) R11H Frame(CFA, -6)
+          CFI (cfiCond7) CFA SP+40
+          CFI Block cfiCond8 Using cfiCommon0
+          CFI (cfiCond8) Function FlightPidControl
+          CFI (cfiCond8) Conditional ??CrossCallReturnLabel_11
+          CFI (cfiCond8) R4L Frame(CFA, -36)
+          CFI (cfiCond8) R4H Frame(CFA, -34)
+          CFI (cfiCond8) R5L Frame(CFA, -32)
+          CFI (cfiCond8) R5H Frame(CFA, -30)
+          CFI (cfiCond8) R6L Frame(CFA, -28)
+          CFI (cfiCond8) R6H Frame(CFA, -26)
+          CFI (cfiCond8) R7L Frame(CFA, -24)
+          CFI (cfiCond8) R7H Frame(CFA, -22)
+          CFI (cfiCond8) R8L Frame(CFA, -20)
+          CFI (cfiCond8) R8H Frame(CFA, -18)
+          CFI (cfiCond8) R9L Frame(CFA, -16)
+          CFI (cfiCond8) R9H Frame(CFA, -14)
+          CFI (cfiCond8) R10L Frame(CFA, -12)
+          CFI (cfiCond8) R10H Frame(CFA, -10)
+          CFI (cfiCond8) R11L Frame(CFA, -8)
+          CFI (cfiCond8) R11H Frame(CFA, -6)
+          CFI (cfiCond8) CFA SP+40
+          CFI Block cfiPicker9 Using cfiCommon1
+          CFI (cfiPicker9) NoFunction
+          CFI (cfiPicker9) Picker
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI (cfiCond5) FunCall HeightPidControl _Cast32sto32f
+          CFI (cfiCond6) FunCall FlightPidControl _Cast32sto32f
+          CFI (cfiCond6) FunCall FlightPidControl _Cast32sto32f
+          CFI (cfiCond6) FunCall FlightPidControl _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI (cfiCond5) TailCall HeightPidControl _Mul32f
+          CFI (cfiCond6) TailCall FlightPidControl _Mul32f
+          CFI (cfiCond6) TailCall FlightPidControl _Mul32f
+          CFI (cfiCond6) TailCall FlightPidControl _Mul32f
+        BRA     #_Mul32f
+          CFI EndBlock cfiCond5
+          CFI EndBlock cfiCond6
+          CFI EndBlock cfiCond7
+          CFI EndBlock cfiCond8
+          CFI EndBlock cfiPicker9
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  147 void FlightPidControl(float dt)
+FlightPidControl:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function FlightPidControl
+//  148 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  149 	volatile static uint8_t status=WAITING_1;
+//  150 
+//  151 	switch(status)
+        MOVA    #??status_1, R8
+        MOV.B   @R8, R14
+        SUB.B   #0x1, R14
+        JEQ     ??FlightPidControl_3
+        SUB.B   #0xa, R14
+        JEQ     ??FlightPidControl_4
+        SUB.B   #0x14, R14
+        JEQ     ??FlightPidControl_5
+        SUB.B   #0xe0, R14
+        JEQ     ??FlightPidControl_6
+        JMP     ??FlightPidControl_2
+//  152 	{		
+//  153 		case WAITING_1:
+//  154 			if(ALL_flag.unlock)
+??FlightPidControl_3:
+        BITX.B  #0x1, &ALL_flag
+        JEQ     ??FlightPidControl_1
+//  155 			{
+//  156 				status = READY_11;	
+        MOV.B   #0xb, 0(R8)
+        JMP     ??FlightPidControl_1
+//  157 			}			
+//  158 			break;
+//  159 		case READY_11:  
+//  160 			pidRest(pPidObject,8); //批量复位PID数据，防止上次遗留的数据影响本次控制
+??FlightPidControl_4:
+        CALLA   #?Subroutine3
+//  161 
+//  162 			Angle.yaw = pidYaw.desired =  pidYaw.measured = 0;   //锁定偏航角
+??CrossCallReturnLabel_3:
+        MOVX.W  #0x0, &pidYaw + 36
+        MOVX.W  #0x0, &pidYaw + 38
+        MOVX.W  #0x0, &pidYaw
+        MOVX.W  #0x0, &pidYaw + 2
+        MOVX.A  #0x0, &Angle + 8
+//  163 		  
+//  164 			status = PROCESS_31;
+        MOV.B   #0x1f, 0(R8)
+//  165 		
+//  166 			break;			
+        JMP     ??FlightPidControl_1
+//  167 		case PROCESS_31: //正式进入控制
+//  168 			
+//  169                         pidRateX.measured = MPU6050.gyroX * Gyro_G; //内环测量值 角度/秒
+??FlightPidControl_5:
+        MOVX.W  &Gyro_G, R6
+        MOVX.W  &Gyro_G + 2, R7
+        MOVA    #pidRateX, R5
+        MOVA    #MPU6050, R9
+        MOV.W   0x6(R9), R12
+        CALLA   #?Subroutine0
+??CrossCallReturnLabel_9:
+        MOV.W   R12, 0x24(R5)
+        MOV.W   R13, 0x26(R5)
+//  170                         pidRateY.measured = MPU6050.gyroY * Gyro_G;
+        MOVA    #pidRateY, R4
+        MOV.W   0x8(R9), R12
+        CALLA   #?Subroutine0
+??CrossCallReturnLabel_10:
+        MOV.W   R12, 0x24(R4)
+        MOV.W   R13, 0x26(R4)
+//  171                         pidRateZ.measured = MPU6050.gyroZ * Gyro_G;
+        MOV.W   0xa(R9), R12
+        CALLA   #?Subroutine0
+??CrossCallReturnLabel_11:
+        MOVX.W  R12, &pidRateZ + 36
+        MOVX.W  R13, &pidRateZ + 38
+//  172 
+//  173                         pidPitch.measured = Angle.pitch; //外环测量值 单位：角度
+        MOVA    #pidPitch, R9
+        MOVA    #Angle, R15
+        MOV.W   0x4(R15), 0x24(R9)
+        MOV.W   0x6(R15), 0x26(R9)
+//  174                         pidRoll.measured = Angle.roll;
+        MOVA    #pidRoll, R6
+        MOV.W   @R15, 0x24(R6)
+        MOV.W   0x2(R15), 0x26(R6)
+//  175                         pidYaw.measured = Angle.yaw;
+        MOVX.W  0x8(R15), &pidYaw + 36
+        MOVX.W  0xa(R15), &pidYaw + 38
+//  176 		
+//  177 		 	pidUpdate(&pidRoll,dt);    
+        MOVA    #pidUpdate, R7
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    R6, R12
+          CFI FunCall pidUpdate
+        CALLA   R7
+//  178 			pidRateX.desired = pidRoll.out; 
+        MOV.W   0x28(R6), 0(R5)
+        MOV.W   0x2a(R6), 0x2(R5)
+//  179 			pidUpdate(&pidRateX,dt); 
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    R5, R12
+          CFI FunCall pidUpdate
+        CALLA   R7
+//  180 
+//  181 		 	pidUpdate(&pidPitch,dt);    //调用PID处理函数来处理外环	俯仰角PID	
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    R9, R12
+          CFI FunCall pidUpdate
+        CALLA   R7
+//  182 			pidRateY.desired = pidPitch.out;  
+        MOV.W   0x28(R9), 0(R4)
+        MOV.W   0x2a(R9), 0x2(R4)
+//  183 			pidUpdate(&pidRateY,dt); 
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    R4, R12
+          CFI FunCall pidUpdate
+        CALLA   R7
+//  184 
+//  185 			CascadePID(&pidRateZ,&pidYaw,dt);	//也可以直接调用串级PID函数来处理
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    #pidYaw, R13
+        MOVA    #pidRateZ, R12
+          CFI FunCall CascadePID
+        CALLA   #CascadePID
+//  186 			break;
+        JMP     ??FlightPidControl_1
+//  187 		case EXIT_255:  //退出控制
+//  188 			pidRest(pPidObject,8);
+??FlightPidControl_6:
+        CALLA   #?Subroutine3
+//  189 			status = WAITING_1;//返回等待解锁
+??CrossCallReturnLabel_2:
+        MOV.B   #0x1, 0(R8)
+//  190 		  break;
+        JMP     ??FlightPidControl_1
+//  191 		default:
+//  192 			status = EXIT_255;
+??FlightPidControl_2:
+        MOV.B   #0xff, 0(R8)
+//  193 			break;
+//  194 	}
+//  195 	if(ALL_flag.unlock == EMERGENT) 
+??FlightPidControl_1:
+        BITX.B  #0x1, &ALL_flag
+        JNE     ??FlightPidControl_0
+//  196 		status = EXIT_255;
+        MOV.B   #0xff, 0(R8)
+//  197 }
+??FlightPidControl_0:
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock10
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine3:
+          CFI Block cfiCond11 Using cfiCommon0
+          CFI Function FlightPidControl
+          CFI Conditional ??CrossCallReturnLabel_3
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+40
+          CFI Block cfiCond12 Using cfiCommon0
+          CFI (cfiCond12) Function FlightPidControl
+          CFI (cfiCond12) Conditional ??CrossCallReturnLabel_2
+          CFI (cfiCond12) R4L Frame(CFA, -36)
+          CFI (cfiCond12) R4H Frame(CFA, -34)
+          CFI (cfiCond12) R5L Frame(CFA, -32)
+          CFI (cfiCond12) R5H Frame(CFA, -30)
+          CFI (cfiCond12) R6L Frame(CFA, -28)
+          CFI (cfiCond12) R6H Frame(CFA, -26)
+          CFI (cfiCond12) R7L Frame(CFA, -24)
+          CFI (cfiCond12) R7H Frame(CFA, -22)
+          CFI (cfiCond12) R8L Frame(CFA, -20)
+          CFI (cfiCond12) R8H Frame(CFA, -18)
+          CFI (cfiCond12) R9L Frame(CFA, -16)
+          CFI (cfiCond12) R9H Frame(CFA, -14)
+          CFI (cfiCond12) R10L Frame(CFA, -12)
+          CFI (cfiCond12) R10H Frame(CFA, -10)
+          CFI (cfiCond12) R11L Frame(CFA, -8)
+          CFI (cfiCond12) R11H Frame(CFA, -6)
+          CFI (cfiCond12) CFA SP+40
+          CFI Block cfiPicker13 Using cfiCommon1
+          CFI (cfiPicker13) NoFunction
+          CFI (cfiPicker13) Picker
+        MOV.B   #0x8, R13
+        MOVA    #pPidObject, R12
+          CFI (cfiCond11) TailCall FlightPidControl pidRest
+          CFI (cfiCond11) TailCall FlightPidControl pidRest
+        BRA     #pidRest
+          CFI EndBlock cfiCond11
+          CFI EndBlock cfiCond12
+          CFI EndBlock cfiPicker13
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_copy20
+??status_1:
+        DS8 1
+        REQUIRE `?<Initializer for status>_1`
+//  198 
+//  199 /**************************************************************
+//  200  *  电机输出
+//  201  * @param[in] 
+//  202  * @param[out] 
+//  203  * @return     
+//  204  ***************************************************************/
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//  205 int16_t motor[4];
+motor:
+        DS8 8
+//  206 #define MOTOR1 motor[0] 
+//  207 #define MOTOR2 motor[1] 
+//  208 #define MOTOR3 motor[2] 
+//  209 #define MOTOR4 motor[3] 
+//  210 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  211 void MotorControl(void)
+MotorControl:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function MotorControl
+//  212 {	
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+//  213 	volatile static uint8_t status=WAITING_1;
+//  214 	
+//  215 	
+//  216 	if(ALL_flag.unlock == EMERGENT)
+        MOVA    #??status_2, R11
+        MOVA    #ALL_flag, R7
+        MOV.B   @R7, R4
+        BIT.B   #0x1, R4
+        JNE     ??MotorControl_7
+//  217 		status = EXIT_255;	
+        MOV.B   #0xff, 0(R11)
+//  218     
+//  219 	switch(status)
+??MotorControl_7:
+        MOVA    #motor, R8
+        MOV.B   @R11, R14
+        SUB.B   #0x1, R14
+        JEQ     ??MotorControl_14
+        SUB.B   #0x1, R14
+        JEQ     ??MotorControl_9
+        SUB.B   #0x1d, R14
+        JEQ     ??MotorControl_15
+        SUB.B   #0xe0, R14
+        JEQ     ??MotorControl_16
+        JMP     ??MotorControl_10
+//  220 	{		
+//  221 		case WAITING_1: 
+//  222 			MOTOR1 = MOTOR2 = MOTOR3 = MOTOR4 = 0;  //如果锁定，则电机输出都为0
+??MotorControl_14:
+        CALLA   #?Subroutine4
+//  223 			if(ALL_flag.unlock)
+??CrossCallReturnLabel_4:
+        MOV.B   @R7, R4
+        BIT.B   #0x1, R4
+        JEQ     ??MotorControl_9
+//  224 			{
+//  225 				ALL_flag.take_off = 0;	
+        BIC.B   #0x4, 0(R7)
+//  226 				ALL_flag.height_lock = 0; 
+        BIC.B   #0x2, 0(R7)
+//  227 				status = WAITING_2;
+        MOV.B   #0x2, 0(R11)
+//  228 			}
+//  229 		case WAITING_2: //解锁完成后判断使用者是否开始拨动遥杆进行飞行控制
+//  230 			if(Remote.thr>1100&&!ALL_flag.take_off) //刚解锁时，如果不处于一键起飞并且遥杆处于最低，认为操作者还不想飞行
+??MotorControl_9:
+        CMPX.W  #0x44d, &Remote + 4
+        JNC     ??MotorControl_8
+        MOV.B   @R7, R4
+        BIT.B   #0x4, R4
+        JEQ     ??MotorControl_11
+//  231 			{
+//  232 				status = PROCESS_31;
+//  233 			}
+//  234 			else if(ALL_flag.take_off)
+??MotorControl_8:
+        MOV.B   @R7, R4
+        BIT.B   #0x4, R4
+        JEQ     ??MotorControl_10
+//  235 			{
+//  236 						ALL_flag.height_lock = 1;
+        BIS.B   #0x2, 0(R7)
+//  237 						status = PROCESS_31;							
+??MotorControl_11:
+        MOV.B   #0x1f, 0(R11)
+//  238 			}
+//  239 			else
+//  240 			{
+//  241 					break;
+//  242 			}	
+//  243 		case PROCESS_31:
+//  244 			{
+//  245 				int16_t temp;
+//  246 				if(ALL_flag.height_lock)
+??MotorControl_15:
+        MOV.B   @R7, R7
+        BIT.B   #0x2, R7
+        JEQ     ??MotorControl_6
+//  247 				{		
+//  248 					temp = pidHeightRate.out; 
+        MOVX.W  &pidHeightRate + 40, R12
+        MOVX.W  &pidHeightRate + 42, R13
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        JMP     ??MotorControl_12
+//  249 				}
+//  250 				else 
+//  251 				{
+//  252 					if(Remote.thr<1040) 
+??MotorControl_6:
+        CMPX.W  #0x410, &Remote + 4
+        JC      ??MotorControl_17
+//  253 					{
+//  254 						MOTOR1 = MOTOR2 = MOTOR3 = MOTOR4 = 0;//清0
+        CALLA   #?Subroutine4
+//  255 						break;
+??MotorControl_13:
+        MOV.W   #0x0, R15
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R13
+??MotorControl_0:
+        MOV.W   0x6(R8), R12
+??MotorControl_1:
+          CFI FunCall Motor_Config
+        CALLA   #Motor_Config
+//  256 					}
+//  257 					temp = Remote.thr -1000; 
+//  258 				}
+//  259 				
+//  260 				//将油门值作为基础值给PWM
+//  261 				MOTOR1 = MOTOR2 = MOTOR3 = MOTOR4 = LIMIT(temp,0,700); 
+//  262                                 
+//  263 //				MOTOR1 +=    + pidRateX.out - pidRateY.out - pidRateZ.out;
+//  264 //				MOTOR2 +=    + pidRateX.out + pidRateY.out + pidRateZ.out;
+//  265 //				MOTOR3 +=    - pidRateX.out + pidRateY.out - pidRateZ.out;
+//  266 //				MOTOR4 +=    - pidRateX.out - pidRateY.out + pidRateZ.out;                                
+//  267                                 
+//  268                                 MOTOR1 +=    + pidRateX.out - pidRateY.out - pidRateZ.out;
+//  269 				MOTOR2 +=    + pidRateX.out + pidRateY.out + pidRateZ.out;
+//  270 				MOTOR3 +=    - pidRateX.out + pidRateY.out - pidRateZ.out;
+//  271 				MOTOR4 +=    - pidRateX.out - pidRateY.out + pidRateZ.out; 
+//  272                                 
+//  273 			}
+//  274 			break;
+//  275 		case EXIT_255:
+//  276 			MOTOR1 = MOTOR2 = MOTOR3 = MOTOR4 = 0; 
+//  277 			status = WAITING_1;	//返回等待解锁
+//  278 			break;
+//  279 		default:
+//  280 			break;
+//  281 	}
+//  282         //4213
+//  283         Motor_Config(LIMIT(MOTOR4,0,1000), 
+//  284                      LIMIT(MOTOR2,0,1000),  
+//  285                      LIMIT(MOTOR1,0,1000), 
+//  286                      LIMIT(MOTOR3,0,1000));
+//  287 } 
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+??MotorControl_17:
+        MOVX.W  &Remote + 4, R12
+        ADD.W   #0xfc18, R12
+??MotorControl_12:
+        CMP.W   #0x0, R12
+        JGE     ??MotorControl_18
+        MOV.W   #0x0, R12
+        JMP     ??MotorControl_2
+??MotorControl_18:
+        CMP.W   #0x2bd, R12
+        JL      ??MotorControl_2
+        MOV.W   #0x2bc, R12
+??MotorControl_2:
+        MOV.W   R12, 0x6(R8)
+        MOV.W   R12, 0x4(R8)
+        MOV.W   R12, 0x2(R8)
+        MOVA    #pidRateX + 40, R9
+        MOV.W   @R9, R4
+        MOV.W   0x2(R9), R5
+        MOVA    #pidRateY + 40, R6
+        MOV.W   @R6, R14
+        MOV.W   0x2(R6), R15
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVA    #pidRateZ + 40, R7
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+        CALLA   #?Subroutine1
+??CrossCallReturnLabel_6:
+        MOV.W   R12, 0(R8)
+        MOV.W   @R9, R12
+        MOV.W   0x2(R9), R13
+        MOV.W   @R6, R14
+        MOV.W   0x2(R6), R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   @R7, R14
+        MOV.W   0x2(R7), R15
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_0:
+        MOV.W   R12, 0x2(R8)
+        MOV.W   @R9, R14
+        MOV.W   0x2(R9), R15
+        MOV.W   @R6, R12
+        MOV.W   0x2(R6), R13
+        CALLA   #?Subroutine1
+??CrossCallReturnLabel_7:
+        MOV.W   R12, 0x4(R8)
+        MOV.W   @R9+, R12
+        MOV.W   @R9+, R13
+        MOV.W   @R6+, R14
+        MOV.W   @R6+, R15
+        XOR.W   #0x8000, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   @R7+, R14
+        MOV.W   @R7+, R15
+        CALLA   #?Subroutine2
+??CrossCallReturnLabel_1:
+        MOV.W   R12, 0x6(R8)
+??MotorControl_10:
+        MOV.W   0x4(R8), R15
+        CMP.W   #0x0, R15
+        JGE     ??MotorControl_19
+        MOV.W   #0x0, R15
+        JMP     ??MotorControl_3
+??MotorControl_16:
+        CALLA   #?Subroutine4
+??CrossCallReturnLabel_5:
+        MOV.B   #0x1, 0(R11)
+        JMP     ??MotorControl_13
+??MotorControl_19:
+        CMP.W   #0x3e9, R15
+        JL      ??MotorControl_3
+        MOV.W   #0x3e8, R15
+??MotorControl_3:
+        MOV.W   @R8, R14
+        CMP.W   #0x0, R14
+        JGE     ??MotorControl_20
+        MOV.W   #0x0, R14
+        JMP     ??MotorControl_4
+??MotorControl_20:
+        CMP.W   #0x3e9, R14
+        JL      ??MotorControl_4
+        MOV.W   #0x3e8, R14
+??MotorControl_4:
+        MOV.W   0x2(R8), R13
+        CMP.W   #0x0, R13
+        JGE     ??MotorControl_21
+        MOV.W   #0x0, R13
+        JMP     ??MotorControl_5
+??MotorControl_21:
+        CMP.W   #0x3e9, R13
+        JL      ??MotorControl_5
+        MOV.W   #0x3e8, R13
+??MotorControl_5:
+        CMP.W   #0x0, 0x6(R8)
+        JGE     ??MotorControl_22
+        MOV.W   #0x0, R12
+        JMP     ??MotorControl_1
+??MotorControl_22:
+        CMP.W   #0x3e9, 0x6(R8)
+        JL      ??MotorControl_0
+        MOV.W   #0x3e8, R12
+        JMP     ??MotorControl_1
+        NOP
+          CFI EndBlock cfiBlock14
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine4:
+          CFI Block cfiCond15 Using cfiCommon0
+          CFI Function MotorControl
+          CFI Conditional ??CrossCallReturnLabel_4
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+40
+          CFI Block cfiCond16 Using cfiCommon0
+          CFI (cfiCond16) Function MotorControl
+          CFI (cfiCond16) Conditional ??MotorControl_13
+          CFI (cfiCond16) R4L Frame(CFA, -36)
+          CFI (cfiCond16) R4H Frame(CFA, -34)
+          CFI (cfiCond16) R5L Frame(CFA, -32)
+          CFI (cfiCond16) R5H Frame(CFA, -30)
+          CFI (cfiCond16) R6L Frame(CFA, -28)
+          CFI (cfiCond16) R6H Frame(CFA, -26)
+          CFI (cfiCond16) R7L Frame(CFA, -24)
+          CFI (cfiCond16) R7H Frame(CFA, -22)
+          CFI (cfiCond16) R8L Frame(CFA, -20)
+          CFI (cfiCond16) R8H Frame(CFA, -18)
+          CFI (cfiCond16) R9L Frame(CFA, -16)
+          CFI (cfiCond16) R9H Frame(CFA, -14)
+          CFI (cfiCond16) R10L Frame(CFA, -12)
+          CFI (cfiCond16) R10H Frame(CFA, -10)
+          CFI (cfiCond16) R11L Frame(CFA, -8)
+          CFI (cfiCond16) R11H Frame(CFA, -6)
+          CFI (cfiCond16) CFA SP+40
+          CFI Block cfiCond17 Using cfiCommon0
+          CFI (cfiCond17) Function MotorControl
+          CFI (cfiCond17) Conditional ??CrossCallReturnLabel_5
+          CFI (cfiCond17) R4L Frame(CFA, -36)
+          CFI (cfiCond17) R4H Frame(CFA, -34)
+          CFI (cfiCond17) R5L Frame(CFA, -32)
+          CFI (cfiCond17) R5H Frame(CFA, -30)
+          CFI (cfiCond17) R6L Frame(CFA, -28)
+          CFI (cfiCond17) R6H Frame(CFA, -26)
+          CFI (cfiCond17) R7L Frame(CFA, -24)
+          CFI (cfiCond17) R7H Frame(CFA, -22)
+          CFI (cfiCond17) R8L Frame(CFA, -20)
+          CFI (cfiCond17) R8H Frame(CFA, -18)
+          CFI (cfiCond17) R9L Frame(CFA, -16)
+          CFI (cfiCond17) R9H Frame(CFA, -14)
+          CFI (cfiCond17) R10L Frame(CFA, -12)
+          CFI (cfiCond17) R10H Frame(CFA, -10)
+          CFI (cfiCond17) R11L Frame(CFA, -8)
+          CFI (cfiCond17) R11H Frame(CFA, -6)
+          CFI (cfiCond17) CFA SP+40
+          CFI Block cfiPicker18 Using cfiCommon1
+          CFI (cfiPicker18) NoFunction
+          CFI (cfiPicker18) Picker
+        MOV.W   #0x0, 0x6(R8)
+        MOV.W   #0x0, 0x4(R8)
+        MOV.W   #0x0, 0x2(R8)
+        MOV.W   #0x0, 0(R8)
+        RETA
+          CFI EndBlock cfiCond15
+          CFI EndBlock cfiCond16
+          CFI EndBlock cfiCond17
+          CFI EndBlock cfiPicker18
+
+        RSEG `CODE`:CODE:NOROOT(1)
+?Subroutine2:
+          CFI Block cfiCond19 Using cfiCommon0
+          CFI Function MotorControl
+          CFI Conditional ??CrossCallReturnLabel_0
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+40
+          CFI Block cfiCond20 Using cfiCommon0
+          CFI (cfiCond20) Function MotorControl
+          CFI (cfiCond20) Conditional ??CrossCallReturnLabel_1
+          CFI (cfiCond20) R4L Frame(CFA, -36)
+          CFI (cfiCond20) R4H Frame(CFA, -34)
+          CFI (cfiCond20) R5L Frame(CFA, -32)
+          CFI (cfiCond20) R5H Frame(CFA, -30)
+          CFI (cfiCond20) R6L Frame(CFA, -28)
+          CFI (cfiCond20) R6H Frame(CFA, -26)
+          CFI (cfiCond20) R7L Frame(CFA, -24)
+          CFI (cfiCond20) R7H Frame(CFA, -22)
+          CFI (cfiCond20) R8L Frame(CFA, -20)
+          CFI (cfiCond20) R8H Frame(CFA, -18)
+          CFI (cfiCond20) R9L Frame(CFA, -16)
+          CFI (cfiCond20) R9H Frame(CFA, -14)
+          CFI (cfiCond20) R10L Frame(CFA, -12)
+          CFI (cfiCond20) R10H Frame(CFA, -10)
+          CFI (cfiCond20) R11L Frame(CFA, -8)
+          CFI (cfiCond20) R11H Frame(CFA, -6)
+          CFI (cfiCond20) CFA SP+40
+          CFI Block cfiPicker21 Using cfiCommon1
+          CFI (cfiPicker21) NoFunction
+          CFI (cfiPicker21) Picker
+          CFI (cfiCond19) FunCall MotorControl _Add32f
+          CFI (cfiCond19) FunCall MotorControl _Add32f
+        CALLA   #_Add32f
+        JMP     ?Subroutine5
+          CFI EndBlock cfiCond19
+          CFI EndBlock cfiCond20
+          CFI EndBlock cfiPicker21
+
+        RSEG `CODE`:CODE:NOROOT(1)
+?Subroutine1:
+          CFI Block cfiCond22 Using cfiCommon0
+          CFI Function MotorControl
+          CFI Conditional ??CrossCallReturnLabel_6
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+40
+          CFI Block cfiCond23 Using cfiCommon0
+          CFI (cfiCond23) Function MotorControl
+          CFI (cfiCond23) Conditional ??CrossCallReturnLabel_7
+          CFI (cfiCond23) R4L Frame(CFA, -36)
+          CFI (cfiCond23) R4H Frame(CFA, -34)
+          CFI (cfiCond23) R5L Frame(CFA, -32)
+          CFI (cfiCond23) R5H Frame(CFA, -30)
+          CFI (cfiCond23) R6L Frame(CFA, -28)
+          CFI (cfiCond23) R6H Frame(CFA, -26)
+          CFI (cfiCond23) R7L Frame(CFA, -24)
+          CFI (cfiCond23) R7H Frame(CFA, -22)
+          CFI (cfiCond23) R8L Frame(CFA, -20)
+          CFI (cfiCond23) R8H Frame(CFA, -18)
+          CFI (cfiCond23) R9L Frame(CFA, -16)
+          CFI (cfiCond23) R9H Frame(CFA, -14)
+          CFI (cfiCond23) R10L Frame(CFA, -12)
+          CFI (cfiCond23) R10H Frame(CFA, -10)
+          CFI (cfiCond23) R11L Frame(CFA, -8)
+          CFI (cfiCond23) R11H Frame(CFA, -6)
+          CFI (cfiCond23) CFA SP+40
+          CFI Block cfiPicker24 Using cfiCommon1
+          CFI (cfiPicker24) NoFunction
+          CFI (cfiPicker24) Picker
+          CFI (cfiCond22) FunCall MotorControl _Sub32f
+          CFI (cfiCond22) FunCall MotorControl _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   @R7, R14
+        MOV.W   0x2(R7), R15
+          CFI (cfiCond22) FunCall MotorControl _Sub32f
+          CFI (cfiCond22) FunCall MotorControl _Sub32f
+        CALLA   #_Sub32f
+          CFI EndBlock cfiCond22
+          CFI EndBlock cfiCond23
+          CFI EndBlock cfiPicker24
+        REQUIRE ?Subroutine5
+        // Fall through to label ?Subroutine5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?Subroutine5:
+          CFI Block cfiCond25 Using cfiCommon0
+          CFI Function MotorControl
+          CFI Conditional ??CrossCallReturnLabel_0
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+40
+          CFI Block cfiCond26 Using cfiCommon0
+          CFI (cfiCond26) Function MotorControl
+          CFI (cfiCond26) Conditional ??CrossCallReturnLabel_1
+          CFI (cfiCond26) R4L Frame(CFA, -36)
+          CFI (cfiCond26) R4H Frame(CFA, -34)
+          CFI (cfiCond26) R5L Frame(CFA, -32)
+          CFI (cfiCond26) R5H Frame(CFA, -30)
+          CFI (cfiCond26) R6L Frame(CFA, -28)
+          CFI (cfiCond26) R6H Frame(CFA, -26)
+          CFI (cfiCond26) R7L Frame(CFA, -24)
+          CFI (cfiCond26) R7H Frame(CFA, -22)
+          CFI (cfiCond26) R8L Frame(CFA, -20)
+          CFI (cfiCond26) R8H Frame(CFA, -18)
+          CFI (cfiCond26) R9L Frame(CFA, -16)
+          CFI (cfiCond26) R9H Frame(CFA, -14)
+          CFI (cfiCond26) R10L Frame(CFA, -12)
+          CFI (cfiCond26) R10H Frame(CFA, -10)
+          CFI (cfiCond26) R11L Frame(CFA, -8)
+          CFI (cfiCond26) R11H Frame(CFA, -6)
+          CFI (cfiCond26) CFA SP+40
+          CFI Block cfiCond27 Using cfiCommon0
+          CFI (cfiCond27) Function MotorControl
+          CFI (cfiCond27) Conditional ??CrossCallReturnLabel_6
+          CFI (cfiCond27) R4L Frame(CFA, -36)
+          CFI (cfiCond27) R4H Frame(CFA, -34)
+          CFI (cfiCond27) R5L Frame(CFA, -32)
+          CFI (cfiCond27) R5H Frame(CFA, -30)
+          CFI (cfiCond27) R6L Frame(CFA, -28)
+          CFI (cfiCond27) R6H Frame(CFA, -26)
+          CFI (cfiCond27) R7L Frame(CFA, -24)
+          CFI (cfiCond27) R7H Frame(CFA, -22)
+          CFI (cfiCond27) R8L Frame(CFA, -20)
+          CFI (cfiCond27) R8H Frame(CFA, -18)
+          CFI (cfiCond27) R9L Frame(CFA, -16)
+          CFI (cfiCond27) R9H Frame(CFA, -14)
+          CFI (cfiCond27) R10L Frame(CFA, -12)
+          CFI (cfiCond27) R10H Frame(CFA, -10)
+          CFI (cfiCond27) R11L Frame(CFA, -8)
+          CFI (cfiCond27) R11H Frame(CFA, -6)
+          CFI (cfiCond27) CFA SP+40
+          CFI Block cfiCond28 Using cfiCommon0
+          CFI (cfiCond28) Function MotorControl
+          CFI (cfiCond28) Conditional ??CrossCallReturnLabel_7
+          CFI (cfiCond28) R4L Frame(CFA, -36)
+          CFI (cfiCond28) R4H Frame(CFA, -34)
+          CFI (cfiCond28) R5L Frame(CFA, -32)
+          CFI (cfiCond28) R5H Frame(CFA, -30)
+          CFI (cfiCond28) R6L Frame(CFA, -28)
+          CFI (cfiCond28) R6H Frame(CFA, -26)
+          CFI (cfiCond28) R7L Frame(CFA, -24)
+          CFI (cfiCond28) R7H Frame(CFA, -22)
+          CFI (cfiCond28) R8L Frame(CFA, -20)
+          CFI (cfiCond28) R8H Frame(CFA, -18)
+          CFI (cfiCond28) R9L Frame(CFA, -16)
+          CFI (cfiCond28) R9H Frame(CFA, -14)
+          CFI (cfiCond28) R10L Frame(CFA, -12)
+          CFI (cfiCond28) R10H Frame(CFA, -10)
+          CFI (cfiCond28) R11L Frame(CFA, -8)
+          CFI (cfiCond28) R11H Frame(CFA, -6)
+          CFI (cfiCond28) CFA SP+40
+          CFI Block cfiPicker29 Using cfiCommon1
+          CFI (cfiPicker29) NoFunction
+          CFI (cfiPicker29) Picker
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI (cfiCond25) FunCall MotorControl _Add32f
+          CFI (cfiCond25) FunCall MotorControl _Add32f
+          CFI (cfiCond25) FunCall MotorControl _Add32f
+          CFI (cfiCond25) FunCall MotorControl _Add32f
+        CALLA   #_Add32f
+          CFI (cfiCond25) TailCall MotorControl _Cast32fto32s
+          CFI (cfiCond25) TailCall MotorControl _Cast32fto32s
+          CFI (cfiCond25) TailCall MotorControl _Cast32fto32s
+          CFI (cfiCond25) TailCall MotorControl _Cast32fto32s
+        BRA     #_Cast32fto32s
+          CFI EndBlock cfiCond25
+          CFI EndBlock cfiCond26
+          CFI EndBlock cfiCond27
+          CFI EndBlock cfiCond28
+          CFI EndBlock cfiPicker29
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_copy20
+??status_2:
+        DS8 1
+        REQUIRE `?<Initializer for status>_2`
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(1)
+`?<Initializer for pPidObject>`:
+        DATA32
+        DC32 pidRateX, pidRateY, pidRateZ, pidRoll, pidPitch, pidYaw
+        DC32 pidHeightRate, pidHeightHigh
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(0)
+`?<Initializer for status>`:
+        DATA8
+        DC8 1
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(0)
+`?<Initializer for status>_1`:
+        DATA8
+        DC8 1
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(0)
+`?<Initializer for status>_2`:
+        DATA8
+        DC8 1
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  288 /************************************END OF FILE********************************************/ 
+// 
+// 1 380 bytes in segment CODE
+//    35 bytes in segment DATA20_I
+//    35 bytes in segment DATA20_ID
+//    25 bytes in segment DATA20_Z
+// 
+// 1 380 bytes of CODE  memory
+//    35 bytes of CONST memory
+//    60 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: 6

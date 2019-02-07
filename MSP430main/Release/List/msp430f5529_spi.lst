@@ -1,0 +1,511 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:43
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_spi.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW58EF.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_spi.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_spi.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_spi.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_spi.c
+      1          #include "msp430f5529_spi.h"
+      2          #include "msp430f5529_clock.h"
+      3          #include "msp430f5529_gpio.h"
+      4          
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      5          const USCI_MemMapPtr USCIX[]={USCI_A0_BASE_PTR,USCI_A1_BASE_PTR,USCI_B0_BASE_PTR,USCI_B1_BASE_PTR};
+   \                     USCIX:
+   \   000000   C00500000006 DC32 5C0H, 600H, 5E0H, 620H
+   \            0000E0050000
+   \            20060000    
+      6          
+      7          const struct
+      8          {
+      9            GPIO_PIN STE_PIN ; //
+     10            GPIO_PIN SIMO_PIN; //
+     11            GPIO_PIN SOMI_PIN; //
+     12            GPIO_PIN CLK_PIN ; //
+
+   \                                 In  segment DATA20_C, align 1, align-sorted
+     13          }SPI_PIN[]=
+   \                     SPI_PIN:
+   \   000000   020202030204 DC8 2, 2, 2, 3, 2, 4, 1, 7, 3, 3, 3, 4, 3, 5, 3, 0, 1, 1, 2, 0, 2, 1, 2
+   \            010703030304
+   \            030503000101
+   \            0200020102  
+   \   000017   020300030103 DC8 2, 3, 0, 3, 1, 3, 2, 3, 3
+   \            020303      
+     14          { //        STE             SIMO             SOMI             CLK
+     15            /*SPI0*/{.STE_PIN={P3,2},.SIMO_PIN={P3,3},.SOMI_PIN={P3,4},.CLK_PIN={P2,7}},    
+     16            /*SPI1*/{.STE_PIN={P4,3},.SIMO_PIN={P4,4},.SOMI_PIN={P4,5},.CLK_PIN={P4,0}},       
+     17            /*SPI2*/{.STE_PIN={P2,1},.SIMO_PIN={P3,0},.SOMI_PIN={P3,1},.CLK_PIN={P3,2}},    
+     18            /*SPI3*/{.STE_PIN={P4,0},.SIMO_PIN={P4,1},.SOMI_PIN={P4,2},.CLK_PIN={P4,3}},  
+     19          };//引脚初始化数组
+     20          /*******************************************************************************
+     21          *  函数名称：SPI_Master_Init (SPIn spin,uint32_t BaudRate,FirstBit firstbit, SPI_STE_Mode spistemode,SPI_CLK_Mode spiclkmode)
+     22          *  功能说明：SPI初始化
+     23          *  参数说明：SPIn spin                  :SPI模块号
+     24                       uint32_t BaudRate          :传输波特率
+     25                       SPI_FirstBit firstbit      :先发送高位或低位数据
+     26                       SPI_STE_Mode spistemode    :STE模式
+     27                       SPI_CLK_Mode spiclkmode    :SPI时钟模式
+     28          *  函数返回：无
+     29          *  使用例程：SPI_Master_Init(SPI2,10000000,MSB_First,SPI_STE_None,SPI_CLK_Mode_4); //初始化SPI模块，波特率为10000000，先发送高位数据，STE信号屏蔽，时钟线模式4
+     30          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     31          void SPI_Master_Init (SPIn spin,uint32_t BaudRate,SPI_FirstBit firstbit, SPI_STE_Mode spistemode,SPI_CLK_Mode spiclkmode)
+   \                     SPI_Master_Init:
+     32          {
+   \   000000   7B14         PUSHM.A #0x8, R11
+   \   000002   F103         SUBA    #0x2, SP
+   \   000004   4A4C         MOV.B   R12, R10
+   \   000006   444D         MOV.B   R13, R4
+     33            WordType BR;
+     34            BR.Word = g_sClock.SMCLK.nHZ/BaudRate;        //求取波特率所需的分频系数
+   \   000008   ....1C42.... MOVX.W  &g_sClock + 12, R12
+   \   00000E   ....1D42.... MOVX.W  &g_sClock + 14, R13
+   \   000014   ........     CALLA   #?DivMod32u
+   \   000018   814C0000     MOV.W   R12, 0(SP)
+     35            if(spistemode != SPI_STE_None)
+   \   00001C   084A         MOV.W   R10, R8
+   \   00001E   0858         RLA.W   R8
+   \   000020   0858         RLA.W   R8
+   \   000022   0858         RLA.W   R8
+   \   000024   ........     MOVA    #GPIO_MultiBits_Init, R9
+   \   000028   36400001     MOV.W   #0x100, R6
+   \   00002C   57412600     MOV.B   0x26(SP), R7
+   \   000030   4793         CMP.B   #0x0, R7
+   \   000032   0B24         JEQ     ??SPI_Master_Init_6
+     36            {
+     37              GPIO_Init(SPI_PIN[spin].STE_PIN.Port,SPI_PIN[spin].STE_PIN.Pin,SEL);     //片选信号引脚设为第二功能
+   \   000034   0E46         MOV.W   R6, R14
+   \   000036   1D43         MOV.W   #0x1, R13
+   \   000038   ....5F48.... MOVX.B  SPI_PIN + 1(R8), R15
+   \   00003E   ........     CALLA   #?Subroutine1
+     38            }
+   \                     ??CrossCallReturnLabel_3:
+   \   000042   ....5C48.... MOVX.B  SPI_PIN(R8), R12
+   \   000048   4913         CALLA   R9
+     39            GPIO_Init(SPI_PIN[spin].SIMO_PIN.Port,SPI_PIN[spin].SIMO_PIN.Pin,SEL);     //主输出从输入信号引脚设为第二功能
+   \                     ??SPI_Master_Init_6:
+   \   00004A   0E46         MOV.W   R6, R14
+   \   00004C   1D43         MOV.W   #0x1, R13
+   \   00004E   ....5F48.... MOVX.B  SPI_PIN + 3(R8), R15
+   \   000054   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_4:
+   \   000058   ....5C48.... MOVX.B  SPI_PIN + 2(R8), R12
+   \   00005E   4913         CALLA   R9
+     40            GPIO_Init(SPI_PIN[spin].SOMI_PIN.Port,SPI_PIN[spin].SOMI_PIN.Pin,SEL);     //主输入从输出信号引脚设为第二功能
+   \   000060   0E46         MOV.W   R6, R14
+   \   000062   1D43         MOV.W   #0x1, R13
+   \   000064   ....5F48.... MOVX.B  SPI_PIN + 5(R8), R15
+   \   00006A   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_5:
+   \   00006E   ....5C48.... MOVX.B  SPI_PIN + 4(R8), R12
+   \   000074   4913         CALLA   R9
+     41            GPIO_Init(SPI_PIN[spin].CLK_PIN.Port,SPI_PIN[spin].CLK_PIN.Pin,SEL);       //时钟信号引脚设为第二功能
+   \   000076   0E46         MOV.W   R6, R14
+   \   000078   1D43         MOV.W   #0x1, R13
+   \   00007A   ....5F48.... MOVX.B  SPI_PIN + 7(R8), R15
+   \   000080   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_6:
+   \   000084   ....5C48.... MOVX.B  SPI_PIN + 6(R8), R12
+   \   00008A   4913         CALLA   R9
+     42            
+     43            USCIX[spin]->CTL1 = UCSWRST; 
+   \   00008C   0F4A         MOV.W   R10, R15
+   \   00008E   4F06         RLAM.A  #0x2, R15
+   \   000090   ....5B4F.... MOVX.A  USCIX(R15), R11
+   \   000096   DB430000     MOV.B   #0x1, 0(R11)
+     44            USCIX[spin]->SYNC = BIT_SET;                             //同步模式
+   \   00009A   DBD30100     BIS.B   #0x1, 0x1(R11)
+     45            USCIX[spin]->MST = BIT_SET;                              //主机模式
+   \   00009E   FBD20100     BIS.B   #0x8, 0x1(R11)
+     46            USCIX[spin]->MODE = spistemode;                      //片选信号设置
+   \   0000A2   4757         RLA.B   R7
+   \   0000A4   77F00600     AND.B   #0x6, R7
+   \   0000A8   5E4B0100     MOV.B   0x1(R11), R14
+   \   0000AC   7EF0F900     AND.B   #0xf9, R14
+   \   0000B0   4ED7         BIS.B   R7, R14
+   \   0000B2   CB4E0100     MOV.B   R14, 0x1(R11)
+     47            USCIX[spin]->CKMODE = spiclkmode;                    //时钟线模式设置
+   \   0000B6   5E412800     MOV.B   0x28(SP), R14
+   \   0000BA   5E0E         RLAM.W  #0x4, R14
+   \   0000BC   5E06         RLAM.W  #0x2, R14
+   \   0000BE   5F4B0100     MOV.B   0x1(R11), R15
+   \   0000C2   7FF03F00     AND.B   #0x3f, R15
+   \   0000C6   4FDE         BIS.B   R14, R15
+   \   0000C8   CB4F0100     MOV.B   R15, 0x1(R11)
+     48            USCIX[spin]->MSB = firstbit;                         //发送首位设置
+   \   0000CC   54B3         BIT.B   #0x1, R4
+   \   0000CE   0420         JNE     ??SPI_Master_Init_0
+   \   0000D0   FBC020000100 BIC.B   #0x20, 0x1(R11)
+   \   0000D6   033C         JMP     ??SPI_Master_Init_5
+   \                     ??SPI_Master_Init_0:
+   \   0000D8   FBD020000100 BIS.B   #0x20, 0x1(R11)
+     49            
+     50            USCIX[spin]->SSEL= USCI_SSEL__SMCLK;                 //时钟源设置
+   \                     ??SPI_Master_Init_5:
+   \   0000DE   6E4B         MOV.B   @R11, R14
+   \   0000E0   7EF03F00     AND.B   #0x3f, R14
+   \   0000E4   7ED08000     BIS.B   #0x80, R14
+   \   0000E8   CB4E0000     MOV.B   R14, 0(R11)
+     51            
+     52            USCIX[spin]->BRW = BR.Word;                          //BRW写1与写0发现波特率没有区别
+   \   0000EC   AB410600     MOV.W   @SP, 0x6(R11)
+     53            USCIX[spin]->CTL1 &=~ UCSWRST; 
+   \   0000F0   DBC30000     BIC.B   #0x1, 0(R11)
+     54            
+     55            USCIX[spin]->IE = 0u;                                         //关闭所有中断
+   \   0000F4   CB431C00     MOV.B   #0x0, 0x1c(R11)
+     56            USCIX[spin]->RXIFG = RESET;                                   //清除接收数据标志
+   \   0000F8   DBC31D00     BIC.B   #0x1, 0x1d(R11)
+     57            USCIX[spin]->TXIFG = BIT_SET;                                     //置位发送缓冲区为空标志
+   \   0000FC   EBD31D00     BIS.B   #0x2, 0x1d(R11)
+     58          }
+   \   000100   E103         ADDA    #0x2, SP
+   \   000102   7416         POPM.A  #0x8, R11
+   \   000104   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine1:
+   \   000000   5F83         SUB.B   #0x1, R15
+   \   000002   0230         JN      ??SPI_Master_Init_1
+   \   000004                RPT     R15
+   \   000004   CF180D5D     RLAX.W  R13
+   \                     ??SPI_Master_Init_1:
+   \   000008   1001         RETA
+     59          /*******************************************************************************
+     60          函数名称：SPI_SetBaudRate (SPIn spin, uint32_t BaudRate)     
+     61          功能说明：设置SPI波特率
+     62          参数说明：SPIn spin                  :SPI模块号
+     63                    uint32_t BaudRate            :传输波特率
+     64          函数返回：无
+     65          *******************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     66          void  SPI_SetBaudRate (SPIn spin, uint32_t BaudRate)                  
+   \                     SPI_SetBaudRate:
+     67          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   4D4C         MOV.B   R12, R13
+     68            USCIX[spin]->CTL1 = UCSSEL__SMCLK + UCSWRST;                //设置时钟源
+   \   000004   4D06         RLAM.A  #0x2, R13
+   \   000006   ....5A4D.... MOVX.A  USCIX(R13), R10
+   \   00000C   FA4081000000 MOV.B   #0x81, 0(R10)
+     69           
+     70            USCIX[spin]->BRW =(uint16_t)g_sClock.SMCLK.nHZ/BaudRate;                                 //设置波特率
+   \   000012   ....1C42.... MOVX.W  &g_sClock + 12, R12
+   \   000018   0D43         MOV.W   #0x0, R13
+   \   00001A   ........     CALLA   #?DivMod32u
+   \   00001E   8A4C0600     MOV.W   R12, 0x6(R10)
+     71          
+     72            USCIX[spin]->CTL1 &= ~UCSWRST;      
+   \   000022   DAC30000     BIC.B   #0x1, 0(R10)
+     73          }
+   \   000026   0A16         POPM.A  #0x1, R10
+   \   000028   1001         RETA
+     74          /*******************************************************************************
+     75          *  函数名称：SPI_SendReadByte(SPIn spin,uint8_t data)
+     76          *  功能说明：SPI发送并接收一字节数据，发送的同时一定会接收数据
+     77          *  参数说明：SPIn spin :SPI模块号
+     78                       uint8_t data:要发送的数据
+     79          *  函数返回：读取到的数据
+     80          *  使用示例：SPI_SendReadByte(SPIn spin,uint8_t data)
+     81          *  注意：不提供片选信号，需要自己使用IO口模拟CS片选信号
+     82          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     83          uint8_t SPI_SendReadByte(SPIn spin,uint8_t data)
+   \                     SPI_SendReadByte:
+     84          {
+   \   000000   ........     CALLA   #?Subroutine0
+     85            while(USCIX[spin]->UC_BUSY == BIT_SET);                   //判断SPIn硬件是否忙
+   \                     ??SPI_SendReadByte_0:
+   \   000004   DFB30A00     BIT.B   #0x1, 0xa(R15)
+   \   000008   FD23         JNE     ??SPI_SendReadByte_0
+     86            USCIX[spin]->TXBUF = data;                            // 写入要发送的数据
+   \   00000A   CF4D0E00     MOV.B   R13, 0xe(R15)
+     87            while(USCIX[spin]->UC_BUSY == BIT_SET);                   //判断SPIn硬件是否忙
+   \                     ??SPI_SendReadByte_1:
+   \   00000E   DFB30A00     BIT.B   #0x1, 0xa(R15)
+   \   000012   FD23         JNE     ??SPI_SendReadByte_1
+     88            return USCIX[spin]->RXBUF;                            //返回接收到的数据,读取RXBUF后RXIFG位自动清除
+   \   000014   5C4F0C00     MOV.B   0xc(R15), R12
+   \   000018   1001         RETA
+     89          }
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine0:
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C06         RLAM.A  #0x2, R12
+   \   000004   ....5F4C.... MOVX.A  USCIX(R12), R15
+   \   00000A   1001         RETA
+     90          /*******************************************************************************
+     91          *  函数名称：SPI_SendReadString(SPIn spin,char * SendData,char * ReceiveData,uint16_t Length)
+     92          *  功能说明：SPIn发送并接收多字节数据
+     93          *  参数说明：SPIn spin          :SPI模块号
+     94                       char * SendData    :发送数据地址
+     95                       char * ReceiveData :接收数据缓存地址
+     96                       uint16_t Length      :要发送数据字节数
+     97          *  函数返回：无
+     98          *  使用示例：char SendData[20] = "Hello!";
+     99                       char ReceiveData[20];
+    100                       SPI_SendReadString(SPI0,SendData,ReceiveData,strlen("Hello!")); //SPI0发送字符串
+    101          *  注意：不提供片选信号，需要自己使用IO口模拟CS片选信号
+    102          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    103          void SPI_SendReadString(SPIn spin,char * SendData,char * ReceiveData,uint16_t Length)
+   \                     SPI_SendReadString:
+    104          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   0F93         CMP.W   #0x0, R15
+   \   000004   1624         JEQ     ??SPI_SendReadString_3
+   \   000006   4C4C         MOV.B   R12, R12
+   \   000008   4C06         RLAM.A  #0x2, R12
+   \   00000A   ....5C4C.... MOVX.A  USCIX(R12), R12
+    105            while(Length--)
+    106            {
+    107              *ReceiveData++=SPI_SendReadByte(spin, *SendData++);
+   \                     ??SPI_SendReadString_2:
+   \   000010   7A4D         MOV.B   @R13+, R10
+   \                     ??SPI_SendReadString_0:
+   \   000012   DCB30A00     BIT.B   #0x1, 0xa(R12)
+   \   000016   FD23         JNE     ??SPI_SendReadString_0
+   \   000018   CC4A0E00     MOV.B   R10, 0xe(R12)
+   \                     ??SPI_SendReadString_1:
+   \   00001C   DCB30A00     BIT.B   #0x1, 0xa(R12)
+   \   000020   FD23         JNE     ??SPI_SendReadString_1
+   \   000022   5A4C0C00     MOV.B   0xc(R12), R10
+    108            }
+   \   000026   CE4A0000     MOV.B   R10, 0(R14)
+   \   00002A   AE000100     ADDA    #0x1, R14
+   \   00002E   3F53         ADD.W   #0xffff, R15
+   \   000030   EF23         JNE     ??SPI_SendReadString_2
+    109          }
+   \                     ??SPI_SendReadString_3:
+   \   000032   0A16         POPM.A  #0x1, R10
+   \   000034   1001         RETA
+    110          /*******************************************************************************
+    111          *  函数名称：SPI_ITConfig    (SPIn spin,SPI_IRQn irqn,STATUS ITState)
+    112          *  功能说明：设置SPI某一中断是否使能
+    113          *  参数说明：SPIn spin          :SPI模块号
+    114                       SPI_IRQn irqn      :中断事件选择
+    115                       STATUS ITState     :中断是否使能
+    116          *  函数返回：无
+    117          *  使用示例：SPI_ITConfig    (SPI1,SPI_RX_IRQn,ENABLE);  //使能SPI1的接收中断
+    118          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    119          void  SPI_ITConfig    (SPIn spin,SPI_IRQn irqn,STATUS ITState)
+   \                     SPI_ITConfig:
+    120          {
+    121            if(ITState != DISABLE)
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_0:
+   \   000004   4E93         CMP.B   #0x0, R14
+   \   000006   0324         JEQ     ??SPI_ITConfig_0
+    122            {
+    123              USCIX[spin]->IE |= irqn;
+   \   000008   CFDD1C00     BIS.B   R13, 0x1c(R15)
+   \   00000C   1001         RETA
+    124            }
+    125            else
+    126            {
+    127              USCIX[spin]->IE &=~irqn;
+   \                     ??SPI_ITConfig_0:
+   \   00000E   CFCD1C00     BIC.B   R13, 0x1c(R15)
+    128            }
+    129          }
+   \   000012   1001         RETA
+    130          /*******************************************************************************
+    131          *  函数名称：SPI_GetITStatus(SPIn spin,SPI_IRQn irqn)
+    132          *  功能说明：获取SPI中断标志位状态
+    133          *  参数说明：SPIn spin          :SPI模块号
+    134                       SPI_IRQn irqn      :中断事件选择
+    135          *  函数返回：STATUS :TRUE-中断事件发生 FALSE-中断事件未发生
+    136          *  使用示例：if(TRUE == SPI_GetITStatus(SPI1,SPI_RX_IRQn)){...}  //判断SPI1接收中断事件是否发生
+    137          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    138          STATUS  SPI_GetITStatus(SPIn spin,SPI_IRQn irqn)
+   \                     SPI_GetITStatus:
+    139          {
+    140            return ((USCIX[spin]->IFG & irqn) ? TRUE : FALSE);
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_1:
+   \   000004   5E4F1D00     MOV.B   0x1d(R15), R14
+   \   000008   4EBD         BIT.B   R13, R14
+   \   00000A   0220         JNE     ??SPI_GetITStatus_0
+   \   00000C   4C43         MOV.B   #0x0, R12
+   \   00000E   1001         RETA
+   \                     ??SPI_GetITStatus_0:
+   \   000010   5C43         MOV.B   #0x1, R12
+   \   000012   1001         RETA
+    141          }
+    142          /*******************************************************************************
+    143          *  函数名称：SPI_ClearITPendingBit(SPIn spin,SPI_IRQn irqn)
+    144          *  功能说明：SPIn清除中断标志位状态
+    145          *  参数说明：SPIn spin          :SPI模块号
+    146                       SPI_IRQn irqn      :中断事件选择
+    147          *  函数返回：无
+    148          *  使用示例：SPI_ClearITPendingBit(SPI1,SPI_RX_IRQn);  //清除SPI1接收中断标志
+    149          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    150          void   SPI_ClearITPendingBit(SPIn spin,SPI_IRQn irqn)
+   \                     SPI_ClearITPendingBit:
+    151          {
+    152             USCIX[spin]->IFG &=~ irqn;
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_2:
+   \   000004   CFCD1D00     BIC.B   R13, 0x1d(R15)
+    153          }
+   \   000008   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   SPI_ClearITPendingBit
+      4   SPI_GetITStatus
+      4   SPI_ITConfig
+     38   SPI_Master_Init
+       38   -> GPIO_MultiBits_Init
+       38 ?DivMod32u
+      4   SPI_SendReadByte
+      8   SPI_SendReadString
+      8   SPI_SetBaudRate
+        8 ?DivMod32u
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?Subroutine0
+      10  ?Subroutine1
+      10  SPI_ClearITPendingBit
+      20  SPI_GetITStatus
+      20  SPI_ITConfig
+     262  SPI_Master_Init
+      32  SPI_PIN
+      26  SPI_SendReadByte
+      54  SPI_SendReadString
+      42  SPI_SetBaudRate
+      16  USCIX
+
+ 
+ 456 bytes in segment CODE
+  48 bytes in segment DATA20_C
+ 
+ 456 bytes of CODE  memory
+  48 bytes of CONST memory
+
+Errors: none
+Warnings: none

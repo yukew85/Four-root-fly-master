@@ -1,0 +1,1378 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:40
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\filter.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWCF26.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\filter.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\filter.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME filter
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?DivMod32u
+        EXTERN _Mul32f
+        EXTERN _Add32f
+        EXTERN _Sub32f
+        EXTERN _Div32f
+        EXTERN ?FLT_LT
+        EXTERN ?DivMod8u
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC AntiPulse_MovingAverage_Filter
+        PUBLIC IIR_I_Filter
+        PUBLIC LPF_1_Filter_1
+        PUBLIC LPF_1_Filter_2
+        PUBLIC MovMiddle
+        PUBLIC MovingAverage_Filter
+        PUBLIC Moving_Median
+        PUBLIC med_fil_cnt
+        PUBLIC med_filter_out
+        PUBLIC med_filter_tmp
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN memcpy
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\filter.c
+//    1 
+//    2 #include <string.h>
+//    3 #include "filter.h"
+//    4 #include <math.h>
+//    5 #include "myMath.h"
+//    6  
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//    7 int16_t MovMiddle(int16_t input)
+MovMiddle:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function MovMiddle
+//    8 {	
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        SUBA    #0xa, SP
+          CFI CFA SP+30
+//    9 	uint8_t i,j;
+//   10 	const uint8_t MOV_MIDDLE_NUM = 5;
+        MOV.B   #0x5, R10
+//   11 	static int16_t middle[5]={0};
+//   12 	int16_t middle_t[5];
+//   13 //	MOV_MIDDLE_NUM = pidHeightRate.ki;
+//   14 	for(i=1;i<MOV_MIDDLE_NUM;i++)
+        MOV.B   #0x1, R14
+        JMP     ??MovMiddle_3
+//   15 	{
+//   16 		 middle[i-1] =  middle[i];
+??MovMiddle_0:
+        MOV.B   R14, R13
+        ADDA    R13, R13
+        MOV.B   R14, R15
+        ADD.W   #0xffff, R15
+        ADDA    R15, R15
+        MOVX.W  ??middle(R13), ??middle(R15)
+//   17 	}
+        ADD.B   #0x1, R14
+??MovMiddle_3:
+        CMP.B   R10, R14
+        JNC     ??MovMiddle_0
+//   18 	middle[MOV_MIDDLE_NUM-1] = input;
+        MOV.B   R10, R15
+        ADD.W   #0xffff, R15
+        ADDA    R15, R15
+        MOVX.W  R12, ??middle(R15)
+//   19 	memcpy(middle_t,middle,MOV_MIDDLE_NUM*sizeof(uint32_t));
+        MOV.B   R10, R14
+        MOV.W   #0x0, R15
+        RLA.W   R14
+        RLC.W   R15
+        RLA.W   R14
+        RLC.W   R15
+        MOVA    #??middle, R13
+        MOVA    SP, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   20 	for(i=0;i<MOV_MIDDLE_NUM-1;i++)
+        MOV.B   #0x0, R14
+        JMP     ??MovMiddle_4
+//   21 	{
+//   22 		for(j=i+1;j<MOV_MIDDLE_NUM;j++)
+//   23 		{
+//   24 			if(middle_t[i] > middle_t[j])
+??MovMiddle_1:
+        MOVA    SP, R11
+        MOV.B   R15, R13
+        ADDA    R13, R13
+        ADDA    R11, R13
+        MOVA    SP, R11
+        MOV.B   R14, R12
+        ADDA    R12, R12
+        ADDA    R11, R12
+        CMP.W   @R12, 0(R13)
+        JGE     ??MovMiddle_5
+//   25 			{
+//   26 				middle_t[i] ^= middle_t[j];
+        MOVA    SP, R11
+        MOV.B   R14, R13
+        ADDA    R13, R13
+        ADDA    R11, R13
+        MOVA    SP, R11
+        MOV.B   R15, R8
+        ADDA    R8, R8
+        ADDA    R11, R8
+        XOR.W   @R8, 0(R13)
+//   27 				middle_t[j] ^= middle_t[i];
+        MOVA    SP, R11
+        MOV.B   R15, R13
+        ADDA    R13, R13
+        ADDA    R11, R13
+        MOVA    SP, R11
+        MOV.B   R14, R8
+        ADDA    R8, R8
+        ADDA    R11, R8
+        XOR.W   @R8, 0(R13)
+//   28 				middle_t[i] ^= middle_t[j];
+        MOVA    SP, R11
+        MOV.B   R14, R13
+        ADDA    R13, R13
+        ADDA    R11, R13
+        MOVA    SP, R11
+        MOV.B   R15, R8
+        ADDA    R8, R8
+        ADDA    R11, R8
+        XOR.W   @R8, 0(R13)
+//   29 			}
+//   30 		}
+??MovMiddle_5:
+        ADD.B   #0x1, R15
+??MovMiddle_2:
+        CMP.B   R10, R15
+        JNC     ??MovMiddle_1
+        ADD.B   #0x1, R14
+??MovMiddle_4:
+        MOV.B   R14, R14
+        MOV.B   R10, R15
+        ADD.W   #0xffff, R15
+        CMP.W   R15, R14
+        JGE     ??MovMiddle_6
+        MOV.B   R14, R15
+        ADD.B   #0x1, R15
+        JMP     ??MovMiddle_2
+//   31 	}
+//   32 	return middle_t[(MOV_MIDDLE_NUM+1)>>1];
+??MovMiddle_6:
+        MOVA    SP, R15
+        MOV.B   R10, R10
+        ADD.W   #0x1, R10
+        RRA.W   R10
+        ADDA    R10, R10
+        ADDA    R15, R10
+        MOV.W   @R10, R12
+        ADDA    #0xa, SP
+          CFI CFA SP+20
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//   33 }	
+          CFI EndBlock cfiBlock0
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??middle:
+        DS8 10
+//   34 
+//   35 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   36 uint16_t AntiPulse_MovingAverage_Filter(MovAverage *_MovAverage)
+AntiPulse_MovingAverage_Filter:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function AntiPulse_MovingAverage_Filter
+//   37 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOVA    R12, R14
+//   38 		uint8_t i;	
+//   39 		uint32_t sum=0;
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+//   40 		uint16_t max=0;
+        MOV.W   #0x0, R8
+//   41 		uint16_t min=0xffff;
+        MOV.W   #0xffff, R10
+//   42 	
+//   43 			_MovAverage->average[_MovAverage->cnt] = _MovAverage->input;	
+        MOVA    0x4(R14), R11
+        MOV.W   @R14, R15
+        ADDA    R15, R15
+        ADDA    R11, R15
+        MOV.W   0x2(R14), 0(R15)
+//   44 			_MovAverage->cnt++;			
+        ADD.W   #0x1, 0(R14)
+//   45 			if(_MovAverage->cnt==_MovAverage->max_cnt)
+        MOV.B   0x8(R14), R15
+        MOV.B   R15, R15
+        CMP.W   R15, 0(R14)
+        JNE     ??AntiPulse_MovingAverage_Filter_3
+//   46 			{
+//   47 				_MovAverage->cnt=0;
+        MOV.W   #0x0, 0(R14)
+//   48 			}	
+//   49 			for(i=0;i<_MovAverage->max_cnt;i++)
+??AntiPulse_MovingAverage_Filter_3:
+        MOV.B   #0x0, R15
+        JMP     ??AntiPulse_MovingAverage_Filter_2
+//   50 			{
+//   51 					if(_MovAverage->average[i]>max)
+//   52 							max = _MovAverage->average[i];
+//   53 					else if(_MovAverage->average[i]<min)
+??AntiPulse_MovingAverage_Filter_0:
+        MOVA    0x4(R14), R11
+        MOV.B   R15, R7
+        ADDA    R7, R7
+        ADDA    R11, R7
+        CMP.W   R10, 0(R7)
+        JC      ??AntiPulse_MovingAverage_Filter_1
+//   54 							min = _MovAverage->average[i];
+        MOVA    0x4(R14), R11
+        MOV.B   R15, R7
+        ADDA    R7, R7
+        ADDA    R11, R7
+        MOV.W   @R7, R10
+//   55 					sum += _MovAverage->average[i];
+??AntiPulse_MovingAverage_Filter_1:
+        MOVA    0x4(R14), R11
+        MOV.B   R15, R7
+        ADDA    R7, R7
+        ADDA    R11, R7
+        MOV.W   @R7, R6
+        MOV.W   #0x0, R7
+        ADD.W   R6, R12
+        ADDC.W  R7, R13
+        ADD.B   #0x1, R15
+??AntiPulse_MovingAverage_Filter_2:
+        CMP.B   0x8(R14), R15
+        JC      ??AntiPulse_MovingAverage_Filter_4
+        MOVA    0x4(R14), R11
+        MOV.B   R15, R7
+        ADDA    R7, R7
+        ADDA    R11, R7
+        CMP.W   @R7, R8
+        JC      ??AntiPulse_MovingAverage_Filter_0
+        MOVA    0x4(R14), R11
+        MOV.B   R15, R7
+        ADDA    R7, R7
+        ADDA    R11, R7
+        MOV.W   @R7, R8
+        JMP     ??AntiPulse_MovingAverage_Filter_1
+//   56 			}
+//   57 		return ((sum-max-min)/(_MovAverage->max_cnt-2));                                    
+??AntiPulse_MovingAverage_Filter_4:
+        MOV.W   #0x0, R9
+        SUB.W   R8, R12
+        SUBC.W  R9, R13
+        MOV.W   #0x0, R11
+        SUB.W   R10, R12
+        SUBC.W  R11, R13
+        MOV.B   0x8(R14), R14
+        MOV.B   R14, R14
+        ADD.W   #0xfffe, R14
+        MOV.W   R14, R15
+        RLA.W   R15
+        SUBC.W  R15, R15
+        XOR.W   #0xffff, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//   58 }
+          CFI EndBlock cfiBlock1
+//   59 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   60 uint16_t MovingAverage_Filter(MovAverage *_MovAverage)
+MovingAverage_Filter:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function MovingAverage_Filter
+//   61 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOVA    R12, R14
+//   62 		uint8_t i;	
+//   63 		uint32_t sum=0;
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+//   64 
+//   65 			_MovAverage->average[_MovAverage->cnt] = _MovAverage->input;	
+        MOVA    0x4(R14), R11
+        MOV.W   @R14, R15
+        ADDA    R15, R15
+        ADDA    R11, R15
+        MOV.W   0x2(R14), 0(R15)
+//   66 			_MovAverage->cnt++;			
+        ADD.W   #0x1, 0(R14)
+//   67 			if(_MovAverage->cnt==_MovAverage->max_cnt)
+        MOV.B   0x8(R14), R15
+        MOV.B   R15, R15
+        CMP.W   R15, 0(R14)
+        JNE     ??MovingAverage_Filter_2
+//   68 			{
+//   69 				_MovAverage->cnt=0;
+        MOV.W   #0x0, 0(R14)
+//   70 			}	
+//   71 			for(i=0;i<_MovAverage->max_cnt;i++)
+??MovingAverage_Filter_2:
+        MOV.B   #0x0, R15
+        JMP     ??MovingAverage_Filter_1
+//   72 			{
+//   73 					sum += _MovAverage->average[i];
+??MovingAverage_Filter_0:
+        MOVA    0x4(R14), R11
+        MOV.B   R15, R10
+        ADDA    R10, R10
+        ADDA    R11, R10
+        MOV.W   @R10, R10
+        MOV.W   #0x0, R11
+        ADD.W   R10, R12
+        ADDC.W  R11, R13
+//   74 			}
+        ADD.B   #0x1, R15
+??MovingAverage_Filter_1:
+        CMP.B   0x8(R14), R15
+        JNC     ??MovingAverage_Filter_0
+//   75 		return (sum/_MovAverage->max_cnt);                                    
+        MOV.B   0x8(R14), R14
+        MOV.B   R14, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//   76 }
+          CFI EndBlock cfiBlock2
+//   77 
+//   78 /*====================================================================================================*/
+//   79 /*====================================================================================================*
+//   80 ** 函数名称: IIR_I_Filter
+//   81 
+//   82 **           LpfFactor
+//   83 ** 输    出: OutData         
+//   84 ** 说    明: 无
+//   85 ** 函数原型: y(n) = b0*x(n) + b1*x(n-1) + b2*x(n-2) -
+//   86                     a1*y(n-1) - a2*y(n-2)
+//   87 **====================================================================================================*/
+//   88 /*====================================================================================================*/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   89 float IIR_I_Filter(float InputData, float *x, float *y,  const float *b, uint8_t nb, const float *a, uint8_t na)
+IIR_I_Filter:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function IIR_I_Filter
+//   90 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        MOVA    R14, R4
+        MOVA    R15, R10
+//   91   float z1,z2=0;
+        MOV.W   #0x0, R8
+        MOV.W   #0x0, R9
+//   92   int16_t i;
+//   93 	
+//   94   for(i=nb-1; i>0; i--)
+        MOV.B   0x28(SP), R11
+        MOV.B   R11, R11
+        ADD.W   #0xffff, R11
+        JMP     ??IIR_I_Filter_2
+//   95   {
+//   96     x[i]=x[i-1];
+??IIR_I_Filter_0:
+        MOV.W   R11, R15
+        ADD.W   #0xffff, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R4, R15
+        MOV.W   R11, R7
+        RLAM.A  #0x4, R7
+        RRAM.A  #0x4, R7
+        RLAM.A  #0x2, R7
+        ADDA    R4, R7
+        MOV.W   @R15, 0(R7)
+        MOV.W   0x2(R15), 0x2(R7)
+//   97 		y[i]=y[i-1];
+        MOV.W   R11, R15
+        ADD.W   #0xffff, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R10, R15
+        MOV.W   R11, R7
+        RLAM.A  #0x4, R7
+        RRAM.A  #0x4, R7
+        RLAM.A  #0x2, R7
+        ADDA    R10, R7
+        MOV.W   @R15, 0(R7)
+        MOV.W   0x2(R15), 0x2(R7)
+//   98   }
+        ADD.W   #0xffff, R11
+??IIR_I_Filter_2:
+        CMP.W   #0x1, R11
+        JGE     ??IIR_I_Filter_0
+//   99   x[0] = InputData;
+        MOV.W   R12, 0(R4)
+        MOV.W   R13, 0x2(R4)
+        MOVA    0x24(SP), R5
+//  100 	z1 = x[0] * b[0];
+        MOV.W   @R4, R12
+        MOV.W   0x2(R4), R13
+        MOV.W   @R5, R14
+        MOV.W   0x2(R5), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  101   for(i=1; i<nb; i++)
+        MOV.W   #0x1, R11
+        JMP     ??IIR_I_Filter_3
+//  102   {
+//  103     z1 += x[i]*b[i];
+??IIR_I_Filter_1:
+        MOV.W   R11, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R4, R15
+        MOV.W   R11, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RLAM.A  #0x2, R14
+        ADDA    R5, R14
+        MOV.W   @R15, R12
+        MOV.W   0x2(R15), R13
+        MOVA    R14, R15
+        MOV.W   @R15, R14
+        MOV.W   0x2(R15), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  104 		z2 += y[i]*a[i];
+        MOV.W   R11, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R10, R15
+        MOVA    0x2a(SP), R13
+        MOV.W   R11, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RLAM.A  #0x2, R14
+        ADDA    R13, R14
+        MOV.W   @R15, R12
+        MOV.W   0x2(R15), R13
+        MOVA    R14, R15
+        MOV.W   @R15, R14
+        MOV.W   0x2(R15), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  105   }
+        ADD.W   #0x1, R11
+??IIR_I_Filter_3:
+        MOV.B   0x28(SP), R15
+        MOV.B   R15, R15
+        CMP.W   R15, R11
+        JL      ??IIR_I_Filter_1
+//  106   y[0] = z1 - z2; 
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, 0(R10)
+        MOV.W   R13, 0x2(R10)
+//  107   return y[0];
+        MOV.W   @R10+, R12
+        MOV.W   @R10+, R13
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  108 }
+          CFI EndBlock cfiBlock3
+//  109 /*====================================================================================================*/
+//  110 /*====================================================================================================*
+//  111 **函数 : LPF_1st
+//  112 **功能 : 一阶滞后滤波
+//  113 **输入 :  
+//  114 **輸出 : None
+//  115 **备注 : None
+//  116 **====================================================================================================*/
+//  117 /*====================================================================================================*/
+//  118 //model 1:
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  119 float LPF_1_Filter_1(Filter_LPF_1 *LPF_1)
+LPF_1_Filter_1:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function LPF_1_Filter_1
+//  120 {
+        PUSHM.A #0x3, R10
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+16
+        MOVA    R12, R10
+//  121 	return LPF_1->old_data * (1 - LPF_1->factor) + LPF_1->new_data *  LPF_1->factor;
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   0x8(R10), R14
+        MOV.W   0xa(R10), R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   @R10, R14
+        MOV.W   0x2(R10), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   0x4(R10), R12
+        MOV.W   0x6(R10), R13
+        MOV.W   0x8(R10), R14
+        MOV.W   0xa(R10), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        POPM.A  #0x3, R10
+          CFI R10H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  122 }
+          CFI EndBlock cfiBlock4
+//  123 //model 2:
+//  124 //_LPF_1->factor = cut_frequent
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  125 float LPF_1_Filter_2(Filter_LPF_1 *LPF_1,float dt)
+LPF_1_Filter_2:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function LPF_1_Filter_2
+//  126 {
+        PUSHM.A #0x5, R10
+          CFI R6L Frame(CFA, -24)
+          CFI R6H Frame(CFA, -22)
+          CFI R7L Frame(CFA, -20)
+          CFI R7H Frame(CFA, -18)
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+24
+        MOVA    R12, R10
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//  127 	 return LPF_1->old_data + (dt /( 1 / ( 2 * PI * LPF_1->factor ) + dt)) * (LPF_1->new_data - LPF_1->old_data);    
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOV.W   0x8(R10), R12
+        MOV.W   0xa(R10), R13
+        MOV.W   #0xfda, R14
+        MOV.W   #0x40c9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   0x4(R10), R12
+        MOV.W   0x6(R10), R13
+        MOV.W   @R10, R14
+        MOV.W   0x2(R10), R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   @R10+, R12
+        MOV.W   @R10+, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        POPM.A  #0x5, R10
+          CFI R10H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  128 }
+          CFI EndBlock cfiBlock5
+//  129 
+//  130 //======================================================================================================
+//  131 
+//  132 /*====================================================================================================*/
+//  133 /*====================================================================================================*
+//  134 **函数 : Moving_Median 
+//  135 **功能 : 中位值滤波法
+//  136 **輸出 : None
+//  137 **备注 : None
+//  138 **====================================================================================================*/
+//  139 /*====================================================================================================*/
+//  140 #define MED_WIDTH_NUM 11
+//  141 #define MED_FIL_ITEM  4
+//  142 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//  143 float med_filter_tmp[MED_FIL_ITEM][MED_WIDTH_NUM ];
+med_filter_tmp:
+        DS8 176
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//  144 float med_filter_out[MED_FIL_ITEM];
+med_filter_out:
+        DS8 16
+//  145 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//  146 uint8_t med_fil_cnt[MED_FIL_ITEM];
+med_fil_cnt:
+        DS8 4
+//  147 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  148 float Moving_Median(uint8_t item,uint8_t width_num,float in)
+Moving_Median:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function Moving_Median
+//  149 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        SUBA    #0x2c, SP
+          CFI CFA SP+72
+        MOV.B   R13, R11
+//  150 	uint8_t i,j;
+//  151 	float t;
+//  152 	float tmp[MED_WIDTH_NUM];
+//  153 	
+//  154 	if(item >= MED_FIL_ITEM || width_num >= MED_WIDTH_NUM )
+        CMP.B   #0x4, R12
+        JC      ??Moving_Median_6
+        CMP.B   #0xb, R11
+        JNC     ??Moving_Median_7
+//  155 	{
+//  156 		return 0;
+??Moving_Median_6:
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+        JMP     ??Moving_Median_3
+//  157 	}
+//  158 	else
+//  159 	{
+//  160 		if( ++med_fil_cnt[item] >= width_num )	
+??Moving_Median_7:
+        MOV.B   R12, R13
+        ADDX.B  #0x1, med_fil_cnt(R13)
+        MOV.B   R12, R13
+        CMPX.B  R11, med_fil_cnt(R13)
+        JNC     ??Moving_Median_8
+//  161 		{
+//  162 			med_fil_cnt[item] = 0;
+        MOV.B   R12, R13
+        MOVX.B  #0x0, med_fil_cnt(R13)
+//  163 		}
+//  164 		
+//  165 		med_filter_tmp[item][ med_fil_cnt[item] ] = in;
+??Moving_Median_8:
+        MOV.B   R12, R10
+        RLAM.A  #0x2, R10
+        MOVA    R10, R13
+        ADDA    R10, R10
+        ADDA    R10, R13
+        RLAM.A  #0x2, R10
+        ADDA    R13, R10
+        MOV.B   R12, R13
+        MOVX.B  med_fil_cnt(R13), R13
+        MOV.B   R13, R13
+        RLAM.A  #0x2, R13
+        MOVA    R13, R8
+        ADDA    R8, R10
+        MOVX.W  R14, med_filter_tmp(R10)
+        MOVX.W  R15, med_filter_tmp + 2(R10)
+//  166 		
+//  167 		for(i=0;i<width_num;i++)
+        MOV.B   #0x0, R8
+        JMP     ??Moving_Median_4
+//  168 		{
+//  169 			tmp[i] = med_filter_tmp[item][i];
+??Moving_Median_0:
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVA    R15, R14
+        ADDA    R15, R15
+        ADDA    R15, R14
+        RLAM.A  #0x2, R15
+        ADDA    R14, R15
+        MOV.B   R8, R14
+        RLAM.A  #0x2, R14
+        MOVA    R14, R13
+        ADDA    R13, R15
+        MOVA    SP, R14
+        MOV.B   R8, R13
+        RLAM.A  #0x2, R13
+        ADDA    R14, R13
+        MOVX.W  med_filter_tmp(R15), 0(R13)
+        MOVX.W  med_filter_tmp + 2(R15), 0x2(R13)
+//  170 		}
+        ADD.B   #0x1, R8
+??Moving_Median_4:
+        CMP.B   R11, R8
+        JNC     ??Moving_Median_0
+//  171 		
+//  172 		for(i=0;i<width_num-1;i++)
+        MOV.B   #0x0, R8
+        JMP     ??Moving_Median_5
+//  173 		{
+//  174 			for(j=0;j<(width_num-1-i);j++)
+//  175 			{
+//  176 				if(tmp[j] > tmp[j+1])
+??Moving_Median_1:
+        MOVA    SP, R14
+        MOV.B   R10, R15
+        ADD.W   #0x1, R15
+        RLAM.A  #0x2, R15
+        ADDA    R14, R15
+        MOV.W   @R15, R12
+        MOV.W   0x2(R15), R13
+        MOVA    SP, R15
+        MOV.B   R10, R14
+        RLAM.A  #0x2, R14
+        ADDA    R15, R14
+        MOVA    R14, R15
+        MOV.W   @R15, R14
+        MOV.W   0x2(R15), R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??Moving_Median_9
+//  177 				{
+//  178 					t = tmp[j];
+        MOVA    SP, R15
+        MOV.B   R10, R14
+        RLAM.A  #0x2, R14
+        ADDA    R15, R14
+        MOV.W   @R14, R12
+        MOV.W   0x2(R14), R13
+//  179 					tmp[j] = tmp[j+1];
+        MOVA    SP, R14
+        MOV.B   R10, R15
+        ADD.W   #0x1, R15
+        RLAM.A  #0x2, R15
+        ADDA    R14, R15
+        MOVA    SP, R14
+        MOV.B   R10, R9
+        RLAM.A  #0x2, R9
+        ADDA    R14, R9
+        MOV.W   @R15, 0(R9)
+        MOV.W   0x2(R15), 0x2(R9)
+//  180 					tmp[j+1] = t;
+        MOVA    SP, R14
+        MOV.B   R10, R15
+        ADD.W   #0x1, R15
+        RLAM.A  #0x2, R15
+        ADDA    R14, R15
+        MOV.W   R12, 0(R15)
+        MOV.W   R13, 0x2(R15)
+//  181 				}
+//  182 			}
+??Moving_Median_9:
+        ADD.B   #0x1, R10
+??Moving_Median_2:
+        MOV.B   R10, R10
+        MOV.B   R11, R15
+        ADD.W   #0xffff, R15
+        MOV.B   R8, R8
+        SUB.W   R8, R15
+        CMP.W   R15, R10
+        JL      ??Moving_Median_1
+        ADD.B   #0x1, R8
+??Moving_Median_5:
+        MOV.B   R8, R8
+        MOV.B   R11, R15
+        ADD.W   #0xffff, R15
+        CMP.W   R15, R8
+        JGE     ??Moving_Median_10
+        MOV.B   #0x0, R10
+        JMP     ??Moving_Median_2
+//  183 		}		
+//  184 		return ( tmp[(width_num/2)] );
+??Moving_Median_10:
+        MOVA    SP, R10
+        MOV.B   R11, R12
+        MOV.B   #0x2, R14
+          CFI FunCall ?DivMod8u
+        CALLA   #?DivMod8u
+        MOV.B   R12, R12
+        RLAM.A  #0x2, R12
+        ADDA    R10, R12
+        MOVA    R12, R13
+        MOV.W   @R13, R12
+        MOV.W   0x2(R13), R13
+??Moving_Median_3:
+        ADDA    #0x2c, SP
+          CFI CFA SP+28
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  185 	}
+//  186 }
+          CFI EndBlock cfiBlock6
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  187 //======================================================================================================
+//  188 /*====================================================================================================*/
+//  189 /*====================================================================================================*
+//  190 **函数 : LPF2pSetCutoffFreq_1 
+//  191 **功能 : 二阶低通滤波
+//  192 **输入 : sample_freq:采样率  cutoff_freq：截止频率（例：//截止频率(中心频率f0):30Hz 采样频率fs:333Hz)
+//  193 **輸出 : None
+//  194 **备注 : None
+//  195 **====================================================================================================*/
+//  196 /*====================================================================================================*/
+//  197 //static float           _cutoff_freq1; 
+//  198 //static float           _a11;
+//  199 //static float           _a21;
+//  200 //static float           _b01;
+//  201 //static float           _b11;
+//  202 //static float           _b21;
+//  203 //static float           _delay_element_11;        // buffered sample -1
+//  204 //static float           _delay_element_21;        // buffered sample -2
+//  205 //void LPF2pSetCutoffFreq_1(float sample_freq, float cutoff_freq)
+//  206 //{
+//  207 //		float fr =0;  
+//  208 //    float ohm =0;
+//  209 //    float c =0;
+//  210 //	
+//  211 //		fr= sample_freq/cutoff_freq;
+//  212 //		ohm=tanf(PI/fr);
+//  213 //		c=1.0f+2.0f*cosf(PI/4.0f)*ohm + ohm*ohm;
+//  214 //	
+//  215 //    _cutoff_freq1 = cutoff_freq;
+//  216 //    if (_cutoff_freq1 > 0.0f) 
+//  217 //		{
+//  218 //				_b01 = ohm*ohm/c;
+//  219 //				_b11 = 2.0f*_b01;
+//  220 //				_b21 = _b01;
+//  221 //				_a11 = 2.0f*(ohm*ohm-1.0f)/c;
+//  222 //				_a21 = (1.0f-2.0f*cosf(PI/4.0f)*ohm+ohm*ohm)/c;
+//  223 //		}
+//  224 //}
+//  225 
+//  226 /*====================================================================================================*/
+//  227 /*====================================================================================================*
+//  228 **函数 : LPF2pApply_1 
+//  229 **功能 : 二阶低通滤波
+//  230 **输入 : sample：滤波原数据
+//  231 **輸出 : 滤波后数据
+//  232 **备注 : None
+//  233 **====================================================================================================*/
+//  234 ///*====================================================================================================*/
+//  235 //float LPF2pApply_1(float sample)
+//  236 //{
+//  237 //	
+//  238 //		float delay_element_0 = 0, output=0;
+//  239 //    if (_cutoff_freq1 <= 0.0f) {
+//  240 //        // no filtering
+//  241 //        return sample;
+//  242 //    }
+//  243 //		else
+//  244 //		{
+//  245 //				delay_element_0 = sample - _delay_element_11 * _a11 - _delay_element_21 * _a21;
+//  246 //				// do the filtering
+//  247 //				if (isnan(delay_element_0) || isinf(delay_element_0)) {
+//  248 //						// don't allow bad values to propogate via the filter
+//  249 //						delay_element_0 = sample;
+//  250 //				}
+//  251 //				output = delay_element_0 * _b01 + _delay_element_11 * _b11 + _delay_element_21 * _b21;
+//  252 //				
+//  253 //				_delay_element_21 = _delay_element_11;
+//  254 //				_delay_element_11 = delay_element_0;
+//  255 
+//  256 //				// return the value.  Should be no need to check limits
+//  257 //				return output;
+//  258 //		}
+//  259 //}
+//  260 
+//  261 //static float           _cutoff_freq2; 
+//  262 //static float           _a12;
+//  263 //static float           _a22;
+//  264 //static float           _b02;
+//  265 //static float           _b12;
+//  266 //static float           _b22;
+//  267 //static float           _delay_element_12;        // buffered sample -1
+//  268 //static float           _delay_element_22;        // buffered sample -2
+//  269 //void LPF2pSetCutoffFreq_2(float sample_freq, float cutoff_freq)
+//  270 //{
+//  271 //		float fr =0;  
+//  272 //    float ohm =0;
+//  273 //    float c =0;
+//  274 //	
+//  275 //		fr= sample_freq/cutoff_freq;
+//  276 //		ohm=tanf(PI/fr);
+//  277 //		c=1.0f+2.0f*cosf(PI/4.0f)*ohm + ohm*ohm;
+//  278 //	
+//  279 //    _cutoff_freq2 = cutoff_freq;
+//  280 //    if (_cutoff_freq2 > 0.0f) 
+//  281 //		{
+//  282 //				_b02 = ohm*ohm/c;
+//  283 //				_b12 = 2.0f*_b02;
+//  284 //				_b22 = _b02;
+//  285 //				_a12 = 2.0f*(ohm*ohm-1.0f)/c;
+//  286 //				_a22 = (1.0f-2.0f*cosf(PI/4.0f)*ohm+ohm*ohm)/c;
+//  287 //		}
+//  288 //}
+//  289 
+//  290 //float LPF2pApply_2(float sample)
+//  291 //{
+//  292 //	
+//  293 //		float delay_element_0 = 0, output=0;
+//  294 //    if (_cutoff_freq2 <= 0.0f) {
+//  295 //        // no filtering
+//  296 //        return sample;
+//  297 //    }
+//  298 //		else
+//  299 //		{
+//  300 //				delay_element_0 = sample - _delay_element_12 * _a12 - _delay_element_22 * _a22;
+//  301 //				// do the filtering
+//  302 //				if (isnan(delay_element_0) || isinf(delay_element_0)) {
+//  303 //						// don't allow bad values to propogate via the filter
+//  304 //						delay_element_0 = sample;
+//  305 //				}
+//  306 //				output = delay_element_0 * _b02 + _delay_element_12 * _b12 + _delay_element_22 * _b22;
+//  307 //				
+//  308 //				_delay_element_22 = _delay_element_12;
+//  309 //				_delay_element_12 = delay_element_0;
+//  310 
+//  311 //				// return the value.  Should be no need to check limits
+//  312 //				return output;
+//  313 //		}
+//  314 //}
+//  315 
+//  316 //static float           _cutoff_freq3; 
+//  317 //static float           _a13;
+//  318 //static float           _a23;
+//  319 //static float           _b03;
+//  320 //static float           _b13;
+//  321 //static float           _b23;
+//  322 //static float           _delay_element_13;        // buffered sample -1
+//  323 //static float           _delay_element_23;        // buffered sample -2
+//  324 //void LPF2pSetCutoffFreq_3(float sample_freq, float cutoff_freq)
+//  325 //{
+//  326 //		float fr =0;  
+//  327 //    float ohm =0;
+//  328 //    float c =0;
+//  329 //	
+//  330 //		fr= sample_freq/cutoff_freq;
+//  331 //		ohm=tanf(PI/fr);
+//  332 //		c=1.0f+2.0f*cosf(PI/4.0f)*ohm + ohm*ohm;
+//  333 //	
+//  334 //    _cutoff_freq3 = cutoff_freq;
+//  335 //    if (_cutoff_freq3 > 0.0f) 
+//  336 //		{
+//  337 //				_b03 = ohm*ohm/c;
+//  338 //				_b13 = 2.0f*_b03;
+//  339 //				_b23 = _b03;
+//  340 //				_a13 = 2.0f*(ohm*ohm-1.0f)/c;
+//  341 //				_a23 = (1.0f-2.0f*cosf(PI/4.0f)*ohm+ohm*ohm)/c;
+//  342 //		}
+//  343 //}
+//  344 
+//  345 //float LPF2pApply_3(float sample)
+//  346 //{
+//  347 //	
+//  348 //		float delay_element_0 = 0, output=0;
+//  349 //    if (_cutoff_freq3 <= 0.0f) {
+//  350 //        // no filtering
+//  351 //        return sample;
+//  352 //    }
+//  353 //		else
+//  354 //		{
+//  355 //				delay_element_0 = sample - _delay_element_13 * _a13 - _delay_element_23 * _a23;
+//  356 //				// do the filtering
+//  357 //				if (isnan(delay_element_0) || isinf(delay_element_0)) {
+//  358 //						// don't allow bad values to propogate via the filter
+//  359 //						delay_element_0 = sample;
+//  360 //				}
+//  361 //				output = delay_element_0 * _b03 + _delay_element_13 * _b13 + _delay_element_23 * _b23;
+//  362 //				
+//  363 //				_delay_element_23 = _delay_element_13;
+//  364 //				_delay_element_13 = delay_element_0;
+//  365 
+//  366 //				// return the value.  Should be no need to check limits
+//  367 //				return output;
+//  368 //		}
+//  369 //}
+//  370   
+//  371 /******************* (C) COPYRIGHT 2012  Team *****END OF FILE************/
+// 
+// 1 250 bytes in segment CODE
+//   206 bytes in segment DATA20_Z
+// 
+// 1 250 bytes of CODE memory
+//   206 bytes of DATA memory
+//
+//Errors: none
+//Warnings: none

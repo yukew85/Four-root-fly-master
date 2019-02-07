@@ -1,0 +1,1404 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:41
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\imu.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWD314.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\imu.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\imu.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME imu
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Mul32f
+        EXTERN _Sub32f
+        EXTERN _Add32f
+        EXTERN _Cast32sto32f
+        EXTERN ?FLT_GE
+        EXTERN ?FLT_LT
+        EXTERN ?cstart_init_copy20
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC GetAngle
+        PUBLIC GetNormAccz
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN MPU6050
+        EXTERN Q_rsqrt
+        EXTERN Gyro_Gr
+        EXTERN Gyro_G
+        EXTERN asin
+        EXTERN RtA
+        EXTERN atan2f
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\imu.c
+//    1 
+//    2 #include "imu.h"
+//    3 #include "myMath.h"
+//    4 #include <math.h>
+//    5 
+//    6 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    7 static float NormAccz;
+NormAccz:
+        DS8 4
+//    8 
+//    9 typedef struct {  //四元数
+//   10   float q0;
+//   11   float q1;
+//   12   float q2;
+//   13   float q3;
+//   14 }Quaternion;
+//   15 
+//   16 /*****************************************************************************************
+//   17  * 四元数
+//   18  * @param[in] MPU6050数据
+//   19  * @param[out] 角度值
+//   20  * @brief 此函数有一定的难度，姿态解算就一个函数，采用四元数梯度下降法估计姿态。
+//   21 					提取重力分量->获取加速度补偿值->角速度积分值->
+//   22                                         一介龙格库塔法补偿四元数->提取四元数旋转矩阵的姿态角
+//   23  * @return     
+//   24  ******************************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   25 void GetAngle(const _st_Mpu *pMpu,_st_AngE *pAngE, float dt)
+GetAngle:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function GetAngle
+//   26 {		
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        PUSH.W  R15
+          CFI CFA SP+38
+        PUSH.W  R14
+          CFI CFA SP+40
+        SUBA    #0x34, SP
+          CFI CFA SP+92
+        MOVA    R12, R8
+        MOVA    R13, R9
+//   27     struct Vector{
+//   28               float x;
+//   29               float y;
+//   30               float z;
+//   31             }; 
+//   32     struct Vector Gravity,Acc,Gyro,AccGravity;
+//   33 
+//   34     static struct Vector GyroIntegError = {0};
+//   35     static  float KpDef = 0.8f ; //四元数收敛值
+//   36     static  float KiDef = 0.0003f; //加速度补偿角速度积分值
+//   37     static Quaternion NumQ = {1, 0, 0, 0};
+//   38     float q0_t,q1_t,q2_t,q3_t;
+//   39 
+//   40     float NormQuat; 
+//   41     float HalfTime = dt * 0.5f;
+        MOV.W   0x34(SP), R12
+        MOV.W   0x36(SP), R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f00, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//   42 
+//   43     Gravity.x = 2*(NumQ.q1 * NumQ.q3 - NumQ.q0 * NumQ.q2);								
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOVX.W  &??NumQ + 12, R14
+        MOVX.W  &??NumQ + 14, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOVX.W  &??NumQ + 8, R14
+        MOVX.W  &??NumQ + 10, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   #0x0, R12
+        MOV.W   #0x4000, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0x28(SP)
+        MOV.W   R13, 0x2a(SP)
+//   44     Gravity.y = 2*(NumQ.q0 * NumQ.q1 + NumQ.q2 * NumQ.q3);						  
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOVX.W  &??NumQ + 4, R14
+        MOVX.W  &??NumQ + 6, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOVX.W  &??NumQ + 12, R14
+        MOVX.W  &??NumQ + 14, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   #0x0, R12
+        MOV.W   #0x4000, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0x2c(SP)
+        MOV.W   R13, 0x2e(SP)
+//   45     Gravity.z = 1-2*(NumQ.q1 * NumQ.q1 + NumQ.q2 * NumQ.q2);	
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOVX.W  &??NumQ + 4, R14
+        MOVX.W  &??NumQ + 6, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOVX.W  &??NumQ + 8, R14
+        MOVX.W  &??NumQ + 10, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   #0x0, R12
+        MOV.W   #0x4000, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, 0x30(SP)
+        MOV.W   R13, 0x32(SP)
+//   46 
+//   47     NormQuat = Q_rsqrt(squa(MPU6050.accX)+ squa(MPU6050.accY) +squa(MPU6050.accZ));
+        MOVX.W  &MPU6050, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &MPU6050, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &MPU6050 + 2, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &MPU6050 + 2, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &MPU6050 + 4, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &MPU6050 + 4, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+          CFI FunCall Q_rsqrt
+        CALLA   #Q_rsqrt
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   48 	
+//   49     Acc.x = pMpu->accX * NormQuat; //归一后可化为单位向量下方向分量
+        MOV.W   @R8, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0x1c(SP)
+        MOV.W   R13, 0x1e(SP)
+//   50     Acc.y = pMpu->accY * NormQuat;
+        MOV.W   0x2(R8), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0x20(SP)
+        MOV.W   R13, 0x22(SP)
+//   51     Acc.z = pMpu->accZ * NormQuat;	
+        MOV.W   0x4(R8), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0x24(SP)
+        MOV.W   R13, 0x26(SP)
+//   52 
+//   53     AccGravity.x = (Acc.y * Gravity.z - Acc.z * Gravity.y);
+        MOV.W   0x20(SP), R12
+        MOV.W   0x22(SP), R13
+        MOV.W   0x30(SP), R14
+        MOV.W   0x32(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOV.W   0x24(SP), R12
+        MOV.W   0x26(SP), R13
+        MOV.W   0x2c(SP), R14
+        MOV.W   0x2e(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, 0x10(SP)
+        MOV.W   R13, 0x12(SP)
+//   54     AccGravity.y = (Acc.z * Gravity.x - Acc.x * Gravity.z);
+        MOV.W   0x24(SP), R12
+        MOV.W   0x26(SP), R13
+        MOV.W   0x28(SP), R14
+        MOV.W   0x2a(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOV.W   0x1c(SP), R12
+        MOV.W   0x1e(SP), R13
+        MOV.W   0x30(SP), R14
+        MOV.W   0x32(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, 0x14(SP)
+        MOV.W   R13, 0x16(SP)
+//   55     AccGravity.z = (Acc.x * Gravity.y - Acc.y * Gravity.x);
+        MOV.W   0x1c(SP), R12
+        MOV.W   0x1e(SP), R13
+        MOV.W   0x2c(SP), R14
+        MOV.W   0x2e(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOV.W   0x20(SP), R12
+        MOV.W   0x22(SP), R13
+        MOV.W   0x28(SP), R14
+        MOV.W   0x2a(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, 0x18(SP)
+        MOV.W   R13, 0x1a(SP)
+//   56 
+//   57     GyroIntegError.x += AccGravity.x * KiDef;
+        MOV.W   0x10(SP), R12
+        MOV.W   0x12(SP), R13
+        MOVX.W  &??KiDef, R14
+        MOVX.W  &??KiDef + 2, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??GyroIntegError, R12
+        MOVX.W  &??GyroIntegError + 2, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &??GyroIntegError
+        MOVX.W  R13, &??GyroIntegError + 2
+//   58     GyroIntegError.y += AccGravity.y * KiDef;
+        MOV.W   0x14(SP), R12
+        MOV.W   0x16(SP), R13
+        MOVX.W  &??KiDef, R14
+        MOVX.W  &??KiDef + 2, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??GyroIntegError + 4, R12
+        MOVX.W  &??GyroIntegError + 6, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &??GyroIntegError + 4
+        MOVX.W  R13, &??GyroIntegError + 6
+//   59     GyroIntegError.z += AccGravity.z * KiDef;
+        MOV.W   0x18(SP), R12
+        MOV.W   0x1a(SP), R13
+        MOVX.W  &??KiDef, R14
+        MOVX.W  &??KiDef + 2, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??GyroIntegError + 8, R12
+        MOVX.W  &??GyroIntegError + 10, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &??GyroIntegError + 8
+        MOVX.W  R13, &??GyroIntegError + 10
+//   60 
+//   61     Gyro.x = pMpu->gyroX * Gyro_Gr + KpDef * AccGravity.x  +  GyroIntegError.x;//弧度制，，此处补偿的是角速度的漂移
+        MOV.W   0x6(R8), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &Gyro_Gr, R12
+        MOVX.W  &Gyro_Gr + 2, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??KpDef, R12
+        MOVX.W  &??KpDef + 2, R13
+        MOV.W   0x10(SP), R14
+        MOV.W   0x12(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??GyroIntegError, R12
+        MOVX.W  &??GyroIntegError + 2, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0(SP)
+        MOV.W   R13, 0x2(SP)
+//   62     Gyro.y = pMpu->gyroY * Gyro_Gr + KpDef * AccGravity.y  +  GyroIntegError.y;
+        MOV.W   0x8(R8), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &Gyro_Gr, R12
+        MOVX.W  &Gyro_Gr + 2, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??KpDef, R12
+        MOVX.W  &??KpDef + 2, R13
+        MOV.W   0x14(SP), R14
+        MOV.W   0x16(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??GyroIntegError + 4, R12
+        MOVX.W  &??GyroIntegError + 6, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0x4(SP)
+        MOV.W   R13, 0x6(SP)
+//   63     Gyro.z = pMpu->gyroZ * Gyro_Gr + KpDef * AccGravity.z  +  GyroIntegError.z;		
+        MOV.W   0xa(R8), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &Gyro_Gr, R12
+        MOVX.W  &Gyro_Gr + 2, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??KpDef, R12
+        MOVX.W  &??KpDef + 2, R13
+        MOV.W   0x18(SP), R14
+        MOV.W   0x1a(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??GyroIntegError + 8, R12
+        MOVX.W  &??GyroIntegError + 10, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0x8(SP)
+        MOV.W   R13, 0xa(SP)
+//   64 
+//   65     q0_t = (-NumQ.q1*Gyro.x - NumQ.q2*Gyro.y - NumQ.q3*Gyro.z) * HalfTime;
+        MOVX.W  &??NumQ + 4, R14
+        MOVX.W  &??NumQ + 6, R15
+        XOR.W   #0x8000, R15
+        MOV.W   @SP, R12
+        MOV.W   0x2(SP), R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOV.W   0x4(SP), R14
+        MOV.W   0x6(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??NumQ + 12, R12
+        MOVX.W  &??NumQ + 14, R13
+        MOV.W   0x8(SP), R14
+        MOV.W   0xa(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0xc(SP)
+        MOV.W   R13, 0xe(SP)
+//   66     q1_t = ( NumQ.q0*Gyro.x - NumQ.q3*Gyro.y + NumQ.q2*Gyro.z) * HalfTime;
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOV.W   @SP, R14
+        MOV.W   0x2(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??NumQ + 12, R12
+        MOVX.W  &??NumQ + 14, R13
+        MOV.W   0x4(SP), R14
+        MOV.W   0x6(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOV.W   0x8(SP), R14
+        MOV.W   0xa(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   67     q2_t = ( NumQ.q3*Gyro.x + NumQ.q0*Gyro.y - NumQ.q1*Gyro.z) * HalfTime;
+        MOVX.W  &??NumQ + 12, R12
+        MOVX.W  &??NumQ + 14, R13
+        MOV.W   @SP, R14
+        MOV.W   0x2(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOV.W   0x4(SP), R14
+        MOV.W   0x6(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOV.W   0x8(SP), R14
+        MOV.W   0xa(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//   68     q3_t = (-NumQ.q2*Gyro.x + NumQ.q1*Gyro.y + NumQ.q0*Gyro.z) * HalfTime;
+        MOVX.W  &??NumQ + 8, R14
+        MOVX.W  &??NumQ + 10, R15
+        XOR.W   #0x8000, R15
+        MOV.W   @SP, R12
+        MOV.W   0x2(SP), R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        PUSH.W  R13
+          CFI CFA SP+94
+        PUSH.W  R12
+          CFI CFA SP+96
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOV.W   0x8(SP), R14
+        MOV.W   0xa(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        POP.W   R14
+          CFI CFA SP+94
+        POP.W   R15
+          CFI CFA SP+92
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        PUSH.W  R13
+          CFI CFA SP+94
+        PUSH.W  R12
+          CFI CFA SP+96
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOV.W   0xc(SP), R14
+        MOV.W   0xe(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        POP.W   R14
+          CFI CFA SP+94
+        POP.W   R15
+          CFI CFA SP+92
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//   69 
+//   70     NumQ.q0 += q0_t; //积分后的值累加到上次的四元数中，即新的四元数
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOV.W   0xc(SP), R14
+        MOV.W   0xe(SP), R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &??NumQ
+        MOVX.W  R13, &??NumQ + 2
+//   71     NumQ.q1 += q1_t;
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &??NumQ + 4
+        MOVX.W  R13, &??NumQ + 6
+//   72     NumQ.q2 += q2_t;
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &??NumQ + 8
+        MOVX.W  R13, &??NumQ + 10
+//   73     NumQ.q3 += q3_t;
+        MOVX.W  &??NumQ + 12, R12
+        MOVX.W  &??NumQ + 14, R13
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &??NumQ + 12
+        MOVX.W  R13, &??NumQ + 14
+//   74 
+//   75     NormQuat = Q_rsqrt(squa(NumQ.q0) + squa(NumQ.q1) + squa(NumQ.q2) + squa(NumQ.q3)); 
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOVX.W  &??NumQ, R14
+        MOVX.W  &??NumQ + 2, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOVX.W  &??NumQ + 4, R14
+        MOVX.W  &??NumQ + 6, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOVX.W  &??NumQ + 8, R14
+        MOVX.W  &??NumQ + 10, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVX.W  &??NumQ + 12, R12
+        MOVX.W  &??NumQ + 14, R13
+        MOVX.W  &??NumQ + 12, R14
+        MOVX.W  &??NumQ + 14, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+          CFI FunCall Q_rsqrt
+        CALLA   #Q_rsqrt
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   76     NumQ.q0 *= NormQuat; //模长更新四元数值
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  R12, &??NumQ
+        MOVX.W  R13, &??NumQ + 2
+//   77     NumQ.q1 *= NormQuat;
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  R12, &??NumQ + 4
+        MOVX.W  R13, &??NumQ + 6
+//   78     NumQ.q2 *= NormQuat;
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  R12, &??NumQ + 8
+        MOVX.W  R13, &??NumQ + 10
+//   79     NumQ.q3 *= NormQuat;	
+        MOVX.W  &??NumQ + 12, R12
+        MOVX.W  &??NumQ + 14, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  R12, &??NumQ + 12
+        MOVX.W  R13, &??NumQ + 14
+//   80 
+//   81     {
+//   82         float vecxZ = 2 * NumQ.q0 *NumQ.q2 - 2 * NumQ.q1 * NumQ.q3 ;
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??NumQ + 12, R12
+        MOVX.W  &??NumQ + 14, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//   83         float vecyZ = 2 * NumQ.q2 *NumQ.q3 + 2 * NumQ.q0 * NumQ.q1;
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??NumQ + 12, R12
+        MOVX.W  &??NumQ + 14, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVX.W  &??NumQ, R12
+        MOVX.W  &??NumQ + 2, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   84         float veczZ = 1 - 2 * NumQ.q1 *NumQ.q1 - 2 * NumQ.q2 * NumQ.q2;		
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??NumQ + 4, R12
+        MOVX.W  &??NumQ + 6, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x4000, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &??NumQ + 8, R12
+        MOVX.W  &??NumQ + 10, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//   85 
+//   86 #ifdef	YAW_GYRO
+//   87         *(float *)pAngE = atan2f(2 * NumQ.q1 *NumQ.q2 + 2 * NumQ.q0 * NumQ.q3, 1 - 2 * NumQ.q2 *NumQ.q2 - 2 * NumQ.q3 * NumQ.q3) * RtA;  //yaw
+//   88 #else  
+//   89         float yaw_G = pMpu->gyroZ * Gyro_G;
+        MOV.W   0xa(R8), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &Gyro_G, R12
+        MOVX.W  &Gyro_G + 2, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+//   90         if((yaw_G > 1.0f) || (yaw_G < -1.0f)) 
+        MOV.W   #0x1, R14
+        MOV.W   #0x3f80, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JC      ??GetAngle_0
+        MOV.W   #0x0, R14
+        MOV.W   #0xbf80, R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??GetAngle_1
+//   91         {
+//   92                 pAngE->yaw  += yaw_G * dt;//角速度积分成偏航角			
+??GetAngle_0:
+        MOV.W   0x34(SP), R14
+        MOV.W   0x36(SP), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   0x8(R9), R12
+        MOV.W   0xa(R9), R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0x8(R9)
+        MOV.W   R13, 0xa(R9)
+//   93         }
+//   94 #endif
+//   95         pAngE->pitch  =  asin(vecxZ)* RtA;	 //俯仰角					
+??GetAngle_1:
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall asin
+        CALLA   #asin
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &RtA, R12
+        MOVX.W  &RtA + 2, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0x4(R9)
+        MOV.W   R13, 0x6(R9)
+//   96 
+//   97         pAngE->roll	= atan2f(vecyZ,veczZ) * RtA;	//横滚角
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall atan2f
+        CALLA   #atan2f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOVX.W  &RtA, R12
+        MOVX.W  &RtA + 2, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, 0(R9)
+        MOV.W   R13, 0x2(R9)
+//   98 
+//   99         NormAccz = pMpu->accX* vecxZ + pMpu->accY * vecyZ + pMpu->accZ * veczZ;	/*Z轴垂直方向上的加速度，此值涵盖了倾斜时在Z轴角速度的向量和，不是单纯重力感应得出的值*/				
+        MOV.W   @R8, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   0x2(R8), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOV.W   0x4(R8), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &NormAccz
+        MOVX.W  R13, &NormAccz + 2
+//  100     }
+//  101 }
+        ADDA    #0x38, SP
+          CFI CFA SP+36
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??GyroIntegError:
+        DS8 12
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_copy20
+??KpDef:
+        DS8 4
+        REQUIRE `?<Initializer for KpDef>`
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_copy20
+??KiDef:
+        DS8 4
+        REQUIRE `?<Initializer for KiDef>`
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_copy20
+??NumQ:
+        DS8 16
+        REQUIRE `?<Initializer for NumQ>`
+//  102 
+//  103 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  104 float GetNormAccz(void)
+GetNormAccz:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function GetNormAccz
+          CFI NoCalls
+//  105 {
+//  106 	return NormAccz;
+        MOVX.W  &NormAccz, R12
+        MOVX.W  &NormAccz + 2, R13
+        RETA
+//  107 }
+          CFI EndBlock cfiBlock1
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(1)
+`?<Initializer for KpDef>`:
+        DATA32
+        DC32 3F4CCCCDH
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(1)
+`?<Initializer for KiDef>`:
+        DATA32
+        DC32 399D4952H
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(1)
+`?<Initializer for NumQ>`:
+        DATA32
+        DC32 3F800000H, 0H, 0H, 0H
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  108 /***************************************************END OF FILE***************************************************/
+//  109 
+//  110 
+//  111 
+//  112 
+// 
+// 2 840 bytes in segment CODE
+//    24 bytes in segment DATA20_I
+//    24 bytes in segment DATA20_ID
+//    16 bytes in segment DATA20_Z
+// 
+// 2 840 bytes of CODE  memory
+//    24 bytes of CONST memory
+//    40 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

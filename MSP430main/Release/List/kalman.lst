@@ -1,0 +1,215 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:41
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\MATH\kalman.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW516C.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\MATH\kalman.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\kalman.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\kalman.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\kalman.c
+      1          
+      2          #include "kalman.h"
+      3          #include <math.h>
+      4          /*****************************************************************************************
+      5           * 卡尔曼
+      6           * @param[in] 
+      7           * @param[out] 
+      8           * @return     
+      9           ******************************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     10          void kalman_1(struct _1_ekf_filter *ekf,float input)  //一维卡尔曼
+   \                     kalman_1:
+     11          {
+   \   000000   6A14         PUSHM.A #0x7, R10
+   \   000002   1F15         PUSHM.W #0x2, R15
+   \   000004   CA0C         MOVA    R12, R10
+     12              ekf->Now_P = ekf->LastP + ekf->Q;                   
+   \   000006   2C4A         MOV.W   @R10, R12
+   \   000008   1D4A0200     MOV.W   0x2(R10), R13
+   \   00000C   1E4A1000     MOV.W   0x10(R10), R14
+   \   000010   1F4A1200     MOV.W   0x12(R10), R15
+   \   000014   ........     CALLA   #_Add32f
+   \   000018   084C         MOV.W   R12, R8
+   \   00001A   094D         MOV.W   R13, R9
+   \   00001C   8A480400     MOV.W   R8, 0x4(R10)
+   \   000020   8A490600     MOV.W   R9, 0x6(R10)
+     13              ekf->Kg = ekf->Now_P / (ekf->Now_P + ekf->R);
+   \   000024   1E4A1400     MOV.W   0x14(R10), R14
+   \   000028   1F4A1600     MOV.W   0x16(R10), R15
+   \   00002C   ........     CALLA   #_Add32f
+   \   000030   0E4C         MOV.W   R12, R14
+   \   000032   0F4D         MOV.W   R13, R15
+   \   000034   0C48         MOV.W   R8, R12
+   \   000036   0D49         MOV.W   R9, R13
+   \   000038   ........     CALLA   #_Div32f
+   \   00003C   064C         MOV.W   R12, R6
+   \   00003E   074D         MOV.W   R13, R7
+   \   000040   8A460C00     MOV.W   R6, 0xc(R10)
+   \   000044   8A470E00     MOV.W   R7, 0xe(R10)
+     14              ekf->out = ekf->out + ekf->Kg * (input - ekf->out);
+   \   000048   144A0800     MOV.W   0x8(R10), R4
+   \   00004C   154A0A00     MOV.W   0xa(R10), R5
+   \   000050   2C41         MOV.W   @SP, R12
+   \   000052   1D410200     MOV.W   0x2(SP), R13
+   \   000056   0E44         MOV.W   R4, R14
+   \   000058   0F45         MOV.W   R5, R15
+   \   00005A   ........     CALLA   #_Sub32f
+   \   00005E   0E4C         MOV.W   R12, R14
+   \   000060   0F4D         MOV.W   R13, R15
+   \   000062   0C46         MOV.W   R6, R12
+   \   000064   0D47         MOV.W   R7, R13
+   \   000066   ........     CALLA   #_Mul32f
+   \   00006A   0E4C         MOV.W   R12, R14
+   \   00006C   0F4D         MOV.W   R13, R15
+   \   00006E   0C44         MOV.W   R4, R12
+   \   000070   0D45         MOV.W   R5, R13
+   \   000072   ........     CALLA   #_Add32f
+   \   000076   8A4C0800     MOV.W   R12, 0x8(R10)
+   \   00007A   8A4D0A00     MOV.W   R13, 0xa(R10)
+     15              ekf->LastP = (1-ekf->Kg) * ekf->Now_P ;
+   \   00007E   0C43         MOV.W   #0x0, R12
+   \   000080   3D40803F     MOV.W   #0x3f80, R13
+   \   000084   0E46         MOV.W   R6, R14
+   \   000086   0F47         MOV.W   R7, R15
+   \   000088   ........     CALLA   #_Sub32f
+   \   00008C   0E4C         MOV.W   R12, R14
+   \   00008E   0F4D         MOV.W   R13, R15
+   \   000090   0C48         MOV.W   R8, R12
+   \   000092   0D49         MOV.W   R9, R13
+   \   000094   ........     CALLA   #_Mul32f
+   \   000098   8A4C0000     MOV.W   R12, 0(R10)
+   \   00009C   8A4D0200     MOV.W   R13, 0x2(R10)
+     16          }
+   \   0000A0   A1000400     ADDA    #0x4, SP
+   \   0000A4   6416         POPM.A  #0x7, R10
+   \   0000A6   1001         RETA
+     17          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     36   kalman_1
+       36 _Add32f
+       36 _Div32f
+       36 _Mul32f
+       36 _Sub32f
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     168  kalman_1
+
+ 
+ 168 bytes in segment CODE
+ 
+ 168 bytes of CODE memory
+
+Errors: none
+Warnings: none

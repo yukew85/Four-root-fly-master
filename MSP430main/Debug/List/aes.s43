@@ -1,0 +1,497 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:05
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\aes.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW14AD.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\aes.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\aes.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME aes
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\aes.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // aes.c - Driver for the aes Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup aes_api aes
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_AES__
+//   48 #include "aes.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 uint8_t AES_setCipherKey (uint16_t baseAddress,
+//   53      const uint8_t * CipherKey
+//   54      )
+//   55 {
+//   56     uint8_t i = 0;
+//   57     uint16_t tempVariable = 0;
+//   58 
+//   59     // Wait until AES accelerator is busy
+//   60     while(AESBUSY == (HWREG16(baseAddress + OFS_AESASTAT) & AESBUSY) );
+//   61 
+//   62     for (i = 0; i < 16; i = i + 2)
+//   63     {
+//   64         tempVariable = (uint16_t)(CipherKey[i]);
+//   65         tempVariable = tempVariable | ((uint16_t)(CipherKey[i + 1]) << 8);
+//   66         HWREG16(baseAddress + OFS_AESAKEY) = tempVariable;
+//   67     }
+//   68 
+//   69     // Wait until key is written
+//   70     while(0x00 == (HWREG16(baseAddress + OFS_AESASTAT) & AESKEYWR ));
+//   71 
+//   72     return STATUS_SUCCESS;
+//   73 }
+//   74 
+//   75 uint8_t AES_encryptData (uint16_t baseAddress,
+//   76     const uint8_t * Data,
+//   77     uint8_t * encryptedData)
+//   78 {
+//   79     uint8_t i;
+//   80     uint16_t tempData = 0;
+//   81     uint16_t tempVariable = 0;
+//   82 
+//   83     // Set module to encrypt mode
+//   84     HWREG16(baseAddress + OFS_AESACTL0) &= ~AESOP_3;
+//   85 
+//   86     // Write data to encrypt to module
+//   87     for (i = 0; i < 16; i = i + 2)
+//   88     {
+//   89 
+//   90         tempVariable = (uint16_t)(Data[i]);
+//   91         tempVariable = tempVariable | ((uint16_t)(Data[i+1]) << 8);
+//   92         HWREG16(baseAddress + OFS_AESADIN) = tempVariable;
+//   93     }
+//   94 
+//   95     // Key that is already written shall be used
+//   96     // Encryption is initialized by setting AESKEYWR to 1
+//   97     HWREG16(baseAddress + OFS_AESASTAT) |= AESKEYWR;
+//   98 
+//   99     // Wait unit finished ~167 MCLK
+//  100     while(AESBUSY == (HWREG16(baseAddress + OFS_AESASTAT) & AESBUSY) );
+//  101 
+//  102     // Write encrypted data back to variable
+//  103     for (i = 0; i < 16; i = i + 2)
+//  104     {
+//  105         tempData = HWREG16(baseAddress + OFS_AESADOUT);
+//  106         *(encryptedData + i) = (uint8_t)tempData;
+//  107         *(encryptedData +i + 1) = (uint8_t)(tempData >> 8);
+//  108 
+//  109     }
+//  110 
+//  111     return STATUS_SUCCESS;
+//  112 }
+//  113 
+//  114 uint8_t AES_decryptData (uint16_t baseAddress,
+//  115     const uint8_t * Data,
+//  116     uint8_t * decryptedData)
+//  117 {
+//  118     uint8_t i;
+//  119     uint16_t tempData = 0;
+//  120     uint16_t tempVariable = 0;
+//  121 
+//  122     // Set module to decrypt mode
+//  123     HWREG16(baseAddress + OFS_AESACTL0) |= (AESOP_3);
+//  124 
+//  125     // Write data to decrypt to module
+//  126     for (i = 0; i < 16; i = i + 2)
+//  127     {
+//  128         tempVariable = (uint16_t)(Data[i+1]  << 8);
+//  129         tempVariable = tempVariable | ((uint16_t)(Data[i]));
+//  130         HWREG16(baseAddress + OFS_AESADIN) = tempVariable;
+//  131     }
+//  132 
+//  133     // Key that is already written shall be used
+//  134     // Now decryption starts
+//  135     HWREG16(baseAddress + OFS_AESASTAT) |= AESKEYWR;
+//  136 
+//  137     // Wait unit finished ~167 MCLK
+//  138     while(AESBUSY == (HWREG16(baseAddress + OFS_AESASTAT) & AESBUSY ));
+//  139 
+//  140     // Write encrypted data back to variable
+//  141     for (i = 0; i < 16; i = i + 2)
+//  142     {
+//  143         tempData = HWREG16(baseAddress + OFS_AESADOUT);
+//  144         *(decryptedData + i ) = (uint8_t)tempData;
+//  145         *(decryptedData +i + 1) = (uint8_t)(tempData >> 8);
+//  146     }
+//  147 
+//  148     return STATUS_SUCCESS;
+//  149 }
+//  150 
+//  151 uint8_t AES_setDecipherKey (uint16_t baseAddress,
+//  152     const uint8_t * CipherKey)
+//  153 {
+//  154     uint8_t i;
+//  155     uint16_t tempVariable = 0;
+//  156 
+//  157     // Set module to decrypt mode
+//  158     HWREG16(baseAddress + OFS_AESACTL0) &= ~(AESOP0);
+//  159     HWREG16(baseAddress + OFS_AESACTL0) |= AESOP1;
+//  160 
+//  161     // Write cipher key to key register
+//  162     for (i = 0; i < 16; i = i + 2)
+//  163     {
+//  164         tempVariable = (uint16_t)(CipherKey[i]);
+//  165         tempVariable = tempVariable | ((uint16_t)(CipherKey[i + 1]) << 8);
+//  166         HWREG16(baseAddress + OFS_AESAKEY) = tempVariable;
+//  167     }
+//  168 
+//  169     // Wait until key is processed ~52 MCLK
+//  170     while((HWREG16(baseAddress + OFS_AESASTAT) & AESBUSY) == AESBUSY);
+//  171 
+//  172     return STATUS_SUCCESS;
+//  173 }
+//  174 
+//  175 void AES_clearInterrupt (uint16_t baseAddress )
+//  176 {
+//  177     HWREG8(baseAddress + OFS_AESACTL0) &=  ~AESRDYIFG;
+//  178 }
+//  179 
+//  180 uint32_t AES_getInterruptStatus (uint16_t baseAddress)
+//  181 {
+//  182     return ((HWREG8(baseAddress + OFS_AESACTL0) & AESRDYIFG) << 0x04);
+//  183 }
+//  184 
+//  185 void AES_enableInterrupt (uint16_t baseAddress)
+//  186 {
+//  187     HWREG8(baseAddress + OFS_AESACTL0) |=  AESRDYIE;
+//  188 }
+//  189 
+//  190 void AES_disableInterrupt (uint16_t baseAddress)
+//  191 {
+//  192     HWREG8(baseAddress + OFS_AESACTL0) &=  ~AESRDYIE;
+//  193 }
+//  194 
+//  195 void AES_reset (uint16_t baseAddress)
+//  196 {
+//  197     HWREG8(baseAddress + OFS_AESACTL0) |=  AESSWRST;
+//  198 }
+//  199 
+//  200 uint8_t AES_startEncryptData (uint16_t baseAddress,
+//  201     const uint8_t * Data,
+//  202     uint8_t * encryptedData)
+//  203 {
+//  204     uint8_t i;
+//  205     uint16_t tempVariable = 0;
+//  206 
+//  207     // Set module to encrypt mode
+//  208     HWREG16(baseAddress + OFS_AESACTL0) &= ~AESOP_3;
+//  209 
+//  210     // Write data to encrypt to module
+//  211     for (i = 0; i < 16; i = i + 2)
+//  212     {
+//  213         tempVariable = (uint16_t)(Data[i]);
+//  214         tempVariable = tempVariable | ((uint16_t)(Data[i+1]) << 8);
+//  215         HWREG16(baseAddress + OFS_AESADIN) = tempVariable;
+//  216     }
+//  217 
+//  218     // Key that is already written shall be used
+//  219     // Encryption is initialized by setting AESKEYWR to 1
+//  220     HWREG16(baseAddress + OFS_AESASTAT) |= AESKEYWR;
+//  221 
+//  222     return STATUS_SUCCESS;
+//  223 }
+//  224 
+//  225 uint8_t AES_startDecryptData (uint16_t baseAddress,
+//  226     const uint8_t * Data)
+//  227 {
+//  228     uint8_t i;
+//  229     uint16_t tempVariable = 0;
+//  230 
+//  231     // Set module to decrypt mode
+//  232     HWREG16(baseAddress + OFS_AESACTL0) |= (AESOP_3);
+//  233 
+//  234     // Write data to decrypt to module
+//  235     for (i = 0; i < 16; i = i + 2)
+//  236     {
+//  237         tempVariable = (uint16_t)(Data[i+1]  << 8);
+//  238         tempVariable = tempVariable | ((uint16_t)(Data[i]));
+//  239         HWREG16(baseAddress + OFS_AESADIN) = tempVariable;
+//  240     }
+//  241 
+//  242     // Key that is already written shall be used
+//  243     // Now decryption starts
+//  244     HWREG16(baseAddress + OFS_AESASTAT) |= AESKEYWR;
+//  245 
+//  246     return STATUS_SUCCESS;
+//  247 }
+//  248 
+//  249 uint8_t AES_startSetDecipherKey (uint16_t baseAddress,
+//  250     const uint8_t * CipherKey)
+//  251 {
+//  252     uint8_t i;
+//  253     uint16_t tempVariable = 0;
+//  254 
+//  255     HWREG16(baseAddress + OFS_AESACTL0) &= ~(AESOP0);
+//  256     HWREG16(baseAddress + OFS_AESACTL0) |= AESOP1;
+//  257 
+//  258     // Write cipher key to key register
+//  259     for (i = 0; i < 16; i = i + 2)
+//  260     {
+//  261         tempVariable = (uint16_t)(CipherKey[i]);
+//  262         tempVariable = tempVariable | ((uint16_t)(CipherKey[i+1]) << 8);
+//  263         HWREG16(baseAddress + OFS_AESAKEY) = tempVariable;
+//  264     }
+//  265 
+//  266     return STATUS_SUCCESS;
+//  267 }
+//  268 
+//  269 uint8_t  AES_getDataOut(uint16_t baseAddress,
+//  270                             uint8_t *OutputData
+//  271                             )
+//  272 {
+//  273     uint8_t i;
+//  274     uint16_t tempData = 0;
+//  275 
+//  276     // If module is busy, exit and return failure
+//  277     if( AESBUSY == (HWREG16(baseAddress + OFS_AESASTAT) & AESBUSY))
+//  278         return STATUS_FAIL;
+//  279 
+//  280     // Write encrypted data back to variable
+//  281     for (i = 0; i < 16; i = i + 2)
+//  282     {
+//  283         tempData = HWREG16(baseAddress + OFS_AESADOUT);
+//  284         *(OutputData + i) = (uint8_t)tempData;
+//  285         *(OutputData +i + 1) = (uint8_t)(tempData >> 8);
+//  286     }
+//  287 
+//  288     return STATUS_SUCCESS;
+//  289 }
+//  290 
+//  291 uint8_t AES_isBusy (uint16_t baseAddress)
+//  292 {
+//  293     return (HWREG16(baseAddress + OFS_AESASTAT) & AESBUSY);
+//  294 }
+//  295 
+//  296 void AES_clearErrorFlag (uint16_t baseAddress )
+//  297 {
+//  298     HWREG8(baseAddress + OFS_AESACTL0) &=  ~AESERRFG;
+//  299 }
+//  300 
+//  301 uint32_t AES_getErrorFlagStatus (uint16_t baseAddress)
+//  302 {
+//  303     return (HWREG8(baseAddress + OFS_AESACTL0) & AESERRFG);
+//  304 }
+//  305 
+//  306 uint8_t AES_startDecryptDataUsingEncryptionKey (
+//  307     uint16_t baseAddress,
+//  308     const uint8_t * Data)
+//  309 {
+//  310     uint8_t i;
+//  311     uint16_t tempVariable = 0;
+//  312 
+//  313     // Set module to decrypt mode
+//  314     HWREG16(baseAddress + OFS_AESACTL0) &= ~(AESOP1);
+//  315     HWREG16(baseAddress + OFS_AESACTL0) |= AESOP0;
+//  316 
+//  317     // Write data to decrypt to module
+//  318     for (i = 0; i < 16; i = i + 2)
+//  319     {
+//  320         tempVariable = (uint16_t)(Data[i+1]  << 8);
+//  321         tempVariable = tempVariable | ((uint16_t)(Data[i]));
+//  322         HWREG16(baseAddress + OFS_AESADIN) = tempVariable;
+//  323     }
+//  324 
+//  325     // Key that is already written shall be used
+//  326     // Now decryption starts
+//  327     HWREG16(baseAddress + OFS_AESASTAT) |= AESKEYWR;
+//  328 
+//  329     return STATUS_SUCCESS;
+//  330 }
+//  331 
+//  332 uint8_t AES_decryptDataUsingEncryptionKey (uint16_t baseAddress,
+//  333     const uint8_t * Data,
+//  334     uint8_t * decryptedData)
+//  335 {
+//  336     uint8_t i;
+//  337     uint16_t tempData = 0;
+//  338     uint16_t tempVariable = 0;
+//  339 
+//  340     // Set module to decrypt mode
+//  341     HWREG16(baseAddress + OFS_AESACTL0) &= ~(AESOP1);
+//  342     HWREG16(baseAddress + OFS_AESACTL0) |= AESOP0;
+//  343 
+//  344     // Write data to decrypt to module
+//  345     for (i = 0; i < 16; i = i + 2)
+//  346     {
+//  347         tempVariable = (uint16_t)(Data[i+1]  << 8);
+//  348         tempVariable = tempVariable | ((uint16_t)(Data[i]));
+//  349         HWREG16(baseAddress + OFS_AESADIN) = tempVariable;
+//  350     }
+//  351 
+//  352     // Key that is already written shall be used
+//  353     // Now decryption starts
+//  354     HWREG16(baseAddress + OFS_AESASTAT) |= AESKEYWR;
+//  355 
+//  356     // Wait unit finished ~214 MCLK
+//  357     while(AESBUSY == (HWREG16(baseAddress + OFS_AESASTAT) & AESBUSY) );
+//  358 
+//  359     // Write encrypted data back to variable
+//  360     for (i = 0; i < 16; i = i + 2)
+//  361     {
+//  362         tempData = HWREG16(baseAddress + OFS_AESADOUT);
+//  363         *(decryptedData + i ) = (uint8_t)tempData;
+//  364         *(decryptedData +i + 1) = (uint8_t)(tempData >> 8);
+//  365     }
+//  366 
+//  367     return STATUS_SUCCESS;
+//  368 }
+//  369 
+//  370 #endif
+//  371 //*****************************************************************************
+//  372 //
+//  373 //! Close the doxygen group for aes_api
+//  374 //! @}
+//  375 //
+//  376 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

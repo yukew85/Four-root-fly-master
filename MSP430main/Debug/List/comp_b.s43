@@ -1,0 +1,782 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:06
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\comp_b.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW1732.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\comp_b.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\comp_b.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME comp_b
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Comp_B_clearInterrupt
+        PUBLIC Comp_B_configureReferenceVoltage
+        PUBLIC Comp_B_disable
+        PUBLIC Comp_B_disableInputBuffer
+        PUBLIC Comp_B_disableInterrupt
+        PUBLIC Comp_B_enable
+        PUBLIC Comp_B_enableInputBuffer
+        PUBLIC Comp_B_enableInterrupt
+        PUBLIC Comp_B_getInterruptStatus
+        PUBLIC Comp_B_init
+        PUBLIC Comp_B_outputValue
+        PUBLIC Comp_B_selectReferenceVoltage
+        PUBLIC Comp_B_setInterruptEdgeDirection
+        PUBLIC Comp_B_shortInputs
+        PUBLIC Comp_B_swapIO
+        PUBLIC Comp_B_toggleInterruptEdgeDirection
+        PUBLIC Comp_B_unshortInputs
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\comp_b.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // comp_b.c - Driver for the comp_b Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup comp_b_api comp_b
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_COMPB__
+//   48 #include "comp_b.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 bool Comp_B_init(uint16_t baseAddress, Comp_B_initParam *param)
+Comp_B_init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function Comp_B_init
+          CFI NoCalls
+//   53 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R14
+//   54     bool retVal = STATUS_SUCCESS;
+        MOV.B   #0x1, R12
+//   55 
+//   56     //Reset COMPB Control 1 & Interrupt Registers for initialization (OFS_CBCTL3
+//   57     //is not reset because it controls the input buffers of the analog signals
+//   58     //and may cause parasitic effects if an analog signal is still attached and
+//   59     //the buffer is re-enabled
+//   60     HWREG16(baseAddress + OFS_CBCTL0) &= 0x0000;
+        MOV.W   @R14, R10
+        MOV.W   #0x0, 0(R14)
+//   61     HWREG16(baseAddress + OFS_CBINT)  &= 0x0000;
+        MOV.W   R14, R15
+        ADD.W   #0xc, R15
+        MOV.W   @R15, R11
+        MOV.W   R14, R15
+        ADD.W   #0xc, R15
+        MOV.W   #0x0, 0(R15)
+//   62 
+//   63     //Clear reference voltage and reference source
+//   64     HWREG16(baseAddress + OFS_CBCTL2) &= ~(CBRS_3 | CBREFL_3);
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        AND.W   #0x9f3f, 0(R15)
+//   65 
+//   66     //Set the Positive Terminal
+//   67     if(COMP_B_VREF != param->positiveTerminalInput) {
+        CMP.B   #0x10, 0(R13)
+        JEQ     ??Comp_B_init_2
+//   68         //Enable Positive Terminal Input Mux and Set it to the appropriate input
+//   69         HWREG16(baseAddress + OFS_CBCTL0) |= CBIPEN + param->positiveTerminalInput;
+        MOV.B   @R13, R15
+        MOV.B   R15, R15
+        ADD.W   #0x80, R15
+        BIS.W   R15, 0(R14)
+//   70 
+//   71         //Disable the input buffer
+//   72         HWREG16(baseAddress + OFS_CBCTL3) |= (1 << param->positiveTerminalInput);
+        MOV.W   R14, R15
+        ADD.W   #0x6, R15
+        MOV.W   #0x1, R11
+        MOV.B   @R13, R10
+        SUB.B   #0x1, R10
+        JN      ??Comp_B_init_3
+        RPT     R10
+        RLAX.W  R11
+??Comp_B_init_3:
+        ADD.B   #0x1, R10
+        BIS.W   R11, 0(R15)
+        JMP     ??Comp_B_init_0
+//   73     }
+//   74     else {
+//   75         //Reset and Set COMPB Control 2 Register
+//   76         //Set Vref to go to (+)terminal
+//   77         HWREG16(baseAddress + OFS_CBCTL2) &= ~(CBRSEL);
+??Comp_B_init_2:
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        BIC.W   #0x20, 0(R15)
+//   78     }
+//   79 
+//   80     //Set the Negative Terminal
+//   81     if (COMP_B_VREF != param->negativeTerminalInput) {
+??Comp_B_init_0:
+        CMP.B   #0x10, 0x1(R13)
+        JEQ     ??Comp_B_init_4
+//   82         //Enable Negative Terminal Input Mux and Set it to the appropriate input
+//   83         HWREG16(baseAddress + OFS_CBCTL0) |= CBIMEN + (param->negativeTerminalInput << 8);
+        MOV.B   0x1(R13), R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        ADD.W   #0x8000, R15
+        BIS.W   R15, 0(R14)
+//   84 
+//   85         //Disable the input buffer
+//   86         HWREG16(baseAddress + OFS_CBCTL3) |= (1 << param->negativeTerminalInput);
+        MOV.W   R14, R15
+        ADD.W   #0x6, R15
+        MOV.W   #0x1, R11
+        MOV.B   0x1(R13), R10
+        SUB.B   #0x1, R10
+        JN      ??Comp_B_init_5
+        RPT     R10
+        RLAX.W  R11
+??Comp_B_init_5:
+        ADD.B   #0x1, R10
+        BIS.W   R11, 0(R15)
+        JMP     ??Comp_B_init_1
+//   87     }
+//   88     else {
+//   89         //Reset and Set COMPB Control 2 Register
+//   90         //Set Vref to go to (-) terminal
+//   91         HWREG16(baseAddress + OFS_CBCTL2) |= CBRSEL;
+??Comp_B_init_4:
+        MOV.W   R14, R15
+        ADD.W   #0x4, R15
+        BIS.W   #0x20, 0(R15)
+//   92     }
+//   93 
+//   94     //Reset and Set COMPB Control 1 Register
+//   95     HWREG16(baseAddress + OFS_CBCTL1) =
+//   96         param->powerModeSelect //Set the power mode
+//   97         + param->outputFilterEnableAndDelayLevel //Set the filter enable bit and delay
+//   98         + param->invertedOutputPolarity; //Set the polarity of the output
+??Comp_B_init_1:
+        MOV.B   0x4(R13), R10
+        MOV.B   R10, R10
+        ADD.W   0x2(R13), R10
+        ADD.W   0x6(R13), R10
+        MOV.W   R14, R15
+        ADD.W   #0x2, R15
+        MOV.W   R10, 0(R15)
+//   99 
+//  100     return (retVal);
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  101 }
+          CFI EndBlock cfiBlock0
+//  102 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  103 void Comp_B_configureReferenceVoltage(uint16_t baseAddress,
+Comp_B_configureReferenceVoltage:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function Comp_B_configureReferenceVoltage
+          CFI NoCalls
+//  104     Comp_B_configureReferenceVoltageParam *param)
+//  105 {
+//  106     //Set to VREF0
+//  107     HWREG16(baseAddress + OFS_CBCTL1) &= ~(CBMRVS);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIC.W   #0x1000, 0(R15)
+//  108 
+//  109     //Reset COMPB Control 2 Bits (Except for CBRSEL which is set in Comp_Init())
+//  110     HWREG16(baseAddress + OFS_CBCTL2) &= CBRSEL;
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        AND.W   #0x20, 0(R15)
+//  111 
+//  112     //Set Voltage Source (Vcc | Vref, resistor ladder or not)
+//  113     if (COMP_B_VREFBASE_VCC == param->supplyVoltageReferenceBase) {
+        CMP.W   #0x0, 0(R13)
+        JNE     ??Comp_B_configureReferenceVoltage_1
+//  114         HWREG16(baseAddress + OFS_CBCTL2) |= CBRS_1; //Vcc with resistor ladder
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIS.W   #0x40, 0(R15)
+        JMP     ??Comp_B_configureReferenceVoltage_0
+//  115     }
+//  116     else if (param->lowerLimitSupplyVoltageFractionOf32 == 32) {
+??Comp_B_configureReferenceVoltage_1:
+        CMP.W   #0x20, 0x2(R13)
+        JNE     ??Comp_B_configureReferenceVoltage_2
+//  117         //If the lower limit is 32, then the upper limit has to be 32 due to the
+//  118         //assertion that upper must be >= to the lower limit. If the numerator is
+//  119         //equal to 32, then the equation would be 32/32 == 1, therefore no resistor
+//  120         //ladder is needed
+//  121         HWREG16(baseAddress + OFS_CBCTL2) |= CBRS_3; //Vref, no resistor ladder
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIS.W   #0xc0, 0(R15)
+        JMP     ??Comp_B_configureReferenceVoltage_0
+//  122     }
+//  123     else {
+//  124         HWREG16(baseAddress + OFS_CBCTL2) |= CBRS_2; //Vref with resistor ladder
+??Comp_B_configureReferenceVoltage_2:
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIS.W   #0x80, 0(R15)
+//  125     }
+//  126 
+//  127     //Set COMPD Control 2 Register
+//  128     HWREG16(baseAddress + OFS_CBCTL2) |=
+//  129         param->supplyVoltageReferenceBase //Set Supply Voltage Base
+//  130         + ((param->upperLimitSupplyVoltageFractionOf32 - 1) << 8) //Set Supply Voltage Num.
+//  131         + (param->lowerLimitSupplyVoltageFractionOf32 - 1);
+??Comp_B_configureReferenceVoltage_0:
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        MOV.W   0x4(R13), R14
+        AND.W   #0xff, R14
+        SWPB    R14
+        ADD.W   @R13, R14
+        ADD.W   0x2(R13), R14
+        ADD.W   #0xfeff, R14
+        BIS.W   R14, 0(R15)
+//  132 
+//  133     HWREG16(baseAddress + OFS_CBCTL2) &= ~(CBREFACC);
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIC.W   #0x8000, 0(R15)
+//  134     HWREG16(baseAddress + OFS_CBCTL2) |= param->referenceAccuracy;
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIS.W   0x6(R13), 0(R15)
+//  135 }
+        RETA
+          CFI EndBlock cfiBlock1
+//  136 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  137 void Comp_B_enableInterrupt(uint16_t baseAddress,
+Comp_B_enableInterrupt:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function Comp_B_enableInterrupt
+          CFI NoCalls
+//  138     uint16_t interruptMask)
+//  139 {
+//  140     //Set the Interrupt enable bit
+//  141     HWREG16(baseAddress + OFS_CBINT) |= interruptMask;
+        MOV.W   R12, R15
+        ADD.W   #0xc, R15
+        BIS.W   R13, 0(R15)
+//  142 }
+        RETA
+          CFI EndBlock cfiBlock2
+//  143 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  144 void Comp_B_disableInterrupt(uint16_t baseAddress,
+Comp_B_disableInterrupt:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function Comp_B_disableInterrupt
+          CFI NoCalls
+//  145     uint16_t interruptMask)
+//  146 {
+//  147     HWREG16(baseAddress + OFS_CBINT) &= ~(interruptMask);
+        MOV.W   R12, R15
+        ADD.W   #0xc, R15
+        BIC.W   R13, 0(R15)
+//  148 }
+        RETA
+          CFI EndBlock cfiBlock3
+//  149 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  150 void Comp_B_clearInterrupt(uint16_t baseAddress,
+Comp_B_clearInterrupt:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function Comp_B_clearInterrupt
+          CFI NoCalls
+//  151     uint16_t interruptFlagMask)
+//  152 {
+//  153     HWREG16(baseAddress + OFS_CBINT) &= ~(interruptFlagMask);
+        MOV.W   R12, R15
+        ADD.W   #0xc, R15
+        BIC.W   R13, 0(R15)
+//  154 }
+        RETA
+          CFI EndBlock cfiBlock4
+//  155 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  156 uint8_t Comp_B_getInterruptStatus(uint16_t baseAddress,
+Comp_B_getInterruptStatus:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function Comp_B_getInterruptStatus
+          CFI NoCalls
+//  157     uint16_t interruptFlagMask)
+//  158 {
+//  159     return(HWREG16(baseAddress + OFS_CBINT) & interruptFlagMask);
+        ADD.W   #0xc, R12
+        MOV.W   @R12, R12
+        AND.B   R13, R12
+        RETA
+//  160 }
+          CFI EndBlock cfiBlock5
+//  161 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  162 void Comp_B_setInterruptEdgeDirection(uint16_t baseAddress,
+Comp_B_setInterruptEdgeDirection:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function Comp_B_setInterruptEdgeDirection
+          CFI NoCalls
+//  163     uint16_t edgeDirection)
+//  164 {
+//  165     //Set the edge direction that will trigger an interrupt
+//  166     if(COMP_B_RISINGEDGE == edgeDirection) {
+        CMP.W   #0x0, R13
+        JNE     ??Comp_B_setInterruptEdgeDirection_0
+//  167         HWREG16(baseAddress + OFS_CBCTL1) &= ~(CBIES);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIC.W   #0x8, 0(R15)
+        RETA
+//  168     }
+//  169     else if(COMP_B_FALLINGEDGE == edgeDirection) {
+??Comp_B_setInterruptEdgeDirection_0:
+        CMP.W   #0x8, R13
+        JNE     ??Comp_B_setInterruptEdgeDirection_1
+//  170         HWREG16(baseAddress + OFS_CBCTL1) |= CBIES;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   #0x8, 0(R15)
+//  171     }
+//  172 }
+??Comp_B_setInterruptEdgeDirection_1:
+        RETA
+          CFI EndBlock cfiBlock6
+//  173 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  174 void Comp_B_toggleInterruptEdgeDirection(uint16_t baseAddress)
+Comp_B_toggleInterruptEdgeDirection:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function Comp_B_toggleInterruptEdgeDirection
+          CFI NoCalls
+//  175 {
+//  176     HWREG16(baseAddress + OFS_CBCTL1) ^= CBIES;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        XOR.W   #0x8, 0(R15)
+//  177 }
+        RETA
+          CFI EndBlock cfiBlock7
+//  178 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  179 void Comp_B_enable(uint16_t baseAddress)
+Comp_B_enable:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function Comp_B_enable
+          CFI NoCalls
+//  180 {
+//  181     HWREG16(baseAddress + OFS_CBCTL1) |= CBON;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   #0x400, 0(R15)
+//  182 }
+        RETA
+          CFI EndBlock cfiBlock8
+//  183 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  184 void Comp_B_disable(uint16_t baseAddress)
+Comp_B_disable:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function Comp_B_disable
+          CFI NoCalls
+//  185 {
+//  186     HWREG16(baseAddress + OFS_CBCTL1) &= ~(CBON);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIC.W   #0x400, 0(R15)
+//  187 }
+        RETA
+          CFI EndBlock cfiBlock9
+//  188 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  189 void Comp_B_shortInputs(uint16_t baseAddress)
+Comp_B_shortInputs:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function Comp_B_shortInputs
+          CFI NoCalls
+//  190 {
+//  191     HWREG16(baseAddress + OFS_CBCTL1) |= CBSHORT;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   #0x10, 0(R15)
+//  192 }
+        RETA
+          CFI EndBlock cfiBlock10
+//  193 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  194 void Comp_B_unshortInputs(uint16_t baseAddress)
+Comp_B_unshortInputs:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function Comp_B_unshortInputs
+          CFI NoCalls
+//  195 {
+//  196     HWREG16(baseAddress + OFS_CBCTL1) &= ~(CBSHORT);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIC.W   #0x10, 0(R15)
+//  197 }
+        RETA
+          CFI EndBlock cfiBlock11
+//  198 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  199 void Comp_B_disableInputBuffer(uint16_t baseAddress,
+Comp_B_disableInputBuffer:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function Comp_B_disableInputBuffer
+          CFI NoCalls
+//  200     uint8_t inputPort)
+//  201 {
+//  202     HWREG16(baseAddress + OFS_CBCTL3) |= (1 << inputPort);
+        MOV.W   R12, R15
+        ADD.W   #0x6, R15
+        MOV.W   #0x1, R14
+        SUB.B   #0x1, R13
+        JN      ??Comp_B_disableInputBuffer_0
+        RPT     R13
+        RLAX.W  R14
+??Comp_B_disableInputBuffer_0:
+        ADD.B   #0x1, R13
+        BIS.W   R14, 0(R15)
+//  203 }
+        RETA
+          CFI EndBlock cfiBlock12
+//  204 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  205 void Comp_B_enableInputBuffer(uint16_t baseAddress,
+Comp_B_enableInputBuffer:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function Comp_B_enableInputBuffer
+          CFI NoCalls
+//  206     uint8_t inputPort)
+//  207 {
+//  208     HWREG16(baseAddress + OFS_CBCTL3) &= ~(1 << inputPort);
+        MOV.W   R12, R15
+        ADD.W   #0x6, R15
+        MOV.W   #0x1, R14
+        SUB.B   #0x1, R13
+        JN      ??Comp_B_enableInputBuffer_0
+        RPT     R13
+        RLAX.W  R14
+??Comp_B_enableInputBuffer_0:
+        ADD.B   #0x1, R13
+        BIC.W   R14, 0(R15)
+//  209 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  210 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  211 void Comp_B_swapIO(uint16_t baseAddress)
+Comp_B_swapIO:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function Comp_B_swapIO
+          CFI NoCalls
+//  212 {
+//  213     HWREG16(baseAddress + OFS_CBCTL1) ^= CBEX;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        XOR.W   #0x20, 0(R15)
+//  214 }
+        RETA
+          CFI EndBlock cfiBlock14
+//  215 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  216 uint16_t Comp_B_outputValue(uint16_t baseAddress)
+Comp_B_outputValue:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function Comp_B_outputValue
+          CFI NoCalls
+//  217 {
+//  218     return (HWREG16(baseAddress + OFS_CBCTL1) & CBOUT);
+        ADD.W   #0x2, R12
+        MOV.W   @R12, R12
+        AND.W   #0x1, R12
+        RETA
+//  219 
+//  220 }
+          CFI EndBlock cfiBlock15
+//  221 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  222 void Comp_B_selectReferenceVoltage(uint16_t baseAddress, uint16_t selectType,
+Comp_B_selectReferenceVoltage:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function Comp_B_selectReferenceVoltage
+          CFI NoCalls
+//  223     uint16_t selectVRef)
+//  224 {
+//  225     HWREG16(baseAddress + OFS_CBCTL1) &= ~(CBMRVS | CBMRVL);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        AND.W   #0xe7ff, 0(R15)
+//  226     if(selectType == COMP_B_VREF_MANUAL_SELECT) {
+        CMP.W   #0x1000, R13
+        JNE     ??Comp_B_selectReferenceVoltage_0
+//  227         HWREG16(baseAddress + OFS_CBCTL1) |= CBMRVS;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   #0x1000, 0(R15)
+//  228         if(selectVRef == COMP_B_SELECT_VREF1) {
+        CMP.W   #0x800, R14
+        JNE     ??Comp_B_selectReferenceVoltage_0
+//  229             HWREG16(baseAddress + OFS_CBCTL1) |= CBMRVL;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   #0x800, 0(R15)
+//  230         }
+//  231     }
+//  232 }
+??Comp_B_selectReferenceVoltage_0:
+        RETA
+          CFI EndBlock cfiBlock16
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  233 
+//  234 
+//  235 #endif
+//  236 //*****************************************************************************
+//  237 //
+//  238 //! Close the doxygen group for comp_b_api
+//  239 //! @}
+//  240 //
+//  241 //*****************************************************************************
+// 
+// 550 bytes in segment CODE
+// 
+// 550 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

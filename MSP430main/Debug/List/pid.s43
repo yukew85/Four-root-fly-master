@@ -1,0 +1,676 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:10
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\pid.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW28F6.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\pid.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\pid.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME pid
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?ShiftLeft32_6
+        EXTERN _Sub32f
+        EXTERN _Add32f
+        EXTERN ?FLT_EQ
+        EXTERN ?FLT_LT
+        EXTERN _Mul32f
+        EXTERN _Div32f
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC ClacCascadePID
+        PUBLIC PIDGroup
+        PUBLIC ResetPID
+        PUBLIC UpdatePID
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\pid.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：pid.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 PID驱动使用方法如下：
+//   23 1.构建一个PIDInfo_t结构体，将所需要控制的数据存放进去；
+//   24 2.调UpdatePID函数，计算PID输出结果
+//   25 3.可以直接调用ClacCascadePID直接计算串级PID
+//   26 
+//   27 
+//   28 */
+//   29 //外部文件引用
+//   30 #include "pid.h"
+//   31 #include "myMath.h"    
+//   32 
+//   33 
+//   34 //宏定义区
+//   35 
+//   36 
+//   37 
+//   38 //Extern引用
+//   39 
+//   40 
+//   41 
+//   42 //私有函数区
+//   43 
+//   44 
+//   45 
+//   46 //私有变量区
+//   47 /*PID工程变量*/
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   48 PIDInfo_t PIDGroup[emNum_Of_PID_List];
+PIDGroup:
+        DS8 832
+//   49 
+//   50 
+//   51 /******************************************************************************
+//   52   * 函数名称：ResetPID
+//   53   * 函数描述：复位PID
+//   54   * 输    入：PID结构体指针
+//   55   * 输    出：void
+//   56   * 返    回：void
+//   57   * 备    注：null
+//   58   *    
+//   59   *
+//   60 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   61 void ResetPID(void)
+ResetPID:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function ResetPID
+          CFI NoCalls
+//   62 {
+//   63     for(int i = 0; i < emNum_Of_PID_List; i++)
+        MOV.W   #0x0, R15
+??ResetPID_0:
+        CMP.W   #0xd, R15
+        JGE     ??ResetPID_1
+//   64     {
+//   65         PIDGroup[i].integ = 0;
+        MOV.W   R15, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RPT     #0x6
+        RLAX.A  R14
+        MOVX.W  #0x0, PIDGroup + 44(R14)
+        MOVX.W  #0x0, PIDGroup + 46(R14)
+//   66         PIDGroup[i].prevError = 0;
+        MOV.W   R15, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RPT     #0x6
+        RLAX.A  R14
+        MOVX.W  #0x0, PIDGroup + 40(R14)
+        MOVX.W  #0x0, PIDGroup + 42(R14)
+//   67         PIDGroup[i].out = 0;
+        MOV.W   R15, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RPT     #0x6
+        RLAX.A  R14
+        MOVX.W  #0x0, PIDGroup + 12(R14)
+        MOVX.W  #0x0, PIDGroup + 14(R14)
+//   68         PIDGroup[i].offset = 0;
+        MOV.W   R15, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RPT     #0x6
+        RLAX.A  R14
+        MOVX.W  #0x0, PIDGroup + 36(R14)
+        MOVX.W  #0x0, PIDGroup + 38(R14)
+//   69     }
+        ADD.W   #0x1, R15
+        JMP     ??ResetPID_0
+//   70     
+//   71     PIDGroup[emPID_Height_Pos].desired = 80;
+??ResetPID_1:
+        MOVX.W  #0x0, &PIDGroup + 468
+        MOVX.W  #0x42a0, &PIDGroup + 470
+//   72 }
+        RETA
+          CFI EndBlock cfiBlock0
+//   73 
+//   74 /******************************************************************************
+//   75   * 函数名称：UpdatePID
+//   76   * 函数描述：计算PID相关值
+//   77   * 输    入：PIDInfo_t* pid：要计算的PID结构体指针
+//   78               float dt：单位运行时间
+//   79   * 输    出：void
+//   80   * 返    回：void
+//   81   * 备    注：null
+//   82   *    
+//   83   *
+//   84 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   85 void UpdatePID(PIDInfo_t* pid, const float dt)
+UpdatePID:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function UpdatePID
+//   86 {
+        PUSHM.A #0x7, R10
+          CFI R4L Frame(CFA, -32)
+          CFI R4H Frame(CFA, -30)
+          CFI R5L Frame(CFA, -28)
+          CFI R5H Frame(CFA, -26)
+          CFI R6L Frame(CFA, -24)
+          CFI R6H Frame(CFA, -22)
+          CFI R7L Frame(CFA, -20)
+          CFI R7H Frame(CFA, -18)
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+32
+        MOVA    R12, R10
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//   87     float deriv;
+//   88     
+//   89     pid->Err = pid->desired - pid->measured + pid->offset; //当前角度与实际角度的误差
+        MOV.W   0x14(R10), R12
+        MOV.W   0x16(R10), R13
+        MOV.W   0x18(R10), R14
+        MOV.W   0x1a(R10), R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   0x24(R10), R12
+        MOV.W   0x26(R10), R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0x10(R10)
+        MOV.W   R13, 0x12(R10)
+//   90 
+//   91     if(pid->Err_LimitHigh != 0 && pid->Err_LimitLow != 0)
+        MOV.W   0x1c(R10), R12
+        MOV.W   0x1e(R10), R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_EQ
+        CALLA   #?FLT_EQ
+        JEQ     ??UpdatePID_3
+        MOV.W   0x20(R10), R12
+        MOV.W   0x22(R10), R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_EQ
+        CALLA   #?FLT_EQ
+        JEQ     ??UpdatePID_3
+//   92     {
+//   93         pid->Err = LIMIT(pid->Err, pid->Err_LimitLow, pid->Err_LimitHigh);
+        MOV.W   0x10(R10), R12
+        MOV.W   0x12(R10), R13
+        MOV.W   0x20(R10), R14
+        MOV.W   0x22(R10), R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??UpdatePID_4
+        MOV.W   0x20(R10), R14
+        MOV.W   0x22(R10), R15
+        JMP     ??UpdatePID_0
+??UpdatePID_4:
+        MOV.W   0x1c(R10), R12
+        MOV.W   0x1e(R10), R13
+        MOV.W   0x10(R10), R14
+        MOV.W   0x12(R10), R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??UpdatePID_5
+        MOV.W   0x1c(R10), R14
+        MOV.W   0x1e(R10), R15
+        JMP     ??UpdatePID_0
+??UpdatePID_5:
+        MOV.W   0x10(R10), R14
+        MOV.W   0x12(R10), R15
+??UpdatePID_0:
+        MOV.W   R14, 0x10(R10)
+        MOV.W   R15, 0x12(R10)
+//   94     }
+//   95     
+//   96     pid->integ += pid->Err * dt;    
+??UpdatePID_3:
+        MOV.W   0x10(R10), R12
+        MOV.W   0x12(R10), R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   0x2c(R10), R12
+        MOV.W   0x2e(R10), R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0x2c(R10)
+        MOV.W   R13, 0x2e(R10)
+//   97     
+//   98     if(pid->IntegLimitHigh != 0 && pid->IntegLimitLow != 0)
+        MOV.W   0x30(R10), R12
+        MOV.W   0x32(R10), R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_EQ
+        CALLA   #?FLT_EQ
+        JEQ     ??UpdatePID_6
+        MOV.W   0x34(R10), R12
+        MOV.W   0x36(R10), R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_EQ
+        CALLA   #?FLT_EQ
+        JEQ     ??UpdatePID_6
+//   99     {
+//  100         pid->integ = LIMIT(pid->integ, pid->IntegLimitLow, pid->IntegLimitHigh);
+        MOV.W   0x2c(R10), R12
+        MOV.W   0x2e(R10), R13
+        MOV.W   0x34(R10), R14
+        MOV.W   0x36(R10), R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??UpdatePID_7
+        MOV.W   0x34(R10), R14
+        MOV.W   0x36(R10), R15
+        JMP     ??UpdatePID_1
+??UpdatePID_7:
+        MOV.W   0x30(R10), R12
+        MOV.W   0x32(R10), R13
+        MOV.W   0x2c(R10), R14
+        MOV.W   0x2e(R10), R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??UpdatePID_8
+        MOV.W   0x30(R10), R14
+        MOV.W   0x32(R10), R15
+        JMP     ??UpdatePID_1
+??UpdatePID_8:
+        MOV.W   0x2c(R10), R14
+        MOV.W   0x2e(R10), R15
+??UpdatePID_1:
+        MOV.W   R14, 0x2c(R10)
+        MOV.W   R15, 0x2e(R10)
+//  101     }
+//  102     
+//  103     deriv = (pid->Err - pid->prevError)/dt;  
+??UpdatePID_6:
+        MOV.W   0x10(R10), R12
+        MOV.W   0x12(R10), R13
+        MOV.W   0x28(R10), R14
+        MOV.W   0x2a(R10), R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  104     
+//  105     pid->out = pid->kp * pid->Err + pid->ki * pid->integ + pid->kd * deriv;//PID输出
+        MOV.W   @R10, R12
+        MOV.W   0x2(R10), R13
+        MOV.W   0x10(R10), R14
+        MOV.W   0x12(R10), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   0x4(R10), R12
+        MOV.W   0x6(R10), R13
+        MOV.W   0x2c(R10), R14
+        MOV.W   0x2e(R10), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   0x8(R10), R12
+        MOV.W   0xa(R10), R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0xc(R10)
+        MOV.W   R13, 0xe(R10)
+//  106     
+//  107     if(pid->OutLimitHigh != 0 && pid->OutLimitLow != 0)
+        MOV.W   0x38(R10), R12
+        MOV.W   0x3a(R10), R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_EQ
+        CALLA   #?FLT_EQ
+        JEQ     ??UpdatePID_9
+        MOV.W   0x3c(R10), R12
+        MOV.W   0x3e(R10), R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?FLT_EQ
+        CALLA   #?FLT_EQ
+        JEQ     ??UpdatePID_9
+//  108     {
+//  109         pid->out = LIMIT(pid->out, pid->OutLimitLow, pid->OutLimitHigh);
+        MOV.W   0xc(R10), R12
+        MOV.W   0xe(R10), R13
+        MOV.W   0x3c(R10), R14
+        MOV.W   0x3e(R10), R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??UpdatePID_10
+        MOV.W   0x3c(R10), R14
+        MOV.W   0x3e(R10), R15
+        JMP     ??UpdatePID_2
+??UpdatePID_10:
+        MOV.W   0x38(R10), R12
+        MOV.W   0x3a(R10), R13
+        MOV.W   0xc(R10), R14
+        MOV.W   0xe(R10), R15
+          CFI FunCall ?FLT_LT
+        CALLA   #?FLT_LT
+        JNC     ??UpdatePID_11
+        MOV.W   0x38(R10), R14
+        MOV.W   0x3a(R10), R15
+        JMP     ??UpdatePID_2
+??UpdatePID_11:
+        MOV.W   0xc(R10), R14
+        MOV.W   0xe(R10), R15
+??UpdatePID_2:
+        MOV.W   R14, 0xc(R10)
+        MOV.W   R15, 0xe(R10)
+//  110     }
+//  111     
+//  112     pid->prevError = pid->Err;  
+??UpdatePID_9:
+        MOV.W   0x10(R10), 0x28(R10)
+        MOV.W   0x12(R10), 0x2a(R10)
+//  113 }
+        POPM.A  #0x7, R10
+          CFI R10H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+//  114 
+//  115 /******************************************************************************
+//  116   * 函数名称：ClacCascadePID
+//  117   * 函数描述：计算串级PID
+//  118   * 输    入：PIDInfo_t* pidRate：PID速度环
+//  119               PIDInfo_t* pidAngE：PID角度环
+//  120               const float dt：单位运行时间
+//  121   * 输    出：void
+//  122   * 返    回：void
+//  123   * 备    注：null    
+//  124   *    
+//  125   *
+//  126 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  127 void ClacCascadePID(PIDInfo_t* pidRate, PIDInfo_t* pidAngE, const float dt)  //串级PID
+ClacCascadePID:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function ClacCascadePID
+//  128 {     
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOVA    R12, R8
+        MOVA    R13, R9
+        MOV.W   R14, R10
+        MOV.W   R15, R11
+//  129     UpdatePID(pidAngE, dt);    //先计算外环
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    R9, R12
+          CFI FunCall UpdatePID
+        CALLA   #UpdatePID
+//  130     pidRate->desired = pidAngE->out;
+        MOV.W   0xc(R9), 0x14(R8)
+        MOV.W   0xe(R9), 0x16(R8)
+//  131     UpdatePID(pidRate, dt);   
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    R8, R12
+          CFI FunCall UpdatePID
+        CALLA   #UpdatePID
+//  132 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  133 
+//  134 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 744 bytes in segment CODE
+// 832 bytes in segment DATA20_Z
+// 
+// 744 bytes of CODE memory
+// 832 bytes of DATA memory
+//
+//Errors: none
+//Warnings: none

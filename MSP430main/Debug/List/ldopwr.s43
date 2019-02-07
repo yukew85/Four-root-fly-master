@@ -1,0 +1,319 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:09
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\ldopwr.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW23EC.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\ldopwr.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\ldopwr.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME ldopwr
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\ldopwr.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // ldopwr.c - Driver for the ldopwr Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup ldopwr_api ldopwr
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_PU__
+//   48 #include "ldopwr.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 void LDOPWR_unLockConfiguration ( uint16_t baseAddress )
+//   53 {
+//   54     HWREG16(baseAddress + OFS_LDOKEYPID) = 0x9628;
+//   55 }
+//   56 
+//   57 void LDOPWR_lockConfiguration ( uint16_t baseAddress )
+//   58 {
+//   59     HWREG16(baseAddress + OFS_LDOKEYPID) = 0x0000;
+//   60 }
+//   61 
+//   62 void LDOPWR_enablePort_U_inputs (uint16_t baseAddress )
+//   63 {
+//   64     HWREG8(baseAddress + OFS_PUCTL_H) |= PUIPE_H;
+//   65 }
+//   66 
+//   67 void LDOPWR_disablePort_U_inputs (uint16_t baseAddress )
+//   68 {
+//   69     HWREG8(baseAddress + OFS_PUCTL_H) &= ~PUIPE_H;
+//   70 }
+//   71 
+//   72 void LDOPWR_enablePort_U_outputs (uint16_t baseAddress )
+//   73 {
+//   74     HWREG8(baseAddress + OFS_PUCTL_L) |= PUOPE;
+//   75 }
+//   76 
+//   77 void LDOPWR_disablePort_U_outputs (uint16_t baseAddress )
+//   78 {
+//   79     HWREG8(baseAddress + OFS_PUCTL_L) &= ~PUOPE;
+//   80 }
+//   81 
+//   82 uint8_t LDOPWR_getPort_U1_inputData (uint16_t baseAddress )
+//   83 {
+//   84     return ((HWREG8(baseAddress + OFS_PUCTL_L) & PUIN1) >> 3 );
+//   85 }
+//   86 
+//   87 uint8_t LDOPWR_getPort_U0_inputData (uint16_t baseAddress )
+//   88 {
+//   89     return ((HWREG8(baseAddress + OFS_PUCTL_L) & PUIN0) >> 2 );
+//   90 }
+//   91 
+//   92 uint8_t LDOPWR_getPort_U1_outputData (uint16_t baseAddress )
+//   93 {
+//   94     return ((HWREG8(baseAddress + OFS_PUCTL_L) & PUOUT1) >> 1 );
+//   95 }
+//   96 
+//   97 uint8_t LDOPWR_getPort_U0_outputData (uint16_t baseAddress )
+//   98 {
+//   99     return (HWREG8(baseAddress + OFS_PUCTL_L) & PUOUT0);
+//  100 }
+//  101 
+//  102 void LDOPWR_setPort_U1_outputData (uint16_t baseAddress,
+//  103     uint8_t value
+//  104     )
+//  105 {
+//  106     if (LDOPWR_PORTU_PIN_HIGH == value){
+//  107         HWREG8(baseAddress + OFS_PUCTL_L) |= PUOUT1;
+//  108     } else   {
+//  109         HWREG8(baseAddress + OFS_PUCTL_L) &= ~PUOUT1;
+//  110     }
+//  111 }
+//  112 
+//  113 void LDOPWR_setPort_U0_outputData (uint16_t baseAddress,
+//  114     uint8_t value
+//  115     )
+//  116 {
+//  117     if (LDOPWR_PORTU_PIN_HIGH == value){
+//  118         HWREG8(baseAddress + OFS_PUCTL_L) |= PUOUT0;
+//  119     } else   {
+//  120         HWREG8(baseAddress + OFS_PUCTL_L) &= ~PUOUT0;
+//  121     }
+//  122 }
+//  123 
+//  124 void LDOPWR_togglePort_U1_outputData (uint16_t baseAddress)
+//  125 {
+//  126     HWREG8(baseAddress + OFS_PUCTL_L) ^= PUOUT1;
+//  127 }
+//  128 
+//  129 void LDOPWR_togglePort_U0_outputData (uint16_t baseAddress)
+//  130 {
+//  131     HWREG8(baseAddress + OFS_PUCTL_L) ^= PUOUT0;
+//  132 }
+//  133 
+//  134 void LDOPWR_enableInterrupt (uint16_t baseAddress,
+//  135     uint16_t mask
+//  136     )
+//  137 {
+//  138     HWREG8(baseAddress + OFS_LDOPWRCTL_H) |= mask;
+//  139 }
+//  140 
+//  141 void LDOPWR_disableInterrupt (uint16_t baseAddress,
+//  142     uint16_t mask
+//  143     )
+//  144 {
+//  145     HWREG8(baseAddress + OFS_LDOPWRCTL_H) &= ~mask;
+//  146 }
+//  147 
+//  148 void LDOPWR_enable (uint16_t baseAddress)
+//  149 {
+//  150     HWREG8(baseAddress + OFS_LDOPWRCTL_H) |= LDOOEN_H;
+//  151 }
+//  152 
+//  153 void LDOPWR_disable (uint16_t baseAddress)
+//  154 {
+//  155     HWREG8(baseAddress + OFS_LDOPWRCTL_H) &= ~LDOOEN_H;
+//  156 }
+//  157 
+//  158 uint8_t LDOPWR_getInterruptStatus (uint16_t baseAddress,
+//  159     uint16_t mask
+//  160     )
+//  161 {
+//  162     return (HWREG8(baseAddress + OFS_LDOPWRCTL_L) & mask);
+//  163 }
+//  164 
+//  165 void LDOPWR_clearInterrupt (uint16_t baseAddress,
+//  166     uint16_t mask
+//  167     )
+//  168 {
+//  169     HWREG8(baseAddress + OFS_LDOPWRCTL_L) &=  ~mask;
+//  170 }
+//  171 
+//  172 uint8_t LDOPWR_isLDOInputValid (uint16_t baseAddress)
+//  173 {
+//  174     return (HWREG8(baseAddress + OFS_LDOPWRCTL_L) & LDOBGVBV);
+//  175 }
+//  176 
+//  177 void LDOPWR_enableOverloadAutoOff (uint16_t baseAddress)
+//  178 {
+//  179     HWREG8(baseAddress + OFS_LDOPWRCTL_L) |= OVLAOFF_L;
+//  180 }
+//  181 
+//  182 void LDOPWR_disableOverloadAutoOff (uint16_t baseAddress)
+//  183 {
+//  184     HWREG8(baseAddress + OFS_LDOPWRCTL_L) &= ~OVLAOFF_L;
+//  185 }
+//  186 
+//  187 uint8_t LDOPWR_getOverloadAutoOffStatus (uint16_t baseAddress)
+//  188 {
+//  189     return (HWREG8(baseAddress + OFS_LDOPWRCTL_L) & OVLAOFF_L);
+//  190 }
+//  191 
+//  192 #endif
+//  193 //*****************************************************************************
+//  194 //
+//  195 //! Close the doxygen group for ldopwr_api
+//  196 //! @}
+//  197 //
+//  198 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

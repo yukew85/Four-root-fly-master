@@ -1,0 +1,389 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:11
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\rtc_b.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW2DA2.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\rtc_b.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\rtc_b.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME rtc_b
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\rtc_b.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // rtc_b.c - Driver for the rtc_b Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup rtc_b_api rtc_b
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_RTC_B__
+//   48 #include "rtc_b.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 void RTC_B_startClock (uint16_t baseAddress)
+//   53 {
+//   54     HWREG8(baseAddress + OFS_RTCCTL01_H) &= ~(RTCHOLD_H);
+//   55 }
+//   56 
+//   57 void RTC_B_holdClock (uint16_t baseAddress)
+//   58 {
+//   59     HWREG8(baseAddress + OFS_RTCCTL01_H) |= RTCHOLD_H;
+//   60 }
+//   61 
+//   62 void RTC_B_setCalibrationFrequency (uint16_t baseAddress,
+//   63     uint16_t frequencySelect)
+//   64 {
+//   65     HWREG16(baseAddress + OFS_RTCCTL23) &= ~(RTCCALF_3);
+//   66     HWREG16(baseAddress + OFS_RTCCTL23) |= frequencySelect;
+//   67 }
+//   68 
+//   69 void RTC_B_setCalibrationData (uint16_t baseAddress,
+//   70     uint8_t offsetDirection,
+//   71     uint8_t offsetValue)
+//   72 {
+//   73     HWREG8(baseAddress + OFS_RTCCTL23_L) = offsetValue + offsetDirection;
+//   74 }
+//   75 
+//   76 void RTC_B_initCalendar (uint16_t baseAddress,
+//   77     Calendar *CalendarTime,
+//   78     uint16_t formatSelect)
+//   79 {
+//   80     HWREG8(baseAddress + OFS_RTCCTL01_H) |= RTCHOLD_H;
+//   81 
+//   82     HWREG16(baseAddress + OFS_RTCCTL01) &= ~(RTCBCD);
+//   83     HWREG16(baseAddress + OFS_RTCCTL01) |= formatSelect;
+//   84 
+//   85     HWREG8(baseAddress + OFS_RTCTIM0_L) = CalendarTime->Seconds;
+//   86     HWREG8(baseAddress + OFS_RTCTIM0_H) = CalendarTime->Minutes;
+//   87     HWREG8(baseAddress + OFS_RTCTIM1_L) = CalendarTime->Hours;
+//   88     HWREG8(baseAddress + OFS_RTCTIM1_H) = CalendarTime->DayOfWeek;
+//   89     HWREG8(baseAddress + OFS_RTCDATE_L) = CalendarTime->DayOfMonth;
+//   90     HWREG8(baseAddress + OFS_RTCDATE_H) = CalendarTime->Month;
+//   91     HWREG16(baseAddress + OFS_RTCYEAR) = CalendarTime->Year;
+//   92 }
+//   93 
+//   94 Calendar RTC_B_getCalendarTime (uint16_t baseAddress)
+//   95 {
+//   96     Calendar tempCal;
+//   97 
+//   98     while ( !(HWREG16(baseAddress + OFS_RTCCTL01) & RTCRDY) ) ;
+//   99 
+//  100     tempCal.Seconds    = HWREG8(baseAddress + OFS_RTCTIM0_L);
+//  101     tempCal.Minutes    = HWREG8(baseAddress + OFS_RTCTIM0_H);
+//  102     tempCal.Hours      = HWREG8(baseAddress + OFS_RTCTIM1_L);
+//  103     tempCal.DayOfWeek  = HWREG8(baseAddress + OFS_RTCTIM1_H);
+//  104     tempCal.DayOfMonth = HWREG8(baseAddress + OFS_RTCDATE_L);
+//  105     tempCal.Month      = HWREG8(baseAddress + OFS_RTCDATE_H);
+//  106     tempCal.Year       = HWREG16(baseAddress + OFS_RTCYEAR);
+//  107 
+//  108     return ( tempCal) ;
+//  109 }
+//  110 
+//  111 void RTC_B_configureCalendarAlarm(uint16_t baseAddress, 
+//  112     RTC_B_configureCalendarAlarmParam *param)
+//  113 {
+//  114     //Each of these is XORed with 0x80 to turn on if an integer is passed,
+//  115     //or turn OFF if RTC_B_ALARM_OFF (0x80) is passed.
+//  116     HWREG8(baseAddress + OFS_RTCAMINHR_L) = (param->minutesAlarm ^ 0x80);
+//  117     HWREG8(baseAddress + OFS_RTCAMINHR_H) = (param->hoursAlarm ^ 0x80);
+//  118     HWREG8(baseAddress + OFS_RTCADOWDAY_L) = (param->dayOfWeekAlarm ^ 0x80);
+//  119     HWREG8(baseAddress + OFS_RTCADOWDAY_H) = (param->dayOfMonthAlarm ^ 0x80);
+//  120 }
+//  121 void RTC_B_setCalendarEvent (uint16_t baseAddress,
+//  122     uint16_t eventSelect)
+//  123 {
+//  124     HWREG16(baseAddress + OFS_RTCCTL01) &= ~(RTCTEV_3); //Reset bits
+//  125     HWREG16(baseAddress + OFS_RTCCTL01) |= eventSelect;
+//  126 }
+//  127 
+//  128 void RTC_B_definePrescaleEvent (uint16_t baseAddress,
+//  129     uint8_t prescaleSelect,
+//  130     uint8_t prescaleEventDivider)
+//  131 {
+//  132     HWREG8(baseAddress + OFS_RTCPS0CTL_L + prescaleSelect) &= ~(RT0IP_7);
+//  133     HWREG8(baseAddress + OFS_RTCPS0CTL_L +
+//  134         prescaleSelect) |= prescaleEventDivider;
+//  135 }
+//  136 
+//  137 uint8_t RTC_B_getPrescaleValue (uint16_t baseAddress,
+//  138     uint8_t prescaleSelect)
+//  139 {
+//  140     if (RTC_B_PRESCALE_0 == prescaleSelect){
+//  141         return ( HWREG8(baseAddress + OFS_RTCPS_L) );
+//  142     } else if (RTC_B_PRESCALE_1 == prescaleSelect){
+//  143         return ( HWREG8(baseAddress + OFS_RTCPS_H) );
+//  144     } else   {
+//  145         return ( 0) ;
+//  146     }
+//  147 }
+//  148 
+//  149 void RTC_B_setPrescaleValue (uint16_t baseAddress,
+//  150     uint8_t prescaleSelect,
+//  151     uint8_t prescaleCounterValue)
+//  152 {
+//  153     if (RTC_B_PRESCALE_0 == prescaleSelect){
+//  154         HWREG8(baseAddress + OFS_RTCPS_L) = prescaleCounterValue;
+//  155     } else if (RTC_B_PRESCALE_1 == prescaleSelect){
+//  156         HWREG8(baseAddress + OFS_RTCPS_H) = prescaleCounterValue;
+//  157     }
+//  158 }
+//  159 
+//  160 void RTC_B_enableInterrupt (uint16_t baseAddress,
+//  161     uint8_t interruptMask)
+//  162 {
+//  163     if ( interruptMask & (RTCOFIE + RTCTEVIE + RTCAIE + RTCRDYIE) ){
+//  164         HWREG8(baseAddress + OFS_RTCCTL01_L) |=
+//  165             (interruptMask & (RTCOFIE + RTCTEVIE + RTCAIE + RTCRDYIE));
+//  166     }
+//  167 
+//  168     if (interruptMask & RTC_B_PRESCALE_TIMER0_INTERRUPT){
+//  169         HWREG8(baseAddress + OFS_RTCPS0CTL) |= RT0PSIE;
+//  170     }
+//  171 
+//  172     if (interruptMask & RTC_B_PRESCALE_TIMER1_INTERRUPT){
+//  173         HWREG8(baseAddress + OFS_RTCPS1CTL) |= RT1PSIE;
+//  174     }
+//  175 }
+//  176 
+//  177 void RTC_B_disableInterrupt (uint16_t baseAddress,
+//  178     uint8_t interruptMask)
+//  179 {
+//  180     if ( interruptMask & (RTCOFIE + RTCTEVIE + RTCAIE + RTCRDYIE) ){
+//  181         HWREG8(baseAddress + OFS_RTCCTL01_L) &=
+//  182             ~(interruptMask & (RTCOFIE + RTCTEVIE + RTCAIE + RTCRDYIE));
+//  183     }
+//  184 
+//  185     if (interruptMask & RTC_B_PRESCALE_TIMER0_INTERRUPT){
+//  186         HWREG8(baseAddress + OFS_RTCPS0CTL) &= ~(RT0PSIE);
+//  187     }
+//  188 
+//  189     if (interruptMask & RTC_B_PRESCALE_TIMER1_INTERRUPT){
+//  190         HWREG8(baseAddress + OFS_RTCPS1CTL) &= ~(RT1PSIE);
+//  191     }
+//  192 }
+//  193 
+//  194 uint8_t RTC_B_getInterruptStatus (uint16_t baseAddress,
+//  195     uint8_t interruptFlagMask)
+//  196 {
+//  197     uint8_t tempInterruptFlagMask = 0x0000;
+//  198 
+//  199     tempInterruptFlagMask |= (HWREG8(baseAddress + OFS_RTCCTL01_L)
+//  200                               & ((interruptFlagMask >> 4)
+//  201                                  & (RTCOFIFG +
+//  202                                     RTCTEVIFG +
+//  203                                     RTCAIFG +
+//  204                                     RTCRDYIFG)));
+//  205 
+//  206     tempInterruptFlagMask = tempInterruptFlagMask << 4;
+//  207 
+//  208     if (interruptFlagMask & RTC_B_PRESCALE_TIMER0_INTERRUPT){
+//  209         if ( HWREG8(baseAddress + OFS_RTCPS0CTL) & RT0PSIFG){
+//  210             tempInterruptFlagMask |= RTC_B_PRESCALE_TIMER0_INTERRUPT;
+//  211         }
+//  212     }
+//  213 
+//  214     if (interruptFlagMask & RTC_B_PRESCALE_TIMER1_INTERRUPT){
+//  215         if ( HWREG8(baseAddress + OFS_RTCPS1CTL) & RT1PSIFG){
+//  216             tempInterruptFlagMask |= RTC_B_PRESCALE_TIMER1_INTERRUPT;
+//  217         }
+//  218     }
+//  219 
+//  220     return ( tempInterruptFlagMask) ;
+//  221 }
+//  222 
+//  223 void RTC_B_clearInterrupt (uint16_t baseAddress,
+//  224     uint8_t interruptFlagMask)
+//  225 {
+//  226     if ( interruptFlagMask & (RTC_B_TIME_EVENT_INTERRUPT +
+//  227                               RTC_B_CLOCK_ALARM_INTERRUPT +
+//  228                               RTC_B_CLOCK_READ_READY_INTERRUPT +
+//  229                               RTC_B_OSCILLATOR_FAULT_INTERRUPT) ){
+//  230 
+//  231         HWREG8(baseAddress + OFS_RTCCTL01_L) &=
+//  232             ~((interruptFlagMask>>4) & (RTCOFIFG +
+//  233                                         RTCTEVIFG +
+//  234                                         RTCAIFG +
+//  235                                         RTCRDYIFG));
+//  236     }
+//  237 
+//  238     if (interruptFlagMask & RTC_B_PRESCALE_TIMER0_INTERRUPT){
+//  239         HWREG8(baseAddress + OFS_RTCPS0CTL) &= ~(RT0PSIFG);
+//  240     }
+//  241 
+//  242     if (interruptFlagMask & RTC_B_PRESCALE_TIMER1_INTERRUPT){
+//  243         HWREG8(baseAddress + OFS_RTCPS1CTL) &= ~(RT1PSIFG);
+//  244     }
+//  245 }
+//  246 
+//  247 uint16_t RTC_B_convertBCDToBinary (uint16_t baseAddress,
+//  248     uint16_t valueToConvert)
+//  249 {
+//  250     HWREG16(baseAddress + OFS_BCD2BIN) = valueToConvert;
+//  251     return ( HWREG16(baseAddress + OFS_BCD2BIN) );
+//  252 }
+//  253 
+//  254 uint16_t RTC_B_convertBinaryToBCD (uint16_t baseAddress,
+//  255     uint16_t valueToConvert)
+//  256 {
+//  257     HWREG16(baseAddress + OFS_BIN2BCD) = valueToConvert;
+//  258     return ( HWREG16(baseAddress + OFS_BIN2BCD) );
+//  259 }
+//  260 
+//  261 
+//  262 #endif
+//  263 //*****************************************************************************
+//  264 //
+//  265 //! Close the doxygen group for rtc_b_api
+//  266 //! @}
+//  267 //
+//  268 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,900 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:05
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\adc12_a.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW14AC.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\adc12_a.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\adc12_a.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME adc12_a
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC ADC12_A_clearInterrupt
+        PUBLIC ADC12_A_configureMemory
+        PUBLIC ADC12_A_disable
+        PUBLIC ADC12_A_disableConversions
+        PUBLIC ADC12_A_disableInterrupt
+        PUBLIC ADC12_A_disableReferenceBurst
+        PUBLIC ADC12_A_disableSamplingTimer
+        PUBLIC ADC12_A_enable
+        PUBLIC ADC12_A_enableInterrupt
+        PUBLIC ADC12_A_enableReferenceBurst
+        PUBLIC ADC12_A_getInterruptStatus
+        PUBLIC ADC12_A_getMemoryAddressForDMA
+        PUBLIC ADC12_A_getResults
+        PUBLIC ADC12_A_init
+        PUBLIC ADC12_A_isBusy
+        PUBLIC ADC12_A_setDataReadBackFormat
+        PUBLIC ADC12_A_setReferenceBufferSamplingRate
+        PUBLIC ADC12_A_setResolution
+        PUBLIC ADC12_A_setSampleHoldSignalInversion
+        PUBLIC ADC12_A_setupSamplingTimer
+        PUBLIC ADC12_A_startConversion
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\adc12_a.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // adc12_a.c - Driver for the adc12_a Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup adc12_a_api adc12_a
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_ADC12_PLUS__
+//   48 #include "adc12_a.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 bool ADC12_A_init (uint16_t baseAddress,
+ADC12_A_init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function ADC12_A_init
+          CFI NoCalls
+//   53     uint16_t sampleHoldSignalSourceSelect,
+//   54     uint8_t clockSourceSelect,
+//   55     uint16_t clockSourceDivider)
+//   56 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.W   R12, R10
+        MOV.W   R15, R11
+//   57     //Make sure the ENC bit is cleared before initializing the ADC12_A
+//   58     HWREG8(baseAddress + OFS_ADC12CTL0_L) &= ~ADC12ENC;
+        MOV.W   R10, R15
+        BIC.B   #0x2, 0(R15)
+//   59 
+//   60     bool retVal = STATUS_SUCCESS;
+        MOV.B   #0x1, R12
+//   61 
+//   62     //Turn OFF ADC12_A Module & Clear Interrupt Registers
+//   63     HWREG16(baseAddress + OFS_ADC12CTL0) &= ~(ADC12ON + ADC12OVIE + ADC12TOVIE
+//   64                                             + ADC12ENC + ADC12SC);
+        AND.W   #0xffe0, 0(R10)
+//   65     HWREG16(baseAddress + OFS_ADC12IE)   &= 0x0000; //Reset ALL interrupt enables
+        MOV.W   R10, R15
+        ADD.W   #0xc, R15
+        MOV.W   @R15, R8
+        MOV.W   R10, R15
+        ADD.W   #0xc, R15
+        MOV.W   #0x0, 0(R15)
+//   66     HWREG16(baseAddress + OFS_ADC12IFG)  &= 0x0000; //Reset ALL interrupt flags
+        MOV.W   R10, R15
+        ADD.W   #0xa, R15
+        MOV.W   @R15, R9
+        MOV.W   R10, R15
+        ADD.W   #0xa, R15
+        MOV.W   #0x0, 0(R15)
+//   67 
+//   68     //Set ADC12_A Control 1
+//   69     HWREG16(baseAddress + OFS_ADC12CTL1) =
+//   70         sampleHoldSignalSourceSelect //Setup the Sample-and-Hold Source
+//   71         + (clockSourceDivider & ADC12DIV_7) //Set Clock Divider
+//   72         + clockSourceSelect; //Setup Clock Source
+        MOV.W   R11, R15
+        AND.W   #0xe0, R15
+        MOV.W   R13, R6
+        ADD.W   R15, R6
+        MOV.B   R14, R14
+        ADD.W   R14, R6
+        MOV.W   R10, R15
+        ADD.W   #0x2, R15
+        MOV.W   R6, 0(R15)
+//   73 
+//   74     //Set ADC12_A Control 2
+//   75     HWREG16(baseAddress + OFS_ADC12CTL2) =
+//   76         (clockSourceDivider & ADC12PDIV) //Set Clock Pre-Divider
+//   77         + ADC12RES_2; //Default resolution to 12-bits
+        MOV.W   R11, R6
+        AND.W   #0x100, R6
+        ADD.W   #0x20, R6
+        MOV.W   R10, R15
+        ADD.W   #0x4, R15
+        MOV.W   R6, 0(R15)
+//   78 
+//   79     return ( retVal) ;
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//   80 }
+          CFI EndBlock cfiBlock0
+//   81 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   82 void ADC12_A_enable (uint16_t baseAddress)
+ADC12_A_enable:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function ADC12_A_enable
+          CFI NoCalls
+//   83 {
+//   84     //Enable the ADC12_A Module
+//   85     HWREG8(baseAddress + OFS_ADC12CTL0_L) |= ADC12ON;
+        MOV.W   R12, R15
+        BIS.B   #0x10, 0(R15)
+//   86 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   87 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   88 void ADC12_A_disable (uint16_t baseAddress)
+ADC12_A_disable:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function ADC12_A_disable
+          CFI NoCalls
+//   89 {
+//   90     //Disable ADC12_A module
+//   91     HWREG8(baseAddress + OFS_ADC12CTL0_L) &= ~ADC12ON;
+        MOV.W   R12, R15
+        BIC.B   #0x10, 0(R15)
+//   92 }
+        RETA
+          CFI EndBlock cfiBlock2
+//   93 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   94 void ADC12_A_setupSamplingTimer (uint16_t baseAddress,
+ADC12_A_setupSamplingTimer:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function ADC12_A_setupSamplingTimer
+          CFI NoCalls
+//   95     uint16_t clockCycleHoldCountLowMem,
+//   96     uint16_t clockCycleHoldCountHighMem,
+//   97     uint16_t multipleSamplesEnabled)
+//   98 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+//   99     HWREG16(baseAddress + OFS_ADC12CTL1) |= ADC12SHP;
+        MOV.W   R10, R12
+        ADD.W   #0x2, R12
+        BIS.W   #0x200, 0(R12)
+//  100 
+//  101     //Reset clock cycle hold counts and msc bit before setting them
+//  102     HWREG16(baseAddress + OFS_ADC12CTL0) &=
+//  103         ~(ADC12SHT0_15 + ADC12SHT1_15 + ADC12MSC);
+        AND.W   #0x7f, 0(R10)
+//  104 
+//  105     //Set clock cycle hold counts and msc bit
+//  106     HWREG16(baseAddress + OFS_ADC12CTL0) |= clockCycleHoldCountLowMem
+//  107                                           + (clockCycleHoldCountHighMem << 4)
+//  108                                           + multipleSamplesEnabled;
+        MOV.W   R14, R12
+        RLAM.W  #0x4, R12
+        MOV.W   R13, R11
+        ADD.W   R12, R11
+        ADD.W   R15, R11
+        BIS.W   R11, 0(R10)
+//  109 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//  110 
+//  111 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  112 void ADC12_A_disableSamplingTimer (uint16_t baseAddress)
+ADC12_A_disableSamplingTimer:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function ADC12_A_disableSamplingTimer
+          CFI NoCalls
+//  113 {
+//  114     HWREG16(baseAddress + OFS_ADC12CTL1) &= ~(ADC12SHP);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIC.W   #0x200, 0(R15)
+//  115 }
+        RETA
+          CFI EndBlock cfiBlock4
+//  116 
+//  117 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  118 void ADC12_A_configureMemory(uint16_t baseAddress,
+ADC12_A_configureMemory:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function ADC12_A_configureMemory
+          CFI NoCalls
+//  119     ADC12_A_configureMemoryParam *param)
+//  120 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//  121     //Make sure the ENC bit is cleared before configuring a Memory Buffer Control
+//  122     assert( !(HWREG16(baseAddress + OFS_ADC12CTL0) & ADC12ENC) );
+//  123 
+//  124     if(!(HWREG16(baseAddress + OFS_ADC12CTL0) & ADC12ENC))
+        BIT.W   #0x2, 0(R12)
+        JC      ??ADC12_A_configureMemory_0
+//  125     {
+//  126         //Set the offset in respect to ADC12MCTL0
+//  127         uint16_t memoryBufferControlOffset =
+//  128             (OFS_ADC12MCTL0 + param->memoryBufferControlIndex);
+        MOV.B   @R13, R14
+        MOV.B   R14, R14
+        ADD.W   #0x10, R14
+//  129 
+//  130         //Reset the memory buffer control and Set the input source
+//  131         HWREG8(baseAddress + memoryBufferControlOffset) =
+//  132             param->inputSourceSelect //Set Input Source
+//  133             + param->positiveRefVoltageSourceSelect //Set Vref+
+//  134             + param->negativeRefVoltageSourceSelect //Set Vref-
+//  135             + param->endOfSequence; //Set End of Sequence
+        MOV.B   0x1(R13), R10
+        ADD.B   0x2(R13), R10
+        ADD.B   0x3(R13), R10
+        ADD.B   0x4(R13), R10
+        MOV.W   R12, R15
+        ADD.W   R14, R15
+        MOV.B   R10, 0(R15)
+//  136     }
+//  137 }
+??ADC12_A_configureMemory_0:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  138 void ADC12_A_enableInterrupt (uint16_t baseAddress,
+ADC12_A_enableInterrupt:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function ADC12_A_enableInterrupt
+          CFI NoCalls
+//  139     uint32_t interruptMask)
+//  140 {
+//  141     if (interruptMask & ADC12_A_CONVERSION_TIME_OVERFLOW_IE) {
+        BIT.W   #0x4, R15
+        JNC     ??ADC12_A_enableInterrupt_0
+//  142         HWREG16(baseAddress + OFS_ADC12CTL0) |= ADC12TOVIE;
+        MOV.W   R12, R13
+        BIS.W   #0x4, 0(R13)
+//  143         interruptMask &= ~ADC12_A_CONVERSION_TIME_OVERFLOW_IE;
+        BIC.W   #0x4, R15
+//  144     }
+//  145     if (interruptMask & ADC12_A_OVERFLOW_IE) {
+??ADC12_A_enableInterrupt_0:
+        BIT.W   #0x8, R15
+        JNC     ??ADC12_A_enableInterrupt_1
+//  146         HWREG16(baseAddress + OFS_ADC12CTL0) |= ADC12OVIE;
+        MOV.W   R12, R13
+        BIS.W   #0x8, 0(R13)
+//  147         interruptMask &= ~ADC12_A_OVERFLOW_IE;
+        BIC.W   #0x8, R15
+//  148     }
+//  149 
+//  150     HWREG16(baseAddress + OFS_ADC12IE) |= interruptMask;
+??ADC12_A_enableInterrupt_1:
+        MOV.W   R12, R13
+        ADD.W   #0xc, R13
+        BIS.W   R14, 0(R13)
+//  151 }
+        RETA
+          CFI EndBlock cfiBlock6
+//  152 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  153 void ADC12_A_disableInterrupt (uint16_t baseAddress,
+ADC12_A_disableInterrupt:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function ADC12_A_disableInterrupt
+          CFI NoCalls
+//  154     uint32_t interruptMask)
+//  155 {
+//  156     if (interruptMask & ADC12_A_CONVERSION_TIME_OVERFLOW_IE) {
+        BIT.W   #0x4, R15
+        JNC     ??ADC12_A_disableInterrupt_0
+//  157         HWREG16(baseAddress + OFS_ADC12CTL0) &= ~(ADC12TOVIE);
+        MOV.W   R12, R13
+        BIC.W   #0x4, 0(R13)
+//  158         interruptMask &= ~ADC12_A_CONVERSION_TIME_OVERFLOW_IE;
+        BIC.W   #0x4, R15
+//  159     }
+//  160     if (interruptMask & ADC12_A_OVERFLOW_IE) {
+??ADC12_A_disableInterrupt_0:
+        BIT.W   #0x8, R15
+        JNC     ??ADC12_A_disableInterrupt_1
+//  161         HWREG16(baseAddress + OFS_ADC12CTL0) &= ~(ADC12OVIE);
+        MOV.W   R12, R13
+        BIC.W   #0x8, 0(R13)
+//  162         interruptMask &= ~ADC12_A_OVERFLOW_IE;
+        BIC.W   #0x8, R15
+//  163     }
+//  164 
+//  165     HWREG16(baseAddress + OFS_ADC12IE) &= ~(interruptMask);
+??ADC12_A_disableInterrupt_1:
+        MOV.W   R12, R13
+        ADD.W   #0xc, R13
+        BIC.W   R14, 0(R13)
+//  166 }
+        RETA
+          CFI EndBlock cfiBlock7
+//  167 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  168 void ADC12_A_clearInterrupt (uint16_t baseAddress,
+ADC12_A_clearInterrupt:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function ADC12_A_clearInterrupt
+          CFI NoCalls
+//  169     uint16_t memoryInterruptFlagMask)
+//  170 {
+//  171     HWREG16(baseAddress + OFS_ADC12IFG) &= ~(memoryInterruptFlagMask);
+        MOV.W   R12, R15
+        ADD.W   #0xa, R15
+        BIC.W   R13, 0(R15)
+//  172 }
+        RETA
+          CFI EndBlock cfiBlock8
+//  173 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  174 uint16_t ADC12_A_getInterruptStatus (uint16_t baseAddress,
+ADC12_A_getInterruptStatus:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function ADC12_A_getInterruptStatus
+          CFI NoCalls
+//  175     uint16_t memoryInterruptFlagMask)
+//  176 {
+//  177     return ( HWREG16(baseAddress + OFS_ADC12IFG) & memoryInterruptFlagMask );
+        ADD.W   #0xa, R12
+        AND.W   @R12, R13
+        MOV.W   R13, R12
+        RETA
+//  178 }
+          CFI EndBlock cfiBlock9
+//  179 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  180 void ADC12_A_startConversion (uint16_t baseAddress,
+ADC12_A_startConversion:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function ADC12_A_startConversion
+          CFI NoCalls
+//  181     uint16_t startingMemoryBufferIndex,
+//  182     uint8_t conversionSequenceModeSelect)
+//  183 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//  184     //Reset the ENC bit to set the starting memory address and conversion mode
+//  185     //sequence
+//  186     HWREG8(baseAddress + OFS_ADC12CTL0_L) &= ~(ADC12ENC);
+        MOV.W   R12, R15
+        BIC.B   #0x2, 0(R15)
+//  187     //Reset the bits about to be set
+//  188     HWREG16(baseAddress + OFS_ADC12CTL1) &= ~(ADC12CSTARTADD_15 + ADC12CONSEQ_3);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        AND.W   #0xff9, 0(R15)
+//  189 
+//  190     HWREG8(baseAddress + OFS_ADC12CTL1_H) |= (startingMemoryBufferIndex << 4);
+        MOV.W   R12, R15
+        ADD.W   #0x3, R15
+        PUSH.W  R10
+          CFI CFA SP+10
+        MOV.B   R13, 0(SP)
+        POP.W   R10
+          CFI CFA SP+8
+        RPT     #0x4
+        RLAX.B  R10
+        BIS.B   R10, 0(R15)
+//  191     HWREG8(baseAddress + OFS_ADC12CTL1_L) |= conversionSequenceModeSelect;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.B   R14, 0(R15)
+//  192     HWREG8(baseAddress + OFS_ADC12CTL0_L) |= ADC12ENC + ADC12SC;
+        BIS.B   #0x3, 0(R12)
+//  193 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock10
+//  194 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  195 void ADC12_A_disableConversions (uint16_t baseAddress, bool preempt)
+ADC12_A_disableConversions:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function ADC12_A_disableConversions
+//  196 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R11
+        MOV.B   R13, R10
+//  197     if (ADC12_A_PREEMPTCONVERSION == preempt) {
+        CMP.B   #0x0, R10
+        JEQ     ??ADC12_A_disableConversions_2
+//  198         HWREG8(baseAddress + OFS_ADC12CTL1_L) &= ~(ADC12CONSEQ_3);
+        MOV.W   R11, R15
+        ADD.W   #0x2, R15
+        AND.B   #0xf9, 0(R15)
+        JMP     ??ADC12_A_disableConversions_1
+//  199         //Reset conversion sequence mode to single-channel, single-conversion
+//  200     } 
+//  201     else if (~(HWREG8(baseAddress + OFS_ADC12CTL1_L) & ADC12CONSEQ_3)) {
+??ADC12_A_disableConversions_2:
+        MOV.W   R11, R15
+        ADD.W   #0x2, R15
+        MOV.B   @R15, R14
+//  202         //To prevent preemoption of a single-channel, single-conversion we must
+//  203         //wait for the ADC core to finish the conversion.
+//  204         while (ADC12_A_isBusy(baseAddress)) ;
+??ADC12_A_disableConversions_0:
+        MOV.W   R11, R12
+          CFI FunCall ADC12_A_isBusy
+        CALLA   #ADC12_A_isBusy
+        CMP.W   #0x0, R12
+        JNE     ??ADC12_A_disableConversions_0
+//  205     }
+//  206 
+//  207     HWREG8(baseAddress + OFS_ADC12CTL0_L) &= ~(ADC12ENC);
+??ADC12_A_disableConversions_1:
+        MOV.W   R11, R15
+        BIC.B   #0x2, 0(R15)
+//  208 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock11
+//  209 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  210 uint16_t ADC12_A_getResults (uint16_t baseAddress, uint8_t memoryBufferIndex)
+ADC12_A_getResults:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function ADC12_A_getResults
+          CFI NoCalls
+//  211 {
+//  212     //(0x20 + (memoryBufferIndex * 2)) == offset of ADC12MEMx
+//  213     return ( HWREG16(baseAddress + (0x20 + (memoryBufferIndex * 2))) );
+        MOV.B   R13, R13
+        RLA.W   R13
+        ADD.W   #0x20, R13
+        ADD.W   R13, R12
+        MOV.W   @R12, R12
+        RETA
+//  214 }
+          CFI EndBlock cfiBlock12
+//  215 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  216 void ADC12_A_setResolution (uint16_t baseAddress,
+ADC12_A_setResolution:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function ADC12_A_setResolution
+          CFI NoCalls
+//  217     uint8_t resolutionSelect)
+//  218 {
+//  219     HWREG8(baseAddress + OFS_ADC12CTL2_L) &= ~(ADC12RES_3);
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        AND.B   #0xcf, 0(R15)
+//  220     HWREG8(baseAddress + OFS_ADC12CTL2_L) |= resolutionSelect;
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIS.B   R13, 0(R15)
+//  221 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  222 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  223 void ADC12_A_setSampleHoldSignalInversion (uint16_t baseAddress,
+ADC12_A_setSampleHoldSignalInversion:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function ADC12_A_setSampleHoldSignalInversion
+          CFI NoCalls
+//  224     uint16_t invertedSignal)
+//  225 {
+//  226     HWREG16(baseAddress + OFS_ADC12CTL1) &= ~(ADC12ISSH);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIC.W   #0x100, 0(R15)
+//  227     HWREG16(baseAddress + OFS_ADC12CTL1) |= invertedSignal;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   R13, 0(R15)
+//  228 }
+        RETA
+          CFI EndBlock cfiBlock14
+//  229 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  230 void ADC12_A_setDataReadBackFormat (uint16_t baseAddress,
+ADC12_A_setDataReadBackFormat:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function ADC12_A_setDataReadBackFormat
+          CFI NoCalls
+//  231     uint8_t readBackFormat)
+//  232 {
+//  233     HWREG8(baseAddress + OFS_ADC12CTL2_L) &= ~(ADC12DF);
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIC.B   #0x8, 0(R15)
+//  234     HWREG8(baseAddress + OFS_ADC12CTL2_L) |= readBackFormat;
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIS.B   R13, 0(R15)
+//  235 }
+        RETA
+          CFI EndBlock cfiBlock15
+//  236 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  237 void ADC12_A_enableReferenceBurst (uint16_t baseAddress)
+ADC12_A_enableReferenceBurst:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function ADC12_A_enableReferenceBurst
+          CFI NoCalls
+//  238 {
+//  239     HWREG8(baseAddress + OFS_ADC12CTL2_L) |= ADC12REFBURST;
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIS.B   #0x1, 0(R15)
+//  240 }
+        RETA
+          CFI EndBlock cfiBlock16
+//  241 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  242 void ADC12_A_disableReferenceBurst (uint16_t baseAddress)
+ADC12_A_disableReferenceBurst:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function ADC12_A_disableReferenceBurst
+          CFI NoCalls
+//  243 {
+//  244     HWREG8(baseAddress + OFS_ADC12CTL2_L) &= ~(ADC12REFBURST);
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIC.B   #0x1, 0(R15)
+//  245 }
+        RETA
+          CFI EndBlock cfiBlock17
+//  246 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  247 void ADC12_A_setReferenceBufferSamplingRate (uint16_t baseAddress,
+ADC12_A_setReferenceBufferSamplingRate:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function ADC12_A_setReferenceBufferSamplingRate
+          CFI NoCalls
+//  248     uint8_t samplingRateSelect)
+//  249 {
+//  250     HWREG8(baseAddress + OFS_ADC12CTL2_L) &= ~(ADC12SR);
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIC.B   #0x4, 0(R15)
+//  251     HWREG8(baseAddress + OFS_ADC12CTL2_L) |= samplingRateSelect;
+        MOV.W   R12, R15
+        ADD.W   #0x4, R15
+        BIS.B   R13, 0(R15)
+//  252 }
+        RETA
+          CFI EndBlock cfiBlock18
+//  253 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  254 uint32_t ADC12_A_getMemoryAddressForDMA (uint16_t baseAddress,
+ADC12_A_getMemoryAddressForDMA:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function ADC12_A_getMemoryAddressForDMA
+          CFI NoCalls
+//  255     uint8_t memoryIndex)
+//  256 {
+//  257     return ( baseAddress + (0x20 + (memoryIndex * 2)) );
+        MOV.B   R13, R13
+        RLA.W   R13
+        ADD.W   #0x20, R13
+        ADD.W   R13, R12
+        MOV.W   #0x0, R13
+        RETA
+//  258 }
+          CFI EndBlock cfiBlock19
+//  259 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  260 uint16_t ADC12_A_isBusy (uint16_t baseAddress)
+ADC12_A_isBusy:
+          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Function ADC12_A_isBusy
+          CFI NoCalls
+//  261 {
+//  262     return (HWREG8(baseAddress + OFS_ADC12CTL1_L) & ADC12BUSY);
+        ADD.W   #0x2, R12
+        MOV.B   @R12, R12
+        AND.B   #0x1, R12
+        RETA
+//  263 }
+          CFI EndBlock cfiBlock20
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  264 
+//  265 
+//  266 #endif
+//  267 //*****************************************************************************
+//  268 //
+//  269 //! Close the doxygen group for adc12_a_api
+//  270 //! @}
+//  271 //
+//  272 //*****************************************************************************
+// 
+// 546 bytes in segment CODE
+// 
+// 546 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,271 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:10
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\oa.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW28F5.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\oa.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\oa.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME oa
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\oa.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // oa.c - Driver for the oa Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup oa_api oa
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_OA_0__
+//   48 #include "oa.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 void OA_openSwitch( uint16_t baseAddress,
+//   53                     uint8_t positiveInputMask,
+//   54                     uint8_t negativeInputMask,
+//   55                     uint8_t groundMask
+//   56                   )
+//   57 {
+//   58     HWREG16(baseAddress + OFS_OA0PSW) &= ~positiveInputMask;
+//   59     HWREG16(baseAddress + OFS_OA0NSW) &= ~negativeInputMask;
+//   60     HWREG16(baseAddress + OFS_OA0GSW) &= ~groundMask;
+//   61 }
+//   62 
+//   63 void OA_closeSwitch(uint16_t baseAddress,
+//   64                     uint8_t positiveInputMask,
+//   65                     uint8_t negativeInputMask,
+//   66                     uint8_t groundMask
+//   67                   )
+//   68 {
+//   69 
+//   70     HWREG16(baseAddress + OFS_OA0PSW) |= positiveInputMask;
+//   71     HWREG16(baseAddress + OFS_OA0NSW) |= negativeInputMask;
+//   72     HWREG16(baseAddress + OFS_OA0GSW) |= groundMask;
+//   73 }
+//   74 
+//   75 uint8_t OA_getSwitchStatus(uint16_t baseAddress,
+//   76                         uint8_t inputTerminal
+//   77                         )
+//   78 {
+//   79     uint8_t returnValue = 0;
+//   80 
+//   81     switch(inputTerminal)
+//   82     {
+//   83         case OA_POSITIVE_INPUT_TERMINAL_SWITCHES:
+//   84             returnValue = (HWREG16(baseAddress + OFS_OA0PSW) & (PSW3 |
+//   85                                                             PSW2 |
+//   86                                                             PSW1 |
+//   87                                                             PSW0)
+//   88                                                             );
+//   89             break;
+//   90         case OA_NEGATIVE_INPUT_TERMINAL_SWITCHES:
+//   91             returnValue = (HWREG16(baseAddress + OFS_OA0NSW) & (NSW4 |
+//   92                                                             NSW3 |
+//   93                                                             NSW2 |
+//   94                                                             NSW1 |
+//   95                                                             NSW0)
+//   96                                                             );
+//   97             break;
+//   98         case OA_GROUND_SWITCHES:
+//   99             returnValue = (HWREG16(baseAddress + OFS_OA0GSW) & (GSW1 |
+//  100                                                             GSW0)
+//  101                                                             );
+//  102             break;
+//  103     }
+//  104 
+//  105     return returnValue;
+//  106 
+//  107 }
+//  108 
+//  109 uint8_t OA_getRailToRailInputReadyStatus(uint16_t baseAddress)
+//  110 {
+//  111     return ((HWREG8(baseAddress + OFS_OA0CTL0) & OARRIRDY));
+//  112 }
+//  113 
+//  114 uint8_t OA_getRailToRailInputStatus(uint16_t baseAddress)
+//  115 {
+//  116     return ((HWREG8(baseAddress + OFS_OA0CTL0) & OARRI));
+//  117 }
+//  118 
+//  119 void OA_enableRailToRailInput(uint16_t baseAddress)
+//  120 {
+//  121     HWREG8(baseAddress + OFS_OA0CTL0) |= OARRI;
+//  122 }
+//  123 
+//  124 void OA_disableRailToRailInput(uint16_t baseAddress)
+//  125 {
+//  126     HWREG8(baseAddress + OFS_OA0CTL0) &= ~OARRI;
+//  127 }
+//  128 
+//  129 void OA_disableAmplifierMode(uint16_t baseAddress)
+//  130 {
+//  131     HWREG8(baseAddress + OFS_OA0CTL0) &= ~OAM;
+//  132 }
+//  133 
+//  134 void OA_enableAmplifierMode(uint16_t baseAddress)
+//  135 {
+//  136     HWREG8(baseAddress + OFS_OA0CTL0) |= OAM;
+//  137 }
+//  138 
+//  139 uint8_t OA_getAmplifierModeStatus(uint16_t baseAddress)
+//  140 {
+//  141     return ((HWREG8(baseAddress + OFS_OA0CTL0) & OAM));
+//  142 }
+//  143 
+//  144 #endif
+//  145 //*****************************************************************************
+//  146 //
+//  147 //! Close the doxygen group for oa_api
+//  148 //! @}
+//  149 //
+//  150 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

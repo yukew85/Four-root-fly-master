@@ -1,0 +1,801 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:41
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\GY521.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWD11D.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\GY521.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\GY521.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\GY521.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\GY521.c
+      1          #include "GY521.h" 
+
+   \                                 In  segment DATA16_AN, at 0x224
+   \   union <unnamed> __data16 _A_PBDIR_L
+   \                     _A_PBDIR_L:
+   \   000000                DS8 2
+      2          #include "i2c.h"
+      3          
+      4          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      5          short    dis_data;
+   \                     dis_data:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA20_I, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+      6          static volatile int16_t *pMpu = (int16_t *)&MPU6050;
+   \                     pMpu:
+   \   000000                DS8 4
+   \   000004                REQUIRE `?<Initializer for pMpu>`
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      7          int16_t MpuOffset[6] = {0};
+   \                     MpuOffset:
+   \   000000                DS8 12
+      8          
+      9          //初始化MPU6050，根据需要请参考pdf进行修改************************
+
+   \                                 In  segment CODE, align 2
+     10          uint8_t Mpu6050_Init()
+   \                     Mpu6050_Init:
+     11          {    
+   \   000000   0A14         PUSHM.A #0x1, R10
+     12              P3DIR |= (1<<SCL);
+   \   000002   E2D32402     BIS.B   #0x2, &0x224
+     13              
+     14              uint8_t date = SUCCESS;
+   \   000006   4A43         MOV.B   #0x0, R10
+     15             
+     16              Single_WriteIIC(0xd0, PWR_MGMT_1, 0x80);	//复位
+   \   000008   7E408000     MOV.B   #0x80, R14
+   \   00000C   7D406B00     MOV.B   #0x6b, R13
+   \   000010   7C40D000     MOV.B   #0xd0, R12
+   \   000014   ........     CALLA   #Single_WriteIIC
+     17              DELAY_MS(30);
+   \   000018                ////////////// Start of 750000 cycles delay.
+   \   000018   3F406ADC     MOV.W   #0xdc6a, R15
+   \   00001C   0343         NOP
+   \   00001E   2E43         MOV.W   #0x2, R14
+   \                     ??Mpu6050_Init_2:
+   \   000020   3F53         ADD.W   #0xffff, R15
+   \   000022   3E63         ADDC.W  #0xffff, R14
+   \   000024   FD2F         JC      ??Mpu6050_Init_2
+   \   000026                ////////////// End of delay code.
+     18              Single_WriteIIC(0xd0, SMPLRT_DIV, 0x02); //陀螺仪采样率，0x00(333Hz)
+   \   000026   6E43         MOV.B   #0x2, R14
+   \   000028   7D401900     MOV.B   #0x19, R13
+   \   00002C   7C40D000     MOV.B   #0xd0, R12
+   \   000030   ........     CALLA   #Single_WriteIIC
+     19              Single_WriteIIC(0xd0, PWR_MGMT_1, 0x03);	//设置设备时钟源，陀螺仪Z轴
+   \   000034   7E400300     MOV.B   #0x3, R14
+   \   000038   7D406B00     MOV.B   #0x6b, R13
+   \   00003C   7C40D000     MOV.B   #0xd0, R12
+   \   000040   ........     CALLA   #Single_WriteIIC
+     20              Single_WriteIIC(0xd0, CONFIGL, 0x03);   //低通滤波频率，0x03(42Hz)
+   \   000044   7E400300     MOV.B   #0x3, R14
+   \   000048   7D401A00     MOV.B   #0x1a, R13
+   \   00004C   7C40D000     MOV.B   #0xd0, R12
+   \   000050   ........     CALLA   #Single_WriteIIC
+     21              Single_WriteIIC(0xd0, GYRO_CONFIG, 0x18);//+-2000deg/s
+   \   000054   7E401800     MOV.B   #0x18, R14
+   \   000058   7D401B00     MOV.B   #0x1b, R13
+   \   00005C   7C40D000     MOV.B   #0xd0, R12
+   \   000060   ........     CALLA   #Single_WriteIIC
+     22              Single_WriteIIC(0xd0, ACCEL_CONFIG, 0x09);//+-4G
+   \   000064   7E400900     MOV.B   #0x9, R14
+   \   000068   7D401C00     MOV.B   #0x1c, R13
+   \   00006C   7C40D000     MOV.B   #0xd0, R12
+   \   000070   ........     CALLA   #Single_WriteIIC
+     23              
+     24              date = Single_ReadIIC(0xd0, 0x75);  //判断MPU6050地址
+   \   000074   7D407500     MOV.B   #0x75, R13
+   \   000078   7C40D000     MOV.B   #0xd0, R12
+   \   00007C   ........     CALLA   #Single_ReadIIC
+   \   000080   4A4C         MOV.B   R12, R10
+     25              
+     26              if(date!= MPU6050_PRODUCT_ID) //如果地址不正确
+   \   000082   7A906800     CMP.B   #0x68, R10
+   \   000086   0224         JEQ     ??Mpu6050_Init_1
+     27              {
+     28                  return 1;
+   \   000088   5C43         MOV.B   #0x1, R12
+   \   00008A   033C         JMP     ??Mpu6050_Init_0
+     29              }
+     30              else 
+     31              {
+     32                  MpuGetOffset(); //调用校准数据
+   \                     ??Mpu6050_Init_1:
+   \   00008C   ........     CALLA   #MpuGetOffset
+     33                  return 0;
+   \   000090   4C43         MOV.B   #0x0, R12
+   \                     ??Mpu6050_Init_0:
+   \   000092   0A16         POPM.A  #0x1, R10
+   \   000094   1001         RETA
+   \   000096                REQUIRE _A_PBDIR_L
+     34              }
+     35              
+     36          }
+     37          //***********************************************************************
+     38          
+
+   \                                 In  segment CODE, align 2
+     39          int GetData(uchar REG_Address)   //输入你想要参数的寄存器地址，头文件宏定义查询
+   \                     GetData:
+     40          {
+     41              return 0;
+   \   000000   0C43         MOV.W   #0x0, R12
+   \   000002   1001         RETA
+     42          }
+     43          
+     44          //#define  Acc_Read() IIC_read_Bytes(MPU6050_ADDRESS, 0X3B,buffer,6) //读取加速度
+     45          //#define  Gyro_Read() IIC_read_Bytes(MPU6050_ADDRESS, 0x43,&buffer[6],6)  //  读取角速度
+     46          
+
+   \                                 In  segment CODE, align 2
+     47          void Acc_Read(uint8_t *ptr)
+   \                     Acc_Read:
+     48          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   CB0C         MOVA    R12, R11
+     49              for(int i=0;i<6;i++)
+   \   000004   0A43         MOV.W   #0x0, R10
+   \   000006   113C         JMP     ??Acc_Read_1
+     50              {
+     51                  ptr[i] = Single_ReadIIC(0xd0,0x3B+i);
+   \                     ??Acc_Read_0:
+   \   000008   0D12         PUSH.W  R13
+   \   00000A   C14A0000     MOV.B   R10, 0(SP)
+   \   00000E   3D41         POP.W   R13
+   \   000010   7D503B00     ADD.B   #0x3b, R13
+   \   000014   7C40D000     MOV.B   #0xd0, R12
+   \   000018   ........     CALLA   #Single_ReadIIC
+   \   00001C   0F4A         MOV.W   R10, R15
+   \   00001E   4F0E         RLAM.A  #0x4, R15
+   \   000020   4F0D         RRAM.A  #0x4, R15
+   \   000022   EF0B         ADDA    R11, R15
+   \   000024   CF4C0000     MOV.B   R12, 0(R15)
+     52              }
+   \   000028   1A53         ADD.W   #0x1, R10
+   \                     ??Acc_Read_1:
+   \   00002A   3A900600     CMP.W   #0x6, R10
+   \   00002E   EC3B         JL      ??Acc_Read_0
+     53          }
+   \   000030   1A16         POPM.A  #0x2, R11
+   \   000032   1001         RETA
+     54          
+
+   \                                 In  segment CODE, align 2
+     55          void Gyro_Read(uint8_t *ptr)
+   \                     Gyro_Read:
+     56          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   CB0C         MOVA    R12, R11
+     57              for(int i=0;i<6;i++)
+   \   000004   0A43         MOV.W   #0x0, R10
+   \   000006   133C         JMP     ??Gyro_Read_1
+     58              {
+     59                  ptr[i+6] = Single_ReadIIC(0xd0,0x43+i);
+   \                     ??Gyro_Read_0:
+   \   000008   0D12         PUSH.W  R13
+   \   00000A   C14A0000     MOV.B   R10, 0(SP)
+   \   00000E   3D41         POP.W   R13
+   \   000010   7D504300     ADD.B   #0x43, R13
+   \   000014   7C40D000     MOV.B   #0xd0, R12
+   \   000018   ........     CALLA   #Single_ReadIIC
+   \   00001C   0F4A         MOV.W   R10, R15
+   \   00001E   3F500600     ADD.W   #0x6, R15
+   \   000022   4F0E         RLAM.A  #0x4, R15
+   \   000024   4F0D         RRAM.A  #0x4, R15
+   \   000026   EF0B         ADDA    R11, R15
+   \   000028   CF4C0000     MOV.B   R12, 0(R15)
+     60              }
+   \   00002C   1A53         ADD.W   #0x1, R10
+   \                     ??Gyro_Read_1:
+   \   00002E   3A900600     CMP.W   #0x6, R10
+   \   000032   EA3B         JL      ??Gyro_Read_0
+     61          }
+   \   000034   1A16         POPM.A  #0x2, R11
+   \   000036   1001         RETA
+     62          
+
+   \                                 In  segment CODE, align 2
+     63          void MpuGetData(void) //读取陀螺仪数据加滤波
+   \                     MpuGetData:
+     64          {
+   \   000000   5B14         PUSHM.A #0x6, R11
+   \   000002   B1000C00     SUBA    #0xc, SP
+     65                uint8_t i;
+     66                uint8_t buffer[12];
+     67          
+     68                Acc_Read(buffer);
+   \   000006   CC01         MOVA    SP, R12
+   \   000008   ........     CALLA   #Acc_Read
+     69                Gyro_Read(buffer);
+   \   00000C   CC01         MOVA    SP, R12
+   \   00000E   ........     CALLA   #Gyro_Read
+     70                
+     71                for(i=0;i<6;i++)
+   \   000012   4A43         MOV.B   #0x0, R10
+   \   000014   B53C         JMP     ??MpuGetData_1
+     72                {
+     73                    pMpu[i] = (((int16_t)buffer[i<<1] << 8) | buffer[(i<<1)+1]) - MpuOffset[i];
+   \                     ??MpuGetData_0:
+   \   000016   CB01         MOVA    SP, R11
+   \   000018   4F4A         MOV.B   R10, R15
+   \   00001A   0F5F         RLA.W   R15
+   \   00001C   1F53         ADD.W   #0x1, R15
+   \   00001E   EF0B         ADDA    R11, R15
+   \   000020   6B4F         MOV.B   @R15, R11
+   \   000022   4B4B         MOV.B   R11, R11
+   \   000024   C701         MOVA    SP, R7
+   \   000026   4F4A         MOV.B   R10, R15
+   \   000028   0F5F         RLA.W   R15
+   \   00002A   EF07         ADDA    R7, R15
+   \   00002C   6F4F         MOV.B   @R15, R15
+   \   00002E   4F4F         MOV.B   R15, R15
+   \   000030   3FF0FF00     AND.W   #0xff, R15
+   \   000034   8F10         SWPB    R15
+   \   000036   0FDB         BIS.W   R11, R15
+   \   000038   4B4A         MOV.B   R10, R11
+   \   00003A   EB0B         ADDA    R11, R11
+   \   00003C   ....1F8B.... SUBX.W  MpuOffset(R11), R15
+   \   000042   ........     MOVA    &pMpu, R11
+   \   000046   474A         MOV.B   R10, R7
+   \   000048   E707         ADDA    R7, R7
+   \   00004A   E70B         ADDA    R11, R7
+   \   00004C   874F0000     MOV.W   R15, 0(R7)
+     74                    
+     75                    if(i < 3) //此处对加速度做一维卡尔曼滤波
+   \   000050   7A900300     CMP.B   #0x3, R10
+   \   000054   2B2C         JC      ??MpuGetData_2
+     76                    {
+     77                        {
+     78                            static struct _1_ekf_filter ekf[3] = {{0.02,0,0,0,0.001,0.543},{0.02,0,0,0,0.001,0.543},{0.02,0,0,0,0.001,0.543}};	
+     79                            kalman_1(&ekf[i],(float)pMpu[i]);  //一维卡尔曼
+   \   000056   ........     MOVA    &pMpu, R15
+   \   00005A   4B4A         MOV.B   R10, R11
+   \   00005C   EB0B         ADDA    R11, R11
+   \   00005E   EB0F         ADDA    R15, R11
+   \   000060   2C4B         MOV.W   @R11, R12
+   \   000062   0D4C         MOV.W   R12, R13
+   \   000064   0D5D         RLA.W   R13
+   \   000066   0D7D         SUBC.W  R13, R13
+   \   000068   3DE3         XOR.W   #0xffff, R13
+   \   00006A   ........     CALLA   #_Cast32sto32f
+   \   00006E   0E4C         MOV.W   R12, R14
+   \   000070   0F4D         MOV.W   R13, R15
+   \   000072   4C4A         MOV.B   R10, R12
+   \   000074   4C0A         RLAM.A  #0x3, R12
+   \   000076   CB0C         MOVA    R12, R11
+   \   000078   EC0C         ADDA    R12, R12
+   \   00007A   EC0B         ADDA    R11, R12
+   \   00007C   ........     ADDA    #??ekf, R12
+   \   000080   ........     CALLA   #kalman_1
+     80                            pMpu[i] = (int16_t)ekf[i].out;
+   \   000084   4F4A         MOV.B   R10, R15
+   \   000086   4F0A         RLAM.A  #0x3, R15
+   \   000088   CB0F         MOVA    R15, R11
+   \   00008A   EF0F         ADDA    R15, R15
+   \   00008C   EF0B         ADDA    R11, R15
+   \   00008E   ....1C4F.... MOVX.W  ??ekf + 8(R15), R12
+   \   000094   ....1D4F.... MOVX.W  ??ekf + 10(R15), R13
+   \   00009A   ........     CALLA   #_Cast32fto32s
+   \   00009E   ........     MOVA    &pMpu, R15
+   \   0000A2   4B4A         MOV.B   R10, R11
+   \   0000A4   EB0B         ADDA    R11, R11
+   \   0000A6   EB0F         ADDA    R15, R11
+   \   0000A8   8B4C0000     MOV.W   R12, 0(R11)
+     81                        }
+     82                    }
+     83                    if(i > 2)  //此处对角速度做一介低通滤波
+   \                     ??MpuGetData_2:
+   \   0000AC   7A900300     CMP.B   #0x3, R10
+   \   0000B0   6628         JNC     ??MpuGetData_3
+     84                    {	
+     85                        uint8_t k=i-3;
+   \   0000B2   4B4A         MOV.B   R10, R11
+   \   0000B4   7B50FD00     ADD.B   #0xfd, R11
+     86                        const float factor = 0.15f;  //滤波因素			
+   \   0000B8   38409A99     MOV.W   #0x999a, R8
+   \   0000BC   3940193E     MOV.W   #0x3e19, R9
+     87                        static float tBuff[3];		
+     88          
+     89                        pMpu[i] =  tBuff[k] * (1 - factor) + pMpu[i] * factor;       
+                                       ^
+Warning[Pa093]: implicit conversion from floating point to integer
+   \   0000C0   0C43         MOV.W   #0x0, R12
+   \   0000C2   3D40803F     MOV.W   #0x3f80, R13
+   \   0000C6   0E48         MOV.W   R8, R14
+   \   0000C8   0F49         MOV.W   R9, R15
+   \   0000CA   ........     CALLA   #_Sub32f
+   \   0000CE   4F4B         MOV.B   R11, R15
+   \   0000D0   4F06         RLAM.A  #0x2, R15
+   \   0000D2   ....1E4F.... MOVX.W  ??tBuff(R15), R14
+   \   0000D8   ....1F4F.... MOVX.W  ??tBuff + 2(R15), R15
+   \   0000DE   ........     CALLA   #_Mul32f
+   \   0000E2   064C         MOV.W   R12, R6
+   \   0000E4   074D         MOV.W   R13, R7
+   \   0000E6   ........     MOVA    &pMpu, R15
+   \   0000EA   4E4A         MOV.B   R10, R14
+   \   0000EC   EE0E         ADDA    R14, R14
+   \   0000EE   EE0F         ADDA    R15, R14
+   \   0000F0   2C4E         MOV.W   @R14, R12
+   \   0000F2   0D4C         MOV.W   R12, R13
+   \   0000F4   0D5D         RLA.W   R13
+   \   0000F6   0D7D         SUBC.W  R13, R13
+   \   0000F8   3DE3         XOR.W   #0xffff, R13
+   \   0000FA   ........     CALLA   #_Cast32sto32f
+   \   0000FE   0E48         MOV.W   R8, R14
+   \   000100   0F49         MOV.W   R9, R15
+   \   000102   ........     CALLA   #_Mul32f
+   \   000106   0E46         MOV.W   R6, R14
+   \   000108   0F47         MOV.W   R7, R15
+   \   00010A   ........     CALLA   #_Add32f
+   \   00010E   ........     CALLA   #_Cast32fto32s
+   \   000112   ........     MOVA    &pMpu, R15
+   \   000116   474A         MOV.B   R10, R7
+   \   000118   E707         ADDA    R7, R7
+   \   00011A   E70F         ADDA    R15, R7
+   \   00011C   874C0000     MOV.W   R12, 0(R7)
+     90                        tBuff[k] = tBuff[k] * (1 - factor) + pMpu[i] * factor;       
+   \   000120   474B         MOV.B   R11, R7
+   \   000122   4706         RLAM.A  #0x2, R7
+   \   000124   0C43         MOV.W   #0x0, R12
+   \   000126   3D40803F     MOV.W   #0x3f80, R13
+   \   00012A   0E48         MOV.W   R8, R14
+   \   00012C   0F49         MOV.W   R9, R15
+   \   00012E   ........     CALLA   #_Sub32f
+   \   000132   ....1E47.... MOVX.W  ??tBuff(R7), R14
+   \   000138   ....1F47.... MOVX.W  ??tBuff + 2(R7), R15
+   \   00013E   ........     CALLA   #_Mul32f
+   \   000142   064C         MOV.W   R12, R6
+   \   000144   074D         MOV.W   R13, R7
+   \   000146   ........     MOVA    &pMpu, R15
+   \   00014A   4E4A         MOV.B   R10, R14
+   \   00014C   EE0E         ADDA    R14, R14
+   \   00014E   EE0F         ADDA    R15, R14
+   \   000150   2C4E         MOV.W   @R14, R12
+   \   000152   0D4C         MOV.W   R12, R13
+   \   000154   0D5D         RLA.W   R13
+   \   000156   0D7D         SUBC.W  R13, R13
+   \   000158   3DE3         XOR.W   #0xffff, R13
+   \   00015A   ........     CALLA   #_Cast32sto32f
+   \   00015E   0E48         MOV.W   R8, R14
+   \   000160   0F49         MOV.W   R9, R15
+   \   000162   ........     CALLA   #_Mul32f
+   \   000166   0E46         MOV.W   R6, R14
+   \   000168   0F47         MOV.W   R7, R15
+   \   00016A   ........     CALLA   #_Add32f
+   \   00016E   4B4B         MOV.B   R11, R11
+   \   000170   4B06         RLAM.A  #0x2, R11
+   \   000172   ....8B4C.... MOVX.W  R12, ??tBuff(R11)
+   \   000178   ....8B4D.... MOVX.W  R13, ??tBuff + 2(R11)
+     91                    }
+     92                }
+   \                     ??MpuGetData_3:
+   \   00017E   5A53         ADD.B   #0x1, R10
+   \                     ??MpuGetData_1:
+   \   000180   7A900600     CMP.B   #0x6, R10
+   \   000184   482B         JNC     ??MpuGetData_0
+     93          }
+   \   000186   A1000C00     ADDA    #0xc, SP
+   \   00018A   5616         POPM.A  #0x6, R11
+   \   00018C   1001         RETA
+
+   \                                 In  segment DATA20_I, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??ekf:
+   \   000000                DS8 72
+   \   000048                REQUIRE `?<Initializer for ekf>`
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??tBuff:
+   \   000000                DS8 12
+     94          
+     95          /****************************************************************************************
+     96          *@brief   get mpu offset
+     97          *@brief   initial and cmd call this
+     98          *@param[in]
+     99          *****************************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    100          void MpuGetOffset(void) //校准
+   \                     MpuGetOffset:
+    101          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   B1002400     SUBA    #0x24, SP
+    102          	int32_t buffer[6]={0};
+   \   000006   CC01         MOVA    SP, R12
+   \   000008   AC000C00     ADDA    #0xc, R12
+   \   00000C   8E000C00     MOVA    #0xc, R14
+   \   000010   ........     CALLA   #?ClearMemoryWords20
+    103          	int16_t i;  
+    104          	uint8_t k=30;
+   \   000014   79401E00     MOV.B   #0x1e, R9
+    105          	const int8_t MAX_GYRO_QUIET = 5;
+   \   000018   7B400500     MOV.B   #0x5, R11
+    106          	const int8_t MIN_GYRO_QUIET = -5;	
+   \   00001C   7840FB00     MOV.B   #0xfb, R8
+    107          /*           wait for calm down    	                                                          */
+    108          	int16_t LastGyro[3] = {0};
+   \   000020   81430600     MOV.W   #0x0, 0x6(SP)
+   \   000024   81430800     MOV.W   #0x0, 0x8(SP)
+   \   000028   81430A00     MOV.W   #0x0, 0xa(SP)
+    109          	int16_t ErrorGyro[3];	
+    110          	/*           set offset initial to zero    		*/
+    111          	
+    112          	memset(MpuOffset,0,12);
+   \   00002C   3E400C00     MOV.W   #0xc, R14
+   \   000030   0F43         MOV.W   #0x0, R15
+   \   000032   0D43         MOV.W   #0x0, R13
+   \   000034   ........     MOVA    #MpuOffset, R12
+   \   000038   ........     CALLA   #memset
+    113          	MpuOffset[2] = 8192;   //根据手册量程设定加速度标定值 
+   \   00003C   ....B2400020 MOVX.W  #0x2000, &MpuOffset + 4
+   \            ....        
+    114          	
+    115          	while(k--)  //判断飞控是否处于静止状态
+   \                     ??MpuGetOffset_2:
+   \   000044   4E49         MOV.B   R9, R14
+   \   000046   494E         MOV.B   R14, R9
+   \   000048   7953         ADD.B   #0xff, R9
+   \   00004A   4E93         CMP.B   #0x0, R14
+   \   00004C   5524         JEQ     ??MpuGetOffset_10
+    116          	{
+    117          		do
+    118          		{
+    119                              DELAY_MS(10);
+   \                     ??MpuGetOffset_1:
+   \   00004E                ////////////// Start of 250000 cycles delay.
+   \   00004E   3F4022F4     MOV.W   #0xf422, R15
+   \   000052   0343         NOP
+   \   000054   0E43         MOV.W   #0x0, R14
+   \                     ??MpuGetOffset_12:
+   \   000056   3F53         ADD.W   #0xffff, R15
+   \   000058   3E63         ADDC.W  #0xffff, R14
+   \   00005A   FD2F         JC      ??MpuGetOffset_12
+   \   00005C                ////////////// End of delay code.
+    120                              MpuGetData();
+   \   00005C   ........     CALLA   #MpuGetData
+    121                              for(i=0;i<3;i++)
+   \   000060   0A43         MOV.W   #0x0, R10
+   \   000062   293C         JMP     ??MpuGetOffset_7
+    122                              {
+    123                                  ErrorGyro[i] = pMpu[i+3] - LastGyro[i];
+   \                     ??MpuGetOffset_0:
+   \   000064   ........     MOVA    &pMpu, R14
+   \   000068   0F4A         MOV.W   R10, R15
+   \   00006A   3F500300     ADD.W   #0x3, R15
+   \   00006E   4F0E         RLAM.A  #0x4, R15
+   \   000070   4F0D         RRAM.A  #0x4, R15
+   \   000072   EF0F         ADDA    R15, R15
+   \   000074   EF0E         ADDA    R14, R15
+   \   000076   2F4F         MOV.W   @R15, R15
+   \   000078   CE01         MOVA    SP, R14
+   \   00007A   AE000600     ADDA    #0x6, R14
+   \   00007E   0D4A         MOV.W   R10, R13
+   \   000080   ED0D         ADDA    R13, R13
+   \   000082   ED0E         ADDA    R14, R13
+   \   000084   2F8D         SUB.W   @R13, R15
+   \   000086   CE01         MOVA    SP, R14
+   \   000088   0D4A         MOV.W   R10, R13
+   \   00008A   ED0D         ADDA    R13, R13
+   \   00008C   ED0E         ADDA    R14, R13
+   \   00008E   8D4F0000     MOV.W   R15, 0(R13)
+    124                                  LastGyro[i] = pMpu[i+3];
+   \   000092   ........     MOVA    &pMpu, R14
+   \   000096   0F4A         MOV.W   R10, R15
+   \   000098   3F500300     ADD.W   #0x3, R15
+   \   00009C   4F0E         RLAM.A  #0x4, R15
+   \   00009E   4F0D         RRAM.A  #0x4, R15
+   \   0000A0   EF0F         ADDA    R15, R15
+   \   0000A2   EF0E         ADDA    R14, R15
+   \   0000A4   CE01         MOVA    SP, R14
+   \   0000A6   AE000600     ADDA    #0x6, R14
+   \   0000AA   0D4A         MOV.W   R10, R13
+   \   0000AC   ED0D         ADDA    R13, R13
+   \   0000AE   ED0E         ADDA    R14, R13
+   \   0000B0   AD4F0000     MOV.W   @R15, 0(R13)
+    125                              }
+   \   0000B4   1A53         ADD.W   #0x1, R10
+   \                     ??MpuGetOffset_7:
+   \   0000B6   3A900300     CMP.W   #0x3, R10
+   \   0000BA   D43B         JL      ??MpuGetOffset_0
+    126          		}while ((ErrorGyro[0] >  MAX_GYRO_QUIET )|| (ErrorGyro[0] < MIN_GYRO_QUIET)
+    127                                  ||(ErrorGyro[1] > MAX_GYRO_QUIET )|| (ErrorGyro[1] < MIN_GYRO_QUIET)
+    128                                  ||(ErrorGyro[2] > MAX_GYRO_QUIET )|| (ErrorGyro[2] < MIN_GYRO_QUIET));
+   \   0000BC   8B11         SXT     R11
+   \   0000BE   3BF3         AND.W   #0xffff, R11
+   \   0000C0   2B91         CMP.W   @SP, R11
+   \   0000C2   C53B         JL      ??MpuGetOffset_1
+   \   0000C4   8811         SXT     R8
+   \   0000C6   38F3         AND.W   #0xffff, R8
+   \   0000C8   81980000     CMP.W   R8, 0(SP)
+   \   0000CC   C03B         JL      ??MpuGetOffset_1
+   \   0000CE   8B11         SXT     R11
+   \   0000D0   3BF3         AND.W   #0xffff, R11
+   \   0000D2   1B910200     CMP.W   0x2(SP), R11
+   \   0000D6   BB3B         JL      ??MpuGetOffset_1
+   \   0000D8   8811         SXT     R8
+   \   0000DA   38F3         AND.W   #0xffff, R8
+   \   0000DC   81980200     CMP.W   R8, 0x2(SP)
+   \   0000E0   B63B         JL      ??MpuGetOffset_1
+   \   0000E2   8B11         SXT     R11
+   \   0000E4   3BF3         AND.W   #0xffff, R11
+   \   0000E6   1B910400     CMP.W   0x4(SP), R11
+   \   0000EA   B13B         JL      ??MpuGetOffset_1
+   \   0000EC   8811         SXT     R8
+   \   0000EE   38F3         AND.W   #0xffff, R8
+   \   0000F0   81980400     CMP.W   R8, 0x4(SP)
+   \   0000F4   AC3B         JL      ??MpuGetOffset_1
+   \   0000F6   A63F         JMP     ??MpuGetOffset_2
+    129          	}
+    130          
+    131          /*           throw first 100  group data and make 256 group average as offset                    */	
+    132          	for(i=0;i<356;i++)  //取第100到第356组的平均值做为校准值
+   \                     ??MpuGetOffset_10:
+   \   0000F8   0A43         MOV.W   #0x0, R10
+   \   0000FA   193C         JMP     ??MpuGetOffset_8
+    133          	{		
+    134                      MpuGetData();
+    135                      if(100 <= i)
+    136                      {
+    137                          uint8_t k;
+    138                          for(k=0;k<6;k++)
+    139                          {
+    140                                buffer[k] += pMpu[k];
+   \                     ??MpuGetOffset_3:
+   \   0000FC   CF01         MOVA    SP, R15
+   \   0000FE   AF000C00     ADDA    #0xc, R15
+   \   000102   4B4D         MOV.B   R13, R11
+   \   000104   4B06         RLAM.A  #0x2, R11
+   \   000106   EB0F         ADDA    R15, R11
+   \   000108   ........     MOVA    &pMpu, R15
+   \   00010C   4E4D         MOV.B   R13, R14
+   \   00010E   EE0E         ADDA    R14, R14
+   \   000110   EE0F         ADDA    R15, R14
+   \   000112   2E4E         MOV.W   @R14, R14
+   \   000114   0F4E         MOV.W   R14, R15
+   \   000116   0F5F         RLA.W   R15
+   \   000118   0F7F         SUBC.W  R15, R15
+   \   00011A   3FE3         XOR.W   #0xffff, R15
+   \   00011C   8B5E0000     ADD.W   R14, 0(R11)
+   \   000120   8B6F0200     ADDC.W  R15, 0x2(R11)
+    141                          }
+   \   000124   5D53         ADD.B   #0x1, R13
+   \                     ??MpuGetOffset_5:
+   \   000126   7D900600     CMP.B   #0x6, R13
+   \   00012A   E82B         JNC     ??MpuGetOffset_3
+   \                     ??MpuGetOffset_4:
+   \   00012C   1A53         ADD.W   #0x1, R10
+   \                     ??MpuGetOffset_8:
+   \   00012E   3A906401     CMP.W   #0x164, R10
+   \   000132   0734         JGE     ??MpuGetOffset_11
+   \   000134   ........     CALLA   #MpuGetData
+   \   000138   3A906400     CMP.W   #0x64, R10
+   \   00013C   F73B         JL      ??MpuGetOffset_4
+   \   00013E   4D43         MOV.B   #0x0, R13
+   \   000140   F23F         JMP     ??MpuGetOffset_5
+    142                      }
+    143          	}
+    144          
+    145          	for(i=0;i<6;i++)  //保存校准值
+   \                     ??MpuGetOffset_11:
+   \   000142   0A43         MOV.W   #0x0, R10
+   \   000144   143C         JMP     ??MpuGetOffset_9
+    146          	{
+    147          		MpuOffset[i] = buffer[i]>>8;
+   \                     ??MpuGetOffset_6:
+   \   000146   CF01         MOVA    SP, R15
+   \   000148   AF000C00     ADDA    #0xc, R15
+   \   00014C   0B4A         MOV.W   R10, R11
+   \   00014E   4B06         RLAM.A  #0x2, R11
+   \   000150   EB0F         ADDA    R15, R11
+   \   000152   2E4B         MOV.W   @R11, R14
+   \   000154   1F4B0200     MOV.W   0x2(R11), R15
+   \   000158   8E10         SWPB    R14
+   \   00015A   8F10         SWPB    R15
+   \   00015C   4EEF         XOR.B   R15, R14
+   \   00015E   0EEF         XOR.W   R15, R14
+   \   000160   8F11         SXT     R15
+   \   000162   0F4A         MOV.W   R10, R15
+   \   000164   EF0F         ADDA    R15, R15
+   \   000166   ....8F4E.... MOVX.W  R14, MpuOffset(R15)
+    148          	}
+   \   00016C   1A53         ADD.W   #0x1, R10
+   \                     ??MpuGetOffset_9:
+   \   00016E   3A900600     CMP.W   #0x6, R10
+   \   000172   E93B         JL      ??MpuGetOffset_6
+    149          }
+   \   000174   A1002400     ADDA    #0x24, SP
+   \   000178   3816         POPM.A  #0x4, R11
+   \   00017A   1001         RETA
+
+   \                                 In  segment DATA20_ID, align 2, align-sorted
+   \                     `?<Initializer for pMpu>`:
+   \   000000   ........     DC32 MPU6050
+
+   \                                 In  segment DATA20_ID, align 2, align-sorted
+   \                     `?<Initializer for ekf>`:
+   \   000000   0AD7A33C0000 DC32 3CA3D70AH, 0H, 0H, 0H, 3A83126FH, 3F0B020CH, 3CA3D70AH, 0H, 0H, 0H
+   \            000000000000
+   \            000000006F12
+   \            833A0C020B3F
+   \            0AD7A33C0000
+   \            000000000000
+   \            00000000    
+   \   000028   6F12833A0C02 DC32 3A83126FH, 3F0B020CH, 3CA3D70AH, 0H, 0H, 0H, 3A83126FH, 3F0B020CH
+   \            0B3F0AD7A33C
+   \            000000000000
+   \            000000000000
+   \            6F12833A0C02
+   \            0B3F        
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+   \   000000   000000000000 DC32 0, 0, 0, 0, 0, 0
+   \            000000000000
+   \            000000000000
+   \            000000000000
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+   \   000000   000000000000 DC16 0, 0, 0
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     14   Acc_Read
+       12   -> Single_ReadIIC
+      4   GetData
+     14   Gyro_Read
+       12   -> Single_ReadIIC
+      8   Mpu6050_Init
+        8   -> MpuGetOffset
+        8   -> Single_ReadIIC
+        8   -> Single_WriteIIC
+     40   MpuGetData
+       40   -> Acc_Read
+       40   -> Gyro_Read
+       40   -> kalman_1
+       40 _Add32f
+       40 _Cast32fto32s
+       40 _Cast32sto32f
+       40 _Mul32f
+       40 _Sub32f
+     56   MpuGetOffset
+       56   -> MpuGetData
+       56   -> memset
+       56 ?ClearMemoryWords20
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      24  ?<Constant {0, 0, 0, 0, 0, 0}>
+       6  ?<Constant {0, 0, 0}>
+      72  ?<Initializer for ekf>
+       4  ?<Initializer for pMpu>
+      52  Acc_Read
+       4  GetData
+      56  Gyro_Read
+     150  Mpu6050_Init
+     398  MpuGetData
+     380  MpuGetOffset
+      12  MpuOffset
+       2  _A_PBDIR_L
+       2  dis_data
+      72  ekf
+       4  pMpu
+      12  tBuff
+
+ 
+ 1 040 bytes in segment CODE
+     2 bytes in segment DATA16_AN
+    30 bytes in segment DATA20_C
+    76 bytes in segment DATA20_I
+    76 bytes in segment DATA20_ID
+    26 bytes in segment DATA20_Z
+ 
+ 1 040 bytes of CODE  memory
+   106 bytes of CONST memory
+   102 bytes of DATA  memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: 1

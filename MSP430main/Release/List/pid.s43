@@ -1,0 +1,491 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:45
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\pid.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWE165.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\pid.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\pid.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME pid
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Sub32f
+        EXTERN _Add32f
+        EXTERN _Mul32f
+        EXTERN _Div32f
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC CascadePID
+        PUBLIC pidRest
+        PUBLIC pidUpdate
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\pid.c
+//    1 #include "pid.h"
+//    2 #include "myMath.h"	
+//    3 
+//    4 /**************************************************************
+//    5  *批量复位PID函数
+//    6  * @param[in] 
+//    7  * @param[out] 
+//    8  * @return     
+//    9  ***************************************************************/	
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   10 void pidRest(PidObject **pid,const uint8_t len)
+pidRest:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function pidRest
+          CFI NoCalls
+//   11 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//   12 	uint8_t i;
+//   13 	for(i=0;i<len;i++)
+        MOV.B   #0x0, R14
+        JMP     ??pidRest_1
+//   14 	{
+//   15 	  	pid[i]->integ = 0;
+??pidRest_0:
+        MOV.B   R14, R15
+        RLAM.A  #0x2, R15
+        ADDA    R12, R15
+        MOVA    @R15, R15
+        MOV.W   #0x0, 0xc(R15)
+        MOV.W   #0x0, 0xe(R15)
+//   16 	    pid[i]->prevError = 0;
+        MOV.B   R14, R15
+        RLAM.A  #0x2, R15
+        ADDA    R12, R15
+        MOVA    @R15, R15
+        MOV.W   #0x0, 0x8(R15)
+        MOV.W   #0x0, 0xa(R15)
+//   17 	    pid[i]->out = 0;
+        MOV.B   R14, R15
+        RLAM.A  #0x2, R15
+        ADDA    R12, R15
+        MOVA    @R15, R15
+        MOV.W   #0x0, 0x28(R15)
+        MOV.W   #0x0, 0x2a(R15)
+//   18 			pid[i]->offset = 0;
+        MOV.B   R14, R15
+        RLAM.A  #0x2, R15
+        ADDA    R12, R15
+        MOVA    @R15, R15
+        MOV.W   #0x0, 0x4(R15)
+        MOV.W   #0x0, 0x6(R15)
+//   19 	}
+        ADD.B   #0x1, R14
+??pidRest_1:
+        CMP.B   R13, R14
+        JNC     ??pidRest_0
+//   20 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//   21 
+//   22 /**************************************************************
+//   23  * Update the PID parameters.
+//   24  *
+//   25  * @param[in] pid         A pointer to the pid object.
+//   26  * @param[in] measured    The measured value
+//   27  * @param[in] updateError Set to TRUE if error should be calculated.
+//   28  *                        Set to False if pidSetError() has been used.
+//   29  * @return PID algorithm output
+//   30  ***************************************************************/	
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   31 void pidUpdate(PidObject* pid,const float dt)
+pidUpdate:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function pidUpdate
+//   32 {
+        PUSHM.A #0x7, R10
+          CFI R4L Frame(CFA, -32)
+          CFI R4H Frame(CFA, -30)
+          CFI R5L Frame(CFA, -28)
+          CFI R5H Frame(CFA, -26)
+          CFI R6L Frame(CFA, -24)
+          CFI R6H Frame(CFA, -22)
+          CFI R7L Frame(CFA, -20)
+          CFI R7H Frame(CFA, -18)
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+32
+        MOVA    R12, R10
+        MOV.W   R14, R6
+        MOV.W   R15, R7
+//   33    float error;
+//   34    float deriv;
+//   35 	
+//   36     error = pid->desired - pid->measured + pid->offset;         //计算误差
+        MOV.W   @R10, R12
+        MOV.W   0x2(R10), R13
+        MOV.W   0x24(R10), R14
+        MOV.W   0x26(R10), R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   0x4(R10), R12
+        MOV.W   0x6(R10), R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//   37 
+//   38     pid->integ += error * dt;	        //计算积分量
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   0xc(R10), R12
+        MOV.W   0xe(R10), R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0xc(R10)
+        MOV.W   R13, 0xe(R10)
+//   39   
+//   40     deriv = (error - pid->prevError)/dt;        //计算微分量
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   0x8(R10), R14
+        MOV.W   0xa(R10), R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//   41 	
+//   42     pid->out = pid->kp * error + pid->ki * pid->integ + pid->kd * deriv;//PID最终输出
+        MOV.W   0x10(R10), R12
+        MOV.W   0x12(R10), R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   0x14(R10), R12
+        MOV.W   0x16(R10), R13
+        MOV.W   0xc(R10), R14
+        MOV.W   0xe(R10), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   0x18(R10), R12
+        MOV.W   0x1a(R10), R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0x28(R10)
+        MOV.W   R13, 0x2a(R10)
+//   43 		
+//   44     pid->prevError = error;  	        //保存此次误差
+        MOV.W   R8, 0x8(R10)
+        MOV.W   R9, 0xa(R10)
+//   45 }
+        POPM.A  #0x7, R10
+          CFI R10H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+//   46 
+//   47 /**************************************************************
+//   48  *  CascadePID
+//   49  * @param[in] 
+//   50  * @param[out] 
+//   51  * @return     
+//   52  ***************************************************************/	
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   53 void CascadePID(PidObject* pidRate,PidObject* pidAngE,const float dt)  //串级PID
+CascadePID:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function CascadePID
+//   54 {	 
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOVA    R12, R8
+        MOVA    R13, R9
+        MOV.W   R14, R10
+        MOV.W   R15, R11
+//   55     pidUpdate(pidAngE,dt);   
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    R9, R12
+          CFI FunCall pidUpdate
+        CALLA   #pidUpdate
+//   56     pidRate->desired = pidAngE->out;
+        MOV.W   0x28(R9), 0(R8)
+        MOV.W   0x2a(R9), 0x2(R8)
+//   57     pidUpdate(pidRate,dt);    
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+        MOVA    R8, R12
+          CFI FunCall pidUpdate
+        CALLA   #pidUpdate
+//   58 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//   59 
+//   60 /*******************************END*********************************/
+//   61 
+//   62 
+//   63 
+// 
+// 340 bytes in segment CODE
+// 
+// 340 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

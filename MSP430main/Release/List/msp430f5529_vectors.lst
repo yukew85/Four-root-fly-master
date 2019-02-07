@@ -1,0 +1,263 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:44
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\msp430f5529_vectors.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW5A97.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\msp430f5529_vectors.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_vectors.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_vectors.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\System\src\msp430f5529_vectors.c
+      1          #include "msp430f5529_it.h"
+      2          #include "msp430f5529_vectors.h"
+      3          
+      4          //定义中断向量表到RAM的特定区域，很重要
+
+   \                                 In  segment DATA16_AN, at 0x4380
+      5          __no_init ISR_TYPE __VECTOR_RAM[VECTOR_SIZE]@VECTOR_RAM_START_ADDR;
+   \                     __VECTOR_RAM:
+   \   000000                DS8 128
+      6          #define            __VECTOR_ROM ((ISR_TYPE *)VECTOR_ROM_START_ADDR)
+      7          extern const SFR_MemMapPtr SFRX;
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      8          const SYS_MemMapPtr SYSX = SYS_BASE_PTR;
+   \                     SYSX:
+   \   000000   80010000     DC32 180H
+      9          /*******************************************************************************
+     10          *  函数名称：Set_Vector_Handler(VECTORn vector,__interrupt void pfunc_handler(void))
+     11          *  功能说明：设置中断向量地址
+     12          *  参数说明：
+     13                      VECTORn vector  ：中断向量（枚举变量，见.h文件）
+     14                      __interrupt void pfunc_handler(void)  ： 中断服务函数
+     15          *  函数返回：无
+     16          *  使用示例：Set_Vector_Handler(VECTOR_PORT1,GPIO_IRQ_Handler);    //设置PPORT1中断服务函数为GPIO_IRQ_Handler，需要先定义中断服务函数，另外最好先设置中断向量，再开启中断
+     17          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     18          void Set_Vector_Handler(VECTORn vector, __interrupt void pfunc_handler(void))
+   \                     Set_Vector_Handler:
+     19          {
+     20            if(SYSX->RIVECT == DISABLE)        //如果没有设置中断向量表到RAM，则设置
+   \   000000   92B38001     BIT.W   #0x1, &0x180
+   \   000004   0220         JNE     ??Set_Vector_Handler_0
+     21            {
+     22              Set_VectorTable_To_RAM();                       //设置中断向量表到RAM
+   \   000006   92D38001     BIS.W   #0x1, &0x180
+     23            }
+     24            //此处若有警告可忽略
+     25            __VECTOR_RAM[vector] = (ISR_TYPE)pfunc_handler;     //设置该中断向量地址 
+                                          ^
+Warning[Pe767]: conversion from pointer to smaller integer
+   \                     ??Set_Vector_Handler_0:
+   \   00000A   0F4D         MOV.W   R13, R15
+   \   00000C   4C4C         MOV.B   R12, R12
+   \   00000E   0C5C         RLA.W   R12
+   \   000010   8C4F8043     MOV.W   R15, 0x4380(R12)
+     26          }
+   \   000014   1001         RETA
+   \   000016                REQUIRE __VECTOR_RAM
+     27          /*******************************************************************************
+     28          *  函数名称：Set_VectorTable_To_RAM()
+     29          *  功能说明：设置中断向量表映射到RAM区间
+     30          *  参数说明：无
+     31          *  函数返回：无
+     32          *  使用示例：Set_VectorTable_To_RAM();  //设置中断向量表映射到RAM
+     33          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     34          void Set_VectorTable_To_RAM(void)
+   \                     Set_VectorTable_To_RAM:
+     35          {
+     36            SYSX->RIVECT = ENABLE;                             //设置中断向量映射到RAM区间 
+   \   000000   92D38001     BIS.W   #0x1, &0x180
+     37          }
+   \   000004   1001         RETA
+     38          /*******************************************************************************
+     39          *  函数名称：Set_VectorTable_To_FLASH()
+     40          *  功能说明：设置中断向量表映射到ROM区间
+     41          *  参数说明：无
+     42          *  函数返回：无
+     43          *  使用示例：Set_VectorTable_To_FLASH();  //设置中断向量表映射到FLASH
+     44          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     45          void Set_VectorTable_To_FLASH(void)
+   \                     Set_VectorTable_To_FLASH:
+     46          {
+     47            SYSX->RIVECT = DISABLE;                            //设置中断向量映射到ROM区间 
+   \   000000   92C38001     BIC.W   #0x1, &0x180
+     48          }
+   \   000004   1001         RETA
+     49          /*******************************************************************************
+     50          *  函数名称：VectorTableCopyToRAM()
+     51          *  功能说明：从FLASH中复制中断向量表到RAM
+     52          *  参数说明：无
+     53          *  函数返回：无
+     54          *  使用示例：VectorTableCopyToRAM();              //复制中断向量表到RAM
+     55          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     56          void VectorTableCopyToRAM(void)
+   \                     VectorTableCopyToRAM:
+     57          {
+     58            for(int i=0;i < VECTOR_SIZE;i++)
+   \   000000   8F0080FF     MOVA    #0xff80, R15
+   \   000004   3E408043     MOV.W   #0x4380, R14
+     59            { //复制中断向量表，对没有定义的中断向量赋值为default_isr（默认中断服务函数）
+     60              //此处若有警告可忽略
+     61              __VECTOR_RAM[i] = (0 == __VECTOR_ROM[i] || (ISR_TYPE)0xFFFF == __VECTOR_ROM[i]) ? (ISR_TYPE)default_isr : __VECTOR_ROM[i]; 
+                                                                                                       ^
+Warning[Pe767]: conversion from pointer to smaller integer
+   \                     ??VectorTableCopyToRAM_0:
+   \   000008   3D4F         MOV.W   @R15+, R13
+   \   00000A   0D93         CMP.W   #0x0, R13
+   \   00000C   0224         JEQ     ??VectorTableCopyToRAM_2
+   \   00000E   3D93         CMP.W   #0xffff, R13
+   \   000010   0220         JNE     ??VectorTableCopyToRAM_1
+   \                     ??VectorTableCopyToRAM_2:
+   \   000012   3D40....     MOV.W   #LWRD(default_isr), R13
+   \                     ??VectorTableCopyToRAM_1:
+   \   000016   8E4D0000     MOV.W   R13, 0(R14)
+     62            }
+   \   00001A   2E53         ADD.W   #0x2, R14
+   \   00001C   3E900044     CMP.W   #0x4400, R14
+   \   000020   F323         JNE     ??VectorTableCopyToRAM_0
+     63          }
+   \   000022   1001         RETA
+   \   000024                REQUIRE __VECTOR_RAM
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   Set_VectorTable_To_FLASH
+      4   Set_VectorTable_To_RAM
+      4   Set_Vector_Handler
+      4   VectorTableCopyToRAM
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  SYSX
+       6  Set_VectorTable_To_FLASH
+       6  Set_VectorTable_To_RAM
+      22  Set_Vector_Handler
+      36  VectorTableCopyToRAM
+     128  __VECTOR_RAM
+
+ 
+  70 bytes in segment CODE
+ 128 bytes in segment DATA16_AN
+   4 bytes in segment DATA20_C
+ 
+ 70 bytes of CODE  memory
+  4 bytes of CONST memory
+  0 bytes of DATA  memory (+ 128 bytes shared)
+
+Errors: none
+Warnings: 2

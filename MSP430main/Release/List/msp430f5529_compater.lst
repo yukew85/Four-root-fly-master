@@ -1,0 +1,257 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:42
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_compater.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW5470.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_compater.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_compater.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_compater.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_compater.c
+      1          #include "msp430f5529_compater.h"
+      2          #include "msp430f5529_gpio.h"
+      3          
+      4          const COMPB_MemMapPtr CB = COMPB_BASE_PTR;
+      5          /*******************************************************************************
+      6          *  函数名称：CompaterB_Init(CompaterB_CHn CB0,CompaterB_CHn CB1)
+      7          *  功能说明：初始化比较器输入源
+      8          *  参数说明：CompaterB_CHn CB0 :比较器输入通道+
+      9                       CompaterB_CHn CB1 :比较器输入通道-
+     10          *  函数返回：无
+     11          *  参考资料：http://www.docin.com/p-676623167.html
+     12          *  使用示例： CompaterB_Init(CB_CH0,CB_VREF_2_0V);    //初始化比较器CB_CH0为正输入端，CB_VREF_2_0V为负输入端
+     13          ********************************************************************************/
+     14          void CompaterB_Init(CompaterB_CHn CB0,CompaterB_CHn CB1)
+     15          {
+     16            ASSERT((CB0<CB_CH11) || (CB1<CB_CH11),"CompaterB_Init","CompaterB比较器只能有一个通道使用参考电压！\n");//只能有一个通道使用参考电压
+                                                         ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+     17            //设置引脚  
+     18            if(CB0 <= CB_CH11)
+     19            { //初始化引脚为第二功能
+     20              GPIO_Init((CB0 < CB_CH8) ? P6 : P7, (CB0 < CB_CH8) ? CB0 : (CB0-8),GPI|SEL );
+     21              CB->IPEN = BIT_SET;                 //输入通道使能
+     22              CB->IPSEL = CB0;                //输入通道选择
+     23              CB->CTL3 |= (1<<CB0);           //关闭输入缓存
+     24            }
+     25            else
+     26            {
+     27              CBCTL2 = 0u;
+     28              CB->RSEL = RESET;                   //参考电压应用到比较器+端        
+     29            }
+     30          
+     31            if(CB1 <= CB_CH11)
+     32            { //初始化引脚为第二功能
+     33              GPIO_Init((CB1 < CB_CH8) ? P6 : P7, (CB1 < CB_CH8) ? CB1 : (CB1-8),GPI|SEL );
+     34              CB->IMEN = BIT_SET;                 //输入通道使能
+     35              CB->IMSEL = CB1;                //输入通道选择
+     36              CB->CTL3 |= (1<<CB1);           //关闭输入缓存
+     37            }
+     38            else
+     39            {
+     40              CB->RSEL = BIT_SET;                   //参考电压应用到比较器-端
+     41            }
+     42          
+     43            if((CB0>=CB_VREF_1_5V) || (CB1>=CB_VREF_1_5V))  //如果有一端使用参考电压
+     44            {
+     45              CB->MRVS = 0;
+     46              if((CB0==CB_VREF_VCC) || (CB1==CB_VREF_VCC))
+     47              {
+     48                CB->REFL = 0;
+     49                CB->RS = 1;                                                    //外部参考电压禁止,使用Vcc作为参考电压源
+     50              }
+     51              else if((CB0==CB_VREF_1_5V) || (CB1==CB_VREF_1_5V)) //
+     52              {
+     53                CB->REFL = 1;
+     54                CB->RS = 3;
+     55                CB->REFACC = RESET;                                                //参考电压为1.5v,使用外部参考电压分压
+     56              }
+     57              else if((CB0==CB_VREF_2_0V) || (CB1==CB_VREF_2_0V)) //
+     58              {
+     59                CB->REFL = 2;
+     60                CB->RS = 3;
+     61                CB->REFACC = RESET;                                                //参考电压为2.0v,使用外部参考电压分压
+     62              }
+     63              else if((CB0==CB_VREF_2_5V) || (CB1==CB_VREF_2_5V)) //
+     64              {
+     65                CB->REFL = 3;
+     66                CB->RS = 3;
+     67                CB->REFACC = RESET;                                               //参考电压为2.5v,使用外部参考电压分压
+     68              }
+     69              CB->REF0 = 31;
+     70              CB->REF1 = 31;
+     71            }
+     72          
+     73            CB->PWRMD = 1;                             //正常电源模式 
+     74            CB->ON = BIT_SET;                              // 打开比较器B  
+     75          }
+     76          /*******************************************************************************
+     77          *  函数名称: CompaterB_ExchangeChanel(STATUS status)  
+     78          *  功能说明：交换输入通道极性
+     79          *  参数说明：STATUS status：是否交换极性
+     80          *  函数返回：无
+     81          *  使用示例：CompaterB_ExchangeChanel(DISABLE);   //禁止交换比较器输入通道   
+     82          ********************************************************************************/
+     83          void  CompaterB_ExchangeChanel(STATUS status)                                      
+     84          {
+     85            CB->EX = status;
+     86          }
+     87          /*******************************************************************************
+     88          *  函数名称：CompatorB_GetValue(void)
+     89          *  功能说明：读取比较的结果
+     90          *  参数说明：无
+     91          *  函数返回：STATUS :BIT_SET 正输入端电压大于负输入端电压，RESET 正输入端电压小于于负输入端电压
+     92          *  使用示例：
+     93          ********************************************************************************/
+     94          STATUS CompatorB_GetValue(void)
+     95          {
+     96            return ((CB->CB_OUT) ? BIT_SET : RESET);
+     97          }
+     98          /*******************************************************************************
+     99          *  函数名称: CompaterB_ITConfig (CompaterB_IRQn irqn, STATUS ITState)
+    100          *  功能说明：设置中断是否使能并配置中断触发沿
+    101          *  参数说明：CompaterB_IRQn irqn:选择为上升沿还是下降沿中断
+    102                       BOOL ITState       :是否使能中断
+    103          *  函数返回：无
+    104          *  使用示例：CompaterB_ITConfig (CB_RaisingIRQn, ENABLE);  //比较器设置为上升沿中断，并使能中断
+    105          ********************************************************************************/
+    106          void CompaterB_ITConfig (CompaterB_IRQn irqn, STATUS ITState)
+    107          {
+    108            CB->IES = RESET;                 //上升沿CBIFG，下降沿CBIIFG
+    109            if(ITState != DISABLE)//设置是否允许中断
+    110            {
+    111              CB->CB_IFG &=~irqn;              //清中断标志位
+    112              CB->CB_IE  |= irqn;
+    113            }
+    114            else
+    115            {
+    116              CB->CB_IE  &=~irqn;
+    117            }                      
+    118          }
+    119          /*******************************************************************************
+    120          *  函数名称：CompaterB_GetITStatus(CompaterB_IRQn irqn)
+    121          *  功能说明：读取比较中断标志状态
+    122          *  参数说明：CompaterB_IRQn irqn:选择为上升沿还是下降沿中断标志
+    123          *  函数返回：STATUS ：中断标志是否置位
+    124          *  使用示例：if(TRUE == CompaterB_GetITStatus(CB_RaisingIRQn)){...} //判断中断标志是否置位
+    125          ********************************************************************************/
+    126          STATUS  CompaterB_GetITStatus(CompaterB_IRQn irqn)
+    127          {
+    128            return ((CB->CB_IFG & irqn) ? TRUE : FALSE);
+    129          }
+    130          /*******************************************************************************
+    131          *  函数名称：CompaterB_ClearITPendingBit(CompaterB_IRQn irqn)
+    132          *  功能说明：清除比较中断标志位
+    133          *  参数说明：CompaterB_IRQn irqn:选择为上升沿还是下降沿中断标志
+    134          *  函数返回：无
+    135          *  使用示例：CompaterB_ClearITPendingBit(CB_RaisingIRQn);   //清除上升沿中断标志
+    136          ********************************************************************************/
+    137          void  CompaterB_ClearITPendingBit(CompaterB_IRQn irqn)
+    138          {
+    139            CB->CB_IFG &=~ irqn;
+    140          }
+
+Errors: 1
+Warnings: none

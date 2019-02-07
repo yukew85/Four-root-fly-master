@@ -1,0 +1,421 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          26/Sep/2018  16:44:45
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HAL\ZKHD_Link.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW6168.tmp
+//        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HAL\ZKHD_Link.c" -D NDEBUG -D RAM_VECTOR -lC
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List" -lA
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List" -o
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_config\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\KEY\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LED\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\12864\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\oled\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\mpu6050\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\mpu6050\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nokia5110\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nokia5110\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LQ_1.8_TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\LCD_API\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\2.2TFT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\delay\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\inc\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\System\src\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\User\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\User\USER\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\UCOSII\CONFIG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\App\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\CONFIHG\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\uCOSII\PORT\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\UCOSII\CORE\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\FatFs\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Lib\FatFs\option\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+//        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\HardWare\nrf24l01\" -I
+//        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\MATH\" --core=430X --data_model=large -Oh --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+//        副本\Release\List\ZKHD_Link.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME ZKHD_Link
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC ZKHD_Link_Handle
+        PUBLIC ZKHD_Link_Send
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN Flash_Write_buf
+        EXTERN NRF2401_SetRXMode
+        EXTERN memcpy
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\HAL\ZKHD_Link.c
+//    1 #include "ZKHD_Link.h"
+//    2 #include "include.h"
+//    3 #include "string.h"
+//    4 
+//    5 extern uint8_t TX_ADDRESS[5];	//本地地址
+//    6 typedef enum
+//    7 {
+//    8     RX_Addr_Config = 0,
+//    9     Search_Attitude,
+//   10     
+//   11 }MessageType_t;
+//   12 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   13 void ZKHD_Link_Handle(ZKHD_Link_Head_t *ZKHD_Link,uint8_t *ptr)
+ZKHD_Link_Handle:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function ZKHD_Link_Handle
+//   14 {
+        SUBA    #0x6, SP
+          CFI CFA SP+10
+//   15     uint8_t Buff[5];
+//   16     
+//   17     switch(ZKHD_Link->Message_ID)
+        CMP.B   #0x0, 0x5(R12)
+        JNE     ??ZKHD_Link_Handle_0
+//   18     {
+//   19         case RX_Addr_Config:            
+//   20             for(int i=0;i<5;i++)
+//   21             {
+//   22                 uint8_t *Ptr = (&ZKHD_Link->Message_ID + 1 + i);
+//   23                 Buff[i] = *Ptr;
+        MOV.B   0x6(R12), 0(SP)
+        MOV.B   0x7(R12), 0x1(SP)
+        MOV.B   0x8(R12), 0x2(SP)
+        MOV.B   0x9(R12), 0x3(SP)
+        MOV.B   0xa(R12), 0x4(SP)
+//   24             }
+//   25             
+//   26             Flash_Write_buf(MAX_SEGMENT, 0, 5,Buff);
+        MOVA    SP, R15
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R13
+        MOV.W   #0x121, R12
+          CFI FunCall Flash_Write_buf
+        CALLA   #Flash_Write_buf
+//   27             NRF2401_SetRXMode();
+          CFI FunCall NRF2401_SetRXMode
+        CALLA   #NRF2401_SetRXMode
+//   28             break;
+//   29         case Search_Attitude:
+//   30             {
+//   31 //                uint8_t Tx_buff[10];
+//   32 //                uint8_t Send_Buff[20];
+//   33 //                uint8_t Send_Buff_Length;
+//   34 //                
+//   35 //                Tx_buff[0] = Firmware;
+//   36 //                memcpy(Tx_buff+1,&SysTick_count,4);
+//   37 //                memcpy(Tx_buff+5,TX_ADDRESS,5);
+//   38 //                
+//   39 //                ZKHD_Link_Send( 0x02,
+//   40 //                                0,
+//   41 //                                0,
+//   42 //                                Tx_buff,
+//   43 //                                10,
+//   44 //                                Send_Buff,
+//   45 //                                &Send_Buff_Length);
+//   46 //                
+//   47 //                UartSendBuffer(Send_Buff, Send_Buff_Length);
+//   48             }
+//   49             break;
+//   50         default:
+//   51             break;
+//   52     }
+//   53 }
+??ZKHD_Link_Handle_0:
+        ADDA    #0x6, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//   54 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   55 void ZKHD_Link_Send(uint8_t Send_ID,
+ZKHD_Link_Send:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function ZKHD_Link_Send
+//   56                     uint8_t Receive_ID,
+//   57                     uint8_t Msg_ID,
+//   58                     uint8_t *ptr,
+//   59                     uint16_t Length,
+//   60                     uint8_t *Tx_Buff,
+//   61                     uint8_t *Tx_Buff_Length)
+//   62 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        SUBA    #0x6a, SP
+          CFI CFA SP+126
+        MOVA    R15, R9
+//   63     uint8_t Buff[100];
+//   64     int sum;
+//   65     
+//   66     ZKHD_Link_Head_t ZKHD_Link_Head;
+//   67     
+//   68     ZKHD_Link_Head.Send_ID = Send_ID;
+        MOV.B   R12, 0x3(SP)
+//   69     ZKHD_Link_Head.Receive_ID = Receive_ID;
+        MOV.B   R13, 0x4(SP)
+//   70     ZKHD_Link_Head.Start = 0xAA;
+        MOV.B   #0xaa, 0(SP)
+        MOV.W   0x7e(SP), R10
+//   71     ZKHD_Link_Head.Length = Length;
+        MOV.B   R10, 0x1(SP)
+        MOV.W   R10, R15
+        SWPB    R15
+        MOV.B   R15, 0x2(SP)
+//   72     ZKHD_Link_Head.Message_ID = 0;
+        MOV.B   #0x0, 0x5(SP)
+//   73     
+//   74     memcpy(Buff,&ZKHD_Link_Head.Start,sizeof(ZKHD_Link_Head_t));
+        MOVA    SP, R8
+        ADDA    #0x6, R8
+        MOV.W   #0x6, R14
+        MOV.W   #0x0, R15
+        MOVA    SP, R13
+        MOVA    R8, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   75     memcpy(Buff+sizeof(ZKHD_Link_Head_t),ptr,Length);
+        MOV.W   R10, R14
+        MOV.W   #0x0, R15
+        MOVA    R9, R13
+        MOVA    R8, R12
+        ADDA    #0x6, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   76     
+//   77     for(int i=0;i<Length + 6;i++)
+        MOV.W   #0x0, R14
+        MOVA    R8, R13
+        MOV.W   R10, R9
+        ADD.W   #0x6, R9
+        JMP     ??ZKHD_Link_Send_1
+//   78     {
+//   79         sum += Buff[i];
+??ZKHD_Link_Send_0:
+        MOV.B   @R13+, R15
+        ADD.W   R15, R11
+//   80     }
+        ADD.W   #0x1, R14
+??ZKHD_Link_Send_1:
+        CMP.W   R9, R14
+        JNC     ??ZKHD_Link_Send_0
+//   81     
+//   82     Buff[Length + sizeof(ZKHD_Link_Head_t)] = sum & 0xFF;
+        MOVA    R8, R15
+        ADDA    R10, R15
+        MOV.B   R11, 0x6(R15)
+//   83     
+//   84     memcpy(Tx_Buff,Buff,Length + sizeof(ZKHD_Link_Head_t) + 1);
+        MOV.W   R10, R14
+        MOV.W   #0x0, R15
+        ADD.W   #0x7, R14
+        ADDC.W  #0x0, R15
+        MOVA    R8, R13
+        MOVA    0x80(SP), R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   85     *Tx_Buff_Length = Length + sizeof(ZKHD_Link_Head_t) + 1;
+        ADD.B   #0x7, R10
+        MOVA    0x84(SP), R15
+        MOV.B   R10, 0(R15)
+//   86 }
+        ADDA    #0x6a, SP
+          CFI CFA SP+20
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 214 bytes in segment CODE
+// 
+// 214 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

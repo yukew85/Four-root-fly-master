@@ -1,0 +1,422 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:12
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\sd24_b.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW2EFC.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\sd24_b.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\sd24_b.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME sd24_b
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\sd24_b.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // sd24_b.c - Driver for the sd24_b Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup sd24_b_api sd24_b
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_SD24_B__
+//   48 #include "sd24_b.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 void SD24_B_init(uint16_t baseAddress, SD24_B_initParam *param)
+//   53 {
+//   54     // Reset all interrupts and flags
+//   55     HWREG16(baseAddress + OFS_SD24BIE)   &= 0x0000; //Reset ALL interrupt enables
+//   56     HWREG16(baseAddress + OFS_SD24BIFG)  &= 0x0000; //Reset ALL interrupt flags
+//   57     HWREG16(baseAddress + OFS_SD24BTRGCTL) &= ~(SD24TRGIE | SD24TRGIFG);
+//   58 
+//   59     // Turn off all group conversions
+//   60     HWREG16(baseAddress + OFS_SD24BCTL1) &= ~(SD24GRP0SC | SD24GRP1SC
+//   61             | SD24GRP2SC | SD24GRP3SC);
+//   62 
+//   63     // Configure SD24_B
+//   64     HWREG16(baseAddress + OFS_SD24BCTL0) &= ~((SD24DIV4 | SD24DIV3 | SD24DIV2
+//   65             | SD24DIV1 | SD24DIV0) | SD24PDIV_7 | SD24SSEL_3 | SD24REFS);
+//   66     HWREG16(baseAddress + OFS_SD24BCTL0) |= (param->clockSourceSelect |
+//   67         param->clockPreDivider | param->clockDivider | param->referenceSelect);
+//   68 
+//   69     return;
+//   70 }
+//   71 
+//   72 void SD24_B_initConverter(uint16_t baseAddress,
+//   73     SD24_B_initConverterParam *param)
+//   74 {
+//   75     uint16_t address = baseAddress + (OFS_SD24BCCTL0 + (param->converter * 0x08));
+//   76 
+//   77     // Clearing previous settings for configuration
+//   78     HWREG16(address) &= ~(SD24ALGN | SD24SNGL | SD24SCS__GROUP3);
+//   79 
+//   80     HWREG16(address) |= (param->alignment | param->startSelect |
+//   81             (((uint16_t) param->conversionMode) << 8));
+//   82 }
+//   83 
+//   84 void SD24_B_initConverterAdvanced(uint16_t baseAddress,
+//   85     SD24_B_initConverterAdvancedParam *param)
+//   86 {
+//   87     // Getting correct SD24BCCTLx register
+//   88     uint16_t address = baseAddress + (OFS_SD24BCCTL0 + (param->converter * 0x08));
+//   89 
+//   90     // Clearing previous settings for configuration
+//   91     HWREG16(address) &= ~(SD24ALGN | SD24SNGL | SD24DF1 | SD24DF0 | SD24SCS__GROUP3 );
+//   92 
+//   93     HWREG16(address) |= (param->alignment | param->startSelect | param->dataFormat |
+//   94             (((uint16_t) param->conversionMode) << 8));
+//   95 
+//   96     // Getting correct SDBINTCTLx register
+//   97     address = baseAddress + (OFS_SD24BINCTL0 + (param->converter * 0x08));
+//   98 
+//   99     // Clearing previous settings for configuration
+//  100     HWREG16(address) &= ~(SD24GAIN_128 | SD24INTDLY_3);
+//  101 
+//  102     HWREG16(address) |= (param->gain | param->sampleDelay);
+//  103 
+//  104     // Getting correct SDBOSRx register
+//  105     address = baseAddress + (OFS_SD24BOSR0 + (param->converter * 0x08));
+//  106 
+//  107     // Clearing previous settings for configuration
+//  108     HWREG16(address) &= ~(OSR10 | OSR9 | OSR8 | OSR7 | OSR6 | OSR5 | OSR4 |
+//  109             OSR3 | OSR2 | OSR1 | OSR0);
+//  110 
+//  111     HWREG16(address) |= param->oversampleRatio;
+//  112 }
+//  113 void SD24_B_setConverterDataFormat(uint16_t baseAddress,
+//  114         uint8_t converter,
+//  115         uint8_t dataFormat) {
+//  116 
+//  117     uint16_t address = baseAddress + (OFS_SD24BCCTL0_L +
+//  118             (converter * 0x08));
+//  119     // Clearing previous settings for configuration
+//  120     HWREG8(address) &= ~(SD24DF0 | SD24DF1);
+//  121 
+//  122     HWREG8(address) |= dataFormat;
+//  123 }
+//  124 
+//  125 void SD24_B_startGroupConversion(uint16_t baseAddress,
+//  126         uint8_t group)
+//  127 {
+//  128     switch(group) {
+//  129     case SD24_B_GROUP0:
+//  130         HWREG16(baseAddress + OFS_SD24BCTL1) |= SD24GRP0SC; break;
+//  131     case SD24_B_GROUP1:
+//  132         HWREG16(baseAddress + OFS_SD24BCTL1) |= SD24GRP1SC; break;
+//  133     case SD24_B_GROUP2:
+//  134         HWREG16(baseAddress + OFS_SD24BCTL1) |= SD24GRP2SC; break;
+//  135     case SD24_B_GROUP3:
+//  136         HWREG16(baseAddress + OFS_SD24BCTL1) |= SD24GRP3SC; break;
+//  137     }
+//  138 }
+//  139 
+//  140 void SD24_B_stopGroupConversion(uint16_t baseAddress,
+//  141         uint8_t group)
+//  142 {
+//  143     switch(group) {
+//  144     case SD24_B_GROUP0:
+//  145         HWREG16(baseAddress + OFS_SD24BCTL1) &= ~(SD24GRP0SC); break;
+//  146     case SD24_B_GROUP1:
+//  147         HWREG16(baseAddress + OFS_SD24BCTL1) &= ~(SD24GRP1SC); break;
+//  148     case SD24_B_GROUP2:
+//  149         HWREG16(baseAddress + OFS_SD24BCTL1) &= ~(SD24GRP2SC); break;
+//  150     case SD24_B_GROUP3:
+//  151         HWREG16(baseAddress + OFS_SD24BCTL1) &= ~(SD24GRP3SC); break;
+//  152     }
+//  153 }
+//  154 
+//  155 void SD24_B_startConverterConversion(uint16_t baseAddress,
+//  156         uint8_t converter)
+//  157 {
+//  158     uint16_t address = baseAddress + (OFS_SD24BCCTL0 + (converter * 0x08));
+//  159 
+//  160     // Clearing trigger generation select
+//  161     HWREG16(address) &= ~(SD24SCS_7);
+//  162 
+//  163     // Setting SD24SC bit to start conversion
+//  164     HWREG16(address) |= SD24SC;
+//  165 }
+//  166 
+//  167 void SD24_B_stopConverterConversion(uint16_t baseAddress,
+//  168         uint8_t converter)
+//  169 {
+//  170     uint16_t address = baseAddress + (OFS_SD24BCCTL0 + (converter * 0x08));
+//  171 
+//  172     // Clearing trigger generation select
+//  173     HWREG16(address) &= ~(SD24SCS_7);
+//  174 
+//  175     // Setting SD24SC bit to start conversion
+//  176     HWREG16(address) &= ~(SD24SC);
+//  177 }
+//  178 
+//  179 void SD24_B_configureDMATrigger(uint16_t baseAddress,
+//  180         uint16_t interruptFlag)
+//  181 {
+//  182     // Clearing previous settings
+//  183     HWREG16(baseAddress + OFS_SD24BCTL1) &= ~(SD24DMA3 | SD24DMA2 |
+//  184             SD24DMA1 | SD24DMA0);
+//  185 
+//  186     HWREG16(baseAddress + OFS_SD24BCTL1) |= interruptFlag;
+//  187 }
+//  188 
+//  189 void SD24_B_setInterruptDelay(uint16_t baseAddress,
+//  190         uint8_t converter,
+//  191         uint8_t sampleDelay)
+//  192 {
+//  193     uint16_t address = baseAddress + (OFS_SD24BINCTL0 + (converter * 0x08));
+//  194 
+//  195     // Clear previous settings
+//  196     HWREG16(address) &= ~(SD24INTDLY_3);
+//  197 
+//  198     HWREG16(address) |= sampleDelay;
+//  199 }
+//  200 
+//  201 void SD24_B_setConversionDelay(uint16_t baseAddress,
+//  202         uint8_t converter,
+//  203         uint16_t cycleDelay)
+//  204 {
+//  205     uint16_t address = baseAddress + (OFS_SD24BPRE0 + (converter * 0x08));
+//  206 
+//  207     // Clear previous settings
+//  208     HWREG16(address) &= ~(0x3FF);
+//  209 
+//  210     HWREG16(address) |= cycleDelay;
+//  211 }
+//  212 
+//  213 void SD24_B_setOversampling(uint16_t baseAddress,
+//  214         uint8_t converter,
+//  215         uint16_t oversampleRatio)
+//  216 {
+//  217     uint16_t address = baseAddress + (OFS_SD24BOSR0 + (converter * 0x08));
+//  218 
+//  219     // Clear previous settings
+//  220     HWREG16(address) &= ~(OSR10 | OSR9 | OSR8 | OSR7 | OSR6 | OSR5 | OSR4 |
+//  221             OSR3 | OSR2 | OSR1 | OSR0);
+//  222 
+//  223     HWREG16(address) |= oversampleRatio;
+//  224 }
+//  225 
+//  226 void SD24_B_setGain(uint16_t baseAddress,
+//  227         uint8_t converter,
+//  228         uint8_t gain)
+//  229 {
+//  230     uint16_t address = baseAddress + (OFS_SD24BINCTL0 + (converter * 0x08));
+//  231 
+//  232     // Clear previous settings
+//  233     HWREG16(address) &= ~(SD24GAIN_128);
+//  234 
+//  235     HWREG16(address) |= gain;
+//  236 }
+//  237 
+//  238 uint32_t SD24_B_getResults(uint16_t baseAddress,
+//  239         uint8_t converter)
+//  240 {
+//  241     // Calculating address to low word
+//  242     uint16_t address = baseAddress + (OFS_SD24BMEML0 + (converter * 0x04));
+//  243 
+//  244     // Getting low word result
+//  245     uint16_t lowResult = HWREG16(address);
+//  246 
+//  247     // Getting high word result and concatenate with low word
+//  248     uint32_t result = (((uint32_t) HWREG16(address + 0x02) ) << 16) + lowResult;
+//  249 
+//  250     return result;
+//  251 }
+//  252 
+//  253 uint16_t SD24_B_getHighWordResults(uint16_t baseAddress,
+//  254         uint8_t converter)
+//  255 {
+//  256     // Calculating address
+//  257     uint16_t address = baseAddress + (OFS_SD24BMEMH0 + (converter * 0x04));
+//  258 
+//  259     // Getting high word result
+//  260     uint16_t result = HWREG16(address);
+//  261 
+//  262     return result;
+//  263 }
+//  264 
+//  265 void SD24_B_enableInterrupt (uint16_t baseAddress,
+//  266     uint8_t converter,
+//  267     uint16_t mask)
+//  268 {
+//  269     //Enable Interrupt
+//  270     HWREG16(baseAddress + OFS_SD24BIE) |= (mask << converter);
+//  271 }
+//  272 
+//  273 void SD24_B_disableInterrupt (uint16_t baseAddress,
+//  274     uint8_t converter,
+//  275     uint16_t mask)
+//  276 {
+//  277     HWREG16(baseAddress + OFS_SD24BIE) &= ~(mask << converter);
+//  278 }
+//  279 
+//  280 void SD24_B_clearInterrupt (uint16_t baseAddress,
+//  281     uint8_t converter,
+//  282     uint16_t mask)
+//  283 {
+//  284     HWREG16(baseAddress + OFS_SD24BIFG) &= ~(mask << converter);
+//  285 }
+//  286 
+//  287 uint16_t SD24_B_getInterruptStatus (uint16_t baseAddress,
+//  288     uint8_t converter,
+//  289     uint16_t mask)
+//  290 {
+//  291     return ( HWREG16(baseAddress + OFS_SD24BIFG) & (mask << converter) );
+//  292 }
+//  293 
+//  294 
+//  295 #endif
+//  296 //*****************************************************************************
+//  297 //
+//  298 //! Close the doxygen group for sd24_b_api
+//  299 //! @}
+//  300 //
+//  301 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,364 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:06
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\dac12_a.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW19D6.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\dac12_a.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\dac12_a.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME dac12_a
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\dac12_a.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // dac12_a.c - Driver for the dac12_a Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup dac12_a_api dac12_a
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_DAC12_2__
+//   48 #include "dac12_a.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 bool DAC12_A_init(uint16_t baseAddress, DAC12_A_initParam *param)
+//   53 {
+//   54     baseAddress += param->submoduleSelect;    //Add 0x10 to base address IF
+//   55                                               //DAC12_A_1 is selected.
+//   56     HWREG16(baseAddress + OFS_DAC12_0CTL1) &= ~(DAC12OG + DAC12DFJ);
+//   57 
+//   58     //Reset and Set DAC12_A Control 0 Bits
+//   59     HWREG16(baseAddress + OFS_DAC12_0CTL0) = param->outputSelect
+//   60                                            + param->positiveReferenceVoltage
+//   61                                            + param->amplifierSetting
+//   62                                            + param->conversionTriggerSelect;
+//   63 
+//   64     if (DAC12_A_VREFx1 == param->outputVoltageMultiplier){
+//   65         HWREG16(baseAddress + OFS_DAC12_0CTL0) |= DAC12IR;
+//   66     } else if (DAC12_A_VREFx2 == param->outputVoltageMultiplier){
+//   67         HWREG16(baseAddress + OFS_DAC12_0CTL1) |= DAC12OG;
+//   68     }
+//   69     //else if(DAC12_A_VREFx3 == outputVoltageMultiplier)
+//   70     //Both DAC12IR and DAC12OG values == 0
+//   71 
+//   72     return ( STATUS_SUCCESS) ;
+//   73 }void DAC12_A_setAmplifierSetting (uint16_t baseAddress,
+//   74     uint8_t submoduleSelect,
+//   75     uint8_t amplifierSetting)
+//   76 {
+//   77     //Reset amplifier setting to set it
+//   78     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) &= ~(DAC12AMP_7);
+//   79     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) |= amplifierSetting;
+//   80 }
+//   81 
+//   82 void DAC12_A_disable (uint16_t baseAddress,
+//   83     uint8_t submoduleSelect)
+//   84 {
+//   85   //Reset amplifier setting to turn DAC12_A off completely
+//   86   HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) &= ~(DAC12AMP_7);
+//   87 }
+//   88 
+//   89 void DAC12_A_enableGrouping (uint16_t baseAddress)
+//   90 {
+//   91     HWREG16(baseAddress + OFS_DAC12_0CTL0) |= DAC12GRP;
+//   92 }
+//   93 
+//   94 void DAC12_A_disableGrouping (uint16_t baseAddress)
+//   95 {
+//   96     HWREG16(baseAddress + OFS_DAC12_0CTL0) &= ~(DAC12GRP);
+//   97 }
+//   98 
+//   99 void DAC12_A_enableInterrupt (uint16_t baseAddress,
+//  100     uint8_t submoduleSelect)
+//  101 {
+//  102     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) |= DAC12IE;
+//  103 }
+//  104 
+//  105 void DAC12_A_disableInterrupt (uint16_t baseAddress,
+//  106     uint8_t submoduleSelect)
+//  107 {
+//  108     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) &= ~(DAC12IE);
+//  109 }
+//  110 
+//  111 uint16_t DAC12_A_getInterruptStatus (uint16_t baseAddress,
+//  112     uint8_t submoduleSelect)
+//  113 {
+//  114     return (HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) & DAC12IFG);
+//  115 }
+//  116 
+//  117 void DAC12_A_clearInterrupt (uint16_t baseAddress,
+//  118     uint8_t submoduleSelect)
+//  119 {
+//  120     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) &= ~(DAC12IFG);
+//  121 }
+//  122 
+//  123 void DAC12_A_calibrateOutput (uint16_t baseAddress,
+//  124     uint8_t submoduleSelect)
+//  125 {
+//  126     //Unlock Calibration
+//  127     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CALCTL) = DAC12PW;
+//  128 
+//  129     //Start Calibration
+//  130     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) |= DAC12CALON;
+//  131 
+//  132     //Wait for Calibration to Finish
+//  133     while (HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) & DAC12CALON);
+//  134 
+//  135     //Lock Calibration
+//  136     HWREG16(baseAddress + submoduleSelect +
+//  137         OFS_DAC12_0CALCTL) = DAC12PW + DAC12LOCK;
+//  138 }
+//  139 
+//  140 uint16_t DAC12_A_getCalibrationData (uint16_t baseAddress,
+//  141     uint8_t submoduleSelect)
+//  142 {
+//  143     return ((uint16_t)(HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CALDAT))) ;
+//  144 }
+//  145 
+//  146 void DAC12_A_setCalibrationOffset (uint16_t baseAddress,
+//  147     uint8_t submoduleSelect,
+//  148     uint16_t calibrationOffsetValue)
+//  149 {
+//  150     //Unlock Calibration
+//  151     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CALCTL) = DAC12PW;
+//  152 
+//  153     //Set Calibration Offset
+//  154     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CALDAT) =
+//  155         calibrationOffsetValue;
+//  156 
+//  157     //Lock Calibration
+//  158     HWREG16(baseAddress + submoduleSelect +
+//  159         OFS_DAC12_0CALCTL) = DAC12PW + DAC12LOCK;
+//  160 }
+//  161 
+//  162 void DAC12_A_enableConversions (uint16_t baseAddress,
+//  163     uint8_t submoduleSelect)
+//  164 {
+//  165     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) |= DAC12ENC;
+//  166 }
+//  167 
+//  168 void DAC12_A_setData (uint16_t baseAddress,
+//  169     uint8_t submoduleSelect,
+//  170     uint16_t data)
+//  171 {
+//  172     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0DAT) = data;
+//  173 }
+//  174 
+//  175 void DAC12_A_disableConversions (uint16_t baseAddress,
+//  176     uint8_t submoduleSelect)
+//  177 {
+//  178     HWREG16(baseAddress + submoduleSelect + OFS_DAC12_0CTL0) &= ~(DAC12ENC);
+//  179 }
+//  180 
+//  181 void DAC12_A_setResolution (uint16_t baseAddress,
+//  182     uint8_t submoduleSelect,
+//  183     uint16_t resolutionSelect)
+//  184 {
+//  185     //Store the ENC bit status
+//  186     uint16_t conversionsEnabledStatus =
+//  187         ( HWREG16(baseAddress + OFS_DAC12_0CTL0) & (DAC12ENC) );
+//  188 
+//  189     baseAddress += submoduleSelect;           //Add 0x10 to base address IF
+//  190                                               //DAC12_A_1 is selected.
+//  191 
+//  192     if (DAC12_A_RESOLUTION_8BIT == resolutionSelect){
+//  193         HWREG16(baseAddress + OFS_DAC12_0CTL0) |= DAC12RES;
+//  194     } else if (DAC12_A_RESOLUTION_12BIT == resolutionSelect){
+//  195         HWREG16(baseAddress + OFS_DAC12_0CTL0) &= ~(DAC12RES);
+//  196     }
+//  197 
+//  198     //Restore the ENC bit status
+//  199     HWREG16(baseAddress + OFS_DAC12_0CTL0) |= conversionsEnabledStatus;
+//  200 }
+//  201 
+//  202 void DAC12_A_setInputDataFormat (uint16_t baseAddress,
+//  203     uint8_t submoduleSelect,
+//  204     uint8_t inputJustification,
+//  205     uint8_t inputSign)
+//  206 {
+//  207     //Store the ENC bit status
+//  208     uint16_t conversionsEnabledStatus =
+//  209         ( HWREG16(baseAddress + OFS_DAC12_0CTL0) & (DAC12ENC) );
+//  210 
+//  211     baseAddress += submoduleSelect;           //Add 0x10 to base address IF
+//  212                                               //DAC12_A_1 is selected.
+//  213 
+//  214     if (DAC12_A_JUSTIFICATION_LEFT == inputJustification){
+//  215         HWREG16(baseAddress + OFS_DAC12_0CTL1) |= DAC12DFJ;
+//  216     } else if (DAC12_A_JUSTIFICATION_RIGHT == inputJustification){
+//  217         HWREG16(baseAddress + OFS_DAC12_0CTL1) &= ~(DAC12DFJ);
+//  218     }
+//  219 
+//  220     if (DAC12_A_SIGNED_2SCOMPLEMENT == inputSign){
+//  221         HWREG16(baseAddress + OFS_DAC12_0CTL0) |= DAC12DF;
+//  222     } else if (DAC12_A_UNSIGNED_BINARY == inputSign){
+//  223         HWREG16(baseAddress + OFS_DAC12_0CTL0) &= ~(DAC12DF);
+//  224     }
+//  225 
+//  226     //Restore the ENC bit status
+//  227     HWREG16(baseAddress + OFS_DAC12_0CTL0) |= conversionsEnabledStatus;
+//  228 }
+//  229 
+//  230 uint32_t DAC12_A_getDataBufferMemoryAddressForDMA (uint16_t baseAddress,
+//  231     uint8_t submoduleSelect)
+//  232 {
+//  233   return ( baseAddress + submoduleSelect + OFS_DAC12_0DAT );
+//  234 }
+//  235 
+//  236 
+//  237 #endif
+//  238 //*****************************************************************************
+//  239 //
+//  240 //! Close the doxygen group for dac12_a_api
+//  241 //! @}
+//  242 //
+//  243 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,716 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:42
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_gpio.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW55FA.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_gpio.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_gpio.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_gpio.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_gpio.c
+      1          #include "msp430f5529_gpio.h"
+
+   \                                 In  segment DATA16_AN, at 0x200
+   \   union <unnamed> __data16 _A_PAIN_L
+   \                     _A_PAIN_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x220
+   \   union <unnamed> __data16 _A_PBIN_L
+   \                     _A_PBIN_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x240
+   \   union <unnamed> __data16 _A_PCIN_L
+   \                     _A_PCIN_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x260
+   \   union <unnamed> __data16 _A_PDIN_L
+   \                     _A_PDIN_L:
+   \   000000                DS8 2
+      2          
+      3          //port，pin,BITs获取宏定义,由此可知，当使用16位IO定义时由于计算port,pin值会降低执行效率
+      4          #ifdef GPIO_PORT_SIZE_WORD
+      5          #define GET_PORT(portn)        ((((portn) >= PORTA)&&((portn) <= PORTD)) ? ((PORTn)((portn) - PORTA)) : ((PORTn)((portn - PORT1) / 2)))
+      6          #define GET_PIN(portn,pin)     ((((portn) >= PORTA)&&((portn) <= PORTD)) ? (pin)  : ((((portn - PORT1)%2) == 0) ? (pin)  : ((pin)+8u)))
+      7          #define GET_BITs(portn,BITs)   ((((portn) >= PORTA)&&((portn) <= PORTD)) ? (BITs) : ((((portn - PORT1)%2) == 0) ? (BITs) : (((BITs)<<8u))))
+      8          #else
+      9          #define GET_PORT(portn)        (portn)
+     10          #define GET_PIN(portn,pin)     (pin)
+     11          #define GET_BITs(portn,BITs)   (BITs)
+     12          #endif
+     13          
+     14          #ifdef GPIO_PORT_SIZE_WORD
+     15          const GPIO_MemMapPtr GPIOX[] ={PA_BASE_PTR,PB_BASE_PTR,PC_BASE_PTR,PD_BASE_PTR}; 
+     16          #else
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+     17          const GPIO_MemMapPtr GPIOX[] ={P1_BASE_PTR,P2_BASE_PTR,P3_BASE_PTR,P4_BASE_PTR,P5_BASE_PTR,P6_BASE_PTR,P7_BASE_PTR,P8_BASE_PTR}; 
+   \                     GPIOX:
+   \   000000   ............ DC32 _A_PAIN_L, _A_PAIN_L + 1H, _A_PBIN_L, _A_PBIN_L + 1H, _A_PCIN_L
+   \            ............
+   \            ............
+   \            ....        
+   \   000014   ............ DC32 _A_PCIN_L + 1H, _A_PDIN_L, _A_PDIN_L + 1H
+   \            ............
+     18          #endif
+     19          /*********************************************************************************
+     20          函数名：IO口初始化
+     21          入口参数：PORTn portn    对应IO端口
+     22                    uint16_t pin   对应IO引脚位置
+     23                    uint16_t config     
+     24                    对应IO口配置 {
+     25                                      GPI                   ,// 输入方向
+     26                                      GPO                   ,// 输出方向
+     27                                      LDS                   ,// 低驱动能力
+     28                                      HDS                   ,// 高驱动能力
+     29                                      PULL_DOWN             ,// 下拉
+     30                                      PULL_UP               ,// 上拉
+     31                                      IRQ_RISING            ,// 上升沿触发中断
+     32                                      IRQ_FALLING           ,// 下降沿触发中断
+     33                                      SEL                   ,// 第二复用功能
+     34                                  }  
+     35          使用例程:GPIO_MultiBits_Init(P2,BIT3,GPO|HDS);   //初始化P2.3为输出放向，高驱动能力
+     36          **********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     37          void GPIO_MultiBits_Init(PORTn portn,uint16_t BITs,uint16_t config)
+   \                     GPIO_MultiBits_Init:
+     38          {
+   \   000000   4F4C         MOV.B   R12, R15
+     39            //获取port,pin
+     40            PORTn    port = GET_PORT(portn);
+     41            BITs = GET_BITs(portn,BITs);
+     42            
+     43            //配置IO口
+     44            if((config & SEL) == SEL)
+   \   000002   4F06         RLAM.A  #0x2, R15
+   \   000004   ....5F4F.... MOVX.A  GPIOX(R15), R15
+   \   00000A   4C4D         MOV.B   R13, R12
+   \   00000C   7CE3         XOR.B   #0xff, R12
+   \   00000E   3EB00001     BIT.W   #0x100, R14
+   \   000012   0324         JEQ     ??GPIO_MultiBits_Init_2
+     45            {
+     46              GPIOX[port]->SEL |= BITs;                    //选择为第二功能
+   \   000014   CFDD0A00     BIS.B   R13, 0xa(R15)
+   \   000018   023C         JMP     ??GPIO_MultiBits_Init_6
+     47            }
+     48            else
+     49            {
+     50              GPIOX[port]->SEL &=~BITs;                    //选择为IO口功能
+   \                     ??GPIO_MultiBits_Init_2:
+   \   00001A   CFFC0A00     AND.B   R12, 0xa(R15)
+     51            }
+     52          
+     53            if((config & GPO) == GPO)              //判断方向
+   \                     ??GPIO_MultiBits_Init_6:
+   \   00001E   2EB3         BIT.W   #0x2, R14
+   \   000020   0A24         JEQ     ??GPIO_MultiBits_Init_1
+     54            {
+     55              GPIOX[port]->PDIR |= BITs;       //设置为输出方向
+   \   000022   CFDD0400     BIS.B   R13, 0x4(R15)
+     56              
+     57              if((config&HDS) == HDS)            //判断驱动能力
+   \   000026   3EB2         BIT.W   #0x8, R14
+   \   000028   0324         JEQ     ??GPIO_MultiBits_Init_0
+     58              {
+     59                GPIOX[port]->DS |= BITs;          //设为高驱动能力
+   \   00002A   CFDD0800     BIS.B   R13, 0x8(R15)
+   \   00002E   1001         RETA
+     60              }
+     61              else
+     62              {
+     63                GPIOX[port]->DS &=~BITs;          //设为低驱动能力
+   \                     ??GPIO_MultiBits_Init_0:
+   \   000030   CFFC0800     AND.B   R12, 0x8(R15)
+   \   000034   1001         RETA
+     64              }
+     65            }
+     66            else   //如果是输入方向
+     67            {
+     68              GPIOX[port]->PDIR &=~BITs;      //设置为输入方向
+   \                     ??GPIO_MultiBits_Init_1:
+   \   000036   CFFC0400     AND.B   R12, 0x4(R15)
+     69              
+     70              if((config & PULL_DOWN) == PULL_DOWN) //判断是否开启下拉
+   \   00003A   3EB01000     BIT.W   #0x10, R14
+   \   00003E   0524         JEQ     ??GPIO_MultiBits_Init_4
+     71              {
+     72                GPIOX[port]->REN  |= BITs;             //开启上\下拉
+   \   000040   CFDD0600     BIS.B   R13, 0x6(R15)
+     73                GPIOX[port]->POUT &=~BITs;             //设置为下拉
+   \   000044   CFFC0200     AND.B   R12, 0x2(R15)
+   \   000048   0A3C         JMP     ??GPIO_MultiBits_Init_7
+     74              }
+     75              else if((config & PULL_UP) == PULL_UP)//判断是否开启上拉
+   \                     ??GPIO_MultiBits_Init_4:
+   \   00004A   3EB02000     BIT.W   #0x20, R14
+   \   00004E   0524         JEQ     ??GPIO_MultiBits_Init_5
+     76              {
+     77                GPIOX[port]->REN  |= BITs;             //开启上\下拉
+   \   000050   CFDD0600     BIS.B   R13, 0x6(R15)
+     78                GPIOX[port]->POUT |= BITs;             //设置为上拉
+   \   000054   CFDD0200     BIS.B   R13, 0x2(R15)
+   \   000058   023C         JMP     ??GPIO_MultiBits_Init_7
+     79              }
+     80              else
+     81              {
+     82                GPIOX[port]->REN &=~BITs;              //关闭上\下拉
+   \                     ??GPIO_MultiBits_Init_5:
+   \   00005A   CFFC0600     AND.B   R12, 0x6(R15)
+     83              }
+     84              
+     85              if((portn == PORT1)||(portn == PORT2)
+     86          #ifdef  GPIO_PORT_SIZE_WORD
+     87                 ||(portn == PORTA)
+     88          #endif       
+     89                 );                 //小于等于P2则可能会配置IO口中断
+     90              {
+     91                GPIOX[port]->IE &=~BITs;                  //关闭中断
+   \                     ??GPIO_MultiBits_Init_7:
+   \   00005E   CFFC1A00     AND.B   R12, 0x1a(R15)
+     92                if((config & IRQ_RISING) == IRQ_RISING)       //如果有上升沿
+   \   000062   3EB04000     BIT.W   #0x40, R14
+   \   000066   0324         JEQ     ??GPIO_MultiBits_Init_3
+     93                {
+     94                  GPIOX[port]->IES |= BITs;                  //设为上升沿
+   \   000068   CFDD1800     BIS.B   R13, 0x18(R15)
+   \   00006C   1001         RETA
+     95                }
+     96                else 
+     97                {
+     98                  GPIOX[port]->IES &=~BITs ;                 //设为下降沿
+   \                     ??GPIO_MultiBits_Init_3:
+   \   00006E   CFFC1800     AND.B   R12, 0x18(R15)
+     99                } 
+    100              }
+    101            }
+    102          }
+   \   000072   1001         RETA
+    103          /*******************************************************************************
+    104          *  函数名称： GPIO_SetBits  (PORTn portn, uint16_t BITs)
+    105          *  功能说明：设置IO口输出为高电平
+    106          *  参数说明： PORTn portn     对应IO端口
+    107                        uint16_t BITs   对应IO引脚位置
+    108          *  函数返回：无
+    109          *  使用示例： GPIO_SetBits  (PORT1, GPIO_Pin_0|GPIO_Pin_1); //P1.0,P1.1输出高电平
+    110          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    111          void     GPIO_SetBits  (PORTn portn, uint16_t BITs)
+   \                     GPIO_SetBits:
+    112          {
+    113            if((portn <= PORT8)) 
+   \   000000   7C92         CMP.B   #0x8, R12
+    114              BITs = BITs & 0xFF;
+    115            //获取port,pin
+    116            PORTn port = GET_PORT(portn);
+    117            BITs = GET_BITs(portn,BITs);
+    118            //IO口操作
+    119            GPIOX[port]->POUT |= BITs;            //
+   \   000002   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_0:
+   \   000006   CFDD0200     BIS.B   R13, 0x2(R15)
+    120          }
+   \   00000A   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine0:
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C06         RLAM.A  #0x2, R12
+   \   000004   ....5F4C.... MOVX.A  GPIOX(R12), R15
+   \   00000A   1001         RETA
+    121          /*******************************************************************************
+    122          *  函数名称： GPIO_ResetBits(PORTn portn, uint16_t BITs)
+    123          *  功能说明：设置IO口输出为低电平
+    124          *  参数说明： PORTn portn     对应IO端口
+    125                        uint16_t BITs   对应IO引脚位置
+    126          *  函数返回：无
+    127          *  使用示例：GPIO_ResetBits  (PORT1, GPIO_Pin_0|GPIO_Pin_1); //P1.0,P1.1输出低电平
+    128          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    129          void     GPIO_ResetBits(PORTn portn, uint16_t BITs)
+   \                     GPIO_ResetBits:
+    130          {
+    131            //获取port,pin
+    132            PORTn port = GET_PORT(portn);
+    133            BITs = GET_BITs(portn,BITs);
+    134            //IO口操作
+    135            GPIOX[port]->POUT &=~BITs;    
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_1:
+   \   000004   CFCD0200     BIC.B   R13, 0x2(R15)
+    136          }
+   \   000008   1001         RETA
+    137          /*******************************************************************************
+    138          函数名称：IO口一位输出设置
+    139          入口参数：PORTn portn    对应IO端口
+    140                    uint8_t pin     对应IO引脚位置
+    141                    STATUS level    设置输出电平（SET ：高电平  RESET：低电平）
+    142          *  使用示例：
+    143          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    144          void GPIO_WriteBit(PORTn portn,uint8_t pin,STATUS level)
+   \                     GPIO_WriteBit:
+    145          {
+    146            //获取port,pin
+    147            PORTn   port = GET_PORT(portn);
+    148            uint16_t BIT = (1u << GET_PIN(portn,pin));
+   \   000000   ........     CALLA   #?Subroutine2
+    149            //IO口操作
+    150            if(level != RESET)
+   \                     ??CrossCallReturnLabel_6:
+   \   000004   4E93         CMP.B   #0x0, R14
+   \   000006   0324         JEQ     ??GPIO_WriteBit_1
+    151            {
+    152              GPIOX[port]->POUT |= BIT;            //
+   \   000008   CDDF0200     BIS.B   R15, 0x2(R13)
+   \   00000C   1001         RETA
+    153            }
+    154            else 
+    155            {
+    156              GPIOX[port]->POUT &=~BIT;            //
+   \                     ??GPIO_WriteBit_1:
+   \   00000E   CDCF0200     BIC.B   R15, 0x2(R13)
+    157            }
+    158          }
+   \   000012   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine2:
+   \   000000   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_12:
+   \   000004   4C4C         MOV.B   R12, R12
+   \   000006   4C06         RLAM.A  #0x2, R12
+   \   000008   ....5D4C.... MOVX.A  GPIOX(R12), R13
+   \   00000E   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine4:
+   \   000000   1F43         MOV.W   #0x1, R15
+   \   000002   5D83         SUB.B   #0x1, R13
+   \   000004   0230         JN      ??GPIO_WriteBit_0
+   \   000006                RPT     R13
+   \   000006   CD180F5F     RLAX.W  R15
+   \                     ??GPIO_WriteBit_0:
+   \   00000A   1001         RETA
+    159          /*******************************************************************************
+    160          函数名称：IO口一位输入读取
+    161          入口参数：PORTn portn    对应IO端口
+    162                    uint8_t pin    对应IO引脚位置
+    163          返回参数：STATUS         输入电平（SET ：高电平  RESET：低电平）
+    164          *  使用示例：
+    165          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    166          STATUS GPIO_ReadBit(PORTn portn,uint8_t pin)
+   \                     GPIO_ReadBit:
+    167          {
+    168            //获取port,pin
+    169            PORTn   port = GET_PORT(portn);
+    170            uint16_t BIT = (1u << GET_PIN(portn,pin));
+    171            //IO口操作
+    172            return ((GPIOX[port]->IN & BIT) ? BIT_SET : RESET);
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_2:
+   \   000004   6E4F         MOV.B   @R15, R14
+   \   000006   ........     CALLA   #?Subroutine3
+   \                     ??CrossCallReturnLabel_8:
+   \   00000A   0220         JNE     ??GPIO_ReadBit_1
+   \   00000C   4C43         MOV.B   #0x0, R12
+   \   00000E   1001         RETA
+   \                     ??GPIO_ReadBit_1:
+   \   000010   5C43         MOV.B   #0x1, R12
+   \   000012   1001         RETA
+    173          }
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine3:
+   \   000000   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_13:
+   \   000004   4EBF         BIT.B   R15, R14
+   \   000006   1001         RETA
+    174          /*******************************************************************************
+    175          函数名称：IO口一位输出翻转
+    176          入口参数：PORTn portn    对应IO端口
+    177                    uint8_t pin     对应IO引脚位置
+    178          *  使用示例：
+    179          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C06         RLAM.A  #0x2, R12
+   \   000004   ....5E4C.... MOVX.A  GPIOX(R12), R14
+   \   00000A                REQUIRE ?Subroutine4
+   \   00000A                // Fall through to label ?Subroutine4
+
+   \                                 In  segment CODE, align 2
+    180          void GPIO_TurnBit  (PORTn portn,uint8_t pin)
+   \                     GPIO_TurnBit:
+    181          {
+    182            //获取port,pin
+    183            PORTn   port = GET_PORT(portn);
+    184            uint16_t BIT = (1u << GET_PIN(portn,pin));
+    185            //IO口操作
+    186            GPIOX[port]->POUT ^= BIT;
+   \   000000   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_10:
+   \   000004   CEEF0200     XOR.B   R15, 0x2(R14)
+    187          }
+   \   000008   1001         RETA
+    188          /*******************************************************************************
+    189          函数名称：IO口8位输出设置
+    190          入口参数：PORTn portn    对应IO端口,必须取PORT1-PORT8
+    191                    uint8_t level   设置8位输出电平
+    192          *  使用示例：
+    193          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    194          void GPIO_WriteByte(PORTn portn,uint8_t value)
+   \                     GPIO_WriteByte:
+    195          {
+    196          #ifdef GPIO_PORT_SIZE_WORD
+    197            
+    198            ASSERT((portn <= PORT8),
+    199                   "GPIO_WriteByte",
+    200                   "端口设置不合理！"); //断言检测输入参数
+    201            
+    202            PORTn port = GET_PORT(portn);
+    203            
+    204            if((portn%2) == 0) //如果portn是基数时
+    205            {
+    206              GPIOX[port]->POUT = GPIOX[port]->POUT & 0xFF00;
+    207              GPIOX[port]->POUT |= value;
+    208            }
+    209            else
+    210            {
+    211              GPIOX[port]->POUT = GPIOX[port]->POUT & 0x00FF;
+    212              GPIOX[port]->POUT |= ((uint16_t)value<<8u);
+    213            }
+    214          #else
+    215            GPIOX[portn]->POUT = value;            //
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_3:
+   \   000004   CF4D0200     MOV.B   R13, 0x2(R15)
+    216          #endif
+    217          }
+   \   000008   1001         RETA
+    218          /*******************************************************************************
+    219          函数名称：IO口8位输入读取
+    220          入口参数：PORTn portn    对应IO端口,必须取PORT1-PORT8
+    221          返回参数：uint8 8位输入电平
+    222          *  使用示例：
+    223          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    224          uint8_t GPIO_ReadByte(PORTn portn)
+   \                     GPIO_ReadByte:
+    225          {
+    226          #ifdef GPIO_PORT_SIZE_WORD
+    227            //如果输入参数时P1-P8时
+    228            ASSERT((portn <= PORT8),
+    229                   "GPIO_ReadByte",
+    230                   "端口设置不合理！"); //断言检测输入参数
+    231            
+    232            PORTn port = GET_PORT(portn);
+    233            
+    234            if((portn%2) == 0) //如果portn是基数时
+    235            {
+    236              return ((GPIOX[port]->IN) & 0x00FF);
+    237            }
+    238            else
+    239            {
+    240              return ((GPIOX[port]->IN) >> 8u);
+    241            }
+    242          #else
+    243            return (GPIOX[portn]->IN);            //
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_4:
+   \   000004   6C4F         MOV.B   @R15, R12
+   \   000006   1001         RETA
+    244          #endif
+    245          }
+    246          #ifdef GPIO_PORT_SIZE_WORD
+    247          /*******************************************************************************
+    248          函数名称：IO口16位输出设置
+    249          入口参数：PORTn portn     对应IO端口,必须取PORTA-PORTD
+    250                    uint16_t level   设置16位输出电平
+    251          *  使用示例：
+    252          ********************************************************************************/
+    253          void    GPIO_WriteWord(PORTn portn, uint16_t value) 
+    254          {
+    255            //获取port,pin
+    256            PORTn   port = GET_PORT(portn);
+    257            
+    258            GPIOX[port]->POUT = value;            //
+    259          }
+    260          /*******************************************************************************
+    261          函数名称：IO口16位输入读取
+    262          入口参数：PORTn portn    对应IO端口,必须取PORTA-PORTD
+    263          返回参数：uint16 16位输入电平
+    264          *  使用示例：
+    265          ********************************************************************************/
+    266          uint16_t GPIO_ReadWord(PORTn portn)
+    267          {
+    268            //获取port,pin
+    269            PORTn   port = GET_PORT(portn);
+    270            
+    271            return (GPIOX[port]->IN);
+    272          }
+    273          #endif
+    274          /*******************************************************************************
+    275          函数名称：设置是否允许IO口中断
+    276          入口参数：PORTn portn    对应IO端口
+    277                    uint8_t pin     对应IO引脚位置
+    278          *  使用示例：
+    279          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    280          void GPIO_ITConfig(PORTn portn,uint8_t pin,STATUS ITState)
+   \                     GPIO_ITConfig:
+    281          {
+    282          //  ASSERT(
+    283          //#ifdef  GPIO_PORT_SIZE_WORD
+    284          //         (portn == PORTA)||
+    285          //#endif
+    286          //         (portn == PORT1)||(portn == PORT2),
+    287          //         "GPIO_ITConfig",
+    288          //         "端口设置不合理！");                 //断言检测输入参数
+    289          
+    290            //获取port,pin
+    291            PORTn   port = GET_PORT(portn);
+    292            uint16_t BIT = (1u<<GET_PIN(portn,pin));
+   \   000000   ........     CALLA   #?Subroutine2
+    293            //IO口操作
+    294            
+    295            if(ITState != DISABLE)
+   \                     ??CrossCallReturnLabel_7:
+   \   000004   4C4F         MOV.B   R15, R12
+   \   000006   7CE3         XOR.B   #0xff, R12
+   \   000008   4E93         CMP.B   #0x0, R14
+   \   00000A   0524         JEQ     ??GPIO_ITConfig_1
+    296            {
+    297              GPIOX[port]->IFG &=~BIT;                  //清中断标志
+   \   00000C   CDFC1C00     AND.B   R12, 0x1c(R13)
+    298              GPIOX[port]->IE |= BIT;
+   \   000010   CDDF1A00     BIS.B   R15, 0x1a(R13)
+   \   000014   1001         RETA
+    299            }
+    300            else
+    301            {
+    302              GPIOX[port]->IE &=~BIT;
+   \                     ??GPIO_ITConfig_1:
+   \   000016   CDFC1A00     AND.B   R12, 0x1a(R13)
+    303            }
+    304          }
+   \   00001A   1001         RETA
+    305          /*******************************************************************************
+    306          函数名称：获取某一位端口中断标志
+    307          入口参数：PORTn portn    对应IO端口
+    308                    uint8_t pin     对应IO引脚位置
+    309          *  使用示例：
+    310          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    311          STATUS GPIO_GetITStatus(PORTn portn,uint8_t pin)
+   \                     GPIO_GetITStatus:
+    312          {
+    313            //获取port,pin
+    314            PORTn   port = GET_PORT(portn);
+    315            uint16_t BIT = (1u<<GET_PIN(portn,pin));
+    316            //IO口操作
+    317            return ((GPIOX[port]->IFG & BIT) ? TRUE : FALSE);
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_5:
+   \   000004   5E4F1C00     MOV.B   0x1c(R15), R14
+   \   000008   ........     CALLA   #?Subroutine3
+   \                     ??CrossCallReturnLabel_9:
+   \   00000C   0220         JNE     ??GPIO_GetITStatus_1
+   \   00000E   4C43         MOV.B   #0x0, R12
+   \   000010   1001         RETA
+   \                     ??GPIO_GetITStatus_1:
+   \   000012   5C43         MOV.B   #0x1, R12
+   \   000014   1001         RETA
+    318          }
+    319          /*******************************************************************************
+    320          函数名称：清除8位中断标志
+    321          入口参数：PORTn portn    对应IO端口
+    322                    uint8_t pin     对应IO引脚位置
+    323          *  使用示例：
+    324          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    325          void  GPIO_ClearITPendingBit(PORTn portn,uint8_t pin)
+   \                     GPIO_ClearITPendingBit:
+    326          {
+    327            //获取port,pin
+    328            PORTn   port = GET_PORT(portn);
+    329            uint16_t BIT = (1u<<GET_PIN(portn,pin));
+    330            //IO口操作
+    331            GPIOX[port]->IFG &=~BIT;
+   \   000000   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_11:
+   \   000004   CECF1C00     BIC.B   R15, 0x1c(R14)
+    332          }
+   \   000008   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   GPIO_ClearITPendingBit
+      4   GPIO_GetITStatus
+      4   GPIO_ITConfig
+      4   GPIO_MultiBits_Init
+      4   GPIO_ReadBit
+      4   GPIO_ReadByte
+      4   GPIO_ResetBits
+      4   GPIO_SetBits
+      4   GPIO_TurnBit
+      4   GPIO_WriteBit
+      4   GPIO_WriteByte
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?Subroutine0
+      10  ?Subroutine1
+      16  ?Subroutine2
+       8  ?Subroutine3
+      12  ?Subroutine4
+      32  GPIOX
+      10  GPIO_ClearITPendingBit
+      22  GPIO_GetITStatus
+      28  GPIO_ITConfig
+     116  GPIO_MultiBits_Init
+      20  GPIO_ReadBit
+       8  GPIO_ReadByte
+      10  GPIO_ResetBits
+      12  GPIO_SetBits
+      10  GPIO_TurnBit
+      20  GPIO_WriteBit
+      10  GPIO_WriteByte
+       2  _A_PAIN_L
+       2  _A_PBIN_L
+       2  _A_PCIN_L
+       2  _A_PDIN_L
+
+ 
+ 324 bytes in segment CODE
+   8 bytes in segment DATA16_AN
+  32 bytes in segment DATA20_C
+ 
+ 324 bytes of CODE  memory
+  32 bytes of CONST memory
+   0 bytes of DATA  memory (+ 8 bytes shared)
+
+Errors: none
+Warnings: none

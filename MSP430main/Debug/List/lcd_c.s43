@@ -1,0 +1,560 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:09
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\lcd_c.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW23CC.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\lcd_c.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\lcd_c.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME lcd_c
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\lcd_c.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // lcd_c.c - Driver for the lcd_c Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup lcd_c_api lcd_c
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_LCD_C__
+//   48 #include "lcd_c.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 //*****************************************************************************
+//   53 //
+//   54 // Initialization parameter instance
+//   55 //
+//   56 //*****************************************************************************
+//   57 const LCD_C_initParam LCD_C_INIT_PARAM = {
+//   58         LCD_C_CLOCKSOURCE_ACLK,
+//   59         LCD_C_CLOCKDIVIDER_1,
+//   60         LCD_C_CLOCKPRESCALAR_1,
+//   61         LCD_C_STATIC,
+//   62         LCD_C_STANDARD_WAVEFORMS,
+//   63         LCD_C_SEGMENTS_DISABLED
+//   64 };
+//   65 
+//   66 static void setLCDFunction(uint16_t baseAddress, uint8_t index, uint16_t value)
+//   67 {
+//   68     switch(index) {
+//   69     case 0:
+//   70         HWREG16(baseAddress + OFS_LCDCPCTL0) |= value;
+//   71         break;
+//   72     case 1:
+//   73         HWREG16(baseAddress + OFS_LCDCPCTL1) |= value;
+//   74         break;
+//   75     case 2:
+//   76         HWREG16(baseAddress + OFS_LCDCPCTL2) |= value;
+//   77         break;
+//   78     case 3:
+//   79 #ifdef LCDS48
+//   80         HWREG16(baseAddress + OFS_LCDCPCTL3) |= value;
+//   81 #endif //LCDS48
+//   82         break;
+//   83     default: break;
+//   84     }
+//   85 }
+//   86 
+//   87 void LCD_C_init(uint16_t baseAddress, LCD_C_initParam *initParams)
+//   88 {
+//   89     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~LCDON;
+//   90     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~(LCDMX0 | LCDMX1 | LCDMX2 | LCDSSEL
+//   91          | LCDLP | LCDSON | LCDDIV_31);
+//   92 
+//   93     HWREG16(baseAddress + OFS_LCDCCTL0) |= initParams->muxRate;
+//   94     HWREG16(baseAddress + OFS_LCDCCTL0) |= initParams->clockSource;
+//   95     HWREG16(baseAddress + OFS_LCDCCTL0) |= initParams->waveforms;
+//   96     HWREG16(baseAddress + OFS_LCDCCTL0) |= initParams->segments;
+//   97     HWREG16(baseAddress + OFS_LCDCCTL0) |= initParams->clockDivider;
+//   98     HWREG16(baseAddress + OFS_LCDCCTL0) |= initParams->clockPrescalar;
+//   99 }
+//  100 
+//  101 void LCD_C_on(uint16_t baseAddress)
+//  102 {
+//  103     HWREG16(baseAddress + OFS_LCDCCTL0) |= LCDON;
+//  104 }
+//  105 
+//  106 void LCD_C_off(uint16_t baseAddress)
+//  107 {
+//  108     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~LCDON;
+//  109 }
+//  110 
+//  111 void LCD_C_clearInterrupt(uint16_t baseAddress, uint16_t mask)
+//  112 {
+//  113     HWREG8(baseAddress + OFS_LCDCCTL1_L) &= ~(mask>>8);
+//  114 }
+//  115 
+//  116 uint16_t LCD_C_getInterruptStatus(uint16_t baseAddress, uint16_t mask)
+//  117 {
+//  118     return (HWREG8(baseAddress + OFS_LCDCCTL1_L) & (mask>>8));
+//  119 }
+//  120 
+//  121 void LCD_C_enableInterrupt(uint16_t baseAddress, uint16_t mask)
+//  122 {
+//  123     HWREG16(baseAddress + OFS_LCDCCTL1) |= mask;
+//  124 }
+//  125 
+//  126 void LCD_C_disableInterrupt (uint16_t baseAddress, uint16_t mask)
+//  127 {
+//  128     HWREG16(baseAddress + OFS_LCDCCTL1) &= ~mask;
+//  129 }
+//  130 
+//  131  void LCD_C_clearMemory(uint16_t baseAddress)
+//  132  {
+//  133     HWREG16(baseAddress + OFS_LCDCMEMCTL) |= LCDCLRM;
+//  134  }
+//  135 
+//  136 void LCD_C_clearBlinkingMemory(uint16_t baseAddress)
+//  137 {
+//  138    HWREG16(baseAddress + OFS_LCDCMEMCTL) |= LCDCLRBM;
+//  139 }
+//  140 
+//  141 void LCD_C_selectDisplayMemory(uint16_t baseAddress, uint16_t displayMemory)
+//  142 {
+//  143     HWREG16(baseAddress + OFS_LCDCMEMCTL) &= ~LCDDISP;
+//  144     HWREG16(baseAddress + OFS_LCDCMEMCTL) |= displayMemory;
+//  145 }
+//  146 
+//  147 void LCD_C_setBlinkingControl (uint16_t baseAddress,
+//  148                           uint8_t clockDivider,
+//  149                           uint8_t clockPrescalar,
+//  150                           uint8_t mode)
+//  151 {
+//  152     HWREG16(baseAddress + OFS_LCDCBLKCTL) &= ~(LCDBLKDIV0 | LCDBLKDIV1 | LCDBLKDIV2 |
+//  153                                              LCDBLKPRE0 | LCDBLKPRE1 | LCDBLKPRE2 |
+//  154                                              LCDBLKMOD0 | LCDBLKMOD1
+//  155                                              );
+//  156     HWREG16(baseAddress + OFS_LCDCBLKCTL) |= clockDivider | clockPrescalar | mode;
+//  157 }
+//  158 
+//  159 void LCD_C_enableChargePump(uint16_t baseAddress)
+//  160 {
+//  161     HWREG16(baseAddress + OFS_LCDCVCTL) |= LCDCPEN;
+//  162 }
+//  163 
+//  164 void LCD_C_disableChargePump(uint16_t baseAddress)
+//  165 {
+//  166     HWREG16(baseAddress + OFS_LCDCVCTL) &= ~LCDCPEN;
+//  167 }
+//  168 
+//  169 void LCD_C_selectBias(uint16_t baseAddress, uint16_t bias)
+//  170 {
+//  171     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~LCDON;
+//  172     HWREG16(baseAddress + OFS_LCDCVCTL) &= ~LCD2B;
+//  173 
+//  174     HWREG16(baseAddress + OFS_LCDCVCTL) |= bias;
+//  175 }
+//  176 
+//  177 void LCD_C_selectChargePumpReference(uint16_t baseAddress, uint16_t reference)
+//  178 {
+//  179     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~LCDON;
+//  180     HWREG16(baseAddress + OFS_LCDCVCTL) &= ~VLCDREF_3;
+//  181 
+//  182     HWREG16(baseAddress + OFS_LCDCVCTL) |= reference;
+//  183 }
+//  184 
+//  185 void LCD_C_setVLCDSource(uint16_t baseAddress, uint16_t vlcdSource,
+//  186     uint16_t v2v3v4Source,
+//  187     uint16_t v5Source)
+//  188 {
+//  189     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~LCDON;
+//  190     HWREG16(baseAddress + OFS_LCDCVCTL) &= ~VLCDEXT;
+//  191     HWREG16(baseAddress + OFS_LCDCVCTL) &= ~LCDREXT;
+//  192     HWREG16(baseAddress + OFS_LCDCVCTL) &= ~LCDEXTBIAS;
+//  193     HWREG16(baseAddress + OFS_LCDCVCTL) &= ~R03EXT;
+//  194 
+//  195     HWREG16(baseAddress + OFS_LCDCVCTL) |= vlcdSource;
+//  196     HWREG16(baseAddress + OFS_LCDCVCTL) |= v2v3v4Source;
+//  197     HWREG16(baseAddress + OFS_LCDCVCTL) |= v5Source;
+//  198 }
+//  199 
+//  200 void LCD_C_setVLCDVoltage(uint16_t baseAddress, uint16_t voltage)
+//  201 {
+//  202     HWREG16(baseAddress + OFS_LCDCVCTL) &= ~VLCD_15;
+//  203 
+//  204     HWREG16(baseAddress + OFS_LCDCVCTL) |= voltage;
+//  205 }
+//  206 
+//  207 void LCD_C_setPinAsLCDFunction(uint16_t baseAddress, uint8_t pin)
+//  208 {
+//  209     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~LCDON;
+//  210 
+//  211     uint8_t idx = pin>>4;
+//  212     uint16_t val = 1<<(pin & 0xF);
+//  213 
+//  214     setLCDFunction(baseAddress, idx, val);
+//  215 }
+//  216 
+//  217 void LCD_C_setPinAsPortFunction (uint16_t baseAddress, uint8_t pin)
+//  218 {
+//  219     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~LCDON;
+//  220 
+//  221     uint8_t idx = pin >> 4;
+//  222     uint16_t val = 1 << (pin & 0xF);
+//  223 
+//  224     switch(idx) {
+//  225         case 0:
+//  226             HWREG16(baseAddress + OFS_LCDCPCTL0) &= ~val;
+//  227             break;
+//  228         case 1:
+//  229             HWREG16(baseAddress + OFS_LCDCPCTL1) &= ~val;
+//  230             break;
+//  231         case 2:
+//  232             HWREG16(baseAddress + OFS_LCDCPCTL2) &= ~val;
+//  233             break;
+//  234         case 3:
+//  235 #ifdef LCDS48
+//  236             HWREG16(baseAddress + OFS_LCDCPCTL3) &= ~val;
+//  237 #endif //LCDS48
+//  238             break;
+//  239         default: break;
+//  240     }
+//  241 }
+//  242 
+//  243 void LCD_C_setPinAsLCDFunctionEx(uint16_t baseAddress, uint8_t startPin,
+//  244     uint8_t endPin)
+//  245 {
+//  246     uint8_t startIdx = startPin>>4;
+//  247     uint8_t endIdx = endPin>>4;
+//  248     uint8_t startPos = startPin & 0xF;
+//  249     uint8_t endPos = endPin & 0xF;
+//  250     uint16_t val = 0;
+//  251     uint8_t i = 0;
+//  252 
+//  253     HWREG16(baseAddress + OFS_LCDCCTL0) &= ~LCDON;
+//  254 
+//  255     if (startIdx == endIdx) {
+//  256         val = (0xFFFF>>(15-endPos)) & (0xFFFF<<startPos);
+//  257 
+//  258         setLCDFunction(baseAddress, startIdx, val);
+//  259 
+//  260     }
+//  261     else {
+//  262         val = 0xFFFF>>(15-endPos);
+//  263         setLCDFunction(baseAddress, endIdx, val);
+//  264 
+//  265         for (i=endIdx-1; i>startIdx; i--)
+//  266             setLCDFunction(baseAddress, i, 0xFFFF);
+//  267 
+//  268         val = 0xFFFF<<startPos;
+//  269         setLCDFunction(baseAddress, startIdx, val);
+//  270     }
+//  271 }
+//  272 
+//  273 void LCD_C_setMemory(uint16_t baseAddress, uint8_t pin, uint8_t value)
+//  274 {
+//  275     uint8_t muxRate = HWREG16(baseAddress + OFS_LCDCCTL0)
+//  276                         & (LCDMX2 | LCDMX1 | LCDMX0);
+//  277 
+//  278     // static, 2-mux, 3-mux, 4-mux
+//  279     if (muxRate <= (LCDMX1 | LCDMX0)) {
+//  280         if (pin & 1) {
+//  281             HWREG8(baseAddress + OFS_LCDM1 + pin/2) &= 0x0F;
+//  282             HWREG8(baseAddress + OFS_LCDM1 + pin/2) |= (value & 0xF) << 4;
+//  283         }
+//  284         else {
+//  285             HWREG8(baseAddress + OFS_LCDM1 + pin/2) &= 0xF0;
+//  286             HWREG8(baseAddress + OFS_LCDM1 + pin/2) |= (value & 0xF);
+//  287         }
+//  288     }
+//  289     else {
+//  290         //5-mux, 6-mux, 7-mux, 8-mux
+//  291         HWREG8(baseAddress + OFS_LCDM1 + pin) = value;
+//  292     }
+//  293 }
+//  294 
+//  295 uint8_t LCD_C_getMemory(uint16_t baseAddress, uint8_t pin)
+//  296 {
+//  297     uint8_t muxRate = HWREG16(baseAddress + OFS_LCDCCTL0)
+//  298                         & (LCDMX2 | LCDMX1 | LCDMX0);
+//  299 
+//  300     // static, 2-mux, 3-mux, 4-mux
+//  301     if(muxRate <= (LCDMX1 | LCDMX0))
+//  302     {
+//  303         if(pin & 1)
+//  304         {
+//  305             return (HWREG8(baseAddress + OFS_LCDM1 + pin / 2) >> 4);
+//  306         }
+//  307         else
+//  308         {
+//  309             return (HWREG8(baseAddress + OFS_LCDM1 + pin / 2) & 0xF);
+//  310         }
+//  311     }
+//  312     else
+//  313     {
+//  314         //5-mux, 6-mux, 7-mux, 8-mux
+//  315         return HWREG8(baseAddress + OFS_LCDM1 + pin);
+//  316     }
+//  317 }
+//  318 
+//  319 void LCD_C_setMemoryWithoutOverwrite(uint16_t baseAddress, uint8_t pin, uint8_t value)
+//  320 {
+//  321     uint8_t muxRate = HWREG16(baseAddress + OFS_LCDCCTL0)
+//  322                       & (LCDMX2 | LCDMX1 | LCDMX0);
+//  323 
+//  324     value |= LCD_C_getMemory(baseAddress, pin);
+//  325 
+//  326     // static, 2-mux, 3-mux, 4-mux
+//  327     if(muxRate <= (LCDMX1 | LCDMX0))
+//  328     {
+//  329         if(pin & 1)
+//  330         {
+//  331             HWREG8(baseAddress + OFS_LCDM1 + pin / 2) &= 0x0F;
+//  332             HWREG8(baseAddress + OFS_LCDM1 + pin / 2) |= (value & 0xF) << 4;
+//  333         }
+//  334         else
+//  335         {
+//  336             HWREG8(baseAddress + OFS_LCDM1 + pin / 2) &= 0xF0;
+//  337             HWREG8(baseAddress + OFS_LCDM1 + pin / 2) |= (value & 0xF);
+//  338         }
+//  339     }
+//  340     else
+//  341     {
+//  342         //5-mux, 6-mux, 7-mux, 8-mux
+//  343         HWREG8(baseAddress + OFS_LCDM1 + pin) = value;
+//  344     }
+//  345 }
+//  346 
+//  347 void LCD_C_setBlinkingMemory(uint16_t baseAddress, uint8_t pin, uint8_t value)
+//  348 {
+//  349     uint8_t muxRate = HWREG16(baseAddress + OFS_LCDCCTL0)
+//  350                         & (LCDMX2 | LCDMX1 | LCDMX0);
+//  351 
+//  352     // static, 2-mux, 3-mux, 4-mux
+//  353     if (muxRate <= (LCDMX1 | LCDMX0)) {
+//  354         if (pin & 1) {
+//  355             HWREG8(baseAddress + OFS_LCDBM1 + pin/2) &= 0x0F;
+//  356             HWREG8(baseAddress + OFS_LCDBM1 + pin/2) |= (value & 0xF) << 4;
+//  357         }
+//  358         else {
+//  359             HWREG8(baseAddress + OFS_LCDBM1 + pin/2) &= 0xF0;
+//  360             HWREG8(baseAddress + OFS_LCDBM1 + pin/2) |= (value & 0xF);
+//  361         }
+//  362     }
+//  363     else {
+//  364         //5-mux, 6-mux, 7-mux, 8-mux
+//  365         HWREG8(baseAddress + OFS_LCDBM1 + pin) = value;
+//  366     }
+//  367 
+//  368 }
+//  369 
+//  370 uint8_t LCD_C_getBlinkingMemory(uint16_t baseAddress, uint8_t pin)
+//  371 {
+//  372     uint8_t muxRate = HWREG16(baseAddress + OFS_LCDCCTL0)
+//  373                         & (LCDMX2 | LCDMX1 | LCDMX0);
+//  374 
+//  375     // static, 2-mux, 3-mux, 4-mux
+//  376     if(muxRate <= (LCDMX1 | LCDMX0))
+//  377     {
+//  378         if(pin & 1)
+//  379         {
+//  380             return (HWREG8(baseAddress + OFS_LCDBM1 + pin / 2) >> 4);
+//  381         }
+//  382         else
+//  383         {
+//  384             return (HWREG8(baseAddress + OFS_LCDBM1 + pin / 2) & 0xF);
+//  385         }
+//  386     }
+//  387     else
+//  388     {
+//  389         //5-mux, 6-mux, 7-mux, 8-mux
+//  390         return HWREG8(baseAddress + OFS_LCDBM1 + pin);
+//  391     }
+//  392 }
+//  393 
+//  394 void LCD_C_setBlinkingMemoryWithoutOverwrite(uint16_t baseAddress, uint8_t pin, uint8_t value)
+//  395 {
+//  396     uint8_t muxRate = HWREG16(baseAddress + OFS_LCDCCTL0)
+//  397                       & (LCDMX2 | LCDMX1 | LCDMX0);
+//  398 
+//  399     value |= LCD_C_getBlinkingMemory(baseAddress, pin);
+//  400 
+//  401     // static, 2-mux, 3-mux, 4-mux
+//  402     if(muxRate <= (LCDMX1 | LCDMX0))
+//  403     {
+//  404         if(pin & 1)
+//  405         {
+//  406             HWREG8(baseAddress + OFS_LCDBM1 + pin / 2) &= 0x0F;
+//  407             HWREG8(baseAddress + OFS_LCDBM1 + pin / 2) |= (value & 0xF) << 4;
+//  408         }
+//  409         else
+//  410         {
+//  411             HWREG8(baseAddress + OFS_LCDBM1 + pin / 2) &= 0xF0;
+//  412             HWREG8(baseAddress + OFS_LCDBM1 + pin / 2) |= (value & 0xF);
+//  413         }
+//  414     }
+//  415     else
+//  416     {
+//  417         //5-mux, 6-mux, 7-mux, 8-mux
+//  418         HWREG8(baseAddress + OFS_LCDBM1 + pin) = value;
+//  419     }
+//  420 }
+//  421 
+//  422 void LCD_C_configChargePump(uint16_t baseAddress, uint16_t syncToClock,
+//  423     uint16_t functionControl)
+//  424 {
+//  425     HWREG16(baseAddress + OFS_LCDCCPCTL) &= ~(LCDCPCLKSYNC);
+//  426     HWREG16(baseAddress + OFS_LCDCCPCTL) &= ~(LCDCPDIS7 | LCDCPDIS6 | LCDCPDIS5
+//  427         | LCDCPDIS4 | LCDCPDIS3 | LCDCPDIS2 | LCDCPDIS1 | LCDCPDIS0);
+//  428 
+//  429     HWREG16(baseAddress + OFS_LCDCCPCTL) |= syncToClock | functionControl;
+//  430 }
+//  431 
+//  432 
+//  433 #endif
+//  434 //*****************************************************************************
+//  435 //
+//  436 //! Close the doxygen group for lcd_c_api
+//  437 //! @}
+//  438 //
+//  439 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

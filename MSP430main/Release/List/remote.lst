@@ -1,0 +1,594 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:45
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HAL\remote.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW5E94.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HAL\remote.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\remote.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\remote.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\HAL\remote.c
+      1          #include "include.h"
+      2          
+      3          #undef SUCCESS
+      4          #define SUCCESS 0
+      5          #undef FAILED
+      6          #define FAILED  1
+      7          
+      8          typedef struct
+      9          {
+     10              int16_t Start;        //起始位 0XAAAA
+     11              int16_t ContrlBit;    //校验位 ox01
+     12              int16_t THROTTLE;	  
+     13              int16_t PITCH;
+     14              int16_t ROLL;
+     15              int16_t YAW;
+     16              int16_t SW_TWO;       //左侧两档开关
+     17              int16_t SW_THREE;	  //右侧三档开关
+     18              int16_t LEFT;		  //左侧拨盘
+     19              int16_t RIGHT;		  //右侧拨盘
+     20              int16_t CaliFlag;	  //校准按键
+     21              int16_t Arm_State;	  //启动按键
+     22              int16_t Stop;         //停止位 0x5555
+     23          }send_Data_t;
+     24          
+     25          /*****************************************************************************************
+     26           *  通道数据处理
+     27           * @param[in] 
+     28           * @param[out] 
+     29           * @return     
+     30           ******************************************************************************************/	
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     31          uint8_t RC_rxData[32];
+   \                     RC_rxData:
+   \   000000                DS8 32
+     32          void remote_unlock(void);	
+
+   \                                 In  segment CODE, align 2
+     33          void RC_Analy(void)  
+   \                     RC_Analy:
+     34          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   B1001A00     SUBA    #0x1a, SP
+     35                  static uint16_t cnt_15s;
+     36                  volatile float PitDesired,RolDesired;
+     37          /*             Receive  and check RC data                               */	
+     38                          
+     39                   if(NRF2401_RecData(RC_rxData) == RX_OK)
+   \   000006   ........     MOVA    #RC_rxData, R12
+   \   00000A   ........     CALLA   #NRF2401_RecData
+   \   00000E   7C904000     CMP.B   #0x40, R12
+   \   000012   7120         JNE     ??RC_Analy_3
+     40                   {
+     41          		cnt_15s = 0;
+   \   000014   0A43         MOV.W   #0x0, R10
+     42                          send_Data_t send_Data;
+     43                          
+     44                          memcpy((uint8_t*)&send_Data,RC_rxData,sizeof(send_Data_t));                
+   \   000016   3E401A00     MOV.W   #0x1a, R14
+   \   00001A   0F43         MOV.W   #0x0, R15
+   \   00001C   ........     MOVA    #RC_rxData, R13
+   \   000020   CC01         MOVA    SP, R12
+   \   000022   ........     CALLA   #memcpy
+     45                          
+     46          		if((send_Data.Start == 0xAAAA) && (send_Data.Stop == 0x5555))  //如果接收到的遥控数据正确
+   \   000026   2B41         MOV.W   @SP, R11
+   \   000028   3B90AAAA     CMP.W   #0xaaaa, R11
+   \   00002C   6F20         JNE     ??RC_Analy_2
+   \   00002E   B19055551800 CMP.W   #0x5555, 0x18(SP)
+   \   000034   6B20         JNE     ??RC_Analy_2
+     47          		{                   
+     48                                Remote.roll = send_Data.ROLL;
+   \   000036   ........     MOVA    #Remote, R11
+   \   00003A   9B4108000000 MOV.W   0x8(SP), 0(R11)
+     49          
+     50                                Remote.pitch = send_Data.PITCH;
+   \   000040   9B4106000200 MOV.W   0x6(SP), 0x2(R11)
+     51          
+     52                                Remote.thr = send_Data.THROTTLE - 100;
+   \   000046   1F410400     MOV.W   0x4(SP), R15
+   \   00004A   3F509CFF     ADD.W   #0xff9c, R15
+   \   00004E   8B4F0400     MOV.W   R15, 0x4(R11)
+     53          
+     54                                Remote.yaw =  send_Data.YAW;
+   \   000052   9B410A000600 MOV.W   0xa(SP), 0x6(R11)
+     55          
+     56                                Remote.AUX1 =  send_Data.SW_THREE;
+   \   000058   9B410E000800 MOV.W   0xe(SP), 0x8(R11)
+     57          
+     58                                Remote.AUX2 =  send_Data.SW_TWO;
+   \   00005E   9B410C000A00 MOV.W   0xc(SP), 0xa(R11)
+     59          
+     60                                //---------------------------------------------------------------------------------
+     61                                //开始处理遥控数据
+     62                                {
+     63                                        const float roll_pitch_ratio = 0.04f;  //遥控控制姿态的量
+     64                        
+     65                                        
+     66                                        pidPitch.desired = ((Remote.pitch * 1.0f)-1500)*roll_pitch_ratio;	
+   \   000064   1C4B0200     MOV.W   0x2(R11), R12
+   \   000068   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_0:
+   \   00006C   ....824C.... MOVX.W  R12, &pidPitch
+   \   000072   ....824D.... MOVX.W  R13, &pidPitch + 2
+     67                                        pidRoll.desired = ((Remote.roll * 1.0f)-1500)*roll_pitch_ratio;	
+   \   000078   2C4B         MOV.W   @R11, R12
+   \   00007A   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_1:
+   \   00007E   ....824C.... MOVX.W  R12, &pidRoll
+   \   000084   ....824D.... MOVX.W  R13, &pidRoll + 2
+     68                                        
+     69                                        if(Remote.yaw>1820 )
+   \   00008A   BB901D070600 CMP.W   #0x71d, 0x6(R11)
+   \   000090   0528         JNC     ??RC_Analy_4
+     70                                        {							
+     71                                                pidYaw.desired += 0.045f;	
+   \   000092   ........     CALLA   #?Subroutine1
+     72                                        }
+   \                     ??CrossCallReturnLabel_2:
+   \   000096   3F40383D     MOV.W   #0x3d38, R15
+   \   00009A   083C         JMP     ??RC_Analy_1
+     73                                        else if(Remote.yaw <1180)
+   \                     ??RC_Analy_4:
+   \   00009C   BB909C040600 CMP.W   #0x49c, 0x6(R11)
+   \   0000A2   0C2C         JC      ??RC_Analy_5
+     74                                        {
+     75                                                pidYaw.desired -= 0.045f;	
+   \   0000A4   ........     CALLA   #?Subroutine1
+     76                                        }
+   \                     ??CrossCallReturnLabel_3:
+   \   0000A8   3F4038BD     MOV.W   #0xbd38, R15
+   \                     ??RC_Analy_1:
+   \   0000AC   ........     CALLA   #_Add32f
+   \   0000B0   ....824C.... MOVX.W  R12, &pidYaw
+   \   0000B6   ....824D.... MOVX.W  R13, &pidYaw + 2
+     77                                        
+     78                                        {
+     79                                                static uint16_t last_AUX1 = 1000;
+     80                                                static uint16_t last_AUX2 = 1000;
+     81                
+     82                                                //定高按键
+     83                                                if(last_AUX1!= Remote.AUX1)
+   \                     ??RC_Analy_5:
+   \   0000BC   1F4B0800     MOV.W   0x8(R11), R15
+   \   0000C0   ....1F92.... CMPX.W  &??last_AUX1, R15
+   \   0000C6   0724         JEQ     ??RC_Analy_0
+     84                                                {
+     85                                                        if(!ALL_flag.take_off)
+   \   0000C8   ....E2B2.... BITX.B  #0x4, &ALL_flag
+   \   0000CE   0320         JNE     ??RC_Analy_0
+     86                                                                ALL_flag.height_lock ^= 1;
+   \   0000D0   ....E2E3.... XORX.B  #0x2, &ALL_flag
+     87                                                }	
+     88                                
+     89                                                if(last_AUX2!= Remote.AUX2)//预留一件起飞
+   \                     ??RC_Analy_0:
+   \   0000D6   1B4B0A00     MOV.W   0xa(R11), R11
+   \   0000DA   ....1B92.... CMPX.W  &??last_AUX2, R11
+   \   0000E0   0324         JEQ     ??RC_Analy_6
+     90                                                {
+     91                                                                ALL_flag.take_off ^= 1;
+   \   0000E2   ....E2E2.... XORX.B  #0x4, &ALL_flag
+     92                                                }
+     93          
+     94                                                last_AUX1 = Remote.AUX1;
+   \                     ??RC_Analy_6:
+   \   0000E8   ....824F.... MOVX.W  R15, &??last_AUX1
+     95                                                last_AUX2 = Remote.AUX2;
+   \   0000EE   ....824B.... MOVX.W  R11, &??last_AUX2
+   \   0000F4   0B3C         JMP     ??RC_Analy_2
+     96                                        }
+     97          
+     98                                }	
+     99                            }
+    100                  }
+    101          	else //如果没有收到遥控信号，则判断为失连
+    102          	{
+    103          		cnt_15s++;
+   \                     ??RC_Analy_3:
+   \   0000F6   ....1A42.... MOVX.W  &??cnt_15s, R10
+   \   0000FC   1A53         ADD.W   #0x1, R10
+    104          		if(cnt_15s>5000)
+   \   0000FE   3A908913     CMP.W   #0x1389, R10
+   \   000102   0428         JNC     ??RC_Analy_2
+    105          		{
+    106          			cnt_15s = 0;
+   \   000104   0A43         MOV.W   #0x0, R10
+    107          			ALL_flag.unlock = 0;  //失连锁定
+   \   000106   ....D2C3.... BICX.B  #0x1, &ALL_flag
+   \                     ??RC_Analy_2:
+   \   00010C   ....824A.... MOVX.W  R10, &??cnt_15s
+    108          #ifdef NRF24L01_ENABLE                        
+    109          			NRF24L01_init();  //初始NRF
+    110          #endif
+    111          		}
+    112          	}
+    113                  
+    114          	remote_unlock();
+   \   000112   ........     CALLA   #remote_unlock
+    115          }
+   \   000116   A1001A00     ADDA    #0x1a, SP
+   \   00011A   1A16         POPM.A  #0x2, R11
+   \   00011C   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine1:
+   \   000000   ....1C42.... MOVX.W  &pidYaw, R12
+   \   000006   ....1D42.... MOVX.W  &pidYaw + 2, R13
+   \   00000C   3E40EC51     MOV.W   #0x51ec, R14
+   \   000010   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine0:
+   \   000000   0D43         MOV.W   #0x0, R13
+   \   000002   ........     CALLA   #_Cast32uto32f
+   \   000006   0E4C         MOV.W   R12, R14
+   \   000008   0F4D         MOV.W   R13, R15
+   \   00000A   3C400080     MOV.W   #0x8000, R12
+   \   00000E   3D40BBC4     MOV.W   #0xc4bb, R13
+   \   000012   ........     CALLA   #_Add32f
+   \   000016   0E4C         MOV.W   R12, R14
+   \   000018   0F4D         MOV.W   R13, R15
+   \   00001A   3C400AD7     MOV.W   #0xd70a, R12
+   \   00001E   3D40233D     MOV.W   #0x3d23, R13
+   \   000022   ........     BRA     #_Mul32f
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??cnt_15s:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA20_I, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??last_AUX1:
+   \   000000                DS8 2
+   \   000002                REQUIRE `?<Initializer for last_AUX1>`
+
+   \                                 In  segment DATA20_I, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??last_AUX2:
+   \   000000                DS8 2
+   \   000002                REQUIRE `?<Initializer for last_AUX2>`
+    116          
+    117          /*****************************************************************************************
+    118           *  解锁判断
+    119           * @param[in] 
+    120           * @param[out] 
+    121           * @return     
+    122           ******************************************************************************************/	
+
+   \                                 In  segment CODE, align 2
+    123          void remote_unlock(void)
+   \                     remote_unlock:
+    124          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   ....1F42.... MOVX.W  &Remote + 4, R15
+   \   000008   3F907E04     CMP.W   #0x47e, R15
+   \   00000C   082C         JC      ??remote_unlock_3
+   \   00000E   ....B290B004 CMPX.W  #0x4b0, &Remote + 6
+   \            ....        
+   \   000016   032C         JC      ??remote_unlock_3
+    125          	volatile static uint8_t status=WAITING_1;
+    126                  static uint16_t cnt=0;
+    127          
+    128          	if(Remote.thr<1150 &&Remote.yaw<1200)                         //油门遥杆左下角锁定
+    129          	{
+    130          		status = EXIT_255;
+   \   000018   ....F243.... MOVX.B  #0xff, &??status
+    131          	}
+    132          
+    133          	switch(status)
+   \                     ??remote_unlock_3:
+   \   00001E   ........     MOVA    #??status, R14
+   \   000022   6D4E         MOV.B   @R14, R13
+   \   000024   ....5C42.... MOVX.B  &??cnt_1, R12
+   \   00002A   ....1A42.... MOVX.W  &??cnt, R10
+   \   000030   5D83         SUB.B   #0x1, R13
+   \   000032   0D24         JEQ     ??remote_unlock_4
+   \   000034   5D83         SUB.B   #0x1, R13
+   \   000036   1124         JEQ     ??remote_unlock_5
+   \   000038   5D83         SUB.B   #0x1, R13
+   \   00003A   1B24         JEQ     ??remote_unlock_6
+   \   00003C   5D83         SUB.B   #0x1, R13
+   \   00003E   1F24         JEQ     ??remote_unlock_7
+   \   000040   7D801B00     SUB.B   #0x1b, R13
+   \   000044   2324         JEQ     ??remote_unlock_8
+   \   000046   7D80E000     SUB.B   #0xe0, R13
+   \   00004A   3C24         JEQ     ??remote_unlock_9
+   \   00004C   2B3C         JMP     ??remote_unlock_0
+    134          	{
+    135          		case WAITING_1://等待解锁
+    136           //解锁三步奏，油门最低->油门最高->油门最低 看到LED灯不闪了 即完成解锁			
+    137          			if(Remote.thr<1100)  //第一步        
+   \                     ??remote_unlock_4:
+   \   00004E   3F904C04     CMP.W   #0x44c, R15
+   \   000052   2A2C         JC      ??remote_unlock_1
+    138          			{			 
+    139                                         status = WAITING_2;				 
+   \   000054   EE430000     MOV.B   #0x2, 0(R14)
+   \   000058   273C         JMP     ??remote_unlock_1
+    140          			}		
+    141          			break;
+    142          		case WAITING_2://第二步 
+    143          			if(Remote.thr>1800)          
+   \                     ??remote_unlock_5:
+   \   00005A   3F900907     CMP.W   #0x709, R15
+   \   00005E   2428         JNC     ??remote_unlock_1
+    144          			{		
+    145                                        static uint8_t cnt = 0;
+    146                                        cnt++;		
+   \   000060   5C53         ADD.B   #0x1, R12
+    147                                        if(cnt>5) //最高油门需保持200ms以上，防止遥控开机初始化未完成的错误数据
+   \   000062   7C900600     CMP.B   #0x6, R12
+   \   000066   2028         JNC     ??remote_unlock_1
+    148                                        {	
+    149                                                        cnt=0;
+   \   000068   4C43         MOV.B   #0x0, R12
+    150                                                        status = WAITING_3;
+   \   00006A   FE4003000000 MOV.B   #0x3, 0(R14)
+   \   000070   1B3C         JMP     ??remote_unlock_1
+    151                                        }
+    152          			}			
+    153          			break;
+    154          		case WAITING_3:
+    155          			if(Remote.thr<1100)  //第三步        
+   \                     ??remote_unlock_6:
+   \   000072   3F904C04     CMP.W   #0x44c, R15
+   \   000076   182C         JC      ??remote_unlock_1
+    156          			{			 
+    157          					 status = WAITING_4;				 
+   \   000078   EE420000     MOV.B   #0x4, 0(R14)
+   \   00007C   153C         JMP     ??remote_unlock_1
+    158          			}			
+    159          			break;			
+    160          		case WAITING_4:	//解锁前准备	               
+    161          				ALL_flag.unlock = 1;   //解锁标志位
+   \                     ??remote_unlock_7:
+   \   00007E   ....D2D3.... BISX.B  #0x1, &ALL_flag
+    162          				status = PROCESS_31;   //进入控制
+   \   000084   FE401F000000 MOV.B   #0x1f, 0(R14)
+    163          //				LED.status = AlwaysOn; //LED常亮									
+    164          				 break;		
+   \   00008A   0E3C         JMP     ??remote_unlock_1
+    165          		case PROCESS_31:	//进入解锁状态
+    166          				if(Remote.thr<1020&&!ALL_flag.height_lock)    //当遥杆拉到最低 即不飞状态
+   \                     ??remote_unlock_8:
+   \   00008C   3F90FC03     CMP.W   #0x3fc, R15
+   \   000090   132C         JC      ??remote_unlock_2
+   \   000092   ....E2B3.... BITX.B  #0x2, &ALL_flag
+   \   000098   0F20         JNE     ??remote_unlock_2
+    167          				{
+    168                                              if(cnt++ > 2000)                                     // 油门遥杆处于最低6S自动上锁
+   \   00009A   0F4A         MOV.W   R10, R15
+   \   00009C   1A53         ADD.W   #0x1, R10
+   \   00009E   3F90D107     CMP.W   #0x7d1, R15
+   \   0000A2   0228         JNC     ??remote_unlock_1
+    169                                              {								
+    170                                                      status = EXIT_255;								
+    171                                              }
+    172          				}
+    173          				else if(!ALL_flag.unlock)                           //其它紧急情况可直接锁定飞控
+    174          				{
+    175          					status = EXIT_255;				
+    176          				}
+    177          				else					
+    178          					cnt = 0;
+    179          			break;
+    180          		case EXIT_255: //进入锁定
+    181          //			LED.status = AllFlashLight;	//LED在锁定状态保持闪烁                                     //exit
+    182          			cnt = 0;
+    183          //			LED.FlashTime = 100;  		 //LED在锁定状态保持闪烁时间间隔为300ms                                 
+    184          			ALL_flag.unlock = 0;      //锁定
+    185          			status = WAITING_1;     //返回等待解锁
+    186          			break;
+    187          		default:
+    188          			status = EXIT_255;
+   \                     ??remote_unlock_0:
+   \   0000A4   FE430000     MOV.B   #0xff, 0(R14)
+    189          			break;
+   \                     ??remote_unlock_1:
+   \   0000A8   ....824A.... MOVX.W  R10, &??cnt
+   \   0000AE   ....C24C.... MOVX.B  R12, &??cnt_1
+    190          	}
+    191          
+    192          }
+   \   0000B4   0A16         POPM.A  #0x1, R10
+   \   0000B6   1001         RETA
+   \                     ??remote_unlock_2:
+   \   0000B8   ....D2B3.... BITX.B  #0x1, &ALL_flag
+   \   0000BE   F227         JEQ     ??remote_unlock_0
+   \   0000C0   0A43         MOV.W   #0x0, R10
+   \   0000C2   F23F         JMP     ??remote_unlock_1
+   \                     ??remote_unlock_9:
+   \   0000C4   0A43         MOV.W   #0x0, R10
+   \   0000C6   ....D2C3.... BICX.B  #0x1, &ALL_flag
+   \   0000CC   DE430000     MOV.B   #0x1, 0(R14)
+   \   0000D0   EB3F         JMP     ??remote_unlock_1
+   \   0000D2   0343         NOP
+
+   \                                 In  segment DATA20_I, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??status:
+   \   000000                DS8 1
+   \   000001                REQUIRE `?<Initializer for status>`
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??cnt:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??cnt_1:
+   \   000000                DS8 1
+
+   \                                 In  segment DATA20_ID, align 2, align-sorted
+   \                     `?<Initializer for last_AUX1>`:
+   \   000000   E803         DC16 1000
+
+   \                                 In  segment DATA20_ID, align 2, align-sorted
+   \                     `?<Initializer for last_AUX2>`:
+   \   000000   E803         DC16 1000
+
+   \                                 In  segment DATA20_ID, align 1, align-sorted
+   \                     `?<Initializer for status>`:
+   \   000000   01           DC8 1
+    193          /***********************END OF FILE*************************************/
+    194          
+    195          
+    196          
+    197          
+    198          
+    199          
+    200          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     38   RC_Analy
+       38   -> NRF2401_RecData
+       38   -> memcpy
+       38   -> remote_unlock
+       38 _Add32f
+       42 _Add32f
+       42 _Cast32uto32f
+       38 _Mul32f
+      8   remote_unlock
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       2  ?<Initializer for last_AUX1>
+       2  ?<Initializer for last_AUX2>
+       1  ?<Initializer for status>
+      38  ?Subroutine0
+      18  ?Subroutine1
+     286  RC_Analy
+      32  RC_rxData
+       1  cnt
+       2  cnt
+       2  cnt_15s
+       2  last_AUX1
+       2  last_AUX2
+     212  remote_unlock
+       1  status
+
+ 
+ 554 bytes in segment CODE
+   5 bytes in segment DATA20_I
+   5 bytes in segment DATA20_ID
+  37 bytes in segment DATA20_Z
+ 
+ 554 bytes of CODE  memory
+   5 bytes of CONST memory
+  42 bytes of DATA  memory
+
+Errors: none
+Warnings: none

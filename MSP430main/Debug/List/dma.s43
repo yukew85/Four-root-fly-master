@@ -1,0 +1,693 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:06
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\dma.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW1AB2.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\dma.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\dma.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME dma
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC DMA_clearInterrupt
+        PUBLIC DMA_clearNMIAbort
+        PUBLIC DMA_disableInterrupt
+        PUBLIC DMA_disableNMIAbort
+        PUBLIC DMA_disableRoundRobinPriority
+        PUBLIC DMA_disableTransferDuringReadModifyWrite
+        PUBLIC DMA_disableTransfers
+        PUBLIC DMA_enableInterrupt
+        PUBLIC DMA_enableNMIAbort
+        PUBLIC DMA_enableRoundRobinPriority
+        PUBLIC DMA_enableTransferDuringReadModifyWrite
+        PUBLIC DMA_enableTransfers
+        PUBLIC DMA_getInterruptStatus
+        PUBLIC DMA_getNMIAbortStatus
+        PUBLIC DMA_getTransferSize
+        PUBLIC DMA_init
+        PUBLIC DMA_setDstAddress
+        PUBLIC DMA_setSrcAddress
+        PUBLIC DMA_setTransferSize
+        PUBLIC DMA_startTransfer
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\dma.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // dma.c - Driver for the dma Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup dma_api dma
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #if defined(__MSP430_HAS_DMAX_3__) || defined(__MSP430_HAS_DMAX_6__)
+//   48 #include "dma.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 void DMA_init( DMA_initParam *param){
+DMA_init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function DMA_init
+          CFI NoCalls
+//   53     uint8_t triggerOffset = (param->channelSelect >> 4);
+        MOV.B   @R12, R14
+        RPT     #0x4
+        RRUX.B  R14
+//   54 
+//   55     //Reset and Set DMA Control 0 Register
+//   56     HWREG16(DMA_BASE + param->channelSelect + OFS_DMA0CTL) =
+//   57         param->transferModeSelect //Set Transfer Mode
+//   58         + param->transferUnitSelect //Set Transfer Unit Size
+//   59         + param->triggerTypeSelect; //Set Trigger Type
+        MOV.B   0x7(R12), R13
+        MOV.B   R13, R13
+        ADD.W   0x2(R12), R13
+        MOV.B   0x8(R12), R15
+        MOV.B   R15, R15
+        ADD.W   R15, R13
+        MOV.B   @R12, R15
+        MOV.B   R15, R15
+        ADD.W   #0x510, R15
+        MOV.W   R13, 0(R15)
+//   60 
+//   61     //Set Transfer Size Amount
+//   62     HWREG16(DMA_BASE + param->channelSelect + OFS_DMA0SZ) = param->transferSize;
+        MOV.B   @R12, R15
+        MOV.B   R15, R15
+        ADD.W   #0x51a, R15
+        MOV.W   0x4(R12), 0(R15)
+//   63 
+//   64     if (triggerOffset & 0x01){   //Odd Channel
+        BIT.B   #0x1, R14
+        JNC     ??DMA_init_0
+//   65         HWREG16(DMA_BASE + (triggerOffset & 0x0E)) &= 0x00FF; //Reset Trigger Select
+        MOV.B   R14, R15
+        AND.W   #0xe, R15
+        ADD.W   #0x500, R15
+        AND.W   #0xff, 0(R15)
+//   66         HWREG16(DMA_BASE +
+//   67             (triggerOffset & 0x0E)) |= (param->triggerSourceSelect << 8);
+        MOV.B   R14, R13
+        AND.W   #0xe, R13
+        ADD.W   #0x500, R13
+        MOV.B   0x6(R12), R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R15, 0(R13)
+        RETA
+//   68     } else   { //Even Channel
+//   69         HWREG16(DMA_BASE + (triggerOffset & 0x0E)) &= 0xFF00; //Reset Trigger Select
+??DMA_init_0:
+        MOV.B   R14, R15
+        AND.W   #0xe, R15
+        ADD.W   #0x500, R15
+        AND.W   #0xff00, 0(R15)
+//   70         HWREG16(DMA_BASE + (triggerOffset & 0x0E)) |= param->triggerSourceSelect;
+        MOV.B   R14, R13
+        AND.W   #0xe, R13
+        ADD.W   #0x500, R13
+        MOV.B   0x6(R12), R15
+        MOV.B   R15, R15
+        BIS.W   R15, 0(R13)
+//   71     }
+//   72 }
+        RETA
+          CFI EndBlock cfiBlock0
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   73 void DMA_setTransferSize (uint8_t channelSelect,
+DMA_setTransferSize:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function DMA_setTransferSize
+          CFI NoCalls
+//   74     uint16_t transferSize)
+//   75 {
+//   76     //Set Transfer Size Amount
+//   77     HWREG16(DMA_BASE + channelSelect + OFS_DMA0SZ) = transferSize;
+        MOV.B   R12, R15
+        ADD.W   #0x51a, R15
+        MOV.W   R13, 0(R15)
+//   78 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   79 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   80 uint16_t DMA_getTransferSize (uint8_t channelSelect)
+DMA_getTransferSize:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function DMA_getTransferSize
+          CFI NoCalls
+//   81 {
+//   82     //Get Transfer Size Amount
+//   83     return HWREG16(DMA_BASE + channelSelect + OFS_DMA0SZ);
+        MOV.B   R12, R12
+        ADD.W   #0x51a, R12
+        MOV.W   @R12, R12
+        RETA
+//   84 }
+          CFI EndBlock cfiBlock2
+//   85 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   86 void DMA_setSrcAddress (uint8_t channelSelect,
+DMA_setSrcAddress:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function DMA_setSrcAddress
+          CFI NoCalls
+//   87     uint32_t srcAddress,
+//   88     uint16_t directionSelect)
+//   89 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//   90     //Set the Source Address
+//   91     __data16_write_addr((unsigned short)(DMA_BASE + channelSelect + OFS_DMA0SA),
+//   92         srcAddress);
+        MOV.B   R12, R10
+        ADD.W   #0x512, R10
+        PUSHM.W #0x2, R15
+          CFI CFA SP+12
+        POPX.A  0(R10)
+          CFI CFA SP+8
+//   93 
+//   94     //Reset bits before setting them
+//   95     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) &= ~(DMASRCINCR_3);
+        MOV.B   R12, R10
+        ADD.W   #0x510, R10
+        AND.W   #0xfcff, 0(R10)
+//   96     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) |= directionSelect;
+        MOV.B   R12, R10
+        ADD.W   #0x510, R10
+        BIS.W   R13, 0(R10)
+//   97 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//   98 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   99 void DMA_setDstAddress (uint8_t channelSelect,
+DMA_setDstAddress:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function DMA_setDstAddress
+          CFI NoCalls
+//  100     uint32_t dstAddress,
+//  101     uint16_t directionSelect)
+//  102 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  103     //Set the Destination Address
+//  104     __data16_write_addr((unsigned short)(DMA_BASE + channelSelect + OFS_DMA0DA),
+//  105         dstAddress);
+        MOV.B   R12, R11
+        ADD.W   #0x516, R11
+        PUSHM.W #0x2, R15
+          CFI CFA SP+16
+        POPX.A  0(R11)
+          CFI CFA SP+12
+//  106 
+//  107     //Reset bits before setting them
+//  108     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) &= ~(DMADSTINCR_3);
+        MOV.B   R12, R11
+        ADD.W   #0x510, R11
+        AND.W   #0xf3ff, 0(R11)
+//  109     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) |= (directionSelect << 2);
+        MOV.B   R12, R10
+        ADD.W   #0x510, R10
+        MOV.W   R13, R11
+        RLAM.W  #0x2, R11
+        BIS.W   R11, 0(R10)
+//  110 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock4
+//  111 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  112 void DMA_enableTransfers (uint8_t channelSelect)
+DMA_enableTransfers:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function DMA_enableTransfers
+          CFI NoCalls
+//  113 {
+//  114     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) |= DMAEN;
+        MOV.B   R12, R15
+        ADD.W   #0x510, R15
+        BIS.W   #0x10, 0(R15)
+//  115 }
+        RETA
+          CFI EndBlock cfiBlock5
+//  116 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  117 void DMA_disableTransfers (uint8_t channelSelect)
+DMA_disableTransfers:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function DMA_disableTransfers
+          CFI NoCalls
+//  118 {
+//  119     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) &= ~(DMAEN);
+        MOV.B   R12, R15
+        ADD.W   #0x510, R15
+        BIC.W   #0x10, 0(R15)
+//  120 }
+        RETA
+          CFI EndBlock cfiBlock6
+//  121 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  122 void DMA_startTransfer (uint8_t channelSelect)
+DMA_startTransfer:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function DMA_startTransfer
+          CFI NoCalls
+//  123 {
+//  124     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) |= DMAREQ;
+        MOV.B   R12, R15
+        ADD.W   #0x510, R15
+        BIS.W   #0x1, 0(R15)
+//  125 }
+        RETA
+          CFI EndBlock cfiBlock7
+//  126 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  127 void DMA_enableInterrupt (uint8_t channelSelect)
+DMA_enableInterrupt:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function DMA_enableInterrupt
+          CFI NoCalls
+//  128 {
+//  129     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) |= DMAIE;
+        MOV.B   R12, R15
+        ADD.W   #0x510, R15
+        BIS.W   #0x4, 0(R15)
+//  130 }
+        RETA
+          CFI EndBlock cfiBlock8
+//  131 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  132 void DMA_disableInterrupt (uint8_t channelSelect)
+DMA_disableInterrupt:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function DMA_disableInterrupt
+          CFI NoCalls
+//  133 {
+//  134     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) &= ~(DMAIE);
+        MOV.B   R12, R15
+        ADD.W   #0x510, R15
+        BIC.W   #0x4, 0(R15)
+//  135 }
+        RETA
+          CFI EndBlock cfiBlock9
+//  136 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  137 uint16_t DMA_getInterruptStatus (uint8_t channelSelect)
+DMA_getInterruptStatus:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function DMA_getInterruptStatus
+          CFI NoCalls
+//  138 {
+//  139     return (HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) & DMAIFG);
+        MOV.B   R12, R12
+        ADD.W   #0x510, R12
+        MOV.W   @R12, R12
+        AND.W   #0x8, R12
+        RETA
+//  140 }
+          CFI EndBlock cfiBlock10
+//  141 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  142 void DMA_clearInterrupt (uint8_t channelSelect)
+DMA_clearInterrupt:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function DMA_clearInterrupt
+          CFI NoCalls
+//  143 {
+//  144     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) &= ~(DMAIFG);
+        MOV.B   R12, R15
+        ADD.W   #0x510, R15
+        BIC.W   #0x8, 0(R15)
+//  145 }
+        RETA
+          CFI EndBlock cfiBlock11
+//  146 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  147 uint16_t DMA_getNMIAbortStatus (uint8_t channelSelect)
+DMA_getNMIAbortStatus:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function DMA_getNMIAbortStatus
+          CFI NoCalls
+//  148 {
+//  149     return (HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) & DMAABORT);
+        MOV.B   R12, R12
+        ADD.W   #0x510, R12
+        MOV.W   @R12, R12
+        AND.W   #0x2, R12
+        RETA
+//  150 }
+          CFI EndBlock cfiBlock12
+//  151 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  152 void DMA_clearNMIAbort (uint8_t channelSelect)
+DMA_clearNMIAbort:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function DMA_clearNMIAbort
+          CFI NoCalls
+//  153 {
+//  154     HWREG16(DMA_BASE + channelSelect + OFS_DMA0CTL) &= ~(DMAABORT);
+        MOV.B   R12, R15
+        ADD.W   #0x510, R15
+        BIC.W   #0x2, 0(R15)
+//  155 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  156 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  157 void DMA_disableTransferDuringReadModifyWrite (void)
+DMA_disableTransferDuringReadModifyWrite:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function DMA_disableTransferDuringReadModifyWrite
+          CFI NoCalls
+//  158 {
+//  159     HWREG16(DMA_BASE + OFS_DMACTL4) |= DMARMWDIS;
+        BIS.W   #0x4, &0x508
+//  160 }
+        RETA
+          CFI EndBlock cfiBlock14
+//  161 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  162 void DMA_enableTransferDuringReadModifyWrite (void)
+DMA_enableTransferDuringReadModifyWrite:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function DMA_enableTransferDuringReadModifyWrite
+          CFI NoCalls
+//  163 {
+//  164     HWREG16(DMA_BASE + OFS_DMACTL4) &= ~(DMARMWDIS);
+        BIC.W   #0x4, &0x508
+//  165 }
+        RETA
+          CFI EndBlock cfiBlock15
+//  166 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  167 void DMA_enableRoundRobinPriority (void)
+DMA_enableRoundRobinPriority:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function DMA_enableRoundRobinPriority
+          CFI NoCalls
+//  168 {
+//  169     HWREG16(DMA_BASE + OFS_DMACTL4) |= ROUNDROBIN;
+        BIS.W   #0x2, &0x508
+//  170 }
+        RETA
+          CFI EndBlock cfiBlock16
+//  171 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  172 void DMA_disableRoundRobinPriority (void)
+DMA_disableRoundRobinPriority:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function DMA_disableRoundRobinPriority
+          CFI NoCalls
+//  173 {
+//  174     HWREG16(DMA_BASE + OFS_DMACTL4) &= ~(ROUNDROBIN);
+        BIC.W   #0x2, &0x508
+//  175 }
+        RETA
+          CFI EndBlock cfiBlock17
+//  176 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  177 void DMA_enableNMIAbort (void)
+DMA_enableNMIAbort:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function DMA_enableNMIAbort
+          CFI NoCalls
+//  178 {
+//  179     HWREG16(DMA_BASE + OFS_DMACTL4) |= ENNMI;
+        BIS.W   #0x1, &0x508
+//  180 }
+        RETA
+          CFI EndBlock cfiBlock18
+//  181 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  182 void DMA_disableNMIAbort (void)
+DMA_disableNMIAbort:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function DMA_disableNMIAbort
+          CFI NoCalls
+//  183 {
+//  184     HWREG16(DMA_BASE + OFS_DMACTL4) &= ~(ENNMI);
+        BIC.W   #0x1, &0x508
+//  185 }
+        RETA
+          CFI EndBlock cfiBlock19
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  186 
+//  187 
+//  188 #endif
+//  189 //*****************************************************************************
+//  190 //
+//  191 //! Close the doxygen group for dma_api
+//  192 //! @}
+//  193 //
+//  194 //*****************************************************************************
+// 
+// 394 bytes in segment CODE
+// 
+// 394 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,728 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  19:31:01
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\communication.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWFB7B.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\communication.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\communication.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME communication
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Cast32uto32f
+        EXTERN _Mul32f
+        EXTERN _Div32f
+        EXTERN ?cstart_init_copy20
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC NRF_Mannager
+        PUBLIC NRF_Radio_Init
+        PUBLIC NRF_Radio_Send
+        PUBLIC PollingNRF
+        PUBLIC RX_ADDRESS
+        PUBLIC SwitchPort
+        PUBLIC TX_ADDRESS
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN g_NRFManager
+        EXTERN memcmp
+        EXTERN memcpy
+        EXTERN NRF24L01Init
+        EXTERN enQueue
+        EXTERN g_UAVinfo
+        EXTERN ZKHD_Link_Handle
+        EXTERN ReadReg
+        EXTERN WriteReg
+        EXTERN ReadBuf
+        EXTERN AnalyRC
+        EXTERN memset
+        EXTERN deQueue
+        EXTERN NRF24L01TxPacket
+        EXTERN NRF24L01TxPacketAp
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\communication.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：communication.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 
+//   23 
+//   24 
+//   25 */
+//   26 //外部文件引用
+//   27 #include "communication.h"
+//   28 #include "gcs.h"
+//   29 #include "fmuConfig.h"
+//   30 #include "flash.h"
+//   31 
+//   32 //宏定义区
+//   33 #define PAGE_ADDRESS            (0x1980)
+//   34 #define NRF_CH_FLASH_ADDR       (uint8_t*)PAGE_ADDRESS
+//   35 #define NRF_RX_ADDR_FLASH_ADDR  (uint8_t*)(PAGE_ADDRESS + 2)
+//   36 #define NRF_TX_ADDR_FLASH_ADDR  (uint8_t*)(PAGE_ADDRESS + 2 + 5)
+//   37 
+//   38 
+//   39 //Extern引用
+//   40 extern uint8_t WriteBuf(uint8_t regaddr, uint8_t *pBuf, uint8_t datalen);    //写数据区
+//   41 extern uint8_t ReadBuf(uint8_t regaddr, uint8_t *pBuf, uint8_t datalen);     //读数据区          
+//   42 extern uint8_t ReadReg(uint8_t regaddr);                                     //读寄存器
+//   43 extern uint8_t WriteReg(uint8_t regaddr, uint8_t data);                      //写寄存器
+//   44 
+//   45 
+//   46 //私有函数区
+//   47 
+//   48 
+//   49 
+//   50 //私有变量区
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   51 NRF_Mannager_t NRF_Mannager;
+NRF_Mannager:
+        DS8 680
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_copy20
+//   52 uint8_t TX_ADDRESS[]= {0xE1, 0xE2, 0xE3, 0xE4, 0xE5};    //本地默认发送地址
+TX_ADDRESS:
+        DS8 5
+        REQUIRE `?<Initializer for TX_ADDRESS>`
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_copy20
+//   53 uint8_t RX_ADDRESS[]= {0xE1, 0xE2, 0xE3, 0xE4, 0xE5};    //本机默认接收地址
+RX_ADDRESS:
+        DS8 5
+        REQUIRE `?<Initializer for RX_ADDRESS>`
+//   54 
+//   55 
+//   56 /******************************************************************************
+//   57   * 函数名称：NRF_Radio_Init
+//   58   * 函数描述：初始化NRF24L01通信机制
+//   59   * 输    入：void
+//   60   * 输    出：void
+//   61   * 返    回：void
+//   62   * 备    注：null
+//   63   *    
+//   64   *
+//   65 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   66 void NRF_Radio_Init(void)
+NRF_Radio_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function NRF_Radio_Init
+//   67 {
+        SUBA    #0x6, SP
+          CFI CFA SP+10
+//   68     uint8_t defalut[5] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+        MOVA    #`?<Constant {255, 255, 255, 255, 255}>`, R15
+        MOV.B   @R15+, 0(SP)
+        MOV.B   @R15+, 0x1(SP)
+        MOV.B   @R15+, 0x2(SP)
+        MOV.B   @R15+, 0x3(SP)
+        MOV.B   @R15+, 0x4(SP)
+//   69     
+//   70     /*此处缺少从FLASH处读取地址*/
+//   71     NRF_Mannager.Hardware_Mannager = &g_NRFManager;
+        MOVX.A  #g_NRFManager, &NRF_Mannager
+//   72     
+//   73     //表示未初始化,使用默认值
+//   74     if(memcmp((uint8_t*)NRF_RX_ADDR_FLASH_ADDR, defalut, 5) == 0)
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    SP, R13
+        MOVA    #0x1982, R12
+          CFI FunCall memcmp
+        CALLA   #memcmp
+        CMP.W   #0x0, R12
+        JNE     ??NRF_Radio_Init_1
+//   75     {
+//   76         memcpy(g_NRFManager.Rx_Addr, RX_ADDRESS, 5);
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    #RX_ADDRESS, R13
+        MOVA    #g_NRFManager + 6, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   77         memcpy(g_NRFManager.Tx_Addr, TX_ADDRESS, 5);
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    #TX_ADDRESS, R13
+        MOVA    #g_NRFManager + 1, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   78         g_NRFManager.RC_Frequency = NRF24L01_FREQ;
+        MOVX.B  #0x14, &g_NRFManager + 11
+        JMP     ??NRF_Radio_Init_0
+//   79     }else
+//   80     {
+//   81         g_NRFManager.RC_Frequency = *((uint8_t*)NRF_CH_FLASH_ADDR);
+??NRF_Radio_Init_1:
+        MOVX.B  &0x1980, &g_NRFManager + 11
+//   82         memcpy(g_NRFManager.Rx_Addr, NRF_RX_ADDR_FLASH_ADDR, 5);
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    #0x1982, R13
+        MOVA    #g_NRFManager + 6, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   83         memcpy(g_NRFManager.Tx_Addr, NRF_TX_ADDR_FLASH_ADDR, 5);
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    #0x1987, R13
+        MOVA    #g_NRFManager + 1, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   84     }
+//   85     
+//   86     g_NRFManager.NRF_Mode = NRF_Mode_RX2;
+??NRF_Radio_Init_0:
+        MOVX.B  #0x2, &g_NRFManager
+//   87     NRF24L01Init(&g_NRFManager);
+        MOVA    #g_NRFManager, R12
+          CFI FunCall NRF24L01Init
+        CALLA   #NRF24L01Init
+//   88 }
+        ADDA    #0x6, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//   89 
+//   90 /******************************************************************************
+//   91   * 函数名称：NRF_Radio_Send
+//   92   * 函数描述：NRF24L01通信发送
+//   93   * 输    入：uint8_t *ptr：发送的数据的地址
+//   94   *           uint8_t length：发送的数据的长度
+//   95   * 输    出：void
+//   96   * 返    回：void 
+//   97   * 备    注：null    
+//   98   *    
+//   99   *
+//  100 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  101 void NRF_Radio_Send(uint8_t *ptr, uint8_t length)
+NRF_Radio_Send:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function NRF_Radio_Send
+//  102 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOVA    R12, R11
+        MOV.B   R13, R10
+//  103     enQueue(&NRF_Mannager.qTx, ptr, length);
+        MOV.B   R10, R14
+        MOVA    R11, R13
+        MOVA    #NRF_Mannager + 4, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  104 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+//  105 
+//  106 /******************************************************************************
+//  107   * 函数名称：PollingNRF
+//  108   * 函数描述：NRF24L01中断轮训函数
+//  109   * 输    入：void
+//  110   * 输    出：void
+//  111   * 返    回：void 
+//  112   * 备    注：null    
+//  113   *    
+//  114   *
+//  115 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  116 void PollingNRF()
+PollingNRF:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function PollingNRF
+//  117 {
+        PUSHM.A #0x3, R10
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+16
+        SUBA    #0x42, SP
+          CFI CFA SP+82
+//  118     static int rx_succsess_cnt = 0;
+//  119     uint8_t state = 0;
+        MOV.B   #0x0, R10
+//  120     uint8_t rxbuff_temp[RX_PLOAD_WIDTH]; 
+//  121     
+//  122     state = ReadReg(RF_STATUS);
+        MOV.B   #0x7, R12
+          CFI FunCall ReadReg
+        CALLA   #ReadReg
+        MOV.B   R12, R10
+//  123     WriteReg(SPI_WRITE_REG + RF_STATUS, state);
+        MOV.B   R10, R13
+        MOV.B   #0x27, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  124     
+//  125     if(state & MAX_TX)
+        BIT.B   #0x10, R10
+        JNC     ??PollingNRF_2
+//  126     {
+//  127         WriteReg(RF_STATUS, MAX_TX);
+        MOV.B   #0x10, R13
+        MOV.B   #0x7, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  128         NRF_Mannager.communication_info.Tx_Success_Count++;
+        ADDX.W  #0x1, &NRF_Mannager + 670
+//  129         
+//  130         NRF_Mannager.Hardware_Mannager->set_rx_mode();
+        MOVA    &NRF_Mannager, R15
+        MOVA    0xc(R15), R15
+          CFI FunCall
+        CALLA   R15
+//  131         NRF_Mannager.mode = Rx_Mode;
+        MOVX.B  #0x0, &NRF_Mannager + 668
+//  132     }
+//  133    
+//  134     if(state & RX_OK)
+??PollingNRF_2:
+        BIT.B   #0x40, R10
+        JNC     ??PollingNRF_3
+//  135     {
+//  136         rx_succsess_cnt++;
+        ADDX.W  #0x1, &??rx_succsess_cnt
+//  137         WriteReg(RF_STATUS, RX_OK);
+        MOV.B   #0x40, R13
+        MOV.B   #0x7, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  138         state = ReadReg(RF_STATUS);
+        MOV.B   #0x7, R12
+          CFI FunCall ReadReg
+        CALLA   #ReadReg
+        MOV.B   R12, R10
+//  139         ReadBuf(RD_RX_PLOAD, rxbuff_temp, RX_PLOAD_WIDTH);//读取数据
+        MOV.B   #0x20, R14
+        MOVA    SP, R13
+        ADDA    #0x22, R13
+        MOV.B   #0x61, R12
+          CFI FunCall ReadBuf
+        CALLA   #ReadBuf
+//  140         enQueue(&NRF_Mannager.qRx, rxbuff_temp, RX_PLOAD_WIDTH);       
+        MOV.B   #0x20, R14
+        MOVA    SP, R13
+        ADDA    #0x22, R13
+        MOVA    #NRF_Mannager + 336, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  141         WriteReg(FLUSH_RX, 0xff);          //清除RX FIFO寄存器 
+        MOV.B   #0xff, R13
+        MOV.B   #0xe2, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  142         NRF_Mannager.communication_info.Rx_Success_Count++;\ 
+        ADDX.W  #0x1, &NRF_Mannager + 678
+//  143         
+//  144         SwitchPort(Connect_Port_NRF, rxbuff_temp);
+        MOVA    SP, R13
+        ADDA    #0x22, R13
+        MOV.B   #0x1, R12
+          CFI FunCall SwitchPort
+        CALLA   #SwitchPort
+//  145         AnalyRC();
+          CFI FunCall AnalyRC
+        CALLA   #AnalyRC
+//  146     }
+//  147     
+//  148     {//处理发送信息
+//  149         uint8_t buff_temp[32];
+//  150         uint8_t length;
+//  151         
+//  152         memset(buff_temp, 0xFF, 32);
+??PollingNRF_3:
+        MOV.W   #0x20, R14
+        MOV.W   #0x0, R15
+        MOV.W   #0xff, R13
+        MOVA    SP, R12
+        ADDA    #0x2, R12
+          CFI FunCall memset
+        CALLA   #memset
+//  153         if(deQueue(&NRF_Mannager.qTx, buff_temp,&length))
+        MOVA    SP, R14
+        MOVA    SP, R13
+        ADDA    #0x2, R13
+        MOVA    #NRF_Mannager + 4, R12
+          CFI FunCall deQueue
+        CALLA   #deQueue
+        CMP.B   #0x0, R12
+        JEQ     ??PollingNRF_0
+//  154         {
+//  155             switch(g_NRFManager.NRF_Mode)
+        MOVX.B  &g_NRFManager, R14
+        SUB.B   #0x1, R14
+        JEQ     ??PollingNRF_1
+        SUB.B   #0x1, R14
+        JEQ     ??PollingNRF_4
+        SUB.B   #0x1, R14
+        JNE     ??PollingNRF_0
+//  156             {
+//  157                 case NRF_Mode_TX:
+//  158                 case NRF_Mode_TX2:
+//  159                     NRF24L01TxPacket(buff_temp, length);
+??PollingNRF_1:
+        MOV.B   @SP, R13
+        MOVA    SP, R12
+        ADDA    #0x2, R12
+          CFI FunCall NRF24L01TxPacket
+        CALLA   #NRF24L01TxPacket
+//  160                     break;
+        JMP     ??PollingNRF_0
+//  161                 case NRF_Mode_RX2:
+//  162                     NRF24L01TxPacketAp(buff_temp, length);
+??PollingNRF_4:
+        MOV.B   @SP, R13
+        MOVA    SP, R12
+        ADDA    #0x2, R12
+          CFI FunCall NRF24L01TxPacketAp
+        CALLA   #NRF24L01TxPacketAp
+//  163                     break;
+//  164                 default:
+//  165                     break;
+//  166             }
+//  167         }
+//  168     }
+//  169 
+//  170     //计算丢包率
+//  171     NRF_Mannager.communication_info.Tx_Packet_Loss_Rate = 
+//  172         NRF_Mannager.communication_info.Tx_Fail_Count * 1.0f / (NRF_Mannager.communication_info.Tx_Fail_Count + NRF_Mannager.communication_info.Tx_Success_Count);
+??PollingNRF_0:
+        MOVX.W  &NRF_Mannager + 672, R12
+        MOV.W   #0x0, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOVX.W  &NRF_Mannager + 672, R12
+        ADDX.W  &NRF_Mannager + 670, R12
+        MOV.W   #0x0, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOVX.W  R12, &NRF_Mannager + 674
+        MOVX.W  R13, &NRF_Mannager + 676
+//  173 }
+        ADDA    #0x42, SP
+          CFI CFA SP+16
+        POPM.A  #0x3, R10
+          CFI R10H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??rx_succsess_cnt:
+        DS8 2
+//  174 
+//  175 /******************************************************************************
+//  176   * 函数名称：SwitchPort
+//  177   * 函数描述：通信端口选择
+//  178   * 输    入：数据接收端口开关，用来给出端口信息
+//  179   * 输    出：void
+//  180   * 返    回：void 
+//  181   * 备    注：null    
+//  182   *    
+//  183   *
+//  184 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  185 void SwitchPort(Connect_Port_t Connect_Port, uint8_t *ptr)
+SwitchPort:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function SwitchPort
+//  186 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R10
+        MOVA    R13, R11
+//  187     switch(Connect_Port)
+        MOV.B   R10, R14
+        SUB.B   #0x0, R14
+        JEQ     ??SwitchPort_1
+        SUB.B   #0x1, R14
+        JEQ     ??SwitchPort_2
+        JMP     ??SwitchPort_0
+//  188     {
+//  189         case Connect_Port_USB:
+//  190             g_UAVinfo.Connect_Port = Connect_Port_USB;
+??SwitchPort_1:
+        MOVX.B  #0x0, &g_UAVinfo + 10
+//  191             break;
+        JMP     ??SwitchPort_0
+//  192         case Connect_Port_NRF:
+//  193             g_UAVinfo.Connect_Port = Connect_Port_NRF;
+??SwitchPort_2:
+        MOVX.B  #0x1, &g_UAVinfo + 10
+//  194             break;
+//  195         default:
+//  196             break;
+//  197     }
+//  198     ZKHD_Link_Handle(ptr);
+??SwitchPort_0:
+        MOVA    R11, R12
+          CFI FunCall ZKHD_Link_Handle
+        CALLA   #ZKHD_Link_Handle
+//  199 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(0)
+`?<Initializer for TX_ADDRESS>`:
+        DATA8
+        DC8 225, 226, 227, 228, 229
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(0)
+`?<Initializer for RX_ADDRESS>`:
+        DATA8
+        DC8 225, 226, 227, 228, 229
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant {255, 255, 255, 255, 255}>`:
+        DATA8
+        DC8 255, 255, 255, 255, 255
+
+        END
+//  200 
+//  201 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 556 bytes in segment CODE
+//   5 bytes in segment DATA20_C
+//  10 bytes in segment DATA20_I
+//  10 bytes in segment DATA20_ID
+// 682 bytes in segment DATA20_Z
+// 
+// 556 bytes of CODE  memory
+//  15 bytes of CONST memory
+// 692 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

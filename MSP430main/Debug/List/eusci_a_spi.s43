@@ -1,0 +1,350 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:07
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\eusci_a_spi.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW1AE2.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\eusci_a_spi.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\eusci_a_spi.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME eusci_a_spi
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\eusci_a_spi.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // eusci_a_spi.c - Driver for the eusci_a_spi Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup eusci_a_spi_api eusci_a_spi
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_EUSCI_Ax__
+//   48 #include "eusci_a_spi.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+//   52 void EUSCI_A_SPI_initMaster (uint16_t baseAddress,
+//   53     EUSCI_A_SPI_initMasterParam *param)
+//   54 {
+//   55     //Disable the USCI Module
+//   56     HWREG16(baseAddress + OFS_UCAxCTLW0) |= UCSWRST;
+//   57 
+//   58     //Reset OFS_UCAxCTLW0 values
+//   59     HWREG16(baseAddress + OFS_UCAxCTLW0) &= ~(UCCKPH + UCCKPL + UC7BIT + UCMSB +
+//   60         UCMST + UCMODE_3 + UCSYNC);
+//   61 
+//   62     //Reset OFS_UCAxCTLW0 values
+//   63     HWREG16(baseAddress + OFS_UCAxCTLW0) &= ~(UCSSEL_3);
+//   64 
+//   65     //Select Clock
+//   66     HWREG16(baseAddress + OFS_UCAxCTLW0) |= param->selectClockSource;
+//   67 
+//   68     HWREG16(baseAddress + OFS_UCAxBRW) =
+//   69         (uint16_t)(param->clockSourceFrequency / param->desiredSpiClock);
+//   70 
+//   71     /*
+//   72      * Configure as SPI master mode.
+//   73      * Clock phase select, polarity, msb
+//   74      * UCMST = Master mode
+//   75      * UCSYNC = Synchronous mode
+//   76      * UCMODE_0 = 3-pin SPI
+//   77      */
+//   78     HWREG16(baseAddress + OFS_UCAxCTLW0) |= (
+//   79         param->msbFirst +
+//   80         param->clockPhase +
+//   81         param->clockPolarity +
+//   82         UCMST +
+//   83         UCSYNC +
+//   84         param->spiMode
+//   85         );
+//   86     //No modulation
+//   87     HWREG16(baseAddress + OFS_UCAxMCTLW) = 0;
+//   88 }
+//   89 
+//   90 void EUSCI_A_SPI_select4PinFunctionality (uint16_t baseAddress,
+//   91     uint8_t select4PinFunctionality
+//   92     )
+//   93 {
+//   94   HWREG16(baseAddress + OFS_UCAxCTLW0) &= ~UCSTEM;
+//   95   HWREG16(baseAddress + OFS_UCAxCTLW0) |= select4PinFunctionality;
+//   96 }
+//   97 
+//   98 void EUSCI_A_SPI_changeMasterClock (uint16_t baseAddress,
+//   99     EUSCI_A_SPI_changeMasterClockParam *param)
+//  100 {
+//  101     //Disable the USCI Module
+//  102     HWREG16(baseAddress + OFS_UCAxCTLW0) |= UCSWRST;
+//  103 
+//  104     HWREG16(baseAddress + OFS_UCAxBRW) =
+//  105         (uint16_t)(param->clockSourceFrequency / param->desiredSpiClock);
+//  106 
+//  107     //Reset the UCSWRST bit to enable the USCI Module
+//  108     HWREG16(baseAddress + OFS_UCAxCTLW0) &= ~(UCSWRST);
+//  109 }
+//  110 
+//  111 void EUSCI_A_SPI_initSlave (uint16_t baseAddress, EUSCI_A_SPI_initSlaveParam *param)
+//  112 {
+//  113     //Disable USCI Module
+//  114     HWREG16(baseAddress + OFS_UCAxCTLW0)  |= UCSWRST;
+//  115 
+//  116     //Reset OFS_UCAxCTLW0 register
+//  117     HWREG16(baseAddress + OFS_UCAxCTLW0) &= ~(UCMSB +
+//  118                                             UC7BIT +
+//  119                                             UCMST +
+//  120                                             UCCKPL +
+//  121                                             UCCKPH +
+//  122                                             UCMODE_3
+//  123                                             );
+//  124 
+//  125     //Clock polarity, phase select, msbFirst, SYNC, Mode0
+//  126     HWREG16(baseAddress + OFS_UCAxCTLW0) |= (param->clockPhase +
+//  127                                             param->clockPolarity +
+//  128                                             param->msbFirst +
+//  129                                             UCSYNC +
+//  130                                             param->spiMode
+//  131                                             );
+//  132 }
+//  133 
+//  134 void EUSCI_A_SPI_changeClockPhasePolarity (uint16_t baseAddress,
+//  135     uint16_t clockPhase,
+//  136     uint16_t clockPolarity
+//  137     )
+//  138 {
+//  139 
+//  140   //Disable the USCI Module
+//  141   HWREG16(baseAddress + OFS_UCAxCTLW0) |= UCSWRST;
+//  142 
+//  143   HWREG16(baseAddress + OFS_UCAxCTLW0) &= ~(UCCKPH + UCCKPL);
+//  144 
+//  145   HWREG16(baseAddress + OFS_UCAxCTLW0) |= (
+//  146         clockPhase +
+//  147         clockPolarity
+//  148           );
+//  149 
+//  150   //Reset the UCSWRST bit to enable the USCI Module
+//  151   HWREG16(baseAddress + OFS_UCAxCTLW0) &= ~(UCSWRST);
+//  152 }
+//  153 
+//  154 void EUSCI_A_SPI_transmitData ( uint16_t baseAddress,
+//  155     uint8_t transmitData
+//  156     )
+//  157 {
+//  158     HWREG16(baseAddress + OFS_UCAxTXBUF) = transmitData;
+//  159 }
+//  160 
+//  161 uint8_t EUSCI_A_SPI_receiveData (uint16_t baseAddress)
+//  162 {
+//  163     return ( HWREG16(baseAddress + OFS_UCAxRXBUF)) ;
+//  164 }
+//  165 
+//  166 void EUSCI_A_SPI_enableInterrupt (uint16_t baseAddress,
+//  167     uint8_t mask
+//  168     )
+//  169 {
+//  170     HWREG16(baseAddress + OFS_UCAxIE) |= mask;
+//  171 }
+//  172 
+//  173 void EUSCI_A_SPI_disableInterrupt (uint16_t baseAddress,
+//  174     uint8_t mask
+//  175     )
+//  176 {
+//  177     HWREG16(baseAddress + OFS_UCAxIE) &= ~mask;
+//  178 }
+//  179 
+//  180 uint8_t EUSCI_A_SPI_getInterruptStatus (uint16_t baseAddress,
+//  181     uint8_t mask
+//  182     )
+//  183 {
+//  184     return ( HWREG16(baseAddress + OFS_UCAxIFG) & mask );
+//  185 }
+//  186 
+//  187 void EUSCI_A_SPI_clearInterrupt (uint16_t baseAddress,
+//  188     uint8_t mask
+//  189     )
+//  190 {
+//  191     HWREG16(baseAddress + OFS_UCAxIFG) &=  ~mask;
+//  192 }
+//  193 
+//  194 void EUSCI_A_SPI_enable (uint16_t baseAddress)
+//  195 {
+//  196     //Reset the UCSWRST bit to enable the USCI Module
+//  197     HWREG16(baseAddress + OFS_UCAxCTLW0) &= ~(UCSWRST);
+//  198 }
+//  199 
+//  200 void EUSCI_A_SPI_disable (uint16_t baseAddress)
+//  201 {
+//  202     //Set the UCSWRST bit to disable the USCI Module
+//  203     HWREG16(baseAddress + OFS_UCAxCTLW0) |= UCSWRST;
+//  204 }
+//  205 
+//  206 uint32_t EUSCI_A_SPI_getReceiveBufferAddress (uint16_t baseAddress)
+//  207 {
+//  208     return ( baseAddress + OFS_UCAxRXBUF );
+//  209 }
+//  210 
+//  211 uint32_t EUSCI_A_SPI_getTransmitBufferAddress (uint16_t baseAddress)
+//  212 {
+//  213     return ( baseAddress + OFS_UCAxTXBUF );
+//  214 }
+//  215 
+//  216 uint16_t EUSCI_A_SPI_isBusy (uint16_t baseAddress)
+//  217 {
+//  218     //Return the bus busy status.
+//  219     return (HWREG16(baseAddress + OFS_UCAxSTATW) & UCBUSY);
+//  220 }
+//  221 
+//  222 
+//  223 #endif
+//  224 //*****************************************************************************
+//  225 //
+//  226 //! Close the doxygen group for eusci_a_spi_api
+//  227 //! @}
+//  228 //
+//  229 //*****************************************************************************
+// 
+//
+// 
+//
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,1076 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:07
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\filter.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW1CDA.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\filter.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\filter.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME filter
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?DivMod32u
+        EXTERN _Mul32f
+        EXTERN _Add32f
+        EXTERN _Sub32f
+        EXTERN _Div32f
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC AntiPulse_MovingAverage_Filter
+        PUBLIC IIR_I_Filter
+        PUBLIC LPF_1_Filter_1
+        PUBLIC LPF_1_Filter_2
+        PUBLIC MovMiddle
+        PUBLIC MovingAverage_Filter
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN memcpy
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\filter.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：filter.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 滤波器使用请直接参照函数进行；
+//   23 
+//   24 
+//   25 
+//   26 */
+//   27 //外部文件引用
+//   28 #include <string.h>
+//   29 #include "filter.h"
+//   30 #include <math.h>
+//   31 #include "myMath.h"
+//   32 
+//   33 
+//   34 //宏定义区
+//   35 
+//   36 
+//   37 
+//   38 //Extern引用
+//   39 
+//   40 
+//   41 
+//   42 //私有函数区
+//   43 
+//   44 
+//   45 
+//   46 //私有变量区
+//   47 
+//   48 
+//   49 
+//   50 
+//   51 /******************************************************************************
+//   52   * 函数名称：MovMiddle
+//   53   * 函数描述：中值滤波函数
+//   54   * 输    入：要滤波的数据
+//   55   * 输    出：void
+//   56   * 返    回：滤波后的数据 
+//   57   * 备    注：null    
+//   58   *    
+//   59   *
+//   60 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   61 int16_t MovMiddle(int16_t input)
+MovMiddle:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function MovMiddle
+//   62 {    
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        SUBA    #0xc, SP
+          CFI CFA SP+32
+        MOV.W   R12, R8
+//   63     uint8_t i = 0;
+        MOV.B   #0x0, R10
+//   64     volatile uint8_t j = 0;
+        MOV.B   #0x0, 0(SP)
+//   65     const uint8_t MOV_MIDDLE_NUM = 5;
+        MOV.B   #0x5, R11
+//   66     static int16_t middle[5] = {0};
+//   67     int16_t middle_t[5] = {0};
+        MOV.W   #0x0, 0x2(SP)
+        MOV.W   #0x0, 0x4(SP)
+        MOV.W   #0x0, 0x6(SP)
+        MOV.W   #0x0, 0x8(SP)
+        MOV.W   #0x0, 0xa(SP)
+//   68 
+//   69     for(i = 1; i < MOV_MIDDLE_NUM; i++)
+        MOV.B   #0x1, R10
+??MovMiddle_0:
+        CMP.B   R11, R10
+        JC      ??MovMiddle_3
+//   70     {
+//   71         middle[i - 1] =  middle[i];
+        MOV.B   R10, R14
+        ADDA    R14, R14
+        MOV.B   R10, R15
+        ADD.W   #0xffff, R15
+        ADDA    R15, R15
+        MOVX.W  ??middle(R14), ??middle(R15)
+//   72     }
+        ADD.B   #0x1, R10
+        JMP     ??MovMiddle_0
+//   73     
+//   74     middle[MOV_MIDDLE_NUM - 1] = input;
+??MovMiddle_3:
+        MOV.B   R11, R15
+        ADD.W   #0xffff, R15
+        ADDA    R15, R15
+        MOVX.W  R8, ??middle(R15)
+//   75     memcpy(middle_t,middle,MOV_MIDDLE_NUM * sizeof(uint32_t));
+        MOV.B   R11, R11
+        MOV.W   R11, R14
+        MOV.W   #0x0, R15
+        RLA.W   R14
+        RLC.W   R15
+        RLA.W   R14
+        RLC.W   R15
+        MOVA    #??middle, R13
+        MOVA    SP, R12
+        ADDA    #0x2, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//   76     
+//   77     for(i = 0; i < MOV_MIDDLE_NUM - 1; i++)
+        MOV.B   #0x0, R10
+??MovMiddle_2:
+        MOV.B   R10, R10
+        MOV.B   R11, R15
+        ADD.W   #0xffff, R15
+        CMP.W   R15, R10
+        JGE     ??MovMiddle_4
+//   78     {
+//   79         for(j = i + 1; j < MOV_MIDDLE_NUM; j++)
+        MOV.B   R10, R14
+        ADD.B   #0x1, R14
+        MOV.B   R14, 0(SP)
+??MovMiddle_1:
+        CMP.B   R11, 0(SP)
+        JC      ??MovMiddle_5
+//   80         {
+//   81             if(middle_t[i] > middle_t[j])
+        MOVA    SP, R14
+        ADDA    #0x2, R14
+        MOV.B   @SP, R15
+        MOV.B   R15, R15
+        ADDA    R15, R15
+        ADDA    R14, R15
+        MOVA    SP, R14
+        ADDA    #0x2, R14
+        MOV.B   R10, R13
+        ADDA    R13, R13
+        ADDA    R14, R13
+        CMP.W   @R13, 0(R15)
+        JGE     ??MovMiddle_6
+//   82             {
+//   83                 middle_t[i] ^= middle_t[j];
+        MOVA    SP, R15
+        ADDA    #0x2, R15
+        MOV.B   R10, R14
+        ADDA    R14, R14
+        ADDA    R15, R14
+        MOVA    SP, R13
+        ADDA    #0x2, R13
+        MOV.B   @SP, R15
+        MOV.B   R15, R15
+        ADDA    R15, R15
+        ADDA    R13, R15
+        XOR.W   @R15, 0(R14)
+//   84                 middle_t[j] ^= middle_t[i];
+        MOV.B   @SP, R15
+        MOVA    SP, R14
+        ADDA    #0x2, R14
+        MOV.B   R15, R15
+        ADDA    R15, R15
+        ADDA    R14, R15
+        MOVA    SP, R14
+        ADDA    #0x2, R14
+        MOV.B   R10, R13
+        ADDA    R13, R13
+        ADDA    R14, R13
+        XOR.W   @R13, 0(R15)
+//   85                 middle_t[i] ^= middle_t[j];
+        MOVA    SP, R15
+        ADDA    #0x2, R15
+        MOV.B   R10, R14
+        ADDA    R14, R14
+        ADDA    R15, R14
+        MOVA    SP, R13
+        ADDA    #0x2, R13
+        MOV.B   @SP, R15
+        MOV.B   R15, R15
+        ADDA    R15, R15
+        ADDA    R13, R15
+        XOR.W   @R15, 0(R14)
+//   86             }
+//   87         }
+??MovMiddle_6:
+        ADD.B   #0x1, 0(SP)
+        JMP     ??MovMiddle_1
+//   88     }
+??MovMiddle_5:
+        ADD.B   #0x1, R10
+        JMP     ??MovMiddle_2
+//   89     int16_t Result = middle_t[(MOV_MIDDLE_NUM + 1) >> 1];
+??MovMiddle_4:
+        MOVA    SP, R14
+        ADDA    #0x2, R14
+        MOV.B   R11, R15
+        ADD.W   #0x1, R15
+        RRA.W   R15
+        ADDA    R15, R15
+        ADDA    R14, R15
+        MOV.W   @R15, R12
+//   90     
+//   91     return Result;
+        ADDA    #0xc, SP
+          CFI CFA SP+20
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//   92 }
+          CFI EndBlock cfiBlock0
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??middle:
+        DS8 10
+//   93 
+//   94 /******************************************************************************
+//   95   * 函数名称：AntiPulse_MovingAverage_Filter
+//   96   * 函数描述：抗干扰型滑动均值滤波
+//   97   * 输    入：MovAverage_t *MovAverage 滑动均值结构体指针
+//   98   * 输    出：
+//   99   * 返    回： 
+//  100   * 备    注：每次采样到一个新数据放入队列，对N个数据进行算术平均运算
+//  101   *    
+//  102   *
+//  103 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  104 uint16_t AntiPulse_MovingAverage_Filter(MovAverage_t *MovAverage)
+AntiPulse_MovingAverage_Filter:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function AntiPulse_MovingAverage_Filter
+//  105 {
+        PUSHM.A #0x7, R10
+          CFI R4L Frame(CFA, -32)
+          CFI R4H Frame(CFA, -30)
+          CFI R5L Frame(CFA, -28)
+          CFI R5H Frame(CFA, -26)
+          CFI R6L Frame(CFA, -24)
+          CFI R6H Frame(CFA, -22)
+          CFI R7L Frame(CFA, -20)
+          CFI R7H Frame(CFA, -18)
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+32
+        MOVA    R12, R14
+//  106     uint8_t i;    
+//  107     uint32_t sum = 0;
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+//  108     uint16_t max = 0;
+        MOV.W   #0x0, R6
+//  109     uint16_t min = 0xffff;
+        MOV.W   #0xffff, R8
+//  110 
+//  111     MovAverage->average[MovAverage->cnt] = MovAverage->input;    
+        MOVA    0x4(R14), R7
+        MOV.W   @R14, R15
+        ADDA    R15, R15
+        ADDA    R7, R15
+        MOV.W   0x2(R14), 0(R15)
+//  112     MovAverage->cnt++;    
+        ADD.W   #0x1, 0(R14)
+//  113     
+//  114     if(MovAverage->cnt == MovAverage->max_cnt)
+        MOV.B   0x8(R14), R15
+        MOV.B   R15, R15
+        CMP.W   R15, 0(R14)
+        JNE     ??AntiPulse_MovingAverage_Filter_2
+//  115     {
+//  116         MovAverage->cnt = 0;
+        MOV.W   #0x0, 0(R14)
+//  117     }    
+//  118     for(i = 0; i < MovAverage->max_cnt; i++)
+??AntiPulse_MovingAverage_Filter_2:
+        MOV.B   #0x0, R10
+??AntiPulse_MovingAverage_Filter_0:
+        CMP.B   0x8(R14), R10
+        JC      ??AntiPulse_MovingAverage_Filter_3
+//  119     {
+//  120         if(MovAverage->average[i] > max)
+        MOVA    0x4(R14), R15
+        MOV.B   R10, R7
+        ADDA    R7, R7
+        ADDA    R15, R7
+        CMP.W   @R7, R6
+        JC      ??AntiPulse_MovingAverage_Filter_4
+//  121         {
+//  122             max = MovAverage->average[i];
+        MOVA    0x4(R14), R15
+        MOV.B   R10, R7
+        ADDA    R7, R7
+        ADDA    R15, R7
+        MOV.W   @R7, R6
+        JMP     ??AntiPulse_MovingAverage_Filter_1
+//  123         }
+//  124         else if(MovAverage->average[i] < min)
+??AntiPulse_MovingAverage_Filter_4:
+        MOVA    0x4(R14), R15
+        MOV.B   R10, R7
+        ADDA    R7, R7
+        ADDA    R15, R7
+        CMP.W   R8, 0(R7)
+        JC      ??AntiPulse_MovingAverage_Filter_1
+//  125         {
+//  126             min = MovAverage->average[i];
+        MOVA    0x4(R14), R15
+        MOV.B   R10, R7
+        ADDA    R7, R7
+        ADDA    R15, R7
+        MOV.W   @R7, R8
+//  127         }
+//  128         
+//  129         sum += MovAverage->average[i];
+??AntiPulse_MovingAverage_Filter_1:
+        MOVA    0x4(R14), R15
+        MOV.B   R10, R7
+        ADDA    R7, R7
+        ADDA    R15, R7
+        MOV.W   @R7, R4
+        MOV.W   #0x0, R5
+        ADD.W   R4, R12
+        ADDC.W  R5, R13
+//  130     }
+        ADD.B   #0x1, R10
+        JMP     ??AntiPulse_MovingAverage_Filter_0
+//  131     
+//  132     return ((sum - max - min) / (MovAverage->max_cnt - 2));                                    
+??AntiPulse_MovingAverage_Filter_3:
+        MOV.W   #0x0, R7
+        SUB.W   R6, R12
+        SUBC.W  R7, R13
+        MOV.W   #0x0, R9
+        SUB.W   R8, R12
+        SUBC.W  R9, R13
+        MOV.B   0x8(R14), R14
+        MOV.B   R14, R14
+        ADD.W   #0xfffe, R14
+        MOV.W   R14, R15
+        RLA.W   R15
+        SUBC.W  R15, R15
+        XOR.W   #0xffff, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        POPM.A  #0x7, R10
+          CFI R10H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  133 }
+          CFI EndBlock cfiBlock1
+//  134 
+//  135 /******************************************************************************
+//  136   * 函数名称：MovingAverage_Filter
+//  137   * 函数描述：滑动均值滤波
+//  138   * 输    入：MovAverage_t *MovAverage 滑动均值结构体指针
+//  139   * 输    出：void
+//  140   * 返    回：滤波后结果 
+//  141   * 备    注：null
+//  142   *   
+//  143   *
+//  144 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  145 uint16_t MovingAverage_Filter(MovAverage_t *MovAverage)
+MovingAverage_Filter:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function MovingAverage_Filter
+//  146 {
+        PUSHM.A #0x3, R10
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+16
+        MOVA    R12, R14
+//  147     uint8_t i;    
+//  148     uint32_t sum = 0;
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+//  149 
+//  150     MovAverage->average[MovAverage->cnt] = MovAverage->input;    
+        MOVA    0x4(R14), R8
+        MOV.W   @R14, R15
+        ADDA    R15, R15
+        ADDA    R8, R15
+        MOV.W   0x2(R14), 0(R15)
+//  151     MovAverage->cnt++;  
+        ADD.W   #0x1, 0(R14)
+//  152     
+//  153     if(MovAverage->cnt == MovAverage->max_cnt)
+        MOV.B   0x8(R14), R15
+        MOV.B   R15, R15
+        CMP.W   R15, 0(R14)
+        JNE     ??MovingAverage_Filter_1
+//  154     {
+//  155         MovAverage->cnt = 0;
+        MOV.W   #0x0, 0(R14)
+//  156     }    
+//  157     
+//  158     for(i = 0; i < MovAverage->max_cnt; i++)
+??MovingAverage_Filter_1:
+        MOV.B   #0x0, R10
+??MovingAverage_Filter_0:
+        CMP.B   0x8(R14), R10
+        JC      ??MovingAverage_Filter_2
+//  159     {
+//  160         sum += MovAverage->average[i];
+        MOVA    0x4(R14), R15
+        MOV.B   R10, R8
+        ADDA    R8, R8
+        ADDA    R15, R8
+        MOV.W   @R8, R8
+        MOV.W   #0x0, R9
+        ADD.W   R8, R12
+        ADDC.W  R9, R13
+//  161     }
+        ADD.B   #0x1, R10
+        JMP     ??MovingAverage_Filter_0
+//  162     
+//  163     return (sum / MovAverage->max_cnt);                                    
+??MovingAverage_Filter_2:
+        MOV.B   0x8(R14), R14
+        MOV.B   R14, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        POPM.A  #0x3, R10
+          CFI R10H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  164 }
+          CFI EndBlock cfiBlock2
+//  165 
+//  166 /******************************************************************************
+//  167   * 函数名称：IIR_I_Filter
+//  168   * 函数描述：IIR直接I型滤波器
+//  169   * 输    入：InData 为当前数据
+//  170                *x     储存未滤波的数据
+//  171                *y     储存滤波后的数据
+//  172                *b     储存系数b
+//  173                *a     储存系数a
+//  174                nb     数组*b的长度
+//  175                na     数组*a的长度
+//  176   * 输    出：void
+//  177   * 返    回： 滤波数据
+//  178   * 备    注： 函数原型
+//  179                y(n) = b0 * x(n) + b1 * x(n - 1) + b2 * x(n - 2) - a1 * y(n - 1) - a2 * y(n - 2)
+//  180   *    
+//  181   *
+//  182 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  183 float IIR_I_Filter(float InputData, float *x, float *y,  const float *b, uint8_t nb, const float *a, uint8_t na)
+IIR_I_Filter:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function IIR_I_Filter
+//  184 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        PUSH.W  R13
+          CFI CFA SP+38
+        PUSH.W  R12
+          CFI CFA SP+40
+        MOVA    R14, R4
+        MOVA    R15, R10
+        MOVA    0x28(SP), R5
+//  185     float z1,z2 = 0;
+        MOV.W   #0x0, R6
+        MOV.W   #0x0, R7
+//  186     int16_t i;
+//  187 
+//  188     for(i = nb - 1; i > 0; i--)
+        MOV.B   0x2c(SP), R15
+        MOV.B   R15, R15
+        ADD.W   #0xffff, R15
+        MOV.W   R15, R11
+??IIR_I_Filter_0:
+        CMP.W   #0x1, R11
+        JL      ??IIR_I_Filter_2
+//  189     {
+//  190         x[i] = x[i - 1];
+        MOV.W   R11, R15
+        ADD.W   #0xffff, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R4, R15
+        MOV.W   R11, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RLAM.A  #0x2, R14
+        ADDA    R4, R14
+        MOV.W   @R15, 0(R14)
+        MOV.W   0x2(R15), 0x2(R14)
+//  191         y[i] = y[i - 1];
+        MOV.W   R11, R15
+        ADD.W   #0xffff, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R10, R15
+        MOV.W   R11, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RLAM.A  #0x2, R14
+        ADDA    R10, R14
+        MOV.W   @R15, 0(R14)
+        MOV.W   0x2(R15), 0x2(R14)
+//  192     }
+        ADD.W   #0xffff, R11
+        JMP     ??IIR_I_Filter_0
+//  193 
+//  194     x[0] = InputData;
+??IIR_I_Filter_2:
+        MOV.W   @SP, 0(R4)
+        MOV.W   0x2(SP), 0x2(R4)
+//  195     z1 = x[0] * b[0];
+        MOV.W   @R4, R12
+        MOV.W   0x2(R4), R13
+        MOV.W   @R5, R14
+        MOV.W   0x2(R5), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  196 
+//  197     for(i = 1; i < nb; i++)
+        MOV.W   #0x1, R11
+??IIR_I_Filter_1:
+        MOV.B   0x2c(SP), R15
+        MOV.B   R15, R15
+        CMP.W   R15, R11
+        JGE     ??IIR_I_Filter_3
+//  198     {
+//  199         z1 += x[i] * b[i];
+        MOV.W   R11, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R4, R15
+        MOV.W   R11, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RLAM.A  #0x2, R14
+        ADDA    R5, R14
+        MOV.W   @R15, R12
+        MOV.W   0x2(R15), R13
+        MOVA    R14, R15
+        MOV.W   @R15, R14
+        MOV.W   0x2(R15), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  200         z2 += y[i] * a[i];
+        MOV.W   R11, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R10, R15
+        MOVA    0x2e(SP), R13
+        MOV.W   R11, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RLAM.A  #0x2, R14
+        ADDA    R13, R14
+        MOV.W   @R15, R12
+        MOV.W   0x2(R15), R13
+        MOVA    R14, R15
+        MOV.W   @R15, R14
+        MOV.W   0x2(R15), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  201     }
+        ADD.W   #0x1, R11
+        JMP     ??IIR_I_Filter_1
+//  202 
+//  203     y[0] = z1 - z2;
+??IIR_I_Filter_3:
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, 0(R10)
+        MOV.W   R13, 0x2(R10)
+//  204     
+//  205     return y[0];
+        MOV.W   @R10+, R12
+        MOV.W   @R10+, R13
+        ADDA    #0x4, SP
+          CFI CFA SP+36
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  206 }
+          CFI EndBlock cfiBlock3
+//  207 
+//  208 /******************************************************************************
+//  209   * 函数名称：LPF_1st
+//  210   * 函数描述：一阶滞后滤波
+//  211   * 输    入：一节滞后滤波结构体指针
+//  212   * 输    出：void
+//  213   * 返    回：滤波结果
+//  214   * 备    注：    
+//  215   *    
+//  216   *
+//  217 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  218 float LPF_1_Filter_1(Filter_LPF_1 *LPF_1)
+LPF_1_Filter_1:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function LPF_1_Filter_1
+//  219 {
+        PUSHM.A #0x3, R10
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+16
+        MOVA    R12, R10
+//  220     return LPF_1->old_data * (1 - LPF_1->factor) + LPF_1->new_data *  LPF_1->factor;
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   0x8(R10), R14
+        MOV.W   0xa(R10), R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   @R10, R14
+        MOV.W   0x2(R10), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   0x4(R10), R12
+        MOV.W   0x6(R10), R13
+        MOV.W   0x8(R10), R14
+        MOV.W   0xa(R10), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        POPM.A  #0x3, R10
+          CFI R10H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  221 }
+          CFI EndBlock cfiBlock4
+//  222 
+//  223 /******************************************************************************
+//  224   * 函数名称：LPF_1_Filter_2
+//  225   * 函数描述：低通滤波器
+//  226   * 输    入：Filter_LPF_1 *LPF_1:一节滞后滤波结构体指针
+//  227               float dt:单位运行时间
+//  228   * 输    出：void
+//  229   * 返    回：滤波结果
+//  230   * 备    注：
+//  231      一阶离散低通滤波器  type frequent.
+//  232      Examples for _filter:
+//  233   #define  _filter   7.9577e - 3  // 由 "1 / ( 2 * PI * f_cut )"这个公式计算得来; 
+//  234   * f_cut = 10 Hz -> _filter = 15.9155e - 3
+//  235   * f_cut = 15 Hz -> _filter = 10.6103e - 3
+//  236   * f_cut = 20 Hz -> _filter =  7.9577e - 3
+//  237   * f_cut = 25 Hz -> _filter =  6.3662e - 3
+//  238   * f_cut = 30 Hz -> _filter =  5.3052e - 3
+//  239   *
+//  240 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  241 float LPF_1_Filter_2(Filter_LPF_1 *LPF_1, float dt)
+LPF_1_Filter_2:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function LPF_1_Filter_2
+//  242 {
+        PUSHM.A #0x5, R10
+          CFI R6L Frame(CFA, -24)
+          CFI R6H Frame(CFA, -22)
+          CFI R7L Frame(CFA, -20)
+          CFI R7H Frame(CFA, -18)
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+24
+        MOVA    R12, R10
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//  243      return LPF_1->old_data + (dt /( 1 / ( 2 * PI * LPF_1->factor ) + dt)) * (LPF_1->new_data - LPF_1->old_data);    
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOV.W   0x8(R10), R12
+        MOV.W   0xa(R10), R13
+        MOV.W   #0xfda, R14
+        MOV.W   #0x40c9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOV.W   0x4(R10), R12
+        MOV.W   0x6(R10), R13
+        MOV.W   @R10, R14
+        MOV.W   0x2(R10), R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   @R10+, R12
+        MOV.W   @R10+, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        POPM.A  #0x5, R10
+          CFI R10H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  244 }
+          CFI EndBlock cfiBlock5
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+        DATA16
+        DC16 0, 0, 0, 0, 0
+
+        END
+//  245 
+//  246 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+//  247 
+// 
+// 1 014 bytes in segment CODE
+//    10 bytes in segment DATA20_C
+//    10 bytes in segment DATA20_Z
+// 
+// 1 014 bytes of CODE  memory
+//    10 bytes of CONST memory
+//    10 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

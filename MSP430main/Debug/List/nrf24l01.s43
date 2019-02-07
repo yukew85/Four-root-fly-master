@@ -1,0 +1,1440 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  16:49:48
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW69D2.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\nrf24l01.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME nrf24l01
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Check
+        PUBLIC NRF24L01Init
+        PUBLIC NRF24L01TxPacket
+        PUBLIC NRF24L01TxPacketAp
+        PUBLIC ReadBuf
+        PUBLIC ReadReg
+        PUBLIC RxPacket
+        PUBLIC TxPacket
+        PUBLIC UpdateFreq
+        PUBLIC UpdateRxAddr
+        PUBLIC UpdateTxAddr
+        PUBLIC WriteBuf
+        PUBLIC WriteReg
+        PUBWEAK _A_PBOUT_L
+        PUBLIC g_NRFManager
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN SPI_RW
+        EXTERN NRF_Mannager
+        EXTERN enQueue
+        EXTERN Flash_Write
+        EXTERN memcmp
+        EXTERN g_UAVinfo
+        EXTERN memcpy
+        EXTERN GPIO_setAsOutputPin
+        EXTERN SPI_init
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：nrf24l01.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：
+//   11   * 修改说明：
+//   12   *
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 NRF24L01的驱动使用方法如下：
+//   23 1.实例化一个NRF24L01_Manager_t结构体；
+//   24 2.调用NRF24L01Init，初始化结构体；
+//   25 3.根据初始化的模式，选择发送数据的发送函数
+//   26 
+//   27 */
+//   28 //外部文件引用
+//   29 #include "nrf24l01.h"
+//   30 #include <string.h>
+//   31 #include "nrf24l01.h"
+//   32 #include <string.h>
+//   33 #include "fmuConfig.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0222H
+// union <unnamed> __data16 _A_PBOUT_L
+_A_PBOUT_L:
+        DS8 2
+//   34 #include "communication.h"
+//   35 #include "flash.h"
+//   36 #include "spi.h"
+//   37 
+//   38 //宏定义区
+//   39 #define MAX_TX                      0x10  //达到最大发送次数中断
+//   40 #define TX_OK                       0x20  //TX发送完成中断
+//   41 #define RX_OK                       0x40  //接收到数据中断
+//   42 
+//   43 #define SUCCESS                     0
+//   44 #define FAILED                      1
+//   45 #define FLASH_TX_ADDR_OFFSET        7
+//   46 #define FLASH_RX_ADDR_OFFSET        2
+//   47 #define FLASH_FREQ_ADDR_OFFSET      0
+//   48 
+//   49 #define NRF2401_CE_PORT         P3OUT
+//   50 #define NRF2401_CE_PIN          GPIO_PIN5
+//   51 
+//   52 #define NRF2401_CSN_PORT        P4OUT
+//   53 #define NRF2401_CSN_PIN         GPIO_PIN0
+//   54 
+//   55 #define NRF2401_IRQ_PORT        P3IN
+//   56 #define NRF2401_IRQ_PIN         GPIO_PIN6
+//   57 
+//   58 #define SET_NRF24L01_CSN        NRF2401_CSN_PORT |= NRF2401_CSN_PIN
+//   59 #define CLR_NRF24L01_CSN        NRF2401_CSN_PORT &= ~NRF2401_CSN_PIN
+//   60 #define SET_NRF24L01_CE         NRF2401_CE_PORT  |= NRF2401_CE_PIN
+//   61 #define CLR_NRF24L01_CE         NRF2401_CE_PORT  &= ~NRF2401_CE_PIN
+//   62 
+//   63 //Extern引用
+//   64 
+//   65 
+//   66 //私有函数区
+//   67 uint8_t SPI_RW(uint8_t data);                                         //写数据区            
+//   68 uint8_t WriteBuf(uint8_t regaddr, uint8_t *pBuf, uint8_t datalen);    //写数据区
+//   69 uint8_t ReadBuf(uint8_t regaddr, uint8_t *pBuf, uint8_t datalen);     //读数据区          
+//   70 uint8_t ReadReg(uint8_t regaddr);                                     //读寄存器
+//   71 uint8_t WriteReg(uint8_t regaddr, uint8_t data);                      //写寄存器
+//   72 uint8_t Check(void);                                                  //检查NRF24L01是否在位
+//   73 uint8_t TxPacket(uint8_t *txbuf);                                     //发送一个包的数据
+//   74 uint8_t RxPacket(uint8_t *rxbuf);                                     //接收一个包的数据
+//   75 
+//   76 //私有变量区
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   77 NRF24L01_Manager_t g_NRFManager;
+g_NRFManager:
+        DS8 42
+//   78 
+//   79 
+//   80 
+//   81 
+//   82 /******************************************************************************
+//   83   * 函数名称：WriteReg
+//   84   * 函数描述：SPI总线写NRF24L01寄存器
+//   85   * 输    入：uint8_t regaddr:寄存器地址
+//   86               uint8_t data:需要写入的数据
+//   87   * 输    出：void
+//   88   * 返    回：是否写入成功，0：写入成功
+//   89                            1：写入失败
+//   90   * 备    注：null
+//   91   *    
+//   92   *
+//   93 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   94 uint8_t WriteReg(uint8_t regaddr, uint8_t data)
+WriteReg:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function WriteReg
+//   95 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R11
+        MOV.B   R13, R10
+//   96     uint8_t status = 0;   
+        MOV.B   #0x0, R8
+//   97     
+//   98     CLR_NRF24L01_CSN;                    //使能SPI传输
+        BIC.B   #0x1, &0x223
+//   99     status = SPI_RW(regaddr); //发送寄存器号 
+        MOV.B   R11, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+        MOV.B   R12, R8
+//  100     SPI_RW(data);            //写入寄存器的值
+        MOV.B   R10, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+//  101     SET_NRF24L01_CSN;                    //禁止SPI传输 
+        BIS.B   #0x1, &0x223
+//  102     
+//  103     return(status);                        //返回状态值
+        MOV.B   R8, R12
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_PBOUT_L
+//  104 }
+//  105 //读取SPI寄存器值 ，regaddr:要读的寄存器
+//  106 /******************************************************************************
+//  107   * 函数名称：ReadReg
+//  108   * 函数描述：SPI总线读NRF24L01寄存器
+//  109   * 输    入：uint8_t regaddr:寄存器地址
+//  110   * 输    出：void
+//  111   * 返    回：是否读取成功，0：读取成功
+//  112                            1：读取失败
+//  113   * 备    注：null  
+//  114   *    
+//  115   *
+//  116 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  117 uint8_t ReadReg(uint8_t regaddr)
+ReadReg:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function ReadReg
+//  118 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R10
+//  119     uint8_t reg_val = 0; 
+        MOV.B   #0x0, R11
+//  120     
+//  121     CLR_NRF24L01_CSN;                //使能SPI传输        
+        BIC.B   #0x1, &0x223
+//  122     SPI_RW(regaddr);                 //发送寄存器号
+        MOV.B   R10, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+//  123     reg_val = SPI_RW(0XFF);          //读取寄存器内容
+        MOV.B   #0xff, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+        MOV.B   R12, R11
+//  124     SET_NRF24L01_CSN;                //禁止SPI传输
+        BIS.B   #0x1, &0x223
+//  125     
+//  126     return(reg_val);                 //返回状态值
+        MOV.B   R11, R12
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_PBOUT_L
+//  127 }    
+//  128 
+//  129 /******************************************************************************
+//  130   * 函数名称：ReadBuf
+//  131   * 函数描述：批量读取NRF24L01寄存器数据
+//  132   * 输    入：uint8_t regaddr:寄存器地址
+//  133               uint8_t *pBuf:读取数据的存放地址
+//  134               uint8_t datalen:读取数据的长度
+//  135   * 输    出：void
+//  136   * 返    回：是否读取成功，0：读取成功
+//  137                            1：读取失败
+//  138   * 备    注：    
+//  139   *    
+//  140   *
+//  141 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  142 uint8_t ReadBuf(uint8_t regaddr, uint8_t *pBuf, uint8_t datalen)
+ReadBuf:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function ReadBuf
+//  143 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.B   R12, R11
+        MOVA    R13, R8
+        MOV.B   R14, R10
+//  144     uint8_t status = 0;
+        MOV.B   #0x0, R9
+//  145     
+//  146     CLR_NRF24L01_CSN;                       //使能SPI传输
+        BIC.B   #0x1, &0x223
+//  147     status = SPI_RW(regaddr);                 //发送寄存器值(位置),并读取状态值          
+        MOV.B   R11, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+        MOV.B   R12, R9
+//  148     
+//  149     for(uint8_t ctr = 0; ctr < datalen; ctr++)
+        MOV.B   #0x0, R6
+??ReadBuf_0:
+        CMP.B   R10, R6
+        JC      ??ReadBuf_1
+//  150     {
+//  151         pBuf[ctr] = SPI_RW(0XFF);           //读出数据
+        MOV.B   #0xff, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+        MOV.B   R6, R15
+        ADDA    R8, R15
+        MOV.B   R12, 0(R15)
+//  152     }
+        ADD.B   #0x1, R6
+        JMP     ??ReadBuf_0
+//  153     
+//  154     SET_NRF24L01_CSN;                       //关闭SPI传输
+??ReadBuf_1:
+        BIS.B   #0x1, &0x223
+//  155     
+//  156     return status;                          //返回读到的状态值
+        MOV.B   R9, R12
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+        REQUIRE _A_PBOUT_L
+//  157 }
+//  158 
+//  159 /******************************************************************************
+//  160   * 函数名称：WriteBuf
+//  161   * 函数描述：批量写入NRF24L01寄存器数据
+//  162   * 输    入：uint8_t regaddr:要写入数据的寄存器地址
+//  163               uint8_t *pBuf:要写入的数据的地址
+//  164               uint8_t datalen:要写入的数据的长度
+//  165   * 输    出：void
+//  166   * 返    回：是否读取成功，0：读取成功
+//  167                            1：读取失败
+//  168   * 备    注：    
+//  169   *    
+//  170   *
+//  171 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  172 uint8_t WriteBuf(uint8_t regaddr, uint8_t *pBuf, uint8_t datalen)
+WriteBuf:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function WriteBuf
+//  173 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.B   R12, R11
+        MOVA    R13, R8
+        MOV.B   R14, R10
+//  174     uint8_t status = 0;
+        MOV.B   #0x0, R9
+//  175     
+//  176     CLR_NRF24L01_CSN;                                    //使能SPI传输
+        BIC.B   #0x1, &0x223
+//  177     status = SPI_RW(regaddr);                            //发送寄存器值(位置),并读取状态值
+        MOV.B   R11, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+        MOV.B   R12, R9
+//  178     
+//  179     for(int i = 0; i < datalen; i++)
+        MOV.W   #0x0, R6
+??WriteBuf_0:
+        MOV.B   R10, R10
+        CMP.W   R10, R6
+        JGE     ??WriteBuf_1
+//  180     {
+//  181         SPI_RW(*pBuf++);                                 //写入数据     
+        MOV.B   @R8, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+        ADDA    #0x1, R8
+//  182     }
+        ADD.W   #0x1, R6
+        JMP     ??WriteBuf_0
+//  183     SET_NRF24L01_CSN;                                    //关闭SPI传输
+??WriteBuf_1:
+        BIS.B   #0x1, &0x223
+//  184 
+//  185     return status;                                       //返回读到的状态值
+        MOV.B   R9, R12
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+        REQUIRE _A_PBOUT_L
+//  186 }        
+//  187 
+//  188 /******************************************************************************
+//  189   * 函数名称：Check
+//  190   * 函数描述：检查NRF24L01硬件是否连接成功
+//  191   * 输    入：void
+//  192   * 输    出：void
+//  193   * 返    回：是否读取成功，0：连接成功
+//  194                            1：连接失败
+//  195   * 备    注：null
+//  196   *    
+//  197   *
+//  198 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  199 uint8_t Check(void)
+Check:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function Check
+//  200 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        SUBA    #0xc, SP
+          CFI CFA SP+20
+//  201     uint8_t buf[5] = {0xA5, 0xA5, 0xA5, 0xA5, 0xA5};
+        MOVA    #`?<Constant {165, 165, 165, 165, 165}>`, R15
+        MOV.B   @R15+, 0x6(SP)
+        MOV.B   @R15+, 0x7(SP)
+        MOV.B   @R15+, 0x8(SP)
+        MOV.B   @R15+, 0x9(SP)
+        MOV.B   @R15+, 0xa(SP)
+//  202     uint8_t buf1[5] = {0};
+        MOV.W   #0x0, 0(SP)
+        MOV.W   #0x0, 0x2(SP)
+        MOV.B   #0x0, 0x4(SP)
+//  203     uint8_t i = 0;
+        MOV.B   #0x0, R10
+//  204     
+//  205     WriteBuf(SPI_WRITE_REG + TX_ADDR, buf, 5); //写入5个字节的地址.    
+        MOV.B   #0x5, R14
+        MOVA    SP, R13
+        ADDA    #0x6, R13
+        MOV.B   #0x30, R12
+          CFI FunCall WriteBuf
+        CALLA   #WriteBuf
+//  206     ReadBuf(TX_ADDR, buf1, 5);                 //读出写入的地址      
+        MOV.B   #0x5, R14
+        MOVA    SP, R13
+        MOV.B   #0x10, R12
+          CFI FunCall ReadBuf
+        CALLA   #ReadBuf
+//  207     
+//  208     for(i = 0; i < 5; i++)
+        MOV.B   #0x0, R10
+??Check_0:
+        CMP.B   #0x5, R10
+        JC      ??Check_2
+//  209     {
+//  210         if(buf1[i] != 0xA5)
+        MOVA    SP, R15
+        MOV.B   R10, R14
+        ADDA    R15, R14
+        CMP.B   #0xa5, 0(R14)
+        JNE     ??Check_2
+//  211         {
+//  212             break;                       
+//  213         }
+//  214     }
+        ADD.B   #0x1, R10
+        JMP     ??Check_0
+//  215     
+//  216     if(i != 5)
+??Check_2:
+        CMP.B   #0x5, R10
+        JEQ     ??Check_4
+//  217     {
+//  218         return 1;                               //NRF24L01不在位            
+        MOV.B   #0x1, R12
+        JMP     ??Check_3
+//  219     }else
+//  220     {
+//  221         return 0;                               //NRF24L01在位
+??Check_4:
+        MOV.B   #0x0, R12
+??Check_3:
+        ADDA    #0xc, SP
+          CFI CFA SP+8
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//  222     }
+//  223 }
+          CFI EndBlock cfiBlock4
+//  224 
+//  225 /******************************************************************************
+//  226   * 函数名称：TxPacket
+//  227   * 函数描述：发送一个数据包，由于系统对NRF的发送和接收采用轮询方式，此函数只将要
+//  228               发送的数据压入通信队列中
+//  229   * 输    入：uint8_t *txbuf:发送的数据地址
+//  230   * 输    出：void
+//  231   * 返    回：0
+//  232   * 备    注：由于发送长度固定为32，所以此处也没有发送的数据长度维度可以选择   
+//  233   *    
+//  234   *
+//  235 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  236 uint8_t TxPacket(uint8_t *txbuf)
+TxPacket:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function TxPacket
+//  237 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOVA    R12, R10
+//  238     enQueue(&NRF_Mannager.qTx, txbuf, TX_PLOAD_WIDTH);
+        MOV.B   #0x20, R14
+        MOVA    R10, R13
+        MOVA    #NRF_Mannager + 4, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  239     return 0;
+        MOV.B   #0x0, R12
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//  240 }
+          CFI EndBlock cfiBlock5
+//  241 
+//  242 /******************************************************************************
+//  243   * 函数名称：RxPacket
+//  244   * 函数描述：NRF24L01接收函数，采用轮询方式查询当前是否有数据接收到
+//  245   * 输    入：uint8_t *rxbuf:接收数据的地址
+//  246   * 输    出：void
+//  247   * 返    回：是否读取成功，0：接收成功
+//  248                            1：接收失败
+//  249   * 备    注：    
+//  250   *    
+//  251   *
+//  252 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  253 uint8_t RxPacket(uint8_t *rxbuf)
+RxPacket:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function RxPacket
+//  254 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOVA    R12, R10
+//  255     uint8_t state = 0;                                              
+        MOV.B   #0x0, R11
+//  256     
+//  257     state = ReadReg(RF_STATUS);                //读取状态寄存器的值         
+        MOV.B   #0x7, R12
+          CFI FunCall ReadReg
+        CALLA   #ReadReg
+        MOV.B   R12, R11
+//  258     WriteReg(SPI_WRITE_REG + RF_STATUS, state); //清除TX_DS或MAX_RT中断标志
+        MOV.B   R11, R13
+        MOV.B   #0x27, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  259     
+//  260     if(state & RX_OK)                                 //接收到数据
+        BIT.B   #0x40, R11
+        JNC     ??RxPacket_1
+//  261     {
+//  262         ReadBuf(RD_RX_PLOAD, rxbuf, RX_PLOAD_WIDTH);//读取数据
+        MOV.B   #0x20, R14
+        MOVA    R10, R13
+        MOV.B   #0x61, R12
+          CFI FunCall ReadBuf
+        CALLA   #ReadBuf
+//  263         WriteReg(FLUSH_RX, 0xff);          //清除RX FIFO寄存器
+        MOV.B   #0xff, R13
+        MOV.B   #0xe2, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  264         
+//  265         return SUCCESS; 
+        MOV.B   #0x0, R12
+        JMP     ??RxPacket_0
+//  266     }
+//  267     return FAILED;                                      //没收到任何数据
+??RxPacket_1:
+        MOV.B   #0x1, R12
+??RxPacket_0:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  268 }
+          CFI EndBlock cfiBlock6
+//  269 
+//  270 /******************************************************************************
+//  271   * 函数名称：UpdateFreq
+//  272   * 函数描述：更新NRF24L01的收发频率
+//  273   * 输    入：uint8_t freq:设置收发频率      数据大小为0-64
+//  274 
+//  275   * 输    出：void
+//  276   * 返    回：是否更改成功：true:更改成功
+//  277                             false：更改失败
+//  278   * 备    注：    
+//  279   *    
+//  280   *
+//  281 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  282 bool UpdateFreq(uint8_t freq)
+UpdateFreq:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function UpdateFreq
+//  283 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        PUSH.B  R12
+          CFI CFA SP+10
+//  284     bool status = false;
+        MOV.B   #0x0, R10
+//  285     
+//  286     CLR_NRF24L01_CE;     
+        BIC.B   #0x20, &0x222
+//  287     WriteReg(SPI_WRITE_REG + RF_CH, freq); 
+        MOV.B   @SP, R13
+        MOV.B   #0x25, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  288     if(ReadReg(SPI_READ_REG + RF_CH) == freq)
+        MOV.B   #0x5, R12
+          CFI FunCall ReadReg
+        CALLA   #ReadReg
+        CMP.B   @SP, R12
+        JNE     ??UpdateFreq_0
+//  289     {
+//  290         Flash_Write(FLASH_FREQ_ADDR_OFFSET,&freq, 2);
+        MOV.B   #0x2, R14
+        MOVA    SP, R13
+        MOV.B   #0x0, R12
+          CFI FunCall Flash_Write
+        CALLA   #Flash_Write
+//  291         g_NRFManager.RC_Frequency = freq;
+        MOVX.B  @SP, &g_NRFManager + 11
+//  292         
+//  293         status = true;
+        MOV.B   #0x1, R10
+//  294     }
+//  295     SET_NRF24L01_CE;
+??UpdateFreq_0:
+        BIS.B   #0x20, &0x222
+//  296     
+//  297     return status;
+        MOV.B   R10, R12
+        ADDA    #0x2, SP
+          CFI CFA SP+8
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock7
+        REQUIRE _A_PBOUT_L
+//  298 }
+//  299 
+//  300 /******************************************************************************
+//  301   * 函数名称：UpdateRxAddr
+//  302   * 函数描述：更新NRF24L01的接收地址
+//  303   * 输    入：uint8_t *ptr:接收地址存放的开始地址，长度固定为5
+//  304   * 输    出：void
+//  305   * 返    回：是否更改成功：true:更改成功
+//  306                             flase:更改失败
+//  307   * 备    注：    
+//  308   *    
+//  309   *
+//  310 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  311 bool UpdateRxAddr(uint8_t *ptr)
+UpdateRxAddr:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function UpdateRxAddr
+//  312 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        SUBA    #0x6, SP
+          CFI CFA SP+18
+        MOVA    R12, R10
+//  313     uint8_t buf1[5];
+//  314     bool status = false;
+        MOV.B   #0x0, R11
+//  315     
+//  316     CLR_NRF24L01_CE;     
+        BIC.B   #0x20, &0x222
+//  317     WriteBuf(SPI_WRITE_REG + RX_ADDR_P0, ptr, RX_ADR_WIDTH); 
+        MOV.B   #0x5, R14
+        MOVA    R10, R13
+        MOV.B   #0x2a, R12
+          CFI FunCall WriteBuf
+        CALLA   #WriteBuf
+//  318     ReadBuf(RX_ADDR_P0, buf1, 5);
+        MOV.B   #0x5, R14
+        MOVA    SP, R13
+        MOV.B   #0xa, R12
+          CFI FunCall ReadBuf
+        CALLA   #ReadBuf
+//  319     
+//  320     if(memcmp(buf1, ptr, 5) == 0)
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    R10, R13
+        MOVA    SP, R12
+          CFI FunCall memcmp
+        CALLA   #memcmp
+        CMP.W   #0x0, R12
+        JNE     ??UpdateRxAddr_0
+//  321     {
+//  322         Flash_Write(FLASH_RX_ADDR_OFFSET, ptr, 5);
+        MOV.B   #0x5, R14
+        MOVA    R10, R13
+        MOV.B   #0x2, R12
+          CFI FunCall Flash_Write
+        CALLA   #Flash_Write
+//  323         memcpy(g_UAVinfo.NRF_MannagerPtr->Rx_Addr, ptr, 5);
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    R10, R13
+        MOVA    &g_UAVinfo + 12, R12
+        ADDA    #0x6, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//  324         
+//  325         status = true;
+        MOV.B   #0x1, R11
+//  326     }
+//  327     SET_NRF24L01_CE;  
+??UpdateRxAddr_0:
+        BIS.B   #0x20, &0x222
+//  328     
+//  329     return status;
+        MOV.B   R11, R12
+        ADDA    #0x6, SP
+          CFI CFA SP+12
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock8
+        REQUIRE _A_PBOUT_L
+//  330 }
+//  331 
+//  332 /******************************************************************************
+//  333   * 函数名称：UpdateTxAddr
+//  334   * 函数描述：更新NRF24L01发送地址
+//  335   * 输    入：uint8_t *ptr:发送地址存放的开始地址，长度固定为5
+//  336   * 输    出：void
+//  337   * 返    回：是否更改成功：true:更改成功
+//  338                             flase:更改失败 
+//  339   * 备    注：    
+//  340   *    
+//  341   *
+//  342 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  343 bool UpdateTxAddr(uint8_t *ptr)
+UpdateTxAddr:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function UpdateTxAddr
+//  344 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        SUBA    #0x6, SP
+          CFI CFA SP+18
+        MOVA    R12, R10
+//  345     uint8_t buf1[5];
+//  346     bool status = false;
+        MOV.B   #0x0, R11
+//  347     
+//  348     CLR_NRF24L01_CE;     
+        BIC.B   #0x20, &0x222
+//  349     WriteBuf(SPI_WRITE_REG + TX_ADDR, ptr, RX_ADR_WIDTH); 
+        MOV.B   #0x5, R14
+        MOVA    R10, R13
+        MOV.B   #0x30, R12
+          CFI FunCall WriteBuf
+        CALLA   #WriteBuf
+//  350     ReadBuf(TX_ADDR, buf1, 5);
+        MOV.B   #0x5, R14
+        MOVA    SP, R13
+        MOV.B   #0x10, R12
+          CFI FunCall ReadBuf
+        CALLA   #ReadBuf
+//  351     
+//  352     if(memcmp(buf1, ptr, 5) == 0)
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    R10, R13
+        MOVA    SP, R12
+          CFI FunCall memcmp
+        CALLA   #memcmp
+        CMP.W   #0x0, R12
+        JNE     ??UpdateTxAddr_0
+//  353     {
+//  354         Flash_Write(FLASH_TX_ADDR_OFFSET, ptr, 5);
+        MOV.B   #0x5, R14
+        MOVA    R10, R13
+        MOV.B   #0x7, R12
+          CFI FunCall Flash_Write
+        CALLA   #Flash_Write
+//  355         memcpy(g_NRFManager.Tx_Addr, ptr, 5);
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    R10, R13
+        MOVA    #g_NRFManager + 1, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//  356         
+//  357         status = true;
+        MOV.B   #0x1, R11
+//  358     }
+//  359     SET_NRF24L01_CE;
+??UpdateTxAddr_0:
+        BIS.B   #0x20, &0x222
+//  360     
+//  361     return status;
+        MOV.B   R11, R12
+        ADDA    #0x6, SP
+          CFI CFA SP+12
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock9
+        REQUIRE _A_PBOUT_L
+//  362 }
+//  363 
+//  364 /******************************************************************************
+//  365   * 函数名称：NRF24L01Init
+//  366   * 函数描述：NRF24L01初始化，并初始化指针指向
+//  367   * 输    入：NRF24L01_Manager_t *ptr：NRF24L01管理结构体指针
+//  368   * 输    出：void
+//  369   * 返    回：void
+//  370   * 备    注：null
+//  371   *    
+//  372   *
+//  373 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  374 void NRF24L01Init(NRF24L01_Manager_t *ptr)
+NRF24L01Init:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function NRF24L01Init
+//  375 {   
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOVA    R12, R10
+//  376     GPIO_setAsOutputPin(GPIO_PORT_P3, NRF2401_CE_PIN);
+        MOV.W   #0x20, R13
+        MOV.B   #0x3, R12
+          CFI FunCall GPIO_setAsOutputPin
+        CALLA   #GPIO_setAsOutputPin
+//  377     GPIO_setAsOutputPin(GPIO_PORT_P4, NRF2401_CSN_PIN);
+        MOV.W   #0x1, R13
+        MOV.B   #0x4, R12
+          CFI FunCall GPIO_setAsOutputPin
+        CALLA   #GPIO_setAsOutputPin
+//  378     SPI_init();
+          CFI FunCall SPI_init
+        CALLA   #SPI_init
+//  379     SET_NRF24L01_CSN; // Spi disable
+        BIS.B   #0x1, &0x223
+//  380     CLR_NRF24L01_CE;  // chip enable
+        BIC.B   #0x20, &0x222
+//  381     
+//  382     while(Check() == FAILED)
+??NRF24L01Init_0:
+          CFI FunCall Check
+        CALLA   #Check
+        CMP.B   #0x1, R12
+        JNE     ??NRF24L01Init_3
+//  383     {
+//  384         static int ChectCnt = 0;
+//  385         
+//  386         ChectCnt++;
+        ADDX.W  #0x1, &??ChectCnt
+//  387         
+//  388         if(ChectCnt == 5)
+        CMPX.W  #0x5, &??ChectCnt
+        JNE     ??NRF24L01Init_0
+//  389         {
+//  390             g_NRFManager.Check = false;
+        MOVX.B  #0x0, &g_NRFManager + 40
+//  391             return;
+        JMP     ??NRF24L01Init_2
+//  392         }
+//  393     }
+//  394     g_NRFManager.Check = true;
+??NRF24L01Init_3:
+        MOVX.B  #0x1, &g_NRFManager + 40
+//  395     
+//  396     CLR_NRF24L01_CE;        
+        BIC.B   #0x20, &0x222
+//  397 
+//  398     WriteBuf(SPI_WRITE_REG + TX_ADDR,(uint8_t*)ptr->Tx_Addr, TX_ADR_WIDTH);                            //写TX节点地址 
+        MOV.B   #0x5, R14
+        MOVA    R10, R13
+        ADDA    #0x1, R13
+        MOV.B   #0x30, R12
+          CFI FunCall WriteBuf
+        CALLA   #WriteBuf
+//  399     WriteBuf(SPI_WRITE_REG + RX_ADDR_P0,(uint8_t*)ptr->Rx_Addr, RX_ADR_WIDTH);                         //写RX节点地址 
+        MOV.B   #0x5, R14
+        MOVA    R10, R13
+        ADDA    #0x6, R13
+        MOV.B   #0x2a, R12
+          CFI FunCall WriteBuf
+        CALLA   #WriteBuf
+//  400     WriteReg(SPI_WRITE_REG + EN_AA, 0x01);                                                      //使能通道0的自动应答  
+        MOV.B   #0x1, R13
+        MOV.B   #0x21, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  401     WriteReg(SPI_WRITE_REG + EN_RXADDR, 0x01);                                                  //使能通道0的接收地址 
+        MOV.B   #0x1, R13
+        MOV.B   #0x22, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  402     WriteReg(SPI_WRITE_REG + SETUP_RETR, 0x1a);                                                 //设置自动重发间隔时间:500us + 86us;最大自动重发次数:10次
+        MOV.B   #0x1a, R13
+        MOV.B   #0x24, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  403     WriteReg(SPI_WRITE_REG + RF_CH, ptr->RC_Frequency);                                         //设置RF通道为40    
+        MOV.B   0xb(R10), R13
+        MOV.B   #0x25, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  404     WriteReg(SPI_WRITE_REG + RF_SETUP, 0x0f);                                                   //0x27  250K   0x07 1M     
+        MOV.B   #0xf, R13
+        MOV.B   #0x26, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  405 
+//  406     switch(ptr->NRF_Mode)
+        MOV.B   @R10, R14
+        SUB.B   #0x0, R14
+        JEQ     ??NRF24L01Init_4
+        SUB.B   #0x1, R14
+        JEQ     ??NRF24L01Init_5
+        SUB.B   #0x1, R14
+        JEQ     ??NRF24L01Init_6
+        SUB.B   #0x1, R14
+        JEQ     ??NRF24L01Init_7
+        JMP     ??NRF24L01Init_1
+//  407     {
+//  408         case NRF_Mode_RX:
+//  409             WriteReg(SPI_WRITE_REG + RX_PW_P0, RX_PLOAD_WIDTH);                                //选择通道0的有效数据宽度 
+??NRF24L01Init_4:
+        MOV.B   #0x20, R13
+        MOV.B   #0x31, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  410             WriteReg(SPI_WRITE_REG + NCONFIG, 0x0f);            
+        MOV.B   #0xf, R13
+        MOV.B   #0x20, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  411             break;
+        JMP     ??NRF24L01Init_1
+//  412         case NRF_Mode_TX:
+//  413             WriteReg(SPI_WRITE_REG + RX_PW_P0, RX_PLOAD_WIDTH);                                //选择通道0的有效数据宽度 
+??NRF24L01Init_5:
+        MOV.B   #0x20, R13
+        MOV.B   #0x31, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  414             WriteReg(SPI_WRITE_REG + NCONFIG, 0x0e);            // IRQ收发完成中断开启,16位CRC,主发送
+        MOV.B   #0xe, R13
+        MOV.B   #0x20, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  415             break;
+        JMP     ??NRF24L01Init_1
+//  416         case NRF_Mode_RX2:
+//  417             WriteReg(FLUSH_TX, 0xff);
+??NRF24L01Init_6:
+        MOV.B   #0xff, R13
+        MOV.B   #0xe1, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  418             WriteReg(FLUSH_RX, 0xff);
+        MOV.B   #0xff, R13
+        MOV.B   #0xe2, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  419             WriteReg(SPI_WRITE_REG + NCONFIG, 0x0f);            // IRQ收发完成中断开启,16位CRC,主接收
+        MOV.B   #0xf, R13
+        MOV.B   #0x20, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  420 
+//  421             SPI_RW(0x50);
+        MOV.B   #0x50, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+//  422             SPI_RW(0x73);
+        MOV.B   #0x73, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+//  423             WriteReg(SPI_WRITE_REG + 0x1c, 0x01);
+        MOV.B   #0x1, R13
+        MOV.B   #0x3c, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  424             WriteReg(SPI_WRITE_REG + 0x1d, 0x06);
+        MOV.B   #0x6, R13
+        MOV.B   #0x3d, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  425             break;
+        JMP     ??NRF24L01Init_1
+//  426         case NRF_Mode_TX2:
+//  427             WriteReg(SPI_WRITE_REG + NCONFIG, 0x0e);            // IRQ收发完成中断开启,16位CRC,主发送
+??NRF24L01Init_7:
+        MOV.B   #0xe, R13
+        MOV.B   #0x20, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  428             WriteReg(FLUSH_TX, 0xff);
+        MOV.B   #0xff, R13
+        MOV.B   #0xe1, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  429             WriteReg(FLUSH_RX, 0xff);
+        MOV.B   #0xff, R13
+        MOV.B   #0xe2, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  430 
+//  431             SPI_RW(0x50);
+        MOV.B   #0x50, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+//  432             SPI_RW(0x73);
+        MOV.B   #0x73, R12
+          CFI FunCall SPI_RW
+        CALLA   #SPI_RW
+//  433             WriteReg(SPI_WRITE_REG + 0x1c, 0x01);
+        MOV.B   #0x1, R13
+        MOV.B   #0x3c, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  434             WriteReg(SPI_WRITE_REG + 0x1d, 0x06);
+        MOV.B   #0x6, R13
+        MOV.B   #0x3d, R12
+          CFI FunCall WriteReg
+        CALLA   #WriteReg
+//  435             break;
+//  436         default:
+//  437             break;
+//  438     }
+//  439     
+//  440     SET_NRF24L01_CE;  
+??NRF24L01Init_1:
+        BIS.B   #0x20, &0x222
+//  441     
+//  442     ptr->receive_buff = RxPacket;
+        MOVX.A  #RxPacket, 0x24(R10)
+//  443     ptr->send_buff = TxPacket;
+        MOVX.A  #TxPacket, 0x20(R10)
+//  444     ptr->update_rx_Addr = UpdateRxAddr;
+        MOVX.A  #UpdateRxAddr, 0x14(R10)
+//  445     ptr->update_tx_Addr = UpdateTxAddr;
+        MOVX.A  #UpdateTxAddr, 0x18(R10)
+//  446     ptr->update_frequency = UpdateFreq;
+        MOVX.A  #UpdateFreq, 0x1c(R10)
+//  447 }
+??NRF24L01Init_2:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock10
+        REQUIRE _A_PBOUT_L
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??ChectCnt:
+        DS8 2
+//  448 
+//  449 /******************************************************************************
+//  450   * 函数名称：NRF24L01TxPacket
+//  451   * 函数描述：发送数据，以发送模式1发送
+//  452   * 输    入：uint8_t * tx_buf:发送buff的地址
+//  453               uint8_t len:发送buff的长度
+//  454   * 输    出：void
+//  455   * 返    回：void
+//  456   * 备    注：null
+//  457   *    
+//  458   *
+//  459 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  460 void NRF24L01TxPacket(uint8_t * tx_buf, uint8_t len)
+NRF24L01TxPacket:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function NRF24L01TxPacket
+//  461 {    
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOVA    R12, R11
+        MOV.B   R13, R10
+//  462     CLR_NRF24L01_CE;    
+        BIC.B   #0x20, &0x222
+//  463     WriteBuf(SPI_WRITE_REG + RX_ADDR_P0, (uint8_t*)g_NRFManager.Tx_Addr, TX_ADR_WIDTH);   // 装载接收端地址
+        MOV.B   #0x5, R14
+        MOVA    #g_NRFManager + 1, R13
+        MOV.B   #0x2a, R12
+          CFI FunCall WriteBuf
+        CALLA   #WriteBuf
+//  464     WriteBuf(WR_TX_PLOAD, tx_buf, len);                                 // 装载数据    
+        MOV.B   R10, R14
+        MOVA    R11, R13
+        MOV.B   #0xa0, R12
+          CFI FunCall WriteBuf
+        CALLA   #WriteBuf
+//  465     SET_NRF24L01_CE; 
+        BIS.B   #0x20, &0x222
+//  466 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock11
+        REQUIRE _A_PBOUT_L
+//  467 
+//  468 /******************************************************************************
+//  469   * 函数名称：NRF24L01TxPacketAp
+//  470   * 函数描述：发送数据，以发送模式2发送
+//  471   * 输    入：uint8_t * tx_buf:发送buff的地址
+//  472               uint8_t len:发送buff的长度
+//  473   * 输    出：void
+//  474   * 返    回：void
+//  475   * 备    注：null 
+//  476   *    
+//  477   *
+//  478 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  479 void NRF24L01TxPacketAp(uint8_t * tx_buf, uint8_t len)
+NRF24L01TxPacketAp:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function NRF24L01TxPacketAp
+//  480 {    
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOVA    R12, R11
+        MOV.B   R13, R10
+//  481     CLR_NRF24L01_CE;    
+        BIC.B   #0x20, &0x222
+//  482     WriteBuf(0xa8, tx_buf, len);              // 装载数据
+        MOV.B   R10, R14
+        MOVA    R11, R13
+        MOV.B   #0xa8, R12
+          CFI FunCall WriteBuf
+        CALLA   #WriteBuf
+//  483     SET_NRF24L01_CE; 
+        BIS.B   #0x20, &0x222
+//  484 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock12
+        REQUIRE _A_PBOUT_L
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant {165, 165, 165, 165, 165}>`:
+        DATA8
+        DC8 165, 165, 165, 165, 165
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+        DATA8
+        DC8 0, 0, 0, 0, 0
+
+        END
+//  485 
+//  486 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 1 202 bytes in segment CODE
+//     2 bytes in segment DATA16_AN
+//    10 bytes in segment DATA20_C
+//    44 bytes in segment DATA20_Z
+// 
+// 1 202 bytes of CODE  memory
+//    10 bytes of CONST memory
+//    44 bytes of DATA  memory (+ 2 bytes shared)
+//
+//Errors: none
+//Warnings: none

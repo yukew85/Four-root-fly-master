@@ -1,0 +1,1010 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:11
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\rtc_a.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW2D43.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\rtc_a.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\rtc_a.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME rtc_a
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC RTC_A_clearInterrupt
+        PUBLIC RTC_A_configureCalendarAlarm
+        PUBLIC RTC_A_definePrescaleEvent
+        PUBLIC RTC_A_disableInterrupt
+        PUBLIC RTC_A_enableInterrupt
+        PUBLIC RTC_A_getCalendarTime
+        PUBLIC RTC_A_getCounterValue
+        PUBLIC RTC_A_getInterruptStatus
+        PUBLIC RTC_A_getPrescaleValue
+        PUBLIC RTC_A_holdClock
+        PUBLIC RTC_A_holdCounterPrescale
+        PUBLIC RTC_A_initCalendar
+        PUBLIC RTC_A_initCounter
+        PUBLIC RTC_A_initCounterPrescale
+        PUBLIC RTC_A_setCalendarEvent
+        PUBLIC RTC_A_setCalibrationData
+        PUBLIC RTC_A_setCalibrationFrequency
+        PUBLIC RTC_A_setCounterValue
+        PUBLIC RTC_A_setPrescaleValue
+        PUBLIC RTC_A_startClock
+        PUBLIC RTC_A_startCounterPrescale
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\rtc_a.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // rtc_a.c - Driver for the rtc_a Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup rtc_a_api rtc_a
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_RTC__
+//   48 #include "rtc_a.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 void RTC_A_startClock (uint16_t baseAddress)
+RTC_A_startClock:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function RTC_A_startClock
+          CFI NoCalls
+//   53 {
+//   54     HWREG8(baseAddress + OFS_RTCCTL01_H) &= ~(RTCHOLD_H);
+        MOV.W   R12, R15
+        ADD.W   #0x1, R15
+        BIC.B   #0x40, 0(R15)
+//   55 }
+        RETA
+          CFI EndBlock cfiBlock0
+//   56 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   57 void RTC_A_holdClock (uint16_t baseAddress)
+RTC_A_holdClock:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function RTC_A_holdClock
+          CFI NoCalls
+//   58 {
+//   59     HWREG8(baseAddress + OFS_RTCCTL01_H) |= RTCHOLD_H;
+        MOV.W   R12, R15
+        ADD.W   #0x1, R15
+        BIS.B   #0x40, 0(R15)
+//   60 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   61 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   62 void RTC_A_setCalibrationFrequency (uint16_t baseAddress,
+RTC_A_setCalibrationFrequency:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function RTC_A_setCalibrationFrequency
+          CFI NoCalls
+//   63     uint16_t frequencySelect)
+//   64 {
+//   65     HWREG16(baseAddress + OFS_RTCCTL23) &= ~(RTCCALF_3);
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        AND.W   #0xfcff, 0(R15)
+//   66     HWREG16(baseAddress + OFS_RTCCTL23) |= frequencySelect;
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        BIS.W   R13, 0(R15)
+//   67 }
+        RETA
+          CFI EndBlock cfiBlock2
+//   68 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   69 void RTC_A_setCalibrationData (uint16_t baseAddress,
+RTC_A_setCalibrationData:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function RTC_A_setCalibrationData
+          CFI NoCalls
+//   70     uint8_t offsetDirection,
+//   71     uint8_t offsetValue)
+//   72 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//   73     HWREG8(baseAddress + OFS_RTCCTL23_L) = offsetValue + offsetDirection;
+        MOV.B   R14, R10
+        ADD.B   R13, R10
+        MOV.W   R12, R15
+        ADD.W   #0x2, R15
+        MOV.B   R10, 0(R15)
+//   74 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//   75 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   76 void RTC_A_initCounter (uint16_t baseAddress,
+RTC_A_initCounter:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function RTC_A_initCounter
+          CFI NoCalls
+//   77     uint16_t clockSelect,
+//   78     uint16_t counterSizeSelect)
+//   79 {
+//   80     HWREG8(baseAddress + OFS_RTCCTL01_H) |= RTCHOLD_H;
+        MOV.W   R12, R15
+        ADD.W   #0x1, R15
+        BIS.B   #0x40, 0(R15)
+//   81     HWREG8(baseAddress + OFS_RTCCTL01_H) &= ~(RTCMODE_H);
+        MOV.W   R12, R15
+        ADD.W   #0x1, R15
+        BIC.B   #0x20, 0(R15)
+//   82 
+//   83     HWREG16(baseAddress + OFS_RTCCTL01) &= 0xF0FF; //~(RTCSSEL_3 + RTCTEV_3);
+        AND.W   #0xf0ff, 0(R12)
+//   84     HWREG16(baseAddress + OFS_RTCCTL01) |= clockSelect + counterSizeSelect;
+        MOV.W   R13, R15
+        ADD.W   R14, R15
+        BIS.W   R15, 0(R12)
+//   85 }
+        RETA
+          CFI EndBlock cfiBlock4
+//   86 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   87 void RTC_A_initCalendar (uint16_t baseAddress,
+RTC_A_initCalendar:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function RTC_A_initCalendar
+          CFI NoCalls
+//   88     Calendar *CalendarTime,
+//   89     uint16_t formatSelect)
+//   90 {
+//   91     HWREG8(baseAddress + OFS_RTCCTL01_H) |= RTCMODE_H + RTCHOLD_H;
+        MOV.W   R12, R15
+        ADD.W   #0x1, R15
+        BIS.B   #0x60, 0(R15)
+//   92 
+//   93     HWREG16(baseAddress + OFS_RTCCTL01) &= ~(RTCBCD);
+        MOV.W   R12, R15
+        BIC.W   #0x8000, 0(R15)
+//   94     HWREG16(baseAddress + OFS_RTCCTL01) |= formatSelect;
+        BIS.W   R14, 0(R12)
+//   95 
+//   96     HWREG8(baseAddress + OFS_RTCTIM0_L) = CalendarTime->Seconds;
+        MOV.W   R12, R15
+        ADD.W   #0x10, R15
+        MOV.B   @R13, 0(R15)
+//   97     HWREG8(baseAddress + OFS_RTCTIM0_H) = CalendarTime->Minutes;
+        MOV.W   R12, R15
+        ADD.W   #0x11, R15
+        MOV.B   0x1(R13), 0(R15)
+//   98     HWREG8(baseAddress + OFS_RTCTIM1_L) = CalendarTime->Hours;
+        MOV.W   R12, R15
+        ADD.W   #0x12, R15
+        MOV.B   0x2(R13), 0(R15)
+//   99     HWREG8(baseAddress + OFS_RTCTIM1_H) = CalendarTime->DayOfWeek;
+        MOV.W   R12, R15
+        ADD.W   #0x13, R15
+        MOV.B   0x3(R13), 0(R15)
+//  100     HWREG8(baseAddress + OFS_RTCDATE_L) = CalendarTime->DayOfMonth;
+        MOV.W   R12, R15
+        ADD.W   #0x14, R15
+        MOV.B   0x4(R13), 0(R15)
+//  101     HWREG8(baseAddress + OFS_RTCDATE_H) = CalendarTime->Month;
+        MOV.W   R12, R15
+        ADD.W   #0x15, R15
+        MOV.B   0x5(R13), 0(R15)
+//  102     HWREG16(baseAddress + OFS_RTCYEAR) = CalendarTime->Year;
+        MOV.W   R12, R15
+        ADD.W   #0x16, R15
+        MOV.W   0x6(R13), 0(R15)
+//  103 }
+        RETA
+          CFI EndBlock cfiBlock5
+//  104 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  105 Calendar RTC_A_getCalendarTime (uint16_t baseAddress)
+RTC_A_getCalendarTime:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function RTC_A_getCalendarTime
+          CFI NoCalls
+//  106 {
+        SUBA    #0x8, SP
+          CFI CFA SP+12
+//  107     Calendar tempCal;
+//  108 
+//  109     while ( !(HWREG16(baseAddress + OFS_RTCCTL01) & RTCRDY) ) ;
+??RTC_A_getCalendarTime_0:
+        BIT.W   #0x1000, 0(R13)
+        JNC     ??RTC_A_getCalendarTime_0
+//  110 
+//  111     tempCal.Seconds    = HWREG8(baseAddress + OFS_RTCTIM0_L);
+        MOV.W   R13, R15
+        ADD.W   #0x10, R15
+        MOV.B   @R15, 0(SP)
+//  112     tempCal.Minutes    = HWREG8(baseAddress + OFS_RTCTIM0_H);
+        MOV.W   R13, R15
+        ADD.W   #0x11, R15
+        MOV.B   @R15, 0x1(SP)
+//  113     tempCal.Hours      = HWREG8(baseAddress + OFS_RTCTIM1_L);
+        MOV.W   R13, R15
+        ADD.W   #0x12, R15
+        MOV.B   @R15, 0x2(SP)
+//  114     tempCal.DayOfWeek  = HWREG8(baseAddress + OFS_RTCTIM1_H);
+        MOV.W   R13, R15
+        ADD.W   #0x13, R15
+        MOV.B   @R15, 0x3(SP)
+//  115     tempCal.DayOfMonth = HWREG8(baseAddress + OFS_RTCDATE_L);
+        MOV.W   R13, R15
+        ADD.W   #0x14, R15
+        MOV.B   @R15, 0x4(SP)
+//  116     tempCal.Month      = HWREG8(baseAddress + OFS_RTCDATE_H);
+        MOV.W   R13, R15
+        ADD.W   #0x15, R15
+        MOV.B   @R15, 0x5(SP)
+//  117     tempCal.Year       = HWREG16(baseAddress + OFS_RTCYEAR);
+        ADD.W   #0x16, R13
+        MOV.W   @R13, 0x6(SP)
+        MOV.W   @SP, 0(R12)
+        MOV.W   0x2(SP), 0x2(R12)
+        MOV.W   0x4(SP), 0x4(R12)
+        MOV.W   0x6(SP), 0x6(R12)
+        ADDA    #0x8, SP
+          CFI CFA SP+4
+        RETA
+//  118 
+//  119     return ( tempCal) ;
+//  120 }
+          CFI EndBlock cfiBlock6
+//  121 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  122 void RTC_A_configureCalendarAlarm(uint16_t baseAddress,
+RTC_A_configureCalendarAlarm:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function RTC_A_configureCalendarAlarm
+          CFI NoCalls
+//  123     RTC_A_configureCalendarAlarmParam *param)
+//  124 {
+//  125     //Each of these is XORed with 0x80 to turn on if an integer is passed,
+//  126     //or turn OFF if RTC_A_ALARM_OFF (0x80) is passed.
+//  127     HWREG8(baseAddress + OFS_RTCAMINHR_L) = (param->minutesAlarm ^ 0x80);
+        MOV.B   @R13, R14
+        XOR.B   #0x80, R14
+        MOV.W   R12, R15
+        ADD.W   #0x18, R15
+        MOV.B   R14, 0(R15)
+//  128     HWREG8(baseAddress + OFS_RTCAMINHR_H) = (param->hoursAlarm ^ 0x80);
+        MOV.B   0x1(R13), R14
+        XOR.B   #0x80, R14
+        MOV.W   R12, R15
+        ADD.W   #0x19, R15
+        MOV.B   R14, 0(R15)
+//  129     HWREG8(baseAddress + OFS_RTCADOWDAY_L) = (param->dayOfWeekAlarm ^ 0x80);
+        MOV.B   0x2(R13), R14
+        XOR.B   #0x80, R14
+        MOV.W   R12, R15
+        ADD.W   #0x1a, R15
+        MOV.B   R14, 0(R15)
+//  130     HWREG8(baseAddress + OFS_RTCADOWDAY_H) = (param->dayOfMonthAlarm ^ 0x80);
+        MOV.B   0x3(R13), R14
+        XOR.B   #0x80, R14
+        MOV.W   R12, R15
+        ADD.W   #0x1b, R15
+        MOV.B   R14, 0(R15)
+//  131 }
+        RETA
+          CFI EndBlock cfiBlock7
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  132 void RTC_A_setCalendarEvent (uint16_t baseAddress,
+RTC_A_setCalendarEvent:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function RTC_A_setCalendarEvent
+          CFI NoCalls
+//  133     uint16_t eventSelect)
+//  134 {
+//  135     HWREG16(baseAddress + OFS_RTCCTL01) &= ~(RTCTEV_3); //Reset bits
+        AND.W   #0xfcff, 0(R12)
+//  136     HWREG16(baseAddress + OFS_RTCCTL01) |= eventSelect;
+        BIS.W   R13, 0(R12)
+//  137 }
+        RETA
+          CFI EndBlock cfiBlock8
+//  138 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  139 uint32_t RTC_A_getCounterValue (uint16_t baseAddress)
+RTC_A_getCounterValue:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function RTC_A_getCounterValue
+          CFI NoCalls
+//  140 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R14
+//  141     if ( (HWREG8(baseAddress + OFS_RTCCTL01_H) & RTCHOLD_H)
+//  142          || (HWREG8(baseAddress + OFS_RTCPS1CTL) & RT1PSHOLD) ){
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIT.B   #0x40, 0(R15)
+        JC      ??RTC_A_getCounterValue_1
+        MOV.W   R14, R15
+        ADD.W   #0xa, R15
+        MOV.B   @R15, R8
+//  143         return ( 0) ;
+//  144     }
+//  145 
+//  146     uint32_t counterValue_L = HWREG16(baseAddress + OFS_RTCTIM0);
+        MOV.W   R14, R15
+        ADD.W   #0x10, R15
+        MOV.W   @R15, R10
+        MOV.W   #0x0, R11
+//  147     uint32_t counterValue_H = HWREG16(baseAddress + OFS_RTCTIM1);
+        MOV.W   R14, R15
+        ADD.W   #0x12, R15
+        MOV.W   @R15, R12
+        MOV.W   #0x0, R13
+//  148     return ( (counterValue_H << 16) + counterValue_L );
+        MOV.W   R12, R13
+        MOV.W   #0x0, R12
+        ADD.W   R10, R12
+        ADDC.W  R11, R13
+        JMP     ??RTC_A_getCounterValue_0
+??RTC_A_getCounterValue_1:
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+??RTC_A_getCounterValue_0:
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  149 }
+          CFI EndBlock cfiBlock9
+//  150 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  151 void RTC_A_setCounterValue (uint16_t baseAddress,
+RTC_A_setCounterValue:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function RTC_A_setCounterValue
+          CFI NoCalls
+//  152     uint32_t counterValue)
+//  153 {
+//  154     HWREG16(baseAddress + OFS_RTCTIM0) = counterValue;
+        MOV.W   R12, R13
+        ADD.W   #0x10, R13
+        MOV.W   R14, 0(R13)
+//  155     HWREG16(baseAddress + OFS_RTCTIM1) = ( counterValue >> 16 );
+        MOV.W   R12, R13
+        ADD.W   #0x12, R13
+        MOV.W   R15, 0(R13)
+//  156 }
+        RETA
+          CFI EndBlock cfiBlock10
+//  157 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  158 void RTC_A_initCounterPrescale (uint16_t baseAddress,
+RTC_A_initCounterPrescale:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function RTC_A_initCounterPrescale
+          CFI NoCalls
+//  159     uint8_t prescaleSelect,
+//  160     uint16_t prescaleClockSelect,
+//  161     uint16_t prescaleDivider)
+//  162 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  163     //Reset bits and set clock select
+//  164     HWREG16(baseAddress + OFS_RTCPS0CTL + prescaleSelect) =
+//  165         prescaleClockSelect + prescaleDivider;
+        MOV.W   R14, R11
+        ADD.W   R15, R11
+        MOV.B   R13, R13
+        MOV.W   R12, R10
+        ADD.W   R13, R10
+        ADD.W   #0x8, R10
+        MOV.W   R11, 0(R10)
+//  166 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock11
+//  167 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  168 void RTC_A_holdCounterPrescale (uint16_t baseAddress,
+RTC_A_holdCounterPrescale:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function RTC_A_holdCounterPrescale
+          CFI NoCalls
+//  169     uint8_t prescaleSelect)
+//  170 {
+//  171     HWREG8(baseAddress + OFS_RTCPS0CTL_H + prescaleSelect) |= RT0PSHOLD_H;
+        MOV.B   R13, R13
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        ADD.W   #0x9, R15
+        BIS.B   #0x1, 0(R15)
+//  172 }
+        RETA
+          CFI EndBlock cfiBlock12
+//  173 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  174 void RTC_A_startCounterPrescale (uint16_t baseAddress,
+RTC_A_startCounterPrescale:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function RTC_A_startCounterPrescale
+          CFI NoCalls
+//  175     uint8_t prescaleSelect)
+//  176 {
+//  177     HWREG8(baseAddress + OFS_RTCPS0CTL_H + prescaleSelect) &= ~(RT0PSHOLD_H);
+        MOV.B   R13, R13
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        ADD.W   #0x9, R15
+        BIC.B   #0x1, 0(R15)
+//  178 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  179 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  180 void RTC_A_definePrescaleEvent (uint16_t baseAddress,
+RTC_A_definePrescaleEvent:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function RTC_A_definePrescaleEvent
+          CFI NoCalls
+//  181     uint8_t prescaleSelect,
+//  182     uint8_t prescaleEventDivider)
+//  183 {
+//  184     HWREG8(baseAddress + OFS_RTCPS0CTL_L + prescaleSelect) &= ~(RT0IP_7);
+        MOV.B   R13, R13
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        ADD.W   #0x8, R15
+        AND.B   #0xe3, 0(R15)
+//  185     HWREG8(baseAddress + OFS_RTCPS0CTL_L +
+//  186         prescaleSelect) |= prescaleEventDivider;
+        MOV.B   R13, R13
+        MOV.W   R12, R15
+        ADD.W   R13, R15
+        ADD.W   #0x8, R15
+        BIS.B   R14, 0(R15)
+//  187 }
+        RETA
+          CFI EndBlock cfiBlock14
+//  188 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  189 uint8_t RTC_A_getPrescaleValue (uint16_t baseAddress,
+RTC_A_getPrescaleValue:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function RTC_A_getPrescaleValue
+          CFI NoCalls
+//  190     uint8_t prescaleSelect)
+//  191 {
+        MOV.W   R12, R15
+//  192     if (HWREG8(baseAddress + OFS_RTCPS0CTL_H + prescaleSelect) & RT0PSHOLD_H){
+        MOV.B   R13, R13
+        MOV.W   R15, R14
+        ADD.W   R13, R14
+        ADD.W   #0x9, R14
+        BIT.B   #0x1, 0(R14)
+        JNC     ??RTC_A_getPrescaleValue_0
+//  193         return ( 0) ;
+        MOV.B   #0x0, R12
+        RETA
+//  194     }
+//  195 
+//  196     if (RTC_A_PRESCALE_0 == prescaleSelect){
+??RTC_A_getPrescaleValue_0:
+        CMP.B   #0x0, R13
+        JNE     ??RTC_A_getPrescaleValue_1
+//  197         return ( HWREG8(baseAddress + OFS_RTCPS_L) );
+        ADD.W   #0xc, R15
+        MOV.B   @R15, R12
+        RETA
+//  198     } else if (RTC_A_PRESCALE_1 == prescaleSelect){
+??RTC_A_getPrescaleValue_1:
+        CMP.B   #0x2, R13
+        JNE     ??RTC_A_getPrescaleValue_2
+//  199         return ( HWREG8(baseAddress + OFS_RTCPS_H) );
+        ADD.W   #0xd, R15
+        MOV.B   @R15, R12
+        RETA
+//  200     } else   {
+//  201         return ( 0) ;
+??RTC_A_getPrescaleValue_2:
+        MOV.B   #0x0, R12
+        RETA
+//  202     }
+//  203 }
+          CFI EndBlock cfiBlock15
+//  204 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  205 void RTC_A_setPrescaleValue (uint16_t baseAddress,
+RTC_A_setPrescaleValue:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function RTC_A_setPrescaleValue
+          CFI NoCalls
+//  206     uint8_t prescaleSelect,
+//  207     uint8_t prescaleCounterValue)
+//  208 {
+//  209     if (RTC_A_PRESCALE_0 == prescaleSelect){
+        CMP.B   #0x0, R13
+        JNE     ??RTC_A_setPrescaleValue_0
+//  210         HWREG8(baseAddress + OFS_RTCPS_L) = prescaleCounterValue;
+        MOV.W   R12, R15
+        ADD.W   #0xc, R15
+        MOV.B   R14, 0(R15)
+        RETA
+//  211     } else if (RTC_A_PRESCALE_1 == prescaleSelect){
+??RTC_A_setPrescaleValue_0:
+        CMP.B   #0x2, R13
+        JNE     ??RTC_A_setPrescaleValue_1
+//  212         HWREG8(baseAddress + OFS_RTCPS_H) = prescaleCounterValue;
+        MOV.W   R12, R15
+        ADD.W   #0xd, R15
+        MOV.B   R14, 0(R15)
+//  213     }
+//  214 }
+??RTC_A_setPrescaleValue_1:
+        RETA
+          CFI EndBlock cfiBlock16
+//  215 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  216 void RTC_A_enableInterrupt (uint16_t baseAddress,
+RTC_A_enableInterrupt:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function RTC_A_enableInterrupt
+          CFI NoCalls
+//  217     uint8_t interruptMask)
+//  218 {
+//  219     if ( interruptMask & (RTCTEVIE + RTCAIE + RTCRDYIE) ){
+        BIT.B   #0x70, R13
+        JEQ     ??RTC_A_enableInterrupt_0
+//  220         HWREG8(baseAddress + OFS_RTCCTL01_L) |=
+//  221             (interruptMask & (RTCTEVIE + RTCAIE + RTCRDYIE));
+        MOV.B   R13, R14
+        AND.B   #0x70, R14
+        BIS.B   R14, 0(R12)
+//  222     }
+//  223 
+//  224     if (interruptMask & RTC_A_PRESCALE_TIMER0_INTERRUPT){
+??RTC_A_enableInterrupt_0:
+        BIT.B   #0x2, R13
+        JNC     ??RTC_A_enableInterrupt_1
+//  225         HWREG8(baseAddress + OFS_RTCPS0CTL) |= RT0PSIE;
+        MOV.W   R12, R15
+        ADD.W   #0x8, R15
+        BIS.B   #0x2, 0(R15)
+//  226     }
+//  227 
+//  228     if (interruptMask & RTC_A_PRESCALE_TIMER1_INTERRUPT){
+??RTC_A_enableInterrupt_1:
+        BIT.B   #0x1, R13
+        JNC     ??RTC_A_enableInterrupt_2
+//  229         HWREG8(baseAddress + OFS_RTCPS1CTL) |= RT1PSIE;
+        MOV.W   R12, R15
+        ADD.W   #0xa, R15
+        BIS.B   #0x2, 0(R15)
+//  230     }
+//  231 }
+??RTC_A_enableInterrupt_2:
+        RETA
+          CFI EndBlock cfiBlock17
+//  232 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  233 void RTC_A_disableInterrupt (uint16_t baseAddress,
+RTC_A_disableInterrupt:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function RTC_A_disableInterrupt
+          CFI NoCalls
+//  234     uint8_t interruptMask)
+//  235 {
+//  236     if ( interruptMask & ( RTCTEVIE + RTCAIE + RTCRDYIE) ){
+        BIT.B   #0x70, R13
+        JEQ     ??RTC_A_disableInterrupt_0
+//  237         HWREG8(baseAddress + OFS_RTCCTL01_L) &=
+//  238             ~(interruptMask & (RTCTEVIE + RTCAIE + RTCRDYIE));
+        MOV.B   R13, R14
+        AND.B   #0x70, R14
+        BIC.B   R14, 0(R12)
+//  239     }
+//  240 
+//  241     if (interruptMask & RTC_A_PRESCALE_TIMER0_INTERRUPT){
+??RTC_A_disableInterrupt_0:
+        BIT.B   #0x2, R13
+        JNC     ??RTC_A_disableInterrupt_1
+//  242         HWREG8(baseAddress + OFS_RTCPS0CTL) &= ~(RT0PSIE);
+        MOV.W   R12, R15
+        ADD.W   #0x8, R15
+        BIC.B   #0x2, 0(R15)
+//  243     }
+//  244 
+//  245     if (interruptMask & RTC_A_PRESCALE_TIMER1_INTERRUPT){
+??RTC_A_disableInterrupt_1:
+        BIT.B   #0x1, R13
+        JNC     ??RTC_A_disableInterrupt_2
+//  246         HWREG8(baseAddress + OFS_RTCPS1CTL) &= ~(RT1PSIE);
+        MOV.W   R12, R15
+        ADD.W   #0xa, R15
+        BIC.B   #0x2, 0(R15)
+//  247     }
+//  248 }
+??RTC_A_disableInterrupt_2:
+        RETA
+          CFI EndBlock cfiBlock18
+//  249 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  250 uint8_t RTC_A_getInterruptStatus (uint16_t baseAddress,
+RTC_A_getInterruptStatus:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function RTC_A_getInterruptStatus
+          CFI NoCalls
+//  251     uint8_t interruptFlagMask)
+//  252 {
+        MOV.W   R12, R14
+//  253     uint8_t tempInterruptFlagMask = 0x0000;
+        MOV.B   #0x0, R12
+//  254 
+//  255     tempInterruptFlagMask |= (HWREG8(baseAddress + OFS_RTCCTL01_L)
+//  256                               & ((interruptFlagMask >> 4)
+//  257                                  & (
+//  258                                     RTCTEVIFG +
+//  259                                     RTCAIFG +
+//  260                                     RTCRDYIFG)));
+        MOV.B   R13, R15
+        RPT     #0x4
+        RRUX.B  R15
+        AND.B   @R14, R15
+        AND.B   #0x7, R15
+        BIS.B   R15, R12
+//  261 
+//  262     tempInterruptFlagMask = tempInterruptFlagMask << 4;
+        RPT     #0x4
+        RLAX.B  R12
+//  263 
+//  264     if (interruptFlagMask & RTC_A_PRESCALE_TIMER0_INTERRUPT){
+        BIT.B   #0x2, R13
+        JNC     ??RTC_A_getInterruptStatus_0
+//  265         if ( HWREG8(baseAddress + OFS_RTCPS0CTL) & RT0PSIFG){
+        MOV.W   R14, R15
+        ADD.W   #0x8, R15
+        BIT.B   #0x1, 0(R15)
+        JNC     ??RTC_A_getInterruptStatus_0
+//  266             tempInterruptFlagMask |= RTC_A_PRESCALE_TIMER0_INTERRUPT;
+        BIS.B   #0x2, R12
+//  267         }
+//  268     }
+//  269 
+//  270     if (interruptFlagMask & RTC_A_PRESCALE_TIMER1_INTERRUPT){
+??RTC_A_getInterruptStatus_0:
+        BIT.B   #0x1, R13
+        JNC     ??RTC_A_getInterruptStatus_1
+//  271         if ( HWREG8(baseAddress + OFS_RTCPS1CTL) & RT1PSIFG){
+        MOV.W   R14, R15
+        ADD.W   #0xa, R15
+        BIT.B   #0x1, 0(R15)
+        JNC     ??RTC_A_getInterruptStatus_1
+//  272             tempInterruptFlagMask |= RTC_A_PRESCALE_TIMER1_INTERRUPT;
+        BIS.B   #0x1, R12
+//  273         }
+//  274     }
+//  275 
+//  276     return ( tempInterruptFlagMask) ;
+??RTC_A_getInterruptStatus_1:
+        RETA
+//  277 }
+          CFI EndBlock cfiBlock19
+//  278 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  279 void RTC_A_clearInterrupt (uint16_t baseAddress,
+RTC_A_clearInterrupt:
+          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Function RTC_A_clearInterrupt
+          CFI NoCalls
+//  280     uint8_t interruptFlagMask)
+//  281 {
+//  282     if ( interruptFlagMask & (RTC_A_TIME_EVENT_INTERRUPT +
+//  283                               RTC_A_CLOCK_ALARM_INTERRUPT +
+//  284                               RTC_A_CLOCK_READ_READY_INTERRUPT
+//  285                               ) ){
+        BIT.B   #0x70, R13
+        JEQ     ??RTC_A_clearInterrupt_0
+//  286 
+//  287         HWREG8(baseAddress + OFS_RTCCTL01_L) &=
+//  288             ~((interruptFlagMask>>4) & (RTCTEVIFG +
+//  289                                         RTCAIFG +
+//  290                                         RTCRDYIFG));
+        MOV.B   R13, R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x7, R14
+        BIC.B   R14, 0(R12)
+//  291     }
+//  292 
+//  293     if (interruptFlagMask & RTC_A_PRESCALE_TIMER0_INTERRUPT){
+??RTC_A_clearInterrupt_0:
+        BIT.B   #0x2, R13
+        JNC     ??RTC_A_clearInterrupt_1
+//  294         HWREG8(baseAddress + OFS_RTCPS0CTL) &= ~(RT0PSIFG);
+        MOV.W   R12, R15
+        ADD.W   #0x8, R15
+        BIC.B   #0x1, 0(R15)
+//  295     }
+//  296 
+//  297     if (interruptFlagMask & RTC_A_PRESCALE_TIMER1_INTERRUPT){
+??RTC_A_clearInterrupt_1:
+        BIT.B   #0x1, R13
+        JNC     ??RTC_A_clearInterrupt_2
+//  298         HWREG8(baseAddress + OFS_RTCPS1CTL) &= ~(RT1PSIFG);
+        MOV.W   R12, R15
+        ADD.W   #0xa, R15
+        BIC.B   #0x1, 0(R15)
+//  299     }
+//  300 }
+??RTC_A_clearInterrupt_2:
+        RETA
+          CFI EndBlock cfiBlock20
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  301 
+//  302 
+//  303 #endif
+//  304 //*****************************************************************************
+//  305 //
+//  306 //! Close the doxygen group for rtc_a_api
+//  307 //! @}
+//  308 //
+//  309 //*****************************************************************************
+// 
+// 838 bytes in segment CODE
+// 
+// 838 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

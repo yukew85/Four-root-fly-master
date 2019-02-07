@@ -1,0 +1,660 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:41
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\i2c.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWD20A.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\i2c.c -D
+#        NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\i2c.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\i2c.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\i2c.c
+      1          #include "i2c.h"
+
+   \                                 In  segment DATA16_AN, at 0x220
+   \   union <unnamed> __data16 _A_PBIN_L
+   \                     _A_PBIN_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x222
+   \   union <unnamed> __data16 _A_PBOUT_L
+   \                     _A_PBOUT_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x224
+   \   union <unnamed> __data16 _A_PBDIR_L
+   \                     _A_PBDIR_L:
+   \   000000                DS8 2
+      2          #include "include.h"
+      3          
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      4          unsigned char Ack_Count=0;                         //接收数据缓存区  
+   \                     Ack_Count:
+   \   000000                DS8 1
+      5          
+
+   \                                 In  segment CODE, align 2
+      6          void delay521_nus(uint  n)       //N us延时函数
+   \                     delay521_nus:
+   \                     ??delay521_nus_0:
+      7          {
+      8             //**uint i=0,j=0;
+      9             //**for (i=0;i<n;i++)
+     10             //**  for(j=0;j<2;j++);
+     11            while(n--);
+   \   000000   0F4C         MOV.W   R12, R15
+   \   000002   0C4F         MOV.W   R15, R12
+   \   000004   3C53         ADD.W   #0xffff, R12
+   \   000006   0F93         CMP.W   #0x0, R15
+   \   000008   FB23         JNE     ??delay521_nus_0
+     12          }
+   \   00000A   1001         RETA
+     13          
+
+   \                                 In  segment CODE, align 2
+     14          void delay521_nms(uint  n)       //N ms延时函数
+   \                     delay521_nms:
+   \                     ??delay521_nms_0:
+     15          {
+     16            uint i;
+     17           //**  uint i=0,j=0;
+     18           //**  for (i=0;i<n;i++)
+     19            //**   for (j=0;j<5350;i++);
+     20            while(n--)
+   \   000000   0F4C         MOV.W   R12, R15
+   \   000002   0C4F         MOV.W   R15, R12
+   \   000004   3C53         ADD.W   #0xffff, R12
+   \   000006   0F93         CMP.W   #0x0, R15
+   \   000008   0624         JEQ     ??delay521_nms_2
+     21              for(i=1000;i>0;i--);
+   \   00000A   3F40E803     MOV.W   #0x3e8, R15
+   \                     ??delay521_nms_1:
+   \   00000E   0F93         CMP.W   #0x0, R15
+   \   000010   F727         JEQ     ??delay521_nms_0
+   \   000012   3F53         ADD.W   #0xffff, R15
+   \   000014   FC3F         JMP     ??delay521_nms_1
+     22          }
+   \                     ??delay521_nms_2:
+   \   000016   1001         RETA
+     23          
+     24          /**************************************
+     25          起始信号
+     26          **************************************/
+
+   \                                 In  segment CODE, align 2
+     27          void IIC_Start()
+   \                     IIC_Start:
+     28          {
+     29             //** IIC_SDA_Out;
+     30              P3DIR|=(1<<SDA); 
+   \   000000   D2D32402     BIS.B   #0x1, &0x224
+     31             //** IIC_SDA = 1;                    //拉高数据线
+     32              IIC|=(1<<SDA);
+   \   000004   D2D32202     BIS.B   #0x1, &0x222
+     33              //*delay521_nus(4) ;
+     34              delay521_nus(1) ;
+   \   000008   1C43         MOV.W   #0x1, R12
+   \   00000A   ........     CALLA   #delay521_nus
+     35              //**IIC_SCL = 1;                    //拉高时钟线
+     36              IIC|=(1<<SCL);
+   \   00000E   E2D32202     BIS.B   #0x2, &0x222
+     37              //**delay521_nus(4) ;                //延时
+     38              delay521_nus(1);
+   \   000012   1C43         MOV.W   #0x1, R12
+   \   000014   ........     CALLA   #delay521_nus
+     39             //** IIC_SDA = 0;                    //产生下降沿
+     40              IIC&=~(1<<SDA);
+   \   000018   D2C32202     BIC.B   #0x1, &0x222
+     41             //** delay521_nus(4);                  //延时
+     42              delay521_nus(1) ;
+   \   00001C   1C43         MOV.W   #0x1, R12
+   \   00001E   ........     CALLA   #delay521_nus
+     43              //**IIC_SCL = 0;                    //拉低时钟线
+     44              IIC&=~(1<<SCL);
+   \   000022   E2C32202     BIC.B   #0x2, &0x222
+     45             //** delay521_nus(4);
+     46              delay521_nus(1);
+   \   000026   1C43         MOV.W   #0x1, R12
+   \   000028   ........     BRA     #delay521_nus
+   \   00002C                REQUIRE _A_PBDIR_L
+   \   00002C                REQUIRE _A_PBOUT_L
+     47          }
+     48          
+     49          /**************************************
+     50           停止信号
+     51          **************************************/
+
+   \                                 In  segment CODE, align 2
+     52          void IIC_Stop()
+   \                     IIC_Stop:
+     53          {
+     54              //**IIC_SDA_Out;
+     55              P3DIR|=(1<<SDA);
+   \   000000   D2D32402     BIS.B   #0x1, &0x224
+     56              //**IIC_SCL = 0;   
+     57              IIC&=~(1<<SCL);
+   \   000004   E2C32202     BIC.B   #0x2, &0x222
+     58             //** IIC_SDA = 0;                    //拉低数据线
+     59              IIC&=~(1<<SDA);
+   \   000008   D2C32202     BIC.B   #0x1, &0x222
+     60              //** delay521_nus(4);                   //延时
+     61              delay521_nus(1) ;
+   \   00000C   1C43         MOV.W   #0x1, R12
+   \   00000E   ........     CALLA   #delay521_nus
+     62              //**IIC_SCL = 1;                    //拉高时钟线
+     63               IIC|=(1<<SCL);
+   \   000012   E2D32202     BIS.B   #0x2, &0x222
+     64              //** delay521_nus(4);                  //延时
+     65               delay521_nus(1) ;
+   \   000016   1C43         MOV.W   #0x1, R12
+   \   000018   ........     CALLA   #delay521_nus
+     66             //** IIC_SDA = 1;                    //产生上升沿
+     67               IIC|=(1<<SDA);
+   \   00001C   D2D32202     BIS.B   #0x1, &0x222
+     68          }
+   \   000020   1001         RETA
+   \   000022                REQUIRE _A_PBDIR_L
+   \   000022                REQUIRE _A_PBOUT_L
+     69          
+     70          /**************************************
+     71          发送应答信号
+     72          入口参数:ack (0:ACK 1:NAK)
+     73          **************************************/
+
+   \                                 In  segment CODE, align 2
+     74          void IIC_SendACK(uchar ack)
+   \                     IIC_SendACK:
+     75          {
+   \   000000   4E4C         MOV.B   R12, R14
+     76              //**IIC_SDA_Out;
+     77              P3DIR|=(1<<SDA);
+   \   000002   D2D32402     BIS.B   #0x1, &0x224
+     78             //** IIC_SCL = 0;                    //拉低时钟线
+     79              IIC&=~(1<<SCL);
+   \   000006   E2C32202     BIC.B   #0x2, &0x222
+     80             //** delay521_nus(4);
+     81              delay521_nus(1) ;
+   \   00000A   1C43         MOV.W   #0x1, R12
+   \   00000C   ........     CALLA   #delay521_nus
+     82             //** IIC_SDA = ack;                  //写应答信号
+     83              if(ack)
+   \   000010   4E93         CMP.B   #0x0, R14
+   \   000012   0324         JEQ     ??IIC_SendACK_1
+     84                IIC|=(1<<SDA);
+   \   000014   D2D32202     BIS.B   #0x1, &0x222
+   \   000018   023C         JMP     ??IIC_SendACK_0
+     85              else 
+     86                IIC&=~(1<<SDA);
+   \                     ??IIC_SendACK_1:
+   \   00001A   D2C32202     BIC.B   #0x1, &0x222
+     87             // delay521_nus(4);
+     88              delay521_nus(1) ;
+   \                     ??IIC_SendACK_0:
+   \   00001E   1C43         MOV.W   #0x1, R12
+   \   000020   ........     CALLA   #delay521_nus
+     89             //** IIC_SCL = 1;                    //拉高时钟线
+     90              IIC|=(1<<SCL);
+   \   000024   E2D32202     BIS.B   #0x2, &0x222
+     91            //  delay521_nus(4);                //延时
+     92              delay521_nus(1) ;
+   \   000028   1C43         MOV.W   #0x1, R12
+   \   00002A   ........     CALLA   #delay521_nus
+     93              //**IIC_SCL = 0;                    //拉低时钟线
+     94              IIC&=~(1<<SCL);
+   \   00002E   E2C32202     BIC.B   #0x2, &0x222
+     95             //delay521_nus(4);                 //延时
+     96              delay521_nus(1) ;
+   \   000032   1C43         MOV.W   #0x1, R12
+   \   000034   ........     BRA     #delay521_nus
+   \   000038                REQUIRE _A_PBDIR_L
+   \   000038                REQUIRE _A_PBOUT_L
+     97          }
+     98          
+     99          /**************************************
+    100          接收应答信号
+    101          **************************************/
+
+   \                                 In  segment CODE, align 2
+    102          void IIC_RecvACK()
+   \                     IIC_RecvACK:
+    103          {
+    104             //**IIC_SDA_In;
+    105             P3DIR&=~(1<<SDA);
+   \   000000   D2C32402     BIC.B   #0x1, &0x224
+    106             //delay521_nus(4);
+    107            //** IIC_SCL = 1;                  //拉高时钟线
+    108             IIC|=(1<<SCL);
+   \   000004   E2D32202     BIS.B   #0x2, &0x222
+    109             //** while(IIC_SDA)
+    110             while((P3IN&(1<<SDA)))
+   \                     ??IIC_RecvACK_0:
+   \   000008   D2B32002     BIT.B   #0x1, &0x220
+   \   00000C   0D28         JNC     ??IIC_RecvACK_1
+    111              {
+    112                  Ack_Count++;
+   \   00000E   ....D253.... ADDX.B  #0x1, &Ack_Count
+    113                  if(Ack_Count>250)
+   \   000014   ....F290FB00 CMPX.B  #0xfb, &Ack_Count
+   \            ....        
+   \   00001C   F52B         JNC     ??IIC_RecvACK_0
+    114                   {
+    115                      IIC_Stop() ;
+   \   00001E   ........     CALLA   #IIC_Stop
+    116                      Ack_Count=0;
+   \   000022   ....C243.... MOVX.B  #0x0, &Ack_Count
+    117                      break;
+    118                   }
+    119              }
+    120              //dis_data++;
+    121             //** IIC_SCL = 0;                 //拉低时钟线
+    122             IIC&=~(1<<SCL);
+   \                     ??IIC_RecvACK_1:
+   \   000028   E2C32202     BIC.B   #0x2, &0x222
+    123             //** delay521_nus(4);                //延时
+    124             delay521_nus(1) ;
+   \   00002C   1C43         MOV.W   #0x1, R12
+   \   00002E   ........     BRA     #delay521_nus
+   \   000032                REQUIRE _A_PBDIR_L
+   \   000032                REQUIRE _A_PBOUT_L
+   \   000032                REQUIRE _A_PBIN_L
+    125          }
+    126          
+    127          /**************************************
+    128          向IIC总线发送一个字节数据
+    129          **************************************/
+
+   \                                 In  segment CODE, align 2
+    130          void IIC_SendByte(uchar dat)
+   \                     IIC_SendByte:
+    131          {
+   \   000000   4E4C         MOV.B   R12, R14
+    132              uchar i;
+    133                 
+    134              // IIC_SDA_Out;
+    135              P3DIR|=(1<<SDA);
+   \   000002   D2D32402     BIS.B   #0x1, &0x224
+    136                i=8;  
+   \   000006   7D42         MOV.B   #0x8, R13
+    137             //**  IIC_SCL = 0;                //拉低时钟线
+    138              IIC&=~(1<<SCL);
+   \   000008   E2C32202     BIC.B   #0x2, &0x222
+    139             //**  delay521_nus(4);
+    140             delay521_nus(1) ;
+   \   00000C   1C43         MOV.W   #0x1, R12
+   \   00000E   ........     CALLA   #delay521_nus
+   \   000012   103C         JMP     ??IIC_SendByte_2
+    141             while(i--)         //8位计数器
+    142              {   
+    143               //**  IIC_SDA=(dat&0x80)>>7;
+    144              if(((dat&0x80)>>7))
+    145               IIC|=(1<<SDA);
+    146             else 
+    147               IIC&=~(1<<SDA); 
+   \                     ??IIC_SendByte_0:
+   \   000014   D2C32202     BIC.B   #0x1, &0x222
+    148                  dat<<=1;              //送数据口
+   \                     ??IIC_SendByte_1:
+   \   000018   4E5E         RLA.B   R14
+    149          	 //**   delay521_nus(4);
+    150                  delay521_nus(1) ;
+   \   00001A   1C43         MOV.W   #0x1, R12
+   \   00001C   ........     CALLA   #delay521_nus
+    151              //**    IIC_SCL = 1;                //拉高时钟线
+    152                      IIC|=(1<<SCL);
+   \   000020   E2D32202     BIS.B   #0x2, &0x222
+    153                 //** delay521_nus(4);             //延时
+    154                      delay521_nus(1) ;
+   \   000024   1C43         MOV.W   #0x1, R12
+   \   000026   ........     CALLA   #delay521_nus
+    155                //**  IIC_SCL = 0;                //拉低时钟线
+    156                  IIC&=~(1<<SCL);
+   \   00002A   E2C32202     BIC.B   #0x2, &0x222
+    157                  //**delay521_nus(4);              //延时 
+    158                  delay521_nus(1) ;
+   \   00002E   1C43         MOV.W   #0x1, R12
+   \   000030   ........     CALLA   #delay521_nus
+   \                     ??IIC_SendByte_2:
+   \   000034   4F4D         MOV.B   R13, R15
+   \   000036   4D4F         MOV.B   R15, R13
+   \   000038   7D53         ADD.B   #0xff, R13
+   \   00003A   4F93         CMP.B   #0x0, R15
+   \   00003C   0524         JEQ     ??IIC_SendByte_3
+   \   00003E   4E93         CMP.B   #0x0, R14
+   \   000040   E937         JGE     ??IIC_SendByte_0
+   \   000042   D2D32202     BIS.B   #0x1, &0x222
+   \   000046   E83F         JMP     ??IIC_SendByte_1
+    159              }  
+    160              // IIC_SDA=0;
+    161             IIC|=(1<<SDA);
+   \                     ??IIC_SendByte_3:
+   \   000048   D2D32202     BIS.B   #0x1, &0x222
+    162               //delay521_nus(2);
+    163              IIC_RecvACK();
+   \   00004C   ........     BRA     #IIC_RecvACK
+   \   000050                REQUIRE _A_PBDIR_L
+   \   000050                REQUIRE _A_PBOUT_L
+    164          }
+    165          
+    166          /**************************************
+    167          从IIC总线接收一个字节数据
+    168          **************************************/
+
+   \                                 In  segment CODE, align 2
+    169          uchar IIC_RecvByte()
+   \                     IIC_RecvByte:
+    170          {
+    171              uchar i;
+    172              uchar dat = 0;
+   \   000000   4E43         MOV.B   #0x0, R14
+    173              // **IIC_SDA_In;
+    174              P3DIR&=~(1<<SDA);
+   \   000002   D2C32402     BIC.B   #0x1, &0x224
+    175               i=8;  
+   \   000006   7D42         MOV.B   #0x8, R13
+   \   000008   033C         JMP     ??IIC_RecvByte_2
+    176            
+    177             while(i--)         //8位计数器     
+    178              {   
+    179                 //** IIC_SCL = 0;                //拉低时钟线
+    180                IIC&=~(1<<SCL);
+    181                //**  delay521_nus(4);    
+    182                delay521_nus(1) ;
+    183              //**    IIC_SCL = 1;                //拉高时钟线
+    184                  IIC|=(1<<SCL);
+    185                  dat <<= 1;
+    186                //**  dat |= IIC_SDA;             //读数据   
+    187                  if(P3IN&BIT0)
+    188                    dat|=1;
+    189                  else 
+    190                    dat|=0;
+    191              //**    delay521_nus(4);             //延时
+    192                  delay521_nus(1) ;
+   \                     ??IIC_RecvByte_0:
+   \   00000A   1C43         MOV.W   #0x1, R12
+   \   00000C   ........     CALLA   #delay521_nus
+   \                     ??IIC_RecvByte_2:
+   \   000010   4F4D         MOV.B   R13, R15
+   \   000012   4D4F         MOV.B   R15, R13
+   \   000014   7D53         ADD.B   #0xff, R13
+   \   000016   4F93         CMP.B   #0x0, R15
+   \   000018   0D24         JEQ     ??IIC_RecvByte_3
+   \   00001A   E2C32202     BIC.B   #0x2, &0x222
+   \   00001E   1C43         MOV.W   #0x1, R12
+   \   000020   ........     CALLA   #delay521_nus
+   \   000024   E2D32202     BIS.B   #0x2, &0x222
+   \   000028   4E5E         RLA.B   R14
+   \   00002A   D2B32002     BIT.B   #0x1, &0x220
+   \   00002E   ED2B         JNC     ??IIC_RecvByte_0
+   \   000030   5ED3         BIS.B   #0x1, R14
+   \   000032   EB3F         JMP     ??IIC_RecvByte_0
+    193              }
+    194              return dat;
+   \                     ??IIC_RecvByte_3:
+   \   000034   4C4E         MOV.B   R14, R12
+   \   000036   1001         RETA
+   \   000038                REQUIRE _A_PBDIR_L
+   \   000038                REQUIRE _A_PBOUT_L
+   \   000038                REQUIRE _A_PBIN_L
+    195          }
+    196          
+    197          //单字节写入*******************************************
+    198          
+
+   \                                 In  segment CODE, align 2
+    199          void Single_WriteIIC(uchar Slaveaddr,uchar REG_Address,uchar REG_data)
+   \                     Single_WriteIIC:
+    200          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   4A4C         MOV.B   R12, R10
+   \   000004   4B4D         MOV.B   R13, R11
+   \   000006   484E         MOV.B   R14, R8
+    201              IIC_Start();                  //起始信号
+   \   000008   ........     CALLA   #IIC_Start
+    202                
+    203              IIC_SendByte(Slaveaddr);   //发送设备地址+写信号
+   \   00000C   4C4A         MOV.B   R10, R12
+   \   00000E   ........     CALLA   #IIC_SendByte
+    204              IIC_SendByte(REG_Address);    //内部寄存器地址，    
+   \   000012   4C4B         MOV.B   R11, R12
+   \   000014   ........     CALLA   #IIC_SendByte
+    205              IIC_SendByte(REG_data);       //内部寄存器数据，
+   \   000018   4C48         MOV.B   R8, R12
+   \   00001A   ........     CALLA   #IIC_SendByte
+    206             
+    207              IIC_Stop();                   //发送停止信号
+   \   00001E   ........     CALLA   #IIC_Stop
+    208          }
+   \   000022   3816         POPM.A  #0x4, R11
+   \   000024   1001         RETA
+    209          
+    210          //单字节读取*****************************************
+
+   \                                 In  segment CODE, align 2
+    211          uchar Single_ReadIIC(uchar Slaveaddr,uchar REG_Address)
+   \                     Single_ReadIIC:
+    212          {  
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   4B4C         MOV.B   R12, R11
+   \   000004   4A4D         MOV.B   R13, R10
+    213              uchar REG_data;
+    214             
+    215              IIC_Start();                          //起始信号
+   \   000006   ........     CALLA   #IIC_Start
+    216              IIC_SendByte(Slaveaddr);           //发送设备地址+写信号
+   \   00000A   4C4B         MOV.B   R11, R12
+   \   00000C   ........     CALLA   #IIC_SendByte
+    217              IIC_SendByte(REG_Address);            //发送存储单元地址，从0开始	
+   \   000010   4C4A         MOV.B   R10, R12
+   \   000012   ........     CALLA   #IIC_SendByte
+    218              IIC_Start();                          //起始信号
+   \   000016   ........     CALLA   #IIC_Start
+    219              IIC_SendByte(Slaveaddr+1);         //发送设备地址+读信号
+   \   00001A   5B53         ADD.B   #0x1, R11
+   \   00001C   4C4B         MOV.B   R11, R12
+   \   00001E   ........     CALLA   #IIC_SendByte
+    220              REG_data=IIC_RecvByte();              //读出寄存器数据
+   \   000022   ........     CALLA   #IIC_RecvByte
+   \   000026   4D4C         MOV.B   R12, R13
+    221              IIC_SendACK(1);   
+   \   000028   5C43         MOV.B   #0x1, R12
+   \   00002A   ........     CALLA   #IIC_SendACK
+    222              IIC_Stop();                           //停止信号
+   \   00002E   ........     CALLA   #IIC_Stop
+    223              return REG_data; 
+   \   000032   4C4D         MOV.B   R13, R12
+   \   000034   1A16         POPM.A  #0x2, R11
+   \   000036   1001         RETA
+    224          }
+    225          
+
+   \                                 In  segment CODE, align 2
+    226          void Multiple_ReadIIC(uchar Slaveaddr,uchar REG_Address,uchar length,uint8_t *Buff)
+   \                     Multiple_ReadIIC:
+    227          {
+   \   000000   5B14         PUSHM.A #0x6, R11
+   \   000002   4B4C         MOV.B   R12, R11
+   \   000004   484D         MOV.B   R13, R8
+   \   000006   4A4E         MOV.B   R14, R10
+   \   000008   C60F         MOVA    R15, R6
+    228            for(int i=0;i<length;i++)
+   \   00000A   0943         MOV.W   #0x0, R9
+   \   00000C   0B3C         JMP     ??Multiple_ReadIIC_1
+    229            {
+    230                Buff[i] = Single_ReadIIC(Slaveaddr,REG_Address);
+   \                     ??Multiple_ReadIIC_0:
+   \   00000E   4D48         MOV.B   R8, R13
+   \   000010   4C4B         MOV.B   R11, R12
+   \   000012   ........     CALLA   #Single_ReadIIC
+   \   000016   0F49         MOV.W   R9, R15
+   \   000018   4F0E         RLAM.A  #0x4, R15
+   \   00001A   4F0D         RRAM.A  #0x4, R15
+   \   00001C   EF06         ADDA    R6, R15
+   \   00001E   CF4C0000     MOV.B   R12, 0(R15)
+    231            }
+   \   000022   1953         ADD.W   #0x1, R9
+   \                     ??Multiple_ReadIIC_1:
+   \   000024   4A4A         MOV.B   R10, R10
+   \   000026   099A         CMP.W   R10, R9
+   \   000028   F23B         JL      ??Multiple_ReadIIC_0
+    232          }
+   \   00002A   5616         POPM.A  #0x6, R11
+   \   00002C   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   IIC_RecvACK
+        4   -> IIC_Stop
+        0   -> delay521_nus
+      4   IIC_RecvByte
+        4   -> delay521_nus
+      4   IIC_SendACK
+        0   -> delay521_nus
+        4   -> delay521_nus
+      4   IIC_SendByte
+        0   -> IIC_RecvACK
+        4   -> delay521_nus
+      4   IIC_Start
+        0   -> delay521_nus
+        4   -> delay521_nus
+      4   IIC_Stop
+        4   -> delay521_nus
+     28   Multiple_ReadIIC
+       28   -> Single_ReadIIC
+     12   Single_ReadIIC
+       12   -> IIC_RecvByte
+       12   -> IIC_SendACK
+       12   -> IIC_SendByte
+       12   -> IIC_Start
+       12   -> IIC_Stop
+     20   Single_WriteIIC
+       20   -> IIC_SendByte
+       20   -> IIC_Start
+       20   -> IIC_Stop
+      4   delay521_nms
+      4   delay521_nus
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  Ack_Count
+      50  IIC_RecvACK
+      56  IIC_RecvByte
+      56  IIC_SendACK
+      80  IIC_SendByte
+      44  IIC_Start
+      34  IIC_Stop
+      46  Multiple_ReadIIC
+      56  Single_ReadIIC
+      38  Single_WriteIIC
+       2  _A_PBDIR_L
+       2  _A_PBIN_L
+       2  _A_PBOUT_L
+      24  delay521_nms
+      12  delay521_nus
+
+ 
+ 496 bytes in segment CODE
+   6 bytes in segment DATA16_AN
+   1 byte  in segment DATA20_Z
+ 
+ 496 bytes of CODE memory
+   1 byte  of DATA memory (+ 6 bytes shared)
+
+Errors: none
+Warnings: none

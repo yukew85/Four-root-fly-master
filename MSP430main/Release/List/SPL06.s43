@@ -1,0 +1,1858 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:45
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\SPL06.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWE3F8.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\SPL06.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\SPL06.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME SPL06
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?ShiftLeft32_12
+        EXTERN _Cast32sto32f
+        EXTERN _Div32f
+        EXTERN _Mul32f
+        EXTERN _Add32f
+        EXTERN ?FLT_GE
+        EXTERN _Sub32f
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC SPL06PressureToAltitude
+        PUBLIC SPL06_get_calib_param
+        PUBLIC SPL06_get_pressure
+        PUBLIC SPL06_get_raw_pressure
+        PUBLIC SPL06_get_raw_temp
+        PUBLIC SPL06_get_temperature
+        PUBLIC SPL06_init
+        PUBLIC SPL06_rateset
+        PUBLIC SPL06_read
+        PUBLIC SPL06_start_continuous
+        PUBLIC SPL06_start_pressure
+        PUBLIC SPL06_start_temperature
+        PUBLIC SPL06_write
+        PUBLIC alt_3
+        PUBLIC height
+        PUBLIC pressure
+        PUBLIC temperature
+        PUBLIC user_SPL06_get
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN Single_WriteIIC
+        EXTERN Single_ReadIIC
+        EXTERN pow
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\SPL06.c
+//    1 #include "spl06.h"
+//    2 #include <math.h>
+//    3 
+//    4 
+//    5 #define PRESSURE_REG    0X00
+//    6 #define TEMP_REG        0X03
+//    7 #define PRS_CFG         0x06
+//    8 #define TMP_CFG         0x07
+//    9 #define MEAS_CFG        0x08
+//   10 
+//   11 #define SPL06_REST_VALUE 0x09
+//   12 #define SPL06_REST_REG 0x0C
+//   13 
+//   14 #define PRODUCT_ID 0X0D
+//   15 
+//   16 #define uint32_t unsigned int
+//   17 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   18 static struct SPL06_t SPL06;
+SPL06:
+        DS8 40
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   19 static struct SPL06_t *p_SPL06;
+p_SPL06:
+        DS8 4
+//   20 
+//   21 void SPL06_write(uint8 hwadr, uint8 regadr, uint8 val);
+//   22 uint8 SPL06_read(uint8 hwadr, uint8 regadr);
+//   23 void SPL06_get_calib_param(void);
+//   24 
+//   25 
+//   26 /*****************************************************************************
+//   27  函 数 名  : SPL06_write
+//   28  功能描述  : I2C 寄存器写入子函数
+//   29  输入参数  : uint8 hwadr   硬件地址
+//   30              uint8 regadr  寄存器地址
+//   31              uint8 val     值
+//   32  输出参数  : 无
+//   33  返 回 值  : 
+//   34  调用函数  : 
+//   35  被调函数  : 
+//   36  
+//   37  修改历史      :
+//   38   1.日    期   : 2015年11月30日
+//   39     作    者   : WL
+//   40     修改内容   : 新生成函数
+//   41 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   42 void SPL06_write(unsigned char hwadr, unsigned char regadr, unsigned char val)
+SPL06_write:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function SPL06_write
+//   43 {
+//   44         Single_WriteIIC(hwadr,regadr,val);
+          CFI TailCall Single_WriteIIC
+        BRA     #Single_WriteIIC
+//   45 
+//   46 
+//   47 }
+          CFI EndBlock cfiBlock0
+//   48 
+//   49 /*****************************************************************************
+//   50  函 数 名  : SPL06_read
+//   51  功能描述  : I2C 寄存器读取子函数
+//   52  输入参数  : uint8 hwadr   硬件地址
+//   53              uint8 regadr  寄存器地址
+//   54  输出参数  : 
+//   55  返 回 值  : uint8 读出值
+//   56  调用函数  : 
+//   57  被调函数  : 
+//   58  
+//   59  修改历史      :
+//   60   1.日    期   : 2015年11月30日
+//   61     作    者   : WL
+//   62     修改内容   : 新生成函数
+//   63 
+//   64 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   65 uint8 SPL06_read(unsigned char hwadr, unsigned char regadr)
+SPL06_read:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function SPL06_read
+//   66 {
+//   67     uint8 reg_data;
+//   68     reg_data = Single_ReadIIC(hwadr,regadr);
+          CFI TailCall Single_ReadIIC
+        BRA     #Single_ReadIIC
+//   69     return reg_data;
+//   70 }
+          CFI EndBlock cfiBlock1
+//   71 
+//   72 /*****************************************************************************
+//   73  函 数 名  : SPL06_init
+//   74  功能描述  : SPL06-01 初始化函数
+//   75  输入参数  : void  
+//   76  输出参数  : 无
+//   77  返 回 值  : 
+//   78  调用函数  : 
+//   79  被调函数  : 
+//   80  
+//   81  修改历史      :
+//   82   1.日    期   : 2015年11月30日
+//   83     作    者   : WL
+//   84     修改内容   : 新生成函数
+//   85 
+//   86 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   87 void SPL06_init(void)
+SPL06_init:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function SPL06_init
+//   88 { 
+//   89   
+//   90   
+//   91     p_SPL06 = &SPL06; /* read Chip Id */
+        MOVX.A  #SPL06, &p_SPL06
+//   92     p_SPL06->i32rawPressure = 0;
+        MOVA    &p_SPL06, R15
+        MOV.W   #0x0, 0x18(R15)
+        MOV.W   #0x0, 0x1a(R15)
+//   93     p_SPL06->i32rawTemperature = 0;
+        MOVA    &p_SPL06, R15
+        MOV.W   #0x0, 0x1c(R15)
+        MOV.W   #0x0, 0x1e(R15)
+//   94     p_SPL06->chip_id = 0x34;
+        MOVA    &p_SPL06, R15
+        MOV.B   #0x34, 0x16(R15)
+//   95     SPL06_get_calib_param();
+          CFI FunCall SPL06_get_calib_param
+        CALLA   #SPL06_get_calib_param
+//   96     
+//   97     SPL06_rateset(PRESSURE_SENSOR,128, 32);   
+        MOV.B   #0x20, R14
+        MOV.B   #0x80, R13
+        MOV.B   #0x0, R12
+          CFI FunCall SPL06_rateset
+        CALLA   #SPL06_rateset
+//   98     SPL06_rateset(TEMPERATURE_SENSOR,32, 8);
+        MOV.B   #0x8, R14
+        MOV.B   #0x20, R13
+        MOV.B   #0x1, R12
+          CFI FunCall SPL06_rateset
+        CALLA   #SPL06_rateset
+//   99     SPL06_start_continuous(CONTINUOUS_P_AND_T);
+        MOV.B   #0x3, R12
+          CFI TailCall SPL06_start_continuous
+        BRA     #SPL06_start_continuous
+//  100 }
+          CFI EndBlock cfiBlock2
+//  101 
+//  102 
+//  103 /*****************************************************************************
+//  104  函 数 名  : SPL06_rateset
+//  105  功能描述  :  设置温度传感器的每秒采样次数以及过采样率
+//  106  输入参数  : uint8 u8OverSmpl  过采样率         Maximal = 128
+//  107              uint8 u8SmplRate  每秒采样次数(Hz) Maximal = 128
+//  108              uint8 iSensor     0: Pressure; 1: Temperature
+//  109  输出参数  : 无
+//  110  返 回 值  : 无
+//  111  调用函数  :
+//  112  被调函数  :
+//  113 
+//  114  修改历史      :
+//  115   1.日    期   : 2015年11月24日
+//  116     作    者   : WL
+//  117     修改内容   : 新生成函数
+//  118 
+//  119 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  120 void SPL06_rateset(uint8 iSensor, uint8 u8SmplRate, uint8 u8OverSmpl)
+SPL06_rateset:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function SPL06_rateset
+//  121 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.B   R12, R8
+        MOV.B   R14, R6
+//  122     uint8 reg = 0;
+        MOV.B   #0x0, R9
+//  123     int32_t i32kPkT = 0;
+        MOV.W   #0x0, R10
+        MOV.W   #0x0, R11
+//  124     switch(u8SmplRate)
+        SUB.B   #0x2, R13
+        JEQ     ??SPL06_rateset_3
+        SUB.B   #0x2, R13
+        JEQ     ??SPL06_rateset_4
+        SUB.B   #0x4, R13
+        JEQ     ??SPL06_rateset_5
+        SUB.B   #0x8, R13
+        JEQ     ??SPL06_rateset_6
+        SUB.B   #0x10, R13
+        JEQ     ??SPL06_rateset_7
+        SUB.B   #0x20, R13
+        JEQ     ??SPL06_rateset_8
+        SUB.B   #0x40, R13
+        JEQ     ??SPL06_rateset_9
+        JMP     ??SPL06_rateset_0
+//  125     {
+//  126         case 2:
+//  127             reg |= (1<<5);
+??SPL06_rateset_3:
+        BIS.B   #0x20, R9
+//  128             break;
+        JMP     ??SPL06_rateset_0
+//  129         case 4:
+//  130             reg |= (2<<5);
+??SPL06_rateset_4:
+        BIS.B   #0x40, R9
+//  131             break;
+        JMP     ??SPL06_rateset_0
+//  132         case 8:
+//  133             reg |= (3<<5);
+??SPL06_rateset_5:
+        BIS.B   #0x60, R9
+//  134             break;
+        JMP     ??SPL06_rateset_0
+//  135         case 16:
+//  136             reg |= (4<<5);
+??SPL06_rateset_6:
+        BIS.B   #0x80, R9
+//  137             break;
+        JMP     ??SPL06_rateset_0
+//  138         case 32:
+//  139             reg |= (5<<5);
+??SPL06_rateset_7:
+        BIS.B   #0xa0, R9
+//  140             break;
+        JMP     ??SPL06_rateset_0
+//  141         case 64:
+//  142             reg |= (6<<5);
+??SPL06_rateset_8:
+        BIS.B   #0xc0, R9
+//  143             break;
+        JMP     ??SPL06_rateset_0
+//  144         case 128:
+//  145             reg |= (7<<5);
+??SPL06_rateset_9:
+        BIS.B   #0xe0, R9
+//  146             break;
+//  147         case 1:
+//  148         default:
+//  149             break;
+//  150     }
+//  151     switch(u8OverSmpl)
+??SPL06_rateset_0:
+        MOV.B   R6, R14
+        SUB.B   #0x2, R14
+        JEQ     ??SPL06_rateset_10
+        SUB.B   #0x2, R14
+        JEQ     ??SPL06_rateset_11
+        SUB.B   #0x4, R14
+        JEQ     ??SPL06_rateset_12
+        SUB.B   #0x8, R14
+        JEQ     ??SPL06_rateset_13
+        SUB.B   #0x10, R14
+        JEQ     ??SPL06_rateset_14
+        SUB.B   #0x20, R14
+        JEQ     ??SPL06_rateset_15
+        SUB.B   #0x40, R14
+        JEQ     ??SPL06_rateset_16
+        JMP     ??SPL06_rateset_1
+//  152     {
+//  153         case 2:
+//  154             reg |= 1;
+??SPL06_rateset_10:
+        BIS.B   #0x1, R9
+//  155             i32kPkT = 1572864;
+        MOV.W   #0x0, R10
+        MOV.W   #0x18, R11
+//  156             break;
+        JMP     ??SPL06_rateset_2
+//  157         case 4:
+//  158             reg |= 2;
+??SPL06_rateset_11:
+        BIS.B   #0x2, R9
+//  159             i32kPkT = 3670016;
+        MOV.W   #0x0, R10
+        MOV.W   #0x38, R11
+//  160             break;
+        JMP     ??SPL06_rateset_2
+//  161         case 8:
+//  162             reg |= 3;
+??SPL06_rateset_12:
+        BIS.B   #0x3, R9
+//  163             i32kPkT = 7864320;
+        MOV.W   #0x0, R10
+        MOV.W   #0x78, R11
+//  164             break;
+        JMP     ??SPL06_rateset_2
+//  165         case 16:
+//  166             i32kPkT = 253952;
+??SPL06_rateset_13:
+        MOV.W   #0xe000, R10
+        MOV.W   #0x3, R11
+//  167             reg |= 4;
+        BIS.B   #0x4, R9
+//  168             break;
+        JMP     ??SPL06_rateset_2
+//  169         case 32:
+//  170             i32kPkT = 516096;
+??SPL06_rateset_14:
+        MOV.W   #0xe000, R10
+        MOV.W   #0x7, R11
+//  171             reg |= 5;
+        BIS.B   #0x5, R9
+//  172             break;
+        JMP     ??SPL06_rateset_2
+//  173         case 64:
+//  174             i32kPkT = 1040384;
+??SPL06_rateset_15:
+        MOV.W   #0xe000, R10
+        MOV.W   #0xf, R11
+//  175             reg |= 6;
+        BIS.B   #0x6, R9
+//  176             break;
+        JMP     ??SPL06_rateset_2
+//  177         case 128:
+//  178             i32kPkT = 2088960;
+??SPL06_rateset_16:
+        MOV.W   #0xe000, R10
+        MOV.W   #0x1f, R11
+//  179             reg |= 7;
+        BIS.B   #0x7, R9
+//  180             break;
+        JMP     ??SPL06_rateset_2
+//  181         case 1:
+//  182         default:
+//  183             i32kPkT = 524288;
+??SPL06_rateset_1:
+        MOV.W   #0x0, R10
+        MOV.W   #0x8, R11
+//  184             break;
+//  185     }
+//  186 
+//  187     if(iSensor == 0)
+??SPL06_rateset_2:
+        CMP.B   #0x0, R8
+        JNE     ??SPL06_rateset_17
+//  188     {
+//  189         p_SPL06->i32kP = i32kPkT;
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0x20(R15)
+        MOV.W   R11, 0x22(R15)
+//  190         SPL06_write(HW_ADR << 1, 0x06, reg);
+        MOV.B   R9, R14
+        MOV.B   #0x6, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_write
+        CALLA   #SPL06_write
+//  191         if(u8OverSmpl > 8)
+        CMP.B   #0x9, R6
+        JNC     ??SPL06_rateset_17
+//  192         {
+//  193             reg = SPL06_read(HW_ADR << 1, 0x09);
+        MOV.B   #0x9, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R9
+//  194             SPL06_write(HW_ADR << 1, 0x09, reg | 0x04);
+        MOV.B   R9, R14
+        BIS.B   #0x4, R14
+        MOV.B   #0x9, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_write
+        CALLA   #SPL06_write
+//  195         }
+//  196     }
+//  197     if(iSensor == 1)
+??SPL06_rateset_17:
+        CMP.B   #0x1, R8
+        JNE     ??SPL06_rateset_18
+//  198     {
+//  199         p_SPL06->i32kT = i32kPkT;
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0x24(R15)
+        MOV.W   R11, 0x26(R15)
+//  200         SPL06_write(HW_ADR << 1, 0x07, reg|0x80);  //Using mems temperature
+        BIS.B   #0x80, R9
+        MOV.B   R9, R14
+        MOV.B   #0x7, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_write
+        CALLA   #SPL06_write
+//  201         if(u8OverSmpl > 8)
+        CMP.B   #0x9, R6
+        JNC     ??SPL06_rateset_18
+//  202         {
+//  203             reg = SPL06_read(HW_ADR << 1, 0x09);
+        MOV.B   #0x9, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R9
+//  204             SPL06_write(HW_ADR << 1, 0x09, reg | 0x08);
+        BIS.B   #0x8, R9
+        MOV.B   R9, R14
+        MOV.B   #0x9, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_write
+        CALLA   #SPL06_write
+//  205         }
+//  206     }
+//  207 }
+??SPL06_rateset_18:
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//  208 
+//  209 /*****************************************************************************
+//  210  函 数 名  : SPL06_get_calib_param
+//  211  功能描述  : 获取校准参数
+//  212  输入参数  : void  
+//  213  输出参数  : 无
+//  214  返 回 值  : 
+//  215  调用函数  : 
+//  216  被调函数  : 
+//  217  
+//  218  修改历史      :
+//  219   1.日    期   : 2015年11月30日
+//  220     作    者   : WL
+//  221     修改内容   : 新生成函数
+//  222 
+//  223 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  224 void SPL06_get_calib_param(void)
+SPL06_get_calib_param:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function SPL06_get_calib_param
+//  225 {
+        PUSHM.A #0x3, R10
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+16
+//  226     uint32_t h;
+//  227     uint32_t m;
+//  228     uint32_t l;
+//  229     h =  SPL06_read(HW_ADR << 1, 0x10);
+        MOV.B   #0x10, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  230     l  =  SPL06_read(HW_ADR << 1, 0x11);
+        MOV.B   #0x11, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+        MOV.B   R15, R15
+//  231     p_SPL06->calib_param.c0 = (int16)h<<4 | l>>4;
+        RRUM.W  #0x4, R15
+        RLAM.W  #0x4, R10
+        BIS.W   R15, R10
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0(R15)
+//  232     p_SPL06->calib_param.c0 = (p_SPL06->calib_param.c0&0x0800)?(0xF000|p_SPL06->calib_param.c0):p_SPL06->calib_param.c0;
+        MOVA    &p_SPL06, R15
+        BIT.W   #0x800, 0(R15)
+        JNC     ??SPL06_get_calib_param_4
+        MOVA    &p_SPL06, R15
+        MOV.W   @R15, R15
+        BIS.W   #0xf000, R15
+        JMP     ??SPL06_get_calib_param_0
+??SPL06_get_calib_param_4:
+        MOVA    &p_SPL06, R15
+        MOV.W   @R15, R15
+??SPL06_get_calib_param_0:
+        MOVA    &p_SPL06, R14
+        MOV.W   R15, 0(R14)
+//  233     h =  SPL06_read(HW_ADR << 1, 0x11);
+        MOV.B   #0x11, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  234     l  =  SPL06_read(HW_ADR << 1, 0x12);
+        MOV.B   #0x12, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+        MOV.B   R15, R15
+//  235     p_SPL06->calib_param.c1 = (int16)(h&0x0F)<<8 | l;
+        AND.W   #0xf, R10
+        AND.W   #0xff, R10
+        SWPB    R10
+        BIS.W   R15, R10
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0x2(R15)
+//  236     p_SPL06->calib_param.c1 = (p_SPL06->calib_param.c1&0x0800)?(0xF000|p_SPL06->calib_param.c1):p_SPL06->calib_param.c1;
+        MOVA    &p_SPL06, R15
+        BIT.W   #0x800, 0x2(R15)
+        JNC     ??SPL06_get_calib_param_5
+        MOVA    &p_SPL06, R15
+        MOV.W   0x2(R15), R15
+        BIS.W   #0xf000, R15
+        JMP     ??SPL06_get_calib_param_1
+??SPL06_get_calib_param_5:
+        MOVA    &p_SPL06, R15
+        MOV.W   0x2(R15), R15
+??SPL06_get_calib_param_1:
+        MOVA    &p_SPL06, R14
+        MOV.W   R15, 0x2(R14)
+//  237     h =  SPL06_read(HW_ADR << 1, 0x13);
+        MOV.B   #0x13, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  238     m =  SPL06_read(HW_ADR << 1, 0x14);
+        MOV.B   #0x14, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R8
+//  239     l =  SPL06_read(HW_ADR << 1, 0x15);
+        MOV.B   #0x15, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+        MOV.B   R15, R15
+//  240     p_SPL06->calib_param.c00 = (int32_t)h<<12 | (int32_t)m<<4 | (int32_t)l>>4;
+        RRUM.W  #0x4, R15
+        MOV.W   #0x0, R9
+        RLA.W   R8
+        RLC.W   R9
+        RLA.W   R8
+        RLC.W   R9
+        RLA.W   R8
+        RLC.W   R9
+        RLA.W   R8
+        RLC.W   R9
+        MOV.W   R10, R12
+        MOV.W   #0x0, R13
+          CFI FunCall ?ShiftLeft32_12
+        CALLA   #?ShiftLeft32_12
+        BIS.W   R8, R12
+        BIS.W   R9, R13
+        BIS.W   R15, R12
+        MOVA    &p_SPL06, R15
+        MOV.W   R12, 0x4(R15)
+        MOV.W   R13, 0x6(R15)
+//  241     p_SPL06->calib_param.c00 = (p_SPL06->calib_param.c00&0x080000)?(0xFFF00000|p_SPL06->calib_param.c00):p_SPL06->calib_param.c00;
+        MOVA    &p_SPL06, R15
+        BIT.W   #0x8, 0x6(R15)
+        JNC     ??SPL06_get_calib_param_6
+        MOVA    &p_SPL06, R15
+        MOV.W   0x4(R15), R14
+        MOV.W   0x6(R15), R15
+        BIS.W   #0x0, R14
+        BIS.W   #0xfff0, R15
+        JMP     ??SPL06_get_calib_param_2
+??SPL06_get_calib_param_6:
+        MOVA    &p_SPL06, R15
+        MOV.W   0x4(R15), R14
+        MOV.W   0x6(R15), R15
+??SPL06_get_calib_param_2:
+        MOVA    &p_SPL06, R13
+        MOV.W   R14, 0x4(R13)
+        MOV.W   R15, 0x6(R13)
+//  242     h =  SPL06_read(HW_ADR << 1, 0x15);
+        MOV.B   #0x15, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  243     m =  SPL06_read(HW_ADR << 1, 0x16);
+        MOV.B   #0x16, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R8
+//  244     l =  SPL06_read(HW_ADR << 1, 0x17);
+        MOV.B   #0x17, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+//  245     p_SPL06->calib_param.c10 = (int32_t)h<<16 | (int32_t)m<<8 | l;
+        MOV.W   #0x0, R9
+        XOR.B   R8, R9
+        XOR.W   R8, R9
+        SWPB    R9
+        AND.W   #0xff, R8
+        SWPB    R8
+        MOV.W   R10, R12
+        MOV.W   #0x0, R13
+        MOV.W   R12, R13
+        MOV.W   #0x0, R12
+        BIS.W   R8, R12
+        BIS.W   R9, R13
+        BIS.W   R15, R12
+        MOVA    &p_SPL06, R15
+        MOV.W   R12, 0x8(R15)
+        MOV.W   R13, 0xa(R15)
+//  246     p_SPL06->calib_param.c10 = (p_SPL06->calib_param.c10&0x080000)?(0xFFF00000|p_SPL06->calib_param.c10):p_SPL06->calib_param.c10;
+        MOVA    &p_SPL06, R15
+        BIT.W   #0x8, 0xa(R15)
+        JNC     ??SPL06_get_calib_param_7
+        MOVA    &p_SPL06, R15
+        MOV.W   0x8(R15), R14
+        MOV.W   0xa(R15), R15
+        BIS.W   #0x0, R14
+        BIS.W   #0xfff0, R15
+        JMP     ??SPL06_get_calib_param_3
+??SPL06_get_calib_param_7:
+        MOVA    &p_SPL06, R15
+        MOV.W   0x8(R15), R14
+        MOV.W   0xa(R15), R15
+??SPL06_get_calib_param_3:
+        MOVA    &p_SPL06, R13
+        MOV.W   R14, 0x8(R13)
+        MOV.W   R15, 0xa(R13)
+//  247     h =  SPL06_read(HW_ADR << 1, 0x18);
+        MOV.B   #0x18, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  248     l  =  SPL06_read(HW_ADR << 1, 0x19);
+        MOV.B   #0x19, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+        MOV.B   R15, R15
+//  249     p_SPL06->calib_param.c01 = (int16)h<<8 | l;
+        AND.W   #0xff, R10
+        SWPB    R10
+        BIS.W   R15, R10
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0xc(R15)
+//  250     h =  SPL06_read(HW_ADR << 1, 0x1A);
+        MOV.B   #0x1a, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  251     l  =  SPL06_read(HW_ADR << 1, 0x1B);
+        MOV.B   #0x1b, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+        MOV.B   R15, R15
+//  252     p_SPL06->calib_param.c11 = (int16)h<<8 | l;
+        AND.W   #0xff, R10
+        SWPB    R10
+        BIS.W   R15, R10
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0xe(R15)
+//  253     h =  SPL06_read(HW_ADR << 1, 0x1C);
+        MOV.B   #0x1c, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  254     l  =  SPL06_read(HW_ADR << 1, 0x1D);
+        MOV.B   #0x1d, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+        MOV.B   R15, R15
+//  255     p_SPL06->calib_param.c20 = (int16)h<<8 | l;
+        AND.W   #0xff, R10
+        SWPB    R10
+        BIS.W   R15, R10
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0x10(R15)
+//  256     h =  SPL06_read(HW_ADR << 1, 0x1E);
+        MOV.B   #0x1e, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  257     l  =  SPL06_read(HW_ADR << 1, 0x1F);
+        MOV.B   #0x1f, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+        MOV.B   R15, R15
+//  258     p_SPL06->calib_param.c21 = (int16)h<<8 | l;
+        AND.W   #0xff, R10
+        SWPB    R10
+        BIS.W   R15, R10
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0x12(R15)
+//  259     h =  SPL06_read(HW_ADR << 1, 0x20);
+        MOV.B   #0x20, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R10
+//  260     l  =  SPL06_read(HW_ADR << 1, 0x21);
+        MOV.B   #0x21, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, R15
+        MOV.B   R15, R15
+//  261     p_SPL06->calib_param.c30 = (int16)h<<8 | l;
+        AND.W   #0xff, R10
+        SWPB    R10
+        BIS.W   R15, R10
+        MOVA    &p_SPL06, R15
+        MOV.W   R10, 0x14(R15)
+//  262 }
+        POPM.A  #0x3, R10
+          CFI R10H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock4
+//  263 
+//  264 
+//  265 /*****************************************************************************
+//  266  函 数 名  : SPL06_start_temperature
+//  267  功能描述  : 发起一次温度测量
+//  268  输入参数  : void  
+//  269  输出参数  : 无
+//  270  返 回 值  : 
+//  271  调用函数  : 
+//  272  被调函数  : 
+//  273  
+//  274  修改历史      :
+//  275   1.日    期   : 2015年11月30日
+//  276     作    者   : WL
+//  277     修改内容   : 新生成函数
+//  278 
+//  279 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  280 void SPL06_start_temperature(void)
+SPL06_start_temperature:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function SPL06_start_temperature
+//  281 {
+//  282     SPL06_write(HW_ADR << 1, 0x08, 0x02);
+        MOV.B   #0x2, R14
+        MOV.B   #0x8, R13
+        MOV.B   #0xec, R12
+          CFI TailCall SPL06_write
+        BRA     #SPL06_write
+//  283 }
+          CFI EndBlock cfiBlock5
+//  284 
+//  285 /*****************************************************************************
+//  286  函 数 名  : SPL06_start_pressure
+//  287  功能描述  : 发起一次压力值测量
+//  288  输入参数  : void  
+//  289  输出参数  : 无
+//  290  返 回 值  : 
+//  291  调用函数  : 
+//  292  被调函数  : 
+//  293  
+//  294  修改历史      :
+//  295   1.日    期   : 2015年11月30日
+//  296     作    者   : WL
+//  297     修改内容   : 新生成函数
+//  298 
+//  299 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  300 void SPL06_start_pressure(void)
+SPL06_start_pressure:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function SPL06_start_pressure
+//  301 {
+//  302     SPL06_write(HW_ADR << 1, 0x08, 0x01);
+        MOV.B   #0x1, R14
+        MOV.B   #0x8, R13
+        MOV.B   #0xec, R12
+          CFI TailCall SPL06_write
+        BRA     #SPL06_write
+//  303 }
+          CFI EndBlock cfiBlock6
+//  304 
+//  305 /*****************************************************************************
+//  306  函 数 名  : SPL06_start_continuous
+//  307  功能描述  : Select node for the continuously measurement
+//  308  输入参数  : uint8 mode  1: pressure; 2: temperature; 3: pressure and temperature
+//  309  输出参数  : 无
+//  310  返 回 值  : 
+//  311  调用函数  : 
+//  312  被调函数  : 
+//  313  
+//  314  修改历史      :
+//  315   1.日    期   : 2015年11月25日
+//  316     作    者   : WL
+//  317     修改内容   : 新生成函数
+//  318 
+//  319 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  320 void SPL06_start_continuous(uint8 mode)
+SPL06_start_continuous:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function SPL06_start_continuous
+//  321 {
+//  322     SPL06_write(HW_ADR << 1, 0x08, mode+4);
+        ADD.B   #0x4, R12
+        MOV.B   R12, R14
+        MOV.B   #0x8, R13
+        MOV.B   #0xec, R12
+          CFI TailCall SPL06_write
+        BRA     #SPL06_write
+//  323 }
+          CFI EndBlock cfiBlock7
+//  324 
+//  325 
+//  326 /*****************************************************************************
+//  327  函 数 名  : SPL06_get_raw_temp
+//  328  功能描述  : 获取温度的原始值，并转换成32Bits整数
+//  329  输入参数  : void  
+//  330  输出参数  : 无
+//  331  返 回 值  : 
+//  332  调用函数  : 
+//  333  被调函数  : 
+//  334  
+//  335  修改历史      :
+//  336   1.日    期   : 2015年11月30日
+//  337     作    者   : WL
+//  338     修改内容   : 新生成函数
+//  339 
+//  340 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  341 void SPL06_get_raw_temp(void)
+SPL06_get_raw_temp:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function SPL06_get_raw_temp
+//  342 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        SUBA    #0x4, SP
+          CFI CFA SP+12
+//  343     uint8 h[3] = {0};
+        MOV.W   #0x0, 0(SP)
+        MOV.B   #0x0, 0x2(SP)
+//  344     
+//  345     h[0] = SPL06_read(HW_ADR << 1, 0x03);
+        MOV.B   #0x3, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, 0(SP)
+//  346     h[1] = SPL06_read(HW_ADR << 1, 0x04);
+        MOV.B   #0x4, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, 0x1(SP)
+//  347     h[2] = SPL06_read(HW_ADR << 1, 0x05);
+        MOV.B   #0x5, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, 0x2(SP)
+//  348 
+//  349     p_SPL06->i32rawTemperature = (int32_t)h[0]<<16 | (int32_t)h[1]<<8 | (int32_t)h[2];
+        MOV.B   0x2(SP), R10
+        MOV.B   R10, R10
+        MOV.B   0x1(SP), R12
+        MOV.B   R12, R12
+        MOV.W   #0x0, R13
+        XOR.B   R12, R13
+        XOR.W   R12, R13
+        SWPB    R13
+        AND.W   #0xff, R12
+        SWPB    R12
+        MOV.B   @SP, R14
+        MOV.B   R14, R14
+        MOV.W   #0x0, R15
+        MOV.W   R14, R15
+        MOV.W   #0x0, R14
+        BIS.W   R12, R14
+        BIS.W   R13, R15
+        BIS.W   R10, R14
+        MOVA    &p_SPL06, R13
+        MOV.W   R14, 0x1c(R13)
+        MOV.W   R15, 0x1e(R13)
+//  350     p_SPL06->i32rawTemperature= (p_SPL06->i32rawTemperature&0x800000) ? (0xFF000000|p_SPL06->i32rawTemperature) : p_SPL06->i32rawTemperature;
+        MOVA    &p_SPL06, R15
+        CMP.B   #0x0, 0x1e(R15)
+        JGE     ??SPL06_get_raw_temp_1
+        MOVA    &p_SPL06, R15
+        MOV.W   0x1c(R15), R14
+        MOV.W   0x1e(R15), R15
+        BIS.W   #0x0, R14
+        BIS.W   #0xff00, R15
+        JMP     ??SPL06_get_raw_temp_0
+??SPL06_get_raw_temp_1:
+        MOVA    &p_SPL06, R15
+        MOV.W   0x1c(R15), R14
+        MOV.W   0x1e(R15), R15
+??SPL06_get_raw_temp_0:
+        MOVA    &p_SPL06, R13
+        MOV.W   R14, 0x1c(R13)
+        MOV.W   R15, 0x1e(R13)
+//  351 }
+        ADDA    #0x4, SP
+          CFI CFA SP+8
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock8
+//  352 
+//  353 /*****************************************************************************
+//  354  函 数 名  : SPL06_get_raw_pressure
+//  355  功能描述  : 获取压力原始值，并转换成32bits整数
+//  356  输入参数  : void  
+//  357  输出参数  : 无
+//  358  返 回 值  : 
+//  359  调用函数  : 
+//  360  被调函数  : 
+//  361  
+//  362  修改历史      :
+//  363   1.日    期   : 2015年11月30日
+//  364     作    者   : WL
+//  365     修改内容   : 新生成函数
+//  366 
+//  367 *****************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  368 void SPL06_get_raw_pressure(void)
+SPL06_get_raw_pressure:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function SPL06_get_raw_pressure
+//  369 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        SUBA    #0x4, SP
+          CFI CFA SP+12
+//  370     uint8 h[3];
+//  371     
+//  372     h[0] = SPL06_read(HW_ADR << 1, 0x00);
+        MOV.B   #0x0, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, 0(SP)
+//  373     h[1] = SPL06_read(HW_ADR << 1, 0x01);
+        MOV.B   #0x1, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, 0x1(SP)
+//  374     h[2] = SPL06_read(HW_ADR << 1, 0x02);
+        MOV.B   #0x2, R13
+        MOV.B   #0xec, R12
+          CFI FunCall SPL06_read
+        CALLA   #SPL06_read
+        MOV.B   R12, 0x2(SP)
+//  375     
+//  376     p_SPL06->i32rawPressure = (int32_t)h[0]<<16 | (int32_t)h[1]<<8 | (int32_t)h[2];
+        MOV.B   0x2(SP), R10
+        MOV.B   R10, R10
+        MOV.B   0x1(SP), R12
+        MOV.B   R12, R12
+        MOV.W   #0x0, R13
+        XOR.B   R12, R13
+        XOR.W   R12, R13
+        SWPB    R13
+        AND.W   #0xff, R12
+        SWPB    R12
+        MOV.B   @SP, R14
+        MOV.B   R14, R14
+        MOV.W   #0x0, R15
+        MOV.W   R14, R15
+        MOV.W   #0x0, R14
+        BIS.W   R12, R14
+        BIS.W   R13, R15
+        BIS.W   R10, R14
+        MOVA    &p_SPL06, R13
+        MOV.W   R14, 0x18(R13)
+        MOV.W   R15, 0x1a(R13)
+//  377     p_SPL06->i32rawPressure= (p_SPL06->i32rawPressure&0x800000) ? (0xFF000000|p_SPL06->i32rawPressure) : p_SPL06->i32rawPressure;
+        MOVA    &p_SPL06, R15
+        CMP.B   #0x0, 0x1a(R15)
+        JGE     ??SPL06_get_raw_pressure_1
+        MOVA    &p_SPL06, R15
+        MOV.W   0x18(R15), R14
+        MOV.W   0x1a(R15), R15
+        BIS.W   #0x0, R14
+        BIS.W   #0xff00, R15
+        JMP     ??SPL06_get_raw_pressure_0
+??SPL06_get_raw_pressure_1:
+        MOVA    &p_SPL06, R15
+        MOV.W   0x18(R15), R14
+        MOV.W   0x1a(R15), R15
+??SPL06_get_raw_pressure_0:
+        MOVA    &p_SPL06, R13
+        MOV.W   R14, 0x18(R13)
+        MOV.W   R15, 0x1a(R13)
+//  378 }
+        ADDA    #0x4, SP
+          CFI CFA SP+8
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock9
+//  379 
+//  380 
+//  381 /*****************************************************************************
+//  382  函 数 名  : SPL06_get_temperature
+//  383  功能描述  : 在获取原始值的基础上，返回浮点校准后的温度值
+//  384  输入参数  : void  
+//  385  输出参数  : 无
+//  386  返 回 值  : 
+//  387  调用函数  : 
+//  388  被调函数  : 
+//  389  
+//  390  修改历史      :
+//  391   1.日    期   : 2015年11月30日
+//  392     作    者   : WL
+//  393     修改内容   : 新生成函数
+//  394 
+//  395 *****************************************************************************/
+//  396 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  397 float SPL06_get_temperature(void)
+SPL06_get_temperature:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function SPL06_get_temperature
+//  398 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+//  399     float fTCompensate;
+//  400     float fTsc;
+//  401 
+//  402     fTsc = p_SPL06->i32rawTemperature / (float)p_SPL06->i32kT;
+        MOVA    &p_SPL06, R15
+        MOV.W   0x1c(R15), R12
+        MOV.W   0x1e(R15), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVA    &p_SPL06, R15
+        MOV.W   0x24(R15), R12
+        MOV.W   0x26(R15), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  403     fTCompensate =  p_SPL06->calib_param.c0 * 0.5 + p_SPL06->calib_param.c1 * fTsc;
+        MOVA    &p_SPL06, R15
+        MOV.W   @R15, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f00, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOVA    &p_SPL06, R15
+        MOV.W   0x2(R15), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+//  404     return fTCompensate;
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  405 }
+          CFI EndBlock cfiBlock10
+//  406 
+//  407 /*****************************************************************************
+//  408  函 数 名  : SPL06_get_pressure
+//  409  功能描述  : 在获取原始值的基础上，返回浮点校准后的压力值
+//  410  输入参数  : void  
+//  411  输出参数  : 无
+//  412  返 回 值  : 
+//  413  调用函数  : 
+//  414  被调函数  : 
+//  415  
+//  416  修改历史      :
+//  417   1.日    期   : 2015年11月30日
+//  418     作    者   : WL
+//  419     修改内容   : 新生成函数
+//  420 
+//  421 *****************************************************************************/
+//  422 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  423 float SPL06_get_pressure(void)
+SPL06_get_pressure:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function SPL06_get_pressure
+//  424 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+//  425     float fTsc, fPsc;
+//  426     float qua2, qua3;
+//  427     float fPCompensate;
+//  428 
+//  429     fTsc = p_SPL06->i32rawTemperature / (float)p_SPL06->i32kT;
+        MOVA    &p_SPL06, R15
+        MOV.W   0x1c(R15), R12
+        MOV.W   0x1e(R15), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOVA    &p_SPL06, R15
+        MOV.W   0x24(R15), R12
+        MOV.W   0x26(R15), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  430     fPsc = p_SPL06->i32rawPressure / (float)p_SPL06->i32kP;
+        MOVA    &p_SPL06, R15
+        MOV.W   0x18(R15), R12
+        MOV.W   0x1a(R15), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOVA    &p_SPL06, R15
+        MOV.W   0x20(R15), R12
+        MOV.W   0x22(R15), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  431     qua2 = p_SPL06->calib_param.c10 + fPsc * (p_SPL06->calib_param.c20 + fPsc* p_SPL06->calib_param.c30);
+        MOVA    &p_SPL06, R15
+        MOV.W   0x8(R15), R12
+        MOV.W   0xa(R15), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVA    &p_SPL06, R15
+        MOV.W   0x10(R15), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOVA    &p_SPL06, R15
+        MOV.W   0x14(R15), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  432     qua3 = fTsc * fPsc * (p_SPL06->calib_param.c11 + fPsc * p_SPL06->calib_param.c21);
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        PUSH.W  R13
+          CFI CFA SP+38
+        PUSH.W  R12
+          CFI CFA SP+40
+        MOVA    &p_SPL06, R15
+        MOV.W   0xe(R15), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOVA    &p_SPL06, R15
+        MOV.W   0x12(R15), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        POP.W   R14
+          CFI CFA SP+38
+        POP.W   R15
+          CFI CFA SP+36
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//  433 		//qua3 = 0.9f *fTsc * fPsc * (p_SPL06->calib_param.c11 + fPsc * p_SPL06->calib_param.c21);
+//  434 	
+//  435     fPCompensate = p_SPL06->calib_param.c00 + fPsc * qua2 + fTsc * p_SPL06->calib_param.c01 + qua3;
+        MOVA    &p_SPL06, R15
+        MOV.W   0x4(R15), R12
+        MOV.W   0x6(R15), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        PUSH.W  R13
+          CFI CFA SP+38
+        PUSH.W  R12
+          CFI CFA SP+40
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        POP.W   R14
+          CFI CFA SP+38
+        POP.W   R15
+          CFI CFA SP+36
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        MOVA    &p_SPL06, R15
+        MOV.W   0xc(R15), R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+//  436 		//fPCompensate = p_SPL06->calib_param.c00 + fPsc * qua2 + 0.9f *fTsc  * p_SPL06->calib_param.c01 + qua3;
+//  437     return fPCompensate;
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  438 	
+//  439 }
+          CFI EndBlock cfiBlock11
+//  440 
+//  441 #define CONST_PF 0.1902630958	//(1/5.25588f) Pressure factor
+//  442 #define FIX_TEMP 25				// Fixed Temperature. ASL is a function of pressure and temperature, but as the temperature changes so much (blow a little towards the flie and watch it drop 5 degrees) it corrupts the ASL estimates.
+//  443 	
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  444 float SPL06PressureToAltitude(float pressure/*, float* groundPressure, float* groundTemp*/)
+SPL06PressureToAltitude:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function SPL06PressureToAltitude
+//  445 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  446     if (pressure > 0)
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x80, R15
+          CFI FunCall ?FLT_GE
+        CALLA   #?FLT_GE
+        JNC     ??SPL06PressureToAltitude_1
+//  447     {
+//  448         return ((pow((1015.7f / pressure), CONST_PF) - 1.0f) * (FIX_TEMP + 273.15f)) / 0.0065f;
+        MOV.W   #0xd454, R14
+        MOV.W   #0x3e42, R15
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+        MOV.W   #0xeccd, R12
+        MOV.W   #0x447d, R13
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall pow
+        CALLA   #pow
+        MOV.W   #0x0, R14
+        MOV.W   #0xbf80, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   #0x1333, R14
+        MOV.W   #0x4395, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   #0xfdf4, R14
+        MOV.W   #0x3bd4, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        JMP     ??SPL06PressureToAltitude_0
+//  449     }
+//  450     else
+//  451     {
+//  452         return 0;
+??SPL06PressureToAltitude_1:
+        MOV.W   #0x0, R12
+        MOV.W   #0x0, R13
+??SPL06PressureToAltitude_0:
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  453     }
+//  454 }
+          CFI EndBlock cfiBlock12
+//  455 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//  456 float temperature;
+temperature:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//  457 float pressure,alt_3,height;
+pressure:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+alt_3:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+height:
+        DS8 4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  458 float user_SPL06_get()
+user_SPL06_get:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function user_SPL06_get
+//  459 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  460     uint8_t h[3];
+//  461   
+//  462     SPL06_get_raw_temp();
+          CFI FunCall SPL06_get_raw_temp
+        CALLA   #SPL06_get_raw_temp
+//  463     temperature = SPL06_get_temperature();
+          CFI FunCall SPL06_get_temperature
+        CALLA   #SPL06_get_temperature
+        MOVX.W  R12, &temperature
+        MOVX.W  R13, &temperature + 2
+//  464 
+//  465     SPL06_get_raw_pressure();
+          CFI FunCall SPL06_get_raw_pressure
+        CALLA   #SPL06_get_raw_pressure
+//  466     pressure = SPL06_get_pressure();
+          CFI FunCall SPL06_get_pressure
+        CALLA   #SPL06_get_pressure
+        MOVX.W  R12, &pressure
+        MOVX.W  R13, &pressure + 2
+//  467 
+//  468     alt_3 = (101000 - pressure)/1000.0f;
+        MOV.W   #0x4400, R12
+        MOV.W   #0x47c5, R13
+        MOVX.W  &pressure, R14
+        MOVX.W  &pressure + 2, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   #0x0, R14
+        MOV.W   #0x447a, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOVX.W  R12, &alt_3
+        MOVX.W  R13, &alt_3 + 2
+//  469     height = 0.0082f *alt_3 * alt_3 *alt_3 + 0.09f *(101000 - pressure)*100.0f ;
+        MOVX.W  &alt_3, R12
+        MOVX.W  &alt_3 + 2, R13
+        MOV.W   #0x594b, R14
+        MOV.W   #0x3c06, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  &alt_3, R14
+        MOVX.W  &alt_3 + 2, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOVX.W  &alt_3, R14
+        MOVX.W  &alt_3 + 2, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+        MOV.W   #0x4400, R12
+        MOV.W   #0x47c5, R13
+        MOVX.W  &pressure, R14
+        MOVX.W  &pressure + 2, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.W   #0x51ec, R14
+        MOV.W   #0x3db8, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   #0x0, R14
+        MOV.W   #0x42c8, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R10, R14
+        MOV.W   R11, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOVX.W  R12, &height
+        MOVX.W  R13, &height + 2
+//  470 
+//  471     return height;
+        MOVX.W  &height, R12
+        MOVX.W  &height + 2, R13
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+//  472 }
+          CFI EndBlock cfiBlock13
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+        DATA8
+        DC8 0, 0, 0
+
+        END
+// 
+// 2 356 bytes in segment CODE
+//     3 bytes in segment DATA20_C
+//    60 bytes in segment DATA20_Z
+// 
+// 2 356 bytes of CODE  memory
+//     3 bytes of CONST memory
+//    60 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: 1

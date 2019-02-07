@@ -1,0 +1,1095 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:09
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\mpu6050.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW2577.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\mpu6050.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\mpu6050.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME mpu6050
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Cast32sto32f
+        EXTERN _Cast32fto32s
+        EXTERN _Sub32f
+        EXTERN _Mul32f
+        EXTERN _Add32f
+        EXTERN ?ClearMemoryWords20
+        EXTERN ?cstart_init_copy20
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Acc_Read
+        PUBLIC GetMPU6050Data
+        PUBLIC GetMPU6050Offset
+        PUBLIC Gyro_Read
+        PUBLIC MPU6050Init
+        PUBLIC g_MPUManager
+        PUBLIC pMpu
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN I2C_Read_Byte
+        EXTERN KalmanFilter
+        EXTERN memset
+        EXTERN delay_ms
+        EXTERN I2C_Write_Byte
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\mpu6050.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：mpu6050.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 MPU6050驱动的使用方法如下：
+//   23 1.调用MPU6050Init函数，查看当前MPU6050是否初始化成功；
+//   24 2.固定周期调用GetMPU6050Data，以获取传感器数据；
+//   25 
+//   26 PS：传感器数据存放在g_MPUManager中
+//   27 
+//   28 
+//   29 */
+//   30 //外部文件引用
+//   31 #include "include.h"
+//   32 #include "mpu6050.h"
+//   33 #include "filter.h"
+//   34 #include <string.h>
+//   35 #include "LED.h"
+//   36 #include "myMath.h"
+//   37 #include "kalman.h"
+//   38 #include "i2c.h"
+//   39 
+//   40 
+//   41 //宏定义区
+//   42 #define SMPLRT_DIV          0x19    //陀螺仪采样率，典型值：0x07(125Hz)
+//   43 #define CONFIGL             0x1A    //低通滤波频率，典型值：0x06(5Hz)
+//   44 #define GYRO_CONFIG         0x1B    //陀螺仪自检及测量范围，典型值：0x18(不自检，2000deg/s)
+//   45 #define ACCEL_CONFIG        0x1C    //加速计自检、测量范围及高通滤波频率，典型值：0x01(不自检，2G，5Hz)
+//   46 #define ACCEL_ADDRESS       0x3B
+//   47 #define ACCEL_XOUT_H        0x3B
+//   48 #define ACCEL_XOUT_L        0x3C
+//   49 #define ACCEL_YOUT_H        0x3D
+//   50 #define ACCEL_YOUT_L        0x3E
+//   51 #define ACCEL_ZOUT_H        0x3F
+//   52 #define ACCEL_ZOUT_L        0x40
+//   53 #define TEMP_OUT_H          0x41
+//   54 #define TEMP_OUT_L          0x42
+//   55 #define GYRO_XOUT_H         0x43
+//   56 #define GYRO_ADDRESS        0x43
+//   57 #define GYRO_XOUT_L         0x44    
+//   58 #define GYRO_YOUT_H         0x45
+//   59 #define GYRO_YOUT_L         0x46
+//   60 #define GYRO_ZOUT_H         0x47
+//   61 #define GYRO_ZOUT_L         0x48
+//   62 #define PWR_MGMT_1          0x6B    //电源管理，典型值：0x00(正常启用)
+//   63 #define WHO_AM_I            0x75    //IIC地址寄存器(默认数值0x68，只读)
+//   64 #define MPU6050_PRODUCT_ID  0x68
+//   65 #define MPU6052C_PRODUCT_ID 0x72
+//   66 #define MPU6050_ADDRESS     0xD0    //0x68
+//   67 
+//   68 
+//   69 //Extern引用
+//   70 
+//   71 
+//   72 
+//   73 //私有函数区
+//   74 void Acc_Read(uint8_t *ptr);
+//   75 void Gyro_Read(uint8_t *ptr);
+//   76 
+//   77 
+//   78 //私有变量区
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   79 MPU6050Manager_t g_MPUManager;   //g_MPUManager原始数据
+g_MPUManager:
+        DS8 26
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_copy20
+//   80 int16_t *pMpu = (int16_t *)&g_MPUManager;
+pMpu:
+        DS8 4
+        REQUIRE `?<Initializer for pMpu>`
+//   81 /******************************************************************************
+//   82   * 函数名称：MPU6050Init
+//   83   * 函数描述：g_MPUManager的初始化
+//   84   * 输    入：void
+//   85   * 输    出：g_MPUManager初始化结果   
+//   86               0:初始化成功
+//   87               1:初始化失败
+//   88   * 返    回： 
+//   89   * 备    注：    
+//   90   *    
+//   91   *
+//   92 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   93 bool MPU6050Init(void) //初始化
+MPU6050Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function MPU6050Init
+//   94 {   
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//   95     uint8_t check = 0;
+        MOV.B   #0x0, R10
+//   96     
+//   97     I2C_Write_Byte(MPU6050_ADDRESS, PWR_MGMT_1,    0x80);   //复位
+        MOV.B   #0x80, R14
+        MOV.B   #0x6b, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Write_Byte
+        CALLA   #I2C_Write_Byte
+//   98     delay_ms(30);
+        MOV.W   #0x1e, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay_ms
+        CALLA   #delay_ms
+//   99     I2C_Write_Byte(MPU6050_ADDRESS, SMPLRT_DIV,   0x02);   //陀螺仪采样率，0x00(333Hz)
+        MOV.B   #0x2, R14
+        MOV.B   #0x19, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Write_Byte
+        CALLA   #I2C_Write_Byte
+//  100     I2C_Write_Byte(MPU6050_ADDRESS, PWR_MGMT_1,   0x03);   //设置设备时钟源，陀螺仪Z轴
+        MOV.B   #0x3, R14
+        MOV.B   #0x6b, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Write_Byte
+        CALLA   #I2C_Write_Byte
+//  101     I2C_Write_Byte(MPU6050_ADDRESS, CONFIGL,      0x03);   //低通滤波频率，0x03(42Hz)
+        MOV.B   #0x3, R14
+        MOV.B   #0x1a, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Write_Byte
+        CALLA   #I2C_Write_Byte
+//  102     I2C_Write_Byte(MPU6050_ADDRESS, GYRO_CONFIG,  0x18);   //+-2000deg/s
+        MOV.B   #0x18, R14
+        MOV.B   #0x1b, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Write_Byte
+        CALLA   #I2C_Write_Byte
+//  103     I2C_Write_Byte(MPU6050_ADDRESS, ACCEL_CONFIG, 0x09);   //+-4G
+        MOV.B   #0x9, R14
+        MOV.B   #0x1c, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Write_Byte
+        CALLA   #I2C_Write_Byte
+//  104 
+//  105     check = I2C_Read_Byte(MPU6050_ADDRESS, 0x75);  //判断g_MPUManager地址
+        MOV.B   #0x75, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Read_Byte
+        CALLA   #I2C_Read_Byte
+        MOV.B   R12, R10
+//  106 
+//  107     if(check != MPU6050_PRODUCT_ID) //如果地址不正确
+        CMP.B   #0x68, R10
+        JEQ     ??MPU6050Init_1
+//  108     {
+//  109         g_MPUManager.Check = false;
+        MOVX.B  #0x0, &g_MPUManager + 24
+//  110         return false;
+        MOV.B   #0x0, R12
+        JMP     ??MPU6050Init_0
+//  111     }
+//  112     else
+//  113     {
+//  114         GetMPU6050Offset(); //调用校准数据
+??MPU6050Init_1:
+          CFI FunCall GetMPU6050Offset
+        CALLA   #GetMPU6050Offset
+//  115         g_MPUManager.Check = true;
+        MOVX.B  #0x1, &g_MPUManager + 24
+//  116         return true;
+        MOV.B   #0x1, R12
+??MPU6050Init_0:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//  117     }
+//  118 }
+          CFI EndBlock cfiBlock0
+//  119 
+//  120 /******************************************************************************
+//  121   * 函数名称：GetMPU6050Data
+//  122   * 函数描述：读取陀螺仪和加速度计的数据并做滤波处理
+//  123   * 输    入：void
+//  124   * 输    出：void
+//  125   * 返    回：void
+//  126   * 备    注：null
+//  127   *    
+//  128   *
+//  129 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  130 void GetMPU6050Data(void) 
+GetMPU6050Data:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function GetMPU6050Data
+//  131 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        SUBA    #0xc, SP
+          CFI CFA SP+40
+//  132     uint8_t buffer[12];
+//  133     const float factor = 0.15f;  //滤波因素  
+        MOV.W   #0x999a, R8
+        MOV.W   #0x3e19, R9
+//  134     static float tBuff[3] = {0};
+//  135     static EKF_Filter_t s_EKF[3] = {{0.02, 0, 0, 0, 0.001, 0.543},
+//  136                                     {0.02, 0, 0, 0, 0.001, 0.543},
+//  137                                     {0.02, 0, 0, 0, 0.001, 0.543}};    
+//  138 
+//  139     Acc_Read(buffer);
+        MOVA    SP, R12
+          CFI FunCall Acc_Read
+        CALLA   #Acc_Read
+//  140     Gyro_Read(buffer);
+        MOVA    SP, R12
+          CFI FunCall Gyro_Read
+        CALLA   #Gyro_Read
+//  141 
+//  142     for(int i = 0; i < 6; i++)
+        MOV.W   #0x0, R10
+??GetMPU6050Data_0:
+        CMP.W   #0x6, R10
+        JGE     ??GetMPU6050Data_1
+//  143     {
+//  144         pMpu[i] = (((int16_t)buffer[i << 1] << 8) | buffer[(i << 1) + 1])
+//  145                     - g_MPUManager.Offset[i];        
+        MOVA    SP, R11
+        MOV.W   R10, R15
+        RLA.W   R15
+        ADD.W   #0x1, R15
+        ADDA    R11, R15
+        MOV.B   @R15, R11
+        MOV.B   R11, R11
+        MOVA    SP, R7
+        MOV.W   R10, R15
+        RLA.W   R15
+        ADDA    R7, R15
+        MOV.B   @R15, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R11, R15
+        MOV.W   R10, R11
+        RLAM.A  #0x4, R11
+        RRAM.A  #0x4, R11
+        ADDA    R11, R11
+        SUBX.W  g_MPUManager + 12(R11), R15
+        MOVA    &pMpu, R11
+        MOV.W   R10, R7
+        RLAM.A  #0x4, R7
+        RRAM.A  #0x4, R7
+        ADDA    R7, R7
+        ADDA    R11, R7
+        MOV.W   R15, 0(R7)
+//  146 
+//  147         //此处对加速度做一维卡尔曼滤波
+//  148         if(i < 3)
+        CMP.W   #0x3, R10
+        JGE     ??GetMPU6050Data_2
+//  149         {
+//  150             KalmanFilter(&s_EKF[i],(float)pMpu[i]);  //一维卡尔曼
+        MOVA    &pMpu, R15
+        MOV.W   R10, R11
+        RLAM.A  #0x4, R11
+        RRAM.A  #0x4, R11
+        ADDA    R11, R11
+        ADDA    R15, R11
+        MOV.W   @R11, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R14
+        MOV.W   R13, R15
+        MOV.W   R10, R12
+        RLAM.A  #0x4, R12
+        RRAM.A  #0x4, R12
+        RLAM.A  #0x3, R12
+        MOVA    R12, R11
+        ADDA    R12, R12
+        ADDA    R11, R12
+        ADDA    #??s_EKF, R12
+          CFI FunCall KalmanFilter
+        CALLA   #KalmanFilter
+//  151             pMpu[i] = (int16_t)s_EKF[i].out;
+        MOV.W   R10, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x3, R15
+        MOVA    R15, R11
+        ADDA    R15, R15
+        ADDA    R11, R15
+        MOVX.W  ??s_EKF + 8(R15), R12
+        MOVX.W  ??s_EKF + 10(R15), R13
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOVA    &pMpu, R15
+        MOV.W   R10, R11
+        RLAM.A  #0x4, R11
+        RRAM.A  #0x4, R11
+        ADDA    R11, R11
+        ADDA    R15, R11
+        MOV.W   R12, 0(R11)
+//  152         }
+//  153 
+//  154         //此处对角速度做一介低通滤波
+//  155         if(i > 2)
+??GetMPU6050Data_2:
+        CMP.W   #0x3, R10
+        JL      ??GetMPU6050Data_3
+//  156         {    
+//  157             uint8_t k = i - 3;
+        PUSH.W  R11
+          CFI CFA SP+42
+        MOV.B   R10, 0(SP)
+        POP.W   R11
+          CFI CFA SP+40
+        ADD.B   #0xfd, R11
+//  158             pMpu[i] = (int16_t)(tBuff[k] * (1 - factor) + pMpu[i] * factor);         
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOV.B   R11, R15
+        RLAM.A  #0x2, R15
+        MOVX.W  ??tBuff(R15), R14
+        MOVX.W  ??tBuff + 2(R15), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVA    &pMpu, R15
+        MOV.W   R10, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        ADDA    R14, R14
+        ADDA    R15, R14
+        MOV.W   @R14, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOVA    &pMpu, R15
+        MOV.W   R10, R7
+        RLAM.A  #0x4, R7
+        RRAM.A  #0x4, R7
+        ADDA    R7, R7
+        ADDA    R15, R7
+        MOV.W   R12, 0(R7)
+//  159             tBuff[k] = tBuff[k] * (1 - factor) + pMpu[i] * factor;   
+        MOV.B   R11, R7
+        RLAM.A  #0x2, R7
+        MOV.W   #0x0, R12
+        MOV.W   #0x3f80, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Sub32f
+        CALLA   #_Sub32f
+        MOVX.W  ??tBuff(R7), R14
+        MOVX.W  ??tBuff + 2(R7), R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+        MOVA    &pMpu, R15
+        MOV.W   R10, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        ADDA    R14, R14
+        ADDA    R15, R14
+        MOV.W   @R14, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   R6, R14
+        MOV.W   R7, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.B   R11, R11
+        RLAM.A  #0x2, R11
+        MOVX.W  R12, ??tBuff(R11)
+        MOVX.W  R13, ??tBuff + 2(R11)
+//  160         }
+//  161     }
+??GetMPU6050Data_3:
+        ADD.W   #0x1, R10
+        JMP     ??GetMPU6050Data_0
+//  162 }
+??GetMPU6050Data_1:
+        ADDA    #0xc, SP
+          CFI CFA SP+28
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+??tBuff:
+        DS8 12
+
+        RSEG DATA20_I:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_copy20
+??s_EKF:
+        DS8 72
+        REQUIRE `?<Initializer for s_EKF>`
+//  163 
+//  164 /******************************************************************************
+//  165   * 函数名称：GetMPU6050Offset
+//  166   * 函数描述：获取g_MPUManager静态下传感器偏差
+//  167   * 输    入：void
+//  168   * 输    出：void
+//  169   * 返    回：void
+//  170   * 备    注：null
+//  171   *    
+//  172   *
+//  173 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  174 void GetMPU6050Offset(void) //校准
+GetMPU6050Offset:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function GetMPU6050Offset
+//  175 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        SUBA    #0x24, SP
+          CFI CFA SP+64
+//  176     int32_t buffer[6] = {0};
+        MOVA    SP, R12
+        ADDA    #0xc, R12
+        MOVA    #0xc, R14
+          CFI FunCall ?ClearMemoryWords20
+        CALLA   #?ClearMemoryWords20
+//  177     int16_t i = 0;  
+        MOV.W   #0x0, R10
+//  178     uint8_t k = 30;
+        MOV.B   #0x1e, R9
+//  179     const int8_t MAX_GYRO_QUIET = 5;
+        MOV.B   #0x5, R11
+//  180     const int8_t MIN_GYRO_QUIET = -5;    
+        MOV.B   #0xfb, R8
+//  181     
+//  182     int16_t LastGyro[3] = {0};  /*wait for calm down*/
+        MOV.W   #0x0, 0x6(SP)
+        MOV.W   #0x0, 0x8(SP)
+        MOV.W   #0x0, 0xa(SP)
+//  183     int16_t ErrorGyro[3] = {0};        /*set offset initial to zero*/
+        MOV.W   #0x0, 0(SP)
+        MOV.W   #0x0, 0x2(SP)
+        MOV.W   #0x0, 0x4(SP)
+//  184     
+//  185     memset(g_MPUManager.Offset, 0, 12);
+        MOV.W   #0xc, R14
+        MOV.W   #0x0, R15
+        MOV.W   #0x0, R13
+        MOVA    #g_MPUManager + 12, R12
+          CFI FunCall memset
+        CALLA   #memset
+//  186     g_MPUManager.Offset[2] = 8192;   //根据手册量程设定加速度标定值 
+        MOVX.W  #0x2000, &g_MPUManager + 16
+//  187 
+//  188     while(k--)  //判断飞控是否处于静止状态
+??GetMPU6050Offset_2:
+        MOV.B   R9, R14
+        MOV.B   R14, R9
+        ADD.B   #0xff, R9
+        CMP.B   #0x0, R14
+        JEQ     ??GetMPU6050Offset_6
+//  189     {
+//  190         do
+//  191         {
+//  192             delay_ms(10);
+??GetMPU6050Offset_1:
+        MOV.W   #0xa, R12
+        MOV.W   #0x0, R13
+          CFI FunCall delay_ms
+        CALLA   #delay_ms
+//  193             GetMPU6050Data();
+          CFI FunCall GetMPU6050Data
+        CALLA   #GetMPU6050Data
+//  194             
+//  195             for(i = 0; i < 3; i++)
+        MOV.W   #0x0, R10
+??GetMPU6050Offset_0:
+        CMP.W   #0x3, R10
+        JGE     ??GetMPU6050Offset_7
+//  196             {
+//  197                 ErrorGyro[i] = pMpu[i + 3] - LastGyro[i];
+        MOVA    &pMpu, R14
+        MOV.W   R10, R15
+        ADD.W   #0x3, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        ADDA    R15, R15
+        ADDA    R14, R15
+        MOV.W   @R15, R15
+        MOVA    SP, R14
+        ADDA    #0x6, R14
+        MOV.W   R10, R13
+        ADDA    R13, R13
+        ADDA    R14, R13
+        SUB.W   @R13, R15
+        MOVA    SP, R14
+        MOV.W   R10, R13
+        ADDA    R13, R13
+        ADDA    R14, R13
+        MOV.W   R15, 0(R13)
+//  198                 LastGyro[i] = pMpu[i + 3];    
+        MOVA    &pMpu, R14
+        MOV.W   R10, R15
+        ADD.W   #0x3, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        ADDA    R15, R15
+        ADDA    R14, R15
+        MOVA    SP, R14
+        ADDA    #0x6, R14
+        MOV.W   R10, R13
+        ADDA    R13, R13
+        ADDA    R14, R13
+        MOV.W   @R15, 0(R13)
+//  199             }
+        ADD.W   #0x1, R10
+        JMP     ??GetMPU6050Offset_0
+//  200         }while ((ErrorGyro[0] > MAX_GYRO_QUIET) 
+//  201              || (ErrorGyro[0] < MIN_GYRO_QUIET)
+//  202              || (ErrorGyro[1] > MAX_GYRO_QUIET) 
+//  203              || (ErrorGyro[1] < MIN_GYRO_QUIET)
+//  204              || (ErrorGyro[2] > MAX_GYRO_QUIET)
+//  205              || (ErrorGyro[2] < MIN_GYRO_QUIET));
+??GetMPU6050Offset_7:
+        SXT     R11
+        AND.W   #0xffff, R11
+        CMP.W   @SP, R11
+        JL      ??GetMPU6050Offset_1
+        SXT     R8
+        AND.W   #0xffff, R8
+        CMP.W   R8, 0(SP)
+        JL      ??GetMPU6050Offset_1
+        SXT     R11
+        AND.W   #0xffff, R11
+        CMP.W   0x2(SP), R11
+        JL      ??GetMPU6050Offset_1
+        SXT     R8
+        AND.W   #0xffff, R8
+        CMP.W   R8, 0x2(SP)
+        JL      ??GetMPU6050Offset_1
+        SXT     R11
+        AND.W   #0xffff, R11
+        CMP.W   0x4(SP), R11
+        JL      ??GetMPU6050Offset_1
+        SXT     R8
+        AND.W   #0xffff, R8
+        CMP.W   R8, 0x4(SP)
+        JL      ??GetMPU6050Offset_1
+        JMP     ??GetMPU6050Offset_2
+//  206     }
+//  207 
+//  208     for(i = 0; i < 356; i++)  //取第100到第356组的平均值做为校准值
+??GetMPU6050Offset_6:
+        MOV.W   #0x0, R10
+??GetMPU6050Offset_4:
+        CMP.W   #0x164, R10
+        JGE     ??GetMPU6050Offset_8
+//  209     {        
+//  210         GetMPU6050Data();
+          CFI FunCall GetMPU6050Data
+        CALLA   #GetMPU6050Data
+//  211         
+//  212         if(100 <= i)
+        CMP.W   #0x64, R10
+        JL      ??GetMPU6050Offset_9
+//  213         {
+//  214             for(int k = 0; k < 6; k++)
+        MOV.W   #0x0, R13
+??GetMPU6050Offset_3:
+        CMP.W   #0x6, R13
+        JGE     ??GetMPU6050Offset_9
+//  215             {
+//  216                 buffer[k] += pMpu[k];
+        MOVA    SP, R15
+        ADDA    #0xc, R15
+        MOV.W   R13, R12
+        RLAM.A  #0x2, R12
+        ADDA    R15, R12
+        MOVA    &pMpu, R15
+        MOV.W   R13, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        ADDA    R14, R14
+        ADDA    R15, R14
+        MOV.W   @R14, R14
+        MOV.W   R14, R15
+        RLA.W   R15
+        SUBC.W  R15, R15
+        XOR.W   #0xffff, R15
+        ADD.W   R14, 0(R12)
+        ADDC.W  R15, 0x2(R12)
+//  217             }
+        ADD.W   #0x1, R13
+        JMP     ??GetMPU6050Offset_3
+//  218         }
+//  219     }
+??GetMPU6050Offset_9:
+        ADD.W   #0x1, R10
+        JMP     ??GetMPU6050Offset_4
+//  220 
+//  221     for(i = 0; i < 6; i++)  //保存校准值
+??GetMPU6050Offset_8:
+        MOV.W   #0x0, R10
+??GetMPU6050Offset_5:
+        CMP.W   #0x6, R10
+        JGE     ??GetMPU6050Offset_10
+//  222     {
+//  223         g_MPUManager.Offset[i] = buffer[i] >>8;
+        MOVA    SP, R15
+        ADDA    #0xc, R15
+        MOV.W   R10, R14
+        RLAM.A  #0x2, R14
+        ADDA    R15, R14
+        MOVA    R14, R15
+        MOV.W   @R15, R14
+        MOV.W   0x2(R15), R15
+        SWPB    R14
+        SWPB    R15
+        XOR.B   R15, R14
+        XOR.W   R15, R14
+        SXT     R15
+        MOV.W   R10, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        ADDA    R15, R15
+        MOVX.W  R14, g_MPUManager + 12(R15)
+//  224     }
+        ADD.W   #0x1, R10
+        JMP     ??GetMPU6050Offset_5
+//  225 }
+??GetMPU6050Offset_10:
+        ADDA    #0x24, SP
+          CFI CFA SP+28
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+//  226 
+//  227 /******************************************************************************
+//  228   * 函数名称：Acc_Read
+//  229   * 函数描述：获取加速度值
+//  230   * 输    入：
+//  231   * uint8_t *ptr：写入地址
+//  232   * 输    出：void
+//  233   * 返    回：void
+//  234   * 备    注：null
+//  235   *    
+//  236   *
+//  237 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  238 void Acc_Read(uint8_t *ptr)
+Acc_Read:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function Acc_Read
+//  239 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOVA    R12, R11
+//  240     for(int i=0;i<6;i++)
+        MOV.W   #0x0, R10
+??Acc_Read_0:
+        CMP.W   #0x6, R10
+        JGE     ??Acc_Read_1
+//  241     {
+//  242         ptr[i] = I2C_Read_Byte(0xd0,0x3B+i);
+        PUSH.W  R13
+          CFI CFA SP+14
+        MOV.B   R10, 0(SP)
+        POP.W   R13
+          CFI CFA SP+12
+        ADD.B   #0x3b, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Read_Byte
+        CALLA   #I2C_Read_Byte
+        MOV.W   R10, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        ADDA    R11, R15
+        MOV.B   R12, 0(R15)
+//  243     }
+        ADD.W   #0x1, R10
+        JMP     ??Acc_Read_0
+//  244 }
+??Acc_Read_1:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//  245 
+//  246 /******************************************************************************
+//  247   * 函数名称：Gyro_Read
+//  248   * 函数描述：获取陀螺仪值
+//  249   * 输    入：
+//  250   * uint8_t *ptr：写入地址
+//  251   * 输    出：void
+//  252   * 返    回：void
+//  253   * 备    注：null
+//  254   *    
+//  255   *
+//  256 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  257 void Gyro_Read(uint8_t *ptr)
+Gyro_Read:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function Gyro_Read
+//  258 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOVA    R12, R11
+//  259     for(int i=0;i<6;i++)
+        MOV.W   #0x0, R10
+??Gyro_Read_0:
+        CMP.W   #0x6, R10
+        JGE     ??Gyro_Read_1
+//  260     {
+//  261         ptr[i+6] = I2C_Read_Byte(0xd0,0x43+i);
+        PUSH.W  R13
+          CFI CFA SP+14
+        MOV.B   R10, 0(SP)
+        POP.W   R13
+          CFI CFA SP+12
+        ADD.B   #0x43, R13
+        MOV.B   #0xd0, R12
+          CFI FunCall I2C_Read_Byte
+        CALLA   #I2C_Read_Byte
+        MOV.W   R10, R15
+        ADD.W   #0x6, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        ADDA    R11, R15
+        MOV.B   R12, 0(R15)
+//  262     }
+        ADD.W   #0x1, R10
+        JMP     ??Gyro_Read_0
+//  263 }
+??Gyro_Read_1:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock4
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(1)
+`?<Initializer for pMpu>`:
+        DATA32
+        DC32 g_MPUManager
+
+        RSEG DATA20_ID:CONST:SORT:NOROOT(1)
+`?<Initializer for s_EKF>`:
+        DATA32
+        DC32 3CA3D70AH, 0H, 0H, 0H, 3A83126FH, 3F0B020CH, 3CA3D70AH, 0H, 0H, 0H
+        DC32 3A83126FH, 3F0B020CH, 3CA3D70AH, 0H, 0H, 0H, 3A83126FH, 3F0B020CH
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+        DATA32
+        DC32 0, 0, 0, 0, 0, 0
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+        DATA16
+        DC16 0, 0, 0
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+        DATA16
+        DC16 0, 0, 0
+
+        END
+//  264 
+//  265 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 1 102 bytes in segment CODE
+//    36 bytes in segment DATA20_C
+//    76 bytes in segment DATA20_I
+//    76 bytes in segment DATA20_ID
+//    38 bytes in segment DATA20_Z
+// 
+// 1 102 bytes of CODE  memory
+//   112 bytes of CONST memory
+//   114 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

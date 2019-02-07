@@ -1,0 +1,806 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:44
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_watchdog.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW5B73.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_watchdog.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_watchdog.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_watchdog.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_watchdog.c
+      1          #include "msp430f5529_watchdog.h"
+
+   \                                 In  segment DATA16_AN, at 0x15c
+   \   union <unnamed> __data16 _A_WDTCTL_L
+   \                     _A_WDTCTL_L:
+   \   000000                DS8 2
+      2          #include "msp430f5529_clock.h"
+      3          
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      4          static const uint32_t WDT_Counter[]={2000000000u,128000000u,8192000u,512000u,32768u,8192u,512u,64u};
+   \                     WDT_Counter:
+   \   000000   009435770020 DC32 2000000000, 128000000, 8192000, 512000, 32768, 8192, 512, 64
+   \            A10700007D00
+   \            00D007000080
+   \            000000200000
+   \            000200004000
+   \            0000        
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      5          const WDT_MemMapPtr WDTX = WDT_BASE_PTR;
+   \                     WDTX:
+   \   000000   50010000     DC32 150H
+      6          extern const SFR_MemMapPtr SFRX;
+      7          uint16_t WatchDog_Time_Cal(uint32_t ms);
+      8          /*******************************************************************************
+      9          *  函数名称：DisableWatchDog(void)
+     10          *  功能说明：关闭看门狗
+     11          *  参数说明：无
+     12          *  函数返回：无
+     13          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2, keep-with-next
+     14          void DisableWatchDog(void)
+   \                     DisableWatchDog:
+     15          {
+     16            WDTCTL = (WDTCTL&0xFF)|(WDTPW+WDTHOLD);
+   \   000000   1F425C01     MOV.W   &0x15c, R15
+   \   000004   7FF3         AND.B   #0xff, R15
+   \   000006   3FD0805A     BIS.W   #0x5a80, R15
+   \   00000A                REQUIRE ?Subroutine0
+   \   00000A                REQUIRE _A_WDTCTL_L
+   \   00000A                // Fall through to label ?Subroutine0
+     17          } 
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   824F5C01     MOV.W   R15, &0x15c
+   \   000004   1001         RETA
+     18          /*******************************************************************************
+     19          *  函数名称：WatchDog_Init(uint32_t ms) 
+     20          *  功能说明：设置看门狗时间，注意定时时间只是比较接近设置时间的一个时间，并不精准,返回及时间偏
+     21          *  参数说明：uint32_t ms          ：功能时间
+     22          *  函数返回：//误差时间（单位：ms）
+     23          *  使用示例： WatchDog_Init(500);   //设置看门狗时间为500ms
+     24          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2, keep-with-next
+     25          void  WatchDog_Init(uint32_t ms)                                        //看门狗功能配置
+   \                     WatchDog_Init:
+     26          {
+     27            uint16_t WDT_Reg_Val = WatchDog_Time_Cal(ms);
+   \   000000   ........     CALLA   #?Subroutine8
+     28            SFRX->IE.WDT = DISABLE;                      //关闭看门狗中断
+     29            WDTCTL = WDTPW | WDTCNTCL | WDT_Reg_Val ; //配置
+   \                     ??CrossCallReturnLabel_12:
+   \   000004   3CD0085A     BIS.W   #0x5a08, R12
+   \   000008                REQUIRE ?Subroutine1
+   \   000008                REQUIRE _A_WDTCTL_L
+   \   000008                // Fall through to label ?Subroutine1
+     30          }
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   824C5C01     MOV.W   R12, &0x15c
+   \   000004   1001         RETA
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine8:
+   \   000000   ........     CALLA   #WatchDog_Time_Cal
+   \   000004   ........     MOVA    &SFRX, R15
+   \   000008   9FC30000     BIC.W   #0x1, 0(R15)
+   \   00000C   1001         RETA
+     31          /*******************************************************************************
+     32          *  函数名称：WatchDog_Timer_Init(uint32_t ms) 
+     33          *  功能说明：设置看门狗作为定时器并设置时间，注意定时时间只是比较接近设置时间的一个时间，并不精准,返回及时间偏
+     34          *  参数说明：uint32_t ms          ：功能时间
+     35          *  函数返回：//误差时间（单位：ms）
+     36          *  使用示例： WatchDog_Timer_Init(500);   //设置看门狗定时时间为500ms
+     37          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2, keep-with-next
+     38          void  WatchDog_Timer_Init(uint32_t ms)                                  //看门狗定时器功能初始化
+   \                     WatchDog_Timer_Init:
+     39          {
+     40            uint16_t WDT_Reg_Val = WatchDog_Time_Cal(ms);
+   \   000000   ........     CALLA   #?Subroutine8
+     41            SFRX->IE.WDT = DISABLE;                      //关闭看门狗中断
+     42            WDTCTL = WDTPW | WDTCNTCL | WDT_Reg_Val | WDTTMSEL; //配置
+   \                     ??CrossCallReturnLabel_13:
+   \   000004   3CD0185A     BIS.W   #0x5a18, R12
+   \   000008   ....         JMP     ?Subroutine1
+   \   00000A   0343         NOP
+   \   00000C                REQUIRE _A_WDTCTL_L
+     43          }
+     44          /*******************************************************************************
+     45          *  函数名称：WatchDog_Delay_Ms(uint32_t ms) 
+     46          *  功能说明：设置看门狗延时一段时间，注意定时时间只是比较接近设置时间的一个时间，并不精准,返回及时间偏
+     47          *  参数说明：uint32_t ms          ：功能时间
+     48          *  函数返回：//误差时间（单位：ms）
+     49          *  使用示例：WatchDog_Delay_Ms(500);   //设置在此处使用看门狗延时500ms
+     50          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2, keep-with-next
+     51          void  WatchDog_Delay_Ms  (uint32_t ms)                                  //看门狗延时使用
+   \                     WatchDog_Delay_Ms:
+     52          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+     53            SFRX->IFG.WDT = RESET;
+   \   000002   ........     MOVA    &SFRX, R10
+   \   000006   9AC30200     BIC.W   #0x1, 0x2(R10)
+     54            uint16_t WDT_Reg_Val = WatchDog_Time_Cal(ms);
+   \   00000A   ........     CALLA   #WatchDog_Time_Cal
+     55            SFRX->IE.WDT = DISABLE;                      //关闭看门狗中断
+   \   00000E   9AC30000     BIC.W   #0x1, 0(R10)
+     56            WDTCTL = WDTPW | WDTCNTCL | WDT_Reg_Val | WDTTMSEL; //配置
+   \   000012   3CD0185A     BIS.W   #0x5a18, R12
+   \   000016   824C5C01     MOV.W   R12, &0x15c
+     57            while(SFRX->IFG.WDT == RESET);
+   \                     ??WatchDog_Delay_Ms_0:
+   \   00001A   9AB30200     BIT.W   #0x1, 0x2(R10)
+   \   00001E   FD27         JEQ     ??WatchDog_Delay_Ms_0
+     58          }
+   \   000020   0A16         POPM.A  #0x1, R10
+   \   000022   1001         RETA
+   \   000024                REQUIRE _A_WDTCTL_L
+     59          /*************************************************************************
+     60          *  函数名称：WatchDog_Feed(void)
+     61          *  功能说明：喂狗
+     62          *  参数说明：无
+     63          *  函数返回：无
+     64          *  使用示例：WatchDog_Feed();  //喂狗，清除看门狗计数值
+     65          *************************************************************************/  
+
+   \                                 In  segment CODE, align 2
+     66          void  WatchDog_Feed(void)
+   \                     WatchDog_Feed:
+     67          {
+     68            WDTCTL =(WDTCTL&0X00FF) | (WDTCNTCL + WDTPW);                //计数值清零
+   \   000000   1F425C01     MOV.W   &0x15c, R15
+   \   000004   7FF3         AND.B   #0xff, R15
+   \   000006   3FD0085A     BIS.W   #0x5a08, R15
+   \   00000A   ....         JMP     ?Subroutine0
+   \   00000C   0343         NOP
+   \   00000E                REQUIRE _A_WDTCTL_L
+     69          }
+     70          /*************************************************************************
+     71          *  函数名称：WatchDog_ITConfig(STATUS ITState)
+     72          *  功能说明：设置看门狗中断是否使能
+     73          *  参数说明：STATUS ITState ：是否使能中断
+     74          *  函数返回：无
+     75          *  使用示例：WatchDog_ITConfig(ENABLE);  //使能看门狗中断
+     76          *************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     77          void  WatchDog_ITConfig(STATUS ITState)
+   \                     WatchDog_ITConfig:
+     78          {
+     79            if(ITState != DISABLE)
+   \   000000   4C93         CMP.B   #0x0, R12
+   \   000002   0724         JEQ     ??WatchDog_ITConfig_0
+     80            {
+     81              SFRX->IFG.WDT = RESET;
+   \   000004   ........     MOVA    &SFRX, R14
+   \   000008   9EC30200     BIC.W   #0x1, 0x2(R14)
+     82              SFRX->IE.WDT = ENABLE;  //开启看门狗中断
+   \   00000C   9ED30000     BIS.W   #0x1, 0(R14)
+   \   000010   1001         RETA
+     83            }
+     84            else
+     85            {
+     86              SFRX->IE.WDT = DISABLE;
+   \                     ??WatchDog_ITConfig_0:
+   \   000012   ........     MOVA    &SFRX, R15
+   \   000016   9FC30000     BIC.W   #0x1, 0(R15)
+     87            }
+     88          }
+   \   00001A   1001         RETA
+     89          /*************************************************************************
+     90          *  函数名称：SoftWare_RESET(void)
+     91          *  功能说明：软件触发一次复位
+     92          *  参数说明：无
+     93          *  函数返回：无
+     94          *  使用示例：SoftWare_RESET();  //软件复位一次单片机
+     95          *****************************************************{********************/  
+
+   \                                 In  segment CODE, align 2
+     96          void  SoftWare_RESET(void)
+   \                     SoftWare_RESET:
+     97          {
+     98            WDTCTL = 0x0000;
+   \   000000   82435C01     MOV.W   #0x0, &0x15c
+     99          }
+   \   000004   1001         RETA
+   \   000006                REQUIRE _A_WDTCTL_L
+    100          //看门狗计算时间函数
+
+   \                                 In  segment CODE, align 2, keep-with-next
+    101          uint16_t WatchDog_Time_Cal(uint32_t ms)
+   \                     WatchDog_Time_Cal:
+    102          {
+   \   000000   7B14         PUSHM.A #0x8, R11
+   \   000002   1D15         PUSHM.W #0x2, R13
+   \   000004   B1000600     SUBA    #0x6, SP
+   \   000008   B14007000000 MOV.W   #0x7, 0(SP)
+    103            float smclk_OffectTime,aclk_OffectTime,vlo_OffectTime; //误差时间
+    104            int32_t smclk_OffectTimeTemp = 0,aclk_OffectTimeTemp = 0 ,vlo_OffectTimeTemp = 0;
+    105            uint16_t smclk_DividerValue = 7 ,aclk_DividerValue = 7, vlo_DividerValue = 7;
+   \   00000E   3B400700     MOV.W   #0x7, R11
+   \   000012   0A4B         MOV.W   R11, R10
+    106            uint32_t SelectClock;
+    107            uint32_t WDT_CounterValue;
+    108            /**********************计算时钟源及计时时间**********************************/
+    109            //SMCLK
+    110            SelectClock = g_sClock.SMCLK.nHZ/1000;
+    111            WDT_CounterValue = ms*SelectClock;
+   \   000014   ........     MOVA    #g_sClock, R7
+   \   000018   0212         PUSH.W  SR
+   \   00001A   32C2         DINT
+   \   00001C   0343         NOP
+   \   00001E   92470C00.... MOV.W   0xc(R7), &__iar_HWMUL + 16     // MPY32L
+   \   000024   92470E00.... MOV.W   0xe(R7), &__iar_HWMUL + 18     // MPY32H
+   \   00002A   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_0:
+   \   00002E   0343         NOP
+   \   000030   3241         POP.W   SR
+   \   000032   ........     CALLA   #?Subroutine5
+   \                     ??CrossCallReturnLabel_6:
+   \   000036   1E410600     MOV.W   0x6(SP), R14
+   \   00003A   1F410800     MOV.W   0x8(SP), R15
+   \   00003E   ........     CALLA   #?Mul32
+   \   000042   053C         JMP     ??WatchDog_Time_Cal_7
+    112            while((WDT_CounterValue > WDT_Counter[smclk_DividerValue]) && (smclk_DividerValue > 0))
+    113            {
+    114              smclk_DividerValue --;
+   \                     ??WatchDog_Time_Cal_0:
+   \   000044   2441         MOV.W   @SP, R4
+   \   000046   0493         CMP.W   #0x0, R4
+   \   000048   1A24         JEQ     ??WatchDog_Time_Cal_14
+   \   00004A   B1530000     ADD.W   #0xffff, 0(SP)
+   \                     ??WatchDog_Time_Cal_7:
+   \   00004E   2F41         MOV.W   @SP, R15
+    115            }
+   \   000050   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_4:
+   \   000054   F72B         JNC     ??WatchDog_Time_Cal_0
+   \   000056   0220         JNE     ??WatchDog_Time_Cal_15
+   \   000058   089C         CMP.W   R12, R8
+   \   00005A   F42B         JNC     ??WatchDog_Time_Cal_0
+    116            if(smclk_DividerValue == 7 || smclk_DividerValue == 0)
+   \                     ??WatchDog_Time_Cal_15:
+   \   00005C   2A91         CMP.W   @SP, R10
+   \   00005E   0F24         JEQ     ??WatchDog_Time_Cal_14
+   \   000060   2441         MOV.W   @SP, R4
+   \   000062   0493         CMP.W   #0x0, R4
+   \   000064   0C24         JEQ     ??WatchDog_Time_Cal_14
+    117            {
+    118              smclk_OffectTimeTemp = (WDT_Counter[smclk_DividerValue]-WDT_CounterValue);
+    119            }
+    120            else //在两个时间内选出误差时间最短的
+    121            {
+    122              if((WDT_Counter[smclk_DividerValue ]-WDT_CounterValue) > (WDT_CounterValue-WDT_Counter[smclk_DividerValue +1]))
+   \   000066   0644         MOV.W   R4, R6
+   \   000068   ........     CALLA   #?Subroutine3
+   \                     ??CrossCallReturnLabel_2:
+   \   00006C   0328         JNC     ??WatchDog_Time_Cal_16
+   \   00006E   0720         JNE     ??WatchDog_Time_Cal_14
+   \   000070   049E         CMP.W   R14, R4
+   \   000072   052C         JC      ??WatchDog_Time_Cal_14
+    123              {
+    124                smclk_OffectTimeTemp = (WDT_CounterValue-WDT_Counter[++smclk_DividerValue ]);
+   \                     ??WatchDog_Time_Cal_16:
+   \   000074   81460000     MOV.W   R6, 0(SP)
+   \   000078   0844         MOV.W   R4, R8
+   \   00007A   0945         MOV.W   R5, R9
+   \   00007C   023C         JMP     ??WatchDog_Time_Cal_8
+    125              }
+    126              else
+    127              {
+    128                smclk_OffectTimeTemp = (WDT_Counter[smclk_DividerValue ]-WDT_CounterValue);
+   \                     ??WatchDog_Time_Cal_14:
+   \   00007E   088C         SUB.W   R12, R8
+   \   000080   097D         SUBC.W  R13, R9
+    129              }
+    130            }
+    131            smclk_OffectTimeTemp = smclk_OffectTimeTemp>0 ? smclk_OffectTimeTemp : -smclk_OffectTimeTemp;
+   \                     ??WatchDog_Time_Cal_8:
+   \   000082   ........     CALLA   #?Subroutine6
+    132            smclk_OffectTime = (float)smclk_OffectTimeTemp/(float)g_sClock.SMCLK.nHZ;
+   \                     ??CrossCallReturnLabel_8:
+   \   000086   1C470C00     MOV.W   0xc(R7), R12
+   \   00008A   1D470E00     MOV.W   0xe(R7), R13
+   \   00008E   ........     CALLA   #?Subroutine7
+   \                     ??CrossCallReturnLabel_10:
+   \   000092   814C0200     MOV.W   R12, 0x2(SP)
+   \   000096   814D0400     MOV.W   R13, 0x4(SP)
+    133            /*ACLK*/
+    134            SelectClock = g_sClock.ACLK.nHZ;
+    135            WDT_CounterValue = ms*SelectClock/1000;
+   \   00009A   1C410600     MOV.W   0x6(SP), R12
+   \   00009E   1D410800     MOV.W   0x8(SP), R13
+   \   0000A2   1E471800     MOV.W   0x18(R7), R14
+   \   0000A6   1F471A00     MOV.W   0x1a(R7), R15
+   \   0000AA   ........     CALLA   #?Mul32
+   \   0000AE   0212         PUSH.W  SR
+   \   0000B0   32C2         DINT
+   \   0000B2   0343         NOP
+   \   0000B4   824C....     MOV.W   R12, &__iar_HWMUL + 16         // MPY32L
+   \   0000B8   824D....     MOV.W   R13, &__iar_HWMUL + 18         // MPY32H
+   \   0000BC   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_1:
+   \   0000C0   0343         NOP
+   \   0000C2   3241         POP.W   SR
+   \   0000C4   ........     CALLA   #?Subroutine5
+   \                     ??CrossCallReturnLabel_7:
+   \   0000C8   033C         JMP     ??WatchDog_Time_Cal_9
+    136            while((WDT_CounterValue > WDT_Counter[aclk_DividerValue]) && (aclk_DividerValue > 0))
+    137            {
+    138              aclk_DividerValue--;
+   \                     ??WatchDog_Time_Cal_1:
+   \   0000CA   0B93         CMP.W   #0x0, R11
+   \   0000CC   1724         JEQ     ??WatchDog_Time_Cal_17
+   \   0000CE   3B53         ADD.W   #0xffff, R11
+   \                     ??WatchDog_Time_Cal_9:
+   \   0000D0   0F4B         MOV.W   R11, R15
+    139            }
+   \   0000D2   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_5:
+   \   0000D6   F92B         JNC     ??WatchDog_Time_Cal_1
+   \   0000D8   0220         JNE     ??WatchDog_Time_Cal_18
+   \   0000DA   089C         CMP.W   R12, R8
+   \   0000DC   F62B         JNC     ??WatchDog_Time_Cal_1
+    140            if(aclk_DividerValue == 7 || aclk_DividerValue == 0)
+   \                     ??WatchDog_Time_Cal_18:
+   \   0000DE   0B9A         CMP.W   R10, R11
+   \   0000E0   0D24         JEQ     ??WatchDog_Time_Cal_17
+   \   0000E2   0B93         CMP.W   #0x0, R11
+   \   0000E4   0B24         JEQ     ??WatchDog_Time_Cal_17
+    141            {
+    142              aclk_OffectTimeTemp = (WDT_Counter[aclk_DividerValue]-WDT_CounterValue);
+    143            }
+    144            else //在两个时间内选出误差时间最短的
+    145            {
+    146              if((WDT_Counter[aclk_DividerValue ]-WDT_CounterValue) > (WDT_CounterValue-WDT_Counter[aclk_DividerValue +1]))
+   \   0000E6   064B         MOV.W   R11, R6
+   \   0000E8   ........     CALLA   #?Subroutine3
+   \                     ??CrossCallReturnLabel_3:
+   \   0000EC   0328         JNC     ??WatchDog_Time_Cal_19
+   \   0000EE   0620         JNE     ??WatchDog_Time_Cal_17
+   \   0000F0   049E         CMP.W   R14, R4
+   \   0000F2   042C         JC      ??WatchDog_Time_Cal_17
+    147              {
+    148                aclk_OffectTimeTemp = (WDT_CounterValue-WDT_Counter[++aclk_DividerValue]);
+   \                     ??WatchDog_Time_Cal_19:
+   \   0000F4   0B46         MOV.W   R6, R11
+   \   0000F6   0844         MOV.W   R4, R8
+   \   0000F8   0945         MOV.W   R5, R9
+   \   0000FA   023C         JMP     ??WatchDog_Time_Cal_10
+    149              }
+    150              else
+    151              {
+    152                aclk_OffectTimeTemp = (WDT_Counter[aclk_DividerValue]-WDT_CounterValue);
+   \                     ??WatchDog_Time_Cal_17:
+   \   0000FC   088C         SUB.W   R12, R8
+   \   0000FE   097D         SUBC.W  R13, R9
+    153              }  
+    154            }
+    155            aclk_OffectTimeTemp = aclk_OffectTimeTemp>0 ? aclk_OffectTimeTemp : -aclk_OffectTimeTemp;
+   \                     ??WatchDog_Time_Cal_10:
+   \   000100   ........     CALLA   #?Subroutine6
+    156            aclk_OffectTime = (float)aclk_OffectTimeTemp/(float)g_sClock.ACLK.nHZ;
+   \                     ??CrossCallReturnLabel_9:
+   \   000104   1C471800     MOV.W   0x18(R7), R12
+   \   000108   1D471A00     MOV.W   0x1a(R7), R13
+   \   00010C   ........     CALLA   #?Subroutine7
+   \                     ??CrossCallReturnLabel_11:
+   \   000110   084C         MOV.W   R12, R8
+   \   000112   094D         MOV.W   R13, R9
+    157            /**VLOCLK_10K*/
+    158            SelectClock = VLOCLK_FREQUENCY;
+    159            WDT_CounterValue = ms*SelectClock/1000;
+   \   000114   0212         PUSH.W  SR
+   \   000116   32C2         DINT
+   \   000118   0343         NOP
+   \   00011A   B2401027.... MOV.W   #0x2710, &__iar_HWMUL + 16     // MPY32L
+   \   000120   92410800.... MOV.W   0x8(SP), &__iar_HWMUL + 32     // OP2L
+   \   000126   92410A00.... MOV.W   0xa(SP), &__iar_HWMUL + 34     // OP2H
+   \   00012C   1E42....     MOV.W   &__iar_HWMUL + 36, R14         // RES0
+   \   000130   1F42....     MOV.W   &__iar_HWMUL + 38, R15         // RES1
+   \   000134   0343         NOP
+   \   000136   2241         MOV.W   @SP, SR
+   \   000138   0343         NOP
+   \   00013A   32C2         DINT
+   \   00013C   0343         NOP
+   \   00013E   824E....     MOV.W   R14, &__iar_HWMUL + 16         // MPY32L
+   \   000142   824F....     MOV.W   R15, &__iar_HWMUL + 18         // MPY32H
+   \   000146   ........     CALLA   #?Subroutine9
+   \                     ??CrossCallReturnLabel_14:
+   \   00014A   1442....     MOV.W   &__iar_HWMUL + 36, R4          // RES0
+   \   00014E   1542....     MOV.W   &__iar_HWMUL + 38, R5          // RES1
+   \   000152   1C42....     MOV.W   &__iar_HWMUL + 40, R12         // RES2
+   \   000156   1742....     MOV.W   &__iar_HWMUL + 42, R7          // RES3
+   \   00015A   0343         NOP
+   \   00015C   3241         POP.W   SR
+   \   00015E   8710         SWPB    R7
+   \   000160   8C10         SWPB    R12
+   \   000162   4CE7         XOR.B   R7, R12
+   \   000164   0CE7         XOR.W   R7, R12
+   \   000166   4D47         MOV.B   R7, R13
+   \   000168   5D03         RRUM.W  #0x1, R13
+   \   00016A   0C10         RRC.W   R12
+   \   00016C   033C         JMP     ??WatchDog_Time_Cal_11
+   \                     ??WatchDog_Time_Cal_2:
+   \   00016E   0A93         CMP.W   #0x0, R10
+   \   000170   2B24         JEQ     ??WatchDog_Time_Cal_20
+    160            while((WDT_CounterValue > WDT_Counter[vlo_DividerValue]) && (vlo_DividerValue > 0))
+    161            {
+    162              vlo_DividerValue--;
+   \   000172   3A53         ADD.W   #0xffff, R10
+   \                     ??WatchDog_Time_Cal_11:
+   \   000174   0F4A         MOV.W   R10, R15
+   \   000176   4F06         RLAM.A  #0x2, R15
+   \   000178   ....164F.... MOVX.W  WDT_Counter(R15), R6
+   \   00017E   ....174F.... MOVX.W  WDT_Counter + 2(R15), R7
+   \   000184   079D         CMP.W   R13, R7
+   \   000186   F32B         JNC     ??WatchDog_Time_Cal_2
+   \   000188   0220         JNE     ??WatchDog_Time_Cal_21
+   \   00018A   069C         CMP.W   R12, R6
+   \   00018C   F02B         JNC     ??WatchDog_Time_Cal_2
+    163            }
+    164            if(vlo_DividerValue == 7 || vlo_DividerValue == 0)
+   \                     ??WatchDog_Time_Cal_21:
+   \   00018E   3A900700     CMP.W   #0x7, R10
+   \   000192   1A24         JEQ     ??WatchDog_Time_Cal_20
+   \   000194   0A93         CMP.W   #0x0, R10
+   \   000196   1824         JEQ     ??WatchDog_Time_Cal_20
+   \   000198   044A         MOV.W   R10, R4
+   \   00019A   1453         ADD.W   #0x1, R4
+   \   00019C   4406         RLAM.A  #0x2, R4
+   \   00019E   0E4C         MOV.W   R12, R14
+   \   0001A0   0F4D         MOV.W   R13, R15
+   \   0001A2   ....1E84.... SUBX.W  WDT_Counter(R4), R14
+   \   0001A8   ....1F74.... SUBCX.W WDT_Counter + 2(R4), R15
+   \   0001AE   0446         MOV.W   R6, R4
+   \   0001B0   0547         MOV.W   R7, R5
+   \   0001B2   048C         SUB.W   R12, R4
+   \   0001B4   057D         SUBC.W  R13, R5
+   \   0001B6   0F95         CMP.W   R5, R15
+   \   0001B8   0328         JNC     ??WatchDog_Time_Cal_22
+   \   0001BA   0620         JNE     ??WatchDog_Time_Cal_20
+   \   0001BC   0E94         CMP.W   R4, R14
+   \   0001BE   042C         JC      ??WatchDog_Time_Cal_20
+    165            {
+    166              vlo_OffectTimeTemp = (WDT_Counter[vlo_DividerValue]-WDT_CounterValue);
+    167            }
+    168            else //在两个时间内选出误差时间最短的
+    169            {
+    170              if((WDT_Counter[vlo_DividerValue]-WDT_CounterValue) > (WDT_CounterValue-WDT_Counter[vlo_DividerValue+1]))
+    171              {
+    172                vlo_OffectTimeTemp = (WDT_CounterValue-WDT_Counter[++vlo_DividerValue]);
+   \                     ??WatchDog_Time_Cal_22:
+   \   0001C0   1A53         ADD.W   #0x1, R10
+   \   0001C2   0C4E         MOV.W   R14, R12
+   \   0001C4   0D4F         MOV.W   R15, R13
+   \   0001C6   043C         JMP     ??WatchDog_Time_Cal_12
+    173              }
+    174              else
+    175              {
+    176                vlo_OffectTimeTemp = (WDT_Counter[vlo_DividerValue]-WDT_CounterValue);
+   \                     ??WatchDog_Time_Cal_20:
+   \   0001C8   068C         SUB.W   R12, R6
+   \   0001CA   077D         SUBC.W  R13, R7
+   \   0001CC   0C46         MOV.W   R6, R12
+   \   0001CE   0D47         MOV.W   R7, R13
+    177              }
+    178            }
+    179            vlo_OffectTimeTemp = vlo_OffectTimeTemp>0 ? vlo_OffectTimeTemp : -vlo_OffectTimeTemp;
+   \                     ??WatchDog_Time_Cal_12:
+   \   0001D0   0D93         CMP.W   #0x0, R13
+   \   0001D2   0338         JL      ??WatchDog_Time_Cal_23
+   \   0001D4   0620         JNE     ??WatchDog_Time_Cal_24
+   \   0001D6   1C93         CMP.W   #0x1, R12
+   \   0001D8   042C         JC      ??WatchDog_Time_Cal_24
+   \                     ??WatchDog_Time_Cal_23:
+   \   0001DA   3CE3         XOR.W   #0xffff, R12
+   \   0001DC   3DE3         XOR.W   #0xffff, R13
+   \   0001DE   1C53         ADD.W   #0x1, R12
+   \   0001E0   0D63         ADDC.W  #0x0, R13
+    180            vlo_OffectTime = (float)vlo_OffectTimeTemp/(float)VLOCLK_FREQUENCY; 
+   \                     ??WatchDog_Time_Cal_24:
+   \   0001E2   ........     CALLA   #_Cast32sto32f
+   \   0001E6   3E400040     MOV.W   #0x4000, R14
+   \   0001EA   3F401C46     MOV.W   #0x461c, R15
+   \   0001EE   ........     CALLA   #_Div32f
+   \   0001F2   064C         MOV.W   R12, R6
+   \   0001F4   074D         MOV.W   R13, R7
+    181            /*********比较各个时钟源的定时精度，选择最高精度的时钟源及定时时间**********/
+    182            if((smclk_OffectTime <= aclk_OffectTime) && (smclk_OffectTime <= vlo_OffectTime))
+   \   0001F6   0C48         MOV.W   R8, R12
+   \   0001F8   0D49         MOV.W   R9, R13
+   \   0001FA   1E410200     MOV.W   0x2(SP), R14
+   \   0001FE   1F410400     MOV.W   0x4(SP), R15
+   \   000202   ........     CALLA   #?FLT_GE
+   \   000206   0728         JNC     ??WatchDog_Time_Cal_25
+   \   000208   0C46         MOV.W   R6, R12
+   \   00020A   0D47         MOV.W   R7, R13
+   \   00020C   ........     CALLA   #?FLT_GE
+   \   000210   0228         JNC     ??WatchDog_Time_Cal_25
+    183            {
+    184              return (WDTSSEL__SMCLK | smclk_DividerValue);
+   \   000212   2C41         MOV.W   @SP, R12
+   \   000214   133C         JMP     ??WatchDog_Time_Cal_13
+    185            }
+    186            else if((aclk_OffectTime <= smclk_OffectTime) && (aclk_OffectTime <= vlo_OffectTime))
+   \                     ??WatchDog_Time_Cal_25:
+   \   000216   0C4E         MOV.W   R14, R12
+   \   000218   0D4F         MOV.W   R15, R13
+   \   00021A   0E48         MOV.W   R8, R14
+   \   00021C   0F49         MOV.W   R9, R15
+   \   00021E   ........     CALLA   #?FLT_GE
+   \   000222   0928         JNC     ??WatchDog_Time_Cal_26
+   \   000224   0C46         MOV.W   R6, R12
+   \   000226   0D47         MOV.W   R7, R13
+   \   000228   ........     CALLA   #?FLT_GE
+   \   00022C   0428         JNC     ??WatchDog_Time_Cal_26
+    187            {
+    188              return (WDTSSEL__ACLK | aclk_DividerValue);
+   \   00022E   3BD02000     BIS.W   #0x20, R11
+   \   000232   0C4B         MOV.W   R11, R12
+   \   000234   033C         JMP     ??WatchDog_Time_Cal_13
+    189            }
+    190            else
+    191            {
+    192              return (WDTSSEL__VLO | vlo_DividerValue);
+   \                     ??WatchDog_Time_Cal_26:
+   \   000236   3AD04000     BIS.W   #0x40, R10
+   \   00023A   0C4A         MOV.W   R10, R12
+   \                     ??WatchDog_Time_Cal_13:
+   \   00023C   A1000A00     ADDA    #0xa, SP
+   \   000240   7416         POPM.A  #0x8, R11
+   \   000242   1001         RETA
+    193            }
+    194          }
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine7:
+   \   000000   ........     CALLA   #_Cast32uto32f
+   \   000004   0E4C         MOV.W   R12, R14
+   \   000006   0F4D         MOV.W   R13, R15
+   \   000008   0C48         MOV.W   R8, R12
+   \   00000A   0D49         MOV.W   R9, R13
+   \   00000C   ........     BRA     #_Div32f
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   0993         CMP.W   #0x0, R9
+   \   000002   0338         JL      ??WatchDog_Time_Cal_3
+   \   000004   0620         JNE     ??WatchDog_Time_Cal_4
+   \   000006   1893         CMP.W   #0x1, R8
+   \   000008   042C         JC      ??WatchDog_Time_Cal_4
+   \                     ??WatchDog_Time_Cal_3:
+   \   00000A   38E3         XOR.W   #0xffff, R8
+   \   00000C   39E3         XOR.W   #0xffff, R9
+   \   00000E   1853         ADD.W   #0x1, R8
+   \   000010   0963         ADDC.W  #0x0, R9
+   \                     ??WatchDog_Time_Cal_4:
+   \   000012   0C48         MOV.W   R8, R12
+   \   000014   0D49         MOV.W   R9, R13
+   \   000016   ........     CALLA   #_Cast32sto32f
+   \   00001A   084C         MOV.W   R12, R8
+   \   00001C   094D         MOV.W   R13, R9
+   \   00001E   1001         RETA
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   8F10         SWPB    R15
+   \   000002   8C10         SWPB    R12
+   \   000004   4CEF         XOR.B   R15, R12
+   \   000006   0CEF         XOR.W   R15, R12
+   \   000008   4D4F         MOV.B   R15, R13
+   \   00000A   5D03         RRUM.W  #0x1, R13
+   \   00000C   0C10         RRC.W   R12
+   \   00000E   1001         RETA
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   4F06         RLAM.A  #0x2, R15
+   \   000002   ....184F.... MOVX.W  WDT_Counter(R15), R8
+   \   000008   ....194F.... MOVX.W  WDT_Counter + 2(R15), R9
+   \   00000E   099D         CMP.W   R13, R9
+   \   000010   1001         RETA
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   1653         ADD.W   #0x1, R6
+   \   000002   0F46         MOV.W   R6, R15
+   \   000004   4F06         RLAM.A  #0x2, R15
+   \   000006   044C         MOV.W   R12, R4
+   \   000008   054D         MOV.W   R13, R5
+   \   00000A   ....148F.... SUBX.W  WDT_Counter(R15), R4
+   \   000010   ....157F.... SUBCX.W WDT_Counter + 2(R15), R5
+   \   000016   0E48         MOV.W   R8, R14
+   \   000018   0F49         MOV.W   R9, R15
+   \   00001A   0E8C         SUB.W   R12, R14
+   \   00001C   0F7D         SUBC.W  R13, R15
+   \   00001E   059F         CMP.W   R15, R5
+   \   000020   1001         RETA
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   ........     CALLA   #?Subroutine9
+   \                     ??CrossCallReturnLabel_15:
+   \   000004   1C42....     MOV.W   &__iar_HWMUL + 36, R12         // RES0
+   \   000008   1D42....     MOV.W   &__iar_HWMUL + 38, R13         // RES1
+   \   00000C   1C42....     MOV.W   &__iar_HWMUL + 40, R12         // RES2
+   \   000010   1F42....     MOV.W   &__iar_HWMUL + 42, R15         // RES3
+   \   000014   1001         RETA
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine9:
+   \   000000   B240986E.... MOV.W   #0x6e98, &__iar_HWMUL + 32     // OP2L
+   \   000006   B2401283.... MOV.W   #0x8312, &__iar_HWMUL + 34     // OP2H
+   \   00000C   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   DisableWatchDog
+      4   SoftWare_RESET
+      8   WatchDog_Delay_Ms
+        8   -> WatchDog_Time_Cal
+      4   WatchDog_Feed
+      4   WatchDog_ITConfig
+      4   WatchDog_Init
+        8   -> WatchDog_Time_Cal
+     48   WatchDog_Time_Cal
+       46 ?FLT_GE
+       46 ?Mul32
+       46 _Cast32sto32f
+       50 _Cast32sto32f
+       50 _Cast32uto32f
+       46 _Div32f
+      4   WatchDog_Timer_Init
+        8   -> WatchDog_Time_Cal
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       6  ?Subroutine0
+       6  ?Subroutine1
+      22  ?Subroutine2
+      34  ?Subroutine3
+      18  ?Subroutine4
+      16  ?Subroutine5
+      32  ?Subroutine6
+      16  ?Subroutine7
+      14  ?Subroutine8
+      14  ?Subroutine9
+      10  DisableWatchDog
+       6  SoftWare_RESET
+       4  WDTX
+      32  WDT_Counter
+      36  WatchDog_Delay_Ms
+      14  WatchDog_Feed
+      28  WatchDog_ITConfig
+       8  WatchDog_Init
+     580  WatchDog_Time_Cal
+      12  WatchDog_Timer_Init
+       2  _A_WDTCTL_L
+
+ 
+ 872 bytes in segment CODE
+   2 bytes in segment DATA16_AN
+  36 bytes in segment DATA20_C
+ 
+ 872 bytes of CODE  memory
+  36 bytes of CONST memory
+   0 bytes of DATA  memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: none

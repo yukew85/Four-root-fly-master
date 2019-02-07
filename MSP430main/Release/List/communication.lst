@@ -1,0 +1,466 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:40
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\communication.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWCD3F.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\communication.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\communication.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\communication.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\communication.c
+      1          #include "communication.h"
+      2          #include "nrf2401.h"
+      3          #include "fmuConfig.h"
+      4          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      5          NRF_Mannager_t NRF_Mannager;
+   \                     NRF_Mannager:
+   \   000000                DS8 680
+      6          
+
+   \                                 In  segment DATA20_I, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+      7          uint8_t TX_ADDRESS[]= {0xE1,0xE2,0xE3,0xE4,0xE5};	//本地默认发送地址
+   \                     TX_ADDRESS:
+   \   000000                DS8 5
+   \   000005                REQUIRE `?<Initializer for TX_ADDRESS>`
+
+   \                                 In  segment DATA20_I, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+      8          uint8_t RX_ADDRESS[]= {0x00,0x00,0x00,0x00,0xE5};	//本机默认接收地址
+   \                     RX_ADDRESS:
+   \   000000                DS8 5
+   \   000005                REQUIRE `?<Initializer for RX_ADDRESS>`
+      9          #define PAGE_ADDRESS            (MAX_SEGMENT*512)        
+     10          #define NRF_CH_FLASH_ADDR       (uint8_t*)PAGE_ADDRESS
+     11          #define NRF_RX_ADDR_FLASH_ADDR  (uint8_t*)(PAGE_ADDRESS+2)
+     12          #define NRF_TX_ADDR_FLASH_ADDR  (uint8_t*)(PAGE_ADDRESS+2+5)
+     13          //Flash_Write(uint8_t offset,uint8_t *ptr,uint8_t length)
+
+   \                                 In  segment CODE, align 2
+     14          void NRF_Radio_Init(void)
+   \                     NRF_Radio_Init:
+     15          {
+   \   000000   B1000600     SUBA    #0x6, SP
+     16              uint8_t defalut[5] = {0xFF,0xFF,0xFF,0xFF,0xFF};
+   \   000004   ........     MOVA    #`?<Constant {255, 255, 255, 255, 255}>`, R15
+   \   000008   F14F0000     MOV.B   @R15+, 0(SP)
+   \   00000C   F14F0100     MOV.B   @R15+, 0x1(SP)
+   \   000010   F14F0200     MOV.B   @R15+, 0x2(SP)
+   \   000014   F14F0300     MOV.B   @R15+, 0x3(SP)
+   \   000018   F14F0400     MOV.B   @R15+, 0x4(SP)
+     17              
+     18              /*此处缺少从FLASH处读取地址*/
+     19              NRF_Mannager.Hardware_Mannager = &NRF24L01_Manager;
+   \   00001C   ....F240.... MOVX.A  #NRF24L01_Manager, &NRF_Mannager
+   \            ....        
+     20              
+     21              //表示未初始化,使用默认值
+     22              if(memcmp((uint8_t*)NRF_RX_ADDR_FLASH_ADDR,defalut,5) == 0)
+                                         ^
+Warning[Pe061]: integer operation result is out of range
+   \   000024   3E400500     MOV.W   #0x5, R14
+   \   000028   0F43         MOV.W   #0x0, R15
+   \   00002A   CD01         MOVA    SP, R13
+   \   00002C   8C000242     MOVA    #0x4202, R12
+   \   000030   ........     CALLA   #memcmp
+   \   000034   0C93         CMP.W   #0x0, R12
+   \   000036   1720         JNE     ??NRF_Radio_Init_1
+     23              {
+     24                  memcpy(NRF24L01_Manager.Rx_Addr,RX_ADDRESS,5);
+   \   000038   3E400500     MOV.W   #0x5, R14
+   \   00003C   0F43         MOV.W   #0x0, R15
+   \   00003E   ........     MOVA    #RX_ADDRESS, R13
+   \   000042   ........     MOVA    #NRF24L01_Manager + 7, R12
+   \   000046   ........     CALLA   #memcpy
+     25                  memcpy(NRF24L01_Manager.Tx_Addr,TX_ADDRESS,5);
+   \   00004A   3E400500     MOV.W   #0x5, R14
+   \   00004E   0F43         MOV.W   #0x0, R15
+   \   000050   ........     MOVA    #TX_ADDRESS, R13
+   \   000054   ........     MOVA    #NRF24L01_Manager + 2, R12
+   \   000058   ........     CALLA   #memcpy
+     26                  NRF24L01_Manager.RC_Frequency = NRF24L01_FREQ;
+   \   00005C   ....F2401400 MOVX.B  #0x14, &NRF24L01_Manager + 12
+   \            ....        
+   \   000064   163C         JMP     ??NRF_Radio_Init_0
+     27              }else
+     28              {
+     29                  NRF24L01_Manager.RC_Frequency = *((uint8_t*)NRF_CH_FLASH_ADDR);
+                                                                     ^
+Warning[Pe061]: integer operation result is out of range
+   \                     ??NRF_Radio_Init_1:
+   \   000066   ....D2420042 MOVX.B  &0x4200, &NRF24L01_Manager + 12
+   \            ....        
+     30                  memcpy(NRF24L01_Manager.Rx_Addr,NRF_RX_ADDR_FLASH_ADDR,5);
+                                                         ^
+Warning[Pe061]: integer operation result is out of range
+   \   00006E   3E400500     MOV.W   #0x5, R14
+   \   000072   0F43         MOV.W   #0x0, R15
+   \   000074   8D000242     MOVA    #0x4202, R13
+   \   000078   ........     MOVA    #NRF24L01_Manager + 7, R12
+   \   00007C   ........     CALLA   #memcpy
+     31                  memcpy(NRF24L01_Manager.Tx_Addr,NRF_TX_ADDR_FLASH_ADDR,5);
+                                                         ^
+Warning[Pe061]: integer operation result is out of range
+   \   000080   3E400500     MOV.W   #0x5, R14
+   \   000084   0F43         MOV.W   #0x0, R15
+   \   000086   8D000742     MOVA    #0x4207, R13
+   \   00008A   ........     MOVA    #NRF24L01_Manager + 2, R12
+   \   00008E   ........     CALLA   #memcpy
+     32              }
+     33              
+     34              NRF24L01_Manager.NRF_Mode = NRF_Mode_RX2;
+   \                     ??NRF_Radio_Init_0:
+   \   000092   ....E243.... MOVX.B  #0x2, &NRF24L01_Manager + 1
+     35              NRF24L01_init(&NRF24L01_Manager);
+   \   000098   ........     MOVA    #NRF24L01_Manager, R12
+   \   00009C   ........     CALLA   #NRF24L01_init
+     36          }
+   \   0000A0   A1000600     ADDA    #0x6, SP
+   \   0000A4   1001         RETA
+     37          
+
+   \                                 In  segment CODE, align 2
+     38          void NRF_Radio_Send(uint8_t *ptr,uint8_t length)
+   \                     NRF_Radio_Send:
+     39          {
+     40              enQueue(&NRF_Mannager.qTx,ptr,length);
+   \   000000   4E4D         MOV.B   R13, R14
+   \   000002   CD0C         MOVA    R12, R13
+   \   000004   ........     MOVA    #NRF_Mannager + 4, R12
+   \   000008   ........     BRA     #enQueue
+     41          }
+     42          
+
+   \                                 In  segment CODE, align 2
+     43          void NRF_IRQ()
+   \                     NRF_IRQ:
+     44          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   B1002000     SUBA    #0x20, SP
+     45              static int rx_succsess_cnt = 0;
+     46              uint8_t state = 0;
+   \   000006   4A43         MOV.B   #0x0, R10
+     47              uint8_t rxbuff_temp[RX_PLOAD_WIDTH]; 
+     48              
+     49              state = NRF24L01_Read_Reg(RF_STATUS);
+   \   000008   7C400700     MOV.B   #0x7, R12
+   \   00000C   ........     CALLA   #NRF24L01_Read_Reg
+   \   000010   4A4C         MOV.B   R12, R10
+     50              NRF24L01_Write_Reg(SPI_WRITE_REG+RF_STATUS,state);
+   \   000012   4D4A         MOV.B   R10, R13
+   \   000014   7C402700     MOV.B   #0x27, R12
+   \   000018   ........     CALLA   #NRF24L01_Write_Reg
+     51              
+     52              if(state & MAX_TX)
+   \   00001C   7AB01000     BIT.B   #0x10, R10
+   \   000020   1128         JNC     ??NRF_IRQ_0
+     53              {
+     54                  NRF24L01_Write_Reg(RF_STATUS,MAX_TX);
+   \   000022   7D401000     MOV.B   #0x10, R13
+   \   000026   7C400700     MOV.B   #0x7, R12
+   \   00002A   ........     CALLA   #NRF24L01_Write_Reg
+     55                  NRF_Mannager.communication_info.Tx_Success_Count++;
+   \   00002E   ....9253.... ADDX.W  #0x1, &NRF_Mannager + 670
+     56                  
+     57                  NRF_Mannager.Hardware_Mannager->set_rx_mode();
+   \   000034   ........     MOVA    &NRF_Mannager, R15
+   \   000038   3F0F0E00     MOVA    0xe(R15), R15
+   \   00003C   4F13         CALLA   R15
+     58                  NRF_Mannager.mode = Rx_Mode;
+   \   00003E   ....C243.... MOVX.B  #0x0, &NRF_Mannager + 668
+     59              }
+     60             
+     61              
+     62              if(state & RX_OK)
+   \                     ??NRF_IRQ_0:
+   \   000044   7AB04000     BIT.B   #0x40, R10
+   \   000048   2628         JNC     ??NRF_IRQ_1
+     63              {
+     64                  rx_succsess_cnt++;
+   \   00004A   ....9253.... ADDX.W  #0x1, &??rx_succsess_cnt
+     65                  NRF24L01_Write_Reg(RF_STATUS,RX_OK);
+   \   000050   7D404000     MOV.B   #0x40, R13
+   \   000054   7C400700     MOV.B   #0x7, R12
+   \   000058   ........     CALLA   #NRF24L01_Write_Reg
+     66                  state = NRF24L01_Read_Reg(RF_STATUS);
+   \   00005C   7C400700     MOV.B   #0x7, R12
+   \   000060   ........     CALLA   #NRF24L01_Read_Reg
+   \   000064   4A4C         MOV.B   R12, R10
+     67                  NRF24L01_Read_Buf(RD_RX_PLOAD,rxbuff_temp,RX_PLOAD_WIDTH);//读取数据
+   \   000066   7E402000     MOV.B   #0x20, R14
+   \   00006A   CD01         MOVA    SP, R13
+   \   00006C   7C406100     MOV.B   #0x61, R12
+   \   000070   ........     CALLA   #NRF24L01_Read_Buf
+     68                  enQueue(&NRF_Mannager.qRx,rxbuff_temp,RX_PLOAD_WIDTH);       
+   \   000074   7E402000     MOV.B   #0x20, R14
+   \   000078   CD01         MOVA    SP, R13
+   \   00007A   ........     MOVA    #NRF_Mannager + 336, R12
+   \   00007E   ........     CALLA   #enQueue
+     69          		NRF24L01_Write_Reg(FLUSH_RX,0xff);          //清除RX FIFO寄存器 
+   \   000082   7D43         MOV.B   #0xff, R13
+   \   000084   7C40E200     MOV.B   #0xe2, R12
+   \   000088   ........     CALLA   #NRF24L01_Write_Reg
+     70                  
+     71                  NRF_Mannager.communication_info.Rx_Success_Count++;
+   \   00008C   ....9253.... ADDX.W  #0x1, &NRF_Mannager + 678
+     72                  
+     73                  RC_Analy();
+   \   000092   ........     CALLA   #RC_Analy
+     74              }
+     75          
+     76              //计算丢包率
+     77              NRF_Mannager.communication_info.Tx_Packet_Loss_Rate = 
+     78                  NRF_Mannager.communication_info.Tx_Fail_Count*1.0f / (NRF_Mannager.communication_info.Tx_Fail_Count+NRF_Mannager.communication_info.Tx_Success_Count);
+   \                     ??NRF_IRQ_1:
+   \   000096   ....1C42.... MOVX.W  &NRF_Mannager + 672, R12
+   \   00009C   0D43         MOV.W   #0x0, R13
+   \   00009E   ........     CALLA   #_Cast32uto32f
+   \   0000A2   0E43         MOV.W   #0x0, R14
+   \   0000A4   3F40803F     MOV.W   #0x3f80, R15
+   \   0000A8   ........     CALLA   #_Mul32f
+   \   0000AC   0A4C         MOV.W   R12, R10
+   \   0000AE   0B4D         MOV.W   R13, R11
+   \   0000B0   ....1C42.... MOVX.W  &NRF_Mannager + 672, R12
+   \   0000B6   ....1C52.... ADDX.W  &NRF_Mannager + 670, R12
+   \   0000BC   0D43         MOV.W   #0x0, R13
+   \   0000BE   ........     CALLA   #_Cast32uto32f
+   \   0000C2   0E4C         MOV.W   R12, R14
+   \   0000C4   0F4D         MOV.W   R13, R15
+   \   0000C6   0C4A         MOV.W   R10, R12
+   \   0000C8   0D4B         MOV.W   R11, R13
+   \   0000CA   ........     CALLA   #_Div32f
+   \   0000CE   ....824C.... MOVX.W  R12, &NRF_Mannager + 674
+   \   0000D4   ....824D.... MOVX.W  R13, &NRF_Mannager + 676
+     79          }
+   \   0000DA   A1002000     ADDA    #0x20, SP
+   \   0000DE   1A16         POPM.A  #0x2, R11
+   \   0000E0   1001         RETA
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??rx_succsess_cnt:
+   \   000000                DS8 2
+     80          
+
+   \                                 In  segment CODE, align 2
+     81          void NRF_Polling()
+   \                     NRF_Polling:
+     82          {
+   \   000000   B1002200     SUBA    #0x22, SP
+     83              uint8_t buff_temp[32];
+     84              uint8_t length;
+     85              
+     86              memset(buff_temp,0xFF,32);
+   \   000004   3E402000     MOV.W   #0x20, R14
+   \   000008   0F43         MOV.W   #0x0, R15
+   \   00000A   3D40FF00     MOV.W   #0xff, R13
+   \   00000E   CC01         MOVA    SP, R12
+   \   000010   EC03         ADDA    #0x2, R12
+   \   000012   ........     CALLA   #memset
+     87              if(deQueue(&NRF_Mannager.qTx,buff_temp,&length))
+   \   000016   CE01         MOVA    SP, R14
+   \   000018   CD01         MOVA    SP, R13
+   \   00001A   ED03         ADDA    #0x2, R13
+   \   00001C   ........     MOVA    #NRF_Mannager + 4, R12
+   \   000020   ........     CALLA   #deQueue
+   \   000024   4C93         CMP.B   #0x0, R12
+   \   000026   1424         JEQ     ??NRF_Polling_0
+     88              {
+     89                  switch(NRF24L01_Manager.NRF_Mode)
+   \   000028   ....5E42.... MOVX.B  &NRF24L01_Manager + 1, R14
+   \   00002E   5E83         SUB.B   #0x1, R14
+   \   000030   0424         JEQ     ??NRF_Polling_1
+   \   000032   5E83         SUB.B   #0x1, R14
+   \   000034   0824         JEQ     ??NRF_Polling_2
+   \   000036   5E83         SUB.B   #0x1, R14
+   \   000038   0B20         JNE     ??NRF_Polling_0
+     90                  {
+     91                      case NRF_Mode_TX:
+     92                      case NRF_Mode_TX2:
+     93                          TxPacket(buff_temp, length);
+   \                     ??NRF_Polling_1:
+   \   00003A   6D41         MOV.B   @SP, R13
+   \   00003C   CC01         MOVA    SP, R12
+   \   00003E   EC03         ADDA    #0x2, R12
+   \   000040   ........     CALLA   #TxPacket
+     94                          break;
+   \   000044   053C         JMP     ??NRF_Polling_0
+     95                      case NRF_Mode_RX2:
+     96                          TxPacket_AP(buff_temp, length);
+   \                     ??NRF_Polling_2:
+   \   000046   6D41         MOV.B   @SP, R13
+   \   000048   CC01         MOVA    SP, R12
+   \   00004A   EC03         ADDA    #0x2, R12
+   \   00004C   ........     CALLA   #TxPacket_AP
+     97                          break;
+     98                      default:
+     99                          break;
+    100                  }
+    101              }
+    102          }
+   \                     ??NRF_Polling_0:
+   \   000050   A1002200     ADDA    #0x22, SP
+   \   000054   1001         RETA
+
+   \                                 In  segment DATA20_ID, align 1, align-sorted
+   \                     `?<Initializer for TX_ADDRESS>`:
+   \   000000   E1E2E3E4E5   DC8 225, 226, 227, 228, 229
+
+   \                                 In  segment DATA20_ID, align 1, align-sorted
+   \                     `?<Initializer for RX_ADDRESS>`:
+   \   000000   00000000E5   DC8 0, 0, 0, 0, 229
+
+   \                                 In  segment DATA20_C, align 1, align-sorted
+   \                     `?<Constant {255, 255, 255, 255, 255}>`:
+   \   000000   FFFFFFFFFF   DC8 255, 255, 255, 255, 255
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     44   NRF_IRQ
+       44   -- Indirect call
+       44   -> NRF24L01_Read_Buf
+       44   -> NRF24L01_Read_Reg
+       44   -> NRF24L01_Write_Reg
+       44   -> RC_Analy
+       44   -> enQueue
+       44 _Cast32uto32f
+       44 _Div32f
+       44 _Mul32f
+     38   NRF_Polling
+       38   -> TxPacket
+       38   -> TxPacket_AP
+       38   -> deQueue
+       38   -> memset
+     10   NRF_Radio_Init
+       10   -> NRF24L01_init
+       10   -> memcmp
+       10   -> memcpy
+      4   NRF_Radio_Send
+        0   -> enQueue
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       5  ?<Constant {255, 255, 255, 255, 255}>
+       5  ?<Initializer for RX_ADDRESS>
+       5  ?<Initializer for TX_ADDRESS>
+     226  NRF_IRQ
+     680  NRF_Mannager
+      86  NRF_Polling
+     166  NRF_Radio_Init
+      12  NRF_Radio_Send
+       5  RX_ADDRESS
+       5  TX_ADDRESS
+       2  rx_succsess_cnt
+
+ 
+ 490 bytes in segment CODE
+   5 bytes in segment DATA20_C
+  10 bytes in segment DATA20_I
+  10 bytes in segment DATA20_ID
+ 682 bytes in segment DATA20_Z
+ 
+ 490 bytes of CODE  memory
+  15 bytes of CONST memory
+ 692 bytes of DATA  memory
+
+Errors: none
+Warnings: 4

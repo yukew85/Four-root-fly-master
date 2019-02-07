@@ -1,0 +1,1021 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:42
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_adc.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW5307.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_adc.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_adc.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_adc.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_adc.c
+      1          #include "msp430f5529_adc.h"
+
+   \                                 In  segment DATA16_AN, at 0x24a
+   \   union <unnamed> __data16 _A_PCSEL_L
+   \                     _A_PCSEL_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x1b0
+   \   union <unnamed> __data16 _A_REFCTL0_L
+   \                     _A_REFCTL0_L:
+   \   000000                DS8 2
+      2          #include "msp430f5529_system.h"
+      3          
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      4          const ADC_MemMapPtr ADC12 = ADC_BASE_PTR;     //ADC寄存器结构体
+   \                     ADC12:
+   \   000000   00070000     DC32 700H
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      5          static uint8_t  InitialedChannel_Num = 0u;      //ADC初始化的通道数，因为可能会多次初始化多个通道，这里取静态变量
+   \                     InitialedChannel_Num:
+   \   000000                DS8 1
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      6          static uint16_t InitialedChannel_Bit = 0u;      //已经初始化的ADC通道
+   \                     InitialedChannel_Bit:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      7          static uint16_t ADC_Channel_Bit[ADC_CH_NUM] = {0u};   //内部初始化标志位
+   \                     ADC_Channel_Bit:
+   \   000000                DS8 32
+      8          static inline int8_t  ADC_GetChanelNum(ADC_CHn ch); //内部函数
+      9          /*******************************************************************************
+     10          *  函数名称：ADC_Init(uint16_t ch,ADC_VREF Vref,ADC_Resolution nBit)
+     11          *  功能说明：ADC初始化一个或多个ADC通道
+     12          *  参数说明：
+     13                      uint16_t ch     :要初始化的通道
+     14                      ADCVREF Vref    :参考电压
+     15                      ADC_Resolution nBit   :转换精度
+     16          *  函数返回：无
+     17          *  注意    ：1：初始化后所有通道精度相同，即所有通道转换精度只取决于最后一次配置的精度
+     18                       2：所有通道内部参考电压只能使用1.5或2.5V中的一种
+     19          *  使用示例：ADC_Init(ADC_CH1+ADC_CH3,ADC_VREF_1_5V,ADC_10bit);        //同时初始化两个通道，使用内部提供的1.5V参考电压，10位精度
+     20          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     21          void ADC_Init(uint16_t ch,ADC_VREF Vref,ADC_Resolution nBit)
+   \                     ADC_Init:
+     22          {
+   \   000000   5B14         PUSHM.A #0x6, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   4C4D         MOV.B   R13, R12
+   \   000006   4D4E         MOV.B   R14, R13
+     23            ADC12->ENC = DISABLE;                 //先对该位复位，否则置位后有些寄存器不能再进行操作
+   \   000008   A2C30007     BIC.W   #0x2, &0x700
+     24            uint16_t SREF_RegValue = 0u;
+   \   00000C   4F43         MOV.B   #0x0, R15
+     25            switch(Vref)           //选择参考电压
+   \   00000E   4C83         SUB.B   #0x0, R12
+   \   000010   0524         JEQ     ??ADC_Init_9
+   \   000012   5C83         SUB.B   #0x1, R12
+   \   000014   0924         JEQ     ??ADC_Init_10
+   \   000016   6C83         SUB.B   #0x2, R12
+   \   000018   0E24         JEQ     ??ADC_Init_11
+   \   00001A   113C         JMP     ??ADC_Init_6
+     26            {
+     27            case ADC_VREF_1_5V:
+     28              REFCTL0 &=~ REFMSTR;                //把REF参考电压控制权交给ADC
+   \                     ??ADC_Init_9:
+   \   00001C   ........     CALLA   #?Subroutine0
+     29              ADC12->ADCREFON = BIT_SET;
+     30              ADC12->REF2_5V = RESET;
+   \                     ??CrossCallReturnLabel_0:
+   \   000020   B2C040000007 BIC.W   #0x40, &0x700
+     31              SREF_RegValue = ADC12_SREF_1;       //使用内部提供的参考电压
+   \   000026   053C         JMP     ??ADC_Init_7
+     32              break;
+     33            case ADC_VREF_2_5V:
+     34              REFCTL0 &=~ REFMSTR;
+   \                     ??ADC_Init_10:
+   \   000028   ........     CALLA   #?Subroutine0
+     35              ADC12->ADCREFON = BIT_SET;
+     36              ADC12->REF2_5V = BIT_SET;
+   \                     ??CrossCallReturnLabel_1:
+   \   00002C   B2D040000007 BIS.W   #0x40, &0x700
+     37              SREF_RegValue = ADC12_SREF_1;       //使用内部提供的参考电压
+   \                     ??ADC_Init_7:
+   \   000032   5F43         MOV.B   #0x1, R15
+     38              break;
+   \   000034   043C         JMP     ??ADC_Init_6
+     39            case ADC_VREF_External:      
+     40              P5SEL |= BIT0;       //VeREF+
+   \                     ??ADC_Init_11:
+   \   000036   D2D34A02     BIS.B   #0x1, &0x24a
+     41              P5SEL |= BIT1;       //VeREF-
+   \   00003A   E2D34A02     BIS.B   #0x2, &0x24a
+     42              SREF_RegValue = ADC12_SREF_2;       //使用外部参考电压
+     43            case ADC_VREF_3_3V:
+     44              SREF_RegValue = ADC12_SREF_0;       //使用电源电压作为参考电压,
+     45              break;
+     46            default :break;
+     47            }
+     48            //初始化通道
+     49            uint16_t CH_Mask = 0x01;
+   \                     ??ADC_Init_6:
+   \   00003E   1C43         MOV.W   #0x1, R12
+     50            for(uint8_t CH_Num=0; CH_Num < ADC_CH_NUM; CH_Num++)
+   \   000040   4B43         MOV.B   #0x0, R11
+   \   000042   ........     MOVA    #InitialedChannel_Num, R8
+     51            {
+     52              if(ch & CH_Mask)   //要初始化的通道
+   \                     ??ADC_Init_1:
+   \   000046   0ABC         BIT.W   R12, R10
+   \   000048   4C24         JEQ     ??ADC_Init_8
+     53              {
+     54                if((CH_Mask & InitialedChannel_Bit) == 0)   //如果该通道未被初始化过               
+   \   00004A   ....1E42.... MOVX.W  &InitialedChannel_Bit, R14
+   \   000050   0CBE         BIT.W   R14, R12
+   \   000052   2220         JNE     ??ADC_Init_12
+   \   000054   6E48         MOV.B   @R8, R14
+   \   000056   494B         MOV.B   R11, R9
+   \   000058   79F00F00     AND.B   #0xf, R9
+   \   00005C   4018564E1007 MOVX.B  0x710(R14), R6
+   \   000062   76F0F000     AND.B   #0xf0, R6
+   \   000066   46D9         BIS.B   R9, R6
+   \   000068   4018CE461007 MOVX.B  R6, 0x710(R14)
+     55                {
+     56                  ADC12->MCTL[InitialedChannel_Num].INCH = CH_Num;
+     57                  ADC12->MCTL[InitialedChannel_Num].REF  = SREF_RegValue;                 //参考电压选择，通道设置
+   \   00006E   494F         MOV.B   R15, R9
+   \   000070   590E         RLAM.W  #0x4, R9
+   \   000072   4018564E1007 MOVX.B  0x710(R14), R6
+   \   000078   76F08F00     AND.B   #0x8f, R6
+   \   00007C   46D9         BIS.B   R9, R6
+   \   00007E   4018CE461007 MOVX.B  R6, 0x710(R14)
+     58                  ADC_Channel_Bit[InitialedChannel_Num] = CH_Mask;                        //将该通道初始化标志置位                                                    
+   \   000084   EE0E         ADDA    R14, R14
+   \   000086   ....8E4C.... MOVX.W  R12, ADC_Channel_Bit(R14)
+     59                  InitialedChannel_Bit |= CH_Mask;                                        //置位已初始化的通道标志位
+   \   00008C   ....82DC.... BISX.W  R12, &InitialedChannel_Bit
+     60                  InitialedChannel_Num ++;                                                //初始化的通道数加1
+   \   000092   D8530000     ADD.B   #0x1, 0(R8)
+   \   000096   253C         JMP     ??ADC_Init_8
+     61                }
+     62                else                                      //如果是之前已经初始化过的通道，则要在这里从新设置一下，只设置通道参考电压
+     63                {
+     64                  ADC12->MCTL[ADC_GetChanelNum((ADC_CHn)CH_Mask)].REF = SREF_RegValue;   //改变参考电压                                  
+   \                     ??ADC_Init_12:
+   \   000098   4E43         MOV.B   #0x0, R14
+   \   00009A   ........     MOVA    #ADC_Channel_Bit, R9
+   \                     ??ADC_Init_0:
+   \   00009E   2C99         CMP.W   @R9, R12
+   \   0000A0   1324         JEQ     ??ADC_Init_3
+   \   0000A2   5E53         ADD.B   #0x1, R14
+   \   0000A4   1C990200     CMP.W   0x2(R9), R12
+   \   0000A8   0F24         JEQ     ??ADC_Init_3
+   \   0000AA   5E53         ADD.B   #0x1, R14
+   \   0000AC   1C990400     CMP.W   0x4(R9), R12
+   \   0000B0   0B24         JEQ     ??ADC_Init_3
+   \   0000B2   5E53         ADD.B   #0x1, R14
+   \   0000B4   1C990600     CMP.W   0x6(R9), R12
+   \   0000B8   0724         JEQ     ??ADC_Init_3
+   \   0000BA   5E53         ADD.B   #0x1, R14
+   \   0000BC   A9000800     ADDA    #0x8, R9
+   \   0000C0   7E901000     CMP.B   #0x10, R14
+   \   0000C4   EC2B         JNC     ??ADC_Init_0
+   \   0000C6   7E43         MOV.B   #0xff, R14
+     65                }
+     66              }
+   \                     ??ADC_Init_3:
+   \   0000C8   8E11         SXT     R14
+   \   0000CA   C90E         MOVA    R14, R9
+   \   0000CC   4E4F         MOV.B   R15, R14
+   \   0000CE   5E0E         RLAM.W  #0x4, R14
+   \   0000D0   401856491007 MOVX.B  0x710(R9), R6
+   \   0000D6   76F08F00     AND.B   #0x8f, R6
+   \   0000DA   46DE         BIS.B   R14, R6
+   \   0000DC   4018C9461007 MOVX.B  R6, 0x710(R9)
+     67              CH_Mask <<= 1;
+   \                     ??ADC_Init_8:
+   \   0000E2   0C5C         RLA.W   R12
+     68            }
+   \   0000E4   5B53         ADD.B   #0x1, R11
+   \   0000E6   7B901000     CMP.B   #0x10, R11
+   \   0000EA   AD2B         JNC     ??ADC_Init_1
+     69            if(InitialedChannel_Num > 1)                 //有多个通道时要加上序列通道结束位
+   \   0000EC   6E48         MOV.B   @R8, R14
+   \   0000EE   6E93         CMP.B   #0x2, R14
+   \   0000F0   1228         JNC     ??ADC_Init_13
+     70            {
+     71              for(int i=0; i<(InitialedChannel_Num-1); i++)   //前面所有通道序列结束位清零
+   \   0000F2   8B001007     MOVA    #0x710, R11
+   \   0000F6   4F4E         MOV.B   R14, R15
+   \   0000F8   3F53         ADD.W   #0xffff, R15
+   \   0000FA   084F         MOV.W   R15, R8
+     72              {
+     73                ADC12->MCTL[i].EOS = RESET;
+   \                     ??ADC_Init_2:
+   \   0000FC   FBC080000000 BIC.B   #0x80, 0(R11)
+     74              }
+   \   000102   AB000100     ADDA    #0x1, R11
+   \   000106   3853         ADD.W   #0xffff, R8
+   \   000108   F923         JNE     ??ADC_Init_2
+     75              ADC12->MCTL[InitialedChannel_Num-1].EOS = BIT_SET;  //最后一通道加上序列通道转换结束位
+   \   00010A   4F0E         RLAM.A  #0x4, R15
+   \   00010C   4F0D         RRAM.A  #0x4, R15
+   \   00010E   4018FFD08000 BISX.B  #0x80, 0x710(R15)
+   \            1007        
+     76            }
+     77            //一般配置
+     78            ADC12->SHT0 = M0_M7_SAMPLE_HOLD_TIME; //0-7通道采样与保持时间
+   \                     ??ADC_Init_13:
+   \   000116   1F420007     MOV.W   &0x700, R15
+   \   00011A   3FF0FFF0     AND.W   #0xf0ff, R15
+   \   00011E   3FD00003     BIS.W   #0x300, R15
+   \   000122   824F0007     MOV.W   R15, &0x700
+     79            ADC12->SHT1 = M8_M15_SAMPLE_HOLD_TIME;//8-15通道采样与保持时间
+   \   000126   1F420007     MOV.W   &0x700, R15
+   \   00012A   3FF0FF0F     AND.W   #0xfff, R15
+   \   00012E   3FD00030     BIS.W   #0x3000, R15
+   \   000132   824F0007     MOV.W   R15, &0x700
+     80            ADC12->ON = BIT_SET;                      // 采样时间，AD内核开启
+   \   000136   B2D010000007 BIS.W   #0x10, &0x700
+     81            ADC12->MSC = BIT_SET;
+   \   00013C   B2D080000007 BIS.W   #0x80, &0x700
+     82            ADC12->SSEL = ADC12_SSEL_ADC12OSC;    //时钟选择
+   \   000142   B2F0E7FF0207 AND.W   #0xffe7, &0x702
+     83            ADC12->SHP = BIT_SET;
+   \   000148   B2D000020207 BIS.W   #0x200, &0x702
+     84            ADC12->CONSEQ = (InitialedChannel_Num > 1) ? BIT_SET : RESET;//有多个通道时设为序列通道单次转换模式,单个通道时设为单通道单次转换模式              
+   \   00014E   6E93         CMP.B   #0x2, R14
+   \   000150   0F7F         SUBC.W  R15, R15
+   \   000152   1F53         ADD.W   #0x1, R15
+   \   000154   ........     CALLA   #?Subroutine3
+     85            //设置ADC精度
+     86            ADC12->RES = nBit;    
+   \                     ??CrossCallReturnLabel_9:
+   \   000158   5D0E         RLAM.W  #0x4, R13
+   \   00015A   3DF03000     AND.W   #0x30, R13
+   \   00015E   1F420407     MOV.W   &0x704, R15
+   \   000162   3FF0CFFF     AND.W   #0xffcf, R15
+   \   000166   0FDD         BIS.W   R13, R15
+   \   000168   824F0407     MOV.W   R15, &0x704
+     87            //开启时钟
+     88            UCS->MODOSC_REQEN = BIT_SET;                                                   //ADC使用的是MODCLK 所以在这里配置该时钟，约5MHz左右
+   \   00016C   ........     MOVA    &UCS, R15
+   \   000170   FFD21000     BIS.B   #0x8, 0x10(R15)
+     89            //配置通道为第二功能
+     90            if(ch & 0x00ff)
+   \   000174   4A93         CMP.B   #0x0, R10
+   \   000176   0424         JEQ     ??ADC_Init_14
+     91            {
+     92               GPIO_MultiBits_Init(P6,(ch & 0x00ff),GPI | SEL);
+   \   000178   3E400101     MOV.W   #0x101, R14
+   \   00017C   ........     CALLA   #?Subroutine7
+     93            }
+     94            if(ch & 0xf000)
+   \                     ??ADC_Init_14:
+   \   000180   3AB000F0     BIT.W   #0xf000, R10
+   \   000184   0A24         JEQ     ??ADC_Init_15
+     95            {
+     96               GPIO_MultiBits_Init(P7,((ch & 0xf000)>>12),GPI | SEL);
+   \   000186   3E400101     MOV.W   #0x101, R14
+   \   00018A   0D4A         MOV.W   R10, R13
+   \   00018C   8D10         SWPB    R13
+   \   00018E   7DF3         AND.B   #0xff, R13
+   \   000190   5D0D         RRAM.W  #0x4, R13
+   \   000192   7C400600     MOV.B   #0x6, R12
+   \   000196   ........     CALLA   #GPIO_MultiBits_Init
+     97            }
+     98            if(ch & ADC_CH10) //如果使用了温度传感器通道，则开启温度传感器
+   \                     ??ADC_Init_15:
+   \   00019A   3AB00004     BIT.W   #0x400, R10
+   \   00019E   0324         JEQ     ??ADC_Init_5
+     99            {
+    100              ADC12->TCOFF = RESET;
+   \   0001A0   B2C040000407 BIC.W   #0x40, &0x704
+    101            }
+    102            ADC12->ENC = ENABLE;                                                        //该位必须在初始化完成后再置位
+   \                     ??ADC_Init_5:
+   \   0001A6   A2D30007     BIS.W   #0x2, &0x700
+    103            //DELAY_MS(5);                                                                 //延时等待参考电压建立
+    104          }
+   \   0001AA   5616         POPM.A  #0x6, R11
+   \   0001AC   1001         RETA
+   \   0001AE                REQUIRE _A_REFCTL0_L
+   \   0001AE                REQUIRE _A_PCSEL_L
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine0:
+   \   000000   B2C08000B001 BIC.W   #0x80, &0x1b0
+   \   000006   B2D020000007 BIS.W   #0x20, &0x700
+   \   00000C   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine7:
+   \   000000   4D4A         MOV.B   R10, R13
+   \   000002   7C400500     MOV.B   #0x5, R12
+   \   000006   ........     BRA     #GPIO_MultiBits_Init
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine3:
+   \   000000   0F5F         RLA.W   R15
+   \   000002   1B420207     MOV.W   &0x702, R11
+   \   000006   3BF0F9FF     AND.W   #0xfff9, R11
+   \   00000A   0BDF         BIS.W   R15, R11
+   \   00000C   824B0207     MOV.W   R11, &0x702
+   \   000010   1001         RETA
+    105          /*******************************************************************************
+    106          *  函数名称：ADC_DeInit(ADC_CHn ch)
+    107          *  功能说明：ADC复位某一通道
+    108          *  参数说明：ADC_CHn ch ：要复位的通道
+    109          *  函数返回：无
+    110          *  注意    ：
+    111          *  使用示例：ADC_DeInit(ADC_CH1);         //复位通道ADC_CH1，即该通道的ADC功能被屏蔽，作为普通IO口使用                              
+    112          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    113          void   ADC_DeInit(ADC_CHn ch)
+   \                     ADC_DeInit:
+    114          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   F103         SUBA    #0x2, SP
+   \   000004   0A4C         MOV.W   R12, R10
+    115            ADC12->ENC = RESET;                                                    //先对该位复位，否则置位后有些寄存器不能再进行操作
+   \   000006   A2C30007     BIC.W   #0x2, &0x700
+    116            uint16_t CH_Mask = 0x01;
+   \   00000A   1D43         MOV.W   #0x1, R13
+    117            for(uint8_t CH_Num=0; CH_Num < ADC_CH_NUM; CH_Num++)
+   \   00000C   7C401000     MOV.B   #0x10, R12
+   \   000010   ........     MOVA    #InitialedChannel_Num, R11
+    118            {
+    119              if(ch & CH_Mask)   //要复位的通道
+   \                     ??ADC_DeInit_2:
+   \   000014   0ABD         BIT.W   R13, R10
+   \   000016   4F24         JEQ     ??ADC_DeInit_6
+    120              {
+    121                if(CH_Mask & InitialedChannel_Bit)  //如果该通道已经初始化，则
+   \   000018   ....1F42.... MOVX.W  &InitialedChannel_Bit, R15
+   \   00001E   0DBF         BIT.W   R15, R13
+   \   000020   4A24         JEQ     ??ADC_DeInit_6
+    122                {
+    123                  uint8_t chanel = ADC_GetChanelNum((ADC_CHn)CH_Mask);
+   \   000022   4F43         MOV.B   #0x0, R15
+   \   000024   ........     MOVA    #ADC_Channel_Bit, R14
+   \                     ??ADC_DeInit_0:
+   \   000028   2D9E         CMP.W   @R14, R13
+   \   00002A   1324         JEQ     ??ADC_DeInit_3
+   \   00002C   5F53         ADD.B   #0x1, R15
+   \   00002E   1D9E0200     CMP.W   0x2(R14), R13
+   \   000032   0F24         JEQ     ??ADC_DeInit_3
+   \   000034   5F53         ADD.B   #0x1, R15
+   \   000036   1D9E0400     CMP.W   0x4(R14), R13
+   \   00003A   0B24         JEQ     ??ADC_DeInit_3
+   \   00003C   5F53         ADD.B   #0x1, R15
+   \   00003E   1D9E0600     CMP.W   0x6(R14), R13
+   \   000042   0724         JEQ     ??ADC_DeInit_3
+   \   000044   5F53         ADD.B   #0x1, R15
+   \   000046   AE000800     ADDA    #0x8, R14
+   \   00004A   7F901000     CMP.B   #0x10, R15
+   \   00004E   EC2B         JNC     ??ADC_DeInit_0
+   \   000050   7F43         MOV.B   #0xff, R15
+    124                  InitialedChannel_Bit &=~ CH_Mask;            //该通道初始化标志屏蔽
+   \                     ??ADC_DeInit_3:
+   \   000052   ....82CD.... BICX.W  R13, &InitialedChannel_Bit
+    125                  InitialedChannel_Num --;                     //已初始化通道数减一
+   \   000058   FB530000     ADD.B   #0xff, 0(R11)
+   \   00005C   6F9B         CMP.B   @R11, R15
+   \   00005E   1B2C         JC      ??ADC_DeInit_7
+   \   000060   4E4F         MOV.B   R15, R14
+   \   000062   AE000007     ADDA    #0x700, R14
+    126                  //所有通道前移
+    127                  for(;chanel < InitialedChannel_Num; chanel++)
+    128                  {
+    129                    ADC12->MCTL[chanel] = ADC12->MCTL[chanel + 1];
+   \                     ??ADC_DeInit_1:
+   \   000066   D14E11000000 MOV.B   0x11(R14), 0(SP)
+   \   00006C   EE411000     MOV.B   @SP, 0x10(R14)
+    130                    ADC_Channel_Bit[chanel] =  (ADC_CHn)(1 << ADC12->MCTL[chanel + 1].INCH);
+   \   000070   1843         MOV.W   #0x1, R8
+   \   000072   594E1100     MOV.B   0x11(R14), R9
+   \   000076   79F00F00     AND.B   #0xf, R9
+   \   00007A   5983         SUB.B   #0x1, R9
+   \   00007C   0230         JN      ??ADC_DeInit_8
+   \   00007E                RPT     R9
+   \   00007E   C9180858     RLAX.W  R8
+   \                     ??ADC_DeInit_8:
+   \   000082   494F         MOV.B   R15, R9
+   \   000084   E909         ADDA    R9, R9
+   \   000086   ....8948.... MOVX.W  R8, ADC_Channel_Bit(R9)
+    131                  }
+   \   00008C   5F53         ADD.B   #0x1, R15
+   \   00008E   AE000100     ADDA    #0x1, R14
+   \   000092   6F9B         CMP.B   @R11, R15
+   \   000094   E82B         JNC     ??ADC_DeInit_1
+    132                  //最后一通道恢复默认值
+    133                  ADC12->MCTL[chanel].INCH = RESET;         //设置该寄存器通道为0
+   \                     ??ADC_DeInit_7:
+   \   000096   4018FFF0F000 ANDX.B  #0xf0, 0x710(R15)
+   \            1007        
+    134                  ADC12->MCTL[chanel].REF = RESET;          //设置该寄存器通道参考电压为默认
+   \   00009E   4018FFF08F00 ANDX.B  #0x8f, 0x710(R15)
+   \            1007        
+    135                  ADC12->MCTL[chanel].EOS = RESET;          //设置序列通道转换结束位为0
+   \   0000A6   4018FFC08000 BICX.B  #0x80, 0x710(R15)
+   \            1007        
+    136                  ADC_Channel_Bit[chanel] = RESET;          //设置该通道初始化标志位复位
+   \   0000AE   EF0F         ADDA    R15, R15
+   \   0000B0   ....8F43.... MOVX.W  #0x0, ADC_Channel_Bit(R15)
+    137                }
+    138              }
+    139              CH_Mask <<= 1;
+   \                     ??ADC_DeInit_6:
+   \   0000B6   0D5D         RLA.W   R13
+    140            }
+   \   0000B8   7C53         ADD.B   #0xff, R12
+   \   0000BA   AC23         JNE     ??ADC_DeInit_2
+    141            if(InitialedChannel_Num <= 1)                 //最只有一个通道时取消序列通道转换结束位
+   \   0000BC   ....E293.... CMPX.B  #0x2, &InitialedChannel_Num
+   \   0000C2   0C2C         JC      ??ADC_DeInit_9
+    142            {
+    143              ADC12->MCTL[InitialedChannel_Num-1].EOS = RESET;  //
+   \   0000C4   ....5F42.... MOVX.B  &InitialedChannel_Num, R15
+   \   0000CA   3F53         ADD.W   #0xffff, R15
+   \   0000CC   4F0E         RLAM.A  #0x4, R15
+   \   0000CE   4F0D         RRAM.A  #0x4, R15
+   \   0000D0   4018FFC08000 BICX.B  #0x80, 0x710(R15)
+   \            1007        
+   \   0000D8   0F43         MOV.W   #0x0, R15
+   \   0000DA   013C         JMP     ??ADC_DeInit_5
+    144            }
+    145            ADC12->CONSEQ = (InitialedChannel_Num > 1) ? BIT_SET : RESET;//有多个通道时设为序列通道单次转换模式,单个通道时设为单通道单次转换模式              
+   \                     ??ADC_DeInit_9:
+   \   0000DC   1F43         MOV.W   #0x1, R15
+   \                     ??ADC_DeInit_5:
+   \   0000DE   ........     CALLA   #?Subroutine3
+    146          
+    147            //配置通道为IO口功能
+    148            if(ch & 0x00ff)
+   \                     ??CrossCallReturnLabel_10:
+   \   0000E2   4A93         CMP.B   #0x0, R10
+   \   0000E4   0324         JEQ     ??ADC_DeInit_10
+    149            {
+    150               GPIO_MultiBits_Init(P6,(uint8_t)(ch & 0x00ff),GPI);
+   \   0000E6   1E43         MOV.W   #0x1, R14
+   \   0000E8   ........     CALLA   #?Subroutine7
+    151            }
+    152            if(ch & 0xf000)
+   \                     ??ADC_DeInit_10:
+   \   0000EC   3AB000F0     BIT.W   #0xf000, R10
+   \   0000F0   0924         JEQ     ??ADC_DeInit_11
+    153            {
+    154               GPIO_MultiBits_Init(P7,(uint8_t)((ch & 0xf000)>>12),GPI);
+   \   0000F2   1E43         MOV.W   #0x1, R14
+   \   0000F4   8A10         SWPB    R10
+   \   0000F6   7AF3         AND.B   #0xff, R10
+   \   0000F8   5A0D         RRAM.W  #0x4, R10
+   \   0000FA   0D4A         MOV.W   R10, R13
+   \   0000FC   7C400600     MOV.B   #0x6, R12
+   \   000100   ........     CALLA   #GPIO_MultiBits_Init
+    155            }
+    156            ADC12->ENC = BIT_SET;                                                        //该位必须在初始化完成后再置位
+   \                     ??ADC_DeInit_11:
+   \   000104   A2D30007     BIS.W   #0x2, &0x700
+    157          }
+   \   000108   E103         ADDA    #0x2, SP
+   \   00010A   3816         POPM.A  #0x4, R11
+   \   00010C   1001         RETA
+    158          /*******************************************************************************
+    159          *  函数名称：ADC_StartConv(void)
+    160          *  功能说明：启动一次ADC转换
+    161          *  参数说明：无
+    162          *  函数返回：无
+    163          *  注意    ：若有多个通道时，将会同时使多个通道转换一次，而不是对单一通道进行转换
+    164          *  使用示例：ADC_StartConv();   //所有通道启动一次ADC转换
+    165          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    166          void ADC_StartConv(void)
+   \                     ADC_StartConv:
+    167          {
+    168            ADC12->SC = BIT_RESET;
+   \   000000   92C30007     BIC.W   #0x1, &0x700
+    169            ADC12->SC = BIT_SET;        //启动采样转换
+   \   000004   92D30007     BIS.W   #0x1, &0x700
+    170          }
+   \   000008   1001         RETA
+    171          /*******************************************************************************
+    172          *  函数名称：ADC_WaitBusy()
+    173          *  功能说明：等待ADC不忙
+    174          *  参数说明：无
+    175          *  函数返回：无
+    176          *  注意    ：无
+    177          *  使用示例：ADC_WaitBusy()；  //等待转换完成
+    178          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    179          void   ADC_WaitBusy()
+   \                     ADC_WaitBusy:
+   \                     ??ADC_WaitBusy_0:
+    180          {
+    181            while(ADC12->ADBUSY == BIT_SET);//等待ADC不忙
+   \   000000   92B30207     BIT.W   #0x1, &0x702
+   \   000004   FD23         JNE     ??ADC_WaitBusy_0
+    182          }
+   \   000006   1001         RETA
+    183          /*******************************************************************************
+    184          *  函数名称：ADC_ReadChanelValue(ADC_CHn ch)                           
+    185          *  功能说明：读取一个ADC通道的转换结果
+    186          *  参数说明：ADC_CHn ch ：要读取的通道
+    187          *  函数返回：该通道转换结果
+    188          *  使用示例：uint16 data = ADC_ReadChanelValue(ADC_CH0);  //读取ADC_CH0通道转换结果
+    189          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    190          uint16_t ADC_ReadChanelValue(ADC_CHn ch)                           
+   \                     ADC_ReadChanelValue:
+    191          {
+    192            return (ADC12->MEM[ADC_GetChanelNum(ch)]);                          //读取转换结果，读取后会自动清除对应标志位
+   \   000000   ........     CALLA   #?Subroutine1
+   \                     ??ADC_ReadChanelValue_0:
+   \   000004   2C9F         CMP.W   @R15, R12
+   \   000006   1024         JEQ     ??ADC_ReadChanelValue_2
+   \   000008   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_11:
+   \   00000C   0D24         JEQ     ??ADC_ReadChanelValue_2
+   \   00000E   ........     CALLA   #?Subroutine5
+   \                     ??CrossCallReturnLabel_17:
+   \   000012   0A24         JEQ     ??ADC_ReadChanelValue_2
+   \   000014   ........     CALLA   #?Subroutine6
+   \                     ??CrossCallReturnLabel_23:
+   \   000018   0724         JEQ     ??ADC_ReadChanelValue_2
+   \   00001A   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_3:
+   \   00001E   F22B         JNC     ??ADC_ReadChanelValue_0
+   \   000020   8E001E07     MOVA    #0x71e, R14
+   \                     ??ADC_ReadChanelValue_1:
+   \   000024   2C4E         MOV.W   @R14, R12
+   \   000026   1001         RETA
+   \                     ??ADC_ReadChanelValue_2:
+   \   000028   8E11         SXT     R14
+   \   00002A   EE0E         ADDA    R14, R14
+   \   00002C   AE002007     ADDA    #0x720, R14
+   \   000030   F93F         JMP     ??ADC_ReadChanelValue_1
+   \   000032   0343         NOP
+    193          }
+    194          /*******************************************************************************
+    195          *  函数名称：ADC_ReadChanelOnce(ADC_CHn ch)
+    196          *  功能说明：转换并读取一个ADC通道的值
+    197          *  参数说明：ADC_CHn ch ：要转换并读取的通道
+    198          *  函数返回：该通道转换结果
+    199          *  使用示例：uint16 data = ADC_ReadChanelOnce(ADC_CH0);  //立即启动一次ADC转换并读取ADC_CH0通道转换结果
+    200          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    201          uint16_t ADC_ReadChanelOnce(ADC_CHn ch)
+   \                     ADC_ReadChanelOnce:
+    202          {
+    203            ADC_StartConv();
+   \   000000   92C30007     BIC.W   #0x1, &0x700
+   \   000004   92D30007     BIS.W   #0x1, &0x700
+    204            ADC_WaitBusy();
+   \                     ??ADC_ReadChanelOnce_0:
+   \   000008   92B30207     BIT.W   #0x1, &0x702
+   \   00000C   FD23         JNE     ??ADC_ReadChanelOnce_0
+    205            return ADC_ReadChanelValue(ch);
+   \   00000E   ........     CALLA   #?Subroutine1
+   \                     ??ADC_ReadChanelOnce_1:
+   \   000012   2C9F         CMP.W   @R15, R12
+   \   000014   1024         JEQ     ??ADC_ReadChanelOnce_3
+   \   000016   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_12:
+   \   00001A   0D24         JEQ     ??ADC_ReadChanelOnce_3
+   \   00001C   ........     CALLA   #?Subroutine5
+   \                     ??CrossCallReturnLabel_18:
+   \   000020   0A24         JEQ     ??ADC_ReadChanelOnce_3
+   \   000022   ........     CALLA   #?Subroutine6
+   \                     ??CrossCallReturnLabel_24:
+   \   000026   0724         JEQ     ??ADC_ReadChanelOnce_3
+   \   000028   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_4:
+   \   00002C   F22B         JNC     ??ADC_ReadChanelOnce_1
+   \   00002E   8E001E07     MOVA    #0x71e, R14
+   \                     ??ADC_ReadChanelOnce_2:
+   \   000032   2C4E         MOV.W   @R14, R12
+   \   000034   1001         RETA
+   \                     ??ADC_ReadChanelOnce_3:
+   \   000036   8E11         SXT     R14
+   \   000038   EE0E         ADDA    R14, R14
+   \   00003A   AE002007     ADDA    #0x720, R14
+   \   00003E   F93F         JMP     ??ADC_ReadChanelOnce_2
+   \   000040   0343         NOP
+    206          }
+    207          /*******************************************************************************
+    208          *  函数名称：ADC_ITConfig   (ADC_CHn ch,STATUS ITState)
+    209          *  功能说明：设置是否使能ADC某个通道的中断
+    210          *  参数说明：ADC_CHn ch ：要设置的通道
+    211                       STATUS ITState ：中断是否使能
+    212          *  函数返回：无
+    213          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    214          void ADC_ITConfig   (ADC_CHn ch,STATUS ITState)
+   \                     ADC_ITConfig:
+    215          {
+    216            if(ITState != DISABLE)
+   \   000000   4D93         CMP.B   #0x0, R13
+   \   000002   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_2:
+   \   000006   1724         JEQ     ??ADC_ITConfig_5
+    217            {
+    218              ADC12->IE |=  (1<<ADC_GetChanelNum(ch));                           //
+   \                     ??ADC_ITConfig_0:
+   \   000008   2C9F         CMP.W   @R15, R12
+   \   00000A   0D24         JEQ     ??ADC_ITConfig_1
+   \   00000C   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_13:
+   \   000010   0A24         JEQ     ??ADC_ITConfig_1
+   \   000012   ........     CALLA   #?Subroutine5
+   \                     ??CrossCallReturnLabel_19:
+   \   000016   0724         JEQ     ??ADC_ITConfig_1
+   \   000018   ........     CALLA   #?Subroutine6
+   \                     ??CrossCallReturnLabel_25:
+   \   00001C   0424         JEQ     ??ADC_ITConfig_1
+   \   00001E   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_5:
+   \   000022   F22B         JNC     ??ADC_ITConfig_0
+   \   000024   7E43         MOV.B   #0xff, R14
+    219            }
+   \                     ??ADC_ITConfig_1:
+   \   000026   1F43         MOV.W   #0x1, R15
+   \   000028   5E83         SUB.B   #0x1, R14
+   \   00002A   0230         JN      ??ADC_ITConfig_7
+   \   00002C                RPT     R14
+   \   00002C   CE180F5F     RLAX.W  R15
+   \                     ??ADC_ITConfig_7:
+   \   000030   82DF0C07     BIS.W   R15, &0x70c
+   \   000034   1001         RETA
+    220            else
+    221            {
+    222              ADC12->IE &= ~(1<<ADC_GetChanelNum(ch));                           //
+   \                     ??ADC_ITConfig_5:
+   \   000036   2C9F         CMP.W   @R15, R12
+   \   000038   1024         JEQ     ??ADC_ITConfig_8
+   \   00003A   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_14:
+   \   00003E   0D24         JEQ     ??ADC_ITConfig_8
+   \   000040   ........     CALLA   #?Subroutine5
+   \                     ??CrossCallReturnLabel_20:
+   \   000044   0A24         JEQ     ??ADC_ITConfig_8
+   \   000046   ........     CALLA   #?Subroutine6
+   \                     ??CrossCallReturnLabel_26:
+   \   00004A   0724         JEQ     ??ADC_ITConfig_8
+   \   00004C   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_6:
+   \   000050   F22B         JNC     ??ADC_ITConfig_5
+   \   000052   3F43         MOV.W   #0xffff, R15
+   \                     ??ADC_ITConfig_3:
+   \   000054   82FF0C07     AND.W   R15, &0x70c
+    223            }
+    224          }
+   \   000058   1001         RETA
+   \                     ??ADC_ITConfig_8:
+   \   00005A   ........     CALLA   #?Subroutine8
+   \                     ??CrossCallReturnLabel_29:
+   \   00005E   FA3F         JMP     ??ADC_ITConfig_3
+   \   000060   0343         NOP
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine1:
+   \   000000   4E43         MOV.B   #0x0, R14
+   \   000002   ........     MOVA    #ADC_Channel_Bit, R15
+   \   000006   1001         RETA
+    225          /*******************************************************************************
+    226          *  函数名称：ADC_GetITStatus(ADC_CHn ch)
+    227          *  功能说明：获取某一通道中断标志状态
+    228          *  参数说明：ADC_CHn ch ：要读取的通道
+    229          *  函数返回：该通道中断状态标志是否置位（TRUE:置位 RESET:复位）
+    230          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    231          STATUS  ADC_GetITStatus(ADC_CHn ch)
+   \                     ADC_GetITStatus:
+    232          {
+    233            return ((ADC12->IFG & (1<<ADC_GetChanelNum(ch))) ? TRUE :FALSE);
+   \   000000   1F420A07     MOV.W   &0x70a, R15
+   \   000004   4E43         MOV.B   #0x0, R14
+   \   000006   ........     MOVA    #ADC_Channel_Bit, R13
+   \                     ??ADC_GetITStatus_0:
+   \   00000A   2C9D         CMP.W   @R13, R12
+   \   00000C   1324         JEQ     ??ADC_GetITStatus_1
+   \   00000E   5E53         ADD.B   #0x1, R14
+   \   000010   1C9D0200     CMP.W   0x2(R13), R12
+   \   000014   0F24         JEQ     ??ADC_GetITStatus_1
+   \   000016   5E53         ADD.B   #0x1, R14
+   \   000018   1C9D0400     CMP.W   0x4(R13), R12
+   \   00001C   0B24         JEQ     ??ADC_GetITStatus_1
+   \   00001E   5E53         ADD.B   #0x1, R14
+   \   000020   1C9D0600     CMP.W   0x6(R13), R12
+   \   000024   0724         JEQ     ??ADC_GetITStatus_1
+   \   000026   5E53         ADD.B   #0x1, R14
+   \   000028   AD000800     ADDA    #0x8, R13
+   \   00002C   7E901000     CMP.B   #0x10, R14
+   \   000030   EC2B         JNC     ??ADC_GetITStatus_0
+   \   000032   7E43         MOV.B   #0xff, R14
+   \                     ??ADC_GetITStatus_1:
+   \   000034   5E83         SUB.B   #0x1, R14
+   \   000036   0230         JN      ??ADC_GetITStatus_3
+   \   000038                RPT     R14
+   \   000038   CE190F10     RRUX.W  R15
+   \                     ??ADC_GetITStatus_3:
+   \   00003C   4C4F         MOV.B   R15, R12
+   \   00003E   5CF3         AND.B   #0x1, R12
+   \   000040   1001         RETA
+    234          }
+    235           /*******************************************************************************
+    236          *  函数名称：ADC_ClearITPendingBit(ADC_CHn ch)
+    237          *  功能说明：清除某一通道中断标志位
+    238          *  参数说明：ADC_CHn ch ：要清除中断标志的通道
+    239          *  函数返回：无
+    240          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    241          void   ADC_ClearITPendingBit(ADC_CHn ch)
+   \                     ADC_ClearITPendingBit:
+    242          {
+    243            ADC12->IFG &=~(1<<ADC_GetChanelNum(ch));
+   \   000000   ........     CALLA   #?Subroutine1
+   \                     ??ADC_ClearITPendingBit_0:
+   \   000004   2C9F         CMP.W   @R15, R12
+   \   000006   1024         JEQ     ??ADC_ClearITPendingBit_3
+   \   000008   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_15:
+   \   00000C   0D24         JEQ     ??ADC_ClearITPendingBit_3
+   \   00000E   ........     CALLA   #?Subroutine5
+   \                     ??CrossCallReturnLabel_21:
+   \   000012   0A24         JEQ     ??ADC_ClearITPendingBit_3
+   \   000014   ........     CALLA   #?Subroutine6
+   \                     ??CrossCallReturnLabel_27:
+   \   000018   0724         JEQ     ??ADC_ClearITPendingBit_3
+   \   00001A   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_7:
+   \   00001E   F22B         JNC     ??ADC_ClearITPendingBit_0
+   \   000020   3F43         MOV.W   #0xffff, R15
+   \                     ??ADC_ClearITPendingBit_1:
+   \   000022   82FF0A07     AND.W   R15, &0x70a
+    244          }
+   \   000026   1001         RETA
+   \                     ??ADC_ClearITPendingBit_3:
+   \   000028   ........     CALLA   #?Subroutine8
+   \                     ??CrossCallReturnLabel_30:
+   \   00002C   FA3F         JMP     ??ADC_ClearITPendingBit_1
+   \   00002E   0343         NOP
+    245          /*****************************************************************************
+    246          *  函数名称：ADC_GetChanelMemoryAddr(ADC_CHn ch)
+    247          *  功能说明：获取对应通道的结果寄存器地址（主要用于DMA时需要）
+    248          *  参数说明：ADC_CHn ch ：要获取结果地址的通道
+    249          *  函数返回：void * :转换结果地址
+    250          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    251          void * ADC_GetChanelMemoryAddr(ADC_CHn ch)
+   \                     ADC_GetChanelMemoryAddr:
+    252          {
+    253            return (void *)(&(ADC12->MEM[ADC_GetChanelNum(ch)]));
+   \   000000   ........     CALLA   #?Subroutine1
+   \                     ??ADC_GetChanelMemoryAddr_0:
+   \   000004   2C9F         CMP.W   @R15, R12
+   \   000006   0F24         JEQ     ??ADC_GetChanelMemoryAddr_2
+   \   000008   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_16:
+   \   00000C   0C24         JEQ     ??ADC_GetChanelMemoryAddr_2
+   \   00000E   ........     CALLA   #?Subroutine5
+   \                     ??CrossCallReturnLabel_22:
+   \   000012   0924         JEQ     ??ADC_GetChanelMemoryAddr_2
+   \   000014   ........     CALLA   #?Subroutine6
+   \                     ??CrossCallReturnLabel_28:
+   \   000018   0624         JEQ     ??ADC_GetChanelMemoryAddr_2
+   \   00001A   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_8:
+   \   00001E   F22B         JNC     ??ADC_GetChanelMemoryAddr_0
+   \   000020   8C001E07     MOVA    #0x71e, R12
+   \   000024   1001         RETA
+   \                     ??ADC_GetChanelMemoryAddr_2:
+   \   000026   4C4E         MOV.B   R14, R12
+   \   000028   8C11         SXT     R12
+   \   00002A   EC0C         ADDA    R12, R12
+   \   00002C   AC002007     ADDA    #0x720, R12
+   \   000030   1001         RETA
+    254          }
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine6:
+   \   000000   5E53         ADD.B   #0x1, R14
+   \   000002   1C9F0600     CMP.W   0x6(R15), R12
+   \   000006   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine5:
+   \   000000   5E53         ADD.B   #0x1, R14
+   \   000002   1C9F0400     CMP.W   0x4(R15), R12
+   \   000006   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine4:
+   \   000000   5E53         ADD.B   #0x1, R14
+   \   000002   1C9F0200     CMP.W   0x2(R15), R12
+   \   000006   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine2:
+   \   000000   5E53         ADD.B   #0x1, R14
+   \   000002   AF000800     ADDA    #0x8, R15
+   \   000006   7E901000     CMP.B   #0x10, R14
+   \   00000A   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine8:
+   \   000000   1F43         MOV.W   #0x1, R15
+   \   000002   5E83         SUB.B   #0x1, R14
+   \   000004   0230         JN      ??ADC_ITConfig_6
+   \   000006                RPT     R14
+   \   000006   CE180F5F     RLAX.W  R15
+   \                     ??ADC_ITConfig_6:
+   \   00000A   3FE3         XOR.W   #0xffff, R15
+   \   00000C   1001         RETA
+    255          /*******************************************************************************
+    256          *  函数名称：ADC_GetChanelNum(ADC_CHn ch)
+    257          *  功能说明：获取对应通道的寄存器编号值
+    258          *  参数说明：ADC_CHn ch ：要获取编号的通道
+    259          *  函数返回：编号,失败返回-1
+    260          ********************************************************************************/
+    261          inline int8_t ADC_GetChanelNum(ADC_CHn ch)
+    262          {
+    263            for(uint8_t Chanel_Num=0; Chanel_Num < ADC_CH_NUM; Chanel_Num++)
+    264            {
+    265              if(ch == ADC_Channel_Bit[Chanel_Num])
+    266              {
+    267                return Chanel_Num;
+    268              }
+    269            }
+    270            return -1;
+    271          }
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   ADC_ClearITPendingBit
+     22   ADC_DeInit
+       22   -> GPIO_MultiBits_Init
+      4   ADC_GetChanelMemoryAddr
+      4   ADC_GetITStatus
+      4   ADC_ITConfig
+     28   ADC_Init
+       28   -> GPIO_MultiBits_Init
+      4   ADC_ReadChanelOnce
+      4   ADC_ReadChanelValue
+      4   ADC_StartConv
+      4   ADC_WaitBusy
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      14  ?Subroutine0
+       8  ?Subroutine1
+      12  ?Subroutine2
+      18  ?Subroutine3
+       8  ?Subroutine4
+       8  ?Subroutine5
+       8  ?Subroutine6
+      10  ?Subroutine7
+      14  ?Subroutine8
+       4  ADC12
+      32  ADC_Channel_Bit
+      48  ADC_ClearITPendingBit
+     270  ADC_DeInit
+      50  ADC_GetChanelMemoryAddr
+      66  ADC_GetITStatus
+      98  ADC_ITConfig
+     430  ADC_Init
+      66  ADC_ReadChanelOnce
+      52  ADC_ReadChanelValue
+      10  ADC_StartConv
+       8  ADC_WaitBusy
+       2  InitialedChannel_Bit
+       1  InitialedChannel_Num
+       2  _A_PCSEL_L
+       2  _A_REFCTL0_L
+
+ 
+ 1 198 bytes in segment CODE
+     4 bytes in segment DATA16_AN
+     4 bytes in segment DATA20_C
+    35 bytes in segment DATA20_Z
+ 
+ 1 198 bytes of CODE  memory
+     4 bytes of CONST memory
+    35 bytes of DATA  memory (+ 4 bytes shared)
+
+Errors: none
+Warnings: none

@@ -1,0 +1,1531 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:45
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\SPL06.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWE3F8.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\SPL06.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\SPL06.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\SPL06.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\SPL06.c
+      1          #include "spl06.h"
+      2          #include <math.h>
+      3          
+      4          
+      5          #define PRESSURE_REG    0X00
+      6          #define TEMP_REG        0X03
+      7          #define PRS_CFG         0x06
+      8          #define TMP_CFG         0x07
+      9          #define MEAS_CFG        0x08
+     10          
+     11          #define SPL06_REST_VALUE 0x09
+     12          #define SPL06_REST_REG 0x0C
+     13          
+     14          #define PRODUCT_ID 0X0D
+     15          
+     16          #define uint32_t unsigned int
+     17          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     18          static struct SPL06_t SPL06;
+   \                     SPL06:
+   \   000000                DS8 40
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+     19          static struct SPL06_t *p_SPL06;
+   \                     p_SPL06:
+   \   000000                DS8 4
+     20          
+     21          void SPL06_write(uint8 hwadr, uint8 regadr, uint8 val);
+     22          uint8 SPL06_read(uint8 hwadr, uint8 regadr);
+     23          void SPL06_get_calib_param(void);
+     24          
+     25          
+     26          /*****************************************************************************
+     27           函 数 名  : SPL06_write
+     28           功能描述  : I2C 寄存器写入子函数
+     29           输入参数  : uint8 hwadr   硬件地址
+     30                       uint8 regadr  寄存器地址
+     31                       uint8 val     值
+     32           输出参数  : 无
+     33           返 回 值  : 
+     34           调用函数  : 
+     35           被调函数  : 
+     36           
+     37           修改历史      :
+     38            1.日    期   : 2015年11月30日
+     39              作    者   : WL
+     40              修改内容   : 新生成函数
+     41          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     42          void SPL06_write(unsigned char hwadr, unsigned char regadr, unsigned char val)
+   \                     SPL06_write:
+     43          {
+     44                  Single_WriteIIC(hwadr,regadr,val);
+   \   000000   ........     BRA     #Single_WriteIIC
+     45          
+     46          
+     47          }
+     48          
+     49          /*****************************************************************************
+     50           函 数 名  : SPL06_read
+     51           功能描述  : I2C 寄存器读取子函数
+     52           输入参数  : uint8 hwadr   硬件地址
+     53                       uint8 regadr  寄存器地址
+     54           输出参数  : 
+     55           返 回 值  : uint8 读出值
+     56           调用函数  : 
+     57           被调函数  : 
+     58           
+     59           修改历史      :
+     60            1.日    期   : 2015年11月30日
+     61              作    者   : WL
+     62              修改内容   : 新生成函数
+     63          
+     64          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     65          uint8 SPL06_read(unsigned char hwadr, unsigned char regadr)
+   \                     SPL06_read:
+     66          {
+     67              uint8 reg_data;
+     68              reg_data = Single_ReadIIC(hwadr,regadr);
+   \   000000   ........     BRA     #Single_ReadIIC
+     69              return reg_data;
+     70          }
+     71          
+     72          /*****************************************************************************
+     73           函 数 名  : SPL06_init
+     74           功能描述  : SPL06-01 初始化函数
+     75           输入参数  : void  
+     76           输出参数  : 无
+     77           返 回 值  : 
+     78           调用函数  : 
+     79           被调函数  : 
+     80           
+     81           修改历史      :
+     82            1.日    期   : 2015年11月30日
+     83              作    者   : WL
+     84              修改内容   : 新生成函数
+     85          
+     86          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     87          void SPL06_init(void)
+   \                     SPL06_init:
+     88          { 
+     89            
+     90            
+     91              p_SPL06 = &SPL06; /* read Chip Id */
+   \   000000   ....F240.... MOVX.A  #SPL06, &p_SPL06
+   \            ....        
+     92              p_SPL06->i32rawPressure = 0;
+   \   000008   ........     MOVA    &p_SPL06, R15
+   \   00000C   8F431800     MOV.W   #0x0, 0x18(R15)
+   \   000010   8F431A00     MOV.W   #0x0, 0x1a(R15)
+     93              p_SPL06->i32rawTemperature = 0;
+   \   000014   ........     MOVA    &p_SPL06, R15
+   \   000018   8F431C00     MOV.W   #0x0, 0x1c(R15)
+   \   00001C   8F431E00     MOV.W   #0x0, 0x1e(R15)
+     94              p_SPL06->chip_id = 0x34;
+   \   000020   ........     MOVA    &p_SPL06, R15
+   \   000024   FF4034001600 MOV.B   #0x34, 0x16(R15)
+     95              SPL06_get_calib_param();
+   \   00002A   ........     CALLA   #SPL06_get_calib_param
+     96              
+     97              SPL06_rateset(PRESSURE_SENSOR,128, 32);   
+   \   00002E   7E402000     MOV.B   #0x20, R14
+   \   000032   7D408000     MOV.B   #0x80, R13
+   \   000036   4C43         MOV.B   #0x0, R12
+   \   000038   ........     CALLA   #SPL06_rateset
+     98              SPL06_rateset(TEMPERATURE_SENSOR,32, 8);
+   \   00003C   7E42         MOV.B   #0x8, R14
+   \   00003E   7D402000     MOV.B   #0x20, R13
+   \   000042   5C43         MOV.B   #0x1, R12
+   \   000044   ........     CALLA   #SPL06_rateset
+     99              SPL06_start_continuous(CONTINUOUS_P_AND_T);
+   \   000048   7C400300     MOV.B   #0x3, R12
+   \   00004C   ........     BRA     #SPL06_start_continuous
+    100          }
+    101          
+    102          
+    103          /*****************************************************************************
+    104           函 数 名  : SPL06_rateset
+    105           功能描述  :  设置温度传感器的每秒采样次数以及过采样率
+    106           输入参数  : uint8 u8OverSmpl  过采样率         Maximal = 128
+    107                       uint8 u8SmplRate  每秒采样次数(Hz) Maximal = 128
+    108                       uint8 iSensor     0: Pressure; 1: Temperature
+    109           输出参数  : 无
+    110           返 回 值  : 无
+    111           调用函数  :
+    112           被调函数  :
+    113          
+    114           修改历史      :
+    115            1.日    期   : 2015年11月24日
+    116              作    者   : WL
+    117              修改内容   : 新生成函数
+    118          
+    119          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    120          void SPL06_rateset(uint8 iSensor, uint8 u8SmplRate, uint8 u8OverSmpl)
+   \                     SPL06_rateset:
+    121          {
+   \   000000   5B14         PUSHM.A #0x6, R11
+   \   000002   484C         MOV.B   R12, R8
+   \   000004   464E         MOV.B   R14, R6
+    122              uint8 reg = 0;
+   \   000006   4943         MOV.B   #0x0, R9
+    123              int32_t i32kPkT = 0;
+   \   000008   0A43         MOV.W   #0x0, R10
+   \   00000A   0B43         MOV.W   #0x0, R11
+    124              switch(u8SmplRate)
+   \   00000C   6D83         SUB.B   #0x2, R13
+   \   00000E   1024         JEQ     ??SPL06_rateset_3
+   \   000010   6D83         SUB.B   #0x2, R13
+   \   000012   1124         JEQ     ??SPL06_rateset_4
+   \   000014   6D82         SUB.B   #0x4, R13
+   \   000016   1224         JEQ     ??SPL06_rateset_5
+   \   000018   7D82         SUB.B   #0x8, R13
+   \   00001A   1324         JEQ     ??SPL06_rateset_6
+   \   00001C   7D801000     SUB.B   #0x10, R13
+   \   000020   1324         JEQ     ??SPL06_rateset_7
+   \   000022   7D802000     SUB.B   #0x20, R13
+   \   000026   1324         JEQ     ??SPL06_rateset_8
+   \   000028   7D804000     SUB.B   #0x40, R13
+   \   00002C   1324         JEQ     ??SPL06_rateset_9
+   \   00002E   143C         JMP     ??SPL06_rateset_0
+    125              {
+    126                  case 2:
+    127                      reg |= (1<<5);
+   \                     ??SPL06_rateset_3:
+   \   000030   79D02000     BIS.B   #0x20, R9
+    128                      break;
+   \   000034   113C         JMP     ??SPL06_rateset_0
+    129                  case 4:
+    130                      reg |= (2<<5);
+   \                     ??SPL06_rateset_4:
+   \   000036   79D04000     BIS.B   #0x40, R9
+    131                      break;
+   \   00003A   0E3C         JMP     ??SPL06_rateset_0
+    132                  case 8:
+    133                      reg |= (3<<5);
+   \                     ??SPL06_rateset_5:
+   \   00003C   79D06000     BIS.B   #0x60, R9
+    134                      break;
+   \   000040   0B3C         JMP     ??SPL06_rateset_0
+    135                  case 16:
+    136                      reg |= (4<<5);
+   \                     ??SPL06_rateset_6:
+   \   000042   79D08000     BIS.B   #0x80, R9
+    137                      break;
+   \   000046   083C         JMP     ??SPL06_rateset_0
+    138                  case 32:
+    139                      reg |= (5<<5);
+   \                     ??SPL06_rateset_7:
+   \   000048   79D0A000     BIS.B   #0xa0, R9
+    140                      break;
+   \   00004C   053C         JMP     ??SPL06_rateset_0
+    141                  case 64:
+    142                      reg |= (6<<5);
+   \                     ??SPL06_rateset_8:
+   \   00004E   79D0C000     BIS.B   #0xc0, R9
+    143                      break;
+   \   000052   023C         JMP     ??SPL06_rateset_0
+    144                  case 128:
+    145                      reg |= (7<<5);
+   \                     ??SPL06_rateset_9:
+   \   000054   79D0E000     BIS.B   #0xe0, R9
+    146                      break;
+    147                  case 1:
+    148                  default:
+    149                      break;
+    150              }
+    151              switch(u8OverSmpl)
+   \                     ??SPL06_rateset_0:
+   \   000058   4E46         MOV.B   R6, R14
+   \   00005A   6E83         SUB.B   #0x2, R14
+   \   00005C   1024         JEQ     ??SPL06_rateset_10
+   \   00005E   6E83         SUB.B   #0x2, R14
+   \   000060   1324         JEQ     ??SPL06_rateset_11
+   \   000062   6E82         SUB.B   #0x4, R14
+   \   000064   1624         JEQ     ??SPL06_rateset_12
+   \   000066   7E82         SUB.B   #0x8, R14
+   \   000068   1A24         JEQ     ??SPL06_rateset_13
+   \   00006A   7E801000     SUB.B   #0x10, R14
+   \   00006E   1D24         JEQ     ??SPL06_rateset_14
+   \   000070   7E802000     SUB.B   #0x20, R14
+   \   000074   2124         JEQ     ??SPL06_rateset_15
+   \   000076   7E804000     SUB.B   #0x40, R14
+   \   00007A   2524         JEQ     ??SPL06_rateset_16
+   \   00007C   2B3C         JMP     ??SPL06_rateset_1
+    152              {
+    153                  case 2:
+    154                      reg |= 1;
+   \                     ??SPL06_rateset_10:
+   \   00007E   59D3         BIS.B   #0x1, R9
+    155                      i32kPkT = 1572864;
+   \   000080   0A43         MOV.W   #0x0, R10
+   \   000082   3B401800     MOV.W   #0x18, R11
+    156                      break;
+   \   000086   283C         JMP     ??SPL06_rateset_2
+    157                  case 4:
+    158                      reg |= 2;
+   \                     ??SPL06_rateset_11:
+   \   000088   69D3         BIS.B   #0x2, R9
+    159                      i32kPkT = 3670016;
+   \   00008A   0A43         MOV.W   #0x0, R10
+   \   00008C   3B403800     MOV.W   #0x38, R11
+    160                      break;
+   \   000090   233C         JMP     ??SPL06_rateset_2
+    161                  case 8:
+    162                      reg |= 3;
+   \                     ??SPL06_rateset_12:
+   \   000092   79D00300     BIS.B   #0x3, R9
+    163                      i32kPkT = 7864320;
+   \   000096   0A43         MOV.W   #0x0, R10
+   \   000098   3B407800     MOV.W   #0x78, R11
+    164                      break;
+   \   00009C   1D3C         JMP     ??SPL06_rateset_2
+    165                  case 16:
+    166                      i32kPkT = 253952;
+   \                     ??SPL06_rateset_13:
+   \   00009E   3A4000E0     MOV.W   #0xe000, R10
+   \   0000A2   3B400300     MOV.W   #0x3, R11
+    167                      reg |= 4;
+   \   0000A6   69D2         BIS.B   #0x4, R9
+    168                      break;
+   \   0000A8   173C         JMP     ??SPL06_rateset_2
+    169                  case 32:
+    170                      i32kPkT = 516096;
+   \                     ??SPL06_rateset_14:
+   \   0000AA   3A4000E0     MOV.W   #0xe000, R10
+   \   0000AE   3B400700     MOV.W   #0x7, R11
+    171                      reg |= 5;
+   \   0000B2   79D00500     BIS.B   #0x5, R9
+    172                      break;
+   \   0000B6   103C         JMP     ??SPL06_rateset_2
+    173                  case 64:
+    174                      i32kPkT = 1040384;
+   \                     ??SPL06_rateset_15:
+   \   0000B8   3A4000E0     MOV.W   #0xe000, R10
+   \   0000BC   3B400F00     MOV.W   #0xf, R11
+    175                      reg |= 6;
+   \   0000C0   79D00600     BIS.B   #0x6, R9
+    176                      break;
+   \   0000C4   093C         JMP     ??SPL06_rateset_2
+    177                  case 128:
+    178                      i32kPkT = 2088960;
+   \                     ??SPL06_rateset_16:
+   \   0000C6   3A4000E0     MOV.W   #0xe000, R10
+   \   0000CA   3B401F00     MOV.W   #0x1f, R11
+    179                      reg |= 7;
+   \   0000CE   79D00700     BIS.B   #0x7, R9
+    180                      break;
+   \   0000D2   023C         JMP     ??SPL06_rateset_2
+    181                  case 1:
+    182                  default:
+    183                      i32kPkT = 524288;
+   \                     ??SPL06_rateset_1:
+   \   0000D4   0A43         MOV.W   #0x0, R10
+   \   0000D6   3B42         MOV.W   #0x8, R11
+    184                      break;
+    185              }
+    186          
+    187              if(iSensor == 0)
+   \                     ??SPL06_rateset_2:
+   \   0000D8   4893         CMP.B   #0x0, R8
+   \   0000DA   1F20         JNE     ??SPL06_rateset_17
+    188              {
+    189                  p_SPL06->i32kP = i32kPkT;
+   \   0000DC   ........     MOVA    &p_SPL06, R15
+   \   0000E0   8F4A2000     MOV.W   R10, 0x20(R15)
+   \   0000E4   8F4B2200     MOV.W   R11, 0x22(R15)
+    190                  SPL06_write(HW_ADR << 1, 0x06, reg);
+   \   0000E8   4E49         MOV.B   R9, R14
+   \   0000EA   7D400600     MOV.B   #0x6, R13
+   \   0000EE   7C40EC00     MOV.B   #0xec, R12
+   \   0000F2   ........     CALLA   #SPL06_write
+    191                  if(u8OverSmpl > 8)
+   \   0000F6   76900900     CMP.B   #0x9, R6
+   \   0000FA   0F28         JNC     ??SPL06_rateset_17
+    192                  {
+    193                      reg = SPL06_read(HW_ADR << 1, 0x09);
+   \   0000FC   7D400900     MOV.B   #0x9, R13
+   \   000100   7C40EC00     MOV.B   #0xec, R12
+   \   000104   ........     CALLA   #SPL06_read
+   \   000108   494C         MOV.B   R12, R9
+    194                      SPL06_write(HW_ADR << 1, 0x09, reg | 0x04);
+   \   00010A   4E49         MOV.B   R9, R14
+   \   00010C   6ED2         BIS.B   #0x4, R14
+   \   00010E   7D400900     MOV.B   #0x9, R13
+   \   000112   7C40EC00     MOV.B   #0xec, R12
+   \   000116   ........     CALLA   #SPL06_write
+    195                  }
+    196              }
+    197              if(iSensor == 1)
+   \                     ??SPL06_rateset_17:
+   \   00011A   5893         CMP.B   #0x1, R8
+   \   00011C   2120         JNE     ??SPL06_rateset_18
+    198              {
+    199                  p_SPL06->i32kT = i32kPkT;
+   \   00011E   ........     MOVA    &p_SPL06, R15
+   \   000122   8F4A2400     MOV.W   R10, 0x24(R15)
+   \   000126   8F4B2600     MOV.W   R11, 0x26(R15)
+    200                  SPL06_write(HW_ADR << 1, 0x07, reg|0x80);  //Using mems temperature
+   \   00012A   79D08000     BIS.B   #0x80, R9
+   \   00012E   4E49         MOV.B   R9, R14
+   \   000130   7D400700     MOV.B   #0x7, R13
+   \   000134   7C40EC00     MOV.B   #0xec, R12
+   \   000138   ........     CALLA   #SPL06_write
+    201                  if(u8OverSmpl > 8)
+   \   00013C   76900900     CMP.B   #0x9, R6
+   \   000140   0F28         JNC     ??SPL06_rateset_18
+    202                  {
+    203                      reg = SPL06_read(HW_ADR << 1, 0x09);
+   \   000142   7D400900     MOV.B   #0x9, R13
+   \   000146   7C40EC00     MOV.B   #0xec, R12
+   \   00014A   ........     CALLA   #SPL06_read
+   \   00014E   494C         MOV.B   R12, R9
+    204                      SPL06_write(HW_ADR << 1, 0x09, reg | 0x08);
+   \   000150   79D2         BIS.B   #0x8, R9
+   \   000152   4E49         MOV.B   R9, R14
+   \   000154   7D400900     MOV.B   #0x9, R13
+   \   000158   7C40EC00     MOV.B   #0xec, R12
+   \   00015C   ........     CALLA   #SPL06_write
+    205                  }
+    206              }
+    207          }
+   \                     ??SPL06_rateset_18:
+   \   000160   5616         POPM.A  #0x6, R11
+   \   000162   1001         RETA
+    208          
+    209          /*****************************************************************************
+    210           函 数 名  : SPL06_get_calib_param
+    211           功能描述  : 获取校准参数
+    212           输入参数  : void  
+    213           输出参数  : 无
+    214           返 回 值  : 
+    215           调用函数  : 
+    216           被调函数  : 
+    217           
+    218           修改历史      :
+    219            1.日    期   : 2015年11月30日
+    220              作    者   : WL
+    221              修改内容   : 新生成函数
+    222          
+    223          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    224          void SPL06_get_calib_param(void)
+   \                     SPL06_get_calib_param:
+    225          {
+   \   000000   2A14         PUSHM.A #0x3, R10
+    226              uint32_t h;
+    227              uint32_t m;
+    228              uint32_t l;
+    229              h =  SPL06_read(HW_ADR << 1, 0x10);
+   \   000002   7D401000     MOV.B   #0x10, R13
+   \   000006   7C40EC00     MOV.B   #0xec, R12
+   \   00000A   ........     CALLA   #SPL06_read
+   \   00000E   4A4C         MOV.B   R12, R10
+    230              l  =  SPL06_read(HW_ADR << 1, 0x11);
+   \   000010   7D401100     MOV.B   #0x11, R13
+   \   000014   7C40EC00     MOV.B   #0xec, R12
+   \   000018   ........     CALLA   #SPL06_read
+   \   00001C   4F4C         MOV.B   R12, R15
+   \   00001E   4F4F         MOV.B   R15, R15
+    231              p_SPL06->calib_param.c0 = (int16)h<<4 | l>>4;
+   \   000020   5F0F         RRUM.W  #0x4, R15
+   \   000022   5A0E         RLAM.W  #0x4, R10
+   \   000024   0ADF         BIS.W   R15, R10
+   \   000026   ........     MOVA    &p_SPL06, R15
+   \   00002A   8F4A0000     MOV.W   R10, 0(R15)
+    232              p_SPL06->calib_param.c0 = (p_SPL06->calib_param.c0&0x0800)?(0xF000|p_SPL06->calib_param.c0):p_SPL06->calib_param.c0;
+   \   00002E   ........     MOVA    &p_SPL06, R15
+   \   000032   BFB000080000 BIT.W   #0x800, 0(R15)
+   \   000038   0628         JNC     ??SPL06_get_calib_param_4
+   \   00003A   ........     MOVA    &p_SPL06, R15
+   \   00003E   2F4F         MOV.W   @R15, R15
+   \   000040   3FD000F0     BIS.W   #0xf000, R15
+   \   000044   033C         JMP     ??SPL06_get_calib_param_0
+   \                     ??SPL06_get_calib_param_4:
+   \   000046   ........     MOVA    &p_SPL06, R15
+   \   00004A   2F4F         MOV.W   @R15, R15
+   \                     ??SPL06_get_calib_param_0:
+   \   00004C   ........     MOVA    &p_SPL06, R14
+   \   000050   8E4F0000     MOV.W   R15, 0(R14)
+    233              h =  SPL06_read(HW_ADR << 1, 0x11);
+   \   000054   7D401100     MOV.B   #0x11, R13
+   \   000058   7C40EC00     MOV.B   #0xec, R12
+   \   00005C   ........     CALLA   #SPL06_read
+   \   000060   4A4C         MOV.B   R12, R10
+    234              l  =  SPL06_read(HW_ADR << 1, 0x12);
+   \   000062   7D401200     MOV.B   #0x12, R13
+   \   000066   7C40EC00     MOV.B   #0xec, R12
+   \   00006A   ........     CALLA   #SPL06_read
+   \   00006E   4F4C         MOV.B   R12, R15
+   \   000070   4F4F         MOV.B   R15, R15
+    235              p_SPL06->calib_param.c1 = (int16)(h&0x0F)<<8 | l;
+   \   000072   3AF00F00     AND.W   #0xf, R10
+   \   000076   3AF0FF00     AND.W   #0xff, R10
+   \   00007A   8A10         SWPB    R10
+   \   00007C   0ADF         BIS.W   R15, R10
+   \   00007E   ........     MOVA    &p_SPL06, R15
+   \   000082   8F4A0200     MOV.W   R10, 0x2(R15)
+    236              p_SPL06->calib_param.c1 = (p_SPL06->calib_param.c1&0x0800)?(0xF000|p_SPL06->calib_param.c1):p_SPL06->calib_param.c1;
+   \   000086   ........     MOVA    &p_SPL06, R15
+   \   00008A   BFB000080200 BIT.W   #0x800, 0x2(R15)
+   \   000090   0728         JNC     ??SPL06_get_calib_param_5
+   \   000092   ........     MOVA    &p_SPL06, R15
+   \   000096   1F4F0200     MOV.W   0x2(R15), R15
+   \   00009A   3FD000F0     BIS.W   #0xf000, R15
+   \   00009E   043C         JMP     ??SPL06_get_calib_param_1
+   \                     ??SPL06_get_calib_param_5:
+   \   0000A0   ........     MOVA    &p_SPL06, R15
+   \   0000A4   1F4F0200     MOV.W   0x2(R15), R15
+   \                     ??SPL06_get_calib_param_1:
+   \   0000A8   ........     MOVA    &p_SPL06, R14
+   \   0000AC   8E4F0200     MOV.W   R15, 0x2(R14)
+    237              h =  SPL06_read(HW_ADR << 1, 0x13);
+   \   0000B0   7D401300     MOV.B   #0x13, R13
+   \   0000B4   7C40EC00     MOV.B   #0xec, R12
+   \   0000B8   ........     CALLA   #SPL06_read
+   \   0000BC   4A4C         MOV.B   R12, R10
+    238              m =  SPL06_read(HW_ADR << 1, 0x14);
+   \   0000BE   7D401400     MOV.B   #0x14, R13
+   \   0000C2   7C40EC00     MOV.B   #0xec, R12
+   \   0000C6   ........     CALLA   #SPL06_read
+   \   0000CA   484C         MOV.B   R12, R8
+    239              l =  SPL06_read(HW_ADR << 1, 0x15);
+   \   0000CC   7D401500     MOV.B   #0x15, R13
+   \   0000D0   7C40EC00     MOV.B   #0xec, R12
+   \   0000D4   ........     CALLA   #SPL06_read
+   \   0000D8   4F4C         MOV.B   R12, R15
+   \   0000DA   4F4F         MOV.B   R15, R15
+    240              p_SPL06->calib_param.c00 = (int32_t)h<<12 | (int32_t)m<<4 | (int32_t)l>>4;
+   \   0000DC   5F0F         RRUM.W  #0x4, R15
+   \   0000DE   0943         MOV.W   #0x0, R9
+   \   0000E0   0858         RLA.W   R8
+   \   0000E2   0969         RLC.W   R9
+   \   0000E4   0858         RLA.W   R8
+   \   0000E6   0969         RLC.W   R9
+   \   0000E8   0858         RLA.W   R8
+   \   0000EA   0969         RLC.W   R9
+   \   0000EC   0858         RLA.W   R8
+   \   0000EE   0969         RLC.W   R9
+   \   0000F0   0C4A         MOV.W   R10, R12
+   \   0000F2   0D43         MOV.W   #0x0, R13
+   \   0000F4   ........     CALLA   #?ShiftLeft32_12
+   \   0000F8   0CD8         BIS.W   R8, R12
+   \   0000FA   0DD9         BIS.W   R9, R13
+   \   0000FC   0CDF         BIS.W   R15, R12
+   \   0000FE   ........     MOVA    &p_SPL06, R15
+   \   000102   8F4C0400     MOV.W   R12, 0x4(R15)
+   \   000106   8F4D0600     MOV.W   R13, 0x6(R15)
+    241              p_SPL06->calib_param.c00 = (p_SPL06->calib_param.c00&0x080000)?(0xFFF00000|p_SPL06->calib_param.c00):p_SPL06->calib_param.c00;
+   \   00010A   ........     MOVA    &p_SPL06, R15
+   \   00010E   BFB20600     BIT.W   #0x8, 0x6(R15)
+   \   000112   0A28         JNC     ??SPL06_get_calib_param_6
+   \   000114   ........     MOVA    &p_SPL06, R15
+   \   000118   1E4F0400     MOV.W   0x4(R15), R14
+   \   00011C   1F4F0600     MOV.W   0x6(R15), R15
+   \   000120   0ED3         BIS.W   #0x0, R14
+   \   000122   3FD0F0FF     BIS.W   #0xfff0, R15
+   \   000126   063C         JMP     ??SPL06_get_calib_param_2
+   \                     ??SPL06_get_calib_param_6:
+   \   000128   ........     MOVA    &p_SPL06, R15
+   \   00012C   1E4F0400     MOV.W   0x4(R15), R14
+   \   000130   1F4F0600     MOV.W   0x6(R15), R15
+   \                     ??SPL06_get_calib_param_2:
+   \   000134   ........     MOVA    &p_SPL06, R13
+   \   000138   8D4E0400     MOV.W   R14, 0x4(R13)
+   \   00013C   8D4F0600     MOV.W   R15, 0x6(R13)
+    242              h =  SPL06_read(HW_ADR << 1, 0x15);
+   \   000140   7D401500     MOV.B   #0x15, R13
+   \   000144   7C40EC00     MOV.B   #0xec, R12
+   \   000148   ........     CALLA   #SPL06_read
+   \   00014C   4A4C         MOV.B   R12, R10
+    243              m =  SPL06_read(HW_ADR << 1, 0x16);
+   \   00014E   7D401600     MOV.B   #0x16, R13
+   \   000152   7C40EC00     MOV.B   #0xec, R12
+   \   000156   ........     CALLA   #SPL06_read
+   \   00015A   484C         MOV.B   R12, R8
+    244              l =  SPL06_read(HW_ADR << 1, 0x17);
+   \   00015C   7D401700     MOV.B   #0x17, R13
+   \   000160   7C40EC00     MOV.B   #0xec, R12
+   \   000164   ........     CALLA   #SPL06_read
+   \   000168   4F4C         MOV.B   R12, R15
+    245              p_SPL06->calib_param.c10 = (int32_t)h<<16 | (int32_t)m<<8 | l;
+   \   00016A   0943         MOV.W   #0x0, R9
+   \   00016C   49E8         XOR.B   R8, R9
+   \   00016E   09E8         XOR.W   R8, R9
+   \   000170   8910         SWPB    R9
+   \   000172   38F0FF00     AND.W   #0xff, R8
+   \   000176   8810         SWPB    R8
+   \   000178   0C4A         MOV.W   R10, R12
+   \   00017A   0D43         MOV.W   #0x0, R13
+   \   00017C   0D4C         MOV.W   R12, R13
+   \   00017E   0C43         MOV.W   #0x0, R12
+   \   000180   0CD8         BIS.W   R8, R12
+   \   000182   0DD9         BIS.W   R9, R13
+   \   000184   0CDF         BIS.W   R15, R12
+   \   000186   ........     MOVA    &p_SPL06, R15
+   \   00018A   8F4C0800     MOV.W   R12, 0x8(R15)
+   \   00018E   8F4D0A00     MOV.W   R13, 0xa(R15)
+    246              p_SPL06->calib_param.c10 = (p_SPL06->calib_param.c10&0x080000)?(0xFFF00000|p_SPL06->calib_param.c10):p_SPL06->calib_param.c10;
+   \   000192   ........     MOVA    &p_SPL06, R15
+   \   000196   BFB20A00     BIT.W   #0x8, 0xa(R15)
+   \   00019A   0A28         JNC     ??SPL06_get_calib_param_7
+   \   00019C   ........     MOVA    &p_SPL06, R15
+   \   0001A0   1E4F0800     MOV.W   0x8(R15), R14
+   \   0001A4   1F4F0A00     MOV.W   0xa(R15), R15
+   \   0001A8   0ED3         BIS.W   #0x0, R14
+   \   0001AA   3FD0F0FF     BIS.W   #0xfff0, R15
+   \   0001AE   063C         JMP     ??SPL06_get_calib_param_3
+   \                     ??SPL06_get_calib_param_7:
+   \   0001B0   ........     MOVA    &p_SPL06, R15
+   \   0001B4   1E4F0800     MOV.W   0x8(R15), R14
+   \   0001B8   1F4F0A00     MOV.W   0xa(R15), R15
+   \                     ??SPL06_get_calib_param_3:
+   \   0001BC   ........     MOVA    &p_SPL06, R13
+   \   0001C0   8D4E0800     MOV.W   R14, 0x8(R13)
+   \   0001C4   8D4F0A00     MOV.W   R15, 0xa(R13)
+    247              h =  SPL06_read(HW_ADR << 1, 0x18);
+   \   0001C8   7D401800     MOV.B   #0x18, R13
+   \   0001CC   7C40EC00     MOV.B   #0xec, R12
+   \   0001D0   ........     CALLA   #SPL06_read
+   \   0001D4   4A4C         MOV.B   R12, R10
+    248              l  =  SPL06_read(HW_ADR << 1, 0x19);
+   \   0001D6   7D401900     MOV.B   #0x19, R13
+   \   0001DA   7C40EC00     MOV.B   #0xec, R12
+   \   0001DE   ........     CALLA   #SPL06_read
+   \   0001E2   4F4C         MOV.B   R12, R15
+   \   0001E4   4F4F         MOV.B   R15, R15
+    249              p_SPL06->calib_param.c01 = (int16)h<<8 | l;
+   \   0001E6   3AF0FF00     AND.W   #0xff, R10
+   \   0001EA   8A10         SWPB    R10
+   \   0001EC   0ADF         BIS.W   R15, R10
+   \   0001EE   ........     MOVA    &p_SPL06, R15
+   \   0001F2   8F4A0C00     MOV.W   R10, 0xc(R15)
+    250              h =  SPL06_read(HW_ADR << 1, 0x1A);
+   \   0001F6   7D401A00     MOV.B   #0x1a, R13
+   \   0001FA   7C40EC00     MOV.B   #0xec, R12
+   \   0001FE   ........     CALLA   #SPL06_read
+   \   000202   4A4C         MOV.B   R12, R10
+    251              l  =  SPL06_read(HW_ADR << 1, 0x1B);
+   \   000204   7D401B00     MOV.B   #0x1b, R13
+   \   000208   7C40EC00     MOV.B   #0xec, R12
+   \   00020C   ........     CALLA   #SPL06_read
+   \   000210   4F4C         MOV.B   R12, R15
+   \   000212   4F4F         MOV.B   R15, R15
+    252              p_SPL06->calib_param.c11 = (int16)h<<8 | l;
+   \   000214   3AF0FF00     AND.W   #0xff, R10
+   \   000218   8A10         SWPB    R10
+   \   00021A   0ADF         BIS.W   R15, R10
+   \   00021C   ........     MOVA    &p_SPL06, R15
+   \   000220   8F4A0E00     MOV.W   R10, 0xe(R15)
+    253              h =  SPL06_read(HW_ADR << 1, 0x1C);
+   \   000224   7D401C00     MOV.B   #0x1c, R13
+   \   000228   7C40EC00     MOV.B   #0xec, R12
+   \   00022C   ........     CALLA   #SPL06_read
+   \   000230   4A4C         MOV.B   R12, R10
+    254              l  =  SPL06_read(HW_ADR << 1, 0x1D);
+   \   000232   7D401D00     MOV.B   #0x1d, R13
+   \   000236   7C40EC00     MOV.B   #0xec, R12
+   \   00023A   ........     CALLA   #SPL06_read
+   \   00023E   4F4C         MOV.B   R12, R15
+   \   000240   4F4F         MOV.B   R15, R15
+    255              p_SPL06->calib_param.c20 = (int16)h<<8 | l;
+   \   000242   3AF0FF00     AND.W   #0xff, R10
+   \   000246   8A10         SWPB    R10
+   \   000248   0ADF         BIS.W   R15, R10
+   \   00024A   ........     MOVA    &p_SPL06, R15
+   \   00024E   8F4A1000     MOV.W   R10, 0x10(R15)
+    256              h =  SPL06_read(HW_ADR << 1, 0x1E);
+   \   000252   7D401E00     MOV.B   #0x1e, R13
+   \   000256   7C40EC00     MOV.B   #0xec, R12
+   \   00025A   ........     CALLA   #SPL06_read
+   \   00025E   4A4C         MOV.B   R12, R10
+    257              l  =  SPL06_read(HW_ADR << 1, 0x1F);
+   \   000260   7D401F00     MOV.B   #0x1f, R13
+   \   000264   7C40EC00     MOV.B   #0xec, R12
+   \   000268   ........     CALLA   #SPL06_read
+   \   00026C   4F4C         MOV.B   R12, R15
+   \   00026E   4F4F         MOV.B   R15, R15
+    258              p_SPL06->calib_param.c21 = (int16)h<<8 | l;
+   \   000270   3AF0FF00     AND.W   #0xff, R10
+   \   000274   8A10         SWPB    R10
+   \   000276   0ADF         BIS.W   R15, R10
+   \   000278   ........     MOVA    &p_SPL06, R15
+   \   00027C   8F4A1200     MOV.W   R10, 0x12(R15)
+    259              h =  SPL06_read(HW_ADR << 1, 0x20);
+   \   000280   7D402000     MOV.B   #0x20, R13
+   \   000284   7C40EC00     MOV.B   #0xec, R12
+   \   000288   ........     CALLA   #SPL06_read
+   \   00028C   4A4C         MOV.B   R12, R10
+    260              l  =  SPL06_read(HW_ADR << 1, 0x21);
+   \   00028E   7D402100     MOV.B   #0x21, R13
+   \   000292   7C40EC00     MOV.B   #0xec, R12
+   \   000296   ........     CALLA   #SPL06_read
+   \   00029A   4F4C         MOV.B   R12, R15
+   \   00029C   4F4F         MOV.B   R15, R15
+    261              p_SPL06->calib_param.c30 = (int16)h<<8 | l;
+   \   00029E   3AF0FF00     AND.W   #0xff, R10
+   \   0002A2   8A10         SWPB    R10
+   \   0002A4   0ADF         BIS.W   R15, R10
+   \   0002A6   ........     MOVA    &p_SPL06, R15
+   \   0002AA   8F4A1400     MOV.W   R10, 0x14(R15)
+    262          }
+   \   0002AE   2816         POPM.A  #0x3, R10
+   \   0002B0   1001         RETA
+    263          
+    264          
+    265          /*****************************************************************************
+    266           函 数 名  : SPL06_start_temperature
+    267           功能描述  : 发起一次温度测量
+    268           输入参数  : void  
+    269           输出参数  : 无
+    270           返 回 值  : 
+    271           调用函数  : 
+    272           被调函数  : 
+    273           
+    274           修改历史      :
+    275            1.日    期   : 2015年11月30日
+    276              作    者   : WL
+    277              修改内容   : 新生成函数
+    278          
+    279          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    280          void SPL06_start_temperature(void)
+   \                     SPL06_start_temperature:
+    281          {
+    282              SPL06_write(HW_ADR << 1, 0x08, 0x02);
+   \   000000   6E43         MOV.B   #0x2, R14
+   \   000002   7D42         MOV.B   #0x8, R13
+   \   000004   7C40EC00     MOV.B   #0xec, R12
+   \   000008   ........     BRA     #SPL06_write
+    283          }
+    284          
+    285          /*****************************************************************************
+    286           函 数 名  : SPL06_start_pressure
+    287           功能描述  : 发起一次压力值测量
+    288           输入参数  : void  
+    289           输出参数  : 无
+    290           返 回 值  : 
+    291           调用函数  : 
+    292           被调函数  : 
+    293           
+    294           修改历史      :
+    295            1.日    期   : 2015年11月30日
+    296              作    者   : WL
+    297              修改内容   : 新生成函数
+    298          
+    299          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    300          void SPL06_start_pressure(void)
+   \                     SPL06_start_pressure:
+    301          {
+    302              SPL06_write(HW_ADR << 1, 0x08, 0x01);
+   \   000000   5E43         MOV.B   #0x1, R14
+   \   000002   7D42         MOV.B   #0x8, R13
+   \   000004   7C40EC00     MOV.B   #0xec, R12
+   \   000008   ........     BRA     #SPL06_write
+    303          }
+    304          
+    305          /*****************************************************************************
+    306           函 数 名  : SPL06_start_continuous
+    307           功能描述  : Select node for the continuously measurement
+    308           输入参数  : uint8 mode  1: pressure; 2: temperature; 3: pressure and temperature
+    309           输出参数  : 无
+    310           返 回 值  : 
+    311           调用函数  : 
+    312           被调函数  : 
+    313           
+    314           修改历史      :
+    315            1.日    期   : 2015年11月25日
+    316              作    者   : WL
+    317              修改内容   : 新生成函数
+    318          
+    319          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    320          void SPL06_start_continuous(uint8 mode)
+   \                     SPL06_start_continuous:
+    321          {
+    322              SPL06_write(HW_ADR << 1, 0x08, mode+4);
+   \   000000   6C52         ADD.B   #0x4, R12
+   \   000002   4E4C         MOV.B   R12, R14
+   \   000004   7D42         MOV.B   #0x8, R13
+   \   000006   7C40EC00     MOV.B   #0xec, R12
+   \   00000A   ........     BRA     #SPL06_write
+    323          }
+    324          
+    325          
+    326          /*****************************************************************************
+    327           函 数 名  : SPL06_get_raw_temp
+    328           功能描述  : 获取温度的原始值，并转换成32Bits整数
+    329           输入参数  : void  
+    330           输出参数  : 无
+    331           返 回 值  : 
+    332           调用函数  : 
+    333           被调函数  : 
+    334           
+    335           修改历史      :
+    336            1.日    期   : 2015年11月30日
+    337              作    者   : WL
+    338              修改内容   : 新生成函数
+    339          
+    340          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    341          void SPL06_get_raw_temp(void)
+   \                     SPL06_get_raw_temp:
+    342          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   B1000400     SUBA    #0x4, SP
+    343              uint8 h[3] = {0};
+   \   000006   81430000     MOV.W   #0x0, 0(SP)
+   \   00000A   C1430200     MOV.B   #0x0, 0x2(SP)
+    344              
+    345              h[0] = SPL06_read(HW_ADR << 1, 0x03);
+   \   00000E   7D400300     MOV.B   #0x3, R13
+   \   000012   7C40EC00     MOV.B   #0xec, R12
+   \   000016   ........     CALLA   #SPL06_read
+   \   00001A   C14C0000     MOV.B   R12, 0(SP)
+    346              h[1] = SPL06_read(HW_ADR << 1, 0x04);
+   \   00001E   6D42         MOV.B   #0x4, R13
+   \   000020   7C40EC00     MOV.B   #0xec, R12
+   \   000024   ........     CALLA   #SPL06_read
+   \   000028   C14C0100     MOV.B   R12, 0x1(SP)
+    347              h[2] = SPL06_read(HW_ADR << 1, 0x05);
+   \   00002C   7D400500     MOV.B   #0x5, R13
+   \   000030   7C40EC00     MOV.B   #0xec, R12
+   \   000034   ........     CALLA   #SPL06_read
+   \   000038   C14C0200     MOV.B   R12, 0x2(SP)
+    348          
+    349              p_SPL06->i32rawTemperature = (int32_t)h[0]<<16 | (int32_t)h[1]<<8 | (int32_t)h[2];
+   \   00003C   5A410200     MOV.B   0x2(SP), R10
+   \   000040   4A4A         MOV.B   R10, R10
+   \   000042   5C410100     MOV.B   0x1(SP), R12
+   \   000046   4C4C         MOV.B   R12, R12
+   \   000048   0D43         MOV.W   #0x0, R13
+   \   00004A   4DEC         XOR.B   R12, R13
+   \   00004C   0DEC         XOR.W   R12, R13
+   \   00004E   8D10         SWPB    R13
+   \   000050   3CF0FF00     AND.W   #0xff, R12
+   \   000054   8C10         SWPB    R12
+   \   000056   6E41         MOV.B   @SP, R14
+   \   000058   4E4E         MOV.B   R14, R14
+   \   00005A   0F43         MOV.W   #0x0, R15
+   \   00005C   0F4E         MOV.W   R14, R15
+   \   00005E   0E43         MOV.W   #0x0, R14
+   \   000060   0EDC         BIS.W   R12, R14
+   \   000062   0FDD         BIS.W   R13, R15
+   \   000064   0EDA         BIS.W   R10, R14
+   \   000066   ........     MOVA    &p_SPL06, R13
+   \   00006A   8D4E1C00     MOV.W   R14, 0x1c(R13)
+   \   00006E   8D4F1E00     MOV.W   R15, 0x1e(R13)
+    350              p_SPL06->i32rawTemperature= (p_SPL06->i32rawTemperature&0x800000) ? (0xFF000000|p_SPL06->i32rawTemperature) : p_SPL06->i32rawTemperature;
+   \   000072   ........     MOVA    &p_SPL06, R15
+   \   000076   CF931E00     CMP.B   #0x0, 0x1e(R15)
+   \   00007A   0A34         JGE     ??SPL06_get_raw_temp_1
+   \   00007C   ........     MOVA    &p_SPL06, R15
+   \   000080   1E4F1C00     MOV.W   0x1c(R15), R14
+   \   000084   1F4F1E00     MOV.W   0x1e(R15), R15
+   \   000088   0ED3         BIS.W   #0x0, R14
+   \   00008A   3FD000FF     BIS.W   #0xff00, R15
+   \   00008E   063C         JMP     ??SPL06_get_raw_temp_0
+   \                     ??SPL06_get_raw_temp_1:
+   \   000090   ........     MOVA    &p_SPL06, R15
+   \   000094   1E4F1C00     MOV.W   0x1c(R15), R14
+   \   000098   1F4F1E00     MOV.W   0x1e(R15), R15
+   \                     ??SPL06_get_raw_temp_0:
+   \   00009C   ........     MOVA    &p_SPL06, R13
+   \   0000A0   8D4E1C00     MOV.W   R14, 0x1c(R13)
+   \   0000A4   8D4F1E00     MOV.W   R15, 0x1e(R13)
+    351          }
+   \   0000A8   A1000400     ADDA    #0x4, SP
+   \   0000AC   0A16         POPM.A  #0x1, R10
+   \   0000AE   1001         RETA
+    352          
+    353          /*****************************************************************************
+    354           函 数 名  : SPL06_get_raw_pressure
+    355           功能描述  : 获取压力原始值，并转换成32bits整数
+    356           输入参数  : void  
+    357           输出参数  : 无
+    358           返 回 值  : 
+    359           调用函数  : 
+    360           被调函数  : 
+    361           
+    362           修改历史      :
+    363            1.日    期   : 2015年11月30日
+    364              作    者   : WL
+    365              修改内容   : 新生成函数
+    366          
+    367          *****************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    368          void SPL06_get_raw_pressure(void)
+   \                     SPL06_get_raw_pressure:
+    369          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   B1000400     SUBA    #0x4, SP
+    370              uint8 h[3];
+    371              
+    372              h[0] = SPL06_read(HW_ADR << 1, 0x00);
+   \   000006   4D43         MOV.B   #0x0, R13
+   \   000008   7C40EC00     MOV.B   #0xec, R12
+   \   00000C   ........     CALLA   #SPL06_read
+   \   000010   C14C0000     MOV.B   R12, 0(SP)
+    373              h[1] = SPL06_read(HW_ADR << 1, 0x01);
+   \   000014   5D43         MOV.B   #0x1, R13
+   \   000016   7C40EC00     MOV.B   #0xec, R12
+   \   00001A   ........     CALLA   #SPL06_read
+   \   00001E   C14C0100     MOV.B   R12, 0x1(SP)
+    374              h[2] = SPL06_read(HW_ADR << 1, 0x02);
+   \   000022   6D43         MOV.B   #0x2, R13
+   \   000024   7C40EC00     MOV.B   #0xec, R12
+   \   000028   ........     CALLA   #SPL06_read
+   \   00002C   C14C0200     MOV.B   R12, 0x2(SP)
+    375              
+    376              p_SPL06->i32rawPressure = (int32_t)h[0]<<16 | (int32_t)h[1]<<8 | (int32_t)h[2];
+   \   000030   5A410200     MOV.B   0x2(SP), R10
+   \   000034   4A4A         MOV.B   R10, R10
+   \   000036   5C410100     MOV.B   0x1(SP), R12
+   \   00003A   4C4C         MOV.B   R12, R12
+   \   00003C   0D43         MOV.W   #0x0, R13
+   \   00003E   4DEC         XOR.B   R12, R13
+   \   000040   0DEC         XOR.W   R12, R13
+   \   000042   8D10         SWPB    R13
+   \   000044   3CF0FF00     AND.W   #0xff, R12
+   \   000048   8C10         SWPB    R12
+   \   00004A   6E41         MOV.B   @SP, R14
+   \   00004C   4E4E         MOV.B   R14, R14
+   \   00004E   0F43         MOV.W   #0x0, R15
+   \   000050   0F4E         MOV.W   R14, R15
+   \   000052   0E43         MOV.W   #0x0, R14
+   \   000054   0EDC         BIS.W   R12, R14
+   \   000056   0FDD         BIS.W   R13, R15
+   \   000058   0EDA         BIS.W   R10, R14
+   \   00005A   ........     MOVA    &p_SPL06, R13
+   \   00005E   8D4E1800     MOV.W   R14, 0x18(R13)
+   \   000062   8D4F1A00     MOV.W   R15, 0x1a(R13)
+    377              p_SPL06->i32rawPressure= (p_SPL06->i32rawPressure&0x800000) ? (0xFF000000|p_SPL06->i32rawPressure) : p_SPL06->i32rawPressure;
+   \   000066   ........     MOVA    &p_SPL06, R15
+   \   00006A   CF931A00     CMP.B   #0x0, 0x1a(R15)
+   \   00006E   0A34         JGE     ??SPL06_get_raw_pressure_1
+   \   000070   ........     MOVA    &p_SPL06, R15
+   \   000074   1E4F1800     MOV.W   0x18(R15), R14
+   \   000078   1F4F1A00     MOV.W   0x1a(R15), R15
+   \   00007C   0ED3         BIS.W   #0x0, R14
+   \   00007E   3FD000FF     BIS.W   #0xff00, R15
+   \   000082   063C         JMP     ??SPL06_get_raw_pressure_0
+   \                     ??SPL06_get_raw_pressure_1:
+   \   000084   ........     MOVA    &p_SPL06, R15
+   \   000088   1E4F1800     MOV.W   0x18(R15), R14
+   \   00008C   1F4F1A00     MOV.W   0x1a(R15), R15
+   \                     ??SPL06_get_raw_pressure_0:
+   \   000090   ........     MOVA    &p_SPL06, R13
+   \   000094   8D4E1800     MOV.W   R14, 0x18(R13)
+   \   000098   8D4F1A00     MOV.W   R15, 0x1a(R13)
+    378          }
+   \   00009C   A1000400     ADDA    #0x4, SP
+   \   0000A0   0A16         POPM.A  #0x1, R10
+   \   0000A2   1001         RETA
+    379          
+    380          
+    381          /*****************************************************************************
+    382           函 数 名  : SPL06_get_temperature
+    383           功能描述  : 在获取原始值的基础上，返回浮点校准后的温度值
+    384           输入参数  : void  
+    385           输出参数  : 无
+    386           返 回 值  : 
+    387           调用函数  : 
+    388           被调函数  : 
+    389           
+    390           修改历史      :
+    391            1.日    期   : 2015年11月30日
+    392              作    者   : WL
+    393              修改内容   : 新生成函数
+    394          
+    395          *****************************************************************************/
+    396          
+
+   \                                 In  segment CODE, align 2
+    397          float SPL06_get_temperature(void)
+   \                     SPL06_get_temperature:
+    398          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+    399              float fTCompensate;
+    400              float fTsc;
+    401          
+    402              fTsc = p_SPL06->i32rawTemperature / (float)p_SPL06->i32kT;
+   \   000002   ........     MOVA    &p_SPL06, R15
+   \   000006   1C4F1C00     MOV.W   0x1c(R15), R12
+   \   00000A   1D4F1E00     MOV.W   0x1e(R15), R13
+   \   00000E   ........     CALLA   #_Cast32sto32f
+   \   000012   0A4C         MOV.W   R12, R10
+   \   000014   0B4D         MOV.W   R13, R11
+   \   000016   ........     MOVA    &p_SPL06, R15
+   \   00001A   1C4F2400     MOV.W   0x24(R15), R12
+   \   00001E   1D4F2600     MOV.W   0x26(R15), R13
+   \   000022   ........     CALLA   #_Cast32sto32f
+   \   000026   0E4C         MOV.W   R12, R14
+   \   000028   0F4D         MOV.W   R13, R15
+   \   00002A   0C4A         MOV.W   R10, R12
+   \   00002C   0D4B         MOV.W   R11, R13
+   \   00002E   ........     CALLA   #_Div32f
+   \   000032   0A4C         MOV.W   R12, R10
+   \   000034   0B4D         MOV.W   R13, R11
+    403              fTCompensate =  p_SPL06->calib_param.c0 * 0.5 + p_SPL06->calib_param.c1 * fTsc;
+   \   000036   ........     MOVA    &p_SPL06, R15
+   \   00003A   2C4F         MOV.W   @R15, R12
+   \   00003C   0D4C         MOV.W   R12, R13
+   \   00003E   0D5D         RLA.W   R13
+   \   000040   0D7D         SUBC.W  R13, R13
+   \   000042   3DE3         XOR.W   #0xffff, R13
+   \   000044   ........     CALLA   #_Cast32sto32f
+   \   000048   0E43         MOV.W   #0x0, R14
+   \   00004A   3F40003F     MOV.W   #0x3f00, R15
+   \   00004E   ........     CALLA   #_Mul32f
+   \   000052   084C         MOV.W   R12, R8
+   \   000054   094D         MOV.W   R13, R9
+   \   000056   ........     MOVA    &p_SPL06, R15
+   \   00005A   1C4F0200     MOV.W   0x2(R15), R12
+   \   00005E   0D4C         MOV.W   R12, R13
+   \   000060   0D5D         RLA.W   R13
+   \   000062   0D7D         SUBC.W  R13, R13
+   \   000064   3DE3         XOR.W   #0xffff, R13
+   \   000066   ........     CALLA   #_Cast32sto32f
+   \   00006A   0E4A         MOV.W   R10, R14
+   \   00006C   0F4B         MOV.W   R11, R15
+   \   00006E   ........     CALLA   #_Mul32f
+   \   000072   0E48         MOV.W   R8, R14
+   \   000074   0F49         MOV.W   R9, R15
+   \   000076   ........     CALLA   #_Add32f
+    404              return fTCompensate;
+   \   00007A   3816         POPM.A  #0x4, R11
+   \   00007C   1001         RETA
+    405          }
+    406          
+    407          /*****************************************************************************
+    408           函 数 名  : SPL06_get_pressure
+    409           功能描述  : 在获取原始值的基础上，返回浮点校准后的压力值
+    410           输入参数  : void  
+    411           输出参数  : 无
+    412           返 回 值  : 
+    413           调用函数  : 
+    414           被调函数  : 
+    415           
+    416           修改历史      :
+    417            1.日    期   : 2015年11月30日
+    418              作    者   : WL
+    419              修改内容   : 新生成函数
+    420          
+    421          *****************************************************************************/
+    422          
+
+   \                                 In  segment CODE, align 2
+    423          float SPL06_get_pressure(void)
+   \                     SPL06_get_pressure:
+    424          {
+   \   000000   7B14         PUSHM.A #0x8, R11
+    425              float fTsc, fPsc;
+    426              float qua2, qua3;
+    427              float fPCompensate;
+    428          
+    429              fTsc = p_SPL06->i32rawTemperature / (float)p_SPL06->i32kT;
+   \   000002   ........     MOVA    &p_SPL06, R15
+   \   000006   1C4F1C00     MOV.W   0x1c(R15), R12
+   \   00000A   1D4F1E00     MOV.W   0x1e(R15), R13
+   \   00000E   ........     CALLA   #_Cast32sto32f
+   \   000012   0A4C         MOV.W   R12, R10
+   \   000014   0B4D         MOV.W   R13, R11
+   \   000016   ........     MOVA    &p_SPL06, R15
+   \   00001A   1C4F2400     MOV.W   0x24(R15), R12
+   \   00001E   1D4F2600     MOV.W   0x26(R15), R13
+   \   000022   ........     CALLA   #_Cast32sto32f
+   \   000026   0E4C         MOV.W   R12, R14
+   \   000028   0F4D         MOV.W   R13, R15
+   \   00002A   0C4A         MOV.W   R10, R12
+   \   00002C   0D4B         MOV.W   R11, R13
+   \   00002E   ........     CALLA   #_Div32f
+   \   000032   0A4C         MOV.W   R12, R10
+   \   000034   0B4D         MOV.W   R13, R11
+    430              fPsc = p_SPL06->i32rawPressure / (float)p_SPL06->i32kP;
+   \   000036   ........     MOVA    &p_SPL06, R15
+   \   00003A   1C4F1800     MOV.W   0x18(R15), R12
+   \   00003E   1D4F1A00     MOV.W   0x1a(R15), R13
+   \   000042   ........     CALLA   #_Cast32sto32f
+   \   000046   084C         MOV.W   R12, R8
+   \   000048   094D         MOV.W   R13, R9
+   \   00004A   ........     MOVA    &p_SPL06, R15
+   \   00004E   1C4F2000     MOV.W   0x20(R15), R12
+   \   000052   1D4F2200     MOV.W   0x22(R15), R13
+   \   000056   ........     CALLA   #_Cast32sto32f
+   \   00005A   0E4C         MOV.W   R12, R14
+   \   00005C   0F4D         MOV.W   R13, R15
+   \   00005E   0C48         MOV.W   R8, R12
+   \   000060   0D49         MOV.W   R9, R13
+   \   000062   ........     CALLA   #_Div32f
+   \   000066   084C         MOV.W   R12, R8
+   \   000068   094D         MOV.W   R13, R9
+    431              qua2 = p_SPL06->calib_param.c10 + fPsc * (p_SPL06->calib_param.c20 + fPsc* p_SPL06->calib_param.c30);
+   \   00006A   ........     MOVA    &p_SPL06, R15
+   \   00006E   1C4F0800     MOV.W   0x8(R15), R12
+   \   000072   1D4F0A00     MOV.W   0xa(R15), R13
+   \   000076   ........     CALLA   #_Cast32sto32f
+   \   00007A   064C         MOV.W   R12, R6
+   \   00007C   074D         MOV.W   R13, R7
+   \   00007E   ........     MOVA    &p_SPL06, R15
+   \   000082   1C4F1000     MOV.W   0x10(R15), R12
+   \   000086   0D4C         MOV.W   R12, R13
+   \   000088   0D5D         RLA.W   R13
+   \   00008A   0D7D         SUBC.W  R13, R13
+   \   00008C   3DE3         XOR.W   #0xffff, R13
+   \   00008E   ........     CALLA   #_Cast32sto32f
+   \   000092   044C         MOV.W   R12, R4
+   \   000094   054D         MOV.W   R13, R5
+   \   000096   ........     MOVA    &p_SPL06, R15
+   \   00009A   1C4F1400     MOV.W   0x14(R15), R12
+   \   00009E   0D4C         MOV.W   R12, R13
+   \   0000A0   0D5D         RLA.W   R13
+   \   0000A2   0D7D         SUBC.W  R13, R13
+   \   0000A4   3DE3         XOR.W   #0xffff, R13
+   \   0000A6   ........     CALLA   #_Cast32sto32f
+   \   0000AA   0E48         MOV.W   R8, R14
+   \   0000AC   0F49         MOV.W   R9, R15
+   \   0000AE   ........     CALLA   #_Mul32f
+   \   0000B2   0E44         MOV.W   R4, R14
+   \   0000B4   0F45         MOV.W   R5, R15
+   \   0000B6   ........     CALLA   #_Add32f
+   \   0000BA   0E48         MOV.W   R8, R14
+   \   0000BC   0F49         MOV.W   R9, R15
+   \   0000BE   ........     CALLA   #_Mul32f
+   \   0000C2   0E46         MOV.W   R6, R14
+   \   0000C4   0F47         MOV.W   R7, R15
+   \   0000C6   ........     CALLA   #_Add32f
+   \   0000CA   064C         MOV.W   R12, R6
+   \   0000CC   074D         MOV.W   R13, R7
+    432              qua3 = fTsc * fPsc * (p_SPL06->calib_param.c11 + fPsc * p_SPL06->calib_param.c21);
+   \   0000CE   0C4A         MOV.W   R10, R12
+   \   0000D0   0D4B         MOV.W   R11, R13
+   \   0000D2   0E48         MOV.W   R8, R14
+   \   0000D4   0F49         MOV.W   R9, R15
+   \   0000D6   ........     CALLA   #_Mul32f
+   \   0000DA   0D12         PUSH.W  R13
+   \   0000DC   0C12         PUSH.W  R12
+   \   0000DE   ........     MOVA    &p_SPL06, R15
+   \   0000E2   1C4F0E00     MOV.W   0xe(R15), R12
+   \   0000E6   0D4C         MOV.W   R12, R13
+   \   0000E8   0D5D         RLA.W   R13
+   \   0000EA   0D7D         SUBC.W  R13, R13
+   \   0000EC   3DE3         XOR.W   #0xffff, R13
+   \   0000EE   ........     CALLA   #_Cast32sto32f
+   \   0000F2   044C         MOV.W   R12, R4
+   \   0000F4   054D         MOV.W   R13, R5
+   \   0000F6   ........     MOVA    &p_SPL06, R15
+   \   0000FA   1C4F1200     MOV.W   0x12(R15), R12
+   \   0000FE   0D4C         MOV.W   R12, R13
+   \   000100   0D5D         RLA.W   R13
+   \   000102   0D7D         SUBC.W  R13, R13
+   \   000104   3DE3         XOR.W   #0xffff, R13
+   \   000106   ........     CALLA   #_Cast32sto32f
+   \   00010A   0E48         MOV.W   R8, R14
+   \   00010C   0F49         MOV.W   R9, R15
+   \   00010E   ........     CALLA   #_Mul32f
+   \   000112   0E44         MOV.W   R4, R14
+   \   000114   0F45         MOV.W   R5, R15
+   \   000116   ........     CALLA   #_Add32f
+   \   00011A   3E41         POP.W   R14
+   \   00011C   3F41         POP.W   R15
+   \   00011E   ........     CALLA   #_Mul32f
+   \   000122   044C         MOV.W   R12, R4
+   \   000124   054D         MOV.W   R13, R5
+    433          		//qua3 = 0.9f *fTsc * fPsc * (p_SPL06->calib_param.c11 + fPsc * p_SPL06->calib_param.c21);
+    434          	
+    435              fPCompensate = p_SPL06->calib_param.c00 + fPsc * qua2 + fTsc * p_SPL06->calib_param.c01 + qua3;
+   \   000126   ........     MOVA    &p_SPL06, R15
+   \   00012A   1C4F0400     MOV.W   0x4(R15), R12
+   \   00012E   1D4F0600     MOV.W   0x6(R15), R13
+   \   000132   ........     CALLA   #_Cast32sto32f
+   \   000136   0D12         PUSH.W  R13
+   \   000138   0C12         PUSH.W  R12
+   \   00013A   0C48         MOV.W   R8, R12
+   \   00013C   0D49         MOV.W   R9, R13
+   \   00013E   0E46         MOV.W   R6, R14
+   \   000140   0F47         MOV.W   R7, R15
+   \   000142   ........     CALLA   #_Mul32f
+   \   000146   3E41         POP.W   R14
+   \   000148   3F41         POP.W   R15
+   \   00014A   ........     CALLA   #_Add32f
+   \   00014E   084C         MOV.W   R12, R8
+   \   000150   094D         MOV.W   R13, R9
+   \   000152   ........     MOVA    &p_SPL06, R15
+   \   000156   1C4F0C00     MOV.W   0xc(R15), R12
+   \   00015A   0D4C         MOV.W   R12, R13
+   \   00015C   0D5D         RLA.W   R13
+   \   00015E   0D7D         SUBC.W  R13, R13
+   \   000160   3DE3         XOR.W   #0xffff, R13
+   \   000162   ........     CALLA   #_Cast32sto32f
+   \   000166   0E4A         MOV.W   R10, R14
+   \   000168   0F4B         MOV.W   R11, R15
+   \   00016A   ........     CALLA   #_Mul32f
+   \   00016E   0E48         MOV.W   R8, R14
+   \   000170   0F49         MOV.W   R9, R15
+   \   000172   ........     CALLA   #_Add32f
+   \   000176   0E44         MOV.W   R4, R14
+   \   000178   0F45         MOV.W   R5, R15
+   \   00017A   ........     CALLA   #_Add32f
+    436          		//fPCompensate = p_SPL06->calib_param.c00 + fPsc * qua2 + 0.9f *fTsc  * p_SPL06->calib_param.c01 + qua3;
+    437              return fPCompensate;
+   \   00017E   7416         POPM.A  #0x8, R11
+   \   000180   1001         RETA
+    438          	
+    439          }
+    440          
+    441          #define CONST_PF 0.1902630958	//(1/5.25588f) Pressure factor
+    442          #define FIX_TEMP 25				// Fixed Temperature. ASL is a function of pressure and temperature, but as the temperature changes so much (blow a little towards the flie and watch it drop 5 degrees) it corrupts the ASL estimates.
+    443          	
+
+   \                                 In  segment CODE, align 2
+    444          float SPL06PressureToAltitude(float pressure/*, float* groundPressure, float* groundTemp*/)
+   \                     SPL06PressureToAltitude:
+    445          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   0B4D         MOV.W   R13, R11
+    446              if (pressure > 0)
+   \   000006   0C4A         MOV.W   R10, R12
+   \   000008   0D4B         MOV.W   R11, R13
+   \   00000A   0E43         MOV.W   #0x0, R14
+   \   00000C   3F408000     MOV.W   #0x80, R15
+   \   000010   ........     CALLA   #?FLT_GE
+   \   000014   2428         JNC     ??SPL06PressureToAltitude_1
+    447              {
+    448                  return ((pow((1015.7f / pressure), CONST_PF) - 1.0f) * (FIX_TEMP + 273.15f)) / 0.0065f;
+   \   000016   3E4054D4     MOV.W   #0xd454, R14
+   \   00001A   3F40423E     MOV.W   #0x3e42, R15
+   \   00001E   084E         MOV.W   R14, R8
+   \   000020   094F         MOV.W   R15, R9
+   \   000022   3C40CDEC     MOV.W   #0xeccd, R12
+   \   000026   3D407D44     MOV.W   #0x447d, R13
+   \   00002A   0E4A         MOV.W   R10, R14
+   \   00002C   0F4B         MOV.W   R11, R15
+   \   00002E   ........     CALLA   #_Div32f
+   \   000032   0E48         MOV.W   R8, R14
+   \   000034   0F49         MOV.W   R9, R15
+   \   000036   ........     CALLA   #pow
+   \   00003A   0E43         MOV.W   #0x0, R14
+   \   00003C   3F4080BF     MOV.W   #0xbf80, R15
+   \   000040   ........     CALLA   #_Add32f
+   \   000044   3E403313     MOV.W   #0x1333, R14
+   \   000048   3F409543     MOV.W   #0x4395, R15
+   \   00004C   ........     CALLA   #_Mul32f
+   \   000050   3E40F4FD     MOV.W   #0xfdf4, R14
+   \   000054   3F40D43B     MOV.W   #0x3bd4, R15
+   \   000058   ........     CALLA   #_Div32f
+   \   00005C   023C         JMP     ??SPL06PressureToAltitude_0
+    449              }
+    450              else
+    451              {
+    452                  return 0;
+   \                     ??SPL06PressureToAltitude_1:
+   \   00005E   0C43         MOV.W   #0x0, R12
+   \   000060   0D43         MOV.W   #0x0, R13
+   \                     ??SPL06PressureToAltitude_0:
+   \   000062   3816         POPM.A  #0x4, R11
+   \   000064   1001         RETA
+    453              }
+    454          }
+    455          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+    456          float temperature;
+   \                     temperature:
+   \   000000                DS8 4
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+    457          float pressure,alt_3,height;
+   \                     pressure:
+   \   000000                DS8 4
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     alt_3:
+   \   000000                DS8 4
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     height:
+   \   000000                DS8 4
+
+   \                                 In  segment CODE, align 2
+    458          float user_SPL06_get()
+   \                     user_SPL06_get:
+    459          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+    460              uint8_t h[3];
+                             ^
+Warning[Pe177]: variable "h" was declared but never referenced
+    461            
+    462              SPL06_get_raw_temp();
+   \   000002   ........     CALLA   #SPL06_get_raw_temp
+    463              temperature = SPL06_get_temperature();
+   \   000006   ........     CALLA   #SPL06_get_temperature
+   \   00000A   ....824C.... MOVX.W  R12, &temperature
+   \   000010   ....824D.... MOVX.W  R13, &temperature + 2
+    464          
+    465              SPL06_get_raw_pressure();
+   \   000016   ........     CALLA   #SPL06_get_raw_pressure
+    466              pressure = SPL06_get_pressure();
+   \   00001A   ........     CALLA   #SPL06_get_pressure
+   \   00001E   ....824C.... MOVX.W  R12, &pressure
+   \   000024   ....824D.... MOVX.W  R13, &pressure + 2
+    467          
+    468              alt_3 = (101000 - pressure)/1000.0f;
+   \   00002A   3C400044     MOV.W   #0x4400, R12
+   \   00002E   3D40C547     MOV.W   #0x47c5, R13
+   \   000032   ....1E42.... MOVX.W  &pressure, R14
+   \   000038   ....1F42.... MOVX.W  &pressure + 2, R15
+   \   00003E   ........     CALLA   #_Sub32f
+   \   000042   0E43         MOV.W   #0x0, R14
+   \   000044   3F407A44     MOV.W   #0x447a, R15
+   \   000048   ........     CALLA   #_Div32f
+   \   00004C   ....824C.... MOVX.W  R12, &alt_3
+   \   000052   ....824D.... MOVX.W  R13, &alt_3 + 2
+    469              height = 0.0082f *alt_3 * alt_3 *alt_3 + 0.09f *(101000 - pressure)*100.0f ;
+   \   000058   ....1C42.... MOVX.W  &alt_3, R12
+   \   00005E   ....1D42.... MOVX.W  &alt_3 + 2, R13
+   \   000064   3E404B59     MOV.W   #0x594b, R14
+   \   000068   3F40063C     MOV.W   #0x3c06, R15
+   \   00006C   ........     CALLA   #_Mul32f
+   \   000070   ....1E42.... MOVX.W  &alt_3, R14
+   \   000076   ....1F42.... MOVX.W  &alt_3 + 2, R15
+   \   00007C   ........     CALLA   #_Mul32f
+   \   000080   ....1E42.... MOVX.W  &alt_3, R14
+   \   000086   ....1F42.... MOVX.W  &alt_3 + 2, R15
+   \   00008C   ........     CALLA   #_Mul32f
+   \   000090   0A4C         MOV.W   R12, R10
+   \   000092   0B4D         MOV.W   R13, R11
+   \   000094   3C400044     MOV.W   #0x4400, R12
+   \   000098   3D40C547     MOV.W   #0x47c5, R13
+   \   00009C   ....1E42.... MOVX.W  &pressure, R14
+   \   0000A2   ....1F42.... MOVX.W  &pressure + 2, R15
+   \   0000A8   ........     CALLA   #_Sub32f
+   \   0000AC   3E40EC51     MOV.W   #0x51ec, R14
+   \   0000B0   3F40B83D     MOV.W   #0x3db8, R15
+   \   0000B4   ........     CALLA   #_Mul32f
+   \   0000B8   0E43         MOV.W   #0x0, R14
+   \   0000BA   3F40C842     MOV.W   #0x42c8, R15
+   \   0000BE   ........     CALLA   #_Mul32f
+   \   0000C2   0E4A         MOV.W   R10, R14
+   \   0000C4   0F4B         MOV.W   R11, R15
+   \   0000C6   ........     CALLA   #_Add32f
+   \   0000CA   ....824C.... MOVX.W  R12, &height
+   \   0000D0   ....824D.... MOVX.W  R13, &height + 2
+    470          
+    471              return height;
+   \   0000D6   ....1C42.... MOVX.W  &height, R12
+   \   0000DC   ....1D42.... MOVX.W  &height + 2, R13
+   \   0000E2   1A16         POPM.A  #0x2, R11
+   \   0000E4   1001         RETA
+    472          }
+
+   \                                 In  segment DATA20_C, align 1, align-sorted
+   \   000000   000000       DC8 0, 0, 0
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     20   SPL06PressureToAltitude
+       20   -> pow
+       20 ?FLT_GE
+       20 _Add32f
+       20 _Div32f
+       20 _Mul32f
+     16   SPL06_get_calib_param
+       16   -> SPL06_read
+       16 ?ShiftLeft32_12
+     40   SPL06_get_pressure
+       36 _Add32f
+       40 _Add32f
+       36 _Cast32sto32f
+       40 _Cast32sto32f
+       36 _Div32f
+       36 _Mul32f
+       40 _Mul32f
+     12   SPL06_get_raw_pressure
+       12   -> SPL06_read
+     12   SPL06_get_raw_temp
+       12   -> SPL06_read
+     20   SPL06_get_temperature
+       20 _Add32f
+       20 _Cast32sto32f
+       20 _Div32f
+       20 _Mul32f
+      4   SPL06_init
+        4   -> SPL06_get_calib_param
+        4   -> SPL06_rateset
+        0   -> SPL06_start_continuous
+     28   SPL06_rateset
+       28   -> SPL06_read
+       28   -> SPL06_write
+      4   SPL06_read
+        0   -> Single_ReadIIC
+      4   SPL06_start_continuous
+        0   -> SPL06_write
+      4   SPL06_start_pressure
+        0   -> SPL06_write
+      4   SPL06_start_temperature
+        0   -> SPL06_write
+      4   SPL06_write
+        0   -> Single_WriteIIC
+     12   user_SPL06_get
+       12   -> SPL06_get_pressure
+       12   -> SPL06_get_raw_pressure
+       12   -> SPL06_get_raw_temp
+       12   -> SPL06_get_temperature
+       12 _Add32f
+       12 _Div32f
+       12 _Mul32f
+       12 _Sub32f
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       3  ?<Constant {0, 0, 0}>
+      40  SPL06
+     102  SPL06PressureToAltitude
+     690  SPL06_get_calib_param
+     386  SPL06_get_pressure
+     164  SPL06_get_raw_pressure
+     176  SPL06_get_raw_temp
+     126  SPL06_get_temperature
+      80  SPL06_init
+     356  SPL06_rateset
+       4  SPL06_read
+      14  SPL06_start_continuous
+      12  SPL06_start_pressure
+      12  SPL06_start_temperature
+       4  SPL06_write
+       4  alt_3
+       4  height
+       4  p_SPL06
+       4  pressure
+       4  temperature
+     230  user_SPL06_get
+
+ 
+ 2 356 bytes in segment CODE
+     3 bytes in segment DATA20_C
+    60 bytes in segment DATA20_Z
+ 
+ 2 356 bytes of CODE  memory
+     3 bytes of CONST memory
+    60 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

@@ -1,0 +1,271 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:43
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_nmi.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW57C3.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_nmi.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_nmi.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_nmi.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_nmi.c
+      1          #include "msp430f5529_nmi.h"
+      2          
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      3          const SFR_MemMapPtr SFRX = SFR_BASE_PTR;
+   \                     SFRX:
+   \   000000   00010000     DC32 100H
+      4          /*************************************************************************
+      5          *  函数名称：NMI_Init(NMIIES ies)
+      6          *  功能说明：配置NMI
+      7          *  参数说明：NMIIES ies : 社会中NMI中断触发沿
+      8          *  函数返回：无
+      9          *  使用示例：NMI_Init(NMI_Rising); //设置NMI为上升沿触发中断
+     10          *************************************************************************/  
+
+   \                                 In  segment CODE, align 2, keep-with-next
+     11          void  NMI_Init(NMIIES ies)
+   \                     NMI_Init:
+     12          {
+     13            SFRX->SYS.NMI = ENABLE;                     //使能NMI功能
+   \   000000   92D30401     BIS.W   #0x1, &0x104
+     14            SFRX->IE.NMI = RESET;                       //禁止NMI中断
+   \   000004   B2C010000001 BIC.W   #0x10, &0x100
+     15            if(ies == NMI_Rising)
+   \   00000A   4C93         CMP.B   #0x0, R12
+   \   00000C   0320         JNE     ??NMI_Init_1
+     16            {
+     17              SFRX->SYS.NMIIES = BIT_SET;                   //设置NMI中断沿
+   \   00000E   A2D30401     BIS.W   #0x2, &0x104
+   \   000012   023C         JMP     ??NMI_Init_0
+     18            }
+     19            else
+     20            {
+     21              SFRX->SYS.NMIIES = RESET;
+   \                     ??NMI_Init_1:
+   \   000014   A2C30401     BIC.W   #0x2, &0x104
+     22            }
+     23            SFRX->IFG.NMI = RESET;                      //清除NMI中断标志
+   \                     ??NMI_Init_0:
+   \   000018                REQUIRE ?Subroutine0
+   \   000018                // Fall through to label ?Subroutine0
+     24          }
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   B2C010000201 BIC.W   #0x10, &0x102
+   \   000006   1001         RETA
+     25          /*************************************************************************
+     26          *  函数名称：NMI_DeInit()
+     27          *  功能说明：屏蔽NMI功能
+     28          *  参数说明：无
+     29          *  函数返回：无
+     30          *  使用示例：NMI_DeInit(); //取消NMI功能
+     31          *************************************************************************/  
+
+   \                                 In  segment CODE, align 2, keep-with-next
+     32          void    NMI_DeInit   (void)
+   \                     NMI_DeInit:
+     33          {
+     34            SFRX->SYS.NMI = DISABLE;                    //禁止NMI功能
+   \   000000   92C30401     BIC.W   #0x1, &0x104
+     35          }
+   \   000004   1001         RETA
+     36          /*************************************************************************
+     37          *  函数名称：NMI_ITConfig (STATUS ITState)
+     38          *  功能说明：设置是否使能NMI中断
+     39          *  参数说明：BOOL ITState :是否使能NMI中断
+     40          *  函数返回：无
+     41          *  使用示例：NMI_ITConfig (ENABLE);  //使能NMI中断
+     42          *************************************************************************/  
+
+   \                                 In  segment CODE, align 2, keep-with-next
+     43          void  NMI_ITConfig (STATUS ITState)
+   \                     NMI_ITConfig:
+     44          {
+     45            if(ITState != DISABLE)
+   \   000000   4C93         CMP.B   #0x0, R12
+   \   000002   0424         JEQ     ??NMI_ITConfig_0
+     46            {
+     47              SFRX->IE.NMI = ENABLE;                    //设置使能NMI中断
+   \   000004   B2D010000001 BIS.W   #0x10, &0x100
+   \   00000A   1001         RETA
+     48            }
+     49            else
+     50            {
+     51              SFRX->IE.NMI = DISABLE;
+   \                     ??NMI_ITConfig_0:
+   \   00000C   B2C010000001 BIC.W   #0x10, &0x100
+     52            }
+     53          }
+   \   000012   1001         RETA
+     54          /*************************************************************************
+     55          *  函数名称：NMI_GetITStatus(void)
+     56          *  功能说明：读取NMI中断标志
+     57          *  参数说明：无
+     58          *  函数返回：STATUS : NMI中断事件是否发生
+     59          *  使用示例：if(TRUE == NMI_GetITStatus()){...} //判断NMI中断事件是否发生
+     60          *************************************************************************/  
+
+   \                                 In  segment CODE, align 2, keep-with-next
+     61          STATUS  NMI_GetITStatus(void)               
+   \                     NMI_GetITStatus:
+     62          {
+     63            return ((SFRX->IFG.NMI) ? TRUE : FALSE);       //返回中断事件标志
+   \   000000   1E420201     MOV.W   &0x102, R14
+   \   000004   7EB01000     BIT.B   #0x10, R14
+   \   000008   0C7C         SUBC.W  R12, R12
+   \   00000A   5C53         ADD.B   #0x1, R12
+   \   00000C   1001         RETA
+     64          }
+     65          /*************************************************************************
+     66          *  函数名称：NMI_ClearITPendingBit(void)
+     67          *  功能说明：清除NMI中断标志
+     68          *  参数说明：无
+     69          *  函数返回：无
+     70          *  使用示例：NMI_ClearITPendingBit();  //清除NMI中断标志
+     71          *************************************************************************/  
+
+   \                                 In  segment CODE, align 2
+     72          void  NMI_ClearITPendingBit(void)
+   \                     NMI_ClearITPendingBit:
+     73          {
+     74             SFRX->IFG.NMI = RESET;                       //清除中断事件标志
+   \   000000   ....         JMP     ?Subroutine0
+   \   000002   0343         NOP
+     75          }
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   NMI_ClearITPendingBit
+      4   NMI_DeInit
+      4   NMI_GetITStatus
+      4   NMI_ITConfig
+      4   NMI_Init
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  ?Subroutine0
+       4  NMI_ClearITPendingBit
+       6  NMI_DeInit
+      14  NMI_GetITStatus
+      20  NMI_ITConfig
+      24  NMI_Init
+       4  SFRX
+
+ 
+ 76 bytes in segment CODE
+  4 bytes in segment DATA20_C
+ 
+ 76 bytes of CODE  memory
+  4 bytes of CONST memory
+
+Errors: none
+Warnings: none

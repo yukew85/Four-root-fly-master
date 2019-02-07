@@ -1,0 +1,403 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  17:38:05
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\board.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW9DD5.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\board.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\board.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME board
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Clk_ACLK
+        PUBLIC Clk_MCLK
+        PUBLIC Clk_SMCLK
+        PUBLIC System_Clock_Init
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN WDT_A_hold
+        EXTERN GPIO_setAsPeripheralModuleFunctionInputPin
+        EXTERN PMM_setVCore
+        EXTERN UCS_setExternalClockSource
+        EXTERN UCS_turnOnLFXT1
+        EXTERN UCS_turnOnXT2
+        EXTERN UCS_initClockSignal
+        EXTERN UCS_initFLLSettle
+        EXTERN UCS_turnOnSMCLK
+        EXTERN UCS_getACLK
+        EXTERN UCS_getSMCLK
+        EXTERN UCS_getMCLK
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\board.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：board.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 #include "board.h"
+//   19 #include "include.h"
+//   20 #include "ucs.h"
+//   21 
+//   22 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   23 int64_t Clk_ACLK = 0;
+Clk_ACLK:
+        DS8 8
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   24 int64_t Clk_SMCLK = 0;
+Clk_SMCLK:
+        DS8 8
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   25 int64_t Clk_MCLK = 0;
+Clk_MCLK:
+        DS8 8
+//   26 
+//   27 
+//   28 /******************************************************************************
+//   29   * 函数名称：System_Clock_Init
+//   30   * 函数描述：系统时钟初始化
+//   31   * 输    入：void
+//   32   * 输    出：void
+//   33   * 返    回：void
+//   34   * 备    注：null    
+//   35   *    
+//   36   *
+//   37 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   38 void System_Clock_Init(void)
+System_Clock_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function System_Clock_Init
+//   39 {
+//   40     // Stop Watch Dog Timer
+//   41     WDT_A_hold(WDT_A_BASE);
+        MOV.W   #0x150, R12
+          CFI FunCall WDT_A_hold
+        CALLA   #WDT_A_hold
+//   42     
+//   43     // XT1 Pin used as peripheral function for 32768 Hz
+//   44     GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P5, GPIO_PIN4 + GPIO_PIN5);
+        MOV.W   #0x30, R13
+        MOV.B   #0x5, R12
+          CFI FunCall GPIO_setAsPeripheralModuleFunctionInputPin
+        CALLA   #GPIO_setAsPeripheralModuleFunctionInputPin
+//   45     
+//   46     // XT2 Pin used as peripheral function for 4 MHz
+//   47     GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P5, GPIO_PIN2 + GPIO_PIN3);
+        MOV.W   #0xc, R13
+        MOV.B   #0x5, R12
+          CFI FunCall GPIO_setAsPeripheralModuleFunctionInputPin
+        CALLA   #GPIO_setAsPeripheralModuleFunctionInputPin
+//   48     
+//   49     //__bis_SR_register(GIE);
+//   50     
+//   51     // System Power Improve step by step
+//   52     PMM_setVCore(PMM_CORE_LEVEL_1);
+        MOV.B   #0x1, R12
+          CFI FunCall PMM_setVCore
+        CALLA   #PMM_setVCore
+//   53     PMM_setVCore(PMM_CORE_LEVEL_2);
+        MOV.B   #0x2, R12
+          CFI FunCall PMM_setVCore
+        CALLA   #PMM_setVCore
+//   54     PMM_setVCore(PMM_CORE_LEVEL_3);
+        MOV.B   #0x3, R12
+          CFI FunCall PMM_setVCore
+        CALLA   #PMM_setVCore
+//   55     
+//   56     UCS_setExternalClockSource(32768, 4000000);
+        MOV.W   #0x900, R14
+        MOV.W   #0x3d, R15
+        MOV.W   #0x8000, R12
+        MOV.W   #0x0, R13
+          CFI FunCall UCS_setExternalClockSource
+        CALLA   #UCS_setExternalClockSource
+//   57     
+//   58     // Turn on external crystal
+//   59     UCS_turnOnLFXT1(UCS_XT1_DRIVE_3, UCS_XCAP_3);
+        MOV.B   #0xc, R13
+        MOV.W   #0xc0, R12
+          CFI FunCall UCS_turnOnLFXT1
+        CALLA   #UCS_turnOnLFXT1
+//   60     UCS_turnOnXT2(UCS_XT2_DRIVE_4MHZ_8MHZ);
+        MOV.W   #0x0, R12
+          CFI FunCall UCS_turnOnXT2
+        CALLA   #UCS_turnOnXT2
+//   61     
+//   62     // UCS_XT2CLK_SELECT: 4 MHz    UCS_VLOCLK_SELECT: 10 kHz    UCS_REFOCLK_SELECT: 32768 Hz
+//   63     // 4 000 000 / 8 = 500 000 = 500 kHz
+//   64     // Set PLL Clock source and prescale
+//   65     // 经实测 如果锁相环 PLL 的输入频率大于等于 1MHz 也能工作，只是目标频率不正确（期望25M 得到 24M）
+//   66     UCS_initClockSignal(UCS_FLLREF, UCS_XT2CLK_SELECT, UCS_CLOCK_DIVIDER_8);
+        MOV.W   #0x3, R14
+        MOV.W   #0x5, R13
+        MOV.B   #0x8, R12
+          CFI FunCall UCS_initClockSignal
+        CALLA   #UCS_initClockSignal
+//   67     
+//   68     // Target PLL Frequency(kHz) and ratio
+//   69     // 25 000 000 / 500 000 = 50
+//   70     UCS_initFLLSettle(25000, 50);
+        MOV.W   #0x32, R13
+        MOV.W   #0x61a8, R12
+          CFI FunCall UCS_initFLLSettle
+        CALLA   #UCS_initFLLSettle
+//   71     
+//   72     UCS_initClockSignal(UCS_ACLK, UCS_DCOCLK_SELECT, UCS_CLOCK_DIVIDER_1);
+        MOV.W   #0x0, R14
+        MOV.W   #0x3, R13
+        MOV.B   #0x1, R12
+          CFI FunCall UCS_initClockSignal
+        CALLA   #UCS_initClockSignal
+//   73     /*
+//   74         If the frequency is greater than 16 MHz,
+//   75         the function sets the MCLK and SMCLK source to the undivided DCO frequency.
+//   76         Otherwise, the function sets the MCLK and SMCLK source to the DCOCLKDIV frequency.
+//   77     */
+//   78     UCS_initClockSignal(UCS_MCLK, UCS_DCOCLK_SELECT, UCS_CLOCK_DIVIDER_1);
+        MOV.W   #0x0, R14
+        MOV.W   #0x3, R13
+        MOV.B   #0x2, R12
+          CFI FunCall UCS_initClockSignal
+        CALLA   #UCS_initClockSignal
+//   79     UCS_initClockSignal(UCS_SMCLK, UCS_DCOCLK_SELECT, UCS_CLOCK_DIVIDER_1);
+        MOV.W   #0x0, R14
+        MOV.W   #0x3, R13
+        MOV.B   #0x4, R12
+          CFI FunCall UCS_initClockSignal
+        CALLA   #UCS_initClockSignal
+//   80     
+//   81     UCS_turnOnSMCLK();
+          CFI FunCall UCS_turnOnSMCLK
+        CALLA   #UCS_turnOnSMCLK
+//   82     
+//   83     Clk_ACLK = UCS_getACLK();
+          CFI FunCall UCS_getACLK
+        CALLA   #UCS_getACLK
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+        MOVX.W  R12, &Clk_ACLK
+        MOVX.W  R13, &Clk_ACLK + 2
+        MOVX.W  R14, &Clk_ACLK + 4
+        MOVX.W  R15, &Clk_ACLK + 6
+//   84     Clk_SMCLK = UCS_getSMCLK();
+          CFI FunCall UCS_getSMCLK
+        CALLA   #UCS_getSMCLK
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+        MOVX.W  R12, &Clk_SMCLK
+        MOVX.W  R13, &Clk_SMCLK + 2
+        MOVX.W  R14, &Clk_SMCLK + 4
+        MOVX.W  R15, &Clk_SMCLK + 6
+//   85     Clk_MCLK = UCS_getMCLK();
+          CFI FunCall UCS_getMCLK
+        CALLA   #UCS_getMCLK
+        MOV.W   #0x0, R14
+        MOV.W   #0x0, R15
+        MOVX.W  R12, &Clk_MCLK
+        MOVX.W  R13, &Clk_MCLK + 2
+        MOVX.W  R14, &Clk_MCLK + 4
+        MOVX.W  R15, &Clk_MCLK + 6
+//   86 }
+        RETA
+          CFI EndBlock cfiBlock0
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//   87 
+//   88 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+//   89 
+// 
+// 252 bytes in segment CODE
+//  24 bytes in segment DATA20_Z
+// 
+// 252 bytes of CODE memory
+//  24 bytes of DATA memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,768 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:13
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\usci_a_uart.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW360F.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\usci_a_uart.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\usci_a_uart.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME usci_a_uart
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC USCI_A_UART_clearInterrupt
+        PUBLIC USCI_A_UART_disable
+        PUBLIC USCI_A_UART_disableInterrupt
+        PUBLIC USCI_A_UART_enable
+        PUBLIC USCI_A_UART_enableInterrupt
+        PUBLIC USCI_A_UART_getInterruptStatus
+        PUBLIC USCI_A_UART_getReceiveBufferAddressForDMA
+        PUBLIC USCI_A_UART_getTransmitBufferAddressForDMA
+        PUBLIC USCI_A_UART_init
+        PUBLIC USCI_A_UART_queryStatusFlags
+        PUBLIC USCI_A_UART_receiveData
+        PUBLIC USCI_A_UART_resetDormant
+        PUBLIC USCI_A_UART_setDormant
+        PUBLIC USCI_A_UART_transmitAddress
+        PUBLIC USCI_A_UART_transmitBreak
+        PUBLIC USCI_A_UART_transmitData
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\usci_a_uart.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // usci_a_uart.c - Driver for the usci_a_uart Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup usci_a_uart_api usci_a_uart
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_USCI_Ax__
+//   48 #include "usci_a_uart.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 bool USCI_A_UART_init(uint16_t baseAddress, USCI_A_UART_initParam *param)
+USCI_A_UART_init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function USCI_A_UART_init
+          CFI NoCalls
+//   53 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.W   R12, R14
+//   54     bool retVal = STATUS_SUCCESS;
+        MOV.B   #0x1, R12
+//   55 
+//   56     //Disable the USCI Module
+//   57     HWREG8(baseAddress + OFS_UCAxCTL1) |= UCSWRST;
+        MOV.W   R14, R15
+        BIS.B   #0x1, 0(R15)
+//   58 
+//   59     //Clock source select
+//   60     HWREG8(baseAddress + OFS_UCAxCTL1) &= ~UCSSEL_3;
+        AND.B   #0x3f, 0(R14)
+//   61     HWREG8(baseAddress + OFS_UCAxCTL1) |= param->selectClockSource;
+        BIS.B   @R13, 0(R14)
+//   62 
+//   63     //MSB, LSB select
+//   64     HWREG8(baseAddress + OFS_UCAxCTL0) &= ~UCMSB;
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIC.B   #0x20, 0(R15)
+//   65     HWREG8(baseAddress + OFS_UCAxCTL0) |= param->msborLsbFirst;
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIS.B   0x7(R13), 0(R15)
+//   66 
+//   67 
+//   68     //UCSPB = 0(1 stop bit) OR 1(2 stop bits)
+//   69     HWREG8(baseAddress + OFS_UCAxCTL0) &= ~UCSPB;
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIC.B   #0x8, 0(R15)
+//   70     HWREG8(baseAddress + OFS_UCAxCTL0) |= param->numberofStopBits;
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIS.B   0x8(R13), 0(R15)
+//   71 
+//   72 
+//   73     //Parity
+//   74     switch (param->parity){
+        MOV.B   0x6(R13), R15
+        SUB.B   #0x0, R15
+        JEQ     ??USCI_A_UART_init_1
+        SUB.B   #0x1, R15
+        JEQ     ??USCI_A_UART_init_2
+        SUB.B   #0x1, R15
+        JEQ     ??USCI_A_UART_init_3
+        JMP     ??USCI_A_UART_init_0
+//   75         case USCI_A_UART_NO_PARITY:
+//   76             //No Parity
+//   77             HWREG8(baseAddress + OFS_UCAxCTL0) &= ~UCPEN;
+??USCI_A_UART_init_1:
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIC.B   #0x80, 0(R15)
+//   78             break;
+        JMP     ??USCI_A_UART_init_0
+//   79         case USCI_A_UART_ODD_PARITY:
+//   80             //Odd Parity
+//   81             HWREG8(baseAddress + OFS_UCAxCTL0) |= UCPEN;
+??USCI_A_UART_init_2:
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIS.B   #0x80, 0(R15)
+//   82             HWREG8(baseAddress + OFS_UCAxCTL0) &= ~UCPAR;
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIC.B   #0x40, 0(R15)
+//   83             break;
+        JMP     ??USCI_A_UART_init_0
+//   84         case USCI_A_UART_EVEN_PARITY:
+//   85             //Even Parity
+//   86             HWREG8(baseAddress + OFS_UCAxCTL0) |= UCPEN;
+??USCI_A_UART_init_3:
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIS.B   #0x80, 0(R15)
+//   87             HWREG8(baseAddress + OFS_UCAxCTL0) |= UCPAR;
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIS.B   #0x40, 0(R15)
+//   88             break;
+//   89     }
+//   90 
+//   91     //Modulation Control Registers
+//   92     HWREG16(baseAddress + OFS_UCAxBRW ) = param->clockPrescalar;
+??USCI_A_UART_init_0:
+        MOV.W   R14, R15
+        ADD.W   #0x6, R15
+        MOV.W   0x2(R13), 0(R15)
+//   93     HWREG8(baseAddress + OFS_UCAxMCTL) = ((param->firstModReg<<4) +
+//   94                                         (param->secondModReg <<1) +
+//   95                                         param->overSampling );
+        MOV.B   0x4(R13), R10
+        RPT     #0x4
+        RLAX.B  R10
+        MOV.B   0x5(R13), R15
+        RLA.B   R15
+        ADD.B   R15, R10
+        ADD.B   0xa(R13), R10
+        MOV.W   R14, R15
+        ADD.W   #0x8, R15
+        MOV.B   R10, 0(R15)
+//   96 
+//   97     //Asynchronous mode & 8 bit character select & clear mode
+//   98     HWREG8(baseAddress + OFS_UCAxCTL0) &=  ~(UCSYNC +
+//   99                                              UC7BIT +
+//  100                                              UCMODE_3
+//  101                                              );
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        AND.B   #0xe8, 0(R15)
+//  102 
+//  103     //Configure  UART mode.
+//  104     HWREG8(baseAddress + OFS_UCAxCTL0) |= param->uartMode ;
+        MOV.W   R14, R15
+        ADD.W   #0x1, R15
+        BIS.B   0x9(R13), 0(R15)
+//  105 
+//  106     //Reset UCRXIE, UCBRKIE, UCDORM, UCTXADDR, UCTXBRK
+//  107     HWREG8(baseAddress + OFS_UCAxCTL1)  &= ~(UCRXEIE + UCBRKIE + UCDORM +
+//  108                                              UCTXADDR + UCTXBRK
+//  109                                              );
+        AND.B   #0xc1, 0(R14)
+//  110     return (retVal) ;
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+//  111 }
+          CFI EndBlock cfiBlock0
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  112 void USCI_A_UART_transmitData ( uint16_t baseAddress,
+USCI_A_UART_transmitData:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function USCI_A_UART_transmitData
+          CFI NoCalls
+//  113     uint8_t transmitData
+//  114     )
+//  115 {
+//  116     //If interrupts are not used, poll for flags
+//  117     if (!(HWREG8(baseAddress + OFS_UCAxIE) & UCTXIE)){
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIT.B   #0x2, 0(R15)
+        JC      ??USCI_A_UART_transmitData_1
+//  118         //Poll for transmit interrupt flag
+//  119         while (!(HWREG8(baseAddress + OFS_UCAxIFG) & UCTXIFG));
+??USCI_A_UART_transmitData_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_A_UART_transmitData_0
+//  120     }
+//  121 
+//  122     HWREG8(baseAddress + OFS_UCAxTXBUF) = transmitData;
+??USCI_A_UART_transmitData_1:
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   R13, 0(R15)
+//  123 }
+        RETA
+          CFI EndBlock cfiBlock1
+//  124 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  125 uint8_t USCI_A_UART_receiveData (uint16_t baseAddress)
+USCI_A_UART_receiveData:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function USCI_A_UART_receiveData
+          CFI NoCalls
+//  126 {
+//  127     //If interrupts are not used, poll for flags
+//  128     if (!(HWREG8(baseAddress + OFS_UCAxIE) & UCRXIE)){
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIT.B   #0x1, 0(R15)
+        JC      ??USCI_A_UART_receiveData_1
+//  129         //Poll for receive interrupt flag
+//  130         while (!(HWREG8(baseAddress + OFS_UCAxIFG) & UCRXIFG));
+??USCI_A_UART_receiveData_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x1, 0(R15)
+        JNC     ??USCI_A_UART_receiveData_0
+//  131     }
+//  132 
+//  133     return ( HWREG8(baseAddress + OFS_UCAxRXBUF)) ;
+??USCI_A_UART_receiveData_1:
+        ADD.W   #0xc, R12
+        MOV.B   @R12, R12
+        RETA
+//  134 }
+          CFI EndBlock cfiBlock2
+//  135 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  136 void USCI_A_UART_enableInterrupt (uint16_t baseAddress,
+USCI_A_UART_enableInterrupt:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function USCI_A_UART_enableInterrupt
+          CFI NoCalls
+//  137     uint8_t mask
+//  138     )
+//  139 {
+//  140     uint8_t locMask;
+//  141 
+//  142     locMask = (mask & (USCI_A_UART_RECEIVE_INTERRUPT
+//  143         | USCI_A_UART_TRANSMIT_INTERRUPT));
+        MOV.B   R13, R15
+        AND.B   #0x3, R15
+        MOV.B   R15, R14
+//  144     HWREG8(baseAddress + OFS_UCAxIE) |= locMask;
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIS.B   R14, 0(R15)
+//  145 
+//  146     locMask = (mask & (USCI_A_UART_RECEIVE_ERRONEOUSCHAR_INTERRUPT
+//  147         | USCI_A_UART_BREAKCHAR_INTERRUPT));
+        MOV.B   R13, R15
+        AND.B   #0x30, R15
+        MOV.B   R15, R14
+//  148     HWREG8(baseAddress + OFS_UCAxCTL1) |= locMask;
+        BIS.B   R14, 0(R12)
+//  149 }
+        RETA
+          CFI EndBlock cfiBlock3
+//  150 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  151 void USCI_A_UART_disableInterrupt (uint16_t baseAddress,
+USCI_A_UART_disableInterrupt:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function USCI_A_UART_disableInterrupt
+          CFI NoCalls
+//  152     uint8_t mask
+//  153     )
+//  154 {
+//  155     uint8_t locMask;
+//  156 
+//  157     if(locMask = (mask & (USCI_A_UART_RECEIVE_INTERRUPT
+//  158         | USCI_A_UART_TRANSMIT_INTERRUPT))) {
+        MOV.B   R13, R15
+        AND.B   #0x3, R15
+        MOV.B   R15, R14
+        CMP.B   #0x0, R14
+        JEQ     ??USCI_A_UART_disableInterrupt_0
+//  159         HWREG8(baseAddress + OFS_UCAxIE) &= ~locMask;
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIC.B   R14, 0(R15)
+//  160     }
+//  161 
+//  162     if(locMask = (mask & (USCI_A_UART_RECEIVE_ERRONEOUSCHAR_INTERRUPT
+//  163         | USCI_A_UART_BREAKCHAR_INTERRUPT))) {
+??USCI_A_UART_disableInterrupt_0:
+        MOV.B   R13, R15
+        AND.B   #0x30, R15
+        MOV.B   R15, R14
+        CMP.B   #0x0, R14
+        JEQ     ??USCI_A_UART_disableInterrupt_1
+//  164         HWREG8(baseAddress + OFS_UCAxCTL1) &= ~locMask;
+        BIC.B   R14, 0(R12)
+//  165     }
+//  166 }
+??USCI_A_UART_disableInterrupt_1:
+        RETA
+          CFI EndBlock cfiBlock4
+//  167 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  168 uint8_t USCI_A_UART_getInterruptStatus (uint16_t baseAddress,
+USCI_A_UART_getInterruptStatus:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function USCI_A_UART_getInterruptStatus
+          CFI NoCalls
+//  169     uint8_t mask)
+//  170 {
+//  171     return ( HWREG8(baseAddress + OFS_UCAxIFG) & mask );
+        ADD.W   #0x1d, R12
+        AND.B   @R12, R13
+        MOV.B   R13, R12
+        RETA
+//  172 }
+          CFI EndBlock cfiBlock5
+//  173 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  174 void USCI_A_UART_clearInterrupt (uint16_t baseAddress, uint8_t mask)
+USCI_A_UART_clearInterrupt:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function USCI_A_UART_clearInterrupt
+          CFI NoCalls
+//  175 {
+//  176     //Clear the UART interrupt source.
+//  177     HWREG8(baseAddress + OFS_UCAxIFG) &= ~(mask);
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIC.B   R13, 0(R15)
+//  178 }
+        RETA
+          CFI EndBlock cfiBlock6
+//  179 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  180 void USCI_A_UART_enable (uint16_t baseAddress)
+USCI_A_UART_enable:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function USCI_A_UART_enable
+          CFI NoCalls
+//  181 {
+//  182     //Reset the UCSWRST bit to enable the USCI Module
+//  183     HWREG8(baseAddress + OFS_UCAxCTL1) &= ~(UCSWRST);
+        MOV.W   R12, R15
+        BIC.B   #0x1, 0(R15)
+//  184 }
+        RETA
+          CFI EndBlock cfiBlock7
+//  185 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  186 void USCI_A_UART_disable (uint16_t baseAddress)
+USCI_A_UART_disable:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function USCI_A_UART_disable
+          CFI NoCalls
+//  187 {
+//  188     //Set the UCSWRST bit to disable the USCI Module
+//  189     HWREG8(baseAddress + OFS_UCAxCTL1) |= UCSWRST;
+        MOV.W   R12, R15
+        BIS.B   #0x1, 0(R15)
+//  190 }
+        RETA
+          CFI EndBlock cfiBlock8
+//  191 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  192 uint8_t USCI_A_UART_queryStatusFlags (uint16_t baseAddress,
+USCI_A_UART_queryStatusFlags:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function USCI_A_UART_queryStatusFlags
+          CFI NoCalls
+//  193     uint8_t mask)
+//  194 {
+//  195     return ( HWREG8(baseAddress + OFS_UCAxSTAT) & mask );
+        ADD.W   #0xa, R12
+        AND.B   @R12, R13
+        MOV.B   R13, R12
+        RETA
+//  196 }
+          CFI EndBlock cfiBlock9
+//  197 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  198 void USCI_A_UART_setDormant (uint16_t baseAddress)
+USCI_A_UART_setDormant:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function USCI_A_UART_setDormant
+          CFI NoCalls
+//  199 {
+//  200     HWREG8(baseAddress + OFS_UCAxCTL1) |= UCDORM;
+        MOV.W   R12, R15
+        BIS.B   #0x8, 0(R15)
+//  201 }
+        RETA
+          CFI EndBlock cfiBlock10
+//  202 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  203 void USCI_A_UART_resetDormant (uint16_t baseAddress)
+USCI_A_UART_resetDormant:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function USCI_A_UART_resetDormant
+          CFI NoCalls
+//  204 {
+//  205     HWREG8(baseAddress + OFS_UCAxCTL1) &= ~UCDORM;
+        MOV.W   R12, R15
+        BIC.B   #0x8, 0(R15)
+//  206 }
+        RETA
+          CFI EndBlock cfiBlock11
+//  207 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  208 void USCI_A_UART_transmitAddress (uint16_t baseAddress,
+USCI_A_UART_transmitAddress:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function USCI_A_UART_transmitAddress
+          CFI NoCalls
+//  209     uint8_t transmitAddress)
+//  210 {
+//  211     //Set UCTXADDR bit
+//  212     HWREG8(baseAddress + OFS_UCAxCTL1) |= UCTXADDR;
+        MOV.W   R12, R15
+        BIS.B   #0x4, 0(R15)
+//  213 
+//  214     //Place next byte to be sent into the transmit buffer
+//  215     HWREG8(baseAddress + OFS_UCAxTXBUF) = transmitAddress;
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   R13, 0(R15)
+//  216 }
+        RETA
+          CFI EndBlock cfiBlock12
+//  217 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  218 void USCI_A_UART_transmitBreak (uint16_t baseAddress)
+USCI_A_UART_transmitBreak:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function USCI_A_UART_transmitBreak
+          CFI NoCalls
+//  219 {
+//  220     //Set UCTXADDR bit
+//  221     HWREG8(baseAddress + OFS_UCAxCTL1) |= UCTXBRK;
+        MOV.W   R12, R15
+        BIS.B   #0x2, 0(R15)
+//  222 
+//  223     //If current mode is automatic baud-rate detection
+//  224     if (USCI_A_UART_AUTOMATIC_BAUDRATE_DETECTION_MODE ==
+//  225         (HWREG8(baseAddress + OFS_UCAxCTL0) &
+//  226          USCI_A_UART_AUTOMATIC_BAUDRATE_DETECTION_MODE)){
+        MOV.W   R12, R15
+        ADD.W   #0x1, R15
+        MOV.B   @R15, R14
+        AND.B   #0x6, R14
+        CMP.B   #0x6, R14
+        JNE     ??USCI_A_UART_transmitBreak_2
+//  227         HWREG8(baseAddress + OFS_UCAxTXBUF) = USCI_A_UART_AUTOMATICBAUDRATE_SYNC;
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   #0x55, 0(R15)
+        JMP     ??USCI_A_UART_transmitBreak_1
+//  228     } else   {
+//  229         HWREG8(baseAddress + OFS_UCAxTXBUF) = DEFAULT_SYNC;
+??USCI_A_UART_transmitBreak_2:
+        MOV.W   R12, R15
+        ADD.W   #0xe, R15
+        MOV.B   #0x0, 0(R15)
+//  230     }
+//  231 
+//  232     //If interrupts are not used, poll for flags
+//  233     if (!(HWREG8(baseAddress + OFS_UCAxIE) & UCTXIE)){
+??USCI_A_UART_transmitBreak_1:
+        MOV.W   R12, R15
+        ADD.W   #0x1c, R15
+        BIT.B   #0x2, 0(R15)
+        JC      ??USCI_A_UART_transmitBreak_3
+//  234         //Poll for transmit interrupt flag
+//  235         while (!(HWREG8(baseAddress + OFS_UCAxIFG) & UCTXIFG));
+??USCI_A_UART_transmitBreak_0:
+        MOV.W   R12, R15
+        ADD.W   #0x1d, R15
+        BIT.B   #0x2, 0(R15)
+        JNC     ??USCI_A_UART_transmitBreak_0
+//  236     }
+//  237 }
+??USCI_A_UART_transmitBreak_3:
+        RETA
+          CFI EndBlock cfiBlock13
+//  238 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  239 uint32_t USCI_A_UART_getReceiveBufferAddressForDMA (uint16_t baseAddress)
+USCI_A_UART_getReceiveBufferAddressForDMA:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function USCI_A_UART_getReceiveBufferAddressForDMA
+          CFI NoCalls
+//  240 {
+//  241     return ( baseAddress + OFS_UCAxRXBUF );
+        ADD.W   #0xc, R12
+        MOV.W   #0x0, R13
+        RETA
+//  242 }
+          CFI EndBlock cfiBlock14
+//  243 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  244 uint32_t USCI_A_UART_getTransmitBufferAddressForDMA (uint16_t baseAddress)
+USCI_A_UART_getTransmitBufferAddressForDMA:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function USCI_A_UART_getTransmitBufferAddressForDMA
+          CFI NoCalls
+//  245 {
+//  246     return ( baseAddress + OFS_UCAxTXBUF );
+        ADD.W   #0xe, R12
+        MOV.W   #0x0, R13
+        RETA
+//  247 }
+          CFI EndBlock cfiBlock15
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  248 
+//  249 
+//  250 #endif
+//  251 //*****************************************************************************
+//  252 //
+//  253 //! Close the doxygen group for usci_a_uart_api
+//  254 //! @}
+//  255 //
+//  256 //*****************************************************************************
+// 
+// 512 bytes in segment CODE
+// 
+// 512 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

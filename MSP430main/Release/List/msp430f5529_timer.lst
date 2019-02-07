@@ -1,0 +1,785 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:43
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_timer.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW595D.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_timer.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_timer.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_timer.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_timer.c
+      1          #include "msp430f5529_timer.h"
+      2          #include "msp430f5529_clock.h"
+      3          #include "msp430f5529_gpio.h"
+      4          #include "msp430f5529_system.h"
+      5          #include "stdarg.h"
+      6          
+      7          //定义4个指针数组保存 TIMERX 的地址
+      8          const TIMER_MemMapPtr TIMERX[TIMER_NUM] ={TIMER_A0_BASE_PTR,TIMER_A1_BASE_PTR,TIMER_A2_BASE_PTR,TIMER_B0_BASE_PTR};
+      9          //定义数组保存占空比最大值
+     10          const uint32_t TIMER_PRECISON[TIMER_NUM]={TIMER_PWM_A0_PRECISON,TIMER_PWM_A1_PRECISON,TIMER_PWM_A2_PRECISON,TIMER_PWM_B0_PRECISON};
+     11          //定义通道引脚
+     12          const GPIO_PIN TIMER_CHANEL_PIN[TIMER_NUM][TIMER_CH_NUM]=
+     13          {// CH0    CH1    CH2    CH3    CH4    CH5    CH6
+     14            {{P1,1},{P1,2},{P1,3},{P1,4},{P1,5}},                  //TIMER_A0
+     15            {{P1,7},{P2,0},{P2,1}},                                //TIMER_A1
+     16            {{P2,3},{P2,4},{P2,5}},                                //TIMER_A2
+     17            {{P5,6},{P5,7},{P7,4},{P7,5},{P7,6},{P3,5},{P3,6}}     //TIMER_B0
+     18          };//通道引脚
+     19          const GPIO_PIN TIMER_CLK_PIN[TIMER_NUM] =
+     20          {
+     21            {P1,0},                                                //TIMER_A0
+     22            {P1,6},                                                //TIMER_A1
+     23            {P2,2},                                                //TIMER_A2
+     24            {P7,7}                                                 //TIMER_B0
+     25          };//外部时钟输入引脚
+     26          /*******************************************************************************
+     27          *  函数名称：TIMER_PWM_MultiChannel_Init(TIMERn timer, uint32_t fre, uint8_t ChannelNum,...)
+     28          *  功能说明：定时器PWM输出初始化(可以多个通道同时初始化)
+     29          *  参数说明：TIMERn timer       ：定时器模块
+     30                       uint32_t fre         ：频率
+     31                       uint8_t ChannelNum   ：要初始化的通道数
+     32                       ...                ：初始化的通道
+     33          *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+     34          *  使用例程：实例一：（使用函数初始化时需要输入初始化通道数，初始化通道数可以为0，如：TIMER_PWM_MultiChannel_Init(TIMER_A0, 1000, 0);）
+     35                       TIMER_PWM_MultiChannel_Init(TIMER_A0, 1000, 3, TIMER_CH1, TIMER_CH2, TIMER_CH4);
+     36                       //定时器TIMER_A0初始化输出PWM波，频率为1000Hz,初始化3个通道，分别是：TIMER_CH1,TIMER_CH2,TIMER_CH4
+     37                       实例二：(使用宏定义初始化时不需要输入初始化通道数)
+     38                       TIMER_PWM_Init(TIMER_B0,1000,TIMER_CH1,TIMER_CH2,TIMER_CH3,TIMER_CH4,TIMER_CH5,TIMER_CH6);
+     39                       //定时器TIMER_B0初始化输出PWM波，频率为1000Hz,初始化6个通道：TIMER_CH1,TIMER_CH2,TIMER_CH3,TIMER_CH4,TIMER_CH5,TIMER_CH6
+     40          ********************************************************************************/
+     41          STATUS TIMER_PWM_MultiChannel_Init(TIMERn timer, uint32_t fre, uint8_t ChannelNum,...)
+     42          {
+     43          #ifdef DELAY_TIMER
+     44            ASSERT((timer != DELAY_TIMER),
+     45                   "TIMER_PWM_MultiChannel_Init",
+     46                   "定时器已经设置为默认延时功能，不能再作为其他功能使用");       //不允许这种情况下还宏定义该定时器作为延时所用的定时器，请在system.h里修改DELAY_TIMER宏定义
+     47          #endif
+     48            ASSERT((timer==TIMER_A0&&ChannelNum<=TIMER_CH4)
+     49                 ||(timer==TIMER_A1&&ChannelNum<=TIMER_CH2)
+     50                 ||(timer==TIMER_A2&&ChannelNum<=TIMER_CH2)
+     51                 ||(timer==TIMER_B0&&ChannelNum<=TIMER_CH6),
+     52                 "TIMER_PWM_MultiChannel_Init",
+                        ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+     53                 "定时器通道参数超出范围！"); //断言检测输入参数*/
+     54            
+     55            va_list ap;
+     56            va_start(ap,ChanelNum);
+     57            for(int i=0;i < ChannelNum;i++)           //根据初始化的通道数，逐一初始化通道
+     58            {
+     59              TIMER_CHn ch = va_arg(ap, TIMER_CHn);  //读取要初始化的通道
+     60              if((ch == TIMER_CH0) || (ch >= TIMER_CH_NUM))   //判断通道值是否合理
+     61              {
+     62                return ERROR;                                 //不合理返回ERROR
+     63              }
+     64              //初始化端口
+     65              GPIO_Init(TIMER_CHANEL_PIN[timer][ch].Port,TIMER_CHANEL_PIN[timer][ch].Pin,GPO|SEL);
+     66              //初始化占空比及输出波形
+     67              TIMERX[timer]->CCR[ch] = 0u;
+     68              TIMERX[timer]->CCTL[ch].IE = RESET;               //关闭通道中断
+     69              TIMERX[timer]->CCTL[ch].OUTMOD = DEFAULT_PWM_OUTMOD;      //输出波形设置
+     70              TIMERX[timer]->CCTL[ch].CAPMODE = RESET;          //比较模式
+     71            }
+     72            va_end(ap);
+     73            
+     74            return TIMER_PWM_SetFrequency(timer,fre);
+     75          }
+     76          /*******************************************************************************
+     77          *  函数名称：TIMER_PWM_SetChannelOutmod(TIMERn timer,TIMER_CHn ch,TIMER_OUTMODn outmod)
+     78          *  功能说明：PWM输出波形设置
+     79          *  参数说明：TIMERn timer       ：定时器模块
+     80                       TIMER_CHn ch       ：定时器通道
+     81                       TIMER_PWM_OUTMODn outmod ：输出波形模式
+     82          *  函数返回：无
+     83          *  使用例程：TIMER_PWM_SetChannelOutmod(TIMER_A0,TIMER_CH1,TIMER_PWM_OUTMOD3);  //修改定时器A0的TIMER_CH1通道输出波形
+     84          ********************************************************************************/
+     85          void TIMER_PWM_SetChannelOutmod(TIMERn timer,TIMER_CHn ch,TIMER_PWM_OUTMODn outmod)
+     86          {
+     87            TIMERX[timer]->CCTL[ch].OUTMOD = outmod;      //输出波形设置
+     88          }
+     89          /*******************************************************************************
+     90          *  函数名称：TIMER_PWM_SetFrequency(TIMERn timer,uint32_t fre)
+     91          *  功能说明：定时器PWM频率设置(注意这里没有更改各个通道的占空比，所以修改频率后占空比变了，需要从新设置占空比)
+     92          *  参数说明：TIMERn timer       ：定时器模块
+     93                       uint32_t fre         ：频率
+     94          *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+     95          *  使用例程：TIMER_PWM_SetFrequency(TIMER_B0,1000);       //将定时器B输出频率修改为1000Hz
+     96          ********************************************************************************/
+     97          STATUS  TIMER_PWM_SetFrequency(TIMERn timer,uint32_t fre)
+     98          {
+     99            if(fre == 0u)
+    100            {
+    101              TIMERX[timer]->MC = TIMER_MC_STOP;              //暂停输出PWM波
+    102              return SUCCESS;
+    103            }
+    104            
+    105            TIMERX[timer]->CLR = BIT_SET;
+    106            TIMERX[timer]->SSEL = TIMER_SSEL_SMCLK;           //先选择时钟源为SMCLK
+    107            TIMERX[timer]->ID = 0u;                           //分频系数清零
+    108            //时钟大小
+    109            uint32_t Counter_Value = g_sClock.SMCLK.nHZ/fre;                 //计算计数值
+    110            while(Counter_Value > 65536u)        //这里不是0xffff，因为后面会-1，所以是(0xffff+1)=65536
+    111            {  //分频一次
+    112               TIMERX[timer]->ID ++;          
+    113               Counter_Value >>= 1;          
+    114               
+    115               if((TIMERX[timer]->ID == 3u) && (Counter_Value > 65536))   //这个时候意味得选择更低频率的时钟了
+    116               {
+    117                 if(TIMERX[timer]->SSEL == TIMER_SSEL_ACLK)   //如果时钟已经是最低的ACLK了，那么意味着设置的频率太低了，失败返回ERROR
+    118                 {
+    119                   return ERROR;
+    120                 }
+    121                 //更换为更低的ACLK，从新配置
+    122                 TIMERX[timer]->SSEL = TIMER_SSEL_ACLK;
+    123                 TIMERX[timer]->ID = 0u;  
+    124                 Counter_Value = g_sClock.ACLK.nHZ/fre; 
+    125                 continue;  
+    126               } 
+    127            }
+    128            if(Counter_Value <= 1)//出现这种情况,说明频率不合适
+    129            {
+    130              return ERROR; 
+    131            }
+    132          
+    133            TIMERX[timer]->CCR[0] = (uint16_t)(Counter_Value - 1u);//为什么要减一？？因为TAR/TBR计数器从CCR0变化到0还有一个计数周期
+    134            TIMERX[timer]->IE = RESET;                      //关闭中断
+    135            TIMERX[timer]->MC = TIMER_MC_UP;                //增计数模式
+    136            
+    137            return SUCCESS;
+    138          }
+    139          /*******************************************************************************
+    140          *  函数名称：TIMER_PWM_SetChannelDuty(TIMERn timer,TIMER_CHn ch,uint32_t duty)
+    141          *  功能说明：PWM输出占空比设置
+    142          *  参数说明：TIMERn timer       ：定时器模块
+    143                       TIMER_CHn ch       ：定时器通道
+    144                       uint32_t duty      ：占空比
+    145          *  函数返回：无
+    146          *  使用例程：TIMER_PWM_SetChannelDuty(TIMER_A0,TIMER_CH1,800);  //修改定时器A0的TIMER_CH1通道占空比为(800/TIMAR_A0_PRECISON)*100%
+    147          ********************************************************************************/
+    148          void  TIMER_PWM_SetChannelDuty(TIMERn timer,TIMER_CHn ch,uint32_t duty)
+    149          {
+    150            ASSERT((timer==TIMER_A0&&ch<=TIMER_CH4)
+    151                 ||(timer==TIMER_A1&&ch<=TIMER_CH2)
+    152                 ||(timer==TIMER_A2&&ch<=TIMER_CH2)
+    153                 ||(timer==TIMER_B0&&ch<=TIMER_CH6),
+    154                 "TIMER_PWM_SetChannelDuty",
+                        ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+    155                 "定时器通道参数超出范围！"); //断言检测输入参数
+    156            
+    157            ASSERT(duty <= TIMER_PRECISON[timer],
+    158                   "TIMER_PWM_SetChannelDuty",
+                          ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+    159                   "定时器占空比参数超出范围！");      //用断言检测 占空比是否合理
+    160            
+    161            TIMERX[timer]->CCR[ch] = (uint16_t)((duty * (TIMERX[timer]->CCR[0]+1))/TIMER_PRECISON[timer]);
+    162          }
+    163          /*******************************************************************************
+    164          *  函数名称：TIMER_Interval_Us(TIMERn timer,uint32_t us)
+    165          *  功能说明：定时器定时初始化(单位：us)
+    166          *  参数说明：TIMERn timer       ：定时器模块
+    167                       uint32_t us          : 定时时间
+    168          *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+    169          *  使用例程：TIMER_Interval_Us(TIMER_B0,2500);  //TB定时间隔2.5ms中断
+    170          ********************************************************************************/
+    171          STATUS  TIMER_Interval_Us(TIMERn timer,uint32_t us)
+    172          {
+    173          #ifdef DELAY_TIMER
+    174            ASSERT((timer != DELAY_TIMER),
+    175                   "TIMER_Interval_Us",
+    176                   "定时器已经设置为默认延时功能，不能再作为其他功能使用");       //不允许这种情况下还宏定义该定时器作为延时所用的定时器，请在system.h里修改DELAY_TIMER宏定义
+    177          #endif
+    178            TIMERX[timer]->CLR = BIT_SET;
+    179            TIMERX[timer]->SSEL = TIMER_SSEL_SMCLK;
+    180            TIMERX[timer]->ID = 0u;
+    181            //计数值
+    182            uint32_t Counter_Value = (uint32_t)(us * g_sClock.SMCLK.fMHZ);
+    183            while(Counter_Value > 65536)
+    184            {
+    185               TIMERX[timer]->ID ++; 
+    186               Counter_Value >>= 1;  
+    187               if((TIMERX[timer]->ID == 3u) && (Counter_Value > 65536))   //这个时候意味得选择更低频率的时钟了
+    188               {
+    189                if(TIMERX[timer]->SSEL == TIMER_SSEL_ACLK) //如果时钟已经是最低的ACLK了，那么意味着设置的频率太低了，失败返回ERROR
+    190                {
+    191                  return ERROR;
+    192                }
+    193                //更换为更低的ACLK，从新配置
+    194                TIMERX[timer]->SSEL = TIMER_SSEL_ACLK;
+    195                TIMERX[timer]->ID = 0u;  
+    196                Counter_Value = (uint32_t)(us * g_sClock.ACLK.fMHZ);
+    197                continue;  
+    198               } 
+    199            }
+    200            if(Counter_Value <= 1)//出现这种情况,说明频率不合适
+    201            {
+    202              return ERROR; 
+    203            }
+    204            
+    205            TIMERX[timer]->CCR[0] = (uint16_t)(Counter_Value - 1u);//为什么要减一？？因为TAR/TBR计数器从CCR0变化到0还有一个计数周期
+    206            TIMERX[timer]->CCTL[0].CAPMODE = RESET;          //比较模式
+    207            TIMERX[timer]->IE = RESET;             //关闭溢出中断
+    208            TIMERX[timer]->CCTL[0].IE = RESET;     //关闭通道中断
+    209            TIMERX[timer]->MC = TIMER_MC_UP;      //增计数模式
+    210            
+    211            return SUCCESS;
+    212          }
+    213          /*******************************************************************************
+    214          *  函数名称：TIMER_Delay_Us(TIMERn timer,uint32_t us)
+    215          *  功能说明：定时器延时（单位：ms）
+    216          *  参数说明：TIMERn timer       ：定时器模块
+    217                       uint32_t us          : 定时时间
+    218          *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+    219          *  使用例程：TIMER_Delay_Us(TIMER_B0 ,5000);      //在此处延时5ms
+    220          ********************************************************************************/
+    221          STATUS TIMER_Delay_Us(TIMERn timer,uint32_t us)
+    222          {
+    223            TIMERX[timer]->CLR = BIT_SET;
+    224            TIMERX[timer]->SSEL = TIMER_SSEL_SMCLK;
+    225            TIMERX[timer]->ID = 0u;
+    226            //计数值
+    227            uint32_t Counter_Value = (uint32_t)(us * g_sClock.SMCLK.fMHZ);
+    228            while(Counter_Value > 65536)
+    229            {
+    230               TIMERX[timer]->ID ++; 
+    231               Counter_Value >>= 1;  
+    232               if((TIMERX[timer]->ID == 3u) && (Counter_Value > 65536))   //这个时候意味得选择更低频率的时钟了
+    233               {
+    234                if(TIMERX[timer]->SSEL == TIMER_SSEL_ACLK) //如果时钟已经是最低的ACLK了，那么意味着设置的频率太低了，失败返回ERROR
+    235                {
+    236                  return ERROR;
+    237                }
+    238                //更换为更低的ACLK，从新配置
+    239                TIMERX[timer]->SSEL = TIMER_SSEL_ACLK;
+    240                TIMERX[timer]->ID = 0u;  
+    241                Counter_Value = (uint32_t)(us * g_sClock.ACLK.fMHZ);
+    242                continue;  
+    243               } 
+    244            }
+    245            if(Counter_Value <= 1)//出现这种情况,说明频率不合适
+    246            {
+    247              return ERROR; 
+    248            }
+    249            
+    250            TIMERX[timer]->CCR[0] = (uint16_t)(Counter_Value - 1u);//为什么要减一？？因为TAR/TBR计数器从CCR0变化到0还有一个计数周期
+    251            TIMERX[timer]->CCTL[0].CAPMODE = RESET;          //比较模式
+    252            TIMERX[timer]->IE = RESET;             //关闭溢出中断
+    253            TIMERX[timer]->CCTL[0].IE = RESET;     //关闭通道中断
+    254            TIMERX[timer]->MC = TIMER_MC_UP;
+    255            
+    256            TIMERX[timer]->CCTL[0].CTL = 0;
+    257            TIMERX[timer]->IFG = RESET;
+    258            while(TIMERX[timer]->IFG == RESET);
+    259            TIMERX[timer]->CTL = 0;
+    260            
+    261            return SUCCESS;
+    262          }
+    263          /*******************************************************************************
+    264          *  函数名称：TIMER_Pluse_Init    (TIMERn timer)
+    265          *  功能说明：定时器脉冲计数初始化
+    266          *  参数说明：TIMERn timer       ：定时器模块
+    267          *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+    268          *  使用例程：TIMER_Pluse_Init    (TIMER_A1);    //定时器TA1初始化为脉冲计数功能
+    269          ********************************************************************************/
+    270          STATUS  TIMER_Pluse_Init    (TIMERn timer)
+    271          { 
+    272          #ifdef DELAY_TIMER
+    273            ASSERT((timer != DELAY_TIMER),
+    274                   "TIMER_Pluse_Init",
+    275                   "定时器已经设置为默认延时功能，不能再作为其他功能使用");       //不允许这种情况下还宏定义该定时器作为延时所用的定时器，请在system.h里修改DELAY_TIMER宏定义
+    276          #endif 
+    277            //端口设置为输入方向//选择第二功能
+    278            GPIO_Init(TIMER_CLK_PIN[timer].Port,TIMER_CLK_PIN[timer].Pin,GPI|SEL);
+    279            
+    280            TIMERX[timer]->CLR = BIT_SET;                       
+    281            TIMERX[timer]->SSEL = TIMER_SSEL_INCLK;             //时钟源选择为外部输入
+    282            TIMERX[timer]->ID = 0u;                             //不分频
+    283            TIMERX[timer]->MC = TIMER_MC_CONTINOUS;             //连续计数模式
+    284            TIMERX[timer]->IE = RESET;                          //禁止溢出中断
+    285            
+    286            return SUCCESS;
+    287          }
+    288          /*******************************************************************************
+    289          *  函数名称：TIMER_Pluse_GetValue(TIMERn timer,uint16_t overflowTime)
+    290          *  功能说明：定时器脉冲计数值获取
+    291          *  参数说明：TIMERn timer       ：定时器模块
+    292                       uint16_t overflowTime ：计数器溢出次数
+    293          *  函数返回：定时器脉冲计数值
+    294          *  使用例程：
+    295                       int32 pulse = TIMER_Pluse_GetValue(TIMER_A1,0);    //在没有发生溢出的情况下读取脉冲个数
+    296                       TIMER_Pluse_Clear   (TIMER_A1);                    //读取后应该要清零
+    297          ********************************************************************************/
+    298          uint32_t TIMER_Pluse_GetValue(TIMERn timer,uint16_t overflowTime)
+    299          {
+    300            return (TIMERX[timer]->R + (overflowTime*65536u));
+    301          }
+    302          /*******************************************************************************
+    303          *  函数名称：TIMER_Pluse_Clear   (TIMERn timer)
+    304          *  功能说明：定时器脉冲计数值清零
+    305          *  参数说明：TIMERn timer       ：定时器模块
+    306          *  函数返回：无
+    307          *  使用例程：
+    308                       int32 pulse = TIMER_Pluse_Read    (TIMER_A1,0);    //在没有发生溢出的情况下读取脉冲个数
+    309                       TIMER_Pluse_Clear   (TIMER_A1);                    //读取后应该要清零
+    310          ********************************************************************************/
+    311          void   TIMER_Pluse_Clear   (TIMERn timer)
+    312          {
+    313            TIMERX[timer]->R = 0;
+    314          }
+    315          /*******************************************************************************
+    316          *  函数名称：TIMER_Capture_Init(TIMERn timer,TIMER_CHn ch,TIMER_CAPTUREn capmode)
+    317          *  功能说明：定时器捕获初始化
+    318          *  参数说明：TIMERn timer        ：定时器模块
+    319                       TIMER_CHn ch        ：定时器通道
+    320                       TIMER_CAPTUREn capmode：捕获模式
+    321          *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+    322          *  使用例程：TIMER_Capture_Init(TIMER_A0,TIMER_CH1,CAP_Rising);         //定时器TA0 CCR1通道初始化为边缘捕获，上升沿捕获
+    323          ********************************************************************************/
+    324          STATUS TIMER_Capture_Init(TIMERn timer,TIMER_CHn ch,TIMER_CAPTUREn capmode)
+    325          {
+    326          #ifdef DELAY_TIMER
+    327            ASSERT((timer != DELAY_TIMER),
+    328                   "TIMER_Capture_Init",
+    329                   "定时器已经设置为默认延时功能，不能再作为其他功能使用");       //不允许这种情况下还宏定义该定时器作为延时所用的定时器，请在system.h里修改DELAY_TIMER宏定义
+    330          #endif
+    331            ASSERT((timer==TIMER_A0&&ch<=TIMER_CH4)
+    332                 ||(timer==TIMER_A1&&ch<=TIMER_CH2)
+    333                 ||(timer==TIMER_A2&&ch<=TIMER_CH2)
+    334                 ||(timer==TIMER_B0&&ch<=TIMER_CH6),
+    335                 "TIMER_Capture_Init",
+                        ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+    336                 "定时器通道参数超出范围！"); //断言检测输入参数
+    337           
+    338            TIMERX[timer]->CCTL[ch].CAPMODE = BIT_SET;                //设为捕获模式
+    339            TIMERX[timer]->CCTL[ch].CM = capmode;                 //选择捕获沿
+    340            
+    341            TIMERX[timer]->CCTL[ch].CCIS = (timer == TIMER_B0) ? TIMER_CCIS_1 : TIMER_CCIS_0;
+    342            
+    343            TIMERX[timer]->CLR = BIT_SET;
+    344            TIMERX[timer]->SSEL = TIMER_SSEL_SMCLK;
+    345            TIMERX[timer]->ID = 0u; //这里选择子系统时钟，除非频率特别低时才使用辅助时钟
+    346            TIMERX[timer]->IE = RESET;              //关闭溢出中断
+    347            TIMERX[timer]->CCTL[ch].IE = RESET;     //关闭通道中断
+    348            TIMERX[timer]->MC = TIMER_MC_CONTINOUS;             //连续计数模式
+    349            
+    350            //端口设置为输入方,选择第二功能
+    351            GPIO_Init(TIMER_CHANEL_PIN[timer][ch].Port,TIMER_CHANEL_PIN[timer][ch].Pin,GPI|SEL);
+    352            
+    353            return SUCCESS;
+    354          }
+    355          /*******************************************************************************
+    356          *  函数名称：TIMER_Capture_SetMode(TIMERn timer, TIMER_CHn ch, TIMER_CAPTUREn cap_mode)
+    357          *  功能说明：定时器捕获边沿设置
+    358          *  参数说明：TIMERn timer        ：定时器模块
+    359                       TIMER_CHn ch        ：定时器通道
+    360                       TIMER_CAPTUREn capmode：捕获模式
+    361          *  函数返回：无
+    362          *  使用例程：TIMER_Capture_SetMode(TIMER_A0,TIMER_CH1,CAP_Rising);         //定时器TA0 CCR1通道初始化为边缘捕获，上升沿捕获
+    363          ********************************************************************************/
+    364          void   TIMER_Capture_SetMode   (TIMERn timer, TIMER_CHn ch, TIMER_CAPTUREn cap_mode)
+    365          {
+    366             TIMERX[timer]->CCTL[ch].CM = cap_mode;                 //设置捕获沿
+    367          }
+    368          /*******************************************************************************
+    369          *  函数名称：TIMER_Capture_Clear     (TIMERn timer,TIMER_CHn ch)
+    370          *  功能说明：某一通道读取数据清零
+    371          *  参数说明：TIMERn timer       ：定时器模块
+    372                       TIMER_CHn ch       ：定时器通道
+    373          *  函数返回：
+    374          *  使用例程：int16 overflowTime;  //定义变量，在定时器溢出中断里对该值增一
+    375                       ......
+    376                       data=TIMER_Capture_GetTime_Us(TIMER_A0,TIMER_CH1,overflowTime)
+    377                       TIMER_Capture_Clear(TIMER_A0,TIMER_CH1);  //清零
+    378                       overflowTime=0;       //清零
+    379          ********************************************************************************/
+    380          void   TIMER_Capture_Clear     (TIMERn timer,TIMER_CHn ch)
+    381          {
+    382            ASSERT((timer==TIMER_A0&&ch<=TIMER_CH4)
+    383                 ||(timer==TIMER_A1&&ch<=TIMER_CH2)
+    384                 ||(timer==TIMER_A2&&ch<=TIMER_CH2)
+    385                 ||(timer==TIMER_B0&&ch<=TIMER_CH6),
+    386                 "TIMER_Capture_Clear",
+                        ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+    387                 "定时器通道参数超出范围！"); //断言检测输入参数
+    388            
+    389            TIMERX[timer]->CCR[ch] = 0u;
+    390            TIMERX[timer]->R = 0u;
+    391          }
+    392          /*******************************************************************************
+    393          *  函数名称：TIMER_Capture_GetValue(TIMERn timer,TIMER_CHn ch)
+    394          *  功能说明：读取发生捕获时定时器该通道计数值
+    395          *  参数说明：TIMERn timer       ：定时器模块
+    396                       TIMER_CHn ch       ：定时器通道
+    397          *  函数返回：
+    398          *  使用例程：
+    399                       uint16_t value = TIMER_Capture_GetValue(TIMER_A0,TIMER_CH1);  //读取发生捕获时的时间
+    400          ********************************************************************************/
+    401          uint16_t TIMER_Capture_GetValue(TIMERn timer,TIMER_CHn ch)
+    402          {
+    403            ASSERT((timer==TIMER_A0&&ch<=TIMER_CH4)
+    404                 ||(timer==TIMER_A1&&ch<=TIMER_CH2)
+    405                 ||(timer==TIMER_A2&&ch<=TIMER_CH2)
+    406                 ||(timer==TIMER_B0&&ch<=TIMER_CH6),
+    407                 "TIMER_Capture_GetValue",
+                        ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+    408                 "定时器通道参数超出范围！"); //断言检测输入参数
+    409            
+    410            return TIMERX[timer]->CCR[ch];
+    411          }
+    412          /*******************************************************************************
+    413          *  函数名称：TIMER_Capture_CalTime_Us(uint16_t start_value,uint16_t stop_value,uint16_t overflowTime)
+    414          *  功能说明：读取发生捕获时定时器该通道计数值
+    415          *  参数说明：uint16_t start_value  ：捕获起始值
+    416                       uint16_t stop_value   ：捕获结束值
+    417                       uint16_t overflowTime ：计数器溢出次数
+    418          *  函数返回：
+    419          *  使用例程：uint16 overflowTime;  //定义变量，在定时器溢出中断里对该值增一
+    420                       ......
+    421                       TIMER_Capture_CalTime_Us(0,TIMER_Capture_GetValue  (TIMER_A0,TIMER_CH1),overflowTime);  //读取发生捕获时的时间
+    422                       overflowTime=0;       //清零
+    423          ********************************************************************************/
+    424          uint32_t TIMER_Capture_CalTime_Us(uint16_t start_value,uint16_t stop_value,uint16_t overflowTime)
+    425          {
+    426            return (uint32_t)((((int32_t)stop_value - (int32_t)start_value) + (uint32_t)overflowTime*65536)/g_sClock.SMCLK.fMHZ);
+    427          }
+    428          /*******************************************************************************
+    429          *  函数名称：TIMER_Timer_Init      (TIMERn timer)
+    430          *  功能说明：计时功能初始化
+    431          *  参数说明：TIMERn timer       ：定时器模块
+    432          *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+    433          *  使用例程：TIMER_Timer_Init      (TIMER_A1);     //定时器TA1初始化为计时器
+    434          ********************************************************************************/
+    435          STATUS   TIMER_Timer_Init      (TIMERn timer)
+    436          {
+    437          #ifdef DELAY_TIMER
+    438           ASSERT((timer != DELAY_TIMER),
+    439                   "TIMER_Timer_Init",
+    440                   "定时器已经设置为默认延时功能，不能再作为其他功能使用");       //不允许这种情况下还宏定义该定时器作为延时所用的定时器，请在system.h里修改DELAY_TIMER宏定义
+    441          #endif
+    442            TIMERX[timer]->CLR = BIT_SET;
+    443            TIMERX[timer]->SSEL = TIMER_SSEL_SMCLK;             //这里选择子系统时钟
+    444            TIMERX[timer]->ID = 0u; 
+    445            TIMERX[timer]->MC = TIMER_MC_STOP;                  //先停止计数计数
+    446            TIMERX[timer]->IE = RESET;                          //禁止溢出中断
+    447            
+    448            return SUCCESS;
+    449          }
+    450          /*******************************************************************************
+    451          *  函数名称：TIMER_Timer_Start(TIMERn timer)
+    452          *  功能说明：计时功能开始计时
+    453          *  参数说明：TIMERn timer       ：定时器模块
+    454          *  函数返回：无
+    455          *  使用例程：TIMER_Timer_Start(TIMER_A1);      //计时器开始计时
+    456          ********************************************************************************/
+    457          void   TIMER_Timer_Start(TIMERn timer)
+    458          {
+    459            TIMERX[timer]->R = 0u;
+    460            TIMERX[timer]->MC = TIMER_MC_CONTINUOUS;
+    461          }
+    462          /*******************************************************************************
+    463          *  函数名称：TIMER_Timer_Stop (TIMERn timer)
+    464          *  功能说明：计时功能停止计时
+    465          *  参数说明：TIMERn timer       ：定时器模块
+    466          *  函数返回：返回当前计数值
+    467          *  使用例程：TIMER_Timer_Stop (TIMER_A1);   //计时器停止计时
+    468          ********************************************************************************/
+    469          uint16_t   TIMER_Timer_Stop (TIMERn timer)
+    470          {
+    471             TIMERX[timer]->MC = TIMER_MC_STOP;
+    472             return TIMERX[timer]->R;
+    473          }
+    474          /*******************************************************************************
+    475          *  函数名称：TIMER_Timer_GetTime_Us(TIMERn timer,uint16_t overflowTime)
+    476          *  功能说明：计时时间读取
+    477          *  参数说明：TIMERn timer       ：定时器模块
+    478                       uint16_t overflowTime ：计数器溢出次数
+    479          *  函数返回：返回计时时间 （单位：us）
+    480          *  使用例程：int16 overflowTime;  //定义变量，在定时器溢出中断里对该值增一
+    481                       ......
+    482                       TIMER_Timer_GetTime_Us(TIMAER_A1,overflowTime);  //读取计时时间
+    483                       overflowTime=0;       //清零
+    484          ********************************************************************************/
+    485          uint32_t TIMER_Timer_GetTime_Us(TIMERn timer,uint16_t overflowTime)
+    486          {
+    487            return (uint32_t)((TIMERX[timer]->R + overflowTime*65536u)/g_sClock.SMCLK.fMHZ);
+    488          }
+    489          /*******************************************************************************
+    490          *  函数名称：TIMER_Run (TIMERn timer)
+    491          *  功能说明：定时器工作
+    492          *  参数说明：TIMERn timer       ：定时器模块
+    493          *  函数返回：无
+    494          *  使用例程：TIMER_Clear_Counter (TIMAER_A1)；  //启动定时器A1
+    495          ********************************************************************************/
+    496          void   TIMER_Run (TIMERn timer)
+    497          {
+    498            TIMERX[timer]->MC = TIMER_MC_CONTINUOUS;
+    499          }
+    500          /*******************************************************************************
+    501          *  函数名称：TIMER_Stop (TIMERn timer)
+    502          *  功能说明：定时器工作
+    503          *  参数说明：TIMERn timer       ：定时器模块
+    504          *  函数返回：无
+    505          *  使用例程：TIMER_Stop(TIMAER_A1)；  //停止定时器A1
+    506          ********************************************************************************/
+    507          void   TIMER_Stop (TIMERn timer)
+    508          {
+    509            TIMERX[timer]->MC = TIMER_MC_STOP;
+    510          }
+    511          /*******************************************************************************
+    512          *  函数名称：TIMER_GetCounterValue (TIMERn timer)
+    513          *  功能说明：读取定时器计数值
+    514          *  参数说明：TIMERn timer  ：定时器模块
+    515          *  函数返回：uint16_t      ：计数值
+    516          *  使用例程：uint16_t value = TIMER_GetCounterValue(TIMAER_A1)；  //读取定时器A1计数值
+    517          ********************************************************************************/
+    518          uint16_t   TIMER_GetCounterValue (TIMERn timer)
+    519          {
+    520            return TIMERX[timer]->R;
+    521          }
+    522          /*******************************************************************************
+    523          *  函数名称：TIMER_SetCounterValue(TIMERn timer,uint16_t value)
+    524          *  功能说明：设置定时器计数值
+    525          *  参数说明：TIMERn timer       ：定时器模块
+    526                       uint16_t value     ：计数值
+    527          *  函数返回：无
+    528          *  使用例程：TIMER_SetCounterValue(TIMAER_A1,0)；  //设置定时器A1计数值为0
+    529          ********************************************************************************/
+    530          void   TIMER_SetCounterValue (TIMERn timer,uint16_t value)
+    531          {
+    532            TIMERX[timer]->R = value;
+    533          }
+    534          /*******************************************************************************
+    535          *  函数名称：TIMER_GetChannelCounterValue (TIMERn timer,TIMER_CHn ch)
+    536          *  功能说明：读取定时器通道计数值
+    537          *  参数说明：TIMERn timer       ：定时器模块
+    538                       TIMER_CHn ch       ：定时器通道             
+    539          *  函数返回：uint16_t value     ：该通道的计数值
+    540          *  使用例程：uint16_t value = TIMER_GetChannelCounterValue(TIMAER_A1,TIMER_CH4)；  //读取定时器A1通道4计数值
+    541          ********************************************************************************/
+    542          uint16_t   TIMER_GetChannelCounterValue (TIMERn timer,TIMER_CHn ch)
+    543          {
+    544            ASSERT((timer==TIMER_A0&&ch<=TIMER_CH4)
+    545                 ||(timer==TIMER_A1&&ch<=TIMER_CH2)
+    546                 ||(timer==TIMER_A2&&ch<=TIMER_CH2)
+    547                 ||(timer==TIMER_B0&&ch<=TIMER_CH6),
+    548                 "TIMER_GetChannelCounterValue",
+                        ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+    549                 "定时器通道参数超出范围！"); //断言检测输入参数
+    550            
+    551            return TIMERX[timer]->CCR[ch];
+    552          }
+    553          /*******************************************************************************
+    554          *  函数名称：TIMER_SetChannelCounterValue(TIMERn timer,uint16_t value)
+    555          *  功能说明：设置定时器计数值
+    556          *  参数说明：TIMERn timer       ：定时器模块
+    557                       TIMER_CHn ch       ：定时器通道
+    558                       uint16_t value     ：计数值
+    559          *  函数返回：无
+    560          *  使用例程：TIMER_SetChannelCounterValue(TIMAER_A1,TIMER_CH4,0)；  //设置定时器A1通道4计数值为0
+    561          ********************************************************************************/
+    562          void   TIMER_SetChannelCounterValue (TIMERn timer,TIMER_CHn ch,uint16_t value)
+    563          {
+    564            ASSERT((timer==TIMER_A0&&ch<=TIMER_CH4)
+    565                 ||(timer==TIMER_A1&&ch<=TIMER_CH2)
+    566                 ||(timer==TIMER_A2&&ch<=TIMER_CH2)
+    567                 ||(timer==TIMER_B0&&ch<=TIMER_CH6),
+    568                 "TIMER_SetChannelCounterValue",
+                        ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+    569                 "定时器通道参数超出范围！"); //断言检测输入参数
+    570            
+    571            TIMERX[timer]->CCR[ch] = value;
+    572          }
+    573          /*******************************************************************************
+    574          *  函数名称：TIMER_GetChannelPinInValue(TIMERn timer, TIMER_CHn ch)
+    575          *  功能说明：获取通道输入值
+    576          *  参数说明：TIMERn timer       ：定时器模块
+    577                       TIMER_CHn ch       ：定时器通道
+    578          *  函数返回：STATUS : BIT_SET-输入高电平 RESET-输入低电平
+    579          *  使用例程：STATUS status = TIMER_GetChannelInValue(TIMAER_A1, TIMER_CH1);  //读取定时器A1通道1输入电平
+    580          ********************************************************************************/
+    581          STATUS TIMER_GetChannelPinInValue (TIMERn timer, TIMER_CHn ch)
+    582          {
+    583            return (TIMERX[timer]->CCTL[ch].CH_CCI) ? BIT_SET : RESET;
+    584          }
+    585          /*******************************************************************************
+    586          *  函数名称：TIMER_GetChannelPinOutValue(TIMERn timer, TIMER_CHn ch)
+    587          *  功能说明：获取通道输出值
+    588          *  参数说明：TIMERn timer       ：定时器模块
+    589                       TIMER_CHn ch       ：定时器通道
+    590          *  函数返回：STATUS : BIT_SET-输出高电平 RESET-输出低电平
+    591          *  使用例程：STATUS status = TIMER_GetChannelOutValue(TIMAER_A1, TIMER_CH1);  //读取定时器A1通道1输出电平
+    592          ********************************************************************************/
+    593          STATUS TIMER_GetChannelPinOutValue(TIMERn timer, TIMER_CHn ch)
+    594          {
+    595            return (TIMERX[timer]->CCTL[ch].CH_OUT) ? BIT_SET : RESET;
+    596          }
+    597          /*******************************************************************************
+    598          *  函数名称：TIMER_ITConfig (TIMERn timer,TIMER_IRQn irqn,STATUS ITState)
+    599          *  功能说明：设置是否使能TIMER的某一个中断
+    600          *  参数说明：TIMERn timer       ：定时器模块
+    601                       TIMER_IRQn irqn    ：中断事件
+    602                       STATUS ITState     ：是否使能中断
+    603          *  函数返回：无
+    604          *  使用例程：TIMER_ITConfig (TIMAER_A1,TIMER_CCR0_IRQn,ENABLE); //使能定时器1通道0中断，即定时中断
+    605          ********************************************************************************/
+    606          void  TIMER_ITConfig (TIMERn timer,TIMER_IRQn irqn,STATUS ITState)
+    607          {
+    608            if(irqn == TIMER_OverFlow_IRQn)
+    609            {
+    610              TIMERX[timer]->IE = ITState;
+    611            }
+    612            else
+    613            {
+    614              TIMERX[timer]->CCTL[irqn].IE = ITState;
+    615            }
+    616          }
+    617          /*******************************************************************************
+    618          *  函数名称：TIMER_GetITStatus(TIMERn timer,TIMER_IRQn irqn)
+    619          *  功能说明：获取TIMER的某一个中断标志
+    620          *  参数说明：TIMERn timer       ：定时器模块
+    621                       TIMER_IRQn irqn    ：中断事件
+    622          *  函数返回：STATUS : TRUE-中断事件发生 FALSE-中断事件未发生
+    623          *  使用例程：if(TRUE == TIMER_GetITStatus(TIMAER_A1,TIMER_CCR1_IRQn)){...} //判断定时器A1通道1中断事件是否发生
+    624          ********************************************************************************/
+    625          STATUS TIMER_GetITStatus(TIMERn timer,TIMER_IRQn irqn)
+    626          {
+    627            if(irqn == TIMER_OverFlow_IRQn)
+    628            {
+    629              return ((TIMERX[timer]->IFG == BIT_SET) ? TRUE : FALSE);
+    630            }
+    631            else
+    632            {
+    633              return ((TIMERX[timer]->CCTL[irqn].IFG == BIT_SET) ? TRUE : FALSE);
+    634            }
+    635          }
+    636          /*******************************************************************************
+    637          *  函数名称：TIMER_ClearITPendingBit(TIMERn timer,TIMER_IRQn irqn)
+    638          *  功能说明：清除TIMER的某一个中断标志
+    639          *  参数说明：TIMERn timer       ：定时器模块
+    640                       TIMER_IRQn irqn    ：中断事件
+    641          *  函数返回：无
+    642          *  使用例程：TIMER_ClearITPendingBit(TIMAER_A1,TIMER_CCR1_IRQn);   //清除定时器通道1中断标志位
+    643          ********************************************************************************/
+    644          void  TIMER_ClearITPendingBit(TIMERn timer,TIMER_IRQn irqn)
+    645          {
+    646            if(irqn == TIMER_OverFlow_IRQn)
+    647            {
+    648              TIMERX[timer]->IFG = RESET;
+    649            }
+    650            else
+    651            {
+    652              TIMERX[timer]->CCTL[irqn].IFG = RESET;
+    653            }
+    654          }
+
+Errors: 8
+Warnings: none

@@ -1,0 +1,1119 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:44
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\myMath.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWE098.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\myMath.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\myMath.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\myMath.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\myMath.c
+      1          #include "ALL_DEFINE.h"
+      2          #include "myMath.h"
+      3          #include <math.h>
+      4          
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      5          const float M_PI = 3.1415926535;
+   \                     M_PI:
+   \   000000   DB0F4940     DC32 40490FDBH
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      6          const float RtA = 57.2957795f;
+   \                     RtA:
+   \   000000   E12E6542     DC32 42652EE1H
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      7          const float AtR = 0.0174532925f;
+   \                     AtR:
+   \   000000   35FA8E3C     DC32 3C8EFA35H
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      8          const float Gyro_G = 0.03051756f*2;	  	//陀螺仪初始化量程+-2000度每秒于1 / (65536 / 4000) = 0.03051756*2		
+   \                     Gyro_G:
+   \   000000   F6FF793D     DC32 3D79FFF6H
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+      9          const float Gyro_Gr = 0.0005326f*2;     //面计算度每秒,转换弧度每秒则 2*0.03051756	 * 0.0174533f = 0.0005326*2
+   \                     Gyro_Gr:
+   \   000000   2E9E8B3A     DC32 3A8B9E2EH
+     10          
+     11          ////in  -+500
+     12          ////out exp -+500
+     13          //int16_t Math_AngelEXP(int16_t in){
+     14          //	int16_t tmp2 ,tmp,value;
+     15          //	tmp = Math_min(Math_abs(in),500); //[0 , +500]
+     16          //	tmp2 = tmp/100;
+     17          //	value =	Angel_EXP[tmp2] + (tmp-tmp2*100) * (Angel_EXP[tmp2+1]-Angel_EXP[tmp2]) / 100;
+     18          //	if(in<0)value = -value;
+     19          //	return value;
+     20          //}
+     21          
+     22          ////油门输入转换。
+     23          //int16_t Math_ThrEXP(int16_t RCThr){
+     24          //	int16_t tmp2 ,tmp,value;
+     25          //	if(RCThr <1000)return RCThr; //低于最小值，直接输出，不做指数变换
+     26          //	tmp = Math_Constrain(RCThr,1000,2000);
+     27          //  	tmp = (unsigned int)(tmp-1000)*1000/(2000-1000); // [1000;2000] -> [0;1000]
+     28          //  	tmp2 = tmp/100;
+     29          //  	value = ThrottleEXP[tmp2] + (tmp-tmp2*100) * (ThrottleEXP[tmp2+1]-ThrottleEXP[tmp2]) / 100; // [0;1000] -> expo -> [MINTHROTTLE;MAXTHROTTLE]
+     30          //  	return value;
+     31          //}
+     32          
+     33          /*====================================================================================================*/
+     34          /*====================================================================================================*
+     35          **函数 : Q_rsqrt
+     36          **功能 : 快速计算 三角函数
+     37          **输入 : number  
+     38          **输出 : 结果
+     39          **备注 : None
+     40          **====================================================================================================*/
+     41          /*====================================================================================================*/
+     42          //逼近法；线性拟合
+     43          //Q (4/M_PI x - 4/M_PI^2 x^2) + P (4/M_PI x - 4/M_PI^2 x^2)^2 
+     44          #ifndef TAPYOR
+     45          
+
+   \                                 In  segment CODE, align 2
+     46          float sine(float x)          // (-M_PI , M_PI) ???? 0.0005
+   \                     sine:
+     47          {
+   \   000000   7B14         PUSHM.A #0x8, R11
+   \   000002   B1000400     SUBA    #0x4, SP
+   \   000006   044C         MOV.W   R12, R4
+   \   000008   054D         MOV.W   R13, R5
+     48          	const float Q = 0.775;
+   \   00000A   B14066660000 MOV.W   #0x6666, 0(SP)
+   \   000010   B140463F0200 MOV.W   #0x3f46, 0x2(SP)
+     49          	const float P = 0.225;
+   \   000016   3A406666     MOV.W   #0x6666, R10
+   \   00001A   3B40663E     MOV.W   #0x3e66, R11
+     50          	const float B =  4 / M_PI;
+   \   00001E   0C43         MOV.W   #0x0, R12
+   \   000020   3D408040     MOV.W   #0x4080, R13
+   \   000024   ....1E42.... MOVX.W  &M_PI, R14
+   \   00002A   ....1F42.... MOVX.W  &M_PI + 2, R15
+   \   000030   ........     CALLA   #_Div32f
+   \   000034   064C         MOV.W   R12, R6
+   \   000036   074D         MOV.W   R13, R7
+     51          	const float C1 = -4 / (M_PI*M_PI);
+   \   000038   0C43         MOV.W   #0x0, R12
+   \   00003A   3D4080C0     MOV.W   #0xc080, R13
+   \   00003E   084C         MOV.W   R12, R8
+   \   000040   094D         MOV.W   R13, R9
+   \   000042   ....1C42.... MOVX.W  &M_PI, R12
+   \   000048   ....1D42.... MOVX.W  &M_PI + 2, R13
+   \   00004E   ....1E42.... MOVX.W  &M_PI, R14
+   \   000054   ....1F42.... MOVX.W  &M_PI + 2, R15
+   \   00005A   ........     CALLA   #_Mul32f
+   \   00005E   0E4C         MOV.W   R12, R14
+   \   000060   0F4D         MOV.W   R13, R15
+   \   000062   0C48         MOV.W   R8, R12
+   \   000064   0D49         MOV.W   R9, R13
+   \   000066   ........     CALLA   #_Div32f
+   \   00006A   084C         MOV.W   R12, R8
+   \   00006C   094D         MOV.W   R13, R9
+     52                  
+     53          	float y = B * x + C1 * x * fabs(x); 
+   \   00006E   0C46         MOV.W   R6, R12
+   \   000070   0D47         MOV.W   R7, R13
+   \   000072   0E44         MOV.W   R4, R14
+   \   000074   0F45         MOV.W   R5, R15
+   \   000076   ........     CALLA   #_Mul32f
+   \   00007A   064C         MOV.W   R12, R6
+   \   00007C   074D         MOV.W   R13, R7
+   \   00007E   0C48         MOV.W   R8, R12
+   \   000080   0D49         MOV.W   R9, R13
+   \   000082   0E44         MOV.W   R4, R14
+   \   000084   0F45         MOV.W   R5, R15
+   \   000086   ........     CALLA   #_Mul32f
+   \   00008A   084C         MOV.W   R12, R8
+   \   00008C   094D         MOV.W   R13, R9
+   \   00008E   0C44         MOV.W   R4, R12
+   \   000090   0D45         MOV.W   R5, R13
+   \   000092   ........     CALLA   #fabs
+   \   000096   0E48         MOV.W   R8, R14
+   \   000098   0F49         MOV.W   R9, R15
+   \   00009A   ........     CALLA   #_Mul32f
+   \   00009E   0E46         MOV.W   R6, R14
+   \   0000A0   0F47         MOV.W   R7, R15
+   \   0000A2   ........     CALLA   #_Add32f
+   \   0000A6   064C         MOV.W   R12, R6
+   \   0000A8   074D         MOV.W   R13, R7
+     54          	return (Q * y + P * y * fabs(y));
+   \   0000AA   2C41         MOV.W   @SP, R12
+   \   0000AC   1D410200     MOV.W   0x2(SP), R13
+   \   0000B0   0E46         MOV.W   R6, R14
+   \   0000B2   0F47         MOV.W   R7, R15
+   \   0000B4   ........     CALLA   #_Mul32f
+   \   0000B8   084C         MOV.W   R12, R8
+   \   0000BA   094D         MOV.W   R13, R9
+   \   0000BC   0C4A         MOV.W   R10, R12
+   \   0000BE   0D4B         MOV.W   R11, R13
+   \   0000C0   0E46         MOV.W   R6, R14
+   \   0000C2   0F47         MOV.W   R7, R15
+   \   0000C4   ........     CALLA   #_Mul32f
+   \   0000C8   0A4C         MOV.W   R12, R10
+   \   0000CA   0B4D         MOV.W   R13, R11
+   \   0000CC   0C46         MOV.W   R6, R12
+   \   0000CE   0D47         MOV.W   R7, R13
+   \   0000D0   ........     CALLA   #fabs
+   \   0000D4   0E4A         MOV.W   R10, R14
+   \   0000D6   0F4B         MOV.W   R11, R15
+   \   0000D8   ........     CALLA   #_Mul32f
+   \   0000DC   0E48         MOV.W   R8, R14
+   \   0000DE   0F49         MOV.W   R9, R15
+   \   0000E0   ........     CALLA   #_Add32f
+   \   0000E4   A1000400     ADDA    #0x4, SP
+   \   0000E8   7416         POPM.A  #0x8, R11
+   \   0000EA   1001         RETA
+     55          }
+     56          #else 
+     57          
+     58          //4级泰勒公式法 在PI出会出现0.7的最大误差
+     59          //sinx= x- x^3/3! + x^5/5! - x^7/7!+ x^9/9! . =?(-1)^n x^(2n+1)/(2n+1)!
+     60          float sine(float x)
+     61          {
+     62          	float t=x;
+     63          	float result = x;
+     64          	float X2 = x*x;
+     65          	uint8_t cnt = 1;
+     66          
+     67          	do
+     68          	{
+     69          		t=-t;
+     70          		t *= X2;
+     71          		result += t/((cnt<<1)+1);
+     72          		cnt++;
+     73                  }while(cnt<5);//6阶
+     74          
+     75          	return result;
+     76          }
+     77          #endif
+     78          //http://wenku.baidu.com/link?url=jUswZ3G2z26IUS72IkeZrizc5V9VdR1sTF8xGCOHPFW0P70bGjjm5zhNxvRT36X31TMoFf6S-9lMoIkK4pPwExAaEZGtRpWggdQAzpg3Fsu
+     79          //cos(x)=sin(M_PI/2+x)=sin(M_PI/2-x)
+     80          //cos(x-M_PI/2)=sin(x)
+
+   \                                 In  segment CODE, align 2
+     81          float cosine(float x)
+   \                     cosine:
+     82          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   0B4D         MOV.W   R13, R11
+     83              return sine(x+M_PI/2);//奇变偶不变，符号看象限
+   \   000006   ....1C42.... MOVX.W  &M_PI, R12
+   \   00000C   ....1D42.... MOVX.W  &M_PI + 2, R13
+   \   000012   0E43         MOV.W   #0x0, R14
+   \   000014   3F400040     MOV.W   #0x4000, R15
+   \   000018   ........     CALLA   #_Div32f
+   \   00001C   0E4A         MOV.W   R10, R14
+   \   00001E   0F4B         MOV.W   R11, R15
+   \   000020   ........     CALLA   #_Add32f
+   \   000024   ........     CALLA   #sine
+   \   000028   1A16         POPM.A  #0x2, R11
+   \   00002A   1001         RETA
+     84          }
+     85          
+     86          //反正切麦克劳林展开式 阶数越高，值越准确   70°以内是准确的
+     87          //http://www.zybang.com/question/246f9997776f7d5cc636b10aff27a1cb.html
+
+   \                                 In  segment CODE, align 2
+     88          float arctan(float x)  //  (-1 , +1)    6? ?? 0.002958 
+   \                     arctan:
+     89          {
+   \   000000   6A14         PUSHM.A #0x7, R10
+   \   000002   044C         MOV.W   R12, R4
+   \   000004   054D         MOV.W   R13, R5
+     90          	float t = x;
+     91          	float result = 0;
+   \   000006   0843         MOV.W   #0x0, R8
+   \   000008   0943         MOV.W   #0x0, R9
+     92          	float X2 = x * x;
+   \   00000A   0C44         MOV.W   R4, R12
+   \   00000C   0D45         MOV.W   R5, R13
+   \   00000E   0E44         MOV.W   R4, R14
+   \   000010   0F45         MOV.W   R5, R15
+   \   000012   ........     CALLA   #_Mul32f
+   \   000016   064C         MOV.W   R12, R6
+   \   000018   074D         MOV.W   R13, R7
+     93          	unsigned char cnt = 1;
+   \   00001A   5A43         MOV.B   #0x1, R10
+     94              
+     95          	do
+     96          	{
+     97          		result += t / ((cnt << 1) - 1);
+   \                     ??arctan_0:
+   \   00001C   0C44         MOV.W   R4, R12
+   \   00001E   0D45         MOV.W   R5, R13
+   \   000020   044C         MOV.W   R12, R4
+   \   000022   054D         MOV.W   R13, R5
+   \   000024   4C4A         MOV.B   R10, R12
+   \   000026   0C5C         RLA.W   R12
+   \   000028   3C53         ADD.W   #0xffff, R12
+   \   00002A   0D4C         MOV.W   R12, R13
+   \   00002C   0D5D         RLA.W   R13
+   \   00002E   0D7D         SUBC.W  R13, R13
+   \   000030   3DE3         XOR.W   #0xffff, R13
+   \   000032   ........     CALLA   #_Cast32sto32f
+   \   000036   0E4C         MOV.W   R12, R14
+   \   000038   0F4D         MOV.W   R13, R15
+   \   00003A   0C44         MOV.W   R4, R12
+   \   00003C   0D45         MOV.W   R5, R13
+   \   00003E   ........     CALLA   #_Div32f
+   \   000042   0E48         MOV.W   R8, R14
+   \   000044   0F49         MOV.W   R9, R15
+   \   000046   ........     CALLA   #_Add32f
+   \   00004A   084C         MOV.W   R12, R8
+   \   00004C   094D         MOV.W   R13, R9
+     98          		t = -t;
+   \   00004E   35E00080     XOR.W   #0x8000, R5
+     99          		t *= X2;
+   \   000052   0C44         MOV.W   R4, R12
+   \   000054   0D45         MOV.W   R5, R13
+   \   000056   0E46         MOV.W   R6, R14
+   \   000058   0F47         MOV.W   R7, R15
+   \   00005A   ........     CALLA   #_Mul32f
+   \   00005E   044C         MOV.W   R12, R4
+   \   000060   054D         MOV.W   R13, R5
+    100          		cnt++;
+   \   000062   5A53         ADD.B   #0x1, R10
+    101          	}while(cnt <= 6);//5??
+   \   000064   7A900700     CMP.B   #0x7, R10
+   \   000068   D92B         JNC     ??arctan_0
+    102          	return result;
+   \   00006A   0C48         MOV.W   R8, R12
+   \   00006C   0D49         MOV.W   R9, R13
+   \   00006E   6416         POPM.A  #0x7, R10
+   \   000070   1001         RETA
+    103          }
+    104          
+    105          //反正弦麦克劳林展开式 -1<x<+1     42°以内是准确的
+    106          //http://xuxzmail.blog.163.com/blog/static/25131916200971794014536/
+
+   \                                 In  segment DATA20_C, align 2, align-sorted
+    107          const float PI_2 = 1.570796f;
+   \                     PI_2:
+   \   000000   D80FC93F     DC32 3FC90FD8H
+
+   \                                 In  segment CODE, align 2
+    108          float arcsin(float x)   //(-1 , +1)  ? 0 ????  6? ??0.005
+   \                     arcsin:
+    109          {
+   \   000000   7B14         PUSHM.A #0x8, R11
+   \   000002   B1000600     SUBA    #0x6, SP
+   \   000006   044C         MOV.W   R12, R4
+   \   000008   054D         MOV.W   R13, R5
+    110          	float d=1;
+   \   00000A   0A43         MOV.W   #0x0, R10
+   \   00000C   3B40803F     MOV.W   #0x3f80, R11
+    111          	float t=x;
+   \   000010   0644         MOV.W   R4, R6
+   \   000012   0745         MOV.W   R5, R7
+    112          	unsigned char cnt = 1;
+   \   000014   D1430000     MOV.B   #0x1, 0(SP)
+    113          	float result = 0;	
+   \   000018   0843         MOV.W   #0x0, R8
+   \   00001A   0943         MOV.W   #0x0, R9
+    114          	float X2 = x*x;
+   \   00001C   0C44         MOV.W   R4, R12
+   \   00001E   0D45         MOV.W   R5, R13
+   \   000020   0E44         MOV.W   R4, R14
+   \   000022   0F45         MOV.W   R5, R15
+   \   000024   ........     CALLA   #_Mul32f
+   \   000028   814C0200     MOV.W   R12, 0x2(SP)
+   \   00002C   814D0400     MOV.W   R13, 0x4(SP)
+    115          	
+    116          	if (x >= 1.0f) 
+   \   000030   0C44         MOV.W   R4, R12
+   \   000032   0D45         MOV.W   R5, R13
+   \   000034   0E43         MOV.W   #0x0, R14
+   \   000036   3F40803F     MOV.W   #0x3f80, R15
+   \   00003A   ........     CALLA   #?FLT_GE
+   \   00003E   0728         JNC     ??arcsin_2
+    117          	{
+    118          		return PI_2;
+   \   000040   ....1C42.... MOVX.W  &PI_2, R12
+   \   000046   ....1D42.... MOVX.W  &PI_2 + 2, R13
+   \   00004C   5C3C         JMP     ??arcsin_1
+    119          	}
+    120          	if (x <= -1.0f) 
+   \                     ??arcsin_2:
+   \   00004E   0C44         MOV.W   R4, R12
+   \   000050   0D45         MOV.W   R5, R13
+   \   000052   3E43         MOV.W   #0xffff, R14
+   \   000054   3F407FBF     MOV.W   #0xbf7f, R15
+   \   000058   ........     CALLA   #?FLT_LT
+   \   00005C   0928         JNC     ??arcsin_0
+    121          	{
+    122          		return -PI_2;
+   \   00005E   ....1C42.... MOVX.W  &PI_2, R12
+   \   000064   ....1D42.... MOVX.W  &PI_2 + 2, R13
+   \   00006A   3DE00080     XOR.W   #0x8000, R13
+   \   00006E   4B3C         JMP     ??arcsin_1
+    123          	}
+    124          	do
+    125          	{
+    126          		result += t / (d * ((cnt << 1) - 1));
+   \                     ??arcsin_0:
+   \   000070   0C46         MOV.W   R6, R12
+   \   000072   0D47         MOV.W   R7, R13
+   \   000074   064C         MOV.W   R12, R6
+   \   000076   074D         MOV.W   R13, R7
+   \   000078   6C41         MOV.B   @SP, R12
+   \   00007A   4C4C         MOV.B   R12, R12
+   \   00007C   0C5C         RLA.W   R12
+   \   00007E   3C53         ADD.W   #0xffff, R12
+   \   000080   0D4C         MOV.W   R12, R13
+   \   000082   0D5D         RLA.W   R13
+   \   000084   0D7D         SUBC.W  R13, R13
+   \   000086   3DE3         XOR.W   #0xffff, R13
+   \   000088   ........     CALLA   #_Cast32sto32f
+   \   00008C   0E4A         MOV.W   R10, R14
+   \   00008E   0F4B         MOV.W   R11, R15
+   \   000090   ........     CALLA   #_Mul32f
+   \   000094   0E4C         MOV.W   R12, R14
+   \   000096   0F4D         MOV.W   R13, R15
+   \   000098   0C46         MOV.W   R6, R12
+   \   00009A   0D47         MOV.W   R7, R13
+   \   00009C   ........     CALLA   #_Div32f
+   \   0000A0   0E48         MOV.W   R8, R14
+   \   0000A2   0F49         MOV.W   R9, R15
+   \   0000A4   ........     CALLA   #_Add32f
+   \   0000A8   084C         MOV.W   R12, R8
+   \   0000AA   094D         MOV.W   R13, R9
+    127          		t *= X2 * ((cnt << 1) - 1);//
+   \   0000AC   6C41         MOV.B   @SP, R12
+   \   0000AE   4C4C         MOV.B   R12, R12
+   \   0000B0   0C5C         RLA.W   R12
+   \   0000B2   3C53         ADD.W   #0xffff, R12
+   \   0000B4   0D4C         MOV.W   R12, R13
+   \   0000B6   0D5D         RLA.W   R13
+   \   0000B8   0D7D         SUBC.W  R13, R13
+   \   0000BA   3DE3         XOR.W   #0xffff, R13
+   \   0000BC   ........     CALLA   #_Cast32sto32f
+   \   0000C0   1E410200     MOV.W   0x2(SP), R14
+   \   0000C4   1F410400     MOV.W   0x4(SP), R15
+   \   0000C8   ........     CALLA   #_Mul32f
+   \   0000CC   0E46         MOV.W   R6, R14
+   \   0000CE   0F47         MOV.W   R7, R15
+   \   0000D0   ........     CALLA   #_Mul32f
+   \   0000D4   064C         MOV.W   R12, R6
+   \   0000D6   074D         MOV.W   R13, R7
+    128          		d *= (cnt << 1);//2 4 6 8 10 ...
+   \   0000D8   6C41         MOV.B   @SP, R12
+   \   0000DA   4C4C         MOV.B   R12, R12
+   \   0000DC   0C5C         RLA.W   R12
+   \   0000DE   0D4C         MOV.W   R12, R13
+   \   0000E0   0D5D         RLA.W   R13
+   \   0000E2   0D7D         SUBC.W  R13, R13
+   \   0000E4   3DE3         XOR.W   #0xffff, R13
+   \   0000E6   ........     CALLA   #_Cast32sto32f
+   \   0000EA   0E4A         MOV.W   R10, R14
+   \   0000EC   0F4B         MOV.W   R11, R15
+   \   0000EE   ........     CALLA   #_Mul32f
+   \   0000F2   0A4C         MOV.W   R12, R10
+   \   0000F4   0B4D         MOV.W   R13, R11
+    129          		cnt++;
+   \   0000F6   D1530000     ADD.B   #0x1, 0(SP)
+    130          	}while(cnt <= 6);
+   \   0000FA   F19007000000 CMP.B   #0x7, 0(SP)
+   \   000100   B72B         JNC     ??arcsin_0
+    131          
+    132          	return result;
+   \   000102   0C48         MOV.W   R8, R12
+   \   000104   0D49         MOV.W   R9, R13
+   \                     ??arcsin_1:
+   \   000106   A1000600     ADDA    #0x6, SP
+   \   00010A   7416         POPM.A  #0x8, R11
+   \   00010C   1001         RETA
+    133          }
+    134          
+    135          //保证输入值是有效的
+
+   \                                 In  segment CODE, align 2
+    136          float safe_asin(float v)
+   \                     safe_asin:
+    137          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   0B4D         MOV.W   R13, R11
+    138              if (isnan(v)) {
+   \   000006   0C4A         MOV.W   R10, R12
+   \   000008   0D4B         MOV.W   R11, R13
+   \   00000A   ........     CALLA   #__iar_Dtest
+   \   00000E   2C93         CMP.W   #0x2, R12
+   \   000010   0320         JNE     ??safe_asin_1
+    139                  return 0.0;
+   \   000012   0C43         MOV.W   #0x0, R12
+   \   000014   0D43         MOV.W   #0x0, R13
+   \   000016   2E3C         JMP     ??safe_asin_0
+    140              }
+    141              if (v >= 1.0f) {
+   \                     ??safe_asin_1:
+   \   000018   0C4A         MOV.W   R10, R12
+   \   00001A   0D4B         MOV.W   R11, R13
+   \   00001C   0E43         MOV.W   #0x0, R14
+   \   00001E   3F40803F     MOV.W   #0x3f80, R15
+   \   000022   ........     CALLA   #?FLT_GE
+   \   000026   0C28         JNC     ??safe_asin_2
+    142                  return M_PI/2;
+   \   000028   ....1C42.... MOVX.W  &M_PI, R12
+   \   00002E   ....1D42.... MOVX.W  &M_PI + 2, R13
+   \   000034   0E43         MOV.W   #0x0, R14
+   \   000036   3F400040     MOV.W   #0x4000, R15
+   \   00003A   ........     CALLA   #_Div32f
+   \   00003E   1A3C         JMP     ??safe_asin_0
+    143              }
+    144              if (v <= -1.0f) {
+   \                     ??safe_asin_2:
+   \   000040   0C4A         MOV.W   R10, R12
+   \   000042   0D4B         MOV.W   R11, R13
+   \   000044   3E43         MOV.W   #0xffff, R14
+   \   000046   3F407FBF     MOV.W   #0xbf7f, R15
+   \   00004A   ........     CALLA   #?FLT_LT
+   \   00004E   0E28         JNC     ??safe_asin_3
+    145                  return -M_PI/2;
+   \   000050   ....1C42.... MOVX.W  &M_PI, R12
+   \   000056   ....1D42.... MOVX.W  &M_PI + 2, R13
+   \   00005C   3DE00080     XOR.W   #0x8000, R13
+   \   000060   0E43         MOV.W   #0x0, R14
+   \   000062   3F400040     MOV.W   #0x4000, R15
+   \   000066   ........     CALLA   #_Div32f
+   \   00006A   043C         JMP     ??safe_asin_0
+    146              }
+    147              return asinf(v);
+   \                     ??safe_asin_3:
+   \   00006C   0C4A         MOV.W   R10, R12
+   \   00006E   0D4B         MOV.W   R11, R13
+   \   000070   ........     CALLA   #asinf
+   \                     ??safe_asin_0:
+   \   000074   1A16         POPM.A  #0x2, R11
+   \   000076   1001         RETA
+    148          }
+    149          
+    150          /*====================================================================================================*/
+    151          /*====================================================================================================*
+    152          **函数 : Q_rsqrt
+    153          **功能 : 快速计算 1/Sqrt(x) 
+    154          **输入 : number  
+    155          **输出 : 结果
+    156          **备注 : None
+    157          **====================================================================================================*/
+    158          /*====================================================================================================*/
+
+   \                                 In  segment CODE, align 2
+    159          float Q_rsqrt(float number)
+   \                     Q_rsqrt:
+    160          {
+   \   000000   5B14         PUSHM.A #0x6, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   0B4D         MOV.W   R13, R11
+    161          	long i;
+    162          	float x2, y;
+    163          	const float threehalfs = 1.5F;
+   \   000006   0843         MOV.W   #0x0, R8
+   \   000008   3940C03F     MOV.W   #0x3fc0, R9
+    164           
+    165          	x2 = number * 0.5F;
+   \   00000C   0C4A         MOV.W   R10, R12
+   \   00000E   0D4B         MOV.W   R11, R13
+   \   000010   0E43         MOV.W   #0x0, R14
+   \   000012   3F40003F     MOV.W   #0x3f00, R15
+   \   000016   ........     CALLA   #_Mul32f
+   \   00001A   0E4C         MOV.W   R12, R14
+   \   00001C   0F4D         MOV.W   R13, R15
+    166          	y  = number;
+    167          	i  = * ( long * ) &y;                      
+    168          	i  = 0x5f3759df - ( i >> 1 );               
+   \   00001E   3640DF59     MOV.W   #0x59df, R6
+   \   000022   3740375F     MOV.W   #0x5f37, R7
+   \   000026   0C4A         MOV.W   R10, R12
+   \   000028   0D4B         MOV.W   R11, R13
+   \   00002A   0D11         RRA.W   R13
+   \   00002C   0C10         RRC.W   R12
+   \   00002E   0A46         MOV.W   R6, R10
+   \   000030   0B47         MOV.W   R7, R11
+   \   000032   0A8C         SUB.W   R12, R10
+   \   000034   0B7D         SUBC.W  R13, R11
+    169          	y  = * ( float * ) &i;
+    170          	y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration （第一次牛顿迭代）
+   \   000036   0C48         MOV.W   R8, R12
+   \   000038   0D49         MOV.W   R9, R13
+   \   00003A   084C         MOV.W   R12, R8
+   \   00003C   094D         MOV.W   R13, R9
+   \   00003E   0C4A         MOV.W   R10, R12
+   \   000040   0D4B         MOV.W   R11, R13
+   \   000042   ........     CALLA   #_Mul32f
+   \   000046   0E4A         MOV.W   R10, R14
+   \   000048   0F4B         MOV.W   R11, R15
+   \   00004A   ........     CALLA   #_Mul32f
+   \   00004E   0E4C         MOV.W   R12, R14
+   \   000050   0F4D         MOV.W   R13, R15
+   \   000052   0C48         MOV.W   R8, R12
+   \   000054   0D49         MOV.W   R9, R13
+   \   000056   ........     CALLA   #_Sub32f
+   \   00005A   0E4A         MOV.W   R10, R14
+   \   00005C   0F4B         MOV.W   R11, R15
+   \   00005E   ........     CALLA   #_Mul32f
+   \   000062   0A4C         MOV.W   R12, R10
+   \   000064   0B4D         MOV.W   R13, R11
+    171          	return y;
+   \   000066   0C4A         MOV.W   R10, R12
+   \   000068   0D4B         MOV.W   R11, R13
+   \   00006A   5616         POPM.A  #0x6, R11
+   \   00006C   1001         RETA
+    172          } 
+    173          
+    174          /**************************实现函数********************************************
+    175          *函数原型:    array_astrict_lower(int16_t *array,int16_t value)
+    176          *功　　能:    对数组下限限制
+    177          输入参数：    *array   目标数组指针
+    178          *             value      
+    179          输出参数：    无
+    180          *******************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    181          void array_astrict(int16_t *array,int16_t lower,int16_t upper)
+   \                     array_astrict:
+    182          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+    183             int16_t length = sizeof(array); 
+   \   000002   2A42         MOV.W   #0x4, R10
+    184          	 uint16_t i = 0;
+   \   000004   0F43         MOV.W   #0x0, R15
+    185             for(i=0;i<length;i++)
+   \   000006   0F43         MOV.W   #0x0, R15
+   \   000008   0B3C         JMP     ??array_astrict_2
+    186             {
+    187               if(*(array+i)<lower)  *(array+i) = lower;
+    188               else if(*(array+i)>upper)  *(array+i) = upper;
+   \                     ??array_astrict_0:
+   \   00000A   0B4F         MOV.W   R15, R11
+   \   00000C   EB0B         ADDA    R11, R11
+   \   00000E   EB0C         ADDA    R12, R11
+   \   000010   2E9B         CMP.W   @R11, R14
+   \   000012   0534         JGE     ??array_astrict_1
+   \   000014   0B4F         MOV.W   R15, R11
+   \   000016   EB0B         ADDA    R11, R11
+   \   000018   EB0C         ADDA    R12, R11
+   \   00001A   8B4E0000     MOV.W   R14, 0(R11)
+   \                     ??array_astrict_1:
+   \   00001E   1F53         ADD.W   #0x1, R15
+   \                     ??array_astrict_2:
+   \   000020   0F9A         CMP.W   R10, R15
+   \   000022   0C2C         JC      ??array_astrict_3
+   \   000024   0B4F         MOV.W   R15, R11
+   \   000026   EB0B         ADDA    R11, R11
+   \   000028   EB0C         ADDA    R12, R11
+   \   00002A   8B9D0000     CMP.W   R13, 0(R11)
+   \   00002E   ED37         JGE     ??array_astrict_0
+   \   000030   0B4F         MOV.W   R15, R11
+   \   000032   EB0B         ADDA    R11, R11
+   \   000034   EB0C         ADDA    R12, R11
+   \   000036   8B4D0000     MOV.W   R13, 0(R11)
+   \   00003A   F13F         JMP     ??array_astrict_1
+    189             } 
+    190          }
+   \                     ??array_astrict_3:
+   \   00003C   3816         POPM.A  #0x4, R11
+   \   00003E   1001         RETA
+    191          
+    192          /**************************实现函数********************************************
+    193          *函数原型:    array_assign(int16_t *array,int16_t value)
+    194          *功　　能:    对数组赋值
+    195          输入参数：    *array   目标数组指针 
+    196          *             value      
+    197          输出参数：    无
+    198          *******************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    199          void array_assign(int16_t *array,int16_t value)
+   \                     array_assign:
+    200          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+    201             uint16_t length = sizeof(array); 
+   \   000002   2F42         MOV.W   #0x4, R15
+    202          	 uint16_t i=0;
+   \   000004   0E43         MOV.W   #0x0, R14
+    203             for(i=0;i<length;i++)
+   \   000006   0E43         MOV.W   #0x0, R14
+   \   000008   063C         JMP     ??array_assign_1
+    204             {
+    205               *(array+i) = value;
+   \                     ??array_assign_0:
+   \   00000A   0A4E         MOV.W   R14, R10
+   \   00000C   EA0A         ADDA    R10, R10
+   \   00000E   EA0C         ADDA    R12, R10
+   \   000010   8A4D0000     MOV.W   R13, 0(R10)
+    206             } 
+   \   000014   1E53         ADD.W   #0x1, R14
+   \                     ??array_assign_1:
+   \   000016   0E9F         CMP.W   R15, R14
+   \   000018   F82B         JNC     ??array_assign_0
+    207          }
+   \   00001A   1A16         POPM.A  #0x2, R11
+   \   00001C   1001         RETA
+    208          
+    209          /**************************实现函数********************************************
+    210          *函数原型:    data_limit(float data,flaot toplimit,float lowerlimit)
+    211          *功　　能:    数据限幅
+    212          输入参数：    data       要操作的数据 
+    213          *             toplimit   上限
+    214          *             lowerlimit 下限
+    215          输出参数：    无
+    216          *******************************************************************************/
+
+   \                                 In  segment CODE, align 2
+    217          float data_limit(float data,float toplimit,float lowerlimit)
+   \                     data_limit:
+    218          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   0B4D         MOV.W   R13, R11
+   \   000006   0C4E         MOV.W   R14, R12
+   \   000008   0D4F         MOV.W   R15, R13
+    219            if(data > toplimit)  data = toplimit;
+   \   00000A   0E4A         MOV.W   R10, R14
+   \   00000C   0F4B         MOV.W   R11, R15
+   \   00000E   ........     CALLA   #?FLT_LT
+   \   000012   0328         JNC     ??data_limit_1
+   \   000014   0A4C         MOV.W   R12, R10
+   \   000016   0B4D         MOV.W   R13, R11
+   \   000018   0B3C         JMP     ??data_limit_0
+   \                     ??data_limit_1:
+   \   00001A   1E410C00     MOV.W   0xc(SP), R14
+   \   00001E   1F410E00     MOV.W   0xe(SP), R15
+    220            else if(data < lowerlimit) data = lowerlimit;
+   \   000022   0C4A         MOV.W   R10, R12
+   \   000024   0D4B         MOV.W   R11, R13
+   \   000026   ........     CALLA   #?FLT_LT
+   \   00002A   0228         JNC     ??data_limit_0
+   \   00002C   0A4E         MOV.W   R14, R10
+   \   00002E   0B4F         MOV.W   R15, R11
+    221          	return data;
+   \                     ??data_limit_0:
+   \   000030   0C4A         MOV.W   R10, R12
+   \   000032   0D4B         MOV.W   R11, R13
+   \   000034   1A16         POPM.A  #0x2, R11
+   \   000036   1001         RETA
+    222          }
+    223          
+    224          
+    225          /***********************************************
+    226            * @brief  可变增益自适应参数
+    227            * @param  None
+    228            * @retval None
+    229          ************************************************/
+
+   \                                 In  segment CODE, align 2
+    230          float VariableParameter(float error)
+   \                     VariableParameter:
+    231          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   0B4D         MOV.W   R13, R11
+    232          	float  result = 0;
+   \   000006   0843         MOV.W   #0x0, R8
+   \   000008   0943         MOV.W   #0x0, R9
+    233          	
+    234          	if(error < 0)
+   \   00000A   0C4A         MOV.W   R10, R12
+   \   00000C   0D4B         MOV.W   R11, R13
+   \   00000E   0E43         MOV.W   #0x0, R14
+   \   000010   0F43         MOV.W   #0x0, R15
+   \   000012   ........     CALLA   #?FLT_LT
+   \   000016   0228         JNC     ??VariableParameter_0
+    235          	{
+    236          	   error = -error;
+   \   000018   3BE00080     XOR.W   #0x8000, R11
+    237          	}
+    238            if(error >0.6f)
+   \                     ??VariableParameter_0:
+   \   00001C   0C4A         MOV.W   R10, R12
+   \   00001E   0D4B         MOV.W   R11, R13
+   \   000020   3E409B99     MOV.W   #0x999b, R14
+   \   000024   3F40193F     MOV.W   #0x3f19, R15
+   \   000028   ........     CALLA   #?FLT_GE
+   \   00002C   0428         JNC     ??VariableParameter_1
+    239          	{
+    240          	   error = 0.6f;
+   \   00002E   3A409A99     MOV.W   #0x999a, R10
+   \   000032   3B40193F     MOV.W   #0x3f19, R11
+    241          	}
+    242          	result = 1 - 1.667f * error;
+   \                     ??VariableParameter_1:
+   \   000036   0C43         MOV.W   #0x0, R12
+   \   000038   3D40803F     MOV.W   #0x3f80, R13
+   \   00003C   084C         MOV.W   R12, R8
+   \   00003E   094D         MOV.W   R13, R9
+   \   000040   0C4A         MOV.W   R10, R12
+   \   000042   0D4B         MOV.W   R11, R13
+   \   000044   3E404260     MOV.W   #0x6042, R14
+   \   000048   3F40D53F     MOV.W   #0x3fd5, R15
+   \   00004C   ........     CALLA   #_Mul32f
+   \   000050   0E4C         MOV.W   R12, R14
+   \   000052   0F4D         MOV.W   R13, R15
+   \   000054   0C48         MOV.W   R8, R12
+   \   000056   0D49         MOV.W   R9, R13
+   \   000058   ........     CALLA   #_Sub32f
+   \   00005C   084C         MOV.W   R12, R8
+   \   00005E   094D         MOV.W   R13, R9
+    243          	if(result < 0)
+   \   000060   0C48         MOV.W   R8, R12
+   \   000062   0D49         MOV.W   R9, R13
+   \   000064   0E43         MOV.W   #0x0, R14
+   \   000066   0F43         MOV.W   #0x0, R15
+   \   000068   ........     CALLA   #?FLT_LT
+   \   00006C   0228         JNC     ??VariableParameter_2
+    244          	{
+    245          	   result = 0;
+   \   00006E   0843         MOV.W   #0x0, R8
+   \   000070   0943         MOV.W   #0x0, R9
+    246          	}
+    247          	return result;
+   \                     ??VariableParameter_2:
+   \   000072   0C48         MOV.W   R8, R12
+   \   000074   0D49         MOV.W   R9, R13
+   \   000076   3816         POPM.A  #0x4, R11
+   \   000078   1001         RETA
+    248          }
+    249          
+    250          
+
+   \                                 In  segment CODE, align 2
+    251          float middle_3(float input) //3个数取中间的数
+   \                     middle_3:
+    252          { 
+    253          //
+    254          //  int a,b,c,t; 
+    255          //
+    256          //
+    257          //  if(a<b)
+    258          //
+    259          //  { 
+    260          //
+    261          //     t=a;a=b;b=t; 
+    262          //
+    263          //  } 
+    264          //
+    265          // if(b<c)//9 8 7 
+    266          //
+    267          // { 
+    268          //
+    269          //  t=b;b=c;c=t;      
+    270          //
+    271          // } 
+    272          //
+    273          // if(a<b)//9 8 7 
+    274          //
+    275          // { 
+    276          //
+    277          //  t=a;a=b;b=t; 
+    278          //
+    279          // } 
+    280          //
+    281          // return b; 
+    282            return 0;
+   \   000000   0C43         MOV.W   #0x0, R12
+   \   000002   0D43         MOV.W   #0x0, R13
+   \   000004   1001         RETA
+    283          }
+    284          
+    285          
+    286          
+    287          /**************************实现函数********************************************
+    288          *函数原型:    rad(double angle)
+    289          *功　　能:    角度转化为弧度
+    290          输入参数：    角度
+    291          输出参数：    弧度
+    292          *******************************************************************************/
+    293          //float Rad(float angle)
+    294          //{
+    295          //    return angle * AtR ;
+    296          //}
+    297          /**************************实现函数********************************************
+    298          *函数原型:    degree(double rad)
+    299          *功　　能:    弧度转化为角度	
+    300          输入参数：    弧度
+    301          输出参数：    角度
+    302          *******************************************************************************/
+    303          
+    304          
+
+   \                                 In  segment CODE, align 2
+    305          float my_deathzoom_2(float x,float zoom)
+   \                     my_deathzoom_2:
+    306          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   0B4D         MOV.W   R13, R11
+   \   000006   084E         MOV.W   R14, R8
+   \   000008   094F         MOV.W   R15, R9
+    307          	float t;
+    308          	
+    309          	if( x> -zoom && x < zoom )
+   \   00000A   0C48         MOV.W   R8, R12
+   \   00000C   0D49         MOV.W   R9, R13
+   \   00000E   3DE00080     XOR.W   #0x8000, R13
+   \   000012   0E4A         MOV.W   R10, R14
+   \   000014   0F4B         MOV.W   R11, R15
+   \   000016   ........     CALLA   #?FLT_LT
+   \   00001A   0928         JNC     ??my_deathzoom_2_0
+   \   00001C   0C4A         MOV.W   R10, R12
+   \   00001E   0D4B         MOV.W   R11, R13
+   \   000020   0E48         MOV.W   R8, R14
+   \   000022   0F49         MOV.W   R9, R15
+   \   000024   ........     CALLA   #?FLT_LT
+   \   000028   0228         JNC     ??my_deathzoom_2_0
+    310          	{
+    311          		t = 0;
+   \   00002A   0A43         MOV.W   #0x0, R10
+   \   00002C   0B43         MOV.W   #0x0, R11
+    312          	}
+    313          	else
+    314          	{
+    315          		t = x;
+    316          	}
+    317            return (t);
+   \                     ??my_deathzoom_2_0:
+   \   00002E   0C4A         MOV.W   R10, R12
+   \   000030   0D4B         MOV.W   R11, R13
+   \   000032   3816         POPM.A  #0x4, R11
+   \   000034   1001         RETA
+    318          }
+    319          
+    320          
+
+   \                                 In  segment CODE, align 2
+    321          float my_deathzoom(float x,float zoom)
+   \                     my_deathzoom:
+    322          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   0A4E         MOV.W   R14, R10
+   \   000004   0B4F         MOV.W   R15, R11
+    323          	float t;
+    324          	if(x>0)
+   \   000006   0E43         MOV.W   #0x0, R14
+   \   000008   3F408000     MOV.W   #0x80, R15
+   \   00000C   ........     CALLA   #?FLT_GE
+   \   000010   0C28         JNC     ??my_deathzoom_1
+    325          	{
+    326          		t = x - zoom;
+   \   000012   0E4A         MOV.W   R10, R14
+   \   000014   0F4B         MOV.W   R11, R15
+   \   000016   ........     CALLA   #_Sub32f
+    327          		if(t<0)
+   \   00001A   0E43         MOV.W   #0x0, R14
+   \   00001C   0F43         MOV.W   #0x0, R15
+   \   00001E   ........     CALLA   #?FLT_LT
+   \   000022   0F28         JNC     ??my_deathzoom_0
+    328          		{
+    329          			t = 0;
+   \   000024   0C43         MOV.W   #0x0, R12
+   \   000026   0D43         MOV.W   #0x0, R13
+   \   000028   0C3C         JMP     ??my_deathzoom_0
+    330          		}
+    331          	}
+    332          	else
+    333          	{
+    334          		t = x + zoom;
+   \                     ??my_deathzoom_1:
+   \   00002A   0E4A         MOV.W   R10, R14
+   \   00002C   0F4B         MOV.W   R11, R15
+   \   00002E   ........     CALLA   #_Add32f
+    335          		if(t>0)
+   \   000032   0E43         MOV.W   #0x0, R14
+   \   000034   3F408000     MOV.W   #0x80, R15
+   \   000038   ........     CALLA   #?FLT_GE
+   \   00003C   0228         JNC     ??my_deathzoom_0
+    336          		{
+    337          			t = 0;
+   \   00003E   0C43         MOV.W   #0x0, R12
+   \   000040   0D43         MOV.W   #0x0, R13
+    338          		}
+    339          	}
+    340            return (t);
+   \                     ??my_deathzoom_0:
+   \   000042   1A16         POPM.A  #0x2, R11
+   \   000044   1001         RETA
+    341          }
+    342          /******************* (C) COPYRIGHT 2012 WildFire Team *****END OF FILE************/
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     28   Q_rsqrt
+       28 _Mul32f
+       28 _Sub32f
+     20   VariableParameter
+       20 ?FLT_GE
+       20 ?FLT_LT
+       20 _Mul32f
+       20 _Sub32f
+     42   arcsin
+       42 ?FLT_GE
+       42 ?FLT_LT
+       42 _Add32f
+       42 _Cast32sto32f
+       42 _Div32f
+       42 _Mul32f
+     32   arctan
+       32 _Add32f
+       32 _Cast32sto32f
+       32 _Div32f
+       32 _Mul32f
+     12   array_assign
+     20   array_astrict
+     12   cosine
+       12   -> sine
+       12 _Add32f
+       12 _Div32f
+     12   data_limit
+       12 ?FLT_LT
+      4   middle_3
+     12   my_deathzoom
+       12 ?FLT_GE
+       12 ?FLT_LT
+       12 _Add32f
+       12 _Sub32f
+     20   my_deathzoom_2
+       20 ?FLT_LT
+     12   safe_asin
+       12   -> __iar_Dtest
+       12   -> asinf
+       12 ?FLT_GE
+       12 ?FLT_LT
+       12 _Div32f
+     40   sine
+       40   -> fabs
+       40 _Add32f
+       40 _Div32f
+       40 _Mul32f
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  AtR
+       4  Gyro_G
+       4  Gyro_Gr
+       4  M_PI
+       4  PI_2
+     110  Q_rsqrt
+       4  RtA
+     122  VariableParameter
+     270  arcsin
+     114  arctan
+      30  array_assign
+      64  array_astrict
+      44  cosine
+      56  data_limit
+       6  middle_3
+      70  my_deathzoom
+      54  my_deathzoom_2
+     120  safe_asin
+     236  sine
+
+ 
+ 1 296 bytes in segment CODE
+    24 bytes in segment DATA20_C
+ 
+ 1 296 bytes of CODE  memory
+    24 bytes of CONST memory
+
+Errors: none
+Warnings: none

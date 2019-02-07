@@ -1,0 +1,420 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:42
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_clock.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW5402.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_clock.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_clock.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_clock.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_clock.c
+      1          #include "msp430f5529_clock.h"
+      2          
+      3          #ifndef EXTAL_IN_XT1_HZ
+      4          #error 没有宏定义"XT1_nHZ",请在clock.h里宏定义，如#define EXTAL_IN_XT1_HZ  32768HZ
+      5          #endif  
+      6          #ifndef EXTAL_IN_XT2_HZ
+      7          #error 没有宏定义"XT2_nHZ",请在clock.h里宏定义，如#define EXTAL_IN_XT2_HZ  4000000HZ
+      8          #endif
+      9          
+     10          const UCS_MemMapPtr UCS = UCS_BASE_PTR;
+     11          __no_init CLOCK g_sClock;                                        //全局变量，时钟频率
+     12          static void SetVcoreUp (uint8_t level);                          //设置内核电压
+     13          /*******************************************************************************
+     14          *  函数名称：XT1_Config(STATUS status)
+     15          *  功能说明：设置是否使能XT1
+     16          *  参数说明：STATUS status：是否使能XT1
+     17          *  函数返回：无
+     18          *  使用示例：XT1_Config(ENABLE);   //使能XT1
+     19          ********************************************************************************/
+     20          static inline void XT1_Config(STATUS status)
+     21          {
+     22            if(status != DISABLE)
+     23            {
+     24              if(UCS->XT1_OFF == BIT_SET)
+     25              {
+     26                GPIO_MultiBits_Init(P5,(GPIO_Pin_4|GPIO_Pin_5),GPI|SEL);   //选用 XT1 第二功能
+     27                UCS->XT1_OFF = RESET ;                          // 开启 XT1                       
+     28                do
+     29                {
+     30                  UCS->XT1_LFOFFG = RESET;                     // 清除XT1,CLOCK_DCO 失效标志                     
+     31                  SFRIFG1 &= ~OFIFG;                           // 
+     32                }while (UCS->XT1_LFOFFG == BIT_SET);               //
+     33              }
+     34            }
+     35            else
+     36            {
+     37              UCS->XT1_OFF = BIT_SET ;                          // 关闭 XT1                       
+     38            }
+     39          }
+     40          /*******************************************************************************
+     41          *  函数名称：XT2_Config(STATUS status)
+     42          *  功能说明：设置是否使能XT2
+     43          *  参数说明：STATUS status：是否使能XT2
+     44          *  函数返回：无
+     45          *  使用示例：XT2_Config(TRUE);   //使能XT2
+     46          ********************************************************************************/
+     47          static inline void XT2_Config(STATUS status)
+     48          {
+     49            if(status != DISABLE)
+     50            {
+     51              if(UCS->XT2_OFF == BIT_SET)
+     52              {
+     53                GPIO_MultiBits_Init(P5,(GPIO_Pin_2|GPIO_Pin_3),GPI|SEL);      //选用 CLOCK_XT2 第二功能
+     54                UCS->XT2_OFF = RESET;                         //开启 CLOCK_XT2                      
+     55                do
+     56                {
+     57                  UCS->XT2_OFFG = RESET;
+     58                  SFRIFG1 &= ~OFIFG;                       
+     59                }while (UCS->XT2_OFFG == BIT_SET);
+     60              }
+     61            }
+     62            else
+     63            {
+     64              UCS->XT2_OFF = BIT_SET ;                          // 关闭XT2                       
+     65            }
+     66          }
+     67          /*******************************************************************************
+     68          *  函数名称：CLOCK_DCO_PLLConfig     (FLLREF_Source refsource, FLLREF_DIVx refdiv, uint32_t DCO_FLL_Fre)
+     69          *  功能说明：设置DCO频率，单位（HZ）
+     70          *  参数说明：FLLREF_Source refsource :参考时钟源
+     71                       FLLREF_DIVx refdiv      :参考时钟源分频系数
+     72                       uint32_t DCO_FLL_Fre      :DCO设置频率
+     73          *  函数返回：无
+     74          *  使用示例：CLOCK_DCO_PLLConfig     (FLLREF_REFO, FLLREF_DIV_1, 16MHZ);  //设置DCO倍频环以REFO的一分频作为参考时钟源，倍频到16MHZ
+     75          ********************************************************************************/
+     76          void CLOCK_DCO_PLLConfig     (FLLREF_Source refsource, FLLREF_DIVx refdiv, uint32_t DCO_FLL_Fre)
+     77          {
+     78            static const uint16_t ref_div_value[6]={1,2,4,8,12,16};
+     79            /*根据频率提高内核电压*/
+     80            //SetVcoreUp ( (DCO_FLL_Fre < 12MHz) ? 0 : ((DCO_FLL_Fre < 16MHz) ? 1 : ((DCO_FLL_Fre < 20MHz) ? 2 :3))); //设置内核电压
+     81            if(DCO_FLL_Fre < 12MHz)
+     82              SetVcoreUp (0x00);                      //设置内核电压
+     83            else if(DCO_FLL_Fre < 16MHz)
+     84              SetVcoreUp (0x01);       
+     85            else if(DCO_FLL_Fre < 20MHz)
+     86              SetVcoreUp (0x02);       
+     87            else
+     88              SetVcoreUp (0x03);       
+     89            
+     90            __bis_SR_register(SCG0);                                              // 禁止倍频环FLL,
+     91            UCS->CTL0 = 0x0000;                                                   // 清零 DCOx, MODx
+     92            
+     93            if (DCO_FLL_Fre < 0.63MHz)         //           fsystem < 0.63MHz
+     94          	UCS->DCORSEL = 0;
+     95            else if (DCO_FLL_Fre < 1.25MHz)    // 0.63MHz < fsystem < 1.25MHz
+     96          	UCS->DCORSEL = 1;
+     97            else if (DCO_FLL_Fre < 2.5MHz)     // 1.25MHz < fsystem <  2.5MHz
+     98          	UCS->DCORSEL = 2;
+     99            else if (DCO_FLL_Fre <   5MHz)     // 2.5MHz  < fsystem <    5MHz
+    100          	UCS->DCORSEL = 3;
+    101            else if (DCO_FLL_Fre <  10MHz)     // 5MHz    < fsystem <   10MHz
+    102          	UCS->DCORSEL = 4;
+    103            else if (DCO_FLL_Fre <  20MHz)     // 10MHz   < fsystem <   20MHz
+    104          	UCS->DCORSEL = 5;
+    105            else if (DCO_FLL_Fre <  40MHz)     // 20MHz   < fsystem <   40MHz
+    106          	UCS->DCORSEL = 6;
+    107            else
+    108          	UCS->DCORSEL = 7;
+    109            
+    110            UCS->FLLREFDIV = refdiv;
+    111            UCS->SELREF = refsource;
+    112            
+    113            float Fref_value;
+    114            if(refsource == FLLREF_XT2)
+    115            {
+    116              XT2_Config(TRUE);
+    117              Fref_value = (float)((uint32_t)EXTAL_IN_XT2_HZ/ref_div_value[refdiv]);  
+    118            }
+    119            else if(refsource == FLLREF_XT1)
+    120            {
+    121              XT1_Config(TRUE);
+    122              Fref_value = (float)(EXTAL_IN_XT1_HZ/ref_div_value[refdiv]);
+    123            }
+    124            else if(refsource == FLLREF_REFO)
+    125            {
+    126              Fref_value = (float)(REFOCLK_FREQUENCY/ref_div_value[refdiv]);
+    127            }
+    128            uint16_t FLLN_VALUE = (uint16_t)((DCO_FLL_Fre/Fref_value+0.5f)-1u);
+    129            ASSERT(FLLN_VALUE < 1024,"CLOCK_DCO_PLLConfig","FLLN_VALUE不允许超过1023，请将DCO频率设低或者更换为更高频率的参考时钟源！");         //不允许超过1023，请将DCO频率设低或者更换为更高频率的参考时钟源
+                                            ^
+Error[Pe055]: too many arguments in invocation of macro "ASSERT"
+    130            
+    131            g_sClock.DCO_FLL_Frequency = DCO_FLL_Fre;
+    132            
+    133            UCS->FLLN = FLLN_VALUE;        //
+    134            UCS->FLLD = 0;     //设置DCO分频  
+    135            
+    136            __bic_SR_register(SCG0);                  // 使能FLL
+    137            do
+    138            {
+    139              UCS->DCO_FFG = RESET; // 清除,CLOCK_DCO 失效标志                                        
+    140              SFRIFG1 &= ~OFIFG;                                             // 清除时钟失效标志
+    141            }while (UCS->DCO_FFG == BIT_SET);                                           // 检查DCO失效标志
+    142           
+    143            //将使用DCO作为时钟源的时钟频率值修改
+    144            if(UCS->SELM == CLOCK_DCO || UCS->SELM == CLOCK_DCO_DIV) 
+    145            {
+    146              CLOCK_DIVx div = (CLOCK_DIVx)UCS->DIVM;
+    147              CLOCK_MCLK_Config ((CLOCK_Source)UCS->SELM, div);
+    148            }
+    149            
+    150            if(UCS->SELS == CLOCK_DCO || UCS->SELS == CLOCK_DCO_DIV)
+    151            {
+    152              CLOCK_DIVx div = (CLOCK_DIVx)UCS->DIVS;
+    153              CLOCK_SMCLK_Config((CLOCK_Source)UCS->SELS, div);
+    154            }
+    155            
+    156            if(UCS->SELA == CLOCK_DCO || UCS->SELA == CLOCK_DCO_DIV)
+    157            {
+    158              CLOCK_DIVx div = (CLOCK_DIVx)UCS->DIVA;
+    159              CLOCK_ACLK_Config ((CLOCK_Source)UCS->SELS, div);
+    160            }
+    161          }
+    162          /*************************************************************************
+    163          *  函数名称：CLOCK_MCLK_Config  (CLOCK_Source mclk , CLOCK_DIVx mclk_div)
+    164          *  功能说明：设置主时钟源及分频
+    165          *  参数说明：CLOCK_Source mclk   :主时钟时钟源
+    166                       CLOCK_DIVx mclk_div :主时钟分频系数
+    167          *  函数返回：无
+    168          *  使用示例：CLOCK_MCLK_Config  (CLOCK_DCO , DIV_1);   //主时钟使用DCO作为时钟源，分频系数为1（不分频）
+    169          *************************************************************************/  
+    170          void CLOCK_MCLK_Config  (CLOCK_Source mclk , CLOCK_DIVx mclk_div)
+    171          {
+    172            if(mclk == CLOCK_XT2)
+    173            {
+    174              XT2_Config(TRUE);
+    175            }
+    176            else if(mclk == CLOCK_XT1)
+    177            {
+    178              XT1_Config(TRUE);
+    179            }
+    180            
+    181            UCS->SELM = mclk;                         //选择DCO作为时钟源
+    182            UCS->DIVM = mclk_div;
+    183            
+    184            switch(mclk)
+    185            {
+    186            case CLOCK_XT1    :g_sClock.MCLK.nHZ = EXTAL_IN_XT1_HZ;break;
+    187            case CLOCK_VLO    :g_sClock.MCLK.nHZ = VLOCLK_FREQUENCY;break;
+    188            case CLOCK_REFO   :g_sClock.MCLK.nHZ = REFOCLK_FREQUENCY;break;       
+    189            case CLOCK_DCO    :g_sClock.MCLK.nHZ = g_sClock.DCO_FLL_Frequency;break;    
+    190            case CLOCK_DCO_DIV:g_sClock.MCLK.nHZ = g_sClock.DCO_FLL_Frequency;break;
+    191            case CLOCK_XT2    :g_sClock.MCLK.nHZ = EXTAL_IN_XT2_HZ;break;
+    192            default :return;
+    193            }
+    194            g_sClock.MCLK.nHZ  >>= mclk_div;
+    195            g_sClock.MCLK.nKHZ = g_sClock.MCLK.nHZ/1000u;
+    196            g_sClock.MCLK.fMHZ = g_sClock.MCLK.nHZ/1000000.0;
+    197          }
+    198          /*************************************************************************
+    199          *  函数名称：CLOCK_SMCLK_Config (CLOCK_Source smclk, CLOCK_DIVx smclk_div)
+    200          *  功能说明：设置系统时钟源及分频
+    201          *  参数说明：CLOCK_Source smclk   :系统时钟时钟源
+    202                       CLOCK_DIVx smclk_div :系统时钟分频系数
+    203          *  函数返回：无
+    204          *  使用示例：CLOCK_SMCLK_Config  (CLOCK_DCO , DIV_2);   //系统时钟使用DCO作为时钟源，分频系数为2（二分频）
+    205          *************************************************************************/  
+    206          void CLOCK_SMCLK_Config (CLOCK_Source smclk, CLOCK_DIVx smclk_div)
+    207          {
+    208            if(smclk == CLOCK_XT2)
+    209            {
+    210              XT2_Config(TRUE);
+    211            }
+    212            else if(smclk == CLOCK_XT1)
+    213            {
+    214              XT1_Config(TRUE);
+    215            }
+    216            
+    217            UCS->SELS = smclk;//选择smclk时钟源
+    218            UCS->DIVS = smclk_div;
+    219            
+    220            switch(smclk)
+    221            {
+    222            case CLOCK_XT1    :g_sClock.SMCLK.nHZ = EXTAL_IN_XT1_HZ;break;
+    223            case CLOCK_VLO    :g_sClock.SMCLK.nHZ = VLOCLK_FREQUENCY;break;
+    224            case CLOCK_REFO   :g_sClock.SMCLK.nHZ = REFOCLK_FREQUENCY;break;       
+    225            case CLOCK_DCO    :g_sClock.SMCLK.nHZ = g_sClock.DCO_FLL_Frequency;break; 
+    226            case CLOCK_DCO_DIV:g_sClock.SMCLK.nHZ = g_sClock.DCO_FLL_Frequency;break;
+    227            case CLOCK_XT2    :g_sClock.SMCLK.nHZ = EXTAL_IN_XT2_HZ;break;
+    228            default :return;
+    229            }
+    230            g_sClock.SMCLK.nHZ >>= smclk_div;
+    231            g_sClock.SMCLK.nKHZ = g_sClock.SMCLK.nHZ/1000u;;
+    232            g_sClock.SMCLK.fMHZ = g_sClock.SMCLK.nHZ/1000000.0;
+    233          }
+    234          /*************************************************************************
+    235          *  函数名称：CLOCK_ACLK_Config  (CLOCK_Source aclk , CLOCK_DIVx aclk_div)
+    236          *  功能说明：设置辅助时钟源及分频
+    237          *  参数说明：CLOCK_Source aclk   :辅助时钟时钟源
+    238                       CLOCK_DIVx aclk_div :辅助时钟分频系数
+    239          *  函数返回：无
+    240          *  使用示例：CLOCK_ACLK_Config  (XT! , DIV_4);   //辅助时钟使用XT1作为时钟源，分频系数为4（四分频）
+    241          *************************************************************************/  
+    242          void CLOCK_ACLK_Config  (CLOCK_Source aclk , CLOCK_DIVx aclk_div)
+    243          {
+    244             if(aclk == CLOCK_XT2)
+    245            {
+    246              XT2_Config(TRUE);
+    247            }
+    248            else if(aclk == CLOCK_XT1)
+    249            {
+    250              XT1_Config(TRUE);
+    251            }
+    252            
+    253            UCS->SELA = aclk;//选择时钟源                   
+    254            UCS->DIVA = aclk_div; //设置分频系数为0
+    255            
+    256            switch(aclk)
+    257            {
+    258            case CLOCK_XT1    :g_sClock.ACLK.nHZ = EXTAL_IN_XT1_HZ;break;
+    259            case CLOCK_VLO    :g_sClock.ACLK.nHZ = VLOCLK_FREQUENCY;break;
+    260            case CLOCK_REFO   :g_sClock.ACLK.nHZ = REFOCLK_FREQUENCY;break;       
+    261            case CLOCK_DCO    :g_sClock.ACLK.nHZ = g_sClock.DCO_FLL_Frequency;break;   
+    262            case CLOCK_DCO_DIV:g_sClock.ACLK.nHZ = g_sClock.DCO_FLL_Frequency;break;
+    263            case CLOCK_XT2    :g_sClock.ACLK.nHZ = EXTAL_IN_XT2_HZ;break;
+    264            default :return;
+    265            }
+    266            g_sClock.ACLK.nHZ >>= aclk_div;
+    267            g_sClock.ACLK.nKHZ = g_sClock.ACLK.nHZ/1000u;;
+    268            g_sClock.ACLK.fMHZ = g_sClock.ACLK.nHZ/1000000.0;
+    269          }
+    270          /*******************************************************************************
+    271          函数功能：设置内核电压值（与频率设置有关）
+    272          函数参数：u8 level ：电压阶梯 小于3
+    273          ********************************************************************************/
+    274          void SetVcoreUp (uint8_t level)
+    275          {
+    276          #if 1  //仿真时修改为0，否则会卡在死循环里
+    277            // Open PMM registers for write
+    278            PMMCTL0_H = PMMPW_H;              
+    279            // Set SVS/SVM high side new level
+    280            SVSMHCTL = SVSHE + SVSHRVL0 * level + SVMHE + SVSMHRRL0 * level;
+    281            // Set SVM low side to new level
+    282            SVSMLCTL = SVSLE + SVMLE + SVSMLRRL0 * level;
+    283            // Wait till SVM is settled
+    284            uint16_t i=50000; 
+    285            while (((PMMIFG & SVSMLDLYIFG) == 0)&&((i--)>0));
+    286            // Clear already set flags
+    287            PMMIFG &= ~(SVMLVLRIFG + SVMLIFG);
+    288            // Set VCore to new level
+    289            PMMCTL0_L = PMMCOREV0 * level;
+    290            // Wait till new level reached
+    291            i =50000;
+    292            if ((PMMIFG & SVMLIFG))
+    293              while(((PMMIFG & SVMLVLRIFG) == 0)&&((i--)>0));
+    294            /*
+    295            if ((PMMIFG & SVMLIFG))
+    296              while ((PMMIFG & SVMLVLRIFG) == 0);
+    297            */
+    298            // Set SVS/SVM low side to new level
+    299            SVSMLCTL = SVSLE + SVSLRVL0 * level + SVMLE + SVSMLRRL0 * level;
+    300            // Lock PMM registers for write access
+    301            PMMCTL0_H = 0x00;
+    302          #endif
+    303          }
+
+Errors: 1
+Warnings: none

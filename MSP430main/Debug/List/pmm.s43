@@ -1,0 +1,1395 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:11
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\pmm.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW2B89.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\pmm.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\pmm.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME pmm
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC PMM_clearPMMIFGS
+        PUBLIC PMM_disableSvmH
+        PUBLIC PMM_disableSvmHInterrupt
+        PUBLIC PMM_disableSvmL
+        PUBLIC PMM_disableSvmLInterrupt
+        PUBLIC PMM_disableSvsH
+        PUBLIC PMM_disableSvsHInLPMFullPerf
+        PUBLIC PMM_disableSvsHInLPMNormPerf
+        PUBLIC PMM_disableSvsHReset
+        PUBLIC PMM_disableSvsHSvmH
+        PUBLIC PMM_disableSvsL
+        PUBLIC PMM_disableSvsLInLPMFastWake
+        PUBLIC PMM_disableSvsLInLPMSlowWake
+        PUBLIC PMM_disableSvsLReset
+        PUBLIC PMM_disableSvsLSvmL
+        PUBLIC PMM_enableSvmH
+        PUBLIC PMM_enableSvmHInterrupt
+        PUBLIC PMM_enableSvmL
+        PUBLIC PMM_enableSvmLInterrupt
+        PUBLIC PMM_enableSvsH
+        PUBLIC PMM_enableSvsHInLPMFullPerf
+        PUBLIC PMM_enableSvsHInLPMNormPerf
+        PUBLIC PMM_enableSvsHReset
+        PUBLIC PMM_enableSvsHSvmH
+        PUBLIC PMM_enableSvsL
+        PUBLIC PMM_enableSvsLInLPMFastWake
+        PUBLIC PMM_enableSvsLInLPMSlowWake
+        PUBLIC PMM_enableSvsLReset
+        PUBLIC PMM_enableSvsLSvmL
+        PUBLIC PMM_getInterruptStatus
+        PUBLIC PMM_optimizeSvsHInLPMFullPerf
+        PUBLIC PMM_optimizeSvsLInLPMFastWake
+        PUBLIC PMM_setVCore
+        PUBLIC PMM_setVCoreDown
+        PUBLIC PMM_setVCoreUp
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\pmm.c
+//    1 /* --COPYRIGHT--,BSD
+//    2  * Copyright (c) 2017, Texas Instruments Incorporated
+//    3  * All rights reserved.
+//    4  *
+//    5  * Redistribution and use in source and binary forms, with or without
+//    6  * modification, are permitted provided that the following conditions
+//    7  * are met:
+//    8  *
+//    9  * *  Redistributions of source code must retain the above copyright
+//   10  *    notice, this list of conditions and the following disclaimer.
+//   11  *
+//   12  * *  Redistributions in binary form must reproduce the above copyright
+//   13  *    notice, this list of conditions and the following disclaimer in the
+//   14  *    documentation and/or other materials provided with the distribution.
+//   15  *
+//   16  * *  Neither the name of Texas Instruments Incorporated nor the names of
+//   17  *    its contributors may be used to endorse or promote products derived
+//   18  *    from this software without specific prior written permission.
+//   19  *
+//   20  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//   21  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+//   22  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+//   23  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+//   24  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+//   25  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+//   26  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+//   27  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+//   28  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+//   29  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//   30  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//   31  * --/COPYRIGHT--*/
+//   32 //*****************************************************************************
+//   33 //
+//   34 // pmm.c - Driver for the pmm Module.
+//   35 //
+//   36 //*****************************************************************************
+//   37 
+//   38 //*****************************************************************************
+//   39 //
+//   40 //! \addtogroup pmm_api pmm
+//   41 //! @{
+//   42 //
+//   43 //*****************************************************************************
+//   44 
+//   45 #include "inc/hw_memmap.h"
+//   46 
+//   47 #ifdef __MSP430_HAS_PMM__
+//   48 #include "pmm.h"
+//   49 
+//   50 #include <assert.h>
+//   51 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   52 void PMM_enableSvsL (void)
+PMM_enableSvsL:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function PMM_enableSvsL
+          CFI NoCalls
+//   53 {
+//   54     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//   55     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= SVSLE;
+        BIS.W   #0x400, &0x126
+//   56     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//   57 }
+        RETA
+          CFI EndBlock cfiBlock0
+//   58 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   59 void PMM_disableSvsL (void)
+PMM_disableSvsL:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function PMM_disableSvsL
+          CFI NoCalls
+//   60 {
+//   61     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//   62     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= ~SVSLE;
+        BIC.W   #0x400, &0x126
+//   63     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//   64 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   65 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   66 void PMM_enableSvmL (void)
+PMM_enableSvmL:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function PMM_enableSvmL
+          CFI NoCalls
+//   67 {
+//   68     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//   69     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= SVMLE;
+        BIS.W   #0x4000, &0x126
+//   70     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//   71 }
+        RETA
+          CFI EndBlock cfiBlock2
+//   72 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   73 void PMM_disableSvmL (void)
+PMM_disableSvmL:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function PMM_disableSvmL
+          CFI NoCalls
+//   74 {
+//   75     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//   76     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= ~SVMLE;
+        BIC.W   #0x4000, &0x126
+//   77     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//   78 }
+        RETA
+          CFI EndBlock cfiBlock3
+//   79 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   80 void PMM_enableSvsH (void)
+PMM_enableSvsH:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function PMM_enableSvsH
+          CFI NoCalls
+//   81 {
+//   82     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//   83     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= SVSHE;
+        BIS.W   #0x400, &0x124
+//   84     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//   85 }
+        RETA
+          CFI EndBlock cfiBlock4
+//   86 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   87 void PMM_disableSvsH (void)
+PMM_disableSvsH:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function PMM_disableSvsH
+          CFI NoCalls
+//   88 {
+//   89     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//   90     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= ~SVSHE;
+        BIC.W   #0x400, &0x124
+//   91     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//   92 }
+        RETA
+          CFI EndBlock cfiBlock5
+//   93 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   94 void PMM_enableSvmH (void)
+PMM_enableSvmH:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function PMM_enableSvmH
+          CFI NoCalls
+//   95 {
+//   96     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//   97     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= SVMHE;
+        BIS.W   #0x4000, &0x124
+//   98     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//   99 }
+        RETA
+          CFI EndBlock cfiBlock6
+//  100 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  101 void PMM_disableSvmH (void)
+PMM_disableSvmH:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function PMM_disableSvmH
+          CFI NoCalls
+//  102 {
+//  103     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  104     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= ~SVMHE;
+        BIC.W   #0x4000, &0x124
+//  105     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  106 }
+        RETA
+          CFI EndBlock cfiBlock7
+//  107 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  108 void PMM_enableSvsLSvmL (void)
+PMM_enableSvsLSvmL:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function PMM_enableSvsLSvmL
+          CFI NoCalls
+//  109 {
+//  110     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  111     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= (SVSLE + SVMLE);
+        BIS.W   #0x4400, &0x126
+//  112     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  113 }
+        RETA
+          CFI EndBlock cfiBlock8
+//  114 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  115 void PMM_disableSvsLSvmL (void)
+PMM_disableSvsLSvmL:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function PMM_disableSvsLSvmL
+          CFI NoCalls
+//  116 {
+//  117     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  118     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= ~(SVSLE + SVMLE);
+        AND.W   #0xbbff, &0x126
+//  119     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  120 }
+        RETA
+          CFI EndBlock cfiBlock9
+//  121 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  122 void PMM_enableSvsHSvmH (void)
+PMM_enableSvsHSvmH:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function PMM_enableSvsHSvmH
+          CFI NoCalls
+//  123 {
+//  124     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  125     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= (SVSHE + SVMHE);
+        BIS.W   #0x4400, &0x124
+//  126     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  127 }
+        RETA
+          CFI EndBlock cfiBlock10
+//  128 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  129 void PMM_disableSvsHSvmH (void)
+PMM_disableSvsHSvmH:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function PMM_disableSvsHSvmH
+          CFI NoCalls
+//  130 {
+//  131     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  132     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= ~(SVSHE + SVMHE);
+        AND.W   #0xbbff, &0x124
+//  133     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  134 }
+        RETA
+          CFI EndBlock cfiBlock11
+//  135 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  136 void PMM_enableSvsLReset (void)
+PMM_enableSvsLReset:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function PMM_enableSvsLReset
+          CFI NoCalls
+//  137 {
+//  138     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  139     HWREG16(PMM_BASE + OFS_PMMRIE) |= SVSLPE;
+        BIS.W   #0x100, &0x12e
+//  140     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  141 }
+        RETA
+          CFI EndBlock cfiBlock12
+//  142 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  143 void PMM_disableSvsLReset (void)
+PMM_disableSvsLReset:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function PMM_disableSvsLReset
+          CFI NoCalls
+//  144 {
+//  145     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  146     HWREG16(PMM_BASE + OFS_PMMRIE) &= ~SVSLPE;
+        BIC.W   #0x100, &0x12e
+//  147     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  148 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  149 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  150 void PMM_enableSvmLInterrupt (void)
+PMM_enableSvmLInterrupt:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function PMM_enableSvmLInterrupt
+          CFI NoCalls
+//  151 {
+//  152     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  153     HWREG16(PMM_BASE + OFS_PMMRIE) |= SVMLIE;
+        BIS.W   #0x2, &0x12e
+//  154     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  155 }
+        RETA
+          CFI EndBlock cfiBlock14
+//  156 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  157 void PMM_disableSvmLInterrupt (void)
+PMM_disableSvmLInterrupt:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function PMM_disableSvmLInterrupt
+          CFI NoCalls
+//  158 {
+//  159     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  160     HWREG16(PMM_BASE + OFS_PMMRIE) &= ~SVMLIE;
+        BIC.W   #0x2, &0x12e
+//  161     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  162 }
+        RETA
+          CFI EndBlock cfiBlock15
+//  163 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  164 void PMM_enableSvsHReset (void)
+PMM_enableSvsHReset:
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function PMM_enableSvsHReset
+          CFI NoCalls
+//  165 {
+//  166     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  167     HWREG16(PMM_BASE + OFS_PMMRIE) |= SVSHPE;
+        BIS.W   #0x1000, &0x12e
+//  168     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  169 }
+        RETA
+          CFI EndBlock cfiBlock16
+//  170 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  171 void PMM_disableSvsHReset (void)
+PMM_disableSvsHReset:
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function PMM_disableSvsHReset
+          CFI NoCalls
+//  172 {
+//  173     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  174     HWREG16(PMM_BASE + OFS_PMMRIE) &= ~SVSHPE;
+        BIC.W   #0x1000, &0x12e
+//  175     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  176 }
+        RETA
+          CFI EndBlock cfiBlock17
+//  177 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  178 void PMM_enableSvmHInterrupt (void)
+PMM_enableSvmHInterrupt:
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function PMM_enableSvmHInterrupt
+          CFI NoCalls
+//  179 {
+//  180     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  181     HWREG16(PMM_BASE + OFS_PMMRIE) |= SVMHIE;
+        BIS.W   #0x20, &0x12e
+//  182     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  183 }
+        RETA
+          CFI EndBlock cfiBlock18
+//  184 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  185 void PMM_disableSvmHInterrupt (void)
+PMM_disableSvmHInterrupt:
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function PMM_disableSvmHInterrupt
+          CFI NoCalls
+//  186 {
+//  187     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  188     HWREG16(PMM_BASE + OFS_PMMRIE) &= ~SVMHIE;
+        BIC.W   #0x20, &0x12e
+//  189     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  190 }
+        RETA
+          CFI EndBlock cfiBlock19
+//  191 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  192 void PMM_clearPMMIFGS (void)
+PMM_clearPMMIFGS:
+          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Function PMM_clearPMMIFGS
+          CFI NoCalls
+//  193 {
+//  194     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  195     HWREG16(PMM_BASE + OFS_PMMIFG) = 0;
+        MOV.W   #0x0, &0x12c
+//  196     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  197 }
+        RETA
+          CFI EndBlock cfiBlock20
+//  198 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  199 void PMM_enableSvsLInLPMFastWake (void)
+PMM_enableSvsLInLPMFastWake:
+          CFI Block cfiBlock21 Using cfiCommon0
+          CFI Function PMM_enableSvsLInLPMFastWake
+          CFI NoCalls
+//  200 {
+//  201     //These settings use SVSH/LACE = 0
+//  202     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  203     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= (SVSLFP + SVSLMD);
+        BIS.W   #0x810, &0x126
+//  204     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= ~SVSMLACE;
+        BIC.W   #0x80, &0x126
+//  205     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  206 }
+        RETA
+          CFI EndBlock cfiBlock21
+//  207 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  208 void PMM_enableSvsLInLPMSlowWake (void)
+PMM_enableSvsLInLPMSlowWake:
+          CFI Block cfiBlock22 Using cfiCommon0
+          CFI Function PMM_enableSvsLInLPMSlowWake
+          CFI NoCalls
+//  209 {
+//  210     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  211     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= SVSLMD;
+        BIS.W   #0x10, &0x126
+//  212     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= ~(SVSLFP + SVSMLACE);
+        AND.W   #0xf77f, &0x126
+//  213     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  214 }
+        RETA
+          CFI EndBlock cfiBlock22
+//  215 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  216 void PMM_disableSvsLInLPMFastWake (void)
+PMM_disableSvsLInLPMFastWake:
+          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Function PMM_disableSvsLInLPMFastWake
+          CFI NoCalls
+//  217 {
+//  218     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  219     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= SVSLFP;
+        BIS.W   #0x800, &0x126
+//  220     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= ~(SVSLMD + SVSMLACE);
+        AND.W   #0xff6f, &0x126
+//  221     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  222 }
+        RETA
+          CFI EndBlock cfiBlock23
+//  223 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  224 void PMM_disableSvsLInLPMSlowWake (void)
+PMM_disableSvsLInLPMSlowWake:
+          CFI Block cfiBlock24 Using cfiCommon0
+          CFI Function PMM_disableSvsLInLPMSlowWake
+          CFI NoCalls
+//  225 {
+//  226     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  227     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= ~(SVSLFP + SVSMLACE + SVSLMD);
+        AND.W   #0xf76f, &0x126
+//  228     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  229 }
+        RETA
+          CFI EndBlock cfiBlock24
+//  230 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  231 void PMM_enableSvsHInLPMNormPerf (void)
+PMM_enableSvsHInLPMNormPerf:
+          CFI Block cfiBlock25 Using cfiCommon0
+          CFI Function PMM_enableSvsHInLPMNormPerf
+          CFI NoCalls
+//  232 {
+//  233     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  234     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= SVSHMD;
+        BIS.W   #0x10, &0x124
+//  235     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= ~(SVSMHACE + SVSHFP);
+        AND.W   #0xf77f, &0x124
+//  236     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  237 }
+        RETA
+          CFI EndBlock cfiBlock25
+//  238 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  239 void PMM_enableSvsHInLPMFullPerf (void)
+PMM_enableSvsHInLPMFullPerf:
+          CFI Block cfiBlock26 Using cfiCommon0
+          CFI Function PMM_enableSvsHInLPMFullPerf
+          CFI NoCalls
+//  240 {
+//  241     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  242     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= (SVSHMD + SVSHFP);
+        BIS.W   #0x810, &0x124
+//  243     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= ~SVSMHACE;
+        BIC.W   #0x80, &0x124
+//  244     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  245 }
+        RETA
+          CFI EndBlock cfiBlock26
+//  246 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  247 void PMM_disableSvsHInLPMNormPerf (void)
+PMM_disableSvsHInLPMNormPerf:
+          CFI Block cfiBlock27 Using cfiCommon0
+          CFI Function PMM_disableSvsHInLPMNormPerf
+          CFI NoCalls
+//  248 {
+//  249     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  250     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= ~(SVSMHACE + SVSHFP + SVSHMD);
+        AND.W   #0xf76f, &0x124
+//  251     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  252 }
+        RETA
+          CFI EndBlock cfiBlock27
+//  253 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  254 void PMM_disableSvsHInLPMFullPerf (void)
+PMM_disableSvsHInLPMFullPerf:
+          CFI Block cfiBlock28 Using cfiCommon0
+          CFI Function PMM_disableSvsHInLPMFullPerf
+          CFI NoCalls
+//  255 {
+//  256     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  257     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= SVSHFP;
+        BIS.W   #0x800, &0x124
+//  258     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= ~(SVSMHACE + SVSHMD);
+        AND.W   #0xff6f, &0x124
+//  259     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  260 }
+        RETA
+          CFI EndBlock cfiBlock28
+//  261 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  262 void PMM_optimizeSvsLInLPMFastWake (void)
+PMM_optimizeSvsLInLPMFastWake:
+          CFI Block cfiBlock29 Using cfiCommon0
+          CFI Function PMM_optimizeSvsLInLPMFastWake
+          CFI NoCalls
+//  263 {
+//  264     //These setting use SVSH/LACE = 1
+//  265     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  266     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= (SVSLFP + SVSLMD + SVSMLACE);
+        BIS.W   #0x890, &0x126
+//  267     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  268 }
+        RETA
+          CFI EndBlock cfiBlock29
+//  269 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  270 void PMM_optimizeSvsHInLPMFullPerf (void)
+PMM_optimizeSvsHInLPMFullPerf:
+          CFI Block cfiBlock30 Using cfiCommon0
+          CFI Function PMM_optimizeSvsHInLPMFullPerf
+          CFI NoCalls
+//  271 {
+//  272     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  273     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= (SVSHMD + SVSHFP + SVSMHACE);
+        BIS.W   #0x890, &0x124
+//  274     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  275 }
+        RETA
+          CFI EndBlock cfiBlock30
+//  276 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  277 uint16_t PMM_setVCoreUp ( uint8_t level){
+PMM_setVCoreUp:
+          CFI Block cfiBlock31 Using cfiCommon0
+          CFI Function PMM_setVCoreUp
+          CFI NoCalls
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.B   R12, R14
+//  278     uint32_t PMMRIE_backup, SVSMHCTL_backup, SVSMLCTL_backup;
+//  279 
+//  280     //The code flow for increasing the Vcore has been altered to work around
+//  281     //the erratum FLASH37.
+//  282     //Please refer to the Errata sheet to know if a specific device is affected
+//  283     //DO NOT ALTER THIS FUNCTION
+//  284 
+//  285     //Open PMM registers for write access
+//  286     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  287 
+//  288     //Disable dedicated Interrupts
+//  289     //Backup all registers
+//  290     PMMRIE_backup = HWREG16(PMM_BASE + OFS_PMMRIE);
+        MOV.W   &0x12e, R12
+        MOV.W   #0x0, R13
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  291     HWREG16(PMM_BASE + OFS_PMMRIE) &= ~(SVMHVLRPE | SVSHPE | SVMLVLRPE |
+//  292                                           SVSLPE | SVMHVLRIE | SVMHIE |
+//  293                                           SVSMHDLYIE | SVMLVLRIE | SVMLIE |
+//  294                                           SVSMLDLYIE
+//  295                                           );
+        AND.W   #0xcc88, &0x12e
+//  296     SVSMHCTL_backup = HWREG16(PMM_BASE + OFS_SVSMHCTL);
+        MOV.W   &0x124, R12
+        MOV.W   #0x0, R13
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  297     SVSMLCTL_backup = HWREG16(PMM_BASE + OFS_SVSMLCTL);
+        MOV.W   &0x126, R12
+        MOV.W   #0x0, R13
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  298 
+//  299     //Clear flags
+//  300     HWREG16(PMM_BASE + OFS_PMMIFG) = 0;
+        MOV.W   #0x0, &0x12c
+//  301 
+//  302     //Set SVM highside to new level and check if a VCore increase is possible
+//  303     HWREG16(PMM_BASE + OFS_SVSMHCTL) = SVMHE | SVSHE | (SVSMHRRL0 * level);
+        MOV.B   R14, R15
+        BIS.W   #0x4400, R15
+        MOV.W   R15, &0x124
+//  304 
+//  305     //Wait until SVM highside is settled
+//  306     while ((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMHDLYIFG) == 0) ;
+??PMM_setVCoreUp_0:
+        BIT.W   #0x10, &0x12c
+        JNC     ??PMM_setVCoreUp_0
+//  307 
+//  308     //Clear flag
+//  309     HWREG16(PMM_BASE + OFS_PMMIFG) &= ~SVSMHDLYIFG;
+        BIC.W   #0x10, &0x12c
+//  310 
+//  311     //Check if a VCore increase is possible
+//  312     if ((HWREG16(PMM_BASE + OFS_PMMIFG) & SVMHIFG) == SVMHIFG){
+        BIT.W   #0x20, &0x12c
+        JNC     ??PMM_setVCoreUp_6
+//  313         //-> Vcc is too low for a Vcore increase
+//  314         //recover the previous settings
+//  315         HWREG16(PMM_BASE + OFS_PMMIFG) &= ~SVSMHDLYIFG;
+        BIC.W   #0x10, &0x12c
+//  316         HWREG16(PMM_BASE + OFS_SVSMHCTL) = SVSMHCTL_backup;
+        MOV.W   R6, &0x124
+//  317 
+//  318         //Wait until SVM highside is settled
+//  319         while ((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMHDLYIFG) == 0) ;
+??PMM_setVCoreUp_1:
+        BIT.W   #0x10, &0x12c
+        JNC     ??PMM_setVCoreUp_1
+//  320 
+//  321         //Clear all Flags
+//  322         HWREG16(PMM_BASE +
+//  323             OFS_PMMIFG) &= ~(SVMHVLRIFG | SVMHIFG | SVSMHDLYIFG |
+//  324                              SVMLVLRIFG | SVMLIFG |
+//  325                              SVSMLDLYIFG
+//  326                              );
+        AND.W   #0xff88, &0x12c
+//  327 
+//  328         //Restore PMM interrupt enable register
+//  329         HWREG16(PMM_BASE + OFS_PMMRIE) = PMMRIE_backup;
+        MOV.W   R10, &0x12e
+//  330         //Lock PMM registers for write access
+//  331         HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  332         //return: voltage not set
+//  333         return ( STATUS_FAIL) ;
+        MOV.W   #0x0, R12
+        JMP     ??PMM_setVCoreUp_5
+//  334     }
+//  335 
+//  336     //Set also SVS highside to new level
+//  337     //Vcc is high enough for a Vcore increase
+//  338     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= (SVSHRVL0 * level);
+??PMM_setVCoreUp_6:
+        MOV.B   R14, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R15, &0x124
+//  339 
+//  340     //Wait until SVM highside is settled
+//  341     while ((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMHDLYIFG) == 0) ;
+??PMM_setVCoreUp_2:
+        BIT.W   #0x10, &0x12c
+        JNC     ??PMM_setVCoreUp_2
+//  342 
+//  343     //Clear flag
+//  344     HWREG16(PMM_BASE + OFS_PMMIFG) &= ~SVSMHDLYIFG;
+        BIC.W   #0x10, &0x12c
+//  345 
+//  346     //Set VCore to new level
+//  347     HWREG8(PMM_BASE + OFS_PMMCTL0_L) = PMMCOREV0 * level;
+        MOV.B   R14, &0x120
+//  348 
+//  349     //Set SVM, SVS low side to new level
+//  350     HWREG16(PMM_BASE + OFS_SVSMLCTL) = SVMLE | (SVSMLRRL0 * level) |
+//  351                                          SVSLE | (SVSLRVL0 * level);
+        MOV.B   R14, R15
+        MOV.B   R14, R13
+        AND.W   #0xff, R13
+        SWPB    R13
+        BIS.W   R13, R15
+        BIS.W   #0x4400, R15
+        MOV.W   R15, &0x126
+//  352 
+//  353     //Wait until SVM, SVS low side is settled
+//  354     while ((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMLDLYIFG) == 0) ;
+??PMM_setVCoreUp_3:
+        BIT.W   #0x1, &0x12c
+        JNC     ??PMM_setVCoreUp_3
+//  355 
+//  356     //Clear flag
+//  357     HWREG16(PMM_BASE + OFS_PMMIFG) &= ~SVSMLDLYIFG;
+        BIC.W   #0x1, &0x12c
+//  358     //SVS, SVM core and high side are now set to protect for the new core level
+//  359 
+//  360     //Restore Low side settings
+//  361     //Clear all other bits _except_ level settings
+//  362     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= (SVSLRVL0 + SVSLRVL1 + SVSMLRRL0 +
+//  363                                            SVSMLRRL1 + SVSMLRRL2
+//  364                                            );
+        AND.W   #0x307, &0x126
+//  365 
+//  366     //Clear level settings in the backup register,keep all other bits
+//  367     SVSMLCTL_backup &=
+//  368         ~(SVSLRVL0 + SVSLRVL1 + SVSMLRRL0 + SVSMLRRL1 + SVSMLRRL2);
+        AND.W   #0xfcf8, R8
+        MOV.W   #0x0, R9
+//  369 
+//  370     //Restore low-side SVS monitor settings
+//  371     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= SVSMLCTL_backup;
+        BIS.W   R8, &0x126
+//  372 
+//  373     //Restore High side settings
+//  374     //Clear all other bits except level settings
+//  375     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= (SVSHRVL0 + SVSHRVL1 +
+//  376                                            SVSMHRRL0 + SVSMHRRL1 +
+//  377                                            SVSMHRRL2
+//  378                                            );
+        AND.W   #0x307, &0x124
+//  379 
+//  380     //Clear level settings in the backup register,keep all other bits
+//  381     SVSMHCTL_backup &=
+//  382         ~(SVSHRVL0 + SVSHRVL1 + SVSMHRRL0 + SVSMHRRL1 + SVSMHRRL2);
+        AND.W   #0xfcf8, R6
+        MOV.W   #0x0, R7
+//  383 
+//  384     //Restore backup
+//  385     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= SVSMHCTL_backup;
+        BIS.W   R6, &0x124
+//  386 
+//  387     //Wait until high side, low side settled
+//  388     while (((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMLDLYIFG) == 0) ||
+//  389            ((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMHDLYIFG) == 0)) ;
+??PMM_setVCoreUp_4:
+        BIT.W   #0x1, &0x12c
+        JNC     ??PMM_setVCoreUp_4
+        BIT.W   #0x10, &0x12c
+        JNC     ??PMM_setVCoreUp_4
+//  390 
+//  391     //Clear all Flags
+//  392     HWREG16(PMM_BASE + OFS_PMMIFG) &= ~(SVMHVLRIFG | SVMHIFG | SVSMHDLYIFG |
+//  393                                           SVMLVLRIFG | SVMLIFG | SVSMLDLYIFG
+//  394                                           );
+        AND.W   #0xff88, &0x12c
+//  395 
+//  396     //Restore PMM interrupt enable register
+//  397     HWREG16(PMM_BASE + OFS_PMMRIE) = PMMRIE_backup;
+        MOV.W   R10, &0x12e
+//  398 
+//  399     //Lock PMM registers for write access
+//  400     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  401 
+//  402     return ( STATUS_SUCCESS) ;
+        MOV.W   #0x1, R12
+??PMM_setVCoreUp_5:
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  403 }
+          CFI EndBlock cfiBlock31
+//  404 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  405 uint16_t PMM_setVCoreDown ( uint8_t level){
+PMM_setVCoreDown:
+          CFI Block cfiBlock32 Using cfiCommon0
+          CFI Function PMM_setVCoreDown
+          CFI NoCalls
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.B   R12, R14
+//  406     uint32_t PMMRIE_backup, SVSMHCTL_backup, SVSMLCTL_backup;
+//  407 
+//  408     //The code flow for decreasing the Vcore has been altered to work around
+//  409     //the erratum FLASH37.
+//  410     //Please refer to the Errata sheet to know if a specific device is affected
+//  411     //DO NOT ALTER THIS FUNCTION
+//  412 
+//  413     //Open PMM registers for write access
+//  414     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0xA5;
+        MOV.B   #0xa5, &0x121
+//  415 
+//  416     //Disable dedicated Interrupts
+//  417     //Backup all registers
+//  418     PMMRIE_backup = HWREG16(PMM_BASE + OFS_PMMRIE);
+        MOV.W   &0x12e, R12
+        MOV.W   #0x0, R13
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  419     HWREG16(PMM_BASE + OFS_PMMRIE) &= ~(SVMHVLRPE | SVSHPE | SVMLVLRPE |
+//  420                                           SVSLPE | SVMHVLRIE | SVMHIE |
+//  421                                           SVSMHDLYIE | SVMLVLRIE | SVMLIE |
+//  422                                           SVSMLDLYIE
+//  423                                           );
+        AND.W   #0xcc88, &0x12e
+//  424     SVSMHCTL_backup = HWREG16(PMM_BASE + OFS_SVSMHCTL);
+        MOV.W   &0x124, R12
+        MOV.W   #0x0, R13
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  425     SVSMLCTL_backup = HWREG16(PMM_BASE + OFS_SVSMLCTL);
+        MOV.W   &0x126, R12
+        MOV.W   #0x0, R13
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  426 
+//  427     //Clear flags
+//  428     HWREG16(PMM_BASE + OFS_PMMIFG) &= ~(SVMHIFG | SVSMHDLYIFG |
+//  429                                           SVMLIFG | SVSMLDLYIFG
+//  430                                           );
+        AND.W   #0xffcc, &0x12c
+//  431 
+//  432     //Set SVM, SVS high & low side to new settings in normal mode
+//  433     HWREG16(PMM_BASE + OFS_SVSMHCTL) = SVMHE | (SVSMHRRL0 * level) |
+//  434                                          SVSHE | (SVSHRVL0 * level);
+        MOV.B   R14, R15
+        MOV.B   R14, R13
+        AND.W   #0xff, R13
+        SWPB    R13
+        BIS.W   R13, R15
+        BIS.W   #0x4400, R15
+        MOV.W   R15, &0x124
+//  435     HWREG16(PMM_BASE + OFS_SVSMLCTL) = SVMLE | (SVSMLRRL0 * level) |
+//  436                                          SVSLE | (SVSLRVL0 * level);
+        MOV.B   R14, R15
+        MOV.B   R14, R13
+        AND.W   #0xff, R13
+        SWPB    R13
+        BIS.W   R13, R15
+        BIS.W   #0x4400, R15
+        MOV.W   R15, &0x126
+//  437 
+//  438     //Wait until SVM high side and SVM low side is settled
+//  439     while ((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMHDLYIFG) == 0 ||
+//  440            (HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMLDLYIFG) == 0) ;
+??PMM_setVCoreDown_0:
+        BIT.W   #0x10, &0x12c
+        JNC     ??PMM_setVCoreDown_0
+        BIT.W   #0x1, &0x12c
+        JNC     ??PMM_setVCoreDown_0
+//  441 
+//  442     //Clear flags
+//  443     HWREG16(PMM_BASE + OFS_PMMIFG) &= ~(SVSMHDLYIFG + SVSMLDLYIFG);
+        AND.W   #0xffee, &0x12c
+//  444     //SVS, SVM core and high side are now set to protect for the new core level
+//  445 
+//  446     //Set VCore to new level
+//  447     HWREG8(PMM_BASE + OFS_PMMCTL0_L) = PMMCOREV0 * level;
+        MOV.B   R14, &0x120
+//  448 
+//  449     //Restore Low side settings
+//  450     //Clear all other bits _except_ level settings
+//  451     HWREG16(PMM_BASE + OFS_SVSMLCTL) &= (SVSLRVL0 + SVSLRVL1 + SVSMLRRL0 +
+//  452                                            SVSMLRRL1 + SVSMLRRL2
+//  453                                            );
+        AND.W   #0x307, &0x126
+//  454 
+//  455     //Clear level settings in the backup register,keep all other bits
+//  456     SVSMLCTL_backup &=
+//  457         ~(SVSLRVL0 + SVSLRVL1 + SVSMLRRL0 + SVSMLRRL1 + SVSMLRRL2);
+        AND.W   #0xfcf8, R8
+        MOV.W   #0x0, R9
+//  458 
+//  459     //Restore low-side SVS monitor settings
+//  460     HWREG16(PMM_BASE + OFS_SVSMLCTL) |= SVSMLCTL_backup;
+        BIS.W   R8, &0x126
+//  461 
+//  462     //Restore High side settings
+//  463     //Clear all other bits except level settings
+//  464     HWREG16(PMM_BASE + OFS_SVSMHCTL) &= (SVSHRVL0 + SVSHRVL1 + SVSMHRRL0 +
+//  465                                            SVSMHRRL1 + SVSMHRRL2
+//  466                                            );
+        AND.W   #0x307, &0x124
+//  467 
+//  468     //Clear level settings in the backup register, keep all other bits
+//  469     SVSMHCTL_backup &=
+//  470         ~(SVSHRVL0 + SVSHRVL1 + SVSMHRRL0 + SVSMHRRL1 + SVSMHRRL2);
+        AND.W   #0xfcf8, R6
+        MOV.W   #0x0, R7
+//  471 
+//  472     //Restore backup
+//  473     HWREG16(PMM_BASE + OFS_SVSMHCTL) |= SVSMHCTL_backup;
+        BIS.W   R6, &0x124
+//  474 
+//  475     //Wait until high side, low side settled
+//  476     while (((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMLDLYIFG) == 0) ||
+//  477            ((HWREG16(PMM_BASE + OFS_PMMIFG) & SVSMHDLYIFG) == 0)) ;
+??PMM_setVCoreDown_1:
+        BIT.W   #0x1, &0x12c
+        JNC     ??PMM_setVCoreDown_1
+        BIT.W   #0x10, &0x12c
+        JNC     ??PMM_setVCoreDown_1
+//  478 
+//  479     //Clear all Flags
+//  480     HWREG16(PMM_BASE + OFS_PMMIFG) &= ~(SVMHVLRIFG | SVMHIFG | SVSMHDLYIFG |
+//  481                                           SVMLVLRIFG | SVMLIFG | SVSMLDLYIFG
+//  482                                           );
+        AND.W   #0xff88, &0x12c
+//  483 
+//  484     //Restore PMM interrupt enable register
+//  485     HWREG16(PMM_BASE + OFS_PMMRIE) = PMMRIE_backup;
+        MOV.W   R10, &0x12e
+//  486     //Lock PMM registers for write access
+//  487     HWREG8(PMM_BASE + OFS_PMMCTL0_H) = 0x00;
+        MOV.B   #0x0, &0x121
+//  488     //Return: OK
+//  489     return ( STATUS_SUCCESS) ;
+        MOV.W   #0x1, R12
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  490 }
+          CFI EndBlock cfiBlock32
+//  491 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  492 bool PMM_setVCore ( uint8_t level){
+PMM_setVCore:
+          CFI Block cfiBlock33 Using cfiCommon0
+          CFI Function PMM_setVCore
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R9
+//  493     uint8_t actlevel;
+//  494     bool status = STATUS_SUCCESS;
+        MOV.B   #0x1, R11
+//  495     uint16_t interruptState;
+//  496 
+//  497     //Set Mask for Max. level
+//  498     level &= PMMCOREV_3;
+        AND.B   #0x3, R9
+//  499 
+//  500     //Get actual VCore
+//  501     actlevel = (HWREG16(PMM_BASE + OFS_PMMCTL0) & PMMCOREV_3);
+        MOV.W   &0x120, R14
+        AND.B   #0x3, R14
+        MOV.B   R14, R10
+//  502 
+//  503     //Disable interrupts because certain peripherals will not
+//  504     //work during VCORE change
+//  505     interruptState = __get_interrupt_state();
+        MOV.W   SR, R15
+        MOV.W   R15, R8
+//  506     __disable_interrupt();
+        DINT
+        NOP
+//  507     __no_operation();
+        NOP
+//  508 
+//  509     //step by step increase or decrease
+//  510     while ((level != actlevel) && (status == STATUS_SUCCESS))
+??PMM_setVCore_0:
+        CMP.B   R10, R9
+        JEQ     ??PMM_setVCore_1
+        CMP.B   #0x0, R11
+        JEQ     ??PMM_setVCore_1
+//  511     {
+//  512         if (level > actlevel){
+        CMP.B   R9, R10
+        JC      ??PMM_setVCore_2
+//  513             status = PMM_setVCoreUp(++actlevel);
+        ADD.B   #0x1, R10
+        MOV.B   R10, R12
+          CFI FunCall PMM_setVCoreUp
+        CALLA   #PMM_setVCoreUp
+        CMP.W   #0x0, R12
+        JEQ     ??PMM_setVCore_3
+        MOV.B   #0x1, R11
+        JMP     ??PMM_setVCore_0
+??PMM_setVCore_3:
+        MOV.B   #0x0, R11
+        JMP     ??PMM_setVCore_0
+//  514         } else   {
+//  515             status = PMM_setVCoreDown(--actlevel);
+??PMM_setVCore_2:
+        ADD.B   #0xff, R10
+        MOV.B   R10, R12
+          CFI FunCall PMM_setVCoreDown
+        CALLA   #PMM_setVCoreDown
+        CMP.W   #0x0, R12
+        JEQ     ??PMM_setVCore_4
+        MOV.B   #0x1, R11
+        JMP     ??PMM_setVCore_0
+??PMM_setVCore_4:
+        MOV.B   #0x0, R11
+        JMP     ??PMM_setVCore_0
+//  516         }
+//  517     }
+//  518 
+//  519     //Re-enable interrupt state to whatever it was before
+//  520     if(interruptState & GIE)
+??PMM_setVCore_1:
+        BIT.W   #0x8, R8
+        JNC     ??PMM_setVCore_5
+        NOP
+//  521     {
+//  522         __enable_interrupt();
+        EINT
+        NOP
+//  523     }
+//  524 
+//  525     return ( status) ;
+??PMM_setVCore_5:
+        MOV.B   R11, R12
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+//  526 }
+          CFI EndBlock cfiBlock33
+//  527 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  528 uint16_t PMM_getInterruptStatus (uint16_t mask)
+PMM_getInterruptStatus:
+          CFI Block cfiBlock34 Using cfiCommon0
+          CFI Function PMM_getInterruptStatus
+          CFI NoCalls
+//  529 {
+//  530     return ( (HWREG16(PMM_BASE + OFS_PMMIFG)) & mask );
+        AND.W   &0x12c, R12
+        RETA
+//  531 }
+          CFI EndBlock cfiBlock34
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  532 
+//  533 #endif
+//  534 //*****************************************************************************
+//  535 //
+//  536 //! Close the doxygen group for pmm_api
+//  537 //! @}
+//  538 //
+//  539 //*****************************************************************************
+// 
+// 1 118 bytes in segment CODE
+// 
+// 1 118 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,327 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:45
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\pid.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWE165.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\pid.c -D
+#        NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\pid.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\pid.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\pid.c
+      1          #include "pid.h"
+      2          #include "myMath.h"	
+      3          
+      4          /**************************************************************
+      5           *批量复位PID函数
+      6           * @param[in] 
+      7           * @param[out] 
+      8           * @return     
+      9           ***************************************************************/	
+
+   \                                 In  segment CODE, align 2
+     10          void pidRest(PidObject **pid,const uint8_t len)
+   \                     pidRest:
+     11          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+     12          	uint8_t i;
+     13          	for(i=0;i<len;i++)
+   \   000002   4E43         MOV.B   #0x0, R14
+   \   000004   213C         JMP     ??pidRest_1
+     14          	{
+     15          	  	pid[i]->integ = 0;
+   \                     ??pidRest_0:
+   \   000006   4F4E         MOV.B   R14, R15
+   \   000008   4F06         RLAM.A  #0x2, R15
+   \   00000A   EF0C         ADDA    R12, R15
+   \   00000C   0F0F         MOVA    @R15, R15
+   \   00000E   8F430C00     MOV.W   #0x0, 0xc(R15)
+   \   000012   8F430E00     MOV.W   #0x0, 0xe(R15)
+     16          	    pid[i]->prevError = 0;
+   \   000016   4F4E         MOV.B   R14, R15
+   \   000018   4F06         RLAM.A  #0x2, R15
+   \   00001A   EF0C         ADDA    R12, R15
+   \   00001C   0F0F         MOVA    @R15, R15
+   \   00001E   8F430800     MOV.W   #0x0, 0x8(R15)
+   \   000022   8F430A00     MOV.W   #0x0, 0xa(R15)
+     17          	    pid[i]->out = 0;
+   \   000026   4F4E         MOV.B   R14, R15
+   \   000028   4F06         RLAM.A  #0x2, R15
+   \   00002A   EF0C         ADDA    R12, R15
+   \   00002C   0F0F         MOVA    @R15, R15
+   \   00002E   8F432800     MOV.W   #0x0, 0x28(R15)
+   \   000032   8F432A00     MOV.W   #0x0, 0x2a(R15)
+     18          			pid[i]->offset = 0;
+   \   000036   4F4E         MOV.B   R14, R15
+   \   000038   4F06         RLAM.A  #0x2, R15
+   \   00003A   EF0C         ADDA    R12, R15
+   \   00003C   0F0F         MOVA    @R15, R15
+   \   00003E   8F430400     MOV.W   #0x0, 0x4(R15)
+   \   000042   8F430600     MOV.W   #0x0, 0x6(R15)
+     19          	}
+   \   000046   5E53         ADD.B   #0x1, R14
+   \                     ??pidRest_1:
+   \   000048   4E9D         CMP.B   R13, R14
+   \   00004A   DD2B         JNC     ??pidRest_0
+     20          }
+   \   00004C   0A16         POPM.A  #0x1, R10
+   \   00004E   1001         RETA
+     21          
+     22          /**************************************************************
+     23           * Update the PID parameters.
+     24           *
+     25           * @param[in] pid         A pointer to the pid object.
+     26           * @param[in] measured    The measured value
+     27           * @param[in] updateError Set to TRUE if error should be calculated.
+     28           *                        Set to False if pidSetError() has been used.
+     29           * @return PID algorithm output
+     30           ***************************************************************/	
+
+   \                                 In  segment CODE, align 2
+     31          void pidUpdate(PidObject* pid,const float dt)
+   \                     pidUpdate:
+     32          {
+   \   000000   6A14         PUSHM.A #0x7, R10
+   \   000002   CA0C         MOVA    R12, R10
+   \   000004   064E         MOV.W   R14, R6
+   \   000006   074F         MOV.W   R15, R7
+     33             float error;
+     34             float deriv;
+     35          	
+     36              error = pid->desired - pid->measured + pid->offset;         //计算误差
+   \   000008   2C4A         MOV.W   @R10, R12
+   \   00000A   1D4A0200     MOV.W   0x2(R10), R13
+   \   00000E   1E4A2400     MOV.W   0x24(R10), R14
+   \   000012   1F4A2600     MOV.W   0x26(R10), R15
+   \   000016   ........     CALLA   #_Sub32f
+   \   00001A   0E4C         MOV.W   R12, R14
+   \   00001C   0F4D         MOV.W   R13, R15
+   \   00001E   1C4A0400     MOV.W   0x4(R10), R12
+   \   000022   1D4A0600     MOV.W   0x6(R10), R13
+   \   000026   ........     CALLA   #_Add32f
+   \   00002A   084C         MOV.W   R12, R8
+   \   00002C   094D         MOV.W   R13, R9
+     37          
+     38              pid->integ += error * dt;	        //计算积分量
+   \   00002E   0C48         MOV.W   R8, R12
+   \   000030   0D49         MOV.W   R9, R13
+   \   000032   0E46         MOV.W   R6, R14
+   \   000034   0F47         MOV.W   R7, R15
+   \   000036   ........     CALLA   #_Mul32f
+   \   00003A   0E4C         MOV.W   R12, R14
+   \   00003C   0F4D         MOV.W   R13, R15
+   \   00003E   1C4A0C00     MOV.W   0xc(R10), R12
+   \   000042   1D4A0E00     MOV.W   0xe(R10), R13
+   \   000046   ........     CALLA   #_Add32f
+   \   00004A   8A4C0C00     MOV.W   R12, 0xc(R10)
+   \   00004E   8A4D0E00     MOV.W   R13, 0xe(R10)
+     39            
+     40              deriv = (error - pid->prevError)/dt;        //计算微分量
+   \   000052   0C48         MOV.W   R8, R12
+   \   000054   0D49         MOV.W   R9, R13
+   \   000056   1E4A0800     MOV.W   0x8(R10), R14
+   \   00005A   1F4A0A00     MOV.W   0xa(R10), R15
+   \   00005E   ........     CALLA   #_Sub32f
+   \   000062   0E46         MOV.W   R6, R14
+   \   000064   0F47         MOV.W   R7, R15
+   \   000066   ........     CALLA   #_Div32f
+   \   00006A   064C         MOV.W   R12, R6
+   \   00006C   074D         MOV.W   R13, R7
+     41          	
+     42              pid->out = pid->kp * error + pid->ki * pid->integ + pid->kd * deriv;//PID最终输出
+   \   00006E   1C4A1000     MOV.W   0x10(R10), R12
+   \   000072   1D4A1200     MOV.W   0x12(R10), R13
+   \   000076   0E48         MOV.W   R8, R14
+   \   000078   0F49         MOV.W   R9, R15
+   \   00007A   ........     CALLA   #_Mul32f
+   \   00007E   044C         MOV.W   R12, R4
+   \   000080   054D         MOV.W   R13, R5
+   \   000082   1C4A1400     MOV.W   0x14(R10), R12
+   \   000086   1D4A1600     MOV.W   0x16(R10), R13
+   \   00008A   1E4A0C00     MOV.W   0xc(R10), R14
+   \   00008E   1F4A0E00     MOV.W   0xe(R10), R15
+   \   000092   ........     CALLA   #_Mul32f
+   \   000096   0E4C         MOV.W   R12, R14
+   \   000098   0F4D         MOV.W   R13, R15
+   \   00009A   0C44         MOV.W   R4, R12
+   \   00009C   0D45         MOV.W   R5, R13
+   \   00009E   ........     CALLA   #_Add32f
+   \   0000A2   044C         MOV.W   R12, R4
+   \   0000A4   054D         MOV.W   R13, R5
+   \   0000A6   1C4A1800     MOV.W   0x18(R10), R12
+   \   0000AA   1D4A1A00     MOV.W   0x1a(R10), R13
+   \   0000AE   0E46         MOV.W   R6, R14
+   \   0000B0   0F47         MOV.W   R7, R15
+   \   0000B2   ........     CALLA   #_Mul32f
+   \   0000B6   0E4C         MOV.W   R12, R14
+   \   0000B8   0F4D         MOV.W   R13, R15
+   \   0000BA   0C44         MOV.W   R4, R12
+   \   0000BC   0D45         MOV.W   R5, R13
+   \   0000BE   ........     CALLA   #_Add32f
+   \   0000C2   8A4C2800     MOV.W   R12, 0x28(R10)
+   \   0000C6   8A4D2A00     MOV.W   R13, 0x2a(R10)
+     43          		
+     44              pid->prevError = error;  	        //保存此次误差
+   \   0000CA   8A480800     MOV.W   R8, 0x8(R10)
+   \   0000CE   8A490A00     MOV.W   R9, 0xa(R10)
+     45          }
+   \   0000D2   6416         POPM.A  #0x7, R10
+   \   0000D4   1001         RETA
+     46          
+     47          /**************************************************************
+     48           *  CascadePID
+     49           * @param[in] 
+     50           * @param[out] 
+     51           * @return     
+     52           ***************************************************************/	
+
+   \                                 In  segment CODE, align 2
+     53          void CascadePID(PidObject* pidRate,PidObject* pidAngE,const float dt)  //串级PID
+   \                     CascadePID:
+     54          {	 
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   C80C         MOVA    R12, R8
+   \   000004   C90D         MOVA    R13, R9
+   \   000006   0A4E         MOV.W   R14, R10
+   \   000008   0B4F         MOV.W   R15, R11
+     55              pidUpdate(pidAngE,dt);   
+   \   00000A   0E4A         MOV.W   R10, R14
+   \   00000C   0F4B         MOV.W   R11, R15
+   \   00000E   CC09         MOVA    R9, R12
+   \   000010   ........     CALLA   #pidUpdate
+     56              pidRate->desired = pidAngE->out;
+   \   000014   984928000000 MOV.W   0x28(R9), 0(R8)
+   \   00001A   98492A000200 MOV.W   0x2a(R9), 0x2(R8)
+     57              pidUpdate(pidRate,dt);    
+   \   000020   0E4A         MOV.W   R10, R14
+   \   000022   0F4B         MOV.W   R11, R15
+   \   000024   CC08         MOVA    R8, R12
+   \   000026   ........     CALLA   #pidUpdate
+     58          }
+   \   00002A   3816         POPM.A  #0x4, R11
+   \   00002C   1001         RETA
+     59          
+     60          /*******************************END*********************************/
+     61          
+     62          
+     63          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     20   CascadePID
+       20   -> pidUpdate
+      8   pidRest
+     32   pidUpdate
+       32 _Add32f
+       32 _Div32f
+       32 _Mul32f
+       32 _Sub32f
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      46  CascadePID
+      80  pidRest
+     214  pidUpdate
+
+ 
+ 340 bytes in segment CODE
+ 
+ 340 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,1127 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:41
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\imu.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWD314.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\imu.c -D
+#        NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\imu.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\imu.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\imu.c
+      1          
+      2          #include "imu.h"
+      3          #include "myMath.h"
+      4          #include <math.h>
+      5          
+      6          
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      7          static float NormAccz;
+   \                     NormAccz:
+   \   000000                DS8 4
+      8          
+      9          typedef struct {  //四元数
+     10            float q0;
+     11            float q1;
+     12            float q2;
+     13            float q3;
+     14          }Quaternion;
+     15          
+     16          /*****************************************************************************************
+     17           * 四元数
+     18           * @param[in] MPU6050数据
+     19           * @param[out] 角度值
+     20           * @brief 此函数有一定的难度，姿态解算就一个函数，采用四元数梯度下降法估计姿态。
+     21          					提取重力分量->获取加速度补偿值->角速度积分值->
+     22                                                  一介龙格库塔法补偿四元数->提取四元数旋转矩阵的姿态角
+     23           * @return     
+     24           ******************************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     25          void GetAngle(const _st_Mpu *pMpu,_st_AngE *pAngE, float dt)
+   \                     GetAngle:
+     26          {		
+   \   000000   7B14         PUSHM.A #0x8, R11
+   \   000002   0F12         PUSH.W  R15
+   \   000004   0E12         PUSH.W  R14
+   \   000006   B1003400     SUBA    #0x34, SP
+   \   00000A   C80C         MOVA    R12, R8
+   \   00000C   C90D         MOVA    R13, R9
+     27              struct Vector{
+     28                        float x;
+     29                        float y;
+     30                        float z;
+     31                      }; 
+     32              struct Vector Gravity,Acc,Gyro,AccGravity;
+     33          
+     34              static struct Vector GyroIntegError = {0};
+     35              static  float KpDef = 0.8f ; //四元数收敛值
+     36              static  float KiDef = 0.0003f; //加速度补偿角速度积分值
+     37              static Quaternion NumQ = {1, 0, 0, 0};
+     38              float q0_t,q1_t,q2_t,q3_t;
+     39          
+     40              float NormQuat; 
+     41              float HalfTime = dt * 0.5f;
+   \   00000E   1C413400     MOV.W   0x34(SP), R12
+   \   000012   1D413600     MOV.W   0x36(SP), R13
+   \   000016   0E43         MOV.W   #0x0, R14
+   \   000018   3F40003F     MOV.W   #0x3f00, R15
+   \   00001C   ........     CALLA   #_Mul32f
+   \   000020   0A4C         MOV.W   R12, R10
+   \   000022   0B4D         MOV.W   R13, R11
+     42          
+     43              Gravity.x = 2*(NumQ.q1 * NumQ.q3 - NumQ.q0 * NumQ.q2);								
+   \   000024   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   00002A   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   000030   ....1E42.... MOVX.W  &??NumQ + 12, R14
+   \   000036   ....1F42.... MOVX.W  &??NumQ + 14, R15
+   \   00003C   ........     CALLA   #_Mul32f
+   \   000040   064C         MOV.W   R12, R6
+   \   000042   074D         MOV.W   R13, R7
+   \   000044   ....1C42.... MOVX.W  &??NumQ, R12
+   \   00004A   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   000050   ....1E42.... MOVX.W  &??NumQ + 8, R14
+   \   000056   ....1F42.... MOVX.W  &??NumQ + 10, R15
+   \   00005C   ........     CALLA   #_Mul32f
+   \   000060   0E4C         MOV.W   R12, R14
+   \   000062   0F4D         MOV.W   R13, R15
+   \   000064   0C46         MOV.W   R6, R12
+   \   000066   0D47         MOV.W   R7, R13
+   \   000068   ........     CALLA   #_Sub32f
+   \   00006C   0E4C         MOV.W   R12, R14
+   \   00006E   0F4D         MOV.W   R13, R15
+   \   000070   0C43         MOV.W   #0x0, R12
+   \   000072   3D400040     MOV.W   #0x4000, R13
+   \   000076   ........     CALLA   #_Mul32f
+   \   00007A   814C2800     MOV.W   R12, 0x28(SP)
+   \   00007E   814D2A00     MOV.W   R13, 0x2a(SP)
+     44              Gravity.y = 2*(NumQ.q0 * NumQ.q1 + NumQ.q2 * NumQ.q3);						  
+   \   000082   ....1C42.... MOVX.W  &??NumQ, R12
+   \   000088   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   00008E   ....1E42.... MOVX.W  &??NumQ + 4, R14
+   \   000094   ....1F42.... MOVX.W  &??NumQ + 6, R15
+   \   00009A   ........     CALLA   #_Mul32f
+   \   00009E   064C         MOV.W   R12, R6
+   \   0000A0   074D         MOV.W   R13, R7
+   \   0000A2   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   0000A8   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   0000AE   ....1E42.... MOVX.W  &??NumQ + 12, R14
+   \   0000B4   ....1F42.... MOVX.W  &??NumQ + 14, R15
+   \   0000BA   ........     CALLA   #_Mul32f
+   \   0000BE   0E4C         MOV.W   R12, R14
+   \   0000C0   0F4D         MOV.W   R13, R15
+   \   0000C2   0C46         MOV.W   R6, R12
+   \   0000C4   0D47         MOV.W   R7, R13
+   \   0000C6   ........     CALLA   #_Add32f
+   \   0000CA   0E4C         MOV.W   R12, R14
+   \   0000CC   0F4D         MOV.W   R13, R15
+   \   0000CE   0C43         MOV.W   #0x0, R12
+   \   0000D0   3D400040     MOV.W   #0x4000, R13
+   \   0000D4   ........     CALLA   #_Mul32f
+   \   0000D8   814C2C00     MOV.W   R12, 0x2c(SP)
+   \   0000DC   814D2E00     MOV.W   R13, 0x2e(SP)
+     45              Gravity.z = 1-2*(NumQ.q1 * NumQ.q1 + NumQ.q2 * NumQ.q2);	
+   \   0000E0   0C43         MOV.W   #0x0, R12
+   \   0000E2   3D40803F     MOV.W   #0x3f80, R13
+   \   0000E6   044C         MOV.W   R12, R4
+   \   0000E8   054D         MOV.W   R13, R5
+   \   0000EA   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   0000F0   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   0000F6   ....1E42.... MOVX.W  &??NumQ + 4, R14
+   \   0000FC   ....1F42.... MOVX.W  &??NumQ + 6, R15
+   \   000102   ........     CALLA   #_Mul32f
+   \   000106   064C         MOV.W   R12, R6
+   \   000108   074D         MOV.W   R13, R7
+   \   00010A   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   000110   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   000116   ....1E42.... MOVX.W  &??NumQ + 8, R14
+   \   00011C   ....1F42.... MOVX.W  &??NumQ + 10, R15
+   \   000122   ........     CALLA   #_Mul32f
+   \   000126   0E4C         MOV.W   R12, R14
+   \   000128   0F4D         MOV.W   R13, R15
+   \   00012A   0C46         MOV.W   R6, R12
+   \   00012C   0D47         MOV.W   R7, R13
+   \   00012E   ........     CALLA   #_Add32f
+   \   000132   0E4C         MOV.W   R12, R14
+   \   000134   0F4D         MOV.W   R13, R15
+   \   000136   0C43         MOV.W   #0x0, R12
+   \   000138   3D400040     MOV.W   #0x4000, R13
+   \   00013C   ........     CALLA   #_Mul32f
+   \   000140   0E4C         MOV.W   R12, R14
+   \   000142   0F4D         MOV.W   R13, R15
+   \   000144   0C44         MOV.W   R4, R12
+   \   000146   0D45         MOV.W   R5, R13
+   \   000148   ........     CALLA   #_Sub32f
+   \   00014C   814C3000     MOV.W   R12, 0x30(SP)
+   \   000150   814D3200     MOV.W   R13, 0x32(SP)
+     46          
+     47              NormQuat = Q_rsqrt(squa(MPU6050.accX)+ squa(MPU6050.accY) +squa(MPU6050.accZ));
+   \   000154   ....1C42.... MOVX.W  &MPU6050, R12
+   \   00015A   0D4C         MOV.W   R12, R13
+   \   00015C   0D5D         RLA.W   R13
+   \   00015E   0D7D         SUBC.W  R13, R13
+   \   000160   3DE3         XOR.W   #0xffff, R13
+   \   000162   ........     CALLA   #_Cast32sto32f
+   \   000166   0E4C         MOV.W   R12, R14
+   \   000168   0F4D         MOV.W   R13, R15
+   \   00016A   ....1C42.... MOVX.W  &MPU6050, R12
+   \   000170   0D4C         MOV.W   R12, R13
+   \   000172   0D5D         RLA.W   R13
+   \   000174   0D7D         SUBC.W  R13, R13
+   \   000176   3DE3         XOR.W   #0xffff, R13
+   \   000178   ........     CALLA   #_Cast32sto32f
+   \   00017C   ........     CALLA   #_Mul32f
+   \   000180   064C         MOV.W   R12, R6
+   \   000182   074D         MOV.W   R13, R7
+   \   000184   ....1C42.... MOVX.W  &MPU6050 + 2, R12
+   \   00018A   0D4C         MOV.W   R12, R13
+   \   00018C   0D5D         RLA.W   R13
+   \   00018E   0D7D         SUBC.W  R13, R13
+   \   000190   3DE3         XOR.W   #0xffff, R13
+   \   000192   ........     CALLA   #_Cast32sto32f
+   \   000196   0E4C         MOV.W   R12, R14
+   \   000198   0F4D         MOV.W   R13, R15
+   \   00019A   ....1C42.... MOVX.W  &MPU6050 + 2, R12
+   \   0001A0   0D4C         MOV.W   R12, R13
+   \   0001A2   0D5D         RLA.W   R13
+   \   0001A4   0D7D         SUBC.W  R13, R13
+   \   0001A6   3DE3         XOR.W   #0xffff, R13
+   \   0001A8   ........     CALLA   #_Cast32sto32f
+   \   0001AC   ........     CALLA   #_Mul32f
+   \   0001B0   0E46         MOV.W   R6, R14
+   \   0001B2   0F47         MOV.W   R7, R15
+   \   0001B4   ........     CALLA   #_Add32f
+   \   0001B8   064C         MOV.W   R12, R6
+   \   0001BA   074D         MOV.W   R13, R7
+   \   0001BC   ....1C42.... MOVX.W  &MPU6050 + 4, R12
+   \   0001C2   0D4C         MOV.W   R12, R13
+   \   0001C4   0D5D         RLA.W   R13
+   \   0001C6   0D7D         SUBC.W  R13, R13
+   \   0001C8   3DE3         XOR.W   #0xffff, R13
+   \   0001CA   ........     CALLA   #_Cast32sto32f
+   \   0001CE   0E4C         MOV.W   R12, R14
+   \   0001D0   0F4D         MOV.W   R13, R15
+   \   0001D2   ....1C42.... MOVX.W  &MPU6050 + 4, R12
+   \   0001D8   0D4C         MOV.W   R12, R13
+   \   0001DA   0D5D         RLA.W   R13
+   \   0001DC   0D7D         SUBC.W  R13, R13
+   \   0001DE   3DE3         XOR.W   #0xffff, R13
+   \   0001E0   ........     CALLA   #_Cast32sto32f
+   \   0001E4   ........     CALLA   #_Mul32f
+   \   0001E8   0E46         MOV.W   R6, R14
+   \   0001EA   0F47         MOV.W   R7, R15
+   \   0001EC   ........     CALLA   #_Add32f
+   \   0001F0   ........     CALLA   #Q_rsqrt
+   \   0001F4   064C         MOV.W   R12, R6
+   \   0001F6   074D         MOV.W   R13, R7
+     48          	
+     49              Acc.x = pMpu->accX * NormQuat; //归一后可化为单位向量下方向分量
+   \   0001F8   2C48         MOV.W   @R8, R12
+   \   0001FA   0D4C         MOV.W   R12, R13
+   \   0001FC   0D5D         RLA.W   R13
+   \   0001FE   0D7D         SUBC.W  R13, R13
+   \   000200   3DE3         XOR.W   #0xffff, R13
+   \   000202   ........     CALLA   #_Cast32sto32f
+   \   000206   0E4C         MOV.W   R12, R14
+   \   000208   0F4D         MOV.W   R13, R15
+   \   00020A   0C46         MOV.W   R6, R12
+   \   00020C   0D47         MOV.W   R7, R13
+   \   00020E   ........     CALLA   #_Mul32f
+   \   000212   814C1C00     MOV.W   R12, 0x1c(SP)
+   \   000216   814D1E00     MOV.W   R13, 0x1e(SP)
+     50              Acc.y = pMpu->accY * NormQuat;
+   \   00021A   1C480200     MOV.W   0x2(R8), R12
+   \   00021E   0D4C         MOV.W   R12, R13
+   \   000220   0D5D         RLA.W   R13
+   \   000222   0D7D         SUBC.W  R13, R13
+   \   000224   3DE3         XOR.W   #0xffff, R13
+   \   000226   ........     CALLA   #_Cast32sto32f
+   \   00022A   0E4C         MOV.W   R12, R14
+   \   00022C   0F4D         MOV.W   R13, R15
+   \   00022E   0C46         MOV.W   R6, R12
+   \   000230   0D47         MOV.W   R7, R13
+   \   000232   ........     CALLA   #_Mul32f
+   \   000236   814C2000     MOV.W   R12, 0x20(SP)
+   \   00023A   814D2200     MOV.W   R13, 0x22(SP)
+     51              Acc.z = pMpu->accZ * NormQuat;	
+   \   00023E   1C480400     MOV.W   0x4(R8), R12
+   \   000242   0D4C         MOV.W   R12, R13
+   \   000244   0D5D         RLA.W   R13
+   \   000246   0D7D         SUBC.W  R13, R13
+   \   000248   3DE3         XOR.W   #0xffff, R13
+   \   00024A   ........     CALLA   #_Cast32sto32f
+   \   00024E   0E4C         MOV.W   R12, R14
+   \   000250   0F4D         MOV.W   R13, R15
+   \   000252   0C46         MOV.W   R6, R12
+   \   000254   0D47         MOV.W   R7, R13
+   \   000256   ........     CALLA   #_Mul32f
+   \   00025A   814C2400     MOV.W   R12, 0x24(SP)
+   \   00025E   814D2600     MOV.W   R13, 0x26(SP)
+     52          
+     53              AccGravity.x = (Acc.y * Gravity.z - Acc.z * Gravity.y);
+   \   000262   1C412000     MOV.W   0x20(SP), R12
+   \   000266   1D412200     MOV.W   0x22(SP), R13
+   \   00026A   1E413000     MOV.W   0x30(SP), R14
+   \   00026E   1F413200     MOV.W   0x32(SP), R15
+   \   000272   ........     CALLA   #_Mul32f
+   \   000276   064C         MOV.W   R12, R6
+   \   000278   074D         MOV.W   R13, R7
+   \   00027A   1C412400     MOV.W   0x24(SP), R12
+   \   00027E   1D412600     MOV.W   0x26(SP), R13
+   \   000282   1E412C00     MOV.W   0x2c(SP), R14
+   \   000286   1F412E00     MOV.W   0x2e(SP), R15
+   \   00028A   ........     CALLA   #_Mul32f
+   \   00028E   0E4C         MOV.W   R12, R14
+   \   000290   0F4D         MOV.W   R13, R15
+   \   000292   0C46         MOV.W   R6, R12
+   \   000294   0D47         MOV.W   R7, R13
+   \   000296   ........     CALLA   #_Sub32f
+   \   00029A   814C1000     MOV.W   R12, 0x10(SP)
+   \   00029E   814D1200     MOV.W   R13, 0x12(SP)
+     54              AccGravity.y = (Acc.z * Gravity.x - Acc.x * Gravity.z);
+   \   0002A2   1C412400     MOV.W   0x24(SP), R12
+   \   0002A6   1D412600     MOV.W   0x26(SP), R13
+   \   0002AA   1E412800     MOV.W   0x28(SP), R14
+   \   0002AE   1F412A00     MOV.W   0x2a(SP), R15
+   \   0002B2   ........     CALLA   #_Mul32f
+   \   0002B6   064C         MOV.W   R12, R6
+   \   0002B8   074D         MOV.W   R13, R7
+   \   0002BA   1C411C00     MOV.W   0x1c(SP), R12
+   \   0002BE   1D411E00     MOV.W   0x1e(SP), R13
+   \   0002C2   1E413000     MOV.W   0x30(SP), R14
+   \   0002C6   1F413200     MOV.W   0x32(SP), R15
+   \   0002CA   ........     CALLA   #_Mul32f
+   \   0002CE   0E4C         MOV.W   R12, R14
+   \   0002D0   0F4D         MOV.W   R13, R15
+   \   0002D2   0C46         MOV.W   R6, R12
+   \   0002D4   0D47         MOV.W   R7, R13
+   \   0002D6   ........     CALLA   #_Sub32f
+   \   0002DA   814C1400     MOV.W   R12, 0x14(SP)
+   \   0002DE   814D1600     MOV.W   R13, 0x16(SP)
+     55              AccGravity.z = (Acc.x * Gravity.y - Acc.y * Gravity.x);
+   \   0002E2   1C411C00     MOV.W   0x1c(SP), R12
+   \   0002E6   1D411E00     MOV.W   0x1e(SP), R13
+   \   0002EA   1E412C00     MOV.W   0x2c(SP), R14
+   \   0002EE   1F412E00     MOV.W   0x2e(SP), R15
+   \   0002F2   ........     CALLA   #_Mul32f
+   \   0002F6   064C         MOV.W   R12, R6
+   \   0002F8   074D         MOV.W   R13, R7
+   \   0002FA   1C412000     MOV.W   0x20(SP), R12
+   \   0002FE   1D412200     MOV.W   0x22(SP), R13
+   \   000302   1E412800     MOV.W   0x28(SP), R14
+   \   000306   1F412A00     MOV.W   0x2a(SP), R15
+   \   00030A   ........     CALLA   #_Mul32f
+   \   00030E   0E4C         MOV.W   R12, R14
+   \   000310   0F4D         MOV.W   R13, R15
+   \   000312   0C46         MOV.W   R6, R12
+   \   000314   0D47         MOV.W   R7, R13
+   \   000316   ........     CALLA   #_Sub32f
+   \   00031A   814C1800     MOV.W   R12, 0x18(SP)
+   \   00031E   814D1A00     MOV.W   R13, 0x1a(SP)
+     56          
+     57              GyroIntegError.x += AccGravity.x * KiDef;
+   \   000322   1C411000     MOV.W   0x10(SP), R12
+   \   000326   1D411200     MOV.W   0x12(SP), R13
+   \   00032A   ....1E42.... MOVX.W  &??KiDef, R14
+   \   000330   ....1F42.... MOVX.W  &??KiDef + 2, R15
+   \   000336   ........     CALLA   #_Mul32f
+   \   00033A   0E4C         MOV.W   R12, R14
+   \   00033C   0F4D         MOV.W   R13, R15
+   \   00033E   ....1C42.... MOVX.W  &??GyroIntegError, R12
+   \   000344   ....1D42.... MOVX.W  &??GyroIntegError + 2, R13
+   \   00034A   ........     CALLA   #_Add32f
+   \   00034E   ....824C.... MOVX.W  R12, &??GyroIntegError
+   \   000354   ....824D.... MOVX.W  R13, &??GyroIntegError + 2
+     58              GyroIntegError.y += AccGravity.y * KiDef;
+   \   00035A   1C411400     MOV.W   0x14(SP), R12
+   \   00035E   1D411600     MOV.W   0x16(SP), R13
+   \   000362   ....1E42.... MOVX.W  &??KiDef, R14
+   \   000368   ....1F42.... MOVX.W  &??KiDef + 2, R15
+   \   00036E   ........     CALLA   #_Mul32f
+   \   000372   0E4C         MOV.W   R12, R14
+   \   000374   0F4D         MOV.W   R13, R15
+   \   000376   ....1C42.... MOVX.W  &??GyroIntegError + 4, R12
+   \   00037C   ....1D42.... MOVX.W  &??GyroIntegError + 6, R13
+   \   000382   ........     CALLA   #_Add32f
+   \   000386   ....824C.... MOVX.W  R12, &??GyroIntegError + 4
+   \   00038C   ....824D.... MOVX.W  R13, &??GyroIntegError + 6
+     59              GyroIntegError.z += AccGravity.z * KiDef;
+   \   000392   1C411800     MOV.W   0x18(SP), R12
+   \   000396   1D411A00     MOV.W   0x1a(SP), R13
+   \   00039A   ....1E42.... MOVX.W  &??KiDef, R14
+   \   0003A0   ....1F42.... MOVX.W  &??KiDef + 2, R15
+   \   0003A6   ........     CALLA   #_Mul32f
+   \   0003AA   0E4C         MOV.W   R12, R14
+   \   0003AC   0F4D         MOV.W   R13, R15
+   \   0003AE   ....1C42.... MOVX.W  &??GyroIntegError + 8, R12
+   \   0003B4   ....1D42.... MOVX.W  &??GyroIntegError + 10, R13
+   \   0003BA   ........     CALLA   #_Add32f
+   \   0003BE   ....824C.... MOVX.W  R12, &??GyroIntegError + 8
+   \   0003C4   ....824D.... MOVX.W  R13, &??GyroIntegError + 10
+     60          
+     61              Gyro.x = pMpu->gyroX * Gyro_Gr + KpDef * AccGravity.x  +  GyroIntegError.x;//弧度制，，此处补偿的是角速度的漂移
+   \   0003CA   1C480600     MOV.W   0x6(R8), R12
+   \   0003CE   0D4C         MOV.W   R12, R13
+   \   0003D0   0D5D         RLA.W   R13
+   \   0003D2   0D7D         SUBC.W  R13, R13
+   \   0003D4   3DE3         XOR.W   #0xffff, R13
+   \   0003D6   ........     CALLA   #_Cast32sto32f
+   \   0003DA   0E4C         MOV.W   R12, R14
+   \   0003DC   0F4D         MOV.W   R13, R15
+   \   0003DE   ....1C42.... MOVX.W  &Gyro_Gr, R12
+   \   0003E4   ....1D42.... MOVX.W  &Gyro_Gr + 2, R13
+   \   0003EA   ........     CALLA   #_Mul32f
+   \   0003EE   064C         MOV.W   R12, R6
+   \   0003F0   074D         MOV.W   R13, R7
+   \   0003F2   ....1C42.... MOVX.W  &??KpDef, R12
+   \   0003F8   ....1D42.... MOVX.W  &??KpDef + 2, R13
+   \   0003FE   1E411000     MOV.W   0x10(SP), R14
+   \   000402   1F411200     MOV.W   0x12(SP), R15
+   \   000406   ........     CALLA   #_Mul32f
+   \   00040A   0E4C         MOV.W   R12, R14
+   \   00040C   0F4D         MOV.W   R13, R15
+   \   00040E   0C46         MOV.W   R6, R12
+   \   000410   0D47         MOV.W   R7, R13
+   \   000412   ........     CALLA   #_Add32f
+   \   000416   0E4C         MOV.W   R12, R14
+   \   000418   0F4D         MOV.W   R13, R15
+   \   00041A   ....1C42.... MOVX.W  &??GyroIntegError, R12
+   \   000420   ....1D42.... MOVX.W  &??GyroIntegError + 2, R13
+   \   000426   ........     CALLA   #_Add32f
+   \   00042A   814C0000     MOV.W   R12, 0(SP)
+   \   00042E   814D0200     MOV.W   R13, 0x2(SP)
+     62              Gyro.y = pMpu->gyroY * Gyro_Gr + KpDef * AccGravity.y  +  GyroIntegError.y;
+   \   000432   1C480800     MOV.W   0x8(R8), R12
+   \   000436   0D4C         MOV.W   R12, R13
+   \   000438   0D5D         RLA.W   R13
+   \   00043A   0D7D         SUBC.W  R13, R13
+   \   00043C   3DE3         XOR.W   #0xffff, R13
+   \   00043E   ........     CALLA   #_Cast32sto32f
+   \   000442   0E4C         MOV.W   R12, R14
+   \   000444   0F4D         MOV.W   R13, R15
+   \   000446   ....1C42.... MOVX.W  &Gyro_Gr, R12
+   \   00044C   ....1D42.... MOVX.W  &Gyro_Gr + 2, R13
+   \   000452   ........     CALLA   #_Mul32f
+   \   000456   064C         MOV.W   R12, R6
+   \   000458   074D         MOV.W   R13, R7
+   \   00045A   ....1C42.... MOVX.W  &??KpDef, R12
+   \   000460   ....1D42.... MOVX.W  &??KpDef + 2, R13
+   \   000466   1E411400     MOV.W   0x14(SP), R14
+   \   00046A   1F411600     MOV.W   0x16(SP), R15
+   \   00046E   ........     CALLA   #_Mul32f
+   \   000472   0E4C         MOV.W   R12, R14
+   \   000474   0F4D         MOV.W   R13, R15
+   \   000476   0C46         MOV.W   R6, R12
+   \   000478   0D47         MOV.W   R7, R13
+   \   00047A   ........     CALLA   #_Add32f
+   \   00047E   0E4C         MOV.W   R12, R14
+   \   000480   0F4D         MOV.W   R13, R15
+   \   000482   ....1C42.... MOVX.W  &??GyroIntegError + 4, R12
+   \   000488   ....1D42.... MOVX.W  &??GyroIntegError + 6, R13
+   \   00048E   ........     CALLA   #_Add32f
+   \   000492   814C0400     MOV.W   R12, 0x4(SP)
+   \   000496   814D0600     MOV.W   R13, 0x6(SP)
+     63              Gyro.z = pMpu->gyroZ * Gyro_Gr + KpDef * AccGravity.z  +  GyroIntegError.z;		
+   \   00049A   1C480A00     MOV.W   0xa(R8), R12
+   \   00049E   0D4C         MOV.W   R12, R13
+   \   0004A0   0D5D         RLA.W   R13
+   \   0004A2   0D7D         SUBC.W  R13, R13
+   \   0004A4   3DE3         XOR.W   #0xffff, R13
+   \   0004A6   ........     CALLA   #_Cast32sto32f
+   \   0004AA   0E4C         MOV.W   R12, R14
+   \   0004AC   0F4D         MOV.W   R13, R15
+   \   0004AE   ....1C42.... MOVX.W  &Gyro_Gr, R12
+   \   0004B4   ....1D42.... MOVX.W  &Gyro_Gr + 2, R13
+   \   0004BA   ........     CALLA   #_Mul32f
+   \   0004BE   064C         MOV.W   R12, R6
+   \   0004C0   074D         MOV.W   R13, R7
+   \   0004C2   ....1C42.... MOVX.W  &??KpDef, R12
+   \   0004C8   ....1D42.... MOVX.W  &??KpDef + 2, R13
+   \   0004CE   1E411800     MOV.W   0x18(SP), R14
+   \   0004D2   1F411A00     MOV.W   0x1a(SP), R15
+   \   0004D6   ........     CALLA   #_Mul32f
+   \   0004DA   0E4C         MOV.W   R12, R14
+   \   0004DC   0F4D         MOV.W   R13, R15
+   \   0004DE   0C46         MOV.W   R6, R12
+   \   0004E0   0D47         MOV.W   R7, R13
+   \   0004E2   ........     CALLA   #_Add32f
+   \   0004E6   0E4C         MOV.W   R12, R14
+   \   0004E8   0F4D         MOV.W   R13, R15
+   \   0004EA   ....1C42.... MOVX.W  &??GyroIntegError + 8, R12
+   \   0004F0   ....1D42.... MOVX.W  &??GyroIntegError + 10, R13
+   \   0004F6   ........     CALLA   #_Add32f
+   \   0004FA   814C0800     MOV.W   R12, 0x8(SP)
+   \   0004FE   814D0A00     MOV.W   R13, 0xa(SP)
+     64          
+     65              q0_t = (-NumQ.q1*Gyro.x - NumQ.q2*Gyro.y - NumQ.q3*Gyro.z) * HalfTime;
+   \   000502   ....1E42.... MOVX.W  &??NumQ + 4, R14
+   \   000508   ....1F42.... MOVX.W  &??NumQ + 6, R15
+   \   00050E   3FE00080     XOR.W   #0x8000, R15
+   \   000512   2C41         MOV.W   @SP, R12
+   \   000514   1D410200     MOV.W   0x2(SP), R13
+   \   000518   ........     CALLA   #_Mul32f
+   \   00051C   064C         MOV.W   R12, R6
+   \   00051E   074D         MOV.W   R13, R7
+   \   000520   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   000526   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   00052C   1E410400     MOV.W   0x4(SP), R14
+   \   000530   1F410600     MOV.W   0x6(SP), R15
+   \   000534   ........     CALLA   #_Mul32f
+   \   000538   0E4C         MOV.W   R12, R14
+   \   00053A   0F4D         MOV.W   R13, R15
+   \   00053C   0C46         MOV.W   R6, R12
+   \   00053E   0D47         MOV.W   R7, R13
+   \   000540   ........     CALLA   #_Sub32f
+   \   000544   064C         MOV.W   R12, R6
+   \   000546   074D         MOV.W   R13, R7
+   \   000548   ....1C42.... MOVX.W  &??NumQ + 12, R12
+   \   00054E   ....1D42.... MOVX.W  &??NumQ + 14, R13
+   \   000554   1E410800     MOV.W   0x8(SP), R14
+   \   000558   1F410A00     MOV.W   0xa(SP), R15
+   \   00055C   ........     CALLA   #_Mul32f
+   \   000560   0E4C         MOV.W   R12, R14
+   \   000562   0F4D         MOV.W   R13, R15
+   \   000564   0C46         MOV.W   R6, R12
+   \   000566   0D47         MOV.W   R7, R13
+   \   000568   ........     CALLA   #_Sub32f
+   \   00056C   0E4C         MOV.W   R12, R14
+   \   00056E   0F4D         MOV.W   R13, R15
+   \   000570   0C4A         MOV.W   R10, R12
+   \   000572   0D4B         MOV.W   R11, R13
+   \   000574   ........     CALLA   #_Mul32f
+   \   000578   814C0C00     MOV.W   R12, 0xc(SP)
+   \   00057C   814D0E00     MOV.W   R13, 0xe(SP)
+     66              q1_t = ( NumQ.q0*Gyro.x - NumQ.q3*Gyro.y + NumQ.q2*Gyro.z) * HalfTime;
+   \   000580   ....1C42.... MOVX.W  &??NumQ, R12
+   \   000586   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   00058C   2E41         MOV.W   @SP, R14
+   \   00058E   1F410200     MOV.W   0x2(SP), R15
+   \   000592   ........     CALLA   #_Mul32f
+   \   000596   064C         MOV.W   R12, R6
+   \   000598   074D         MOV.W   R13, R7
+   \   00059A   ....1C42.... MOVX.W  &??NumQ + 12, R12
+   \   0005A0   ....1D42.... MOVX.W  &??NumQ + 14, R13
+   \   0005A6   1E410400     MOV.W   0x4(SP), R14
+   \   0005AA   1F410600     MOV.W   0x6(SP), R15
+   \   0005AE   ........     CALLA   #_Mul32f
+   \   0005B2   0E4C         MOV.W   R12, R14
+   \   0005B4   0F4D         MOV.W   R13, R15
+   \   0005B6   0C46         MOV.W   R6, R12
+   \   0005B8   0D47         MOV.W   R7, R13
+   \   0005BA   ........     CALLA   #_Sub32f
+   \   0005BE   064C         MOV.W   R12, R6
+   \   0005C0   074D         MOV.W   R13, R7
+   \   0005C2   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   0005C8   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   0005CE   1E410800     MOV.W   0x8(SP), R14
+   \   0005D2   1F410A00     MOV.W   0xa(SP), R15
+   \   0005D6   ........     CALLA   #_Mul32f
+   \   0005DA   0E4C         MOV.W   R12, R14
+   \   0005DC   0F4D         MOV.W   R13, R15
+   \   0005DE   0C46         MOV.W   R6, R12
+   \   0005E0   0D47         MOV.W   R7, R13
+   \   0005E2   ........     CALLA   #_Add32f
+   \   0005E6   0E4C         MOV.W   R12, R14
+   \   0005E8   0F4D         MOV.W   R13, R15
+   \   0005EA   0C4A         MOV.W   R10, R12
+   \   0005EC   0D4B         MOV.W   R11, R13
+   \   0005EE   ........     CALLA   #_Mul32f
+   \   0005F2   064C         MOV.W   R12, R6
+   \   0005F4   074D         MOV.W   R13, R7
+     67              q2_t = ( NumQ.q3*Gyro.x + NumQ.q0*Gyro.y - NumQ.q1*Gyro.z) * HalfTime;
+   \   0005F6   ....1C42.... MOVX.W  &??NumQ + 12, R12
+   \   0005FC   ....1D42.... MOVX.W  &??NumQ + 14, R13
+   \   000602   2E41         MOV.W   @SP, R14
+   \   000604   1F410200     MOV.W   0x2(SP), R15
+   \   000608   ........     CALLA   #_Mul32f
+   \   00060C   044C         MOV.W   R12, R4
+   \   00060E   054D         MOV.W   R13, R5
+   \   000610   ....1C42.... MOVX.W  &??NumQ, R12
+   \   000616   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   00061C   1E410400     MOV.W   0x4(SP), R14
+   \   000620   1F410600     MOV.W   0x6(SP), R15
+   \   000624   ........     CALLA   #_Mul32f
+   \   000628   0E4C         MOV.W   R12, R14
+   \   00062A   0F4D         MOV.W   R13, R15
+   \   00062C   0C44         MOV.W   R4, R12
+   \   00062E   0D45         MOV.W   R5, R13
+   \   000630   ........     CALLA   #_Add32f
+   \   000634   044C         MOV.W   R12, R4
+   \   000636   054D         MOV.W   R13, R5
+   \   000638   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   00063E   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   000644   1E410800     MOV.W   0x8(SP), R14
+   \   000648   1F410A00     MOV.W   0xa(SP), R15
+   \   00064C   ........     CALLA   #_Mul32f
+   \   000650   0E4C         MOV.W   R12, R14
+   \   000652   0F4D         MOV.W   R13, R15
+   \   000654   0C44         MOV.W   R4, R12
+   \   000656   0D45         MOV.W   R5, R13
+   \   000658   ........     CALLA   #_Sub32f
+   \   00065C   0E4C         MOV.W   R12, R14
+   \   00065E   0F4D         MOV.W   R13, R15
+   \   000660   0C4A         MOV.W   R10, R12
+   \   000662   0D4B         MOV.W   R11, R13
+   \   000664   ........     CALLA   #_Mul32f
+   \   000668   044C         MOV.W   R12, R4
+   \   00066A   054D         MOV.W   R13, R5
+     68              q3_t = (-NumQ.q2*Gyro.x + NumQ.q1*Gyro.y + NumQ.q0*Gyro.z) * HalfTime;
+   \   00066C   ....1E42.... MOVX.W  &??NumQ + 8, R14
+   \   000672   ....1F42.... MOVX.W  &??NumQ + 10, R15
+   \   000678   3FE00080     XOR.W   #0x8000, R15
+   \   00067C   2C41         MOV.W   @SP, R12
+   \   00067E   1D410200     MOV.W   0x2(SP), R13
+   \   000682   ........     CALLA   #_Mul32f
+   \   000686   0D12         PUSH.W  R13
+   \   000688   0C12         PUSH.W  R12
+   \   00068A   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   000690   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   000696   1E410800     MOV.W   0x8(SP), R14
+   \   00069A   1F410A00     MOV.W   0xa(SP), R15
+   \   00069E   ........     CALLA   #_Mul32f
+   \   0006A2   3E41         POP.W   R14
+   \   0006A4   3F41         POP.W   R15
+   \   0006A6   ........     CALLA   #_Add32f
+   \   0006AA   0D12         PUSH.W  R13
+   \   0006AC   0C12         PUSH.W  R12
+   \   0006AE   ....1C42.... MOVX.W  &??NumQ, R12
+   \   0006B4   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   0006BA   1E410C00     MOV.W   0xc(SP), R14
+   \   0006BE   1F410E00     MOV.W   0xe(SP), R15
+   \   0006C2   ........     CALLA   #_Mul32f
+   \   0006C6   3E41         POP.W   R14
+   \   0006C8   3F41         POP.W   R15
+   \   0006CA   ........     CALLA   #_Add32f
+   \   0006CE   0E4C         MOV.W   R12, R14
+   \   0006D0   0F4D         MOV.W   R13, R15
+   \   0006D2   0C4A         MOV.W   R10, R12
+   \   0006D4   0D4B         MOV.W   R11, R13
+   \   0006D6   ........     CALLA   #_Mul32f
+   \   0006DA   0A4C         MOV.W   R12, R10
+   \   0006DC   0B4D         MOV.W   R13, R11
+     69          
+     70              NumQ.q0 += q0_t; //积分后的值累加到上次的四元数中，即新的四元数
+   \   0006DE   ....1C42.... MOVX.W  &??NumQ, R12
+   \   0006E4   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   0006EA   1E410C00     MOV.W   0xc(SP), R14
+   \   0006EE   1F410E00     MOV.W   0xe(SP), R15
+   \   0006F2   ........     CALLA   #_Add32f
+   \   0006F6   ....824C.... MOVX.W  R12, &??NumQ
+   \   0006FC   ....824D.... MOVX.W  R13, &??NumQ + 2
+     71              NumQ.q1 += q1_t;
+   \   000702   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   000708   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   00070E   0E46         MOV.W   R6, R14
+   \   000710   0F47         MOV.W   R7, R15
+   \   000712   ........     CALLA   #_Add32f
+   \   000716   ....824C.... MOVX.W  R12, &??NumQ + 4
+   \   00071C   ....824D.... MOVX.W  R13, &??NumQ + 6
+     72              NumQ.q2 += q2_t;
+   \   000722   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   000728   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   00072E   0E44         MOV.W   R4, R14
+   \   000730   0F45         MOV.W   R5, R15
+   \   000732   ........     CALLA   #_Add32f
+   \   000736   ....824C.... MOVX.W  R12, &??NumQ + 8
+   \   00073C   ....824D.... MOVX.W  R13, &??NumQ + 10
+     73              NumQ.q3 += q3_t;
+   \   000742   ....1C42.... MOVX.W  &??NumQ + 12, R12
+   \   000748   ....1D42.... MOVX.W  &??NumQ + 14, R13
+   \   00074E   0E4A         MOV.W   R10, R14
+   \   000750   0F4B         MOV.W   R11, R15
+   \   000752   ........     CALLA   #_Add32f
+   \   000756   ....824C.... MOVX.W  R12, &??NumQ + 12
+   \   00075C   ....824D.... MOVX.W  R13, &??NumQ + 14
+     74          
+     75              NormQuat = Q_rsqrt(squa(NumQ.q0) + squa(NumQ.q1) + squa(NumQ.q2) + squa(NumQ.q3)); 
+   \   000762   ....1C42.... MOVX.W  &??NumQ, R12
+   \   000768   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   00076E   ....1E42.... MOVX.W  &??NumQ, R14
+   \   000774   ....1F42.... MOVX.W  &??NumQ + 2, R15
+   \   00077A   ........     CALLA   #_Mul32f
+   \   00077E   0A4C         MOV.W   R12, R10
+   \   000780   0B4D         MOV.W   R13, R11
+   \   000782   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   000788   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   00078E   ....1E42.... MOVX.W  &??NumQ + 4, R14
+   \   000794   ....1F42.... MOVX.W  &??NumQ + 6, R15
+   \   00079A   ........     CALLA   #_Mul32f
+   \   00079E   0E4C         MOV.W   R12, R14
+   \   0007A0   0F4D         MOV.W   R13, R15
+   \   0007A2   0C4A         MOV.W   R10, R12
+   \   0007A4   0D4B         MOV.W   R11, R13
+   \   0007A6   ........     CALLA   #_Add32f
+   \   0007AA   0A4C         MOV.W   R12, R10
+   \   0007AC   0B4D         MOV.W   R13, R11
+   \   0007AE   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   0007B4   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   0007BA   ....1E42.... MOVX.W  &??NumQ + 8, R14
+   \   0007C0   ....1F42.... MOVX.W  &??NumQ + 10, R15
+   \   0007C6   ........     CALLA   #_Mul32f
+   \   0007CA   0E4C         MOV.W   R12, R14
+   \   0007CC   0F4D         MOV.W   R13, R15
+   \   0007CE   0C4A         MOV.W   R10, R12
+   \   0007D0   0D4B         MOV.W   R11, R13
+   \   0007D2   ........     CALLA   #_Add32f
+   \   0007D6   0A4C         MOV.W   R12, R10
+   \   0007D8   0B4D         MOV.W   R13, R11
+   \   0007DA   ....1C42.... MOVX.W  &??NumQ + 12, R12
+   \   0007E0   ....1D42.... MOVX.W  &??NumQ + 14, R13
+   \   0007E6   ....1E42.... MOVX.W  &??NumQ + 12, R14
+   \   0007EC   ....1F42.... MOVX.W  &??NumQ + 14, R15
+   \   0007F2   ........     CALLA   #_Mul32f
+   \   0007F6   0E4C         MOV.W   R12, R14
+   \   0007F8   0F4D         MOV.W   R13, R15
+   \   0007FA   0C4A         MOV.W   R10, R12
+   \   0007FC   0D4B         MOV.W   R11, R13
+   \   0007FE   ........     CALLA   #_Add32f
+   \   000802   ........     CALLA   #Q_rsqrt
+   \   000806   064C         MOV.W   R12, R6
+   \   000808   074D         MOV.W   R13, R7
+     76              NumQ.q0 *= NormQuat; //模长更新四元数值
+   \   00080A   ....1C42.... MOVX.W  &??NumQ, R12
+   \   000810   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   000816   0E46         MOV.W   R6, R14
+   \   000818   0F47         MOV.W   R7, R15
+   \   00081A   ........     CALLA   #_Mul32f
+   \   00081E   ....824C.... MOVX.W  R12, &??NumQ
+   \   000824   ....824D.... MOVX.W  R13, &??NumQ + 2
+     77              NumQ.q1 *= NormQuat;
+   \   00082A   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   000830   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   000836   0E46         MOV.W   R6, R14
+   \   000838   0F47         MOV.W   R7, R15
+   \   00083A   ........     CALLA   #_Mul32f
+   \   00083E   ....824C.... MOVX.W  R12, &??NumQ + 4
+   \   000844   ....824D.... MOVX.W  R13, &??NumQ + 6
+     78              NumQ.q2 *= NormQuat;
+   \   00084A   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   000850   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   000856   0E46         MOV.W   R6, R14
+   \   000858   0F47         MOV.W   R7, R15
+   \   00085A   ........     CALLA   #_Mul32f
+   \   00085E   ....824C.... MOVX.W  R12, &??NumQ + 8
+   \   000864   ....824D.... MOVX.W  R13, &??NumQ + 10
+     79              NumQ.q3 *= NormQuat;	
+   \   00086A   ....1C42.... MOVX.W  &??NumQ + 12, R12
+   \   000870   ....1D42.... MOVX.W  &??NumQ + 14, R13
+   \   000876   0E46         MOV.W   R6, R14
+   \   000878   0F47         MOV.W   R7, R15
+   \   00087A   ........     CALLA   #_Mul32f
+   \   00087E   ....824C.... MOVX.W  R12, &??NumQ + 12
+   \   000884   ....824D.... MOVX.W  R13, &??NumQ + 14
+     80          
+     81              {
+     82                  float vecxZ = 2 * NumQ.q0 *NumQ.q2 - 2 * NumQ.q1 * NumQ.q3 ;
+   \   00088A   ....1C42.... MOVX.W  &??NumQ, R12
+   \   000890   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   000896   0E43         MOV.W   #0x0, R14
+   \   000898   3F400040     MOV.W   #0x4000, R15
+   \   00089C   ........     CALLA   #_Mul32f
+   \   0008A0   0E4C         MOV.W   R12, R14
+   \   0008A2   0F4D         MOV.W   R13, R15
+   \   0008A4   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   0008AA   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   0008B0   ........     CALLA   #_Mul32f
+   \   0008B4   0A4C         MOV.W   R12, R10
+   \   0008B6   0B4D         MOV.W   R13, R11
+   \   0008B8   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   0008BE   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   0008C4   0E43         MOV.W   #0x0, R14
+   \   0008C6   3F400040     MOV.W   #0x4000, R15
+   \   0008CA   ........     CALLA   #_Mul32f
+   \   0008CE   0E4C         MOV.W   R12, R14
+   \   0008D0   0F4D         MOV.W   R13, R15
+   \   0008D2   ....1C42.... MOVX.W  &??NumQ + 12, R12
+   \   0008D8   ....1D42.... MOVX.W  &??NumQ + 14, R13
+   \   0008DE   ........     CALLA   #_Mul32f
+   \   0008E2   0E4C         MOV.W   R12, R14
+   \   0008E4   0F4D         MOV.W   R13, R15
+   \   0008E6   0C4A         MOV.W   R10, R12
+   \   0008E8   0D4B         MOV.W   R11, R13
+   \   0008EA   ........     CALLA   #_Sub32f
+   \   0008EE   044C         MOV.W   R12, R4
+   \   0008F0   054D         MOV.W   R13, R5
+     83                  float vecyZ = 2 * NumQ.q2 *NumQ.q3 + 2 * NumQ.q0 * NumQ.q1;
+   \   0008F2   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   0008F8   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   0008FE   0E43         MOV.W   #0x0, R14
+   \   000900   3F400040     MOV.W   #0x4000, R15
+   \   000904   ........     CALLA   #_Mul32f
+   \   000908   0E4C         MOV.W   R12, R14
+   \   00090A   0F4D         MOV.W   R13, R15
+   \   00090C   ....1C42.... MOVX.W  &??NumQ + 12, R12
+   \   000912   ....1D42.... MOVX.W  &??NumQ + 14, R13
+   \   000918   ........     CALLA   #_Mul32f
+   \   00091C   0A4C         MOV.W   R12, R10
+   \   00091E   0B4D         MOV.W   R13, R11
+   \   000920   ....1C42.... MOVX.W  &??NumQ, R12
+   \   000926   ....1D42.... MOVX.W  &??NumQ + 2, R13
+   \   00092C   0E43         MOV.W   #0x0, R14
+   \   00092E   3F400040     MOV.W   #0x4000, R15
+   \   000932   ........     CALLA   #_Mul32f
+   \   000936   0E4C         MOV.W   R12, R14
+   \   000938   0F4D         MOV.W   R13, R15
+   \   00093A   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   000940   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   000946   ........     CALLA   #_Mul32f
+   \   00094A   0E4C         MOV.W   R12, R14
+   \   00094C   0F4D         MOV.W   R13, R15
+   \   00094E   0C4A         MOV.W   R10, R12
+   \   000950   0D4B         MOV.W   R11, R13
+   \   000952   ........     CALLA   #_Add32f
+   \   000956   064C         MOV.W   R12, R6
+   \   000958   074D         MOV.W   R13, R7
+     84                  float veczZ = 1 - 2 * NumQ.q1 *NumQ.q1 - 2 * NumQ.q2 * NumQ.q2;		
+   \   00095A   0C43         MOV.W   #0x0, R12
+   \   00095C   3D40803F     MOV.W   #0x3f80, R13
+   \   000960   0A4C         MOV.W   R12, R10
+   \   000962   0B4D         MOV.W   R13, R11
+   \   000964   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   00096A   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   000970   0E43         MOV.W   #0x0, R14
+   \   000972   3F400040     MOV.W   #0x4000, R15
+   \   000976   ........     CALLA   #_Mul32f
+   \   00097A   0E4C         MOV.W   R12, R14
+   \   00097C   0F4D         MOV.W   R13, R15
+   \   00097E   ....1C42.... MOVX.W  &??NumQ + 4, R12
+   \   000984   ....1D42.... MOVX.W  &??NumQ + 6, R13
+   \   00098A   ........     CALLA   #_Mul32f
+   \   00098E   0E4C         MOV.W   R12, R14
+   \   000990   0F4D         MOV.W   R13, R15
+   \   000992   0C4A         MOV.W   R10, R12
+   \   000994   0D4B         MOV.W   R11, R13
+   \   000996   ........     CALLA   #_Sub32f
+   \   00099A   0A4C         MOV.W   R12, R10
+   \   00099C   0B4D         MOV.W   R13, R11
+   \   00099E   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   0009A4   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   0009AA   0E43         MOV.W   #0x0, R14
+   \   0009AC   3F400040     MOV.W   #0x4000, R15
+   \   0009B0   ........     CALLA   #_Mul32f
+   \   0009B4   0E4C         MOV.W   R12, R14
+   \   0009B6   0F4D         MOV.W   R13, R15
+   \   0009B8   ....1C42.... MOVX.W  &??NumQ + 8, R12
+   \   0009BE   ....1D42.... MOVX.W  &??NumQ + 10, R13
+   \   0009C4   ........     CALLA   #_Mul32f
+   \   0009C8   0E4C         MOV.W   R12, R14
+   \   0009CA   0F4D         MOV.W   R13, R15
+   \   0009CC   0C4A         MOV.W   R10, R12
+   \   0009CE   0D4B         MOV.W   R11, R13
+   \   0009D0   ........     CALLA   #_Sub32f
+   \   0009D4   0A4C         MOV.W   R12, R10
+   \   0009D6   0B4D         MOV.W   R13, R11
+     85          
+     86          #ifdef	YAW_GYRO
+     87                  *(float *)pAngE = atan2f(2 * NumQ.q1 *NumQ.q2 + 2 * NumQ.q0 * NumQ.q3, 1 - 2 * NumQ.q2 *NumQ.q2 - 2 * NumQ.q3 * NumQ.q3) * RtA;  //yaw
+     88          #else  
+     89                  float yaw_G = pMpu->gyroZ * Gyro_G;
+   \   0009D8   1C480A00     MOV.W   0xa(R8), R12
+   \   0009DC   0D4C         MOV.W   R12, R13
+   \   0009DE   0D5D         RLA.W   R13
+   \   0009E0   0D7D         SUBC.W  R13, R13
+   \   0009E2   3DE3         XOR.W   #0xffff, R13
+   \   0009E4   ........     CALLA   #_Cast32sto32f
+   \   0009E8   0E4C         MOV.W   R12, R14
+   \   0009EA   0F4D         MOV.W   R13, R15
+   \   0009EC   ....1C42.... MOVX.W  &Gyro_G, R12
+   \   0009F2   ....1D42.... MOVX.W  &Gyro_G + 2, R13
+   \   0009F8   ........     CALLA   #_Mul32f
+     90                  if((yaw_G > 1.0f) || (yaw_G < -1.0f)) 
+   \   0009FC   1E43         MOV.W   #0x1, R14
+   \   0009FE   3F40803F     MOV.W   #0x3f80, R15
+   \   000A02   ........     CALLA   #?FLT_GE
+   \   000A06   062C         JC      ??GetAngle_0
+   \   000A08   0E43         MOV.W   #0x0, R14
+   \   000A0A   3F4080BF     MOV.W   #0xbf80, R15
+   \   000A0E   ........     CALLA   #?FLT_LT
+   \   000A12   1228         JNC     ??GetAngle_1
+     91                  {
+     92                          pAngE->yaw  += yaw_G * dt;//角速度积分成偏航角			
+   \                     ??GetAngle_0:
+   \   000A14   1E413400     MOV.W   0x34(SP), R14
+   \   000A18   1F413600     MOV.W   0x36(SP), R15
+   \   000A1C   ........     CALLA   #_Mul32f
+   \   000A20   0E4C         MOV.W   R12, R14
+   \   000A22   0F4D         MOV.W   R13, R15
+   \   000A24   1C490800     MOV.W   0x8(R9), R12
+   \   000A28   1D490A00     MOV.W   0xa(R9), R13
+   \   000A2C   ........     CALLA   #_Add32f
+   \   000A30   894C0800     MOV.W   R12, 0x8(R9)
+   \   000A34   894D0A00     MOV.W   R13, 0xa(R9)
+     93                  }
+     94          #endif
+     95                  pAngE->pitch  =  asin(vecxZ)* RtA;	 //俯仰角					
+   \                     ??GetAngle_1:
+   \   000A38   0C44         MOV.W   R4, R12
+   \   000A3A   0D45         MOV.W   R5, R13
+   \   000A3C   ........     CALLA   #asin
+   \   000A40   0E4C         MOV.W   R12, R14
+   \   000A42   0F4D         MOV.W   R13, R15
+   \   000A44   ....1C42.... MOVX.W  &RtA, R12
+   \   000A4A   ....1D42.... MOVX.W  &RtA + 2, R13
+   \   000A50   ........     CALLA   #_Mul32f
+   \   000A54   894C0400     MOV.W   R12, 0x4(R9)
+   \   000A58   894D0600     MOV.W   R13, 0x6(R9)
+     96          
+     97                  pAngE->roll	= atan2f(vecyZ,veczZ) * RtA;	//横滚角
+   \   000A5C   0E4A         MOV.W   R10, R14
+   \   000A5E   0F4B         MOV.W   R11, R15
+   \   000A60   0C46         MOV.W   R6, R12
+   \   000A62   0D47         MOV.W   R7, R13
+   \   000A64   ........     CALLA   #atan2f
+   \   000A68   0E4C         MOV.W   R12, R14
+   \   000A6A   0F4D         MOV.W   R13, R15
+   \   000A6C   ....1C42.... MOVX.W  &RtA, R12
+   \   000A72   ....1D42.... MOVX.W  &RtA + 2, R13
+   \   000A78   ........     CALLA   #_Mul32f
+   \   000A7C   894C0000     MOV.W   R12, 0(R9)
+   \   000A80   894D0200     MOV.W   R13, 0x2(R9)
+     98          
+     99                  NormAccz = pMpu->accX* vecxZ + pMpu->accY * vecyZ + pMpu->accZ * veczZ;	/*Z轴垂直方向上的加速度，此值涵盖了倾斜时在Z轴角速度的向量和，不是单纯重力感应得出的值*/				
+   \   000A84   2C48         MOV.W   @R8, R12
+   \   000A86   0D4C         MOV.W   R12, R13
+   \   000A88   0D5D         RLA.W   R13
+   \   000A8A   0D7D         SUBC.W  R13, R13
+   \   000A8C   3DE3         XOR.W   #0xffff, R13
+   \   000A8E   ........     CALLA   #_Cast32sto32f
+   \   000A92   0E4C         MOV.W   R12, R14
+   \   000A94   0F4D         MOV.W   R13, R15
+   \   000A96   0C44         MOV.W   R4, R12
+   \   000A98   0D45         MOV.W   R5, R13
+   \   000A9A   ........     CALLA   #_Mul32f
+   \   000A9E   044C         MOV.W   R12, R4
+   \   000AA0   054D         MOV.W   R13, R5
+   \   000AA2   1C480200     MOV.W   0x2(R8), R12
+   \   000AA6   0D4C         MOV.W   R12, R13
+   \   000AA8   0D5D         RLA.W   R13
+   \   000AAA   0D7D         SUBC.W  R13, R13
+   \   000AAC   3DE3         XOR.W   #0xffff, R13
+   \   000AAE   ........     CALLA   #_Cast32sto32f
+   \   000AB2   0E4C         MOV.W   R12, R14
+   \   000AB4   0F4D         MOV.W   R13, R15
+   \   000AB6   0C46         MOV.W   R6, R12
+   \   000AB8   0D47         MOV.W   R7, R13
+   \   000ABA   ........     CALLA   #_Mul32f
+   \   000ABE   0E4C         MOV.W   R12, R14
+   \   000AC0   0F4D         MOV.W   R13, R15
+   \   000AC2   0C44         MOV.W   R4, R12
+   \   000AC4   0D45         MOV.W   R5, R13
+   \   000AC6   ........     CALLA   #_Add32f
+   \   000ACA   064C         MOV.W   R12, R6
+   \   000ACC   074D         MOV.W   R13, R7
+   \   000ACE   1C480400     MOV.W   0x4(R8), R12
+   \   000AD2   0D4C         MOV.W   R12, R13
+   \   000AD4   0D5D         RLA.W   R13
+   \   000AD6   0D7D         SUBC.W  R13, R13
+   \   000AD8   3DE3         XOR.W   #0xffff, R13
+   \   000ADA   ........     CALLA   #_Cast32sto32f
+   \   000ADE   0E4C         MOV.W   R12, R14
+   \   000AE0   0F4D         MOV.W   R13, R15
+   \   000AE2   0C4A         MOV.W   R10, R12
+   \   000AE4   0D4B         MOV.W   R11, R13
+   \   000AE6   ........     CALLA   #_Mul32f
+   \   000AEA   0E4C         MOV.W   R12, R14
+   \   000AEC   0F4D         MOV.W   R13, R15
+   \   000AEE   0C46         MOV.W   R6, R12
+   \   000AF0   0D47         MOV.W   R7, R13
+   \   000AF2   ........     CALLA   #_Add32f
+   \   000AF6   ....824C.... MOVX.W  R12, &NormAccz
+   \   000AFC   ....824D.... MOVX.W  R13, &NormAccz + 2
+    100              }
+    101          }
+   \   000B02   A1003800     ADDA    #0x38, SP
+   \   000B06   7416         POPM.A  #0x8, R11
+   \   000B08   1001         RETA
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??GyroIntegError:
+   \   000000                DS8 12
+
+   \                                 In  segment DATA20_I, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??KpDef:
+   \   000000                DS8 4
+   \   000004                REQUIRE `?<Initializer for KpDef>`
+
+   \                                 In  segment DATA20_I, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??KiDef:
+   \   000000                DS8 4
+   \   000004                REQUIRE `?<Initializer for KiDef>`
+
+   \                                 In  segment DATA20_I, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??NumQ:
+   \   000000                DS8 16
+   \   000010                REQUIRE `?<Initializer for NumQ>`
+    102          
+    103          
+
+   \                                 In  segment CODE, align 2
+    104          float GetNormAccz(void)
+   \                     GetNormAccz:
+    105          {
+    106          	return NormAccz;
+   \   000000   ....1C42.... MOVX.W  &NormAccz, R12
+   \   000006   ....1D42.... MOVX.W  &NormAccz + 2, R13
+   \   00000C   1001         RETA
+    107          }
+
+   \                                 In  segment DATA20_ID, align 2, align-sorted
+   \                     `?<Initializer for KpDef>`:
+   \   000000   CDCC4C3F     DC32 3F4CCCCDH
+
+   \                                 In  segment DATA20_ID, align 2, align-sorted
+   \                     `?<Initializer for KiDef>`:
+   \   000000   52499D39     DC32 399D4952H
+
+   \                                 In  segment DATA20_ID, align 2, align-sorted
+   \                     `?<Initializer for NumQ>`:
+   \   000000   0000803F0000 DC32 3F800000H, 0H, 0H, 0H
+   \            000000000000
+   \            00000000    
+    108          /***************************************************END OF FILE***************************************************/
+    109          
+    110          
+    111          
+    112          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     96   GetAngle
+       92   -> Q_rsqrt
+       92   -> asin
+       92   -> atan2f
+       92 ?FLT_GE
+       92 ?FLT_LT
+       92 _Add32f
+       92 _Cast32sto32f
+       92 _Mul32f
+       96 _Mul32f
+       92 _Sub32f
+      4   GetNormAccz
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Initializer for KiDef>
+       4  ?<Initializer for KpDef>
+      16  ?<Initializer for NumQ>
+    2826  GetAngle
+      14  GetNormAccz
+      12  GyroIntegError
+       4  KiDef
+       4  KpDef
+       4  NormAccz
+      16  NumQ
+
+ 
+ 2 840 bytes in segment CODE
+    24 bytes in segment DATA20_I
+    24 bytes in segment DATA20_ID
+    16 bytes in segment DATA20_Z
+ 
+ 2 840 bytes of CODE  memory
+    24 bytes of CONST memory
+    40 bytes of DATA  memory
+
+Errors: none
+Warnings: none

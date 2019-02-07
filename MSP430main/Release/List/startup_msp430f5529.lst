@@ -1,0 +1,485 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:45
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\startup_msp430f5529.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWE409.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\startup_msp430f5529.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\startup_msp430f5529.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\startup_msp430f5529.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\startup_msp430f5529.c
+      1          #include "msp430f5529_system.h"
+      2          #include "include.h"
+      3          #include "intrinsics.h"
+      4          
+      5          static void RAM_data_Init(void);
+      6          static void SystemInit(void);
+      7          #ifdef DEBUG
+      8          static void Start_Show(void);
+      9          #endif
+     10          #if 0
+     11          /*******************************************************************************
+     12          *  函数名称：Reset_Handler(void)
+     13          *  功能说明：复位中断服务函数
+     14          *  参数说明：无
+     15          *  函数返回：无
+     16          *  使用示例：无
+     17          *  注意事项：需要修改工程配置，勾选linker目录下的override default program,并选择Defined by Applicat选项
+     18          ********************************************************************************/
+     19          extern void main();
+     20          #pragma vector=RESET_VECTOR
+     21          __interrupt void Reset_Handler(void)
+     22          {
+     23            SystemInit();
+     24            main();
+     25            while(1);
+     26          }
+     27          #else
+     28          /*******************************************************************************
+     29          *  函数名称：__low_level_init(void)
+     30          *  功能说明：启动函数，在主函数之前调用
+     31          *  参数说明：无
+     32          *  函数返回：无
+     33          *  使用示例：无
+     34          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2, root
+     35          __intrinsic int __low_level_init(void)
+   \                     __low_level_init:
+   \   000000                REQUIRE ?cstart_call_low_level_init
+     36          {
+     37              SystemInit();
+   \   000000   ........     CALLA   #SystemInit
+     38              return 0;//0-不初始化参数,1-初始化参数
+   \   000004   0C43         MOV.W   #0x0, R12
+   \   000006   1001         RETA
+     39          }
+     40          #endif
+     41          /*******************************************************************************
+     42          *  函数名称：SystemInit (void)
+     43          *  功能说明：启动函数，在主函数之前调用
+     44          *  参数说明：无
+     45          *  函数返回：无
+     46          *  使用示例：无
+     47          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     48          void SystemInit (void)
+   \                     SystemInit:
+     49          {   
+     50              DisableWatchDog();            //关闭看门狗
+   \   000000   ........     CALLA   #DisableWatchDog
+     51          #ifdef RAM_VECTOR
+     52              Set_VectorTable_To_RAM();     //设置中断向量映射到RAM区域
+   \   000004   ........     CALLA   #Set_VectorTable_To_RAM
+     53          #else
+     54              Set_VectorTable_To_FLASH();   //设置中断向量映射到FLASH区域
+     55          #endif
+     56              RAM_data_Init();              //初始化数据  
+   \   000008   ........     CALLA   #RAM_data_Init
+     57              /*******************************时钟初始化*********************************/
+     58              CLOCK_DCO_PLLConfig(FLL_REF,FLLREF_DIV,DCO_CLK_HZ);             //初始化DCO频率
+   \   00000C   3E404078     MOV.W   #0x7840, R14
+   \   000010   3F407D01     MOV.W   #0x17d, R15
+   \   000014   4D43         MOV.B   #0x0, R13
+   \   000016   6C43         MOV.B   #0x2, R12
+   \   000018   ........     CALLA   #CLOCK_DCO_PLLConfig
+     59              CLOCK_MCLK_Config (MCLK_SOURCE , MCLK_DIV);               //设置时钟源及时钟分频
+   \   00001C   4D43         MOV.B   #0x0, R13
+   \   00001E   7C400300     MOV.B   #0x3, R12
+   \   000022   ........     CALLA   #CLOCK_MCLK_Config
+     60              CLOCK_SMCLK_Config(SMCLK_SOURCE, SMCLK_DIV);              //设置时钟源及时钟分频
+   \   000026   4D43         MOV.B   #0x0, R13
+   \   000028   7C400500     MOV.B   #0x5, R12
+   \   00002C   ........     CALLA   #CLOCK_SMCLK_Config
+     61              CLOCK_ACLK_Config (ACLK_SOURCE , ACLK_DIV);               //设置时钟源及时钟分频
+   \   000030   4D43         MOV.B   #0x0, R13
+   \   000032   6C43         MOV.B   #0x2, R12
+   \   000034   ........     BRA     #CLOCK_ACLK_Config
+     62              /**************************************************************************/
+     63          #if(defined(DEBUG))
+     64          #if(defined(DEBUG_UART_PRINT))
+     65              UART_Init(Print_UART, Print_Baud);          //调试模式下，如果选择使用串口作为信息打印则初始化UART模块
+     66          #endif
+     67              Start_Show();
+     68          #endif
+     69          }
+     70          //启动后打印提示信息
+     71          #ifdef DEBUG
+     72          void Start_Show()
+     73          {
+     74              DEBUG_PRINTF("\nMSP430F5529 测试程序!\n");  //调试模式下打印信息
+     75              DEBUG_PRINTF("\n MCLK 频率:%ld HZ\n",g_sClock.MCLK.nHZ);
+     76              DEBUG_PRINTF("SMCLK 频率:%ld HZ\n",  g_sClock.SMCLK.nHZ);
+     77              DEBUG_PRINTF(" ACLK 频率:%ld HZ\n",  g_sClock.ACLK.nHZ);  
+     78          #ifdef DELAY_TIMER
+     79              DEBUG_PRINTF("\n使用定时器延时,定时器:%s\n",TOSTRING(DELAY_TIMER));
+     80          #else
+     81              DEBUG_PRINTF("\n使用软件模拟延时\n%s\n",TOSTRING(DELAY_MS(ms)));
+     82          #endif
+     83          }
+     84          #endif
+     85          /*******************************************************************************
+     86          *  函数名称：RAM_data_Init(void)
+     87          *  功能说明：复制中断向量表 和 必要的数据到 RAM里
+     88          *  参数说明：无
+     89          *  函数返回：无
+     90          *  使用示例：无
+     91          ********************************************************************************/
+     92          #pragma section = "DATA16_I"
+     93          #pragma section = "DATA20_I"
+     94          #pragma section = "DATA16_ID"
+     95          #pragma section = "DATA20_ID"
+     96          #pragma section = "DATA16_Z"
+     97          #pragma section = "DATA20_Z"
+     98          #pragma section = "TLS16_I"
+     99          #pragma section = "TLS16_ID"
+    100          #pragma section = "CODE_I"
+    101          #pragma section = "CODE_ID"
+    102          //#pragma section = "INTVEC"
+
+   \                                 In  segment CODE, align 2
+    103          void RAM_data_Init(void)
+   \                     RAM_data_Init:
+    104          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+    105              uint32_t n;
+    106              //初始化中断向量表
+    107              //ISR_TYPE *vector_rom = __section_begin("INTVEC");
+    108              VectorTableCopyToRAM();                       //从FLASH中复制中断向量表到RAM
+   \   000002   ........     CALLA   #VectorTableCopyToRAM
+    109              /* 把已赋初值的变量从ROM里复制数据到RAM里 */
+    110              uint8_t *data_ram = __section_begin("DATA16_I");        //已赋初值的变量的地址在RAM里
+   \   000006   ........     MOVA    #SFB(DATA16_I), R10
+    111              uint8_t *data_rom = __section_begin("DATA16_ID");       //已赋初值的变量的数据存放在ROM里，需要赋值到RAM里
+   \   00000A   ........     MOVA    #SFB(DATA16_ID), R11
+    112              uint8_t *data_rom_end = __section_end("DATA16_ID");
+   \   00000E   ........     MOVA    #SFE(DATA16_ID), R15
+    113              n = data_rom_end - data_rom;
+   \   000012   0F14         PUSHM.A #0x1, R15
+   \   000014   1C17         POPM.W  #0x2, R13
+   \   000016   0B14         PUSHM.A #0x1, R11
+   \   000018   1E17         POPM.W  #0x2, R15
+   \   00001A   0C8E         SUB.W   R14, R12
+   \   00001C   0D7F         SUBC.W  R15, R13
+   \   00001E   063C         JMP     ??RAM_data_Init_6
+    114          
+    115              /* 复制初始化数据到RAM里 */
+    116              while (n--)
+    117              {
+    118                  *data_ram++ = *data_rom++; 
+   \                     ??RAM_data_Init_0:
+   \   000020   EA4B0000     MOV.B   @R11, 0(R10)
+   \   000024   AB000100     ADDA    #0x1, R11
+   \   000028   AA000100     ADDA    #0x1, R10
+    119              }
+   \                     ??RAM_data_Init_6:
+   \   00002C   0E4C         MOV.W   R12, R14
+   \   00002E   0F4D         MOV.W   R13, R15
+   \   000030   0C4E         MOV.W   R14, R12
+   \   000032   0D4F         MOV.W   R15, R13
+   \   000034   3C53         ADD.W   #0xffff, R12
+   \   000036   3D63         ADDC.W  #0xffff, R13
+   \   000038   084E         MOV.W   R14, R8
+   \   00003A   E80F         ADDA    R15, R8
+   \   00003C   F123         JNE     ??RAM_data_Init_0
+    120              /* 把已赋初值的变量从ROM里复制数据到RAM里 */
+    121              data_ram = __section_begin("DATA20_I");                //已赋初值的变量的地址在RAM里
+   \   00003E   ........     MOVA    #SFB(DATA20_I), R10
+    122              data_rom = __section_begin("DATA20_ID");               //已赋初值的变量的数据存放在ROM里，需要赋值到RAM里
+   \   000042   ........     MOVA    #SFB(DATA20_ID), R11
+    123              data_rom_end = __section_end("DATA20_ID");
+   \   000046   ........     MOVA    #SFE(DATA20_ID), R15
+    124              n = data_rom_end - data_rom;
+   \   00004A   0F14         PUSHM.A #0x1, R15
+   \   00004C   1C17         POPM.W  #0x2, R13
+   \   00004E   0B14         PUSHM.A #0x1, R11
+   \   000050   1E17         POPM.W  #0x2, R15
+   \   000052   0C8E         SUB.W   R14, R12
+   \   000054   0D7F         SUBC.W  R15, R13
+   \   000056   063C         JMP     ??RAM_data_Init_7
+    125          
+    126              /* 复制初始化数据到RAM里 */
+    127              while (n--)
+    128              {
+    129                  *data_ram++ = *data_rom++;
+   \                     ??RAM_data_Init_1:
+   \   000058   EA4B0000     MOV.B   @R11, 0(R10)
+   \   00005C   AB000100     ADDA    #0x1, R11
+   \   000060   AA000100     ADDA    #0x1, R10
+    130              }
+   \                     ??RAM_data_Init_7:
+   \   000064   0E4C         MOV.W   R12, R14
+   \   000066   0F4D         MOV.W   R13, R15
+   \   000068   0C4E         MOV.W   R14, R12
+   \   00006A   0D4F         MOV.W   R15, R13
+   \   00006C   3C53         ADD.W   #0xffff, R12
+   \   00006E   3D63         ADDC.W  #0xffff, R13
+   \   000070   084E         MOV.W   R14, R8
+   \   000072   E80F         ADDA    R15, R8
+   \   000074   F123         JNE     ??RAM_data_Init_1
+    131              
+    132              /* 没赋初值或者初值为0的变量，需要清除其RAM里的数据，确保值为0 */
+    133              uint8_t *bss_start = __section_begin("DATA16_Z");
+   \   000076   ........     MOVA    #SFB(DATA16_Z), R11
+    134              uint8_t *bss_end = __section_end("DATA16_Z");
+   \   00007A   ........     MOVA    #SFE(DATA16_Z), R15
+    135          
+    136              /* 清除没赋初值或者初值为0的变量数据值 */
+    137              n = bss_end - bss_start;
+   \   00007E   0F14         PUSHM.A #0x1, R15
+   \   000080   1C17         POPM.W  #0x2, R13
+   \   000082   0B14         PUSHM.A #0x1, R11
+   \   000084   1E17         POPM.W  #0x2, R15
+   \   000086   0C8E         SUB.W   R14, R12
+   \   000088   0D7F         SUBC.W  R15, R13
+   \   00008A   043C         JMP     ??RAM_data_Init_8
+    138              while(n--)
+    139              {
+    140                  *bss_start++ = 0;
+   \                     ??RAM_data_Init_2:
+   \   00008C   CB430000     MOV.B   #0x0, 0(R11)
+   \   000090   AB000100     ADDA    #0x1, R11
+    141              }
+   \                     ??RAM_data_Init_8:
+   \   000094   0E4C         MOV.W   R12, R14
+   \   000096   0F4D         MOV.W   R13, R15
+   \   000098   0C4E         MOV.W   R14, R12
+   \   00009A   0D4F         MOV.W   R15, R13
+   \   00009C   3C53         ADD.W   #0xffff, R12
+   \   00009E   3D63         ADDC.W  #0xffff, R13
+   \   0000A0   0A4E         MOV.W   R14, R10
+   \   0000A2   EA0F         ADDA    R15, R10
+   \   0000A4   F323         JNE     ??RAM_data_Init_2
+    142              /* 没赋初值或者初值为0的变量，需要清除其RAM里的数据，确保值为0 */
+    143              bss_start = __section_begin("DATA20_Z");
+   \   0000A6   ........     MOVA    #SFB(DATA20_Z), R11
+    144              bss_end = __section_end("DATA20_Z");
+   \   0000AA   ........     MOVA    #SFE(DATA20_Z), R15
+    145          
+    146              /* 清除没赋初值或者初值为0的变量数据值 */
+    147              n = bss_end - bss_start;
+   \   0000AE   0F14         PUSHM.A #0x1, R15
+   \   0000B0   1C17         POPM.W  #0x2, R13
+   \   0000B2   0B14         PUSHM.A #0x1, R11
+   \   0000B4   1E17         POPM.W  #0x2, R15
+   \   0000B6   0C8E         SUB.W   R14, R12
+   \   0000B8   0D7F         SUBC.W  R15, R13
+   \   0000BA   043C         JMP     ??RAM_data_Init_9
+    148              while(n--)
+    149              {
+    150                  *bss_start++ = 0;
+   \                     ??RAM_data_Init_3:
+   \   0000BC   CB430000     MOV.B   #0x0, 0(R11)
+   \   0000C0   AB000100     ADDA    #0x1, R11
+    151              }
+   \                     ??RAM_data_Init_9:
+   \   0000C4   0E4C         MOV.W   R12, R14
+   \   0000C6   0F4D         MOV.W   R13, R15
+   \   0000C8   0C4E         MOV.W   R14, R12
+   \   0000CA   0D4F         MOV.W   R15, R13
+   \   0000CC   3C53         ADD.W   #0xffff, R12
+   \   0000CE   3D63         ADDC.W  #0xffff, R13
+   \   0000D0   0A4E         MOV.W   R14, R10
+   \   0000D2   EA0F         ADDA    R15, R10
+   \   0000D4   F323         JNE     ??RAM_data_Init_3
+    152             
+    153               /* 赋值用 __ramfunc 声明的函数的的代码段到 RAM，可以加快代码的运行        */
+    154              uint8_t *code_relocate_ram = __section_begin("CODE_I");
+   \   0000D6   ........     MOVA    #SFB(CODE_I), R11
+    155              uint8_t *code_relocate = __section_begin("CODE_ID");
+   \   0000DA   ........     MOVA    #SFB(CODE_ID), R10
+    156              uint8_t *code_relocate_end = __section_end("CODE_ID");
+   \   0000DE   ........     MOVA    #SFE(CODE_ID), R15
+    157          
+    158              /* 从ROM里复制函数代码到RAM里 */
+    159              n = code_relocate_end - code_relocate;
+   \   0000E2   0F14         PUSHM.A #0x1, R15
+   \   0000E4   1C17         POPM.W  #0x2, R13
+   \   0000E6   0A14         PUSHM.A #0x1, R10
+   \   0000E8   1E17         POPM.W  #0x2, R15
+   \   0000EA   0C8E         SUB.W   R14, R12
+   \   0000EC   0D7F         SUBC.W  R15, R13
+   \   0000EE   063C         JMP     ??RAM_data_Init_10
+    160              while (n--)
+    161              {
+    162                  *code_relocate_ram++ = *code_relocate++;
+   \                     ??RAM_data_Init_4:
+   \   0000F0   EB4A0000     MOV.B   @R10, 0(R11)
+   \   0000F4   AA000100     ADDA    #0x1, R10
+   \   0000F8   AB000100     ADDA    #0x1, R11
+    163              }
+   \                     ??RAM_data_Init_10:
+   \   0000FC   0E4C         MOV.W   R12, R14
+   \   0000FE   0F4D         MOV.W   R13, R15
+   \   000100   0C4E         MOV.W   R14, R12
+   \   000102   0D4F         MOV.W   R15, R13
+   \   000104   3C53         ADD.W   #0xffff, R12
+   \   000106   3D63         ADDC.W  #0xffff, R13
+   \   000108   084E         MOV.W   R14, R8
+   \   00010A   E80F         ADDA    R15, R8
+   \   00010C   F123         JNE     ??RAM_data_Init_4
+    164              
+    165              /* 赋值 Thread-local storage for main thread(require custom runtime library)到RAM*/
+    166              uint8_t *tls_ram = __section_begin("TLS16_I");
+   \   00010E   ........     MOVA    #SFB(TLS16_I), R11
+    167              uint8_t *tls_start = __section_begin("TLS16_ID");
+   \   000112   ........     MOVA    #SFB(TLS16_ID), R10
+    168              uint8_t *tls_end   = __section_end("TLS16_ID");
+   \   000116   ........     MOVA    #SFE(TLS16_ID), R15
+    169          
+    170              /* 从ROM里复制函数代码到RAM里 */
+    171              n = tls_end - tls_start;
+   \   00011A   0F14         PUSHM.A #0x1, R15
+   \   00011C   1C17         POPM.W  #0x2, R13
+   \   00011E   0A14         PUSHM.A #0x1, R10
+   \   000120   1E17         POPM.W  #0x2, R15
+   \   000122   0C8E         SUB.W   R14, R12
+   \   000124   0D7F         SUBC.W  R15, R13
+   \   000126   063C         JMP     ??RAM_data_Init_11
+    172              while (n--)
+    173              {
+    174                  *tls_ram++ = *tls_start++;
+   \                     ??RAM_data_Init_5:
+   \   000128   EB4A0000     MOV.B   @R10, 0(R11)
+   \   00012C   AA000100     ADDA    #0x1, R10
+   \   000130   AB000100     ADDA    #0x1, R11
+    175              }
+   \                     ??RAM_data_Init_11:
+   \   000134   0E4C         MOV.W   R12, R14
+   \   000136   0F4D         MOV.W   R13, R15
+   \   000138   0C4E         MOV.W   R14, R12
+   \   00013A   0D4F         MOV.W   R15, R13
+   \   00013C   3C53         ADD.W   #0xffff, R12
+   \   00013E   3D63         ADDC.W  #0xffff, R13
+   \   000140   084E         MOV.W   R14, R8
+   \   000142   E80F         ADDA    R15, R8
+   \   000144   F123         JNE     ??RAM_data_Init_5
+    176          }
+   \   000146   3816         POPM.A  #0x4, R11
+   \   000148   1001         RETA
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     24   RAM_data_Init
+       20   -> VectorTableCopyToRAM
+      4   SystemInit
+        0   -> CLOCK_ACLK_Config
+        4   -> CLOCK_DCO_PLLConfig
+        4   -> CLOCK_MCLK_Config
+        4   -> CLOCK_SMCLK_Config
+        4   -> DisableWatchDog
+        4   -> RAM_data_Init
+        4   -> Set_VectorTable_To_RAM
+      4   __low_level_init
+        4   -> SystemInit
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     330  RAM_data_Init
+      56  SystemInit
+       8  __low_level_init
+
+ 
+ 394 bytes in segment CODE
+ 
+ 394 bytes of CODE memory
+
+Errors: none
+Warnings: none

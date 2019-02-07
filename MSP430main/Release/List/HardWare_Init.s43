@@ -1,0 +1,520 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:41
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\HardWare_Init.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWD14D.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\HardWare_Init.c
+//        -D NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\HardWare_Init.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME HardWare_Init
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC ALL_flag
+        PUBLIC Angle
+        PUBLIC Hardware_Init
+        PUBLIC Hardware_Test
+        PUBLIC MPU6050
+        PUBLIC Remote
+        PUBLIC SysTick_count
+        PUBWEAK _A_PAOUT_L
+        PUBWEAK _A_PDOUT_L
+        PUBLIC pidHeightHigh
+        PUBLIC pidHeightRate
+        PUBLIC pidPitch
+        PUBLIC pidRateX
+        PUBLIC pidRateY
+        PUBLIC pidRateZ
+        PUBLIC pidRoll
+        PUBLIC pidYaw
+        PUBLIC pid_param_Init
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN Motor_Init
+        EXTERN LED_Init
+        EXTERN NRF_Radio_Init
+        EXTERN NRF_Mannager
+        EXTERN Mpu6050_Init
+        EXTERN Single_ReadIIC
+        EXTERN SPL06_init
+        EXTERN USART_Init
+        EXTERN Timer_Init
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\HardWare_Init.c
+//    1 #include "HardWare_Init.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0202H
+// union <unnamed> __data16 _A_PAOUT_L
+_A_PAOUT_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0262H
+// union <unnamed> __data16 _A_PDOUT_L
+_A_PDOUT_L:
+        DS8 2
+//    2 #include "nrf2401.h"
+//    3 #include "SPL06.h"
+//    4 #include "communication.h"
+//    5 
+//    6 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    7 uint32_t SysTick_count; 
+SysTick_count:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    8 _st_Mpu MPU6050;   
+MPU6050:
+        DS8 12
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    9 _st_AngE Angle;   
+Angle:
+        DS8 12
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   10 _st_Remote Remote; 
+Remote:
+        DS8 22
+//   11 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//   12 _st_ALL_flag ALL_flag; 
+ALL_flag:
+        DS8 1
+//   13 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   14 PidObject pidRateX; 
+pidRateX:
+        DS8 52
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   15 PidObject pidRateY;
+pidRateY:
+        DS8 52
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   16 PidObject pidRateZ;
+pidRateZ:
+        DS8 52
+//   17 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   18 PidObject pidPitch; 
+pidPitch:
+        DS8 52
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   19 PidObject pidRoll;
+pidRoll:
+        DS8 52
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   20 PidObject pidYaw;
+pidYaw:
+        DS8 52
+//   21 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   22 PidObject pidHeightRate;
+pidHeightRate:
+        DS8 52
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   23 PidObject pidHeightHigh;
+pidHeightHigh:
+        DS8 52
+//   24 extern NRF_Mannager_t NRF_Mannager;
+//   25 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   26 void Hardware_Init(void)
+Hardware_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function Hardware_Init
+//   27 {
+//   28     Motor_Init();
+          CFI FunCall Motor_Init
+        CALLA   #Motor_Init
+//   29     LED_Init();
+          CFI FunCall LED_Init
+        CALLA   #LED_Init
+//   30     pid_param_Init();
+          CFI FunCall pid_param_Init
+        CALLA   #pid_param_Init
+//   31     NRF_Radio_Init();
+          CFI FunCall NRF_Radio_Init
+        CALLA   #NRF_Radio_Init
+//   32     if(NRF_Mannager.Hardware_Mannager->check &&
+//   33        Mpu6050_Init() == 0    &&
+//   34        Single_ReadIIC(HW_ADR << 1, 0x0D) == 0x10)
+        MOVA    &NRF_Mannager, R15
+        CMP.B   #0x0, 0(R15)
+        JEQ     ??Hardware_Init_0
+          CFI FunCall Mpu6050_Init
+        CALLA   #Mpu6050_Init
+        CMP.B   #0x0, R12
+        JNE     ??Hardware_Init_0
+        MOV.B   #0xd, R13
+        MOV.B   #0xec, R12
+          CFI FunCall Single_ReadIIC
+        CALLA   #Single_ReadIIC
+        CMP.B   #0x10, R12
+        JNE     ??Hardware_Init_0
+//   35     {
+//   36         LED_STATUS_ON;
+        BIC.B   #0x2, &0x203
+//   37         SPL06_init();
+          CFI FunCall SPL06_init
+        CALLA   #SPL06_init
+//   38     }
+//   39     
+//   40     USART_Init();
+??Hardware_Init_0:
+          CFI FunCall USART_Init
+        CALLA   #USART_Init
+//   41     Timer_Init();
+          CFI TailCall Timer_Init
+        BRA     #Timer_Init
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_PAOUT_L
+//   42 }
+//   43 
+//   44 
+//   45 /**************************************************************
+//   46  *  初始化PID参数
+//   47  * @brief 如果需要自己修改PID值，调这里就可以了
+//   48  * @param[out] 
+//   49  * @return     
+//   50  ***************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   51 void pid_param_Init(void)
+pid_param_Init:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function pid_param_Init
+          CFI NoCalls
+//   52 {
+//   53     pidRateX.kp = 2.0f;
+        MOVX.W  #0x0, &pidRateX + 16
+        MOVX.W  #0x4000, &pidRateX + 18
+//   54     pidRateY.kp = 2.0f;
+        MOVX.W  #0x0, &pidRateY + 16
+        MOVX.W  #0x4000, &pidRateY + 18
+//   55     pidRateZ.kp = 7.0f;
+        MOVX.W  #0x0, &pidRateZ + 16
+        MOVX.W  #0x40e0, &pidRateZ + 18
+//   56 
+//   57     pidRateX.ki = 0.05f;
+        MOVX.W  #0xcccd, &pidRateX + 20
+        MOVX.W  #0x3d4c, &pidRateX + 22
+//   58     pidRateY.ki = 0.05f;
+        MOVX.W  #0xcccd, &pidRateY + 20
+        MOVX.W  #0x3d4c, &pidRateY + 22
+//   59     pidRateZ.ki = 0.0f;	
+        MOVX.W  #0x0, &pidRateZ + 20
+        MOVX.W  #0x0, &pidRateZ + 22
+//   60 
+//   61     pidRateX.kd = 0.15f;
+        MOVX.W  #0x999a, &pidRateX + 24
+        MOVX.W  #0x3e19, &pidRateX + 26
+//   62     pidRateY.kd = 0.15f;
+        MOVX.W  #0x999a, &pidRateY + 24
+        MOVX.W  #0x3e19, &pidRateY + 26
+//   63     pidRateZ.kd = 0.2f;	
+        MOVX.W  #0xcccd, &pidRateZ + 24
+        MOVX.W  #0x3e4c, &pidRateZ + 26
+//   64 
+//   65     pidPitch.kp = 3.5f;
+        MOVX.W  #0x0, &pidPitch + 16
+        MOVX.W  #0x4060, &pidPitch + 18
+//   66     pidRoll.kp = 3.5f;
+        MOVX.W  #0x0, &pidRoll + 16
+        MOVX.W  #0x4060, &pidRoll + 18
+//   67     pidYaw.kp = 6.0f;	
+        MOVX.W  #0x0, &pidYaw + 16
+        MOVX.W  #0x40c0, &pidYaw + 18
+//   68 
+//   69     pidHeightRate.kp = 3.5f; //0.5f
+        MOVX.W  #0x0, &pidHeightRate + 16
+        MOVX.W  #0x4060, &pidHeightRate + 18
+//   70     pidHeightRate.kd = 0.5f;
+        MOVX.W  #0x0, &pidHeightRate + 24
+        MOVX.W  #0x3f00, &pidHeightRate + 26
+//   71     pidHeightHigh.kp = 0.3f;//0.32f		
+        MOVX.W  #0x999a, &pidHeightHigh + 16
+        MOVX.W  #0x3e99, &pidHeightHigh + 18
+//   72 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   73 
+//   74 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   75 void Hardware_Test(void)
+Hardware_Test:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function Hardware_Test
+//   76 {
+//   77     LED_Init();
+          CFI FunCall LED_Init
+        CALLA   #LED_Init
+//   78     pid_param_Init();
+          CFI FunCall pid_param_Init
+        CALLA   #pid_param_Init
+//   79     Motor_Init();
+          CFI FunCall Motor_Init
+        CALLA   #Motor_Init
+//   80     SPL06_init();
+          CFI FunCall SPL06_init
+        CALLA   #SPL06_init
+//   81     
+//   82     if(Mpu6050_Init() == 0x00)
+          CFI FunCall Mpu6050_Init
+        CALLA   #Mpu6050_Init
+        CMP.B   #0x0, R12
+        JNE     ??Hardware_Test_0
+//   83     {
+//   84       P7OUT |= GPIO_Pin_1;
+        BIS.B   #0x2, &0x262
+//   85     }
+//   86     
+//   87 
+//   88     if(Single_ReadIIC(HW_ADR << 1, 0x0D) == 0x10)
+??Hardware_Test_0:
+        MOV.B   #0xd, R13
+        MOV.B   #0xec, R12
+          CFI FunCall Single_ReadIIC
+        CALLA   #Single_ReadIIC
+        CMP.B   #0x10, R12
+        JNE     ??Hardware_Test_1
+//   89     {
+//   90       P7OUT |= GPIO_Pin_5;
+        BIS.B   #0x20, &0x262
+//   91     }
+//   92     
+//   93     USART_Init();
+??Hardware_Test_1:
+          CFI FunCall USART_Init
+        CALLA   #USART_Init
+//   94     Timer_Init();
+          CFI TailCall Timer_Init
+        BRA     #Timer_Init
+          CFI EndBlock cfiBlock2
+        REQUIRE _A_PDOUT_L
+//   95 }
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 350 bytes in segment CODE
+//   4 bytes in segment DATA16_AN
+// 467 bytes in segment DATA20_Z
+// 
+// 350 bytes of CODE memory
+// 467 bytes of DATA memory (+ 4 bytes shared)
+//
+//Errors: none
+//Warnings: none

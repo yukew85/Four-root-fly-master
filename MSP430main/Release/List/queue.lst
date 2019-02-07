@@ -1,0 +1,277 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:43:45
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\queue.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWE1E3.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\queue.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\queue.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\queue.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\queue.c
+      1          #include "queue.h"
+      2           
+
+   \                                 In  segment CODE, align 2
+      3          void Queue_Init(Queue_t *qPtr)
+   \                     Queue_Init:
+      4          {
+      5          	qPtr->front = 0;
+   \   000000   CC430000     MOV.B   #0x0, 0(R12)
+      6          	qPtr->rear = 0;
+   \   000004   CC430100     MOV.B   #0x0, 0x1(R12)
+      7          }
+   \   000008   1001         RETA
+      8          
+
+   \                                 In  segment CODE, align 2
+      9          bool enQueue(Queue_t *qPtr, uint8_t *Buff,uint8_t length)
+   \                     enQueue:
+     10          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   CA0C         MOVA    R12, R10
+   \   000004   C80D         MOVA    R13, R8
+   \   000006   4B4E         MOV.B   R14, R11
+     11          	//(qu->rear + 1) % maxsize == qu->front
+     12          	if ((qPtr->rear + 1) % QUEUE_DATA_BASE_LENGTH == qPtr->front)
+   \   000008   5C4A0100     MOV.B   0x1(R10), R12
+   \   00000C   4C4C         MOV.B   R12, R12
+   \   00000E   1C53         ADD.W   #0x1, R12
+   \   000010   3E400A00     MOV.W   #0xa, R14
+   \   000014   ........     CALLA   #?DivMod16s
+   \   000018   6F4A         MOV.B   @R10, R15
+   \   00001A   4F4F         MOV.B   R15, R15
+   \   00001C   0E9F         CMP.W   R15, R14
+   \   00001E   0220         JNE     ??enQueue_1
+     13          	{
+     14          		return false;
+   \   000020   4C43         MOV.B   #0x0, R12
+   \   000022   273C         JMP     ??enQueue_0
+     15          	}
+     16          
+     17          	qPtr->rear = (qPtr->rear + 1) % QUEUE_DATA_BASE_LENGTH;
+   \                     ??enQueue_1:
+   \   000024   5C4A0100     MOV.B   0x1(R10), R12
+   \   000028   4C4C         MOV.B   R12, R12
+   \   00002A   1C53         ADD.W   #0x1, R12
+   \   00002C   3E400A00     MOV.W   #0xa, R14
+   \   000030   ........     CALLA   #?DivMod16s
+   \   000034   CA4E0100     MOV.B   R14, 0x1(R10)
+     18              memcpy(qPtr->Buff[qPtr->rear].Buff,Buff,length);
+   \   000038   4B4B         MOV.B   R11, R11
+   \   00003A   0E4B         MOV.W   R11, R14
+   \   00003C   0F43         MOV.W   #0x0, R15
+   \   00003E   CD08         MOVA    R8, R13
+   \   000040   584A0100     MOV.B   0x1(R10), R8
+   \   000044   4848         MOV.B   R8, R8
+   \   000046   CC08         MOVA    R8, R12
+   \   000048                RPT     #0x5
+   \   000048   04184858     RLAX.A  R8
+   \   00004C   E80C         ADDA    R12, R8
+   \   00004E   C908         MOVA    R8, R9
+   \   000050   CC0A         MOVA    R10, R12
+   \   000052   EC09         ADDA    R9, R12
+   \   000054   EC03         ADDA    #0x2, R12
+   \   000056   ........     CALLA   #memcpy
+     19              qPtr->Buff[qPtr->rear].Length = length;
+   \   00005A   5F4A0100     MOV.B   0x1(R10), R15
+   \   00005E   4F4F         MOV.B   R15, R15
+   \   000060   CE0F         MOVA    R15, R14
+   \   000062                RPT     #0x5
+   \   000062   04184F5F     RLAX.A  R15
+   \   000066   EF0E         ADDA    R14, R15
+   \   000068   CE0F         MOVA    R15, R14
+   \   00006A   EA0E         ADDA    R14, R10
+   \   00006C   CA4B2200     MOV.B   R11, 0x22(R10)
+     20              return true;
+   \   000070   5C43         MOV.B   #0x1, R12
+   \                     ??enQueue_0:
+   \   000072   3816         POPM.A  #0x4, R11
+   \   000074   1001         RETA
+     21          }
+     22          
+
+   \                                 In  segment CODE, align 2
+     23          bool deQueue(Queue_t *qPtr,uint8_t *Buff,uint8_t *length)
+   \                     deQueue:
+     24          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   CA0C         MOVA    R12, R10
+   \   000004   C80D         MOVA    R13, R8
+   \   000006   CB0E         MOVA    R14, R11
+     25          	if (qPtr->front == qPtr->rear)
+   \   000008   DA9A01000000 CMP.B   0x1(R10), 0(R10)
+   \   00000E   0220         JNE     ??deQueue_1
+     26          		return false;
+   \   000010   4C43         MOV.B   #0x0, R12
+   \   000012   2F3C         JMP     ??deQueue_0
+     27          
+     28          	qPtr->front = (qPtr->front + 1) % QUEUE_DATA_BASE_LENGTH;
+   \                     ??deQueue_1:
+   \   000014   6C4A         MOV.B   @R10, R12
+   \   000016   4C4C         MOV.B   R12, R12
+   \   000018   1C53         ADD.W   #0x1, R12
+   \   00001A   3E400A00     MOV.W   #0xa, R14
+   \   00001E   ........     CALLA   #?DivMod16s
+   \   000022   CA4E0000     MOV.B   R14, 0(R10)
+     29          	memcpy(Buff,qPtr->Buff[qPtr->front].Buff,qPtr->Buff[qPtr->front].Length);
+   \   000026   6F4A         MOV.B   @R10, R15
+   \   000028   4F4F         MOV.B   R15, R15
+   \   00002A   CE0F         MOVA    R15, R14
+   \   00002C                RPT     #0x5
+   \   00002C   04184F5F     RLAX.A  R15
+   \   000030   EF0E         ADDA    R14, R15
+   \   000032   CE0F         MOVA    R15, R14
+   \   000034   CF0A         MOVA    R10, R15
+   \   000036   EF0E         ADDA    R14, R15
+   \   000038   5E4F2200     MOV.B   0x22(R15), R14
+   \   00003C   4E4E         MOV.B   R14, R14
+   \   00003E   0F43         MOV.W   #0x0, R15
+   \   000040   6D4A         MOV.B   @R10, R13
+   \   000042   4D4D         MOV.B   R13, R13
+   \   000044   CC0D         MOVA    R13, R12
+   \   000046                RPT     #0x5
+   \   000046   04184D5D     RLAX.A  R13
+   \   00004A   ED0C         ADDA    R12, R13
+   \   00004C   CC0D         MOVA    R13, R12
+   \   00004E   CD0A         MOVA    R10, R13
+   \   000050   ED0C         ADDA    R12, R13
+   \   000052   ED03         ADDA    #0x2, R13
+   \   000054   CC08         MOVA    R8, R12
+   \   000056   ........     CALLA   #memcpy
+     30              *length = qPtr->Buff[qPtr->front].Length;
+   \   00005A   6F4A         MOV.B   @R10, R15
+   \   00005C   4F4F         MOV.B   R15, R15
+   \   00005E   CE0F         MOVA    R15, R14
+   \   000060                RPT     #0x5
+   \   000060   04184F5F     RLAX.A  R15
+   \   000064   EF0E         ADDA    R14, R15
+   \   000066   CE0F         MOVA    R15, R14
+   \   000068   EA0E         ADDA    R14, R10
+   \   00006A   DB4A22000000 MOV.B   0x22(R10), 0(R11)
+     31          	return true;
+   \   000070   5C43         MOV.B   #0x1, R12
+   \                     ??deQueue_0:
+   \   000072   3816         POPM.A  #0x4, R11
+   \   000074   1001         RETA
+     32          }
+     33          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   Queue_Init
+     20   deQueue
+       20   -> memcpy
+       20 ?DivMod16s
+     20   enQueue
+       20   -> memcpy
+       20 ?DivMod16s
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      10  Queue_Init
+     118  deQueue
+     118  enQueue
+
+ 
+ 246 bytes in segment CODE
+ 
+ 246 bytes of CODE memory
+
+Errors: none
+Warnings: none

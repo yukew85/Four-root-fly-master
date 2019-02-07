@@ -1,0 +1,612 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:44
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_uart.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW59DB.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\msp430f5529_uart.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\msp430f5529_uart.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\msp430f5529_uart.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\Drivers\src\msp430f5529_uart.c
+      1          #include "msp430f5529_uart.h"
+      2          #include "msp430f5529_clock.h"
+      3          #include "msp430f5529_system.h"
+      4          #include "msp430f5529_gpio.h"
+      5          #include <stdio.h>
+      6          #include <stdarg.h>
+      7          const struct
+      8          {
+      9            GPIO_PIN TX;
+     10            GPIO_PIN RX;
+
+   \                                 In  segment DATA20_C, align 1, align-sorted
+     11          }UART_PIN[]=
+   \                     UART_PIN:
+   \   000000   020302040304 DC8 2, 3, 2, 4, 3, 4, 3, 5
+   \            0305        
+     12          {
+     13            /*UART0*/{.TX={P3,3},.RX={P3,4}},        
+     14            /*UART1*/{.TX={P4,4},.RX={P4,5}}
+     15          }; //引脚数组
+     16          /*******************************************************************************
+     17          *  函数名称：UART_Init(UARTn uartn,uint32_t BaudRate)
+     18          *  功能说明：初始化串口，设置波特率
+     19          *  参数说明：UARTn uartn       模块号（UART0~UART1）
+     20                       uint32_t BaudRate : 波特率，如9600、19200、115200等
+     21          *  函数返回：不成功则返回ERROR，成功则返回SUCCESS
+     22          *  使用示例：UART_Init(UART0,115200);   //初始化一个UART模块，波特率为115200
+     23          *******************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     24          STATUS UART_Init(UARTn uartn,uint32_t BaudRate)
+   \                     UART_Init:
+     25          {      
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   494C         MOV.B   R12, R9
+   \   000004   0A4E         MOV.W   R14, R10
+   \   000006   0B4F         MOV.W   R15, R11
+     26            //引脚初始化
+     27            GPIO_Init(UART_PIN[uartn].TX.Port,UART_PIN[uartn].TX.Pin,SEL);
+   \   000008   484C         MOV.B   R12, R8
+   \   00000A   4806         RLAM.A  #0x2, R8
+   \   00000C   3E400001     MOV.W   #0x100, R14
+   \   000010   1D43         MOV.W   #0x1, R13
+   \   000012   ....5F48.... MOVX.B  UART_PIN + 1(R8), R15
+   \   000018   5F83         SUB.B   #0x1, R15
+   \   00001A   0230         JN      ??UART_Init_0
+   \   00001C                RPT     R15
+   \   00001C   CF180D5D     RLAX.W  R13
+   \                     ??UART_Init_0:
+   \   000020   ....5C48.... MOVX.B  UART_PIN(R8), R12
+   \   000026   ........     CALLA   #GPIO_MultiBits_Init
+     28            GPIO_Init(UART_PIN[uartn].RX.Port,UART_PIN[uartn].RX.Pin,SEL);
+   \   00002A   3E400001     MOV.W   #0x100, R14
+   \   00002E   1D43         MOV.W   #0x1, R13
+   \   000030   ....5F48.... MOVX.B  UART_PIN + 3(R8), R15
+   \   000036   5F83         SUB.B   #0x1, R15
+   \   000038   0230         JN      ??UART_Init_1
+   \   00003A                RPT     R15
+   \   00003A   CF180D5D     RLAX.W  R13
+   \                     ??UART_Init_1:
+   \   00003E   ....5C48.... MOVX.B  UART_PIN + 2(R8), R12
+   \   000044   ........     CALLA   #GPIO_MultiBits_Init
+     29            
+     30            UART_SetBaudRate (uartn, BaudRate);                            //设置串口波特率
+   \   000048   0E4A         MOV.W   R10, R14
+   \   00004A   0F4B         MOV.W   R11, R15
+   \   00004C   4C49         MOV.B   R9, R12
+   \   00004E   ........     CALLA   #UART_SetBaudRate
+     31            
+     32            USCIX[uartn]->IE = 0u;                                         //关闭所有中断
+   \   000052   ....5B48.... MOVX.A  USCIX(R8), R11
+   \   000058   CB431C00     MOV.B   #0x0, 0x1c(R11)
+     33            USCIX[uartn]->RXIFG = RESET;                                   //清除接收数据标志
+   \   00005C   DBC31D00     BIC.B   #0x1, 0x1d(R11)
+     34            USCIX[uartn]->TXIFG = BIT_SET;                                     //置位发送缓冲区为空标志
+   \   000060   EBD31D00     BIS.B   #0x2, 0x1d(R11)
+     35            
+     36            return SUCCESS;
+   \   000064   5C43         MOV.B   #0x1, R12
+   \   000066   3816         POPM.A  #0x4, R11
+   \   000068   1001         RETA
+     37          }
+     38          /*******************************************************************************
+     39          *  函数名称：UART_SetBaudRate (UARTn uartn, uint32_t BaudRate)
+     40          *  功能说明：设置串口波特率
+     41          *  参数说明：UARTn uartn       模块号（UART0~UART1）
+     42                       uint32_t BaudRate : 波特率，如9600、19200、115200等
+     43          *  函数返回：无
+     44          *******************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     45          void UART_SetBaudRate (UARTn uartn, uint32_t BaudRate)
+   \                     UART_SetBaudRate:
+     46          {
+   \   000000   2A14         PUSHM.A #0x3, R10
+   \   000002   4A4C         MOV.B   R12, R10
+     47            float BRTemp = (float)g_sClock.SMCLK.nHZ/(float)BaudRate;
+   \   000004   ....1C42.... MOVX.W  &g_sClock + 12, R12
+   \   00000A   ....1D42.... MOVX.W  &g_sClock + 14, R13
+   \   000010   ........     CALLA   #_Cast32uto32f
+   \   000014   084C         MOV.W   R12, R8
+   \   000016   094D         MOV.W   R13, R9
+   \   000018   0C4E         MOV.W   R14, R12
+   \   00001A   0D4F         MOV.W   R15, R13
+   \   00001C   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_6:
+   \   000020   ........     CALLA   #_Div32f
+   \   000024   084C         MOV.W   R12, R8
+   \   000026   094D         MOV.W   R13, R9
+     48            
+     49            USCIX[uartn]->CTL1 = UCSSEL__SMCLK + UCSWRST;                //设置时钟源
+   \   000028   4A06         RLAM.A  #0x2, R10
+   \   00002A   ....5A4A.... MOVX.A  USCIX(R10), R10
+   \   000030   FA4081000000 MOV.B   #0x81, 0(R10)
+     50           
+     51            USCIX[uartn]->BRW = (uint16_t)BRTemp;                                 //设置波特率
+   \   000036   ........     CALLA   #_Cast32fto32s
+   \   00003A   8A4C0600     MOV.W   R12, 0x6(R10)
+     52            USCIX[uartn]->BRS = (uint16_t)((BRTemp-(uint16_t)(BRTemp))*8.0);        //设置调整波特率
+   \   00003E   0D43         MOV.W   #0x0, R13
+   \   000040   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_7:
+   \   000044   ........     CALLA   #_Sub32f
+   \   000048   0E4C         MOV.W   R12, R14
+   \   00004A   0F4D         MOV.W   R13, R15
+   \   00004C   0C43         MOV.W   #0x0, R12
+   \   00004E   3D400041     MOV.W   #0x4100, R13
+   \   000052   ........     CALLA   #_Mul32f
+   \   000056   ........     CALLA   #_Cast32fto32s
+   \   00005A   4C5C         RLA.B   R12
+   \   00005C   7CF00E00     AND.B   #0xe, R12
+   \   000060   5E4A0800     MOV.B   0x8(R10), R14
+   \   000064   7EF0F100     AND.B   #0xf1, R14
+   \   000068   4EDC         BIS.B   R12, R14
+   \   00006A   CA4E0800     MOV.B   R14, 0x8(R10)
+     53            USCIX[uartn]->BRF = 0u;
+   \   00006E   FAF00F000800 AND.B   #0xf, 0x8(R10)
+     54            
+     55            //过采样模式
+     56            /*
+     57            USCIX[uartn]->BRW =(uint16_t)(BRTemp/16);                                 //设置波特率
+     58            USCIX[uartn]->BRS = 0u;
+     59            USCIX[uartn]->BRF =(uint16_t)((BRTemp/16.0-(uint16_t)(BRTemp/16.0))*16.0);  //设置调整波特率
+     60            */
+     61            USCIX[uartn]->CTL1 &= ~UCSWRST;       
+   \   000074   DAC30000     BIC.B   #0x1, 0(R10)
+     62          }
+   \   000078   2816         POPM.A  #0x3, R10
+   \   00007A   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine2:
+   \   000000   ........     CALLA   #_Cast32uto32f
+   \   000004   0E4C         MOV.W   R12, R14
+   \   000006   0F4D         MOV.W   R13, R15
+   \   000008   0C48         MOV.W   R8, R12
+   \   00000A   0D49         MOV.W   R9, R13
+   \   00000C   1001         RETA
+     63          /*******************************************************************************
+     64          *  函数名称：UART_GetChar    (UARTn uartn)
+     65          *  功能说明：无限时间等待串口接受一个字节
+     66          *  参数说明：UARTn uartn     模块号（UART0~UART1）
+     67          *  函数返回：接收到的字节数据
+     68          ********************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     69          char UART_GetChar    (UARTn uartn)
+   \                     UART_GetChar:
+     70          {
+   \   000000   ........     CALLA   #?Subroutine0
+     71            while(USCIX[uartn]->RXIFG == RESET);               //等待接收到数据
+   \                     ??UART_GetChar_0:
+   \   000004   DFB31D00     BIT.B   #0x1, 0x1d(R15)
+   \   000008   FD27         JEQ     ??UART_GetChar_0
+     72            return (USCIX[uartn]->RXBUF);
+   \   00000A   5C4F0C00     MOV.B   0xc(R15), R12
+   \   00000E   1001         RETA
+     73          }
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine0:
+   \   000000   4C4C         MOV.B   R12, R12
+   \   000002   4C06         RLAM.A  #0x2, R12
+   \   000004   ....5F4C.... MOVX.A  USCIX(R12), R15
+   \   00000A   1001         RETA
+     74          /*************************************************************************
+     75          *  函数名称：UART_PutChar
+     76          *  功能说明：串口发送一个字节
+     77          *  参数说明：UARTn uartn      模块号（UART0~UART1）
+     78          *  函数返回：无
+     79          *  使用示例：UART_PutChar(UART0,0x02);   //发送一字节数据
+     80          *************************************************************************/  
+
+   \                                 In  segment CODE, align 2
+     81          void UART_PutChar(UARTn uartn,char data)
+   \                     UART_PutChar:
+     82          {
+     83              if(data == '\n')
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_0:
+   \   000004   7D900A00     CMP.B   #0xa, R13
+   \   000008   ........     CALLA   #?Subroutine1
+     84              {
+     85                while (USCIX[uartn]->TXIFG == RESET);          //等待发送缓冲区为空
+     86                USCIX[uartn]->TXBUF = '\r';                    // 
+     87              }
+     88              while (USCIX[uartn]->TXIFG == RESET);            //等待发送缓冲区为空
+     89              USCIX[uartn]->TXBUF = data;                      // 
+   \                     ??CrossCallReturnLabel_4:
+   \   00000C   CF4D0E00     MOV.B   R13, 0xe(R15)
+     90          }
+   \   000010   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine1:
+   \   000000   0620         JNE     ??UART_PutChar_1
+   \                     ??UART_PutChar_0:
+   \   000002   EFB31D00     BIT.B   #0x2, 0x1d(R15)
+   \   000006   FD27         JEQ     ??UART_PutChar_0
+   \   000008   FF400D000E00 MOV.B   #0xd, 0xe(R15)
+   \                     ??UART_PutChar_1:
+   \   00000E   EFB31D00     BIT.B   #0x2, 0x1d(R15)
+   \   000012   FD27         JEQ     ??UART_PutChar_1
+   \   000014   1001         RETA
+     91          /*************************************************************************
+     92          *  函数名称：Uart_PutNChar
+     93          *  功能说明：串口发送指定长度个字节数据
+     94          *  参数说明：UARTn uartn      模块号（UART0~UART1）
+     95          *  函数返回：无
+     96          *  使用示例：char Buff[10];UART_PutNChar(UART0,&Buff[0],5);   //发送一个字符串的前5个字节
+     97          *************************************************************************/ 
+
+   \                                 In  segment CODE, align 2
+     98          void UART_PutNChar(UARTn uartn,char * data,uint16_t Length)
+   \                     UART_PutNChar:
+     99          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+    100            for(int i=0; i < Length; i++)
+   \   000002   0F43         MOV.W   #0x0, R15
+   \   000004   4C4C         MOV.B   R12, R12
+   \   000006   4C06         RLAM.A  #0x2, R12
+   \   000008   ....5C4C.... MOVX.A  USCIX(R12), R12
+   \   00000E   103C         JMP     ??UART_PutNChar_3
+    101            {
+    102              UART_PutChar(uartn,*data++);
+   \                     ??UART_PutNChar_2:
+   \   000010   7A4D         MOV.B   @R13+, R10
+   \   000012   7A900A00     CMP.B   #0xa, R10
+   \   000016   0620         JNE     ??UART_PutNChar_1
+   \                     ??UART_PutNChar_0:
+   \   000018   ECB31D00     BIT.B   #0x2, 0x1d(R12)
+   \   00001C   FD27         JEQ     ??UART_PutNChar_0
+   \   00001E   FC400D000E00 MOV.B   #0xd, 0xe(R12)
+   \                     ??UART_PutNChar_1:
+   \   000024   ECB31D00     BIT.B   #0x2, 0x1d(R12)
+   \   000028   FD27         JEQ     ??UART_PutNChar_1
+   \   00002A   CC4A0E00     MOV.B   R10, 0xe(R12)
+    103            }
+   \   00002E   1F53         ADD.W   #0x1, R15
+   \                     ??UART_PutNChar_3:
+   \   000030   0F9E         CMP.W   R14, R15
+   \   000032   EE2B         JNC     ??UART_PutNChar_2
+    104          }
+   \   000034   0A16         POPM.A  #0x1, R10
+   \   000036   1001         RETA
+    105          /*************************************************************************
+    106          *  函数名称：Uart_PutString
+    107          *  功能说明：串口发送字符串
+    108          *  参数说明：UARTn uartn       模块号（UART0~UART1）
+    109          *  函数返回：无
+    110          *  使用示例：UART_PutString  (UART0 ,"Hello!");  //发送一个字符串
+    111          *************************************************************************/  
+
+   \                                 In  segment CODE, align 2
+    112          void UART_PutString  (UARTn uartn ,const char * str)
+   \                     UART_PutString:
+    113          {
+   \   000000   0C3C         JMP     ??UART_PutString_3
+    114              while(*str != '\0')
+    115              {
+    116                UART_PutChar(uartn,*str++);
+   \                     ??UART_PutString_2:
+   \   000002   7E4D         MOV.B   @R13+, R14
+   \   000004   4F4C         MOV.B   R12, R15
+   \   000006   4F06         RLAM.A  #0x2, R15
+   \   000008   ....5F4F.... MOVX.A  USCIX(R15), R15
+   \   00000E   7E900A00     CMP.B   #0xa, R14
+   \   000012   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_5:
+   \   000016   CF4E0E00     MOV.B   R14, 0xe(R15)
+    117              }
+   \                     ??UART_PutString_3:
+   \   00001A   6E4D         MOV.B   @R13, R14
+   \   00001C   4E93         CMP.B   #0x0, R14
+   \   00001E   F123         JNE     ??UART_PutString_2
+    118          }
+   \   000020   1001         RETA
+    119          /*************************************************************************
+    120          *  函数名称：UART_Printf
+    121          *  功能说明：串口发送字符串
+    122          *  参数说明：UARTn uartn     模块号（UART0~UART1）
+    123          *  函数返回：无
+    124          *  使用示例：UART_Printf(UART0 ,"Hello!:i=%d,J=%f",i,1.0);  //发送一个字符串
+    125          *************************************************************************/ 
+
+   \                                 In  segment CODE, align 2
+    126          void UART_Printf(UARTn uartn ,const char * fmt,...)
+   \                     UART_Printf:
+    127          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   B1008400     SUBA    #0x84, SP
+   \   000006   4A4C         MOV.B   R12, R10
+    128            char UART_String[128];
+    129            va_list ap;
+    130            va_start(ap,fmt);
+   \   000008   CF01         MOVA    SP, R15
+   \   00000A   AF008C00     ADDA    #0x8c, R15
+   \   00000E   710F0000     MOVA    R15, 0(SP)
+    131            vsprintf(UART_String,fmt,ap);
+   \   000012   0F14         PUSHM.A #0x1, R15
+   \   000014   CC01         MOVA    SP, R12
+   \   000016   AC000800     ADDA    #0x8, R12
+   \   00001A   ........     CALLA   #vsprintf
+    132            UART_PutString  (uartn ,UART_String);
+   \   00001E   CF01         MOVA    SP, R15
+   \   000020   AF000800     ADDA    #0x8, R15
+   \   000024   A1000400     ADDA    #0x4, SP
+   \   000028   143C         JMP     ??UART_Printf_3
+   \                     ??UART_Printf_2:
+   \   00002A   7E4F         MOV.B   @R15+, R14
+   \   00002C   4D4A         MOV.B   R10, R13
+   \   00002E   4D06         RLAM.A  #0x2, R13
+   \   000030   ....5D4D.... MOVX.A  USCIX(R13), R13
+   \   000036   7E900A00     CMP.B   #0xa, R14
+   \   00003A   0620         JNE     ??UART_Printf_1
+   \                     ??UART_Printf_0:
+   \   00003C   EDB31D00     BIT.B   #0x2, 0x1d(R13)
+   \   000040   FD27         JEQ     ??UART_Printf_0
+   \   000042   FD400D000E00 MOV.B   #0xd, 0xe(R13)
+   \                     ??UART_Printf_1:
+   \   000048   EDB31D00     BIT.B   #0x2, 0x1d(R13)
+   \   00004C   FD27         JEQ     ??UART_Printf_1
+   \   00004E   CD4E0E00     MOV.B   R14, 0xe(R13)
+   \                     ??UART_Printf_3:
+   \   000052   6C4F         MOV.B   @R15, R12
+   \   000054   4C93         CMP.B   #0x0, R12
+   \   000056   E923         JNE     ??UART_Printf_2
+    133            va_end(ap);
+    134          }
+   \   000058   A1008400     ADDA    #0x84, SP
+   \   00005C   0A16         POPM.A  #0x1, R10
+   \   00005E   1001         RETA
+    135          /*************************************************************************
+    136          *  函数名称：UART_ITConfig      (UARTn uartn,UART_IRQn irqn,STATUS ITState)
+    137          *  功能说明：设置串口中断
+    138          *  参数说明：UARTn uartn       模块号（UART0~UART1）
+    139                       UART_IRQn irqn   ：中断事件
+    140                       STATUS ITState   ：是否使能中断
+    141          *  函数返回：无
+    142          *  使用示例：UART_ITConfig      (UART0,UART_RX_IRQn,ENABLE);  //设置UART0接收中断允许
+    143          *************************************************************************/ 
+
+   \                                 In  segment CODE, align 2
+    144          void  UART_ITConfig      (UARTn uartn,UART_IRQn irqn,STATUS ITState)
+   \                     UART_ITConfig:
+    145          {
+    146            if(ITState != DISABLE)
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_1:
+   \   000004   4E93         CMP.B   #0x0, R14
+   \   000006   0324         JEQ     ??UART_ITConfig_0
+    147            {
+    148              USCIX[uartn]->IE |= irqn;
+   \   000008   CFDD1C00     BIS.B   R13, 0x1c(R15)
+   \   00000C   1001         RETA
+    149            }
+    150            else
+    151            {
+    152              USCIX[uartn]->IE &=~irqn;
+   \                     ??UART_ITConfig_0:
+   \   00000E   CFCD1C00     BIC.B   R13, 0x1c(R15)
+    153            }
+    154          }
+   \   000012   1001         RETA
+    155          /*************************************************************************
+    156          *  函数名称：UART_GetITStatus  (UARTn uartn,UART_IRQn irqn)
+    157          *  功能说明：清除串口某一个中断标志
+    158          *  参数说明：UARTn uartn      模块号（UART0~UART1）
+    159                       UART_IRQn irqn  ：中断事件
+    160          *  函数返回：STATUS : TRUE-中断事件发生 FALSE-中断事件未发生
+    161          *  使用示例：if(TRUE == UART_GetITStatus  (UART0,UART_RX_IRQn)){...} //判断UART0接收中断事件是否发生
+    162          *************************************************************************/ 
+
+   \                                 In  segment CODE, align 2
+    163          STATUS UART_GetITStatus  (UARTn uartn,UART_IRQn irqn)
+   \                     UART_GetITStatus:
+    164          {
+    165            return ((USCIX[uartn]->IFG & irqn) ? TRUE : FALSE);
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_2:
+   \   000004   5E4F1D00     MOV.B   0x1d(R15), R14
+   \   000008   4EBD         BIT.B   R13, R14
+   \   00000A   0220         JNE     ??UART_GetITStatus_0
+   \   00000C   4C43         MOV.B   #0x0, R12
+   \   00000E   1001         RETA
+   \                     ??UART_GetITStatus_0:
+   \   000010   5C43         MOV.B   #0x1, R12
+   \   000012   1001         RETA
+    166          }
+    167          /*************************************************************************
+    168          *  函数名称：UART_ClearITPendingBit(UARTn uartn,UART_IRQn irqn)
+    169          *  功能说明：清除串口某一个中断标志
+    170          *  参数说明：UARTn uartn      模块号（UART0~UART1）
+    171                       UART_IRQn irqn  ：中断事件
+    172          *  函数返回：无
+    173          *  使用示例：UART_ClearITPendingBit(UART0,UART_RX_IRQn);  //清除UART0接收中断标志位
+    174          *************************************************************************/ 
+
+   \                                 In  segment CODE, align 2
+    175          void  UART_ClearITPendingBit(UARTn uartn,UART_IRQn irqn)
+   \                     UART_ClearITPendingBit:
+    176          {
+    177            USCIX[uartn]->IFG &=~ irqn;
+   \   000000   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_3:
+   \   000004   CFCD1D00     BIC.B   R13, 0x1d(R15)
+    178          }
+   \   000008   1001         RETA
+    179          
+    180          #if defined(DEBUG)&&defined(DEBUG_UART_PRINT)
+    181          
+    182          #ifdef __GNUC__
+    183            /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
+    184               set to 'Yes') calls __io_putchar() */
+    185            #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+    186          #else
+    187            #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+    188          #endif /* __GNUC__ */
+    189          
+    190          PUTCHAR_PROTOTYPE
+    191          {
+    192            UART_PutChar(Print_UART,(char)ch);
+    193            return ch;
+    194          }
+    195           
+    196          #endif
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   UART_ClearITPendingBit
+      4   UART_GetChar
+      4   UART_GetITStatus
+      4   UART_ITConfig
+     20   UART_Init
+       20   -> GPIO_MultiBits_Init
+       20   -> UART_SetBaudRate
+    144   UART_Printf
+      144   -> vsprintf
+      4   UART_PutChar
+      8   UART_PutNChar
+      4   UART_PutString
+     16   UART_SetBaudRate
+       16 _Cast32fto32s
+       16 _Cast32uto32f
+       20 _Cast32uto32f
+       16 _Div32f
+       16 _Mul32f
+       16 _Sub32f
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?Subroutine0
+      22  ?Subroutine1
+      14  ?Subroutine2
+      10  UART_ClearITPendingBit
+      16  UART_GetChar
+      20  UART_GetITStatus
+      20  UART_ITConfig
+     106  UART_Init
+       8  UART_PIN
+      96  UART_Printf
+      18  UART_PutChar
+      56  UART_PutNChar
+      34  UART_PutString
+     124  UART_SetBaudRate
+
+ 
+ 548 bytes in segment CODE
+   8 bytes in segment DATA20_C
+ 
+ 548 bytes of CODE  memory
+   8 bytes of CONST memory
+
+Errors: none
+Warnings: none

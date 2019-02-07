@@ -1,0 +1,1080 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           26/Sep/2018  16:44:40
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HAL\control.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EW4BF7.tmp
+#        ("C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HAL\control.c" -D NDEBUG -D RAM_VECTOR -lC
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -lA
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List" -o
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj" -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_config\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_User\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\srcUSB\USB_API\USB_CDC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_HID_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Drivers\src\USB\USB_API\USB_MSC_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\KEY\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LED\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\12864\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\oled\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\mpu6050\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nokia5110\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LQ_1.8_TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\LCD_API\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\2.2TFT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\delay\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\inc\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\System\src\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\User\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\User\USER\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CONFIG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\App\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\CONFIHG\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\uCOSII\PORT\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\UCOSII\CORE\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Lib\FatFs\option\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\src\"
+#        -I "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\HardWare\nrf24l01\" -I
+#        "C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\MATH\"
+#        --core=430X --data_model=large -Oh --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\List\control.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 -
+#        副本\Release\Obj\control.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码 - 副本\HAL\control.c
+      1          #include "include.h"
+      2          #include "stdint.h"
+      3          
+      4          //------------------------------------------------------------------------------
+      5          #undef NULL
+      6          #define NULL 0
+      7          #undef DISABLE 
+      8          #define DISABLE 0
+      9          #undef ENABLE 
+     10          #define ENABLE 1
+     11          #undef REST
+     12          #define REST 0
+     13          #undef SET 
+     14          #define SET 1 
+     15          #undef EMERGENT
+     16          #define EMERGENT 0
+     17          //------------------------------------------------------------------------------
+
+   \                                 In  segment DATA20_I, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+     18          PidObject *(pPidObject[])={&pidRateX,&pidRateY,&pidRateZ,&pidRoll,&pidPitch,&pidYaw   //结构体数组，将每一个数组放一个pid结构体，这样就可以批量操作各个PID的数据了  比如解锁时批量复位pid控制数据，新手明白这句话的作用就可以了
+   \                     pPidObject:
+   \   000000                DS8 32
+   \   000020                REQUIRE `?<Initializer for pPidObject>`
+     19          		,&pidHeightRate
+     20          		,&pidHeightHigh
+     21          };
+     22          
+
+   \                                 In  segment CODE, align 2
+     23          void HeightPidControl(float dt)
+   \                     HeightPidControl:
+     24          {
+   \   000000   7B14         PUSHM.A #0x8, R11
+   \   000002   064C         MOV.W   R12, R6
+   \   000004   074D         MOV.W   R13, R7
+     25              volatile static uint8_t status=WAITING_1;
+     26              int16_t acc;       //当前你飞行器的加速度值
+     27              int16_t acc_error; //当前加速度减去重力加速度则为上下移动的加速度
+     28              static int16_t acc_offset;//重力加速度值
+     29              static uint32_t high = 0; //当前高度
+     30              static float thr_hold = 0; //进入高度时记录当前油门值
+     31              static uint16_t cnt_take_off;	//一键起飞加速时间
+     32          
+     33              high = user_SPL06_get();
+                          ^
+Warning[Pa093]: implicit conversion from floating point to integer
+   \   000006   ........     CALLA   #user_SPL06_get
+   \   00000A   ........     CALLA   #_Cast32fto32u
+   \   00000E   ....824C.... MOVX.W  R12, &??high
+   \   000014   ....824D.... MOVX.W  R13, &??high + 2
+     34          
+     35              acc = (int16_t)GetNormAccz();//提取重力向量
+   \   00001A   ........     CALLA   #GetNormAccz
+   \   00001E   ........     CALLA   #_Cast32fto32s
+   \   000022   0F4C         MOV.W   R12, R15
+     36          
+     37              if(!ALL_flag.unlock) //取得静态加速度值
+   \   000024   ........     MOVA    #ALL_flag, R10
+   \   000028   644A         MOV.B   @R10, R4
+   \   00002A   54B3         BIT.B   #0x1, R4
+   \   00002C   0320         JNE     ??HeightPidControl_1
+     38              {
+     39                  acc_offset = acc;
+   \   00002E   ....824C.... MOVX.W  R12, &??acc_offset
+   \                     ??HeightPidControl_1:
+   \   000034   ....1C42.... MOVX.W  &??high, R12
+   \   00003A   ....1D42.... MOVX.W  &??high + 2, R13
+   \   000040   ........     CALLA   #_Cast32uto32f
+   \   000044   084C         MOV.W   R12, R8
+   \   000046   094D         MOV.W   R13, R9
+   \   000048   ........     MOVA    #pidHeightRate, R11
+   \   00004C   ....1F82.... SUBX.W  &??acc_offset, R15
+   \   000052   0C4F         MOV.W   R15, R12
+   \   000054   22B2         BIT.W   #0x4, SR
+     40              }
+   \   000056   ........     CALLA   #??Subroutine6_0
+   \                     ??CrossCallReturnLabel_8:
+   \   00005A   1E4B2400     MOV.W   0x24(R11), R14
+   \   00005E   1F4B2600     MOV.W   0x26(R11), R15
+   \   000062   ........     CALLA   #_Add32f
+   \   000066   3E4048E1     MOV.W   #0xe148, R14
+   \   00006A   3F407A3F     MOV.W   #0x3f7a, R15
+   \   00006E   ........     CALLA   #_Mul32f
+   \   000072   044C         MOV.W   R12, R4
+   \   000074   054D         MOV.W   R13, R5
+   \   000076   0C48         MOV.W   R8, R12
+   \   000078   0D49         MOV.W   R9, R13
+   \   00007A   ....1E42.... MOVX.W  &??last_high, R14
+   \   000080   ....1F42.... MOVX.W  &??last_high + 2, R15
+   \   000086   ........     CALLA   #_Sub32f
+   \   00008A   3E400AD7     MOV.W   #0xd70a, R14
+   \   00008E   3F40A33C     MOV.W   #0x3ca3, R15
+   \   000092   ........     CALLA   #_Mul32f
+   \   000096   0E46         MOV.W   R6, R14
+   \   000098   0F47         MOV.W   R7, R15
+   \   00009A   ........     CALLA   #_Div32f
+   \   00009E   0E44         MOV.W   R4, R14
+   \   0000A0   0F45         MOV.W   R5, R15
+   \   0000A2   ........     CALLA   #_Add32f
+   \   0000A6   8B4C2400     MOV.W   R12, 0x24(R11)
+   \   0000AA   8B4D2600     MOV.W   R13, 0x26(R11)
+     41              acc_error = acc - acc_offset;	
+     42                          
+     43              {//此处做一个速度与高度的互补滤波
+     44                  static float last_high;
+     45                  pidHeightRate.measured = (pidHeightRate.measured + acc_error * dt)*0.98f + 0.02f*(high - last_high)/dt; 
+     46                  last_high = pidHeightHigh.measured = high;  //高度辅调
+   \   0000AE   0E48         MOV.W   R8, R14
+   \   0000B0   0F49         MOV.W   R9, R15
+   \   0000B2   ........     MOVA    #pidHeightHigh, R9
+   \   0000B6   894E2400     MOV.W   R14, 0x24(R9)
+   \   0000BA   894F2600     MOV.W   R15, 0x26(R9)
+   \   0000BE   ....8248.... MOVX.W  R8, &??last_high
+   \   0000C4   ....824F.... MOVX.W  R15, &??last_high + 2
+     47              }
+     48           
+     49              {
+     50                  status = EXIT_255;
+   \   0000CA   ........     MOVA    #??status, R8
+   \   0000CE   F8430000     MOV.B   #0xff, 0(R8)
+     51              }
+     52          		
+     53          
+     54          	switch(status)
+   \   0000D2   6E48         MOV.B   @R8, R14
+   \   0000D4   5E83         SUB.B   #0x1, R14
+   \   0000D6   0924         JEQ     ??HeightPidControl_7
+   \   0000D8   5E83         SUB.B   #0x1, R14
+   \   0000DA   1024         JEQ     ??HeightPidControl_8
+   \   0000DC   7E801D00     SUB.B   #0x1d, R14
+   \   0000E0   2924         JEQ     ??HeightPidControl_9
+   \   0000E2   7E80E000     SUB.B   #0xe0, R14
+   \   0000E6   9324         JEQ     ??HeightPidControl_10
+   \   0000E8   973C         JMP     ??HeightPidControl_4
+     55          	{
+     56          		case WAITING_1: //检测定高
+     57          		  if(ALL_flag.height_lock && ALL_flag.unlock) 
+   \                     ??HeightPidControl_7:
+   \   0000EA   644A         MOV.B   @R10, R4
+   \   0000EC   64B3         BIT.B   #0x2, R4
+   \   0000EE   9624         JEQ     ??HeightPidControl_0
+   \   0000F0   6A4A         MOV.B   @R10, R10
+   \   0000F2   5AB3         BIT.B   #0x1, R10
+   \   0000F4   9324         JEQ     ??HeightPidControl_0
+     58          			{
+     59          //				LED.status = WARNING;//LED单闪为定高
+     60          				status = WAITING_2;
+   \   0000F6   E8430000     MOV.B   #0x2, 0(R8)
+   \   0000FA   903C         JMP     ??HeightPidControl_0
+     61          			}
+     62          			break;
+     63          		case WAITING_2: //定高前准备
+     64          			if(ALL_flag.take_off)
+   \                     ??HeightPidControl_8:
+   \   0000FC   6A4A         MOV.B   @R10, R10
+   \   0000FE   6AB2         BIT.B   #0x4, R10
+   \   000100   0424         JEQ     ??HeightPidControl_2
+     65          			{
+     66          				thr_hold = 500;
+   \   000102   0C43         MOV.W   #0x0, R12
+   \   000104   3D40FA43     MOV.W   #0x43fa, R13
+   \   000108   083C         JMP     ??HeightPidControl_5
+     67          			}
+     68          			else
+     69          				thr_hold = Remote.thr -1000;  
+   \                     ??HeightPidControl_2:
+   \   00010A   ....1C42.... MOVX.W  &Remote + 4, R12
+   \   000110   3C5018FC     ADD.W   #0xfc18, R12
+   \   000114   0D43         MOV.W   #0x0, R13
+   \   000116   ........     CALLA   #_Cast32uto32f
+   \                     ??HeightPidControl_5:
+   \   00011A   ....824C.... MOVX.W  R12, &??thr_hold
+   \   000120   ....824D.... MOVX.W  R13, &??thr_hold + 2
+     70          			cnt_take_off = 0;//起飞时间清0
+   \   000126   ....8243.... MOVX.W  #0x0, &??cnt_take_off
+     71          			status = PROCESS_31;
+   \   00012C   F8401F000000 MOV.B   #0x1f, 0(R8)
+     72          			break;
+   \   000132   743C         JMP     ??HeightPidControl_0
+     73          		
+     74          		case PROCESS_31://进入定高	
+     75          				//一键起飞功能使用到
+     76          			if(ALL_flag.take_off)
+   \                     ??HeightPidControl_9:
+   \   000134   ........     MOVA    #Remote, R14
+   \   000138   644A         MOV.B   @R10, R4
+   \   00013A   64B2         BIT.B   #0x4, R4
+   \   00013C   1524         JEQ     ??HeightPidControl_3
+     77          			{	
+     78          				if(cnt_take_off<500)//起飞1.5S后进入正常工作
+   \   00013E   ....B290F401 CMPX.W  #0x1f4, &??cnt_take_off
+   \            ....        
+   \   000146   072C         JC      ??HeightPidControl_11
+     79          				{
+     80          					Remote.thr  = 2500;//起飞速度 这里可以调起飞过程的速度
+   \   000148   BE40C4090400 MOV.W   #0x9c4, 0x4(R14)
+     81          					cnt_take_off++;
+   \   00014E   ....9253.... ADDX.W  #0x1, &??cnt_take_off
+   \   000154   093C         JMP     ??HeightPidControl_3
+     82          				}
+     83          				else
+     84          				{
+     85          					if(Remote.thr >1500)
+   \                     ??HeightPidControl_11:
+   \   000156   BE90DD050400 CMP.W   #0x5dd, 0x4(R14)
+   \   00015C   0228         JNC     ??HeightPidControl_12
+     86          					{
+     87          						ALL_flag.take_off = 0;
+   \   00015E   EAC20000     BIC.B   #0x4, 0(R10)
+     88          					}
+     89          					Remote.thr = 1500;
+   \                     ??HeightPidControl_12:
+   \   000162   BE40DC050400 MOV.W   #0x5dc, 0x4(R14)
+     90          				}
+     91          			}
+     92          			//定高功能实现
+     93          			{
+     94                               static uint8_t set_high = 0;
+     95                           
+     96                              if(Remote.thr<1850 && Remote.thr>1150) //如果油门已回中，不调高度
+   \                     ??HeightPidControl_3:
+   \   000168   1F4E0400     MOV.W   0x4(R14), R15
+   \   00016C   0E4F         MOV.W   R15, R14
+   \   00016E   3E5081FB     ADD.W   #0xfb81, R14
+   \   000172   3E90BB02     CMP.W   #0x2bb, R14
+   \   000176   192C         JC      ??HeightPidControl_13
+     97                              {
+     98                                  if(set_high == 0) //如果刚退出调高
+   \   000178   ....C293.... CMPX.B  #0x0, &??set_high
+   \   00017E   0920         JNE     ??HeightPidControl_14
+     99                                  {
+    100                                      set_high = 1;
+   \   000180   ....D243.... MOVX.B  #0x1, &??set_high
+    101                                      pidHeightHigh.desired = pidHeightHigh.measured;//记录油门回中的高度当做当前定高高度
+   \   000186   994924000000 MOV.W   0x24(R9), 0(R9)
+   \   00018C   994926000200 MOV.W   0x26(R9), 0x2(R9)
+    102                                  }
+    103                                  
+    104                                  pidUpdate(&pidHeightHigh,dt);    //调用PID处理函数来处理外环	高度PID	
+   \                     ??HeightPidControl_14:
+   \   000192   0E46         MOV.W   R6, R14
+   \   000194   0F47         MOV.W   R7, R15
+   \   000196   CC09         MOVA    R9, R12
+   \   000198   ........     CALLA   #pidUpdate
+    105                                  pidHeightRate.desired = pidHeightHigh.out;  
+   \   00019C   9B4928000000 MOV.W   0x28(R9), 0(R11)
+   \   0001A2   9B492A000200 MOV.W   0x2a(R9), 0x2(R11)
+   \   0001A8   173C         JMP     ??HeightPidControl_6
+    106                              }
+    107                              else if(Remote.thr>1850) //油门上拉则上升 调整高度
+   \                     ??HeightPidControl_13:
+   \   0001AA   3F903B07     CMP.W   #0x73b, R15
+   \   0001AE   0928         JNC     ??HeightPidControl_15
+    108                              {
+    109                                  set_high = 0;
+   \   0001B0   ....C243.... MOVX.B  #0x0, &??set_high
+    110                                  pidHeightRate.desired = 300; //上升速度可调
+   \   0001B6   8B430000     MOV.W   #0x0, 0(R11)
+   \   0001BA   BB4096430200 MOV.W   #0x4396, 0x2(R11)
+   \   0001C0   0B3C         JMP     ??HeightPidControl_6
+    111                              }
+    112                              else if	(Remote.thr<1150) //油门下拉则下降	调整高度	
+   \                     ??HeightPidControl_15:
+   \   0001C2   3F907E04     CMP.W   #0x47e, R15
+   \   0001C6   082C         JC      ??HeightPidControl_6
+    113                              {
+    114                                  set_high = 0;
+   \   0001C8   ....C243.... MOVX.B  #0x0, &??set_high
+    115                                  pidHeightRate.desired = -300; //下降速度可调
+   \   0001CE   8B430000     MOV.W   #0x0, 0(R11)
+   \   0001D2   BB4096C30200 MOV.W   #0xc396, 0x2(R11)
+    116                              }
+    117                       }
+    118          								 
+    119                    pidUpdate(&pidHeightRate,dt); //再调用内环，垂直速度PID
+   \                     ??HeightPidControl_6:
+   \   0001D8   0E46         MOV.W   R6, R14
+   \   0001DA   0F47         MOV.W   R7, R15
+   \   0001DC   CC0B         MOVA    R11, R12
+   \   0001DE   ........     CALLA   #pidUpdate
+    120          				 
+    121          		  pidHeightRate.out += thr_hold;//加入进入定高时的油门值
+   \   0001E2   1C4B2800     MOV.W   0x28(R11), R12
+   \   0001E6   1D4B2A00     MOV.W   0x2a(R11), R13
+   \   0001EA   ....1E42.... MOVX.W  &??thr_hold, R14
+   \   0001F0   ....1F42.... MOVX.W  &??thr_hold + 2, R15
+   \   0001F6   ........     CALLA   #_Add32f
+   \   0001FA   8B4C2800     MOV.W   R12, 0x28(R11)
+   \   0001FE   8B4D2A00     MOV.W   R13, 0x2a(R11)
+    122          				 
+    123          			if(!ALL_flag.height_lock)  //退出定高
+   \   000202   6A4A         MOV.B   @R10, R10
+   \   000204   6AB3         BIT.B   #0x2, R10
+   \   000206   0A20         JNE     ??HeightPidControl_0
+    124          			{
+    125          //				LED.status = AlwaysOn ;
+    126          				status = EXIT_255;
+   \   000208   F8430000     MOV.B   #0xff, 0(R8)
+   \   00020C   073C         JMP     ??HeightPidControl_0
+    127          			}
+    128          			break;
+    129          		case EXIT_255: 
+    130          			pidRest(&pPidObject[6],2);	//清除当前的定高输出值
+   \                     ??HeightPidControl_10:
+   \   00020E   6D43         MOV.B   #0x2, R13
+   \   000210   ........     MOVA    #pPidObject + 24, R12
+   \   000214   ........     CALLA   #pidRest
+    131          			status = WAITING_1;//回到等待进入定高
+    132          			break;
+    133          		default:
+    134          			status = WAITING_1;
+   \                     ??HeightPidControl_4:
+   \   000218   D8430000     MOV.B   #0x1, 0(R8)
+    135          			break;	
+    136          	}	
+    137          		
+    138          		
+    139          }
+   \                     ??HeightPidControl_0:
+   \   00021C   7416         POPM.A  #0x8, R11
+   \   00021E   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ??Subroutine6_0:
+   \   000000   0D7D         SUBC.W  R13, R13
+   \   000002   3DE3         XOR.W   #0xffff, R13
+   \   000004   ........     CALLA   #_Cast32sto32f
+   \   000008   0E46         MOV.W   R6, R14
+   \   00000A   0F47         MOV.W   R7, R15
+   \   00000C   ........     BRA     #_Mul32f
+
+   \                                 In  segment DATA20_I, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??status:
+   \   000000                DS8 1
+   \   000001                REQUIRE `?<Initializer for status>`
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??acc_offset:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??high:
+   \   000000                DS8 4
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??thr_hold:
+   \   000000                DS8 4
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??cnt_take_off:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??last_high:
+   \   000000                DS8 4
+
+   \                                 In  segment DATA20_Z, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??set_high:
+   \   000000                DS8 1
+    140          
+    141          /**************************************************************
+    142           *  flight control
+    143           * @param[in] 
+    144           * @param[out] 
+    145           * @return     
+    146           ***************************************************************/
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   0D4C         MOV.W   R12, R13
+   \   000002   0D5D         RLA.W   R13
+   \   000004                REQUIRE ??Subroutine6_0
+   \   000004                // Fall through to label ??Subroutine6_0
+
+   \                                 In  segment CODE, align 2
+    147          void FlightPidControl(float dt)
+   \                     FlightPidControl:
+    148          {
+   \   000000   7B14         PUSHM.A #0x8, R11
+   \   000002   0A4C         MOV.W   R12, R10
+   \   000004   0B4D         MOV.W   R13, R11
+    149          	volatile static uint8_t status=WAITING_1;
+    150          
+    151          	switch(status)
+   \   000006   ........     MOVA    #??status_1, R8
+   \   00000A   6E48         MOV.B   @R8, R14
+   \   00000C   5E83         SUB.B   #0x1, R14
+   \   00000E   0A24         JEQ     ??FlightPidControl_3
+   \   000010   7E800A00     SUB.B   #0xa, R14
+   \   000014   0F24         JEQ     ??FlightPidControl_4
+   \   000016   7E801400     SUB.B   #0x14, R14
+   \   00001A   2124         JEQ     ??FlightPidControl_5
+   \   00001C   7E80E000     SUB.B   #0xe0, R14
+   \   000020   8424         JEQ     ??FlightPidControl_6
+   \   000022   883C         JMP     ??FlightPidControl_2
+    152          	{		
+    153          		case WAITING_1:
+    154          			if(ALL_flag.unlock)
+   \                     ??FlightPidControl_3:
+   \   000024   ....D2B3.... BITX.B  #0x1, &ALL_flag
+   \   00002A   8624         JEQ     ??FlightPidControl_1
+    155          			{
+    156          				status = READY_11;	
+   \   00002C   F8400B000000 MOV.B   #0xb, 0(R8)
+   \   000032   823C         JMP     ??FlightPidControl_1
+    157          			}			
+    158          			break;
+    159          		case READY_11:  
+    160          			pidRest(pPidObject,8); //批量复位PID数据，防止上次遗留的数据影响本次控制
+   \                     ??FlightPidControl_4:
+   \   000034   ........     CALLA   #?Subroutine3
+    161          
+    162          			Angle.yaw = pidYaw.desired =  pidYaw.measured = 0;   //锁定偏航角
+   \                     ??CrossCallReturnLabel_3:
+   \   000038   ....8243.... MOVX.W  #0x0, &pidYaw + 36
+   \   00003E   ....8243.... MOVX.W  #0x0, &pidYaw + 38
+   \   000044   ....8243.... MOVX.W  #0x0, &pidYaw
+   \   00004A   ....8243.... MOVX.W  #0x0, &pidYaw + 2
+   \   000050   ....C243.... MOVX.A  #0x0, &Angle + 8
+    163          		  
+    164          			status = PROCESS_31;
+   \   000056   F8401F000000 MOV.B   #0x1f, 0(R8)
+    165          		
+    166          			break;			
+   \   00005C   6D3C         JMP     ??FlightPidControl_1
+    167          		case PROCESS_31: //正式进入控制
+    168          			
+    169                                  pidRateX.measured = MPU6050.gyroX * Gyro_G; //内环测量值 角度/秒
+   \                     ??FlightPidControl_5:
+   \   00005E   ....1642.... MOVX.W  &Gyro_G, R6
+   \   000064   ....1742.... MOVX.W  &Gyro_G + 2, R7
+   \   00006A   ........     MOVA    #pidRateX, R5
+   \   00006E   ........     MOVA    #MPU6050, R9
+   \   000072   1C490600     MOV.W   0x6(R9), R12
+   \   000076   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_9:
+   \   00007A   854C2400     MOV.W   R12, 0x24(R5)
+   \   00007E   854D2600     MOV.W   R13, 0x26(R5)
+    170                                  pidRateY.measured = MPU6050.gyroY * Gyro_G;
+   \   000082   ........     MOVA    #pidRateY, R4
+   \   000086   1C490800     MOV.W   0x8(R9), R12
+   \   00008A   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_10:
+   \   00008E   844C2400     MOV.W   R12, 0x24(R4)
+   \   000092   844D2600     MOV.W   R13, 0x26(R4)
+    171                                  pidRateZ.measured = MPU6050.gyroZ * Gyro_G;
+   \   000096   1C490A00     MOV.W   0xa(R9), R12
+   \   00009A   ........     CALLA   #?Subroutine0
+   \                     ??CrossCallReturnLabel_11:
+   \   00009E   ....824C.... MOVX.W  R12, &pidRateZ + 36
+   \   0000A4   ....824D.... MOVX.W  R13, &pidRateZ + 38
+    172          
+    173                                  pidPitch.measured = Angle.pitch; //外环测量值 单位：角度
+   \   0000AA   ........     MOVA    #pidPitch, R9
+   \   0000AE   ........     MOVA    #Angle, R15
+   \   0000B2   994F04002400 MOV.W   0x4(R15), 0x24(R9)
+   \   0000B8   994F06002600 MOV.W   0x6(R15), 0x26(R9)
+    174                                  pidRoll.measured = Angle.roll;
+   \   0000BE   ........     MOVA    #pidRoll, R6
+   \   0000C2   A64F2400     MOV.W   @R15, 0x24(R6)
+   \   0000C6   964F02002600 MOV.W   0x2(R15), 0x26(R6)
+    175                                  pidYaw.measured = Angle.yaw;
+   \   0000CC   ....924F0800 MOVX.W  0x8(R15), &pidYaw + 36
+   \            ....        
+   \   0000D4   ....924F0A00 MOVX.W  0xa(R15), &pidYaw + 38
+   \            ....        
+    176          		
+    177          		 	pidUpdate(&pidRoll,dt);    
+   \   0000DC   ........     MOVA    #pidUpdate, R7
+   \   0000E0   0E4A         MOV.W   R10, R14
+   \   0000E2   0F4B         MOV.W   R11, R15
+   \   0000E4   CC06         MOVA    R6, R12
+   \   0000E6   4713         CALLA   R7
+    178          			pidRateX.desired = pidRoll.out; 
+   \   0000E8   954628000000 MOV.W   0x28(R6), 0(R5)
+   \   0000EE   95462A000200 MOV.W   0x2a(R6), 0x2(R5)
+    179          			pidUpdate(&pidRateX,dt); 
+   \   0000F4   0E4A         MOV.W   R10, R14
+   \   0000F6   0F4B         MOV.W   R11, R15
+   \   0000F8   CC05         MOVA    R5, R12
+   \   0000FA   4713         CALLA   R7
+    180          
+    181          		 	pidUpdate(&pidPitch,dt);    //调用PID处理函数来处理外环	俯仰角PID	
+   \   0000FC   0E4A         MOV.W   R10, R14
+   \   0000FE   0F4B         MOV.W   R11, R15
+   \   000100   CC09         MOVA    R9, R12
+   \   000102   4713         CALLA   R7
+    182          			pidRateY.desired = pidPitch.out;  
+   \   000104   944928000000 MOV.W   0x28(R9), 0(R4)
+   \   00010A   94492A000200 MOV.W   0x2a(R9), 0x2(R4)
+    183          			pidUpdate(&pidRateY,dt); 
+   \   000110   0E4A         MOV.W   R10, R14
+   \   000112   0F4B         MOV.W   R11, R15
+   \   000114   CC04         MOVA    R4, R12
+   \   000116   4713         CALLA   R7
+    184          
+    185          			CascadePID(&pidRateZ,&pidYaw,dt);	//也可以直接调用串级PID函数来处理
+   \   000118   0E4A         MOV.W   R10, R14
+   \   00011A   0F4B         MOV.W   R11, R15
+   \   00011C   ........     MOVA    #pidYaw, R13
+   \   000120   ........     MOVA    #pidRateZ, R12
+   \   000124   ........     CALLA   #CascadePID
+    186          			break;
+   \   000128   073C         JMP     ??FlightPidControl_1
+    187          		case EXIT_255:  //退出控制
+    188          			pidRest(pPidObject,8);
+   \                     ??FlightPidControl_6:
+   \   00012A   ........     CALLA   #?Subroutine3
+    189          			status = WAITING_1;//返回等待解锁
+   \                     ??CrossCallReturnLabel_2:
+   \   00012E   D8430000     MOV.B   #0x1, 0(R8)
+    190          		  break;
+   \   000132   023C         JMP     ??FlightPidControl_1
+    191          		default:
+    192          			status = EXIT_255;
+   \                     ??FlightPidControl_2:
+   \   000134   F8430000     MOV.B   #0xff, 0(R8)
+    193          			break;
+    194          	}
+    195          	if(ALL_flag.unlock == EMERGENT) 
+   \                     ??FlightPidControl_1:
+   \   000138   ....D2B3.... BITX.B  #0x1, &ALL_flag
+   \   00013E   0220         JNE     ??FlightPidControl_0
+    196          		status = EXIT_255;
+   \   000140   F8430000     MOV.B   #0xff, 0(R8)
+    197          }
+   \                     ??FlightPidControl_0:
+   \   000144   7416         POPM.A  #0x8, R11
+   \   000146   1001         RETA
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine3:
+   \   000000   7D42         MOV.B   #0x8, R13
+   \   000002   ........     MOVA    #pPidObject, R12
+   \   000006   ........     BRA     #pidRest
+
+   \                                 In  segment DATA20_I, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??status_1:
+   \   000000                DS8 1
+   \   000001                REQUIRE `?<Initializer for status>_1`
+    198          
+    199          /**************************************************************
+    200           *  电机输出
+    201           * @param[in] 
+    202           * @param[out] 
+    203           * @return     
+    204           ***************************************************************/
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+    205          int16_t motor[4];
+   \                     motor:
+   \   000000                DS8 8
+    206          #define MOTOR1 motor[0] 
+    207          #define MOTOR2 motor[1] 
+    208          #define MOTOR3 motor[2] 
+    209          #define MOTOR4 motor[3] 
+    210          
+
+   \                                 In  segment CODE, align 2
+    211          void MotorControl(void)
+   \                     MotorControl:
+    212          {	
+   \   000000   7B14         PUSHM.A #0x8, R11
+    213          	volatile static uint8_t status=WAITING_1;
+    214          	
+    215          	
+    216          	if(ALL_flag.unlock == EMERGENT)
+   \   000002   ........     MOVA    #??status_2, R11
+   \   000006   ........     MOVA    #ALL_flag, R7
+   \   00000A   6447         MOV.B   @R7, R4
+   \   00000C   54B3         BIT.B   #0x1, R4
+   \   00000E   0220         JNE     ??MotorControl_7
+    217          		status = EXIT_255;	
+   \   000010   FB430000     MOV.B   #0xff, 0(R11)
+    218              
+    219          	switch(status)
+   \                     ??MotorControl_7:
+   \   000014   ........     MOVA    #motor, R8
+   \   000018   6E4B         MOV.B   @R11, R14
+   \   00001A   5E83         SUB.B   #0x1, R14
+   \   00001C   0924         JEQ     ??MotorControl_14
+   \   00001E   5E83         SUB.B   #0x1, R14
+   \   000020   1224         JEQ     ??MotorControl_9
+   \   000022   7E801D00     SUB.B   #0x1d, R14
+   \   000026   1F24         JEQ     ??MotorControl_15
+   \   000028   7E80E000     SUB.B   #0xe0, R14
+   \   00002C   9324         JEQ     ??MotorControl_16
+   \   00002E   8C3C         JMP     ??MotorControl_10
+    220          	{		
+    221          		case WAITING_1: 
+    222          			MOTOR1 = MOTOR2 = MOTOR3 = MOTOR4 = 0;  //如果锁定，则电机输出都为0
+   \                     ??MotorControl_14:
+   \   000030   ........     CALLA   #?Subroutine4
+    223          			if(ALL_flag.unlock)
+   \                     ??CrossCallReturnLabel_4:
+   \   000034   6447         MOV.B   @R7, R4
+   \   000036   54B3         BIT.B   #0x1, R4
+   \   000038   0624         JEQ     ??MotorControl_9
+    224          			{
+    225          				ALL_flag.take_off = 0;	
+   \   00003A   E7C20000     BIC.B   #0x4, 0(R7)
+    226          				ALL_flag.height_lock = 0; 
+   \   00003E   E7C30000     BIC.B   #0x2, 0(R7)
+    227          				status = WAITING_2;
+   \   000042   EB430000     MOV.B   #0x2, 0(R11)
+    228          			}
+    229          		case WAITING_2: //解锁完成后判断使用者是否开始拨动遥杆进行飞行控制
+    230          			if(Remote.thr>1100&&!ALL_flag.take_off) //刚解锁时，如果不处于一键起飞并且遥杆处于最低，认为操作者还不想飞行
+   \                     ??MotorControl_9:
+   \   000046   ....B2904D04 CMPX.W  #0x44d, &Remote + 4
+   \            ....        
+   \   00004E   0328         JNC     ??MotorControl_8
+   \   000050   6447         MOV.B   @R7, R4
+   \   000052   64B2         BIT.B   #0x4, R4
+   \   000054   0524         JEQ     ??MotorControl_11
+    231          			{
+    232          				status = PROCESS_31;
+    233          			}
+    234          			else if(ALL_flag.take_off)
+   \                     ??MotorControl_8:
+   \   000056   6447         MOV.B   @R7, R4
+   \   000058   64B2         BIT.B   #0x4, R4
+   \   00005A   7624         JEQ     ??MotorControl_10
+    235          			{
+    236          						ALL_flag.height_lock = 1;
+   \   00005C   E7D30000     BIS.B   #0x2, 0(R7)
+    237          						status = PROCESS_31;							
+   \                     ??MotorControl_11:
+   \   000060   FB401F000000 MOV.B   #0x1f, 0(R11)
+    238          			}
+    239          			else
+    240          			{
+    241          					break;
+    242          			}	
+    243          		case PROCESS_31:
+    244          			{
+    245          				int16_t temp;
+    246          				if(ALL_flag.height_lock)
+   \                     ??MotorControl_15:
+   \   000066   6747         MOV.B   @R7, R7
+   \   000068   67B3         BIT.B   #0x2, R7
+   \   00006A   0924         JEQ     ??MotorControl_6
+    247          				{		
+    248          					temp = pidHeightRate.out; 
+                 					     ^
+Warning[Pa093]: implicit conversion from floating point to integer
+   \   00006C   ....1C42.... MOVX.W  &pidHeightRate + 40, R12
+   \   000072   ....1D42.... MOVX.W  &pidHeightRate + 42, R13
+   \   000078   ........     CALLA   #_Cast32fto32s
+   \   00007C   153C         JMP     ??MotorControl_12
+    249          				}
+    250          				else 
+    251          				{
+    252          					if(Remote.thr<1040) 
+   \                     ??MotorControl_6:
+   \   00007E   ....B2901004 CMPX.W  #0x410, &Remote + 4
+   \            ....        
+   \   000086   0B2C         JC      ??MotorControl_17
+    253          					{
+    254          						MOTOR1 = MOTOR2 = MOTOR3 = MOTOR4 = 0;//清0
+   \   000088   ........     CALLA   #?Subroutine4
+    255          						break;
+   \                     ??MotorControl_13:
+   \   00008C   0F43         MOV.W   #0x0, R15
+   \   00008E   0E43         MOV.W   #0x0, R14
+   \   000090   0D43         MOV.W   #0x0, R13
+   \                     ??MotorControl_0:
+   \   000092   1C480600     MOV.W   0x6(R8), R12
+   \                     ??MotorControl_1:
+   \   000096   ........     CALLA   #Motor_Config
+    256          					}
+    257          					temp = Remote.thr -1000; 
+    258          				}
+    259          				
+    260          				//将油门值作为基础值给PWM
+    261          				MOTOR1 = MOTOR2 = MOTOR3 = MOTOR4 = LIMIT(temp,0,700); 
+    262                                          
+    263          //				MOTOR1 +=    + pidRateX.out - pidRateY.out - pidRateZ.out;
+    264          //				MOTOR2 +=    + pidRateX.out + pidRateY.out + pidRateZ.out;
+    265          //				MOTOR3 +=    - pidRateX.out + pidRateY.out - pidRateZ.out;
+    266          //				MOTOR4 +=    - pidRateX.out - pidRateY.out + pidRateZ.out;                                
+    267                                          
+    268                                          MOTOR1 +=    + pidRateX.out - pidRateY.out - pidRateZ.out;
+                                                 ^
+Warning[Pa082]: undefined behavior: the order of volatile accesses is undefined
+          in this statement
+    269          				MOTOR2 +=    + pidRateX.out + pidRateY.out + pidRateZ.out;
+                 				^
+Warning[Pa082]: undefined behavior: the order of volatile accesses is undefined
+          in this statement
+    270          				MOTOR3 +=    - pidRateX.out + pidRateY.out - pidRateZ.out;
+                 				^
+Warning[Pa082]: undefined behavior: the order of volatile accesses is undefined
+          in this statement
+    271          				MOTOR4 +=    - pidRateX.out - pidRateY.out + pidRateZ.out; 
+                 				^
+Warning[Pa082]: undefined behavior: the order of volatile accesses is undefined
+          in this statement
+    272                                          
+    273          			}
+    274          			break;
+    275          		case EXIT_255:
+    276          			MOTOR1 = MOTOR2 = MOTOR3 = MOTOR4 = 0; 
+    277          			status = WAITING_1;	//返回等待解锁
+    278          			break;
+    279          		default:
+    280          			break;
+    281          	}
+    282                  //4213
+    283                  Motor_Config(LIMIT(MOTOR4,0,1000), 
+    284                               LIMIT(MOTOR2,0,1000),  
+    285                               LIMIT(MOTOR1,0,1000), 
+    286                               LIMIT(MOTOR3,0,1000));
+    287          } 
+   \   00009A   7416         POPM.A  #0x8, R11
+   \   00009C   1001         RETA
+   \                     ??MotorControl_17:
+   \   00009E   ....1C42.... MOVX.W  &Remote + 4, R12
+   \   0000A4   3C5018FC     ADD.W   #0xfc18, R12
+   \                     ??MotorControl_12:
+   \   0000A8   0C93         CMP.W   #0x0, R12
+   \   0000AA   0234         JGE     ??MotorControl_18
+   \   0000AC   0C43         MOV.W   #0x0, R12
+   \   0000AE   053C         JMP     ??MotorControl_2
+   \                     ??MotorControl_18:
+   \   0000B0   3C90BD02     CMP.W   #0x2bd, R12
+   \   0000B4   0238         JL      ??MotorControl_2
+   \   0000B6   3C40BC02     MOV.W   #0x2bc, R12
+   \                     ??MotorControl_2:
+   \   0000BA   884C0600     MOV.W   R12, 0x6(R8)
+   \   0000BE   884C0400     MOV.W   R12, 0x4(R8)
+   \   0000C2   884C0200     MOV.W   R12, 0x2(R8)
+   \   0000C6   ........     MOVA    #pidRateX + 40, R9
+   \   0000CA   2449         MOV.W   @R9, R4
+   \   0000CC   15490200     MOV.W   0x2(R9), R5
+   \   0000D0   ........     MOVA    #pidRateY + 40, R6
+   \   0000D4   2E46         MOV.W   @R6, R14
+   \   0000D6   1F460200     MOV.W   0x2(R6), R15
+   \   0000DA   0D4C         MOV.W   R12, R13
+   \   0000DC   0D5D         RLA.W   R13
+   \   0000DE   0D7D         SUBC.W  R13, R13
+   \   0000E0   3DE3         XOR.W   #0xffff, R13
+   \   0000E2   ........     CALLA   #_Cast32sto32f
+   \   0000E6   0A4C         MOV.W   R12, R10
+   \   0000E8   0B4D         MOV.W   R13, R11
+   \   0000EA   ........     MOVA    #pidRateZ + 40, R7
+   \   0000EE   0C44         MOV.W   R4, R12
+   \   0000F0   0D45         MOV.W   R5, R13
+   \   0000F2   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_6:
+   \   0000F6   884C0000     MOV.W   R12, 0(R8)
+   \   0000FA   2C49         MOV.W   @R9, R12
+   \   0000FC   1D490200     MOV.W   0x2(R9), R13
+   \   000100   2E46         MOV.W   @R6, R14
+   \   000102   1F460200     MOV.W   0x2(R6), R15
+   \   000106   ........     CALLA   #_Add32f
+   \   00010A   2E47         MOV.W   @R7, R14
+   \   00010C   1F470200     MOV.W   0x2(R7), R15
+   \   000110   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_0:
+   \   000114   884C0200     MOV.W   R12, 0x2(R8)
+   \   000118   2E49         MOV.W   @R9, R14
+   \   00011A   1F490200     MOV.W   0x2(R9), R15
+   \   00011E   2C46         MOV.W   @R6, R12
+   \   000120   1D460200     MOV.W   0x2(R6), R13
+   \   000124   ........     CALLA   #?Subroutine1
+   \                     ??CrossCallReturnLabel_7:
+   \   000128   884C0400     MOV.W   R12, 0x4(R8)
+   \   00012C   3C49         MOV.W   @R9+, R12
+   \   00012E   3D49         MOV.W   @R9+, R13
+   \   000130   3E46         MOV.W   @R6+, R14
+   \   000132   3F46         MOV.W   @R6+, R15
+   \   000134   3DE00080     XOR.W   #0x8000, R13
+   \   000138   ........     CALLA   #_Sub32f
+   \   00013C   3E47         MOV.W   @R7+, R14
+   \   00013E   3F47         MOV.W   @R7+, R15
+   \   000140   ........     CALLA   #?Subroutine2
+   \                     ??CrossCallReturnLabel_1:
+   \   000144   884C0600     MOV.W   R12, 0x6(R8)
+   \                     ??MotorControl_10:
+   \   000148   1F480400     MOV.W   0x4(R8), R15
+   \   00014C   0F93         CMP.W   #0x0, R15
+   \   00014E   0734         JGE     ??MotorControl_19
+   \   000150   0F43         MOV.W   #0x0, R15
+   \   000152   0A3C         JMP     ??MotorControl_3
+   \                     ??MotorControl_16:
+   \   000154   ........     CALLA   #?Subroutine4
+   \                     ??CrossCallReturnLabel_5:
+   \   000158   DB430000     MOV.B   #0x1, 0(R11)
+   \   00015C   973F         JMP     ??MotorControl_13
+   \                     ??MotorControl_19:
+   \   00015E   3F90E903     CMP.W   #0x3e9, R15
+   \   000162   0238         JL      ??MotorControl_3
+   \   000164   3F40E803     MOV.W   #0x3e8, R15
+   \                     ??MotorControl_3:
+   \   000168   2E48         MOV.W   @R8, R14
+   \   00016A   0E93         CMP.W   #0x0, R14
+   \   00016C   0234         JGE     ??MotorControl_20
+   \   00016E   0E43         MOV.W   #0x0, R14
+   \   000170   053C         JMP     ??MotorControl_4
+   \                     ??MotorControl_20:
+   \   000172   3E90E903     CMP.W   #0x3e9, R14
+   \   000176   0238         JL      ??MotorControl_4
+   \   000178   3E40E803     MOV.W   #0x3e8, R14
+   \                     ??MotorControl_4:
+   \   00017C   1D480200     MOV.W   0x2(R8), R13
+   \   000180   0D93         CMP.W   #0x0, R13
+   \   000182   0234         JGE     ??MotorControl_21
+   \   000184   0D43         MOV.W   #0x0, R13
+   \   000186   053C         JMP     ??MotorControl_5
+   \                     ??MotorControl_21:
+   \   000188   3D90E903     CMP.W   #0x3e9, R13
+   \   00018C   0238         JL      ??MotorControl_5
+   \   00018E   3D40E803     MOV.W   #0x3e8, R13
+   \                     ??MotorControl_5:
+   \   000192   88930600     CMP.W   #0x0, 0x6(R8)
+   \   000196   0234         JGE     ??MotorControl_22
+   \   000198   0C43         MOV.W   #0x0, R12
+   \   00019A   7D3F         JMP     ??MotorControl_1
+   \                     ??MotorControl_22:
+   \   00019C   B890E9030600 CMP.W   #0x3e9, 0x6(R8)
+   \   0001A2   773B         JL      ??MotorControl_0
+   \   0001A4   3C40E803     MOV.W   #0x3e8, R12
+   \   0001A8   763F         JMP     ??MotorControl_1
+   \   0001AA   0343         NOP
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine4:
+   \   000000   88430600     MOV.W   #0x0, 0x6(R8)
+   \   000004   88430400     MOV.W   #0x0, 0x4(R8)
+   \   000008   88430200     MOV.W   #0x0, 0x2(R8)
+   \   00000C   88430000     MOV.W   #0x0, 0(R8)
+   \   000010   1001         RETA
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   ........     CALLA   #_Add32f
+   \   000004   ....         JMP     ?Subroutine5
+
+   \                                 In  segment CODE, align 2, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   ........     CALLA   #_Sub32f
+   \   000004   2E47         MOV.W   @R7, R14
+   \   000006   1F470200     MOV.W   0x2(R7), R15
+   \   00000A   ........     CALLA   #_Sub32f
+   \   00000E                REQUIRE ?Subroutine5
+   \   00000E                // Fall through to label ?Subroutine5
+
+   \                                 In  segment CODE, align 2
+   \                     ?Subroutine5:
+   \   000000   0E4A         MOV.W   R10, R14
+   \   000002   0F4B         MOV.W   R11, R15
+   \   000004   ........     CALLA   #_Add32f
+   \   000008   ........     BRA     #_Cast32fto32s
+
+   \                                 In  segment DATA20_I, align 1, align-sorted
+   \   000000                REQUIRE ?cstart_init_copy20
+   \                     ??status_2:
+   \   000000                DS8 1
+   \   000001                REQUIRE `?<Initializer for status>_2`
+
+   \                                 In  segment DATA20_ID, align 2, align-sorted
+   \                     `?<Initializer for pPidObject>`:
+   \   000000   ............ DC32 pidRateX, pidRateY, pidRateZ, pidRoll, pidPitch, pidYaw
+   \            ............
+   \            ............
+   \            ............
+   \   000018   ............ DC32 pidHeightRate, pidHeightHigh
+   \            ....        
+
+   \                                 In  segment DATA20_ID, align 1, align-sorted
+   \                     `?<Initializer for status>`:
+   \   000000   01           DC8 1
+
+   \                                 In  segment DATA20_ID, align 1, align-sorted
+   \                     `?<Initializer for status>_1`:
+   \   000000   01           DC8 1
+
+   \                                 In  segment DATA20_ID, align 1, align-sorted
+   \                     `?<Initializer for status>_2`:
+   \   000000   01           DC8 1
+    288          /************************************END OF FILE********************************************/ 
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     36   FlightPidControl
+       36   -> CascadePID
+       36   -> pidRest
+       36   -> pidUpdate
+       40 _Cast32sto32f
+       36 _Mul32f
+     36   HeightPidControl
+       36   -> GetNormAccz
+       36   -> pidRest
+       36   -> pidUpdate
+       36   -> user_SPL06_get
+       36 _Add32f
+       36 _Cast32fto32s
+       36 _Cast32fto32u
+       40 _Cast32sto32f
+       36 _Cast32uto32f
+       36 _Div32f
+       36 _Mul32f
+       36 _Sub32f
+     36   MotorControl
+       36   -> Motor_Config
+       36 _Add32f
+       40 _Add32f
+       36 _Cast32fto32s
+       36 _Cast32sto32f
+       36 _Sub32f
+       40 _Sub32f
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      32  ?<Initializer for pPidObject>
+       1  ?<Initializer for status>
+       1  ?<Initializer for status>_1
+       1  ?<Initializer for status>_2
+      16  ??Subroutine6_0
+       4  ?Subroutine0
+      14  ?Subroutine1
+       6  ?Subroutine2
+      10  ?Subroutine3
+      18  ?Subroutine4
+      12  ?Subroutine5
+     328  FlightPidControl
+     544  HeightPidControl
+     428  MotorControl
+       2  acc_offset
+       2  cnt_take_off
+       4  high
+       4  last_high
+       8  motor
+      32  pPidObject
+       1  set_high
+       1  status
+       1  status
+       1  status
+       4  thr_hold
+
+ 
+ 1 380 bytes in segment CODE
+    35 bytes in segment DATA20_I
+    35 bytes in segment DATA20_ID
+    25 bytes in segment DATA20_Z
+ 
+ 1 380 bytes of CODE  memory
+    35 bytes of CONST memory
+    60 bytes of DATA  memory
+
+Errors: none
+Warnings: 6

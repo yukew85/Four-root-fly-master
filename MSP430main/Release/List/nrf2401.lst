@@ -1,0 +1,930 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V7.12.1.987/W32 for MSP430           01/Nov/2018  12:58:40
+# Copyright 1996-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+#
+#    __rt_version  =  3
+#    __double_size =  32
+#    __reg_r4      =  free
+#    __reg_r5      =  free
+#    __pic         =  no
+#    __core        =  430X
+#    __data_model  =  large
+#    __code_model  =  large
+#    Source file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\nrf2401.c
+#    Command line  =  
+#        -f C:\Users\颜子楠\AppData\Local\Temp\EWBB59.tmp
+#        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\nrf2401.c
+#        -D NDEBUG -D RAM_VECTOR -lC
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -lA
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+#        -o C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+#        -D__MSP430F5529__ -e --double=32 --dlib_config
+#        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+#        -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+#        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+#        --core=430X --data_model=large -Ol --multiplier=32
+#        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+#        --code_model=large)
+#    Locale        =  Chinese (Simplified)_CHN.936
+#    List file     =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\nrf2401.lst
+#    Object file   =  
+#        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj\nrf2401.r43
+#
+###############################################################################
+
+C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\nrf2401.c
+      1          #include "nrf2401.H"
+
+   \                                 In  segment DATA16_AN, at 0x222
+   \   union <unnamed> __data16 _A_PBOUT_L
+   \                     _A_PBOUT_L:
+   \   000000                DS8 2
+      2          #include "stdbool.h"
+      3          #include "include.h"
+      4          #include "communication.h"
+      5          
+      6          #define FLASH_TX_ADDR_OFFSET      7
+      7          #define FLASH_RX_ADDR_OFFSET      2
+      8          #define FLASH_FREQ_ADDR_OFFSET    0
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+      9          NRF24L01_Manager_t NRF24L01_Manager;
+   \                     NRF24L01_Manager:
+   \   000000                DS8 42
+     10          /***********************************************************************************************
+     11           功能：NRF24L01 读写一个字节
+     12           形参：发送的数据
+     13           返回：读到的数据
+     14           详解：调用SPI模块
+     15          ************************************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     16          static uint8_t NRF2401_ReadWriteByte(uint8_t data)
+   \                     NRF2401_ReadWriteByte:
+     17          {
+     18          #if NRF24L01HardWareSPI
+     19            return NRF2401HardWareSPI_SendByte(data);   //发送并读取一字节数据
+   \   000000   4D4C         MOV.B   R12, R13
+   \   000002   7C400300     MOV.B   #0x3, R12
+   \   000006   ........     BRA     #SPI_SendReadByte
+     20          #else
+     21            for(uint8_t i=0;i < 8;i++)          // 循环8次
+     22            {
+     23              NRF2401_SIMO = (data&0x80) ? 1 : 0;//上升沿发送数据// byte最高位输出到MOSI
+     24              data <<= 1;             // 低一位移位到最高位
+     25              NRF2401_SCL = 1; 
+     26              if(NRF2401_SOMI)            // 拉高SCK，nRF24L01从MOSI读入1位数据，同时从MISO输出1位数据
+     27                data |= 0x01;       	// 读MISO到byte最低位
+     28              NRF2401_SCL = 0;            	// SCK置低
+     29            }
+     30            return(data);           	// 返回读出的一字节
+     31          #endif
+     32          }
+     33          /***********************************************************************************************
+     34           功能：NRF24L01 写寄存器
+     35           形参：reg: 寄存器
+     36                 value:写入的值
+     37           返回：读到的数据
+     38           详解：无
+     39          ************************************************************************************************/
+     40          static uint8_t NRF2401_ReadWriteReg(uint8_t reg,uint8_t value)
+                                ^
+Warning[Pe177]: function "NRF2401_ReadWriteReg" was declared but never
+          referenced
+     41          {
+     42              NRF2401_CSN = 0;                   // CSN low, init SPI transaction
+     43              uint8_t status = NRF2401_ReadWriteByte(reg);      // select register
+     44              NRF2401_ReadWriteByte(value);             // ..and write value to it..
+     45              NRF2401_CSN = 1;                   // CSN high again
+     46              return(status);            // return nRF24L01 status byte
+     47          }
+     48          /***********************************************************************************************
+     49           功能：NRF24L01 写寄存器
+     50           形参：reg: 寄存器
+     51                 value:写入的值
+     52           返回：读到的数据
+     53           详解：无
+     54          ************************************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     55          static uint8_t NRF2401_WriteBuffer(uint8_t reg,uint8_t *pBuf,uint8_t bytes)
+   \                     NRF2401_WriteBuffer:
+     56          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   CB0D         MOVA    R13, R11
+   \   000004   4A4E         MOV.B   R14, R10
+     57          	NRF2401_CSN = 0; 
+   \   000006   D2C32302     BIC.B   #0x1, &0x223
+     58          	uint8_t status = NRF2401_ReadWriteByte(reg);    // Select register to write to and read status byte
+   \   00000A   ........     CALLA   #NRF2401_ReadWriteByte
+   \   00000E   484C         MOV.B   R12, R8
+     59          	for(uint8_t i=0; i<bytes; i++) // then write all byte in buffer(*pBuf)
+   \   000010   4943         MOV.B   #0x0, R9
+   \   000012   063C         JMP     ??NRF2401_WriteBuffer_1
+     60          	{
+     61                      NRF2401_ReadWriteByte(*pBuf++);
+   \                     ??NRF2401_WriteBuffer_0:
+   \   000014   6C4B         MOV.B   @R11, R12
+   \   000016   ........     CALLA   #NRF2401_ReadWriteByte
+   \   00001A   AB000100     ADDA    #0x1, R11
+     62          	}
+   \   00001E   5953         ADD.B   #0x1, R9
+   \                     ??NRF2401_WriteBuffer_1:
+   \   000020   499A         CMP.B   R10, R9
+   \   000022   F82B         JNC     ??NRF2401_WriteBuffer_0
+     63          	NRF2401_CSN = 1;                 // Set CSN high again
+   \   000024   D2D32302     BIS.B   #0x1, &0x223
+     64          	return(status);          // return nRF24L01 status byte
+   \   000028   4C48         MOV.B   R8, R12
+   \   00002A   3816         POPM.A  #0x4, R11
+   \   00002C   1001         RETA
+   \   00002E                REQUIRE _A_PBOUT_L
+     65          }
+     66          /***********************************************************************************************
+     67           功能：NRF24L01 读Buffer
+     68           形参：reg: 寄存器
+     69                 pBuf:数据指针
+     70          		 	 bytes: 写入的字节数
+     71           返回：读状态
+     72           详解：无
+     73          ************************************************************************************************/
+
+   \                                 In  segment CODE, align 2
+     74          uint8_t NRF2401_ReadBuffer(uint8_t reg,uint8_t *pBuf,uint8_t bytes)
+   \                     NRF2401_ReadBuffer:
+     75          {
+   \   000000   3B14         PUSHM.A #0x4, R11
+   \   000002   CB0D         MOVA    R13, R11
+   \   000004   4A4E         MOV.B   R14, R10
+     76          	NRF2401_CSN = 0;                    		// Set CSN low, init SPI tranaction
+   \   000006   D2C32302     BIC.B   #0x1, &0x223
+     77          	uint8_t status = NRF2401_ReadWriteByte(reg);       		// Select register to write to and read status byte
+   \   00000A   ........     CALLA   #NRF2401_ReadWriteByte
+   \   00000E   484C         MOV.B   R12, R8
+     78          	for(uint8_t i=0;i<bytes;i++)
+   \   000010   4943         MOV.B   #0x0, R9
+   \   000012   083C         JMP     ??NRF2401_ReadBuffer_1
+     79          	{
+     80          		pBuf[i] = NRF2401_ReadWriteByte(0);    // Perform NRF2401_ReadWriteByte to read byte from nRF24L01
+   \                     ??NRF2401_ReadBuffer_0:
+   \   000014   4C43         MOV.B   #0x0, R12
+   \   000016   ........     CALLA   #NRF2401_ReadWriteByte
+   \   00001A   4F49         MOV.B   R9, R15
+   \   00001C   EF0B         ADDA    R11, R15
+   \   00001E   CF4C0000     MOV.B   R12, 0(R15)
+     81          	}
+   \   000022   5953         ADD.B   #0x1, R9
+   \                     ??NRF2401_ReadBuffer_1:
+   \   000024   499A         CMP.B   R10, R9
+   \   000026   F62B         JNC     ??NRF2401_ReadBuffer_0
+     82          	NRF2401_CSN = 1;                           // Set CSN high again
+   \   000028   D2D32302     BIS.B   #0x1, &0x223
+     83          	return(status);                    // return nRF24L01 status byte
+   \   00002C   4C48         MOV.B   R8, R12
+   \   00002E   3816         POPM.A  #0x4, R11
+   \   000030   1001         RETA
+   \   000032                REQUIRE _A_PBOUT_L
+     84          }
+     85          //读取SPI寄存器值 ，regaddr:要读的寄存器
+
+   \                                 In  segment CODE, align 2
+     86          uint8_t NRF24L01_Read_Reg(uint8_t regaddr)
+   \                     NRF24L01_Read_Reg:
+     87          {
+     88          	uint8_t reg_val;	    
+     89          	NRF2401_CSN = 0;                //使能SPI传输		
+   \   000000   D2C32302     BIC.B   #0x1, &0x223
+     90            	NRF2401_ReadWriteByte(regaddr);     //发送寄存器号
+   \   000004   ........     CALLA   #NRF2401_ReadWriteByte
+     91            	reg_val=NRF2401_ReadWriteByte(0XFF);//读取寄存器内容
+   \   000008   7C43         MOV.B   #0xff, R12
+   \   00000A   ........     CALLA   #NRF2401_ReadWriteByte
+     92            	NRF2401_CSN = 1;                //禁止SPI传输		    
+   \   00000E   D2D32302     BIS.B   #0x1, &0x223
+     93            	return(reg_val);                 //返回状态值
+   \   000012   1001         RETA
+   \   000014                REQUIRE _A_PBOUT_L
+     94          }	
+     95          //通过SPI写寄存器
+
+   \                                 In  segment CODE, align 2
+     96          uint8_t NRF24L01_Write_Reg(uint8_t regaddr,uint8_t data)
+   \                     NRF24L01_Write_Reg:
+     97          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   4A4D         MOV.B   R13, R10
+     98          	uint8_t status;	
+     99                  NRF2401_CSN = 0;                  //使能SPI传输
+   \   000004   D2C32302     BIC.B   #0x1, &0x223
+    100            	status =NRF2401_ReadWriteByte(regaddr); //发送寄存器号 
+   \   000008   ........     CALLA   #NRF2401_ReadWriteByte
+   \   00000C   4B4C         MOV.B   R12, R11
+    101            	NRF2401_ReadWriteByte(data);            //写入寄存器的值
+   \   00000E   4C4A         MOV.B   R10, R12
+   \   000010   ........     CALLA   #NRF2401_ReadWriteByte
+    102            	NRF2401_CSN = 1;                    //禁止SPI传输	   
+   \   000014   D2D32302     BIS.B   #0x1, &0x223
+    103            	return(status);       		         //返回状态值
+   \   000018   4C4B         MOV.B   R11, R12
+   \   00001A   1A16         POPM.A  #0x2, R11
+   \   00001C   1001         RETA
+   \   00001E                REQUIRE _A_PBOUT_L
+    104          }
+    105          //上电检测NRF24L01是否在位
+    106          //写5个数据然后再读回来进行比较，
+    107          //相同时返回值:0，表示在位;否则返回1，表示不在位	
+
+   \                                 In  segment CODE, align 2
+    108          uint8_t NRF24L01_Check(void)
+   \                     NRF24L01_Check:
+    109          {
+   \   000000   B1000C00     SUBA    #0xc, SP
+    110          	uint8_t buf[5]={0XA5,0XA5,0XA5,0XA5,0XA5};
+   \   000004   ........     MOVA    #`?<Constant {165, 165, 165, 165, 165}>`, R15
+   \   000008   F14F0600     MOV.B   @R15+, 0x6(SP)
+   \   00000C   F14F0700     MOV.B   @R15+, 0x7(SP)
+   \   000010   F14F0800     MOV.B   @R15+, 0x8(SP)
+   \   000014   F14F0900     MOV.B   @R15+, 0x9(SP)
+   \   000018   F14F0A00     MOV.B   @R15+, 0xa(SP)
+    111          	uint8_t buf1[5];
+    112          	uint8_t i;   	
+    113          	NRF2401_WriteBuffer(SPI_WRITE_REG+TX_ADDR,buf,5);//写入5个字节的地址.	
+   \   00001C   7E400500     MOV.B   #0x5, R14
+   \   000020   CD01         MOVA    SP, R13
+   \   000022   AD000600     ADDA    #0x6, R13
+   \   000026   7C403000     MOV.B   #0x30, R12
+   \   00002A   ........     CALLA   #NRF2401_WriteBuffer
+    114          	NRF2401_ReadBuffer(TX_ADDR,buf1,5);              //读出写入的地址  	
+   \   00002E   7E400500     MOV.B   #0x5, R14
+   \   000032   CD01         MOVA    SP, R13
+   \   000034   7C401000     MOV.B   #0x10, R12
+   \   000038   ........     CALLA   #NRF2401_ReadBuffer
+    115              
+    116                for(i=0;i<5;i++)
+   \   00003C   4E43         MOV.B   #0x0, R14
+   \   00003E   013C         JMP     ??NRF24L01_Check_1
+   \                     ??NRF24L01_Check_0:
+   \   000040   5E53         ADD.B   #0x1, R14
+   \                     ??NRF24L01_Check_1:
+   \   000042   7E900500     CMP.B   #0x5, R14
+   \   000046   072C         JC      ??NRF24L01_Check_3
+    117                {
+    118                  if(buf1[i]!=0XA5)
+   \   000048   CF01         MOVA    SP, R15
+   \   00004A   4D4E         MOV.B   R14, R13
+   \   00004C   ED0F         ADDA    R15, R13
+   \   00004E   FD90A5000000 CMP.B   #0xa5, 0(R13)
+   \   000054   F527         JEQ     ??NRF24L01_Check_0
+    119                  {
+    120                    break;					   
+    121                  }
+    122                }
+    123              
+    124          	if(i!=5)
+   \                     ??NRF24L01_Check_3:
+   \   000056   7E900500     CMP.B   #0x5, R14
+   \   00005A   0224         JEQ     ??NRF24L01_Check_4
+    125              {
+    126                  return 1;                                   //NRF24L01不在位	        
+   \   00005C   5C43         MOV.B   #0x1, R12
+   \   00005E   013C         JMP     ??NRF24L01_Check_2
+    127              }        
+    128          	return 0;		                                //NRF24L01在位
+   \                     ??NRF24L01_Check_4:
+   \   000060   4C43         MOV.B   #0x0, R12
+   \                     ??NRF24L01_Check_2:
+   \   000062   A1000C00     ADDA    #0xc, SP
+   \   000066   1001         RETA
+    129          }	 	
+    130          
+    131          //启动NRF24L01发送一次数据
+    132          //txbuf:待发送数据首地址
+    133          //返回值:发送完成状况
+
+   \                                 In  segment CODE, align 2
+    134          uint8_t NRF24L01_TxPacket(uint8_t *txbuf)
+   \                     NRF24L01_TxPacket:
+    135          {
+    136              enQueue(&NRF_Mannager.qTx,txbuf,TX_PLOAD_WIDTH);
+   \   000000   7E402000     MOV.B   #0x20, R14
+   \   000004   CD0C         MOVA    R12, R13
+   \   000006   ........     MOVA    #NRF_Mannager + 4, R12
+   \   00000A   ........     CALLA   #enQueue
+    137              return 0;
+   \   00000E   4C43         MOV.B   #0x0, R12
+   \   000010   1001         RETA
+    138          }
+    139          
+    140          //启动NRF24L01发送一次数据
+    141          //txbuf:待发送数据首地址
+    142          //返回值:0，接收完成；其他，错误代码
+
+   \                                 In  segment CODE, align 2
+    143          uint8_t NRF24L01_RxPacket(uint8_t *rxbuf)
+   \                     NRF24L01_RxPacket:
+    144          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   CA0C         MOVA    R12, R10
+    145          	uint8_t state;		    							      
+    146          	state=NRF24L01_Read_Reg(RF_STATUS);                //读取状态寄存器的值    	 
+   \   000004   7C400700     MOV.B   #0x7, R12
+   \   000008   ........     CALLA   #NRF24L01_Read_Reg
+   \   00000C   4B4C         MOV.B   R12, R11
+    147          	NRF24L01_Write_Reg(SPI_WRITE_REG+RF_STATUS,state); //清除TX_DS或MAX_RT中断标志
+   \   00000E   4D4B         MOV.B   R11, R13
+   \   000010   7C402700     MOV.B   #0x27, R12
+   \   000014   ........     CALLA   #NRF24L01_Write_Reg
+    148          	if(state&RX_OK)                                 //接收到数据
+   \   000018   7BB04000     BIT.B   #0x40, R11
+   \   00001C   0E28         JNC     ??NRF24L01_RxPacket_1
+    149          	{
+    150          		NRF2401_ReadBuffer(RD_RX_PLOAD,rxbuf,RX_PLOAD_WIDTH);//读取数据
+   \   00001E   7E402000     MOV.B   #0x20, R14
+   \   000022   CD0A         MOVA    R10, R13
+   \   000024   7C406100     MOV.B   #0x61, R12
+   \   000028   ........     CALLA   #NRF2401_ReadBuffer
+    151          		NRF24L01_Write_Reg(FLUSH_RX,0xff);          //清除RX FIFO寄存器 
+   \   00002C   7D43         MOV.B   #0xff, R13
+   \   00002E   7C40E200     MOV.B   #0xe2, R12
+   \   000032   ........     CALLA   #NRF24L01_Write_Reg
+    152          		return SUCCESS; 
+   \   000036   4C43         MOV.B   #0x0, R12
+   \   000038   013C         JMP     ??NRF24L01_RxPacket_0
+    153          	}
+    154          	return FAILED;                                      //没收到任何数据
+   \                     ??NRF24L01_RxPacket_1:
+   \   00003A   5C43         MOV.B   #0x1, R12
+   \                     ??NRF24L01_RxPacket_0:
+   \   00003C   1A16         POPM.A  #0x2, R11
+   \   00003E   1001         RETA
+    155          }
+    156          
+
+   \                                 In  segment CODE, align 2
+    157          void TX_RX_Mode(void)
+   \                     TX_RX_Mode:
+    158          {
+    159            
+    160          }
+   \   000000   1001         RETA
+    161          
+
+   \                                 In  segment CODE, align 2
+    162          bool Update_NRF24l01_Freq(uint8_t freq)
+   \                     Update_NRF24l01_Freq:
+    163          {
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   4C12         PUSH.B  R12
+    164              bool status = false;
+   \   000004   4A43         MOV.B   #0x0, R10
+    165              NRF2401_CE = 0;	 
+   \   000006   F2C020002202 BIC.B   #0x20, &0x222
+    166              NRF24L01_Write_Reg(SPI_WRITE_REG+RF_CH,freq); 
+   \   00000C   6D41         MOV.B   @SP, R13
+   \   00000E   7C402500     MOV.B   #0x25, R12
+   \   000012   ........     CALLA   #NRF24L01_Write_Reg
+    167              if(NRF24L01_Read_Reg(SPI_READ_REG + RF_CH) == freq)
+   \   000016   7C400500     MOV.B   #0x5, R12
+   \   00001A   ........     CALLA   #NRF24L01_Read_Reg
+   \   00001E   6C91         CMP.B   @SP, R12
+   \   000020   0920         JNE     ??Update_NRF24l01_Freq_0
+    168              {
+    169                  Flash_Write(FLASH_FREQ_ADDR_OFFSET,&freq,2);
+   \   000022   6E43         MOV.B   #0x2, R14
+   \   000024   CD01         MOVA    SP, R13
+   \   000026   4C43         MOV.B   #0x0, R12
+   \   000028   ........     CALLA   #Flash_Write
+    170                  NRF24L01_Manager.RC_Frequency = freq;
+   \   00002C   ....E241.... MOVX.B  @SP, &NRF24L01_Manager + 12
+    171                  status = true;
+   \   000032   5A43         MOV.B   #0x1, R10
+    172              }
+    173              NRF2401_CE = 1;
+   \                     ??Update_NRF24l01_Freq_0:
+   \   000034   F2D020002202 BIS.B   #0x20, &0x222
+    174              
+    175              return status;
+   \   00003A   4C4A         MOV.B   R10, R12
+   \   00003C   E103         ADDA    #0x2, SP
+   \   00003E   0A16         POPM.A  #0x1, R10
+   \   000040   1001         RETA
+   \   000042                REQUIRE _A_PBOUT_L
+    176          }
+    177          
+
+   \                                 In  segment CODE, align 2
+    178          bool Update_NRF24l01_Rx_Addr(uint8_t *ptr)
+   \                     Update_NRF24l01_Rx_Addr:
+    179          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   B1000600     SUBA    #0x6, SP
+   \   000006   CA0C         MOVA    R12, R10
+    180              uint8_t buf1[5];
+    181              bool status = false;
+   \   000008   4B43         MOV.B   #0x0, R11
+    182              NRF2401_CE = 0;	 
+   \   00000A   F2C020002202 BIC.B   #0x20, &0x222
+    183              NRF2401_WriteBuffer(SPI_WRITE_REG+RX_ADDR_P0,ptr,RX_ADR_WIDTH); 
+   \   000010   7E400500     MOV.B   #0x5, R14
+   \   000014   CD0A         MOVA    R10, R13
+   \   000016   7C402A00     MOV.B   #0x2a, R12
+   \   00001A   ........     CALLA   #NRF2401_WriteBuffer
+    184              NRF2401_ReadBuffer(RX_ADDR_P0,buf1,5);
+   \   00001E   7E400500     MOV.B   #0x5, R14
+   \   000022   CD01         MOVA    SP, R13
+   \   000024   7C400A00     MOV.B   #0xa, R12
+   \   000028   ........     CALLA   #NRF2401_ReadBuffer
+    185              
+    186              if(memcmp(buf1,ptr,5) == 0)
+   \   00002C   3E400500     MOV.W   #0x5, R14
+   \   000030   0F43         MOV.W   #0x0, R15
+   \   000032   CD0A         MOVA    R10, R13
+   \   000034   CC01         MOVA    SP, R12
+   \   000036   ........     CALLA   #memcmp
+   \   00003A   0C93         CMP.W   #0x0, R12
+   \   00003C   1120         JNE     ??Update_NRF24l01_Rx_Addr_0
+    187              {
+    188                  Flash_Write(FLASH_RX_ADDR_OFFSET,ptr,5);
+   \   00003E   7E400500     MOV.B   #0x5, R14
+   \   000042   CD0A         MOVA    R10, R13
+   \   000044   6C43         MOV.B   #0x2, R12
+   \   000046   ........     CALLA   #Flash_Write
+    189                  memcpy(UAV_info.NRF_MannagerPtr->Rx_Addr,ptr,5);
+   \   00004A   3E400500     MOV.W   #0x5, R14
+   \   00004E   0F43         MOV.W   #0x0, R15
+   \   000050   CD0A         MOVA    R10, R13
+   \   000052   ........     MOVA    &UAV_info + 10, R12
+   \   000056   AC000700     ADDA    #0x7, R12
+   \   00005A   ........     CALLA   #memcpy
+    190                  status = true;
+   \   00005E   5B43         MOV.B   #0x1, R11
+    191              }
+    192              NRF2401_CE = 1;  
+   \                     ??Update_NRF24l01_Rx_Addr_0:
+   \   000060   F2D020002202 BIS.B   #0x20, &0x222
+    193              
+    194              return status;
+   \   000066   4C4B         MOV.B   R11, R12
+   \   000068   A1000600     ADDA    #0x6, SP
+   \   00006C   1A16         POPM.A  #0x2, R11
+   \   00006E   1001         RETA
+   \   000070                REQUIRE _A_PBOUT_L
+    195          }
+    196          
+
+   \                                 In  segment CODE, align 2
+    197          bool Update_NRF24l01_Tx_Addr(uint8_t *ptr)
+   \                     Update_NRF24l01_Tx_Addr:
+    198          {
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   B1000600     SUBA    #0x6, SP
+   \   000006   CA0C         MOVA    R12, R10
+    199              uint8_t buf1[5];
+    200              bool status = false;
+   \   000008   4B43         MOV.B   #0x0, R11
+    201              NRF2401_CE = 0;	 
+   \   00000A   F2C020002202 BIC.B   #0x20, &0x222
+    202              NRF2401_WriteBuffer(SPI_WRITE_REG+TX_ADDR,ptr,RX_ADR_WIDTH); 
+   \   000010   7E400500     MOV.B   #0x5, R14
+   \   000014   CD0A         MOVA    R10, R13
+   \   000016   7C403000     MOV.B   #0x30, R12
+   \   00001A   ........     CALLA   #NRF2401_WriteBuffer
+    203              NRF2401_ReadBuffer(TX_ADDR,buf1,5);
+   \   00001E   7E400500     MOV.B   #0x5, R14
+   \   000022   CD01         MOVA    SP, R13
+   \   000024   7C401000     MOV.B   #0x10, R12
+   \   000028   ........     CALLA   #NRF2401_ReadBuffer
+    204              
+    205              if(memcmp(buf1,ptr,5) == 0)
+   \   00002C   3E400500     MOV.W   #0x5, R14
+   \   000030   0F43         MOV.W   #0x0, R15
+   \   000032   CD0A         MOVA    R10, R13
+   \   000034   CC01         MOVA    SP, R12
+   \   000036   ........     CALLA   #memcmp
+   \   00003A   0C93         CMP.W   #0x0, R12
+   \   00003C   1020         JNE     ??Update_NRF24l01_Tx_Addr_0
+    206              {
+    207                  Flash_Write(FLASH_TX_ADDR_OFFSET,ptr,5);
+   \   00003E   7E400500     MOV.B   #0x5, R14
+   \   000042   CD0A         MOVA    R10, R13
+   \   000044   7C400700     MOV.B   #0x7, R12
+   \   000048   ........     CALLA   #Flash_Write
+    208                  memcpy(NRF24L01_Manager.Tx_Addr,ptr,5);
+   \   00004C   3E400500     MOV.W   #0x5, R14
+   \   000050   0F43         MOV.W   #0x0, R15
+   \   000052   CD0A         MOVA    R10, R13
+   \   000054   ........     MOVA    #NRF24L01_Manager + 2, R12
+   \   000058   ........     CALLA   #memcpy
+    209                  status = true;
+   \   00005C   5B43         MOV.B   #0x1, R11
+    210              }
+    211              NRF2401_CE = 1;
+   \                     ??Update_NRF24l01_Tx_Addr_0:
+   \   00005E   F2D020002202 BIS.B   #0x20, &0x222
+    212              
+    213              return status;
+   \   000064   4C4B         MOV.B   R11, R12
+   \   000066   A1000600     ADDA    #0x6, SP
+   \   00006A   1A16         POPM.A  #0x2, R11
+   \   00006C   1001         RETA
+   \   00006E                REQUIRE _A_PBOUT_L
+    214          }
+    215          
+
+   \                                 In  segment CODE, align 2
+    216          void NRF24L01_init(NRF24L01_Manager_t *ptr)
+   \                     NRF24L01_init:
+    217          {   
+   \   000000   0A14         PUSHM.A #0x1, R10
+   \   000002   CA0C         MOVA    R12, R10
+    218              static int i = 0;
+    219              while(NRF24L01_Check() == FAILED)
+   \                     ??NRF24L01_init_0:
+   \   000004   ........     CALLA   #NRF24L01_Check
+   \   000008   5C93         CMP.B   #0x1, R12
+   \   00000A   0B20         JNE     ??NRF24L01_init_3
+    220              {
+    221                i++;
+   \   00000C   ....9253.... ADDX.W  #0x1, &??i
+    222                if(i ==10)
+   \   000012   ....B2900A00 CMPX.W  #0xa, &??i
+   \            ....        
+   \   00001A   F423         JNE     ??NRF24L01_init_0
+    223                {
+    224                    ptr->check = false;
+   \   00001C   CA430000     MOV.B   #0x0, 0(R10)
+    225                    return;
+   \   000020   B33C         JMP     ??NRF24L01_init_2
+    226                }
+    227                
+    228              }
+    229              
+    230              NRF2401_CE = 0;	    
+   \                     ??NRF24L01_init_3:
+   \   000022   F2C020002202 BIC.B   #0x20, &0x222
+    231          
+    232            	NRF2401_WriteBuffer(SPI_WRITE_REG+TX_ADDR,(uint8_t*)ptr->Tx_Addr,TX_ADR_WIDTH);                            //写TX节点地址 
+   \   000028   7E400500     MOV.B   #0x5, R14
+   \   00002C   CD0A         MOVA    R10, R13
+   \   00002E   ED03         ADDA    #0x2, R13
+   \   000030   7C403000     MOV.B   #0x30, R12
+   \   000034   ........     CALLA   #NRF2401_WriteBuffer
+    233            	NRF2401_WriteBuffer(SPI_WRITE_REG+RX_ADDR_P0,(uint8_t*)ptr->Rx_Addr,RX_ADR_WIDTH);                         //写RX节点地址 
+   \   000038   7E400500     MOV.B   #0x5, R14
+   \   00003C   CD0A         MOVA    R10, R13
+   \   00003E   AD000700     ADDA    #0x7, R13
+   \   000042   7C402A00     MOV.B   #0x2a, R12
+   \   000046   ........     CALLA   #NRF2401_WriteBuffer
+    234            	NRF24L01_Write_Reg(SPI_WRITE_REG+EN_AA,0x01);                                                      //使能通道0的自动应答  
+   \   00004A   5D43         MOV.B   #0x1, R13
+   \   00004C   7C402100     MOV.B   #0x21, R12
+   \   000050   ........     CALLA   #NRF24L01_Write_Reg
+    235            	NRF24L01_Write_Reg(SPI_WRITE_REG+EN_RXADDR,0x01);                                                  //使能通道0的接收地址 
+   \   000054   5D43         MOV.B   #0x1, R13
+   \   000056   7C402200     MOV.B   #0x22, R12
+   \   00005A   ........     CALLA   #NRF24L01_Write_Reg
+    236            	NRF24L01_Write_Reg(SPI_WRITE_REG+SETUP_RETR,0x1a);                                                 //设置自动重发间隔时间:500us + 86us;最大自动重发次数:10次
+   \   00005E   7D401A00     MOV.B   #0x1a, R13
+   \   000062   7C402400     MOV.B   #0x24, R12
+   \   000066   ........     CALLA   #NRF24L01_Write_Reg
+    237            	NRF24L01_Write_Reg(SPI_WRITE_REG+RF_CH,ptr->RC_Frequency);                                         //设置RF通道为40    
+   \   00006A   5D4A0C00     MOV.B   0xc(R10), R13
+   \   00006E   7C402500     MOV.B   #0x25, R12
+   \   000072   ........     CALLA   #NRF24L01_Write_Reg
+    238            	NRF24L01_Write_Reg(SPI_WRITE_REG+RF_SETUP,0x0f);                                                   //0x27  250K   0x07 1M     
+   \   000076   7D400F00     MOV.B   #0xf, R13
+   \   00007A   7C402600     MOV.B   #0x26, R12
+   \   00007E   ........     CALLA   #NRF24L01_Write_Reg
+    239          
+    240              switch(ptr->NRF_Mode)
+   \   000082   5E4A0100     MOV.B   0x1(R10), R14
+   \   000086   4E83         SUB.B   #0x0, R14
+   \   000088   0724         JEQ     ??NRF24L01_init_4
+   \   00008A   5E83         SUB.B   #0x1, R14
+   \   00008C   1224         JEQ     ??NRF24L01_init_5
+   \   00008E   5E83         SUB.B   #0x1, R14
+   \   000090   1D24         JEQ     ??NRF24L01_init_6
+   \   000092   5E83         SUB.B   #0x1, R14
+   \   000094   3F24         JEQ     ??NRF24L01_init_7
+   \   000096   613C         JMP     ??NRF24L01_init_1
+    241              {
+    242                  case NRF_Mode_RX:
+    243                      NRF24L01_Write_Reg(SPI_WRITE_REG+RX_PW_P0,RX_PLOAD_WIDTH);								//选择通道0的有效数据宽度 
+   \                     ??NRF24L01_init_4:
+   \   000098   7D402000     MOV.B   #0x20, R13
+   \   00009C   7C403100     MOV.B   #0x31, R12
+   \   0000A0   ........     CALLA   #NRF24L01_Write_Reg
+    244                      NRF24L01_Write_Reg(SPI_WRITE_REG + NCONFIG, 0x0f);   		 
+   \   0000A4   7D400F00     MOV.B   #0xf, R13
+   \   0000A8   7C402000     MOV.B   #0x20, R12
+   \   0000AC   ........     CALLA   #NRF24L01_Write_Reg
+    245                      break;
+   \   0000B0   543C         JMP     ??NRF24L01_init_1
+    246                  case NRF_Mode_TX:
+    247                      NRF24L01_Write_Reg(SPI_WRITE_REG+RX_PW_P0,RX_PLOAD_WIDTH);								//选择通道0的有效数据宽度 
+   \                     ??NRF24L01_init_5:
+   \   0000B2   7D402000     MOV.B   #0x20, R13
+   \   0000B6   7C403100     MOV.B   #0x31, R12
+   \   0000BA   ........     CALLA   #NRF24L01_Write_Reg
+    248                      NRF24L01_Write_Reg(SPI_WRITE_REG + NCONFIG, 0x0e);   		 // IRQ收发完成中断开启,16位CRC,主发送
+   \   0000BE   7D400E00     MOV.B   #0xe, R13
+   \   0000C2   7C402000     MOV.B   #0x20, R12
+   \   0000C6   ........     CALLA   #NRF24L01_Write_Reg
+    249                      break;
+   \   0000CA   473C         JMP     ??NRF24L01_init_1
+    250                  case NRF_Mode_RX2:
+    251                      NRF24L01_Write_Reg(FLUSH_TX,0xff);
+   \                     ??NRF24L01_init_6:
+   \   0000CC   7D43         MOV.B   #0xff, R13
+   \   0000CE   7C40E100     MOV.B   #0xe1, R12
+   \   0000D2   ........     CALLA   #NRF24L01_Write_Reg
+    252                      NRF24L01_Write_Reg(FLUSH_RX,0xff);
+   \   0000D6   7D43         MOV.B   #0xff, R13
+   \   0000D8   7C40E200     MOV.B   #0xe2, R12
+   \   0000DC   ........     CALLA   #NRF24L01_Write_Reg
+    253                      NRF24L01_Write_Reg(SPI_WRITE_REG + NCONFIG, 0x0f);   		 // IRQ收发完成中断开启,16位CRC,主接收
+   \   0000E0   7D400F00     MOV.B   #0xf, R13
+   \   0000E4   7C402000     MOV.B   #0x20, R12
+   \   0000E8   ........     CALLA   #NRF24L01_Write_Reg
+    254                      NRF2401_ReadWriteByte(0x50);
+   \   0000EC   7C405000     MOV.B   #0x50, R12
+   \   0000F0   ........     CALLA   #NRF2401_ReadWriteByte
+    255                      NRF2401_ReadWriteByte(0x73);
+   \   0000F4   7C407300     MOV.B   #0x73, R12
+   \   0000F8   ........     CALLA   #NRF2401_ReadWriteByte
+    256                      NRF24L01_Write_Reg(SPI_WRITE_REG+0x1c,0x01);
+   \   0000FC   5D43         MOV.B   #0x1, R13
+   \   0000FE   7C403C00     MOV.B   #0x3c, R12
+   \   000102   ........     CALLA   #NRF24L01_Write_Reg
+    257                      NRF24L01_Write_Reg(SPI_WRITE_REG+0x1d,0x06);
+   \   000106   7D400600     MOV.B   #0x6, R13
+   \   00010A   7C403D00     MOV.B   #0x3d, R12
+   \   00010E   ........     CALLA   #NRF24L01_Write_Reg
+    258                      break;
+   \   000112   233C         JMP     ??NRF24L01_init_1
+    259                  case NRF_Mode_TX2:
+    260                      NRF24L01_Write_Reg(SPI_WRITE_REG + NCONFIG, 0x0e);   		 // IRQ收发完成中断开启,16位CRC,主发送
+   \                     ??NRF24L01_init_7:
+   \   000114   7D400E00     MOV.B   #0xe, R13
+   \   000118   7C402000     MOV.B   #0x20, R12
+   \   00011C   ........     CALLA   #NRF24L01_Write_Reg
+    261                      NRF24L01_Write_Reg(FLUSH_TX,0xff);
+   \   000120   7D43         MOV.B   #0xff, R13
+   \   000122   7C40E100     MOV.B   #0xe1, R12
+   \   000126   ........     CALLA   #NRF24L01_Write_Reg
+    262                      NRF24L01_Write_Reg(FLUSH_RX,0xff);
+   \   00012A   7D43         MOV.B   #0xff, R13
+   \   00012C   7C40E200     MOV.B   #0xe2, R12
+   \   000130   ........     CALLA   #NRF24L01_Write_Reg
+    263          
+    264                      NRF2401_ReadWriteByte(0x50);
+   \   000134   7C405000     MOV.B   #0x50, R12
+   \   000138   ........     CALLA   #NRF2401_ReadWriteByte
+    265                      NRF2401_ReadWriteByte(0x73);
+   \   00013C   7C407300     MOV.B   #0x73, R12
+   \   000140   ........     CALLA   #NRF2401_ReadWriteByte
+    266                      NRF24L01_Write_Reg(SPI_WRITE_REG+0x1c,0x01);
+   \   000144   5D43         MOV.B   #0x1, R13
+   \   000146   7C403C00     MOV.B   #0x3c, R12
+   \   00014A   ........     CALLA   #NRF24L01_Write_Reg
+    267                      NRF24L01_Write_Reg(SPI_WRITE_REG+0x1d,0x06);
+   \   00014E   7D400600     MOV.B   #0x6, R13
+   \   000152   7C403D00     MOV.B   #0x3d, R12
+   \   000156   ........     CALLA   #NRF24L01_Write_Reg
+    268                      break;
+    269                  default:
+    270                      break;
+    271              }
+    272          	NRF2401_CE = 1;  
+   \                     ??NRF24L01_init_1:
+   \   00015A   F2D020002202 BIS.B   #0x20, &0x222
+    273              
+    274              ptr->receive_buff = NRF24L01_RxPacket;
+   \   000160   ....FA40.... MOVX.A  #NRF24L01_RxPacket, 0x26(R10)
+   \            2600        
+    275              ptr->send_buff = NRF24L01_TxPacket;
+   \   000168   ....FA40.... MOVX.A  #NRF24L01_TxPacket, 0x22(R10)
+   \            2200        
+    276              ptr->update_rx_Addr = Update_NRF24l01_Rx_Addr;
+   \   000170   ....FA40.... MOVX.A  #Update_NRF24l01_Rx_Addr, 0x16(R10)
+   \            1600        
+    277              ptr->update_tx_Addr = Update_NRF24l01_Tx_Addr;
+   \   000178   ....FA40.... MOVX.A  #Update_NRF24l01_Tx_Addr, 0x1a(R10)
+   \            1A00        
+    278              ptr->update_frequency = Update_NRF24l01_Freq;
+   \   000180   ....FA40.... MOVX.A  #Update_NRF24l01_Freq, 0x1e(R10)
+   \            1E00        
+    279          }
+   \                     ??NRF24L01_init_2:
+   \   000188   0A16         POPM.A  #0x1, R10
+   \   00018A   1001         RETA
+   \   00018C                REQUIRE _A_PBOUT_L
+
+   \                                 In  segment DATA20_Z, align 2, align-sorted
+   \   000000                REQUIRE ?cstart_init_zero20
+   \                     ??i:
+   \   000000                DS8 2
+    280          
+
+   \                                 In  segment CODE, align 2
+    281          void TxPacket(uint8_t * tx_buf, uint8_t len)
+   \                     TxPacket:
+    282          {	
+   \   000000   1B14         PUSHM.A #0x2, R11
+   \   000002   CB0C         MOVA    R12, R11
+   \   000004   4A4D         MOV.B   R13, R10
+    283              NRF2401_CE = 0;	
+   \   000006   F2C020002202 BIC.B   #0x20, &0x222
+    284              NRF2401_WriteBuffer(SPI_WRITE_REG + RX_ADDR_P0, (uint8_t*)NRF24L01_Manager.Tx_Addr, TX_ADR_WIDTH);   // 装载接收端地址
+   \   00000C   7E400500     MOV.B   #0x5, R14
+   \   000010   ........     MOVA    #NRF24L01_Manager + 2, R13
+   \   000014   7C402A00     MOV.B   #0x2a, R12
+   \   000018   ........     CALLA   #NRF2401_WriteBuffer
+    285              NRF2401_WriteBuffer(WR_TX_PLOAD, tx_buf, len); 			                    // 装载数据	
+   \   00001C   4E4A         MOV.B   R10, R14
+   \   00001E   CD0B         MOVA    R11, R13
+   \   000020   7C40A000     MOV.B   #0xa0, R12
+   \   000024   ........     CALLA   #NRF2401_WriteBuffer
+    286              NRF2401_CE = 1; 
+   \   000028   F2D020002202 BIS.B   #0x20, &0x222
+    287          }
+   \   00002E   1A16         POPM.A  #0x2, R11
+   \   000030   1001         RETA
+   \   000032                REQUIRE _A_PBOUT_L
+    288          
+
+   \                                 In  segment CODE, align 2
+    289          void TxPacket_AP(uint8_t * tx_buf, uint8_t len)
+   \                     TxPacket_AP:
+    290          {	
+    291              NRF2401_CE = 0;	
+   \   000000   F2C020002202 BIC.B   #0x20, &0x222
+    292              NRF2401_WriteBuffer(0xa8, tx_buf, len); 			 // 装载数据
+   \   000006   4E4D         MOV.B   R13, R14
+   \   000008   CD0C         MOVA    R12, R13
+   \   00000A   7C40A800     MOV.B   #0xa8, R12
+   \   00000E   ........     CALLA   #NRF2401_WriteBuffer
+    293              NRF2401_CE = 1; 
+   \   000012   F2D020002202 BIS.B   #0x20, &0x222
+    294          }
+   \   000018   1001         RETA
+   \   00001A                REQUIRE _A_PBOUT_L
+
+   \                                 In  segment DATA20_C, align 1, align-sorted
+   \                     `?<Constant {165, 165, 165, 165, 165}>`:
+   \   000000   A5A5A5A5A5   DC8 165, 165, 165, 165, 165
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     20   NRF2401_ReadBuffer
+       20   -> NRF2401_ReadWriteByte
+      4   NRF2401_ReadWriteByte
+        0   -> SPI_SendReadByte
+     20   NRF2401_WriteBuffer
+       20   -> NRF2401_ReadWriteByte
+     16   NRF24L01_Check
+       16   -> NRF2401_ReadBuffer
+       16   -> NRF2401_WriteBuffer
+      4   NRF24L01_Read_Reg
+        4   -> NRF2401_ReadWriteByte
+     12   NRF24L01_RxPacket
+       12   -> NRF2401_ReadBuffer
+       12   -> NRF24L01_Read_Reg
+       12   -> NRF24L01_Write_Reg
+      4   NRF24L01_TxPacket
+        4   -> enQueue
+     12   NRF24L01_Write_Reg
+       12   -> NRF2401_ReadWriteByte
+      8   NRF24L01_init
+        8   -> NRF2401_ReadWriteByte
+        8   -> NRF2401_WriteBuffer
+        8   -> NRF24L01_Check
+        8   -> NRF24L01_Write_Reg
+      4   TX_RX_Mode
+     12   TxPacket
+       12   -> NRF2401_WriteBuffer
+      4   TxPacket_AP
+        4   -> NRF2401_WriteBuffer
+     10   Update_NRF24l01_Freq
+       10   -> Flash_Write
+       10   -> NRF24L01_Read_Reg
+       10   -> NRF24L01_Write_Reg
+     18   Update_NRF24l01_Rx_Addr
+       18   -> Flash_Write
+       18   -> NRF2401_ReadBuffer
+       18   -> NRF2401_WriteBuffer
+       18   -> memcmp
+       18   -> memcpy
+     18   Update_NRF24l01_Tx_Addr
+       18   -> Flash_Write
+       18   -> NRF2401_ReadBuffer
+       18   -> NRF2401_WriteBuffer
+       18   -> memcmp
+       18   -> memcpy
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       5  ?<Constant {165, 165, 165, 165, 165}>
+      50  NRF2401_ReadBuffer
+      10  NRF2401_ReadWriteByte
+      46  NRF2401_WriteBuffer
+     104  NRF24L01_Check
+      42  NRF24L01_Manager
+      20  NRF24L01_Read_Reg
+      64  NRF24L01_RxPacket
+      18  NRF24L01_TxPacket
+      30  NRF24L01_Write_Reg
+     396  NRF24L01_init
+       2  TX_RX_Mode
+      50  TxPacket
+      26  TxPacket_AP
+      66  Update_NRF24l01_Freq
+     112  Update_NRF24l01_Rx_Addr
+     110  Update_NRF24l01_Tx_Addr
+       2  _A_PBOUT_L
+       2  i
+
+ 
+ 1 104 bytes in segment CODE
+     2 bytes in segment DATA16_AN
+     5 bytes in segment DATA20_C
+    44 bytes in segment DATA20_Z
+ 
+ 1 104 bytes of CODE  memory
+     5 bytes of CONST memory
+    44 bytes of DATA  memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: 1

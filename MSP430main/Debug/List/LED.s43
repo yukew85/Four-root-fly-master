@@ -1,0 +1,546 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          20/Nov/2018  15:34:09
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\LED.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EW24F7.tmp
+//        (D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\LED.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List
+//        -o
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllff.h -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\System\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\User\USER\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MATH\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HAL\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\src\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Communication\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Control\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\DataBase\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\GCS\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\MidWare\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\
+//        -I
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\driverlib\inc\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\Debug\List\LED.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME LED
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?DivMod16u
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC LEDInit
+        PUBLIC PollingLED
+        PUBWEAK _A_PADIR_L
+        PUBWEAK _A_PAOUT_L
+        PUBLIC g_LedManager
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN GPIO_toggleOutputOnPin
+        EXTERN g_FMUflg
+
+// D:\F150-T401\F150-T401_Experiment_Code\研发修改目录\附件目录\2.源码\1.飞控源码\HardWare\LED.c
+//    1 /**
+//    2   ******************************************************************************
+//    3   * Copyright (c) 2018,北京中科浩电科技有限公司
+//    4   * All rights reserved.
+//    5   * 文件名称：LED.c
+//    6   * 摘    要：
+//    7   *
+//    8   * 当前版本：V1.0
+//    9   * 作    者：北京中科浩电科技有限公司研发部 
+//   10   * 完成日期：    
+//   11   * 修改说明：
+//   12   * 
+//   13   *
+//   14   * 历史版本：
+//   15   *
+//   16   *
+//   17   *******************************************************************************/
+//   18 
+//   19 /*==============================================================================
+//   20                          ##### How to use this driver #####
+//   21 ==============================================================================
+//   22 LED灯驱动使用方式如下：
+//   23 g_LedManager为LED灯控制结构体，要控制LED的闪烁，只需要更改此结构体中的
+//   24 枚举值即可——g_LedManager.emLed_Status
+//   25 例如：
+//   26 1.想要状态灯亮起，需要以下语句
+//   27 g_LedManager.emLed_Status = StatusOn;
+//   28 
+//   29 其他枚举量源自于.h文件中的emLED_Status_t
+//   30 
+//   31 */
+//   32 //外部文件引用
+//   33 #include "LED.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0202H
+// union <unnamed> __data16 _A_PAOUT_L
+_A_PAOUT_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0204H
+// union <unnamed> __data16 _A_PADIR_L
+_A_PADIR_L:
+        DS8 2
+//   34 #include "control.h"
+//   35 
+//   36 //宏定义区
+//   37 #define LED_FLASH_FREQ      100
+//   38 
+//   39 
+//   40 //Extern引用
+//   41 extern FMUflg_t g_FMUflg;    
+//   42 
+//   43 
+//   44 //私有函数区
+//   45 
+//   46 
+//   47 
+//   48 //私有变量区
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   49 LedManager_t g_LedManager;
+g_LedManager:
+        DS8 6
+//   50 
+//   51 
+//   52 /******************************************************************************
+//   53   * 函数名称：LEDInit
+//   54   * 函数描述：初始化LED灯
+//   55   * 输    入：void
+//   56   * 输    出：void
+//   57   * 返    回：void
+//   58   * 备    注：null
+//   59   *    
+//   60   *
+//   61 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   62 void LEDInit(void)        
+LEDInit:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function LEDInit
+          CFI NoCalls
+//   63 {
+//   64     P2DIR |= GPIO_PIN0 | GPIO_PIN1 | GPIO_PIN4 | GPIO_PIN5 | GPIO_PIN6 | GPIO_PIN7;
+        BIS.B   #0xf3, &0x205
+//   65     P2OUT |= (GPIO_PIN0 | GPIO_PIN1 | GPIO_PIN4 | GPIO_PIN5 | GPIO_PIN6 | GPIO_PIN7);
+        BIS.B   #0xf3, &0x203
+//   66     LED_STATUS_OFF;
+        BIS.B   #0x1, &0x203
+//   67     LED_POWER_OFF;
+        BIS.B   #0x2, &0x203
+//   68     
+//   69     g_LedManager.emLEDStatus = StatusOff;
+        MOVX.B  #0x2, &g_LedManager + 4
+//   70     g_LedManager.emLEDPower = PowerOff;    
+        MOVX.B  #0x1, &g_LedManager + 3
+//   71 }
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_PADIR_L
+        REQUIRE _A_PAOUT_L
+//   72 
+//   73 /******************************************************************************
+//   74   * 函数名称：PollingLED
+//   75   * 函数描述：轮询当前是否有LED亮起任务就绪
+//   76   * 输    入：void
+//   77   * 输    出：void
+//   78   * 返    回：void
+//   79   * 备    注：null
+//   80   *
+//   81   *
+//   82 ******************************************************************************/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   83 void PollingLED()
+PollingLED:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function PollingLED
+//   84 {
+//   85     static bool blFlash = false;
+//   86     g_LedManager.u16FlashTime++;
+        ADDX.W  #0x1, &g_LedManager
+//   87 
+//   88     switch(g_LedManager.emLEDStatus)
+        MOVX.B  &g_LedManager + 4, R14
+        SUB.B   #0x0, R14
+        JEQ     ??PollingLED_8
+        SUB.B   #0x1, R14
+        JEQ     ??PollingLED_9
+        SUB.B   #0x1, R14
+        JEQ     ??PollingLED_10
+        SUB.B   #0x1, R14
+        JNE     ??PollingLED_0
+//   89     {
+//   90         case StatusFlash:
+//   91             if(g_LedManager.u16FlashTime % LED_FLASH_FREQ == 0)
+        MOVX.W  &g_LedManager, R12
+        MOV.W   #0x64, R14
+          CFI FunCall ?DivMod16u
+        CALLA   #?DivMod16u
+        CMP.W   #0x0, R14
+        JNE     ??PollingLED_0
+//   92             {
+//   93                 LED_STATUS_TOGGLE;
+        MOV.W   #0x1, R13
+        MOV.B   #0x2, R12
+          CFI FunCall GPIO_toggleOutputOnPin
+        CALLA   #GPIO_toggleOutputOnPin
+//   94             }
+//   95             break;
+        JMP     ??PollingLED_0
+//   96         case StatusToggle:
+//   97             LED_STATUS_TOGGLE;
+??PollingLED_8:
+        MOV.W   #0x1, R13
+        MOV.B   #0x2, R12
+          CFI FunCall GPIO_toggleOutputOnPin
+        CALLA   #GPIO_toggleOutputOnPin
+//   98             break;
+        JMP     ??PollingLED_0
+//   99         case StatusOn:
+//  100             LED_STATUS_ON;
+??PollingLED_9:
+        BIC.B   #0x1, &0x203
+//  101             break;
+        JMP     ??PollingLED_0
+//  102         case StatusOff:
+//  103             LED_STATUS_OFF;
+??PollingLED_10:
+        BIS.B   #0x1, &0x203
+//  104             break;
+//  105         default:
+//  106             break;
+//  107     }
+//  108     
+//  109     switch(g_LedManager.emLEDPower)
+??PollingLED_0:
+        MOVX.B  &g_LedManager + 3, R14
+        SUB.B   #0x0, R14
+        JEQ     ??PollingLED_11
+        SUB.B   #0x1, R14
+        JEQ     ??PollingLED_12
+        SUB.B   #0x1, R14
+        JEQ     ??PollingLED_13
+        SUB.B   #0x1, R14
+        JEQ     ??PollingLED_14
+        JMP     ??PollingLED_1
+//  110     {
+//  111         case PowerOn:
+//  112             LED_POWER_ON;
+??PollingLED_11:
+        BIC.B   #0x2, &0x203
+//  113             break;
+        JMP     ??PollingLED_1
+//  114         case PowerFlash:
+//  115             if(g_LedManager.u16FlashTime % LED_FLASH_FREQ == 0)
+??PollingLED_14:
+        MOVX.W  &g_LedManager, R12
+        MOV.W   #0x64, R14
+          CFI FunCall ?DivMod16u
+        CALLA   #?DivMod16u
+        CMP.W   #0x0, R14
+        JNE     ??PollingLED_1
+//  116             {
+//  117                 LED_POWER_TOGGLE;
+        MOV.W   #0x2, R13
+        MOV.B   #0x2, R12
+          CFI FunCall GPIO_toggleOutputOnPin
+        CALLA   #GPIO_toggleOutputOnPin
+//  118             }
+//  119             break;
+        JMP     ??PollingLED_1
+//  120         case PowerOff:
+//  121             LED_POWER_OFF
+??PollingLED_12:
+        BIS.B   #0x2, &0x203
+//  122             break;
+        JMP     ??PollingLED_1
+//  123         case PowerToggle:
+//  124             LED_POWER_TOGGLE;
+??PollingLED_13:
+        MOV.W   #0x2, R13
+        MOV.B   #0x2, R12
+          CFI FunCall GPIO_toggleOutputOnPin
+        CALLA   #GPIO_toggleOutputOnPin
+//  125             break;
+//  126         default:
+//  127             break;
+//  128     }
+//  129     
+//  130     switch(g_LedManager.emLEDMotor)
+??PollingLED_1:
+        MOVX.B  &g_LedManager + 2, R14
+        SUB.B   #0x0, R14
+        JEQ     ??PollingLED_15
+        SUB.B   #0x1, R14
+        JEQ     ??PollingLED_16
+        SUB.B   #0x1, R14
+        JEQ     ??PollingLED_17
+        SUB.B   #0x1, R14
+        JMP     ??PollingLED_2
+//  131     {
+//  132         case MotorFlash:
+//  133             if(g_LedManager.u16FlashTime % LED_FLASH_FREQ == 0)
+??PollingLED_17:
+        MOVX.W  &g_LedManager, R12
+        MOV.W   #0x64, R14
+          CFI FunCall ?DivMod16u
+        CALLA   #?DivMod16u
+        CMP.W   #0x0, R14
+        JNE     ??PollingLED_18
+//  134             {
+//  135                 blFlash = !blFlash;
+        XORX.B  #0x1, &??blFlash
+//  136             }
+//  137             
+//  138             if(blFlash)
+??PollingLED_18:
+        CMPX.B  #0x0, &??blFlash
+        JEQ     ??PollingLED_19
+//  139             {
+//  140                 M1_ON;
+        BIC.B   #0x10, &0x203
+//  141                 M2_ON;
+        BIC.B   #0x20, &0x203
+//  142                 M3_ON;
+        BIC.B   #0x40, &0x203
+//  143                 M4_ON;
+        BIC.B   #0x80, &0x203
+        JMP     ??PollingLED_2
+//  144             }else
+//  145             {
+//  146                 M1_OFF;
+??PollingLED_19:
+        BIS.B   #0x10, &0x203
+//  147                 M2_OFF;
+        BIS.B   #0x20, &0x203
+//  148                 M3_OFF;
+        BIS.B   #0x40, &0x203
+//  149                 M4_OFF;
+        BIS.B   #0x80, &0x203
+//  150             }
+//  151             break;
+        JMP     ??PollingLED_2
+//  152         case MotorClockwiseFlash:
+//  153             
+//  154             break;
+//  155         case MotorOn:
+//  156             M1_ON;
+??PollingLED_15:
+        BIC.B   #0x10, &0x203
+//  157             M2_ON;
+        BIC.B   #0x20, &0x203
+//  158             M3_ON;
+        BIC.B   #0x40, &0x203
+//  159             M4_ON;
+        BIC.B   #0x80, &0x203
+//  160             break;
+        JMP     ??PollingLED_2
+//  161         case MotorOff:
+//  162             M1_OFF;
+??PollingLED_16:
+        BIS.B   #0x10, &0x203
+//  163             M2_OFF;
+        BIS.B   #0x20, &0x203
+//  164             M3_OFF;
+        BIS.B   #0x40, &0x203
+//  165             M4_OFF;
+        BIS.B   #0x80, &0x203
+//  166             break;
+//  167         default:
+//  168             break;
+//  169     }
+//  170     
+//  171     if(!g_FMUflg.unlock)
+??PollingLED_2:
+        BITX.B  #0x1, &g_FMUflg
+        JC      ??PollingLED_20
+//  172     {
+//  173         g_LedManager.emLEDStatus = StatusOff;
+        MOVX.B  #0x2, &g_LedManager + 4
+//  174         g_LedManager.emLEDMotor = MotorFlash;
+        MOVX.B  #0x2, &g_LedManager + 2
+        RETA
+//  175     }else
+//  176     {
+//  177         g_LedManager.emLEDStatus = StatusOn;
+??PollingLED_20:
+        MOVX.B  #0x1, &g_LedManager + 4
+//  178         g_LedManager.emLEDMotor = MotorOn;
+        MOVX.B  #0x0, &g_LedManager + 2
+//  179     }
+//  180 }
+        RETA
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_PAOUT_L
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+??blFlash:
+        DS8 1
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+//  181 
+//  182 /******************* (C) 版权所有 2018 北京中科浩电科技有限公司 *******************/
+// 
+// 374 bytes in segment CODE
+//   4 bytes in segment DATA16_AN
+//   7 bytes in segment DATA20_Z
+// 
+// 374 bytes of CODE memory
+//   7 bytes of DATA memory (+ 4 bytes shared)
+//
+//Errors: none
+//Warnings: none

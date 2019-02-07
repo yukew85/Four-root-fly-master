@@ -1,0 +1,1053 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V7.12.1.987/W32 for MSP430          01/Nov/2018  12:43:40
+// Copyright 1996-2018 IAR Systems AB.
+// PC-locked license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\gcs.c
+//    Command line  =  
+//        -f C:\Users\颜子楠\AppData\Local\Temp\EWD061.tmp
+//        (C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\gcs.c -D
+//        NDEBUG -D RAM_VECTOR -lC
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -lA
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List
+//        -o
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\Obj
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config
+//        D:\IAR\430\lib\dlib\dl430xllfn.h -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_config\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_User\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\KEY\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LED\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\12864\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\oled\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\mpu6050\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nokia5110\src\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LQ_1.8_TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\LCD_API\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\2.2TFT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\delay\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\inc\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\System\src\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\User\USER\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CONFIG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\App\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\CONFIHG\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\uCOSII\PORT\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\UCOSII\CORE\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\
+//        -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Lib\FatFs\option\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HardWare\nrf24l01\
+//        -I C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\MATH\ -I
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\HAL\
+//        --core=430X --data_model=large -Ol --multiplier=32
+//        --hw_workaround=CPU40 --hw_workaround=nop_after_lpm -DNDEBUG
+//        --code_model=large)
+//    Locale        =  Chinese (Simplified)_CHN.936
+//    List file     =  
+//        C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\Release\List\gcs.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME gcs
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dlib_full_locale_support", "0"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN _Cast32sto32f
+        EXTERN _Div32f
+        EXTERN _Add32f
+        EXTERN _Mul32f
+        EXTERN _Cast32fto32s
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC PID_select
+        PUBLIC UAV_info
+        PUBLIC gcs_ReceiveHandle
+        PUBLIC gcs_init
+        PUBLIC update_gcs_Attitude
+        PUBLIC update_gcs_Freq
+        PUBLIC update_gcs_HardwareInfo
+        PUBLIC update_gcs_Line
+        PUBLIC update_gcs_Line2
+        PUBLIC update_gcs_MPU6050
+        PUBLIC update_gcs_Motor
+        PUBLIC update_gcs_pid_info
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN Angle
+        EXTERN motor
+        EXTERN MPU6050
+        EXTERN NRF24L01_Manager
+        EXTERN Remote
+        EXTERN ALL_flag
+        EXTERN pPidObject
+        EXTERN ZKHD_Link_MakeFrame
+        EXTERN USB_Send_Queue
+        EXTERN enQueue
+        EXTERN memcpy
+
+// C:\Users\颜子楠\Desktop\教材\附件目录\2.源码\1.飞控源码\src\gcs.c
+//    1 #include "gcs.h"
+//    2 #include "ZKHD_Link.h"
+//    3 #include "fmuConfig.h"
+//    4 
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//    5 UAV_info_t UAV_info;
+UAV_info:
+        DS8 30
+//    6 extern Queue_t USB_Send_Queue;
+//    7 extern PidObject *(pPidObject[]);
+//    8 extern int16_t motor[4];
+//    9 /*======================*/
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//   10 uint8_t PID_select;
+PID_select:
+        DS8 1
+//   11 
+//   12 typedef struct 
+//   13 {
+//   14     int8_t PID_Select;
+//   15     int8_t PID_Pos_Rate;
+//   16     int8_t PID_Offset;
+//   17     int8_t PID_Set;
+//   18 }PID_Config_t;
+//   19 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   20 void gcs_init(void)
+gcs_init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function gcs_init
+          CFI NoCalls
+//   21 {
+//   22     UAV_info.AngE = &Angle;
+        MOVX.A  #Angle, &UAV_info + 22
+//   23     UAV_info.Firmware_Ver = FIRMWARE_INFO;
+        MOVX.B  #0x64, &UAV_info + 4
+//   24     UAV_info.Motor = motor;
+        MOVX.A  #motor, &UAV_info + 6
+//   25     UAV_info.Mpu6050 = &MPU6050;
+        MOVX.A  #MPU6050, &UAV_info + 14
+//   26     UAV_info.NRF_MannagerPtr = &NRF24L01_Manager;
+        MOVX.A  #NRF24L01_Manager, &UAV_info + 10
+//   27     UAV_info.Remote = &Remote;
+        MOVX.A  #Remote, &UAV_info + 18
+//   28     UAV_info.Flag = &ALL_flag;
+        MOVX.A  #ALL_flag, &UAV_info + 26
+//   29 }
+        RETA
+          CFI EndBlock cfiBlock0
+//   30 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   31 void gcs_ReceiveHandle(ZKHD_Link_Head_t *ZKHD_Link_Info,uint8_t *ptr,uint8_t length)
+gcs_ReceiveHandle:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function gcs_ReceiveHandle
+//   32 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOVA    R12, R15
+        MOVA    R13, R12
+//   33     PID_Config_t *PID_Config_Info;
+//   34     
+//   35 
+//   36     switch((emMsg_GCS_TO_FMU_t)ZKHD_Link_Info->Message_ID)
+        MOV.B   0x5(R15), R14
+        SUB.B   #0x0, R14
+        JEQ     ??gcs_ReceiveHandle_1
+        SUB.B   #0x1, R14
+        JEQ     ??gcs_ReceiveHandle_2
+        SUB.B   #0x1, R14
+        JEQ     ??gcs_ReceiveHandle_3
+        SUB.B   #0x1, R14
+        JEQ     ??gcs_ReceiveHandle_4
+        SUB.B   #0x1, R14
+        JEQ     ??gcs_ReceiveHandle_5
+        JMP     ??gcs_ReceiveHandle_0
+//   37     {
+//   38         case MsgID_0_Set_PID:
+//   39             PID_Config_Info = (PID_Config_t*)ptr;
+//   40             
+//   41             float *base = (&pPidObject[PID_Config_Info->PID_Select * 2 + PID_Config_Info->PID_Pos_Rate]->kp);
+??gcs_ReceiveHandle_1:
+        MOV.B   @R12, R15
+        SXT     R15
+        AND.W   #0xffff, R15
+        RLA.W   R15
+        MOV.B   0x1(R12), R14
+        SXT     R14
+        AND.W   #0xffff, R14
+        ADD.W   R14, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  pPidObject(R15), R10
+        ADDA    #0x10, R10
+//   42             base += PID_Config_Info->PID_Offset;
+        MOV.B   0x2(R12), R15
+        SXT     R15
+        RLAM.A  #0x2, R15
+        MOVA    R15, R14
+        ADDA    R14, R10
+//   43             *base += PID_Config_Info->PID_Set/10.0f;
+        MOV.B   0x3(R12), R12
+        SXT     R12
+        AND.W   #0xffff, R12
+        MOV.W   R12, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        XOR.W   #0xffff, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   #0x0, R14
+        MOV.W   #0x4120, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   @R10, R14
+        MOV.W   0x2(R10), R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, 0(R10)
+        MOV.W   R13, 0x2(R10)
+//   44             break;
+        JMP     ??gcs_ReceiveHandle_0
+//   45         case MsgID_1_Select_PID:
+//   46             PID_select = *ptr;
+??gcs_ReceiveHandle_2:
+        MOVX.B  @R12, &PID_select
+//   47             break;
+        JMP     ??gcs_ReceiveHandle_0
+//   48         case MsgID_2_Set_RxAddr:
+//   49             UAV_info.NRF_MannagerPtr->update_rx_Addr(ptr);
+??gcs_ReceiveHandle_3:
+        MOVA    &UAV_info + 10, R15
+        MOVA    0x16(R15), R15
+          CFI FunCall
+        CALLA   R15
+//   50             break;
+        JMP     ??gcs_ReceiveHandle_0
+//   51         case MsgID_3_Set_RxFreq:
+//   52             UAV_info.NRF_MannagerPtr->update_frequency(ptr[0]);
+??gcs_ReceiveHandle_4:
+        MOV.B   @R12, R12
+        MOVA    &UAV_info + 10, R15
+        MOVA    0x1e(R15), R15
+          CFI FunCall
+        CALLA   R15
+//   53             break;
+        JMP     ??gcs_ReceiveHandle_0
+//   54         case MsgID_4_Set_TxAddr:
+//   55             UAV_info.NRF_MannagerPtr->update_tx_Addr(ptr);
+??gcs_ReceiveHandle_5:
+        MOVA    &UAV_info + 10, R15
+        MOVA    0x1a(R15), R15
+          CFI FunCall
+        CALLA   R15
+//   56             break;
+//   57         default:
+//   58             break;
+//   59     }
+//   60 }
+??gcs_ReceiveHandle_0:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+//   61 
+//   62 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   63 void update_gcs_pid_info()
+update_gcs_pid_info:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function update_gcs_pid_info
+//   64 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        SUBA    #0x32, SP
+          CFI CFA SP+62
+//   65     static uint8_t yaobai = 0;
+//   66     int16_t RawBuff[8];
+//   67     uint8_t SendBuff[32];
+//   68     uint8_t SendLength;
+//   69     
+//   70     float *ptr = &pPidObject[PID_select*2 + yaobai]->kp;
+        MOVX.B  &PID_select, R15
+        MOV.B   R15, R15
+        RLA.W   R15
+        MOVX.B  &??yaobai, R14
+        MOV.B   R14, R14
+        ADD.W   R14, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  pPidObject(R15), R10
+        ADDA    #0x10, R10
+//   71     if(yaobai)yaobai = 0;
+        CMPX.B  #0x0, &??yaobai
+        JEQ     ??update_gcs_pid_info_3
+        MOVX.B  #0x0, &??yaobai
+        JMP     ??update_gcs_pid_info_1
+//   72     else yaobai = 1;
+??update_gcs_pid_info_3:
+        MOVX.B  #0x1, &??yaobai
+//   73     
+//   74     RawBuff[0] = PID_select;
+??update_gcs_pid_info_1:
+        MOVX.B  &PID_select, R15
+        MOV.B   R15, R15
+        MOV.W   R15, 0x2(SP)
+//   75     RawBuff[0] |= yaobai<<8;
+        MOVX.B  &??yaobai, R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R15, 0x2(SP)
+//   76     for(int i=0;i<7;i++)
+        MOV.W   #0x0, R11
+        JMP     ??update_gcs_pid_info_2
+//   77     {
+//   78         RawBuff[i+1] = (int16_t)(*ptr++ * 100);
+??update_gcs_pid_info_0:
+        MOV.W   @R10, R12
+        MOV.W   0x2(R10), R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x42c8, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOVA    SP, R14
+        ADDA    #0x2, R14
+        MOV.W   R11, R15
+        ADD.W   #0x1, R15
+        ADDA    R15, R15
+        ADDA    R14, R15
+        MOV.W   R12, 0(R15)
+        ADDA    #0x4, R10
+//   79     }
+        ADD.W   #0x1, R11
+??update_gcs_pid_info_2:
+        CMP.W   #0x7, R11
+        JL      ??update_gcs_pid_info_0
+//   80     
+//   81     ZKHD_Link_MakeFrame( Device_FMU,
+//   82                         Device_GCS,
+//   83                         MsgID_6_PID_Info,
+//   84                         (uint8_t*)RawBuff,
+//   85                         16,
+//   86                         SendBuff,
+//   87                         &SendLength
+//   88                        );
+        MOVA    SP, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+66
+        MOVA    SP, R15
+        ADDA    #0x16, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+70
+        PUSH.W  #0x10
+          CFI CFA SP+72
+        MOVA    SP, R15
+        ADDA    #0xc, R15
+        MOV.B   #0x6, R14
+        MOV.B   #0x0, R13
+        MOV.B   #0x1, R12
+          CFI FunCall ZKHD_Link_MakeFrame
+        CALLA   #ZKHD_Link_MakeFrame
+//   89     enQueue(&USB_Send_Queue,SendBuff,SendLength);
+        MOV.B   0xa(SP), R14
+        MOVA    SP, R13
+        ADDA    #0x1c, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//   90 }
+        ADDA    #0x3c, SP
+          CFI CFA SP+12
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+??yaobai:
+        DS8 1
+//   91 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//   92 void update_gcs_Attitude(void)
+update_gcs_Attitude:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function update_gcs_Attitude
+//   93 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        SUBA    #0x1a, SP
+          CFI CFA SP+34
+//   94     uint8_t Buff[20];
+//   95     int16_t Angle_Int16[3];
+//   96     int sum = 0;
+        MOV.W   #0x0, R10
+//   97     Buff[0] = 0xAA; //帧头
+        MOV.B   #0xaa, 0x6(SP)
+//   98     Buff[1] = 6;   //长度低八位
+        MOV.B   #0x6, 0x7(SP)
+//   99     Buff[2] = 0;    //长度高八位
+        MOV.B   #0x0, 0x8(SP)
+//  100     Buff[3] = 1;    //发送者ID
+        MOV.B   #0x1, 0x9(SP)
+//  101     Buff[4] = 0;    //接收者ID
+        MOV.B   #0x0, 0xa(SP)
+//  102     Buff[5] = 0;    //消息ID
+        MOV.B   #0x0, 0xb(SP)
+//  103 
+//  104     Angle_Int16[0] = (int16_t)(-Angle.pitch * 100);
+        MOVX.W  &Angle + 4, R12
+        MOVX.W  &Angle + 6, R13
+        XOR.W   #0x8000, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x42c8, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOV.W   R12, 0(SP)
+//  105     Angle_Int16[1] = (int16_t)(-Angle.roll * 100);
+        MOVX.W  &Angle, R12
+        MOVX.W  &Angle + 2, R13
+        XOR.W   #0x8000, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x42c8, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOV.W   R12, 0x2(SP)
+//  106     Angle_Int16[2] = (int16_t)(Angle.yaw * 100);
+        MOVX.W  &Angle + 8, R12
+        MOVX.W  &Angle + 10, R13
+        MOV.W   #0x0, R14
+        MOV.W   #0x42c8, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOV.W   R12, 0x4(SP)
+//  107 
+//  108     memcpy(Buff+6,(uint8_t*)Angle_Int16,6);
+        MOV.W   #0x6, R14
+        MOV.W   #0x0, R15
+        MOVA    SP, R13
+        MOVA    SP, R12
+        ADDA    #0xc, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//  109 
+//  110     for(int i=0;i<((Buff[1]|Buff[2]<<8) + 6);i++)
+        MOV.W   #0x0, R13
+        JMP     ??update_gcs_Attitude_1
+//  111     {
+//  112         sum += Buff[i];
+??update_gcs_Attitude_0:
+        MOVA    SP, R15
+        ADDA    #0x6, R15
+        MOV.W   R13, R14
+        ADDA    R15, R14
+        MOV.B   @R14, R15
+        MOV.B   R15, R15
+        ADD.W   R15, R10
+//  113     }
+        ADD.W   #0x1, R13
+??update_gcs_Attitude_1:
+        MOV.B   0x7(SP), R14
+        MOV.B   R14, R14
+        MOV.B   0x8(SP), R15
+        MOV.B   R15, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R15, R14
+        ADD.W   #0x6, R14
+        CMP.W   R14, R13
+        JL      ??update_gcs_Attitude_0
+//  114 
+//  115     Buff[(Buff[1]|Buff[2]<<8) + 6] = sum & 0xFF;
+        MOVA    SP, R13
+        ADDA    #0x6, R13
+        MOV.B   0x7(SP), R15
+        MOV.B   R15, R15
+        MOV.B   0x8(SP), R14
+        MOV.B   R14, R14
+        AND.W   #0xff, R14
+        SWPB    R14
+        BIS.W   R14, R15
+        ADD.W   #0x6, R15
+        ADDA    R13, R15
+        MOV.B   R10, 0(R15)
+//  116     sum = 0;
+        MOV.W   #0x0, R10
+//  117     
+//  118     enQueue(&USB_Send_Queue, Buff,(Buff[1]|Buff[2]<<8) + 7);
+        MOV.B   0x7(SP), R14
+        ADD.B   #0x7, R14
+        MOVA    SP, R13
+        ADDA    #0x6, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  119 }
+        ADDA    #0x1a, SP
+          CFI CFA SP+8
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//  120 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  121 void update_gcs_MPU6050(void)
+update_gcs_MPU6050:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function update_gcs_MPU6050
+//  122 {
+        SUBA    #0x2a, SP
+          CFI CFA SP+46
+//  123     uint8_t DataBuff[20];
+//  124     uint8_t SendBuff[20];
+//  125     uint8_t SendLength;
+//  126     
+//  127     memcpy(DataBuff,(uint8_t*)UAV_info.Mpu6050,sizeof(_st_Mpu));
+        MOV.W   #0xc, R14
+        MOV.W   #0x0, R15
+        MOVA    &UAV_info + 14, R13
+        MOVA    SP, R12
+        ADDA    #0x16, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//  128 
+//  129     ZKHD_Link_MakeFrame( Device_FMU,
+//  130                     Device_GCS,
+//  131                     MsgID_2_Sensor_Info,
+//  132                     DataBuff,
+//  133                     12,
+//  134                     SendBuff,
+//  135                     &SendLength
+//  136                    );
+        MOVA    SP, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+50
+        MOVA    SP, R15
+        ADDA    #0x6, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+54
+        PUSH.W  #0xc
+          CFI CFA SP+56
+        MOVA    SP, R15
+        ADDA    #0x20, R15
+        MOV.B   #0x2, R14
+        MOV.B   #0x0, R13
+        MOV.B   #0x1, R12
+          CFI FunCall ZKHD_Link_MakeFrame
+        CALLA   #ZKHD_Link_MakeFrame
+//  137     
+//  138     enQueue(&USB_Send_Queue,SendBuff,SendLength);
+        MOV.B   0xa(SP), R14
+        MOVA    SP, R13
+        ADDA    #0xc, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  139 }
+        ADDA    #0x34, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock4
+//  140 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  141 void update_gcs_Motor(void)
+update_gcs_Motor:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function update_gcs_Motor
+//  142 {
+        SUBA    #0x1e, SP
+          CFI CFA SP+34
+//  143     uint8_t DataBuff[8];
+//  144     uint8_t SendBuff[20];
+//  145     uint8_t SendLength;
+//  146     
+//  147     memcpy(DataBuff,UAV_info.Motor,sizeof(int16)*4);
+        MOV.W   #0x8, R14
+        MOV.W   #0x0, R15
+        MOVA    &UAV_info + 6, R13
+        MOVA    SP, R12
+        ADDA    #0x2, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//  148 
+//  149     ZKHD_Link_MakeFrame( Device_FMU,
+//  150                     Device_GCS,
+//  151                     MsgID_1_Motor_Info,
+//  152                     DataBuff,
+//  153                     8,
+//  154                     SendBuff,
+//  155                     &SendLength
+//  156                    );
+        MOVA    SP, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+38
+        MOVA    SP, R15
+        ADDA    #0xe, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+42
+        PUSH.W  #0x8
+          CFI CFA SP+44
+        MOVA    SP, R15
+        ADDA    #0xc, R15
+        MOV.B   #0x1, R14
+        MOV.B   #0x0, R13
+        MOV.B   #0x1, R12
+          CFI FunCall ZKHD_Link_MakeFrame
+        CALLA   #ZKHD_Link_MakeFrame
+//  157     
+//  158     enQueue(&USB_Send_Queue,SendBuff,SendLength);
+        MOV.B   0xa(SP), R14
+        MOVA    SP, R13
+        ADDA    #0x14, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  159 }
+        ADDA    #0x28, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock5
+//  160 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  161 void update_gcs_HardwareInfo(void)
+update_gcs_HardwareInfo:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function update_gcs_HardwareInfo
+//  162 {
+        SUBA    #0x24, SP
+          CFI CFA SP+40
+//  163     uint8_t DataBuff[13];
+//  164     uint8_t SendBuff[20];
+//  165     uint8_t SendLength;
+//  166     
+//  167     DataBuff[0] = UAV_info.Firmware_Ver;//版本信息
+        MOVX.B  &UAV_info + 4, 0x2(SP)
+//  168     memcpy(DataBuff+1,UAV_info.NRF_MannagerPtr->Rx_Addr,5);//发送地址
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    &UAV_info + 10, R13
+        ADDA    #0x7, R13
+        MOVA    SP, R12
+        ADDA    #0x3, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//  169     memcpy(DataBuff+1+5,UAV_info.NRF_MannagerPtr->Tx_Addr,5);//发送地址
+        MOV.W   #0x5, R14
+        MOV.W   #0x0, R15
+        MOVA    &UAV_info + 10, R13
+        ADDA    #0x2, R13
+        MOVA    SP, R12
+        ADDA    #0x8, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//  170     DataBuff[11] = UAV_info.Runtime&0xFF;
+        MOVX.B  &UAV_info, 0xd(SP)
+//  171     DataBuff[12] = UAV_info.Runtime>>8;
+        MOVX.W  &UAV_info, R14
+        SWPB    R14
+        AND.W   #0xff, R14
+        MOV.B   R14, 0xe(SP)
+//  172 
+//  173     ZKHD_Link_MakeFrame( Device_FMU,
+//  174                         Device_GCS,
+//  175                         MsgID_5_Hardware_Info,
+//  176                         DataBuff,
+//  177                         13,
+//  178                         SendBuff,
+//  179                         &SendLength
+//  180                        );
+        MOVA    SP, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+44
+        MOVA    SP, R15
+        ADDA    #0x14, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+48
+        PUSH.W  #0xd
+          CFI CFA SP+50
+        MOVA    SP, R15
+        ADDA    #0xc, R15
+        MOV.B   #0x5, R14
+        MOV.B   #0x0, R13
+        MOV.B   #0x1, R12
+          CFI FunCall ZKHD_Link_MakeFrame
+        CALLA   #ZKHD_Link_MakeFrame
+//  181     
+//  182     enQueue(&USB_Send_Queue,SendBuff,SendLength);
+        MOV.B   0xa(SP), R14
+        MOVA    SP, R13
+        ADDA    #0x1a, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  183 }
+        ADDA    #0x2e, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock6
+//  184 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  185 void update_gcs_Freq()
+update_gcs_Freq:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function update_gcs_Freq
+//  186 {
+        SUBA    #0x16, SP
+          CFI CFA SP+26
+//  187     uint8_t SendBuff[20];
+//  188     uint8_t SendLength;
+//  189     
+//  190     ZKHD_Link_MakeFrame( Device_FMU,
+//  191                     Device_GCS,
+//  192                     MsgID_7_Freq,
+//  193                     &UAV_info.NRF_MannagerPtr->RC_Frequency,
+//  194                     1,
+//  195                     SendBuff,
+//  196                     &SendLength
+//  197                     );
+        MOVA    SP, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+30
+        MOVA    SP, R15
+        ADDA    #0x6, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+34
+        PUSH.W  #0x1
+          CFI CFA SP+36
+        MOVA    &UAV_info + 10, R15
+        ADDA    #0xc, R15
+        MOV.B   #0x7, R14
+        MOV.B   #0x0, R13
+        MOV.B   #0x1, R12
+          CFI FunCall ZKHD_Link_MakeFrame
+        CALLA   #ZKHD_Link_MakeFrame
+//  198     
+//  199     enQueue(&USB_Send_Queue,SendBuff,SendLength);
+        MOV.B   0xa(SP), R14
+        MOVA    SP, R13
+        ADDA    #0xc, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  200 }
+        ADDA    #0x20, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock7
+//  201 
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  202 void update_gcs_Line(int16_t l1,int16_t l2,int16_t l3,int16_t l4,int16_t l5,int16_t l6,int16_t l7,int16_t l8)
+update_gcs_Line:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function update_gcs_Line
+//  203 {
+        SUBA    #0x30, SP
+          CFI CFA SP+52
+//  204     int16_t DataBuff[8];
+//  205     uint8_t SendBuff[30];
+//  206     uint8_t SendLength;
+//  207     
+//  208     DataBuff[0] = l1;
+        MOV.W   R12, 0x2(SP)
+//  209     DataBuff[1] = l2;
+        MOV.W   R13, 0x4(SP)
+//  210     DataBuff[2] = l3;
+        MOV.W   R14, 0x6(SP)
+//  211     DataBuff[3] = l4;
+        MOV.W   R15, 0x8(SP)
+//  212     DataBuff[4] = l5;
+        MOV.W   0x34(SP), 0xa(SP)
+//  213     DataBuff[5] = l6;
+        MOV.W   0x36(SP), 0xc(SP)
+//  214     DataBuff[6] = l7;
+        MOV.W   0x38(SP), 0xe(SP)
+//  215     DataBuff[7] = l8;
+        MOV.W   0x3a(SP), 0x10(SP)
+//  216     
+//  217 
+//  218     ZKHD_Link_MakeFrame( Device_FMU,
+//  219                     Device_GCS,
+//  220                     MsgID_3_Line_Info,
+//  221                     (uint8_t*)DataBuff,
+//  222                     16,
+//  223                     SendBuff,
+//  224                     &SendLength
+//  225                     );
+        MOVA    SP, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+56
+        MOVA    SP, R15
+        ADDA    #0x16, R15
+        PUSHM.A #0x1, R15
+          CFI CFA SP+60
+        PUSH.W  #0x10
+          CFI CFA SP+62
+        MOVA    SP, R15
+        ADDA    #0xc, R15
+        MOV.B   #0x3, R14
+        MOV.B   #0x0, R13
+        MOV.B   #0x1, R12
+          CFI FunCall ZKHD_Link_MakeFrame
+        CALLA   #ZKHD_Link_MakeFrame
+//  226     
+//  227     enQueue(&USB_Send_Queue,SendBuff,SendLength);
+        MOV.B   0xa(SP), R14
+        MOVA    SP, R13
+        ADDA    #0x1c, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  228 }
+        ADDA    #0x3a, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock8
+//  229 
+//  230 /*此函数适用于山外上位机*/
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+//  231 void update_gcs_Line2(int16_t l1,int16_t l2,int16_t l3,int16_t l4,int16_t l5,int16_t l6,int16_t l7,int16_t l8)
+update_gcs_Line2:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function update_gcs_Line2
+//  232 {
+        SUBA    #0x2e, SP
+          CFI CFA SP+50
+//  233     int16_t DataBuff[8];
+//  234     uint8_t SendBuff[30];
+//  235     
+//  236     DataBuff[0] = l1;
+        MOV.W   R12, 0(SP)
+//  237     DataBuff[1] = l2;
+        MOV.W   R13, 0x2(SP)
+//  238     DataBuff[2] = l3;
+        MOV.W   R14, 0x4(SP)
+//  239     DataBuff[3] = l4;
+        MOV.W   R15, 0x6(SP)
+//  240     DataBuff[4] = l5;
+        MOV.W   0x32(SP), 0x8(SP)
+//  241     DataBuff[5] = l6;
+        MOV.W   0x34(SP), 0xa(SP)
+//  242     DataBuff[6] = l7;
+        MOV.W   0x36(SP), 0xc(SP)
+//  243     DataBuff[7] = l8;
+        MOV.W   0x38(SP), 0xe(SP)
+//  244     
+//  245     SendBuff[0] = 03;
+        MOV.B   #0x3, 0x10(SP)
+//  246     SendBuff[1] = 0xFC;
+        MOV.B   #0xfc, 0x11(SP)
+//  247     SendBuff[18] = 0xFC;
+        MOV.B   #0xfc, 0x22(SP)
+//  248     SendBuff[19] = 0x03;
+        MOV.B   #0x3, 0x23(SP)
+//  249     memcpy(SendBuff+2,(uint8_t*)DataBuff,16);
+        MOV.W   #0x10, R14
+        MOV.W   #0x0, R15
+        MOVA    SP, R13
+        MOVA    SP, R12
+        ADDA    #0x12, R12
+          CFI FunCall memcpy
+        CALLA   #memcpy
+//  250     enQueue(&USB_Send_Queue,SendBuff,20);
+        MOV.B   #0x14, R14
+        MOVA    SP, R13
+        ADDA    #0x10, R13
+        MOVA    #USB_Send_Queue, R12
+          CFI FunCall enQueue
+        CALLA   #enQueue
+//  251 }
+        ADDA    #0x2e, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock9
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG `CODE`:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 1 270 bytes in segment CODE
+//    32 bytes in segment DATA20_Z
+// 
+// 1 270 bytes of CODE memory
+//    32 bytes of DATA memory
+//
+//Errors: none
+//Warnings: 1
